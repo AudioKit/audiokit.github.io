@@ -1,8 +1,8 @@
 # Site settings
 title: Audio Kit
 email: aure@hearforyourself.com
-description: > # Test
-  test
+description: > #
+  Audio Kit, an open-source audio synthesis, processing, and analysis platform.
 url: "http://audiokit.io" # the base hostname & protocol for your site
 twitter_username: AudioKitMan
 github_username:  AudioKit
