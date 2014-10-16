@@ -1,0 +1,183 @@
+---
+layout: docs
+title: AKArrayTable Class Reference
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKArrayTable Class Reference</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKFTable.html">AKFTable</a> : <a href="../Classes/AKConstant.html">AKConstant</a> : <a href="../Classes/AKControl.html">AKControl</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKArrayTable.h<br />AKArrayTable.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>Constructs a function table out of an NSArray.  If size is unspecififed,
+the array count is used, otherwise if isze is greater than the array count,
+the rest of the table will be filled with zeroes.</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            
+
+            <ul class="task-list">
+              <nobr>
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithArray:">&ndash;&nbsp;initWithArray:</a></code>
+    <span class="tooltip"><p>Create a function table from a parameter array</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithArray:size:">&ndash;&nbsp;initWithArray:size:</a></code>
+    <span class="tooltip"><p>Create a function table from a parameter array, but define the size as something besides the array count.</p></span>
+  </span>
+  
+  
+</li>
+              </nobr>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithArray:" title="initWithArray:"></a>
+  <h3 class="subsubtitle method-title">initWithArray:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create a function table from a parameter array</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithArray:(AKArray *)<em>parameterArray</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>parameterArray</em></dt>
+      <dd><p>The array to be stored in the function table.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKArrayTable.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithArray:size:" title="initWithArray:size:"></a>
+  <h3 class="subsubtitle method-title">initWithArray:size:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create a function table from a parameter array, but define the size as something besides the array count.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithArray:(AKArray *)<em>parameterArray</em> size:(int)<em>tableSize</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>parameterArray</em></dt>
+      <dd><p>The array to be stored in the function table.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>tableSize</em></dt>
+      <dd><p>The number of elements in the function table, the contents of the array, plus zeroes afterwards.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKArrayTable.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+          
+        </div>
+      </div>

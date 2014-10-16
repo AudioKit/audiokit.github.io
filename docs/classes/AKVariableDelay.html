@@ -1,0 +1,133 @@
+---
+layout: docs
+title: AKVariableDelay Class Reference
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKVariableDelay Class Reference</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKVariableDelay.h<br />AKVariableDelay.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>An interpolating variable time delay.</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            
+
+            <ul class="task-list">
+              <nobr>
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithAudioSource:delayTime:maximumDelayTime:">&ndash;&nbsp;initWithAudioSource:delayTime:maximumDelayTime:</a></code>
+    <span class="tooltip"><p>Instantiates the variable delay</p></span>
+  </span>
+  
+  
+</li>
+              </nobr>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithAudioSource:delayTime:maximumDelayTime:" title="initWithAudioSource:delayTime:maximumDelayTime:"></a>
+  <h3 class="subsubtitle method-title">initWithAudioSource:delayTime:maximumDelayTime:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the variable delay</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKAudio *)<em>audioSource</em> delayTime:(AKAudio *)<em>delayTime</em> maximumDelayTime:(AKConstant *)<em>maximumDelayTime</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>audioSource</em></dt>
+      <dd><p>Input signal.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>delayTime</em></dt>
+      <dd><p>Current value of delay in milliseconds. Note that linear functions have no pitch change effects. Fast changing values will cause discontinuities in the waveform resulting noise.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>maximumDelayTime</em></dt>
+      <dd><p>Maximum value of delay in milliseconds.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVariableDelay.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+          
+        </div>
+      </div>

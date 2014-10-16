@@ -1,0 +1,342 @@
+---
+layout: docs
+title: AKVCOscillator Class Reference
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKVCOscillator Class Reference</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKVCOscillator.h<br />AKVCOscillator.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>Implementation of a band-limited oscillator using pre-calculated tables.  Meant to model vintage analog synthesizers.</p>
+
+<p>Different modes require different inputs so this could be a reason to break this up into separate classes, or use more custom initializers.</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            
+
+            <ul class="task-list">
+              <nobr>
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithFrequency:amplitude:">&ndash;&nbsp;initWithFrequency:amplitude:</a></code>
+    <span class="tooltip"><p>Instantiates the VC Oscillator</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalWaveformType:">&ndash;&nbsp;setOptionalWaveformType:</a></code>
+    <span class="tooltip"><p>Set an optional waveform type</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalPulseWidth:">&ndash;&nbsp;setOptionalPulseWidth:</a></code>
+    <span class="tooltip"><p>Set an optional pulse width</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalPhase:">&ndash;&nbsp;setOptionalPhase:</a></code>
+    <span class="tooltip"><p>Set an optional phase</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalBandwidth:">&ndash;&nbsp;setOptionalBandwidth:</a></code>
+    <span class="tooltip"><p>Set an optional bandwidth</p></span>
+  </span>
+  
+  
+</li>
+              </nobr>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithFrequency:amplitude:" title="initWithFrequency:amplitude:"></a>
+  <h3 class="subsubtitle method-title">initWithFrequency:amplitude:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the VC Oscillator</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFrequency:(AKControl *)<em>frequency</em> amplitude:(AKControl *)<em>amplitude</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>frequency</em></dt>
+      <dd><p>Frequency in Hz</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>amplitude</em></dt>
+      <dd><p>Amplitude scale. In the case of a imode waveform value of a pulse waveform, the actual output level can be a lot higher than this value.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVCOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalBandwidth:" title="setOptionalBandwidth:"></a>
+  <h3 class="subsubtitle method-title">setOptionalBandwidth:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional bandwidth</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalBandwidth:(AKConstant *)<em>bandwidth</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>bandwidth</em></dt>
+      <dd><p>Bandwidth of the generated waveform, as percentage (0 to 1) of the sample rate. The expected range is 0 to 0.5</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVCOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalPhase:" title="setOptionalPhase:"></a>
+  <h3 class="subsubtitle method-title">setOptionalPhase:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional phase</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalPhase:(AKControl *)<em>phase</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>phase</em></dt>
+      <dd><p>Oscillator phase (depending on imode, this can be either an optional i-rate parameter that defaults to zero or required k-rate). Similarly to pulseWidth, the expected range is 0 to 1.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVCOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalPulseWidth:" title="setOptionalPulseWidth:"></a>
+  <h3 class="subsubtitle method-title">setOptionalPulseWidth:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional pulse width</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalPulseWidth:(AKControl *)<em>pulseWidth</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>pulseWidth</em></dt>
+      <dd><p>The pulse width of the square wave or the ramp characteristics of the triangle wave. It is required only by these waveforms and ignored in all other cases. The expected range is 0 to 1, any other value is wrapped to the allowed range.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVCOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalWaveformType:" title="setOptionalWaveformType:"></a>
+  <h3 class="subsubtitle method-title">setOptionalWaveformType:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional waveform type</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalWaveformType:(VCOscillatorType)<em>waveformType</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>waveformType</em></dt>
+      <dd><p>Choose from various waveform types.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVCOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+          
+        </div>
+      </div>

@@ -1,0 +1,135 @@
+---
+layout: docs
+title: AKParallelCombLowPassFilterReverb Class Reference
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKParallelCombLowPassFilterReverb Class Reference</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKParallelCombLowPassFilterReverb.h<br />AKParallelCombLowPassFilterReverb.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>A reverberator consisting of 6 parallel comb-lowpass filters.</p>
+
+<p>This is a reverberator consisting of 6 parallel comb-lowpass filters being fed into a series of 5 allpass filters.</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            
+
+            <ul class="task-list">
+              <nobr>
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithAudioSource:duration:highFrequencyDiffusivity:">&ndash;&nbsp;initWithAudioSource:duration:highFrequencyDiffusivity:</a></code>
+    <span class="tooltip"><p>Instantiates the arallel comb low pass filter reverb</p></span>
+  </span>
+  
+  
+</li>
+              </nobr>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithAudioSource:duration:highFrequencyDiffusivity:" title="initWithAudioSource:duration:highFrequencyDiffusivity:"></a>
+  <h3 class="subsubtitle method-title">initWithAudioSource:duration:highFrequencyDiffusivity:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the arallel comb low pass filter reverb</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKAudio *)<em>audioSource</em> duration:(AKControl *)<em>duration</em> highFrequencyDiffusivity:(AKControl *)<em>highFrequencyDiffusivity</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>audioSource</em></dt>
+      <dd><p>Audio signal to be reverberated.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>duration</em></dt>
+      <dd><p>Length of reverbation in seconds.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>highFrequencyDiffusivity</em></dt>
+      <dd><p>A value between 0 and 1.  At 0, all frequencies decay with the same speed.  At 1, high frequencies decay faster that lower ones.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKParallelCombLowPassFilterReverb.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+          
+        </div>
+      </div>

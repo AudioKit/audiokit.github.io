@@ -1,0 +1,185 @@
+---
+layout: docs
+title: AKPanner Class Reference
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKPanner Class Reference</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKStereoAudio.html">AKStereoAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKPanner.h<br />AKPanner.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>Distribute an audio signal across two channels with a choice of methods.</p>
+
+<p>Panning methods include equal power, square root, simple linear, and an
+alternative equal power method based on the MIDI Association Recommend
+Practice for GM2 RP036 (Default Pan Curve).</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            
+
+            <ul class="task-list">
+              <nobr>
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithAudioSource:pan:">&ndash;&nbsp;initWithAudioSource:pan:</a></code>
+    <span class="tooltip"><p>Instantiates the panner</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalPanMethod:">&ndash;&nbsp;setOptionalPanMethod:</a></code>
+    <span class="tooltip"><p>Set an optional pan method</p></span>
+  </span>
+  
+  
+</li>
+              </nobr>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithAudioSource:pan:" title="initWithAudioSource:pan:"></a>
+  <h3 class="subsubtitle method-title">initWithAudioSource:pan:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the panner</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKAudio *)<em>audioSource</em> pan:(AKParameter *)<em>pan</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>audioSource</em></dt>
+      <dd><p>Source signal.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>pan</em></dt>
+      <dd><p>From hard left (0) to hard right (1).</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPanner.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalPanMethod:" title="setOptionalPanMethod:"></a>
+  <h3 class="subsubtitle method-title">setOptionalPanMethod:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional pan method</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalPanMethod:(PanMethod)<em>panMethod</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>panMethod</em></dt>
+      <dd><p>Pan Method</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPanner.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+          
+        </div>
+      </div>

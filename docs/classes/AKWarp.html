@@ -1,0 +1,347 @@
+---
+layout: docs
+title: AKWarp Class Reference
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKWarp Class Reference</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKFSignal.html">AKFSignal</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKWarp.h<br />AKWarp.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>Warp the spectral envelope of a PVS signal by means of shifting and scaling.</p>
+
+<p>Warp the spectral envelope of a PVS signal by means of shifting and scaling.</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            
+
+            <ul class="task-list">
+              <nobr>
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithSourceSignal:scalingRatio:shift:">&ndash;&nbsp;initWithSourceSignal:scalingRatio:shift:</a></code>
+    <span class="tooltip"><p>Instantiates the warp</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalLowFrequency:">&ndash;&nbsp;setOptionalLowFrequency:</a></code>
+    <span class="tooltip"><p>Set an optional low frequency</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalExtractionMethod:">&ndash;&nbsp;setOptionalExtractionMethod:</a></code>
+    <span class="tooltip"><p>Set an optional extraction method</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalGain:">&ndash;&nbsp;setOptionalGain:</a></code>
+    <span class="tooltip"><p>Set an optional gain</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalNumberOfCoefficients:">&ndash;&nbsp;setOptionalNumberOfCoefficients:</a></code>
+    <span class="tooltip"><p>Set an optional number of coefficients</p></span>
+  </span>
+  
+  
+</li>
+              </nobr>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithSourceSignal:scalingRatio:shift:" title="initWithSourceSignal:scalingRatio:shift:"></a>
+  <h3 class="subsubtitle method-title">initWithSourceSignal:scalingRatio:shift:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the warp</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithSourceSignal:(AKFSignal *)<em>sourceSignal</em> scalingRatio:(AKControl *)<em>scalingRatio</em> shift:(AKControl *)<em>shift</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>sourceSignal</em></dt>
+      <dd><p>Input Stream</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>scalingRatio</em></dt>
+      <dd><p>Spectral envelope scaling ratio. Values > 1 stretch the envelope and &lt; 1 compress it.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>shift</em></dt>
+      <dd><p>Spectral envelope shift, values > 0 shift the envelope linearly upwards and values &lt; 1 shift it downwards.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWarp.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalExtractionMethod:" title="setOptionalExtractionMethod:"></a>
+  <h3 class="subsubtitle method-title">setOptionalExtractionMethod:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional extraction method</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalExtractionMethod:(AKControl *)<em>extractionMethod</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>extractionMethod</em></dt>
+      <dd><p>Spectral envelope extraction method 1: liftered cepstrum method (default); 2: true envelope method (defaults to 1).</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWarp.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalGain:" title="setOptionalGain:"></a>
+  <h3 class="subsubtitle method-title">setOptionalGain:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional gain</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalGain:(AKControl *)<em>gain</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>gain</em></dt>
+      <dd><p>Amplitude Scaling (defaults to 1)</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWarp.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalLowFrequency:" title="setOptionalLowFrequency:"></a>
+  <h3 class="subsubtitle method-title">setOptionalLowFrequency:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional low frequency</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalLowFrequency:(AKControl *)<em>lowFrequency</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>lowFrequency</em></dt>
+      <dd><p>Lowest frequency shifted, defaults to zero.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWarp.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalNumberOfCoefficients:" title="setOptionalNumberOfCoefficients:"></a>
+  <h3 class="subsubtitle method-title">setOptionalNumberOfCoefficients:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional number of coefficients</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalNumberOfCoefficients:(AKControl *)<em>numberOfCoefficients</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>numberOfCoefficients</em></dt>
+      <dd><p>Number of cepstrum coefs used in formant preservation (defaults to 80).</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWarp.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+          
+        </div>
+      </div>

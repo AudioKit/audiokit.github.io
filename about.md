@@ -5,4 +5,4 @@ nav_title: About
 permalink: /about/
 ---
 
-This is for the about to be released audio engine for iOS and OSX.
+This is for the about to be released audio engine for iOS and OSX!

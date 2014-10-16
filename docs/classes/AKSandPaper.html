@@ -1,0 +1,289 @@
+---
+layout: docs
+title: AKSandPaper Class Reference
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKSandPaper Class Reference</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKSandPaper.h<br />AKSandPaper.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>Semi-physical model of a sandpaper sound.</p>
+
+<p>This is one of the PhISEM percussion opcodes. PhISEM (Physically Informed Stochastic Event Modeling) is an algorithmic approach for simulating collisions of multiple independent sound producing objects.</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            
+
+            <ul class="task-list">
+              <nobr>
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithDuration:amplitude:">&ndash;&nbsp;initWithDuration:amplitude:</a></code>
+    <span class="tooltip"><p>Instantiates the sand paper</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalCount:">&ndash;&nbsp;setOptionalCount:</a></code>
+    <span class="tooltip"><p>Set an optional count</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalDampingFactor:">&ndash;&nbsp;setOptionalDampingFactor:</a></code>
+    <span class="tooltip"><p>Set an optional damping factor</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalEnergyReturn:">&ndash;&nbsp;setOptionalEnergyReturn:</a></code>
+    <span class="tooltip"><p>Set an optional energy return</p></span>
+  </span>
+  
+  
+</li>
+              </nobr>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithDuration:amplitude:" title="initWithDuration:amplitude:"></a>
+  <h3 class="subsubtitle method-title">initWithDuration:amplitude:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the sand paper</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithDuration:(AKConstant *)<em>duration</em> amplitude:(AKConstant *)<em>amplitude</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>duration</em></dt>
+      <dd><p>Period of time over which all sound is stopped.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>amplitude</em></dt>
+      <dd><p>Amplitude of output. Note: As these instruments are stochastic, this is only a approximation.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKSandPaper.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalCount:" title="setOptionalCount:"></a>
+  <h3 class="subsubtitle method-title">setOptionalCount:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional count</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalCount:(AKConstant *)<em>count</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>count</em></dt>
+      <dd><p>The number of beads, teeth, bells, timbrels, etc. If zero, the default value is 128.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKSandPaper.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalDampingFactor:" title="setOptionalDampingFactor:"></a>
+  <h3 class="subsubtitle method-title">setOptionalDampingFactor:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional damping factor</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalDampingFactor:(AKConstant *)<em>dampingFactor</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>dampingFactor</em></dt>
+      <dd><p>The damping factor as part of this equation damping = 0.998 + (dampingFactor * 0.002). The default damping is 0.999 which means that the default value of dampingFactor is 0.5. The maximum damping is 1.0 (no damping). This means the maximum value for dampingFactor is 1.0.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKSandPaper.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalEnergyReturn:" title="setOptionalEnergyReturn:"></a>
+  <h3 class="subsubtitle method-title">setOptionalEnergyReturn:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional energy return</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalEnergyReturn:(AKConstant *)<em>energyReturn</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>energyReturn</em></dt>
+      <dd><p>Amount of energy to add back into the system. The value should be in range 0 to 1.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKSandPaper.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+          
+        </div>
+      </div>

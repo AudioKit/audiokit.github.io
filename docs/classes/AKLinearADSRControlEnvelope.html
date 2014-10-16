@@ -1,0 +1,193 @@
+---
+layout: docs
+title: AKLinearADSRControlEnvelope Class Reference
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKLinearADSRControlEnvelope Class Reference</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKControl.html">AKControl</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKLinearADSRControlEnvelope.h<br />AKLinearADSRControlEnvelope.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>Calculates the classical ADSR envelope using linear segments.</p>
+
+<p>The envelope generated is the range 0 to 1 and may need to be scaled further, depending on the amplitude required. The length of the sustain is calculated from the length of the note. This means this operation is not suitable for use with MIDI events.</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            
+
+            <ul class="task-list">
+              <nobr>
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithAttackDuration:decayDuration:sustainLevel:releaseDuration:">&ndash;&nbsp;initWithAttackDuration:decayDuration:sustainLevel:releaseDuration:</a></code>
+    <span class="tooltip"><p>Instantiates the linear adsr control envelope</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalDelay:">&ndash;&nbsp;setOptionalDelay:</a></code>
+    <span class="tooltip"><p>Set an optional delay</p></span>
+  </span>
+  
+  
+</li>
+              </nobr>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithAttackDuration:decayDuration:sustainLevel:releaseDuration:" title="initWithAttackDuration:decayDuration:sustainLevel:releaseDuration:"></a>
+  <h3 class="subsubtitle method-title">initWithAttackDuration:decayDuration:sustainLevel:releaseDuration:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the linear adsr control envelope</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAttackDuration:(AKConstant *)<em>attackDuration</em> decayDuration:(AKConstant *)<em>decayDuration</em> sustainLevel:(AKConstant *)<em>sustainLevel</em> releaseDuration:(AKConstant *)<em>releaseDuration</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>attackDuration</em></dt>
+      <dd><p>Duration of attack phase</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>decayDuration</em></dt>
+      <dd><p>Duration of decay</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>sustainLevel</em></dt>
+      <dd><p>Level for sustain phase</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>releaseDuration</em></dt>
+      <dd><p>Duration of release phase</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLinearADSRControlEnvelope.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalDelay:" title="setOptionalDelay:"></a>
+  <h3 class="subsubtitle method-title">setOptionalDelay:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional delay</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalDelay:(AKConstant *)<em>delay</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>delay</em></dt>
+      <dd><p>Period of zero before the envelope starts</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLinearADSRControlEnvelope.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+          
+        </div>
+      </div>

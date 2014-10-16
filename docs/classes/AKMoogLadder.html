@@ -1,0 +1,135 @@
+---
+layout: docs
+title: AKMoogLadder Class Reference
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKMoogLadder Class Reference</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKMoogLadder.h<br />AKMoogLadder.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>Moog ladder lowpass filter.</p>
+
+<p>Moog Ladder is an new digital implementation of the Moog ladder filter based on the work of Antti Huovilainen, described in the paper &ldquo;Non-Linear Digital Implementation of the Moog Ladder Filter&rdquo; (Proceedings of DaFX04, Univ of Napoli). This implementation is probably a more accurate digital representation of the original analogue filter.</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            
+
+            <ul class="task-list">
+              <nobr>
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithAudioSource:cutoffFrequency:resonance:">&ndash;&nbsp;initWithAudioSource:cutoffFrequency:resonance:</a></code>
+    <span class="tooltip"><p>Instantiates the moog ladder</p></span>
+  </span>
+  
+  
+</li>
+              </nobr>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithAudioSource:cutoffFrequency:resonance:" title="initWithAudioSource:cutoffFrequency:resonance:"></a>
+  <h3 class="subsubtitle method-title">initWithAudioSource:cutoffFrequency:resonance:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the moog ladder</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKAudio *)<em>audioSource</em> cutoffFrequency:(AKControl *)<em>cutoffFrequency</em> resonance:(AKControl *)<em>resonance</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>audioSource</em></dt>
+      <dd><p>Input Signal</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>cutoffFrequency</em></dt>
+      <dd><p>Filter cutoff frequency</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>resonance</em></dt>
+      <dd><p>Resonance, generally &lt; 1, but not limited to it. Higher than 1 resonance values might cause aliasing, analogue synths generally allow resonances to be above 1.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKMoogLadder.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+          
+        </div>
+      </div>

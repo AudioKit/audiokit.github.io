@@ -1,0 +1,322 @@
+---
+layout: docs
+title: AKRandomDistributionTable Class Reference
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKRandomDistributionTable Class Reference</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKFTable.html">AKFTable</a> : <a href="../Classes/AKConstant.html">AKConstant</a> : <a href="../Classes/AKControl.html">AKControl</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKRandomDistributionTable.h<br />AKRandomDistributionTable.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>Generates tables of different random distributions.</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            
+
+            <ul class="task-list">
+              <nobr>
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initType:size:">&ndash;&nbsp;initType:size:</a></code>
+    <span class="tooltip"><p>Create a random distribution table</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initType:size:level:">&ndash;&nbsp;initType:size:level:</a></code>
+    <span class="tooltip"><p>Create a random distribution table</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWeibullTypeWithSize:level:sigma:">&ndash;&nbsp;initWeibullTypeWithSize:level:sigma:</a></code>
+    <span class="tooltip"><p>Create a random distribution table of the Weibull type.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initBetaTypeWithSize:level:alpha:beta:">&ndash;&nbsp;initBetaTypeWithSize:level:alpha:beta:</a></code>
+    <span class="tooltip"><p>Create a random distribution table of the Beta type.</p></span>
+  </span>
+  
+  
+</li>
+              </nobr>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/initBetaTypeWithSize:level:alpha:beta:" title="initBetaTypeWithSize:level:alpha:beta:"></a>
+  <h3 class="subsubtitle method-title">initBetaTypeWithSize:level:alpha:beta:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create a random distribution table of the Beta type.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initBetaTypeWithSize:(int)<em>size</em> level:(float)<em>level</em> alpha:(float)<em>alpha</em> beta:(float)<em>beta</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>size</em></dt>
+      <dd><p>Size of the table.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>level</em></dt>
+      <dd><p>Level is the maximum amplitude of the signal varying from 0 to level or -level to level depending on the type.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>alpha</em></dt>
+      <dd><p>If alpha is smaller than one, smaller values favor values near 0.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>beta</em></dt>
+      <dd><p>If beta is smaller than one, smaller values favor values near level.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKRandomDistributionTable.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initType:size:" title="initType:size:"></a>
+  <h3 class="subsubtitle method-title">initType:size:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create a random distribution table</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initType:(RandomDistributionType)<em>distributionType</em> size:(int)<em>size</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>distributionType</em></dt>
+      <dd><p>Type of distribution to use (note that Beta and Weibull use their own init methods).</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>size</em></dt>
+      <dd><p>Size of the table.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKRandomDistributionTable.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initType:size:level:" title="initType:size:level:"></a>
+  <h3 class="subsubtitle method-title">initType:size:level:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create a random distribution table</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initType:(RandomDistributionType)<em>distributionType</em> size:(int)<em>size</em> level:(float)<em>level</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>distributionType</em></dt>
+      <dd><p>Type of distribution to use (note that Beta and Weibull use their own init methods).</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>size</em></dt>
+      <dd><p>Size of the table.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>level</em></dt>
+      <dd><p>Level is the maximum amplitude of the signal varying from 0 to level or -level to level depending on the type.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKRandomDistributionTable.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWeibullTypeWithSize:level:sigma:" title="initWeibullTypeWithSize:level:sigma:"></a>
+  <h3 class="subsubtitle method-title">initWeibullTypeWithSize:level:sigma:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create a random distribution table of the Weibull type.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWeibullTypeWithSize:(int)<em>size</em> level:(float)<em>level</em> sigma:(float)<em>sigma</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>size</em></dt>
+      <dd><p>Size of the table.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>level</em></dt>
+      <dd><p>Level is the maximum amplitude of the signal varying from 0 to level or -level to level depending on the type.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>sigma</em></dt>
+      <dd><p>Value that determines the spread of the distribution.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKRandomDistributionTable.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+          
+        </div>
+      </div>

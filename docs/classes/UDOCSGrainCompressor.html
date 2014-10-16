@@ -1,0 +1,158 @@
+---
+layout: docs
+title: UDOCSGrainCompressor Class Reference
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">UDOCSGrainCompressor Class Reference</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKStereoAudio.html">AKStereoAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">UDOCsGrainCompressor.h<br />UDOCsGrainCompressor.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>Stereo compressor from Boulanger Labs' csGrain application.
+Stereo audio input and output.</p>
+
+<p>The threshold will normally be 0 or less, but if higher the threshold will begin removing
+low-level signal energy such as background noise.</p>
+
+<p>A compression ratio value of 2 will advance the output just one decibel for every input gain of two;
+3 will advance just one in three; 20 just one in twenty, etc.</p>
+
+<p>Inverse ratios will cause signal expansion: .5 gives two for one, .25 four for one, etc.
+The value 1 will result in no change.</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            
+
+            <ul class="task-list">
+              <nobr>
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithSourceStereoAudio:threshold:compressionRatio:attackTime:releaseTime:">&ndash;&nbsp;initWithSourceStereoAudio:threshold:compressionRatio:attackTime:releaseTime:</a></code>
+    <span class="tooltip"><p>Instantiates the compressor</p></span>
+  </span>
+  
+  
+</li>
+              </nobr>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithSourceStereoAudio:threshold:compressionRatio:attackTime:releaseTime:" title="initWithSourceStereoAudio:threshold:compressionRatio:attackTime:releaseTime:"></a>
+  <h3 class="subsubtitle method-title">initWithSourceStereoAudio:threshold:compressionRatio:attackTime:releaseTime:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the compressor</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithSourceStereoAudio:(AKStereoAudio *)<em>sourceStereo</em> threshold:(AKControl *)<em>dBThreshold</em> compressionRatio:(AKControl *)<em>compressionRatio</em> attackTime:(AKControl *)<em>attackTime</em> releaseTime:(AKControl *)<em>releaseTime</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>sourceStereo</em></dt>
+      <dd><p>Input to the left and right channels.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>dBThreshold</em></dt>
+      <dd><p>The lowest decibel level that will be allowed through.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>compressionRatio</em></dt>
+      <dd><p>The ratio of compression(>1) or exapansion(&lt;1) when the signal level is above the knee.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>attackTime</em></dt>
+      <dd><p>The attack time in seconds. A typical value is 0.01 seconds.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>releaseTime</em></dt>
+      <dd><p>The release time in seconds. A typical value is 0.1 seconds.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    <p>And instance of the compressor.</p>
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">UDOCsGrainCompressor.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+          
+        </div>
+      </div>
