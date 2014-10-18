@@ -38,3 +38,15 @@ After you’ve finished, you’ll see a folder on the left side of Xcode with Au
 <img src=/images/frameworkProjectLocation.png>
 </p>
 &nbsp;
+
+{% highlight objective-c %}
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+    AKOrchestra *orch = [[AKOrchestra alloc] init];
+    conv = [[ConvolutionInstrument alloc] init];
+    [orch addInstrument:conv];
+    [[AKManager sharedAKManager] runOrchestra:orch];
+}
+{% endhighlight %}
