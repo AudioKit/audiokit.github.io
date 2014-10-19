@@ -1,5 +1,5 @@
 ---
-section: docs
+layout: docs
 title: AKBowedString Class Reference
 ---
 
@@ -11,7 +11,7 @@ title: AKBowedString Class Reference
           </div>
         </div>
         <div id="container">
-
+          
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
@@ -21,10 +21,10 @@ title: AKBowedString Class Reference
   <td class="specification-value">AKBowedString.h<br />AKBowedString.m</td>
 </tr>
             </tbody></table></div>
+          
 
-
-
-
+          
+          
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
@@ -32,177 +32,175 @@ title: AKBowedString Class Reference
 
 <p>Audio output is a tone similar to a bowed string, using a physical model developed from Perry Cook.</p>
           </div>
+          
+          
 
-
-
-
-
+          
+          
           <div class="section section-tasks">
             <a title="Tasks" name="tasks"></a>
             <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
 
-
-
-
+            
+            
 
             <ul class="task-list">
-              <nobr>
                 <li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithFrequency:pressure:position:amplitude:vibratoShapeTable:vibratoFrequency:vibratoAmplitude:">&ndash;&nbsp;initWithFrequency:pressure:position:amplitude:vibratoShapeTable:vibratoFrequency:vibratoAmplitude:</a></code>
     <span class="tooltip"><p>Instantiates the bowed string</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/setOptionalMinimumFrequency:">&ndash;&nbsp;setOptionalMinimumFrequency:</a></code>
     <span class="tooltip"><p>Set an optional minimum frequency</p></span>
   </span>
-
-
+  
+  
 </li>
-              </nobr>
             </ul>
-
+            
           </div>
+          
+          
 
+          
+          
 
+          
 
-
-
-
-
-
-
+          
           <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
-
+            
             <div class="section-method">
   <a name="//api/name/initWithFrequency:pressure:position:amplitude:vibratoShapeTable:vibratoFrequency:vibratoAmplitude:" title="initWithFrequency:pressure:position:amplitude:vibratoShapeTable:vibratoFrequency:vibratoAmplitude:"></a>
   <h3 class="subsubtitle method-title">initWithFrequency:pressure:position:amplitude:vibratoShapeTable:vibratoFrequency:vibratoAmplitude:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Instantiates the bowed string</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (instancetype)initWithFrequency:(AKControl *)<em>frequency</em> pressure:(AKControl *)<em>pressure</em> position:(AKControl *)<em>position</em> amplitude:(AKControl *)<em>amplitude</em> vibratoShapeTable:(AKFTable *)<em>vibratoShapeTable</em> vibratoFrequency:(AKControl *)<em>vibratoFrequency</em> vibratoAmplitude:(AKControl *)<em>vibratoAmplitude</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>frequency</em></dt>
       <dd><p>Frequency of the note played, note that this will be lowest allowable frequency unless the optional minimum frequency is set.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>pressure</em></dt>
       <dd><p>Parameter controlling the pressure of the bow on the string. Values should be about 3. The useful range is approximately 1 to 5.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>position</em></dt>
       <dd><p>Position of the bow along the string. Usual playing is about 0.127236. The suggested range is 0.025 to 0.23.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>amplitude</em></dt>
       <dd><p>Amplitude of the note played.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>vibratoShapeTable</em></dt>
       <dd><p>Table shape of vibrato, usually a sine table.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>vibratoFrequency</em></dt>
       <dd><p>Frequency of vibrato in Hertz. Suggested range is 0 to 12.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>vibratoAmplitude</em></dt>
       <dd><p>Amplitude of the vibrato.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKBowedString.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/setOptionalMinimumFrequency:" title="setOptionalMinimumFrequency:"></a>
   <h3 class="subsubtitle method-title">setOptionalMinimumFrequency:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Set an optional minimum frequency</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (void)setOptionalMinimumFrequency:(AKConstant *)<em>minimumFrequency</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>minimumFrequency</em></dt>
       <dd><p>Lowest frequency at which the instrument will play.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKBowedString.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
           </div>
-
-
+          
+          
         </div>
       </div>

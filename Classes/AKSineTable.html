@@ -1,5 +1,5 @@
 ---
-section: docs
+layout: docs
 title: AKSineTable Class Reference
 ---
 
@@ -11,7 +11,7 @@ title: AKSineTable Class Reference
           </div>
         </div>
         <div id="container">
-
+          
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
@@ -21,151 +21,149 @@ title: AKSineTable Class Reference
   <td class="specification-value">AKSineTable.h<br />AKSineTable.m</td>
 </tr>
             </tbody></table></div>
+          
 
-
-
-
+          
+          
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
             <p>Generates composite waveforms made up of weighted sums of simple sinusoids.</p>
           </div>
+          
+          
 
-
-
-
-
+          
+          
           <div class="section section-tasks">
             <a title="Tasks" name="tasks"></a>
             <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
 
-
-
-
+            
+            
 
             <ul class="task-list">
-              <nobr>
                 <li>
   <span class="tooltip">
     <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
     <span class="tooltip"><p>Creates a pure sine table with a default size of 4096.</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithSize:partialStrengths:">&ndash;&nbsp;initWithSize:partialStrengths:</a></code>
     <span class="tooltip"><p>Creates a sine table with an array of partial strengths</p></span>
   </span>
-
-
+  
+  
 </li>
-              </nobr>
             </ul>
-
+            
           </div>
+          
+          
 
+          
+          
 
+          
 
-
-
-
-
-
-
+          
           <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
-
+            
             <div class="section-method">
   <a name="//api/name/init" title="init"></a>
   <h3 class="subsubtitle method-title">init</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Creates a pure sine table with a default size of 4096.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
 
+    
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKSineTable.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/initWithSize:partialStrengths:" title="initWithSize:partialStrengths:"></a>
   <h3 class="subsubtitle method-title">initWithSize:partialStrengths:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Creates a sine table with an array of partial strengths</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (instancetype)initWithSize:(int)<em>tableSize</em> partialStrengths:(AKArray *)<em>partialStrengthsArray</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>tableSize</em></dt>
       <dd><p>Number of points in the table. Must be a power of 2 or power-of-2 plus 1.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>partialStrengthsArray</em></dt>
       <dd><p>Relative strengths of the fixed harmonic partial numbers 1,2,3, etc. Partials not required should be given a strength of zero.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKSineTable.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
           </div>
-
-
+          
+          
         </div>
       </div>

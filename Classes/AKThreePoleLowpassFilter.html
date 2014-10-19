@@ -1,5 +1,5 @@
 ---
-section: docs
+layout: docs
 title: AKThreePoleLowpassFilter Class Reference
 ---
 
@@ -11,7 +11,7 @@ title: AKThreePoleLowpassFilter Class Reference
           </div>
         </div>
         <div id="container">
-
+          
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
@@ -21,10 +21,10 @@ title: AKThreePoleLowpassFilter Class Reference
   <td class="specification-value">AKThreePoleLowpassFilter.h<br />AKThreePoleLowpassFilter.m</td>
 </tr>
             </tbody></table></div>
+          
 
-
-
-
+          
+          
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
@@ -32,109 +32,107 @@ title: AKThreePoleLowpassFilter Class Reference
 
 <p>This a digital emulation of a 3 pole (18 dB/oct.) lowpass filter capable of self-oscillation with a built-in distortion unit. It is really a 3-pole version of moogvcf, retuned, recalibrated and with some performance improvements. The tuning and feedback tables use no more than 6 adds and 6 multiplies per control rate. The distortion unit, itself, is based on a modified tanh function driven by the filter controls.</p>
           </div>
+          
+          
 
-
-
-
-
+          
+          
           <div class="section section-tasks">
             <a title="Tasks" name="tasks"></a>
             <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
 
-
-
-
+            
+            
 
             <ul class="task-list">
-              <nobr>
                 <li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithAudioSource:distortion:cutoffFrequency:resonance:">&ndash;&nbsp;initWithAudioSource:distortion:cutoffFrequency:resonance:</a></code>
     <span class="tooltip"><p>Instantiates the three pole lowpass filter</p></span>
   </span>
-
-
+  
+  
 </li>
-              </nobr>
             </ul>
-
+            
           </div>
+          
+          
 
+          
+          
 
+          
 
-
-
-
-
-
-
+          
           <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
-
+            
             <div class="section-method">
   <a name="//api/name/initWithAudioSource:distortion:cutoffFrequency:resonance:" title="initWithAudioSource:distortion:cutoffFrequency:resonance:"></a>
   <h3 class="subsubtitle method-title">initWithAudioSource:distortion:cutoffFrequency:resonance:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Instantiates the three pole lowpass filter</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKAudio *)<em>audioSource</em> distortion:(AKControl *)<em>distortion</em> cutoffFrequency:(AKControl *)<em>cutoffFrequency</em> resonance:(AKControl *)<em>resonance</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>audioSource</em></dt>
       <dd><p>Signal that will be modified.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>distortion</em></dt>
       <dd><p>Amount of distortion. Zero gives a clean output. kdist > 0 adds tanh() distortion controlled by the filter parameters, in such a way that both low cutoff and high resonance increase the distortion amount. Some experimentation is encouraged.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>cutoffFrequency</em></dt>
       <dd><p>The filter cutoff frequency in Hz.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>resonance</em></dt>
       <dd><p>Amount of resonance. Self-oscillation occurs when approximately 1. Should usually be in the range 0 to 1, however, values slightly greater than 1 are possible for more sustained oscillation and an “overdrive” effect.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKThreePoleLowpassFilter.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
           </div>
-
-
+          
+          
         </div>
       </div>

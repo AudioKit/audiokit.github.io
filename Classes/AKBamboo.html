@@ -1,5 +1,5 @@
 ---
-section: docs
+layout: docs
 title: AKBamboo Class Reference
 ---
 
@@ -11,7 +11,7 @@ title: AKBamboo Class Reference
           </div>
         </div>
         <div id="container">
-
+          
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
@@ -21,10 +21,10 @@ title: AKBamboo Class Reference
   <td class="specification-value">AKBamboo.h<br />AKBamboo.m</td>
 </tr>
             </tbody></table></div>
+          
 
-
-
-
+          
+          
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
@@ -33,417 +33,415 @@ title: AKBamboo Class Reference
 <p>This is one of the PhISEM percussion opcodes. PhISEM (Physically Informed Stochastic Event Modeling)
 is an algorithmic approach for simulating collisions of multiple independent sound producing objects.</p>
           </div>
+          
+          
 
-
-
-
-
+          
+          
           <div class="section section-tasks">
             <a title="Tasks" name="tasks"></a>
             <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
 
-
-
-
+            
+            
 
             <ul class="task-list">
-              <nobr>
                 <li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithDuration:amplitude:">&ndash;&nbsp;initWithDuration:amplitude:</a></code>
     <span class="tooltip"><p>Instantiates the bamboo</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/setOptionalCount:">&ndash;&nbsp;setOptionalCount:</a></code>
     <span class="tooltip"><p>Set an optional count</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/setOptionalDampingFactor:">&ndash;&nbsp;setOptionalDampingFactor:</a></code>
     <span class="tooltip"><p>Set an optional damping factor</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/setOptionalEnergyReturn:">&ndash;&nbsp;setOptionalEnergyReturn:</a></code>
     <span class="tooltip"><p>Set an optional energy return</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/setOptionalMainResonantFrequency:">&ndash;&nbsp;setOptionalMainResonantFrequency:</a></code>
     <span class="tooltip"><p>Set an optional main resonant frequency</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/setOptionalFirstResonantFrequency:">&ndash;&nbsp;setOptionalFirstResonantFrequency:</a></code>
     <span class="tooltip"><p>Set an optional first resonant frequency</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/setOptionalSecondResonantFrequency:">&ndash;&nbsp;setOptionalSecondResonantFrequency:</a></code>
     <span class="tooltip"><p>Set an optional second resonant frequency</p></span>
   </span>
-
-
+  
+  
 </li>
-              </nobr>
             </ul>
-
+            
           </div>
+          
+          
 
+          
+          
 
+          
 
-
-
-
-
-
-
+          
           <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
-
+            
             <div class="section-method">
   <a name="//api/name/initWithDuration:amplitude:" title="initWithDuration:amplitude:"></a>
   <h3 class="subsubtitle method-title">initWithDuration:amplitude:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Instantiates the bamboo</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (instancetype)initWithDuration:(AKConstant *)<em>duration</em> amplitude:(AKControl *)<em>amplitude</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>duration</em></dt>
       <dd><p>Period of time over which all sound is stopped</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>amplitude</em></dt>
       <dd><p>Amplitude of output. Since these instruments are stochastic this is only an approximation.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKBamboo.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/setOptionalCount:" title="setOptionalCount:"></a>
   <h3 class="subsubtitle method-title">setOptionalCount:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Set an optional count</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (void)setOptionalCount:(AKConstant *)<em>count</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>count</em></dt>
       <dd><p>The number of beads, teeth, bells, timbrels, etc. The default value is 1.25.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKBamboo.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/setOptionalDampingFactor:" title="setOptionalDampingFactor:"></a>
   <h3 class="subsubtitle method-title">setOptionalDampingFactor:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Set an optional damping factor</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (void)setOptionalDampingFactor:(AKConstant *)<em>dampingFactor</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>dampingFactor</em></dt>
       <dd><p>The damping factor as part of this equation &ldquo;damping = 0.9999 + (dampingFactor * 0.002)&rdquo; The default damping is 0.9999 which means that the default value is 0. The maximum damping is 1.0 (no damping). This means the maximum value for the dampingFactor is 0.05.  The recommended range for dampingFactor is usually below 75% of the maximum value.]</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKBamboo.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/setOptionalEnergyReturn:" title="setOptionalEnergyReturn:"></a>
   <h3 class="subsubtitle method-title">setOptionalEnergyReturn:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Set an optional energy return</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (void)setOptionalEnergyReturn:(AKConstant *)<em>energyReturn</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>energyReturn</em></dt>
       <dd><p>Amount of energy to add back into the system. The value should be in range 0 to 1.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKBamboo.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/setOptionalFirstResonantFrequency:" title="setOptionalFirstResonantFrequency:"></a>
   <h3 class="subsubtitle method-title">setOptionalFirstResonantFrequency:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Set an optional first resonant frequency</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (void)setOptionalFirstResonantFrequency:(AKConstant *)<em>firstResonantFrequency</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>firstResonantFrequency</em></dt>
       <dd><p>The first resonant frequency. The default value is 2240.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKBamboo.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/setOptionalMainResonantFrequency:" title="setOptionalMainResonantFrequency:"></a>
   <h3 class="subsubtitle method-title">setOptionalMainResonantFrequency:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Set an optional main resonant frequency</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (void)setOptionalMainResonantFrequency:(AKConstant *)<em>mainResonantFrequency</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>mainResonantFrequency</em></dt>
       <dd><p>The main resonant frequency. The default value is 2800.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKBamboo.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/setOptionalSecondResonantFrequency:" title="setOptionalSecondResonantFrequency:"></a>
   <h3 class="subsubtitle method-title">setOptionalSecondResonantFrequency:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Set an optional second resonant frequency</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (void)setOptionalSecondResonantFrequency:(AKConstant *)<em>secondResonantFrequency</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>secondResonantFrequency</em></dt>
       <dd><p>The second resonant frequency. The default value is 3360.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKBamboo.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
           </div>
-
-
+          
+          
         </div>
       </div>

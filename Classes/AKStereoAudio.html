@@ -1,5 +1,5 @@
 ---
-section: docs
+layout: docs
 title: AKStereoAudio Class Reference
 ---
 
@@ -11,7 +11,7 @@ title: AKStereoAudio Class Reference
           </div>
         </div>
         <div id="container">
-
+          
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
@@ -21,355 +21,353 @@ title: AKStereoAudio Class Reference
   <td class="specification-value">AKStereoAudio.h<br />AKStereoAudio.m</td>
 </tr>
             </tbody></table></div>
+          
 
-
-
-
+          
+          
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
             <p>Stereo Audio Pair</p>
           </div>
+          
+          
 
-
-
-
-
+          
+          
           <div class="section section-tasks">
             <a title="Tasks" name="tasks"></a>
             <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
 
-
-
-
+            
+            
 
             <ul class="task-list">
-              <nobr>
                 <li>
   <span class="tooltip">
     <code><a href="#//api/name/leftOutput">&nbsp;&nbsp;leftOutput</a></code>
     <span class="tooltip"><p>The output to the left channel.</p></span>
   </span>
   <span class="task-item-suffix">property</span>
-
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/rightOutput">&nbsp;&nbsp;rightOutput</a></code>
     <span class="tooltip"><p>The output to the right channel.</p></span>
   </span>
   <span class="task-item-suffix">property</span>
-
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithLeftAudio:rightAudio:">&ndash;&nbsp;initWithLeftAudio:rightAudio:</a></code>
     <span class="tooltip"><p>Create an audio pair from left and right inputs</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/resetID">+&nbsp;resetID</a></code>
     <span class="tooltip"><p>Allows the unique identifying integer to be reset so that the numbers don&rsquo;t increment indefinitely.</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/stereoFromMono:">+&nbsp;stereoFromMono:</a></code>
     <span class="tooltip"><p>Quick and dirty way to get a stereo signal from a mono.</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/scaledBy:">&ndash;&nbsp;scaledBy:</a></code>
     <span class="tooltip"><p>Scale both sides of an audio pair equally.</p></span>
   </span>
-
-
+  
+  
 </li>
-              </nobr>
             </ul>
-
+            
           </div>
+          
+          
 
-
-
-
-
+          
+          
           <div class="section section-methods">
             <a title="Properties" name="properties"></a>
             <h2 class="subtitle subtitle-methods">Properties</h2>
-
+            
             <div class="section-method">
   <a name="//api/name/leftOutput" title="leftOutput"></a>
   <h3 class="subsubtitle method-title">leftOutput</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>The output to the left channel.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>@property (nonatomic, strong) AKAudio *leftOutput</code></div>
 
+    
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKStereoAudio.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/rightOutput" title="rightOutput"></a>
   <h3 class="subsubtitle method-title">rightOutput</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>The output to the right channel.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>@property (nonatomic, strong) AKAudio *rightOutput</code></div>
 
+    
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKStereoAudio.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
           </div>
+          
 
-
-
+          
           <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
             <h2 class="subtitle subtitle-methods">Class Methods</h2>
-
+            
             <div class="section-method">
   <a name="//api/name/resetID" title="resetID"></a>
   <h3 class="subsubtitle method-title">resetID</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Allows the unique identifying integer to be reset so that the numbers don&rsquo;t increment indefinitely.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>+ (void)resetID</code></div>
 
+    
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKStereoAudio.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/stereoFromMono:" title="stereoFromMono:"></a>
   <h3 class="subsubtitle method-title">stereoFromMono:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Quick and dirty way to get a stereo signal from a mono.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>+ (AKStereoAudio *)stereoFromMono:(AKAudio *)<em>mono</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>mono</em></dt>
       <dd><p>Regular mono audio source.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKStereoAudio.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
           </div>
+          
 
-
-
+          
           <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
-
+            
             <div class="section-method">
   <a name="//api/name/initWithLeftAudio:rightAudio:" title="initWithLeftAudio:rightAudio:"></a>
   <h3 class="subsubtitle method-title">initWithLeftAudio:rightAudio:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Create an audio pair from left and right inputs</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (instancetype)initWithLeftAudio:(AKAudio *)<em>leftAudio</em> rightAudio:(AKAudio *)<em>rightAudio</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>leftAudio</em></dt>
       <dd><p>Left channel input</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>rightAudio</em></dt>
       <dd><p>Rigt channel input</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKStereoAudio.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/scaledBy:" title="scaledBy:"></a>
   <h3 class="subsubtitle method-title">scaledBy:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Scale both sides of an audio pair equally.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (id)scaledBy:(AKParameter *)<em>scalingFactor</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>scalingFactor</em></dt>
       <dd><p>Amount by which to scale the audio.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKStereoAudio.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
           </div>
-
-
+          
+          
         </div>
       </div>

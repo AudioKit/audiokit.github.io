@@ -1,5 +1,5 @@
 ---
-section: docs
+layout: docs
 title: AKTableValueControl Class Reference
 ---
 
@@ -11,7 +11,7 @@ title: AKTableValueControl Class Reference
           </div>
         </div>
         <div id="container">
-
+          
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
@@ -21,247 +21,245 @@ title: AKTableValueControl Class Reference
   <td class="specification-value">AKTableValueControl.h<br />AKTableValueControl.m</td>
 </tr>
             </tbody></table></div>
+          
 
-
-
-
+          
+          
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
             <p>Accesses table values by direct indexing with linear interpolation.</p>
           </div>
+          
+          
 
-
-
-
-
+          
+          
           <div class="section section-tasks">
             <a title="Tasks" name="tasks"></a>
             <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
 
-
-
-
+            
+            
 
             <ul class="task-list">
-              <nobr>
                 <li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithFTable:atIndex:">&ndash;&nbsp;initWithFTable:atIndex:</a></code>
     <span class="tooltip"><p>Initialize the opcode as an audio operation.</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/normalize">&ndash;&nbsp;normalize</a></code>
     <span class="tooltip"><p>Normalize data to a maximum of 1.</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/wrap">&ndash;&nbsp;wrap</a></code>
     <span class="tooltip"><p>Wrap around the fTable data for out of range indices.</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/offsetBy:">&ndash;&nbsp;offsetBy:</a></code>
     <span class="tooltip"><p>Set the offset amount.</p></span>
   </span>
-
-
+  
+  
 </li>
-              </nobr>
             </ul>
-
+            
           </div>
+          
+          
 
+          
+          
 
+          
 
-
-
-
-
-
-
+          
           <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
-
+            
             <div class="section-method">
   <a name="//api/name/initWithFTable:atIndex:" title="initWithFTable:atIndex:"></a>
   <h3 class="subsubtitle method-title">initWithFTable:atIndex:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Initialize the opcode as an audio operation.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (instancetype)initWithFTable:(AKConstant *)<em>fTable</em> atIndex:(AKControl *)<em>index</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>fTable</em></dt>
       <dd><p>Function table read the data from.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>index</em></dt>
       <dd><p>Indexing Parameter.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKTableValueControl.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/normalize" title="normalize"></a>
   <h3 class="subsubtitle method-title">normalize</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Normalize data to a maximum of 1.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (void)normalize</code></div>
 
+    
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKTableValueControl.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/offsetBy:" title="offsetBy:"></a>
   <h3 class="subsubtitle method-title">offsetBy:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Set the offset amount.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (void)offsetBy:(AKConstant *)<em>offsetAmount</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>offsetAmount</em></dt>
       <dd><p>Amount by which index is to be offset. For a table with origin at center, use tablesize/2 (raw) or .5 (normalized).</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKTableValueControl.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/wrap" title="wrap"></a>
   <h3 class="subsubtitle method-title">wrap</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Wrap around the fTable data for out of range indices.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (void)wrap</code></div>
 
+    
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKTableValueControl.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
           </div>
-
-
+          
+          
         </div>
       </div>

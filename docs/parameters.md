@@ -1,5 +1,5 @@
 ---
-section: docs
+layout: docs
 title: Audio Kit Parameters
 header: Parameters
 permalink: /parameters/

@@ -1,5 +1,5 @@
 ---
-section: docs
+layout: docs
 title: AKConstant Class Reference
 ---
 
@@ -11,7 +11,7 @@ title: AKConstant Class Reference
           </div>
         </div>
         <div id="container">
-
+          
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
@@ -21,374 +21,372 @@ title: AKConstant Class Reference
   <td class="specification-value">AKConstant.h<br />AKConstant.m</td>
 </tr>
             </tbody></table></div>
+          
 
-
-
-
+          
+          
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
             <p>These are i-Rate parameters, constant for a given operation call or note</p>
           </div>
+          
+          
 
-
-
-
-
+          
+          
           <div class="section section-tasks">
             <a title="Tasks" name="tasks"></a>
             <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
 
-
-
-
+            
+            
 
             <ul class="task-list">
-              <nobr>
                 <li>
   <span class="tooltip">
     <code><a href="#//api/name/constantWithFloat:">+&nbsp;constantWithFloat:</a></code>
     <span class="tooltip"><p>Common method to create float parameters.  So much so that akp() macro was created and preferred.</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/constantWithNumber:">+&nbsp;constantWithNumber:</a></code>
     <span class="tooltip"><p>Common method to create float parameters.  So much so that akp() macro was created and preferred.</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/constantWithInt:">+&nbsp;constantWithInt:</a></code>
     <span class="tooltip"><p>Common method to create integer parameters.  So much so that akpi() macro was created and preferred.</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/constantWithFilename:">+&nbsp;constantWithFilename:</a></code>
     <span class="tooltip"><p>Common method to create file locations.  So much so that akpfn() macro was created and preferred.</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/constantWithControl:">+&nbsp;constantWithControl:</a></code>
     <span class="tooltip"><p>Take a control value and force the first value to be used as a constant</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithValue:">&ndash;&nbsp;initWithValue:</a></code>
     <span class="tooltip"><p>Initialize the constant with a number</p></span>
   </span>
-
-
+  
+  
 </li>
-              </nobr>
             </ul>
-
+            
           </div>
+          
+          
 
+          
+          
 
-
-
-
-
-
+          
           <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
             <h2 class="subtitle subtitle-methods">Class Methods</h2>
-
+            
             <div class="section-method">
   <a name="//api/name/constantWithControl:" title="constantWithControl:"></a>
   <h3 class="subsubtitle method-title">constantWithControl:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Take a control value and force the first value to be used as a constant</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>+ (instancetype)constantWithControl:(AKControl *)<em>control</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>control</em></dt>
       <dd><p>Control value to be coerced into a constant</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKConstant.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/constantWithFilename:" title="constantWithFilename:"></a>
   <h3 class="subsubtitle method-title">constantWithFilename:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Common method to create file locations.  So much so that akpfn() macro was created and preferred.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>+ (instancetype)constantWithFilename:(NSString *)<em>filename</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>filename</em></dt>
       <dd><p>String containing full path of file.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKConstant.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/constantWithFloat:" title="constantWithFloat:"></a>
   <h3 class="subsubtitle method-title">constantWithFloat:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Common method to create float parameters.  So much so that akp() macro was created and preferred.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>+ (instancetype)constantWithFloat:(float)<em>value</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>value</em></dt>
       <dd><p>Value to set the parameter to.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKConstant.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/constantWithInt:" title="constantWithInt:"></a>
   <h3 class="subsubtitle method-title">constantWithInt:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Common method to create integer parameters.  So much so that akpi() macro was created and preferred.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>+ (instancetype)constantWithInt:(int)<em>value</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>value</em></dt>
       <dd><p>Value to set the parameter to.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKConstant.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/constantWithNumber:" title="constantWithNumber:"></a>
   <h3 class="subsubtitle method-title">constantWithNumber:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Common method to create float parameters.  So much so that akp() macro was created and preferred.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>+ (instancetype)constantWithNumber:(NSNumber *)<em>number</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>number</em></dt>
       <dd><p>Value to set the parameter to.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKConstant.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
           </div>
+          
 
-
-
+          
           <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
-
+            
             <div class="section-method">
   <a name="//api/name/initWithValue:" title="initWithValue:"></a>
   <h3 class="subsubtitle method-title">initWithValue:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Initialize the constant with a number</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (instancetype)initWithValue:(NSNumber *)<em>value</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>value</em></dt>
       <dd><p>Number value of the constant</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKConstant.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
           </div>
-
-
+          
+          
         </div>
       </div>

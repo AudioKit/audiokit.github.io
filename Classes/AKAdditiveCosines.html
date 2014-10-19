@@ -1,5 +1,5 @@
 ---
-section: docs
+layout: docs
 title: AKAdditiveCosines Class Reference
 ---
 
@@ -11,7 +11,7 @@ title: AKAdditiveCosines Class Reference
           </div>
         </div>
         <div id="container">
-
+          
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
@@ -21,10 +21,10 @@ title: AKAdditiveCosines Class Reference
   <td class="specification-value">AKAdditiveCosines.h<br />AKAdditiveCosines.m</td>
 </tr>
             </tbody></table></div>
+          
 
-
-
-
+          
+          
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
@@ -34,119 +34,117 @@ Properties determine the selection and strength of partials. This is a band-limi
 if the partials extend to the Nyquist, i.e. harmonicsCount = int (sr / 2 / fundamental freq.),
 the result is a real pulse train of amplitude (amplitude).</p>
           </div>
+          
+          
 
-
-
-
-
+          
+          
           <div class="section section-tasks">
             <a title="Tasks" name="tasks"></a>
             <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
 
-
-
-
+            
+            
 
             <ul class="task-list">
-              <nobr>
                 <li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithFTable:harmonicsCount:firstHarmonicIndex:partialMultiplier:fundamentalFrequency:amplitude:">&ndash;&nbsp;initWithFTable:harmonicsCount:firstHarmonicIndex:partialMultiplier:fundamentalFrequency:amplitude:</a></code>
     <span class="tooltip"><p>Create a set of harmonically related cosine partials</p></span>
   </span>
-
-
+  
+  
 </li>
-              </nobr>
             </ul>
-
+            
           </div>
+          
+          
 
+          
+          
 
+          
 
-
-
-
-
-
-
+          
           <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
-
+            
             <div class="section-method">
   <a name="//api/name/initWithFTable:harmonicsCount:firstHarmonicIndex:partialMultiplier:fundamentalFrequency:amplitude:" title="initWithFTable:harmonicsCount:firstHarmonicIndex:partialMultiplier:fundamentalFrequency:amplitude:"></a>
   <h3 class="subsubtitle method-title">initWithFTable:harmonicsCount:firstHarmonicIndex:partialMultiplier:fundamentalFrequency:amplitude:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Create a set of harmonically related cosine partials</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (instancetype)initWithFTable:(AKFTable *)<em>cosineTable</em> harmonicsCount:(AKControl *)<em>harmonicsCount</em> firstHarmonicIndex:(AKControl *)<em>firstHarmonicIndex</em> partialMultiplier:(AKControl *)<em>partialMultiplier</em> fundamentalFrequency:(AKParameter *)<em>fundamentalFrequency</em> amplitude:(AKParameter *)<em>amplitude</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>cosineTable</em></dt>
       <dd><p>A cosine table with at least 8192 points is recommended</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>harmonicsCount</em></dt>
       <dd><p>Total number of harmonics requested.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>firstHarmonicIndex</em></dt>
       <dd><p>The lowest harmonic present.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>partialMultiplier</em></dt>
       <dd><p>The multiplier in the series of amplitude coefficients.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>fundamentalFrequency</em></dt>
       <dd><p>Thefrequency which can be modulated at any rate.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>amplitude</em></dt>
       <dd><p>Total amplitude which can be modulated at any rate.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKAdditiveCosines.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
           </div>
-
-
+          
+          
         </div>
       </div>

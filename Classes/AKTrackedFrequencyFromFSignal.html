@@ -1,5 +1,5 @@
 ---
-section: docs
+layout: docs
 title: AKTrackedFrequencyFromFSignal Class Reference
 ---
 
@@ -11,7 +11,7 @@ title: AKTrackedFrequencyFromFSignal Class Reference
           </div>
         </div>
         <div id="container">
-
+          
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
@@ -21,10 +21,10 @@ title: AKTrackedFrequencyFromFSignal Class Reference
   <td class="specification-value">AKTrackedFrequencyFromFSignal.h<br />AKTrackedFrequencyFromFSignal.m</td>
 </tr>
             </tbody></table></div>
+          
 
-
-
-
+          
+          
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
@@ -40,99 +40,97 @@ title: AKTrackedFrequencyFromFSignal Class Reference
 
 <p>In order to facilitate efficient testing of the algorithm, an amplitude value proportional to the one in the observed in the signal frame is also outputted (kamp). The results can then be employed to drive an oscillator whose pitch can be audibly compared with that of the original signal (In the example below, an oscillator generates a signal which appears a fifth above the detected pitch).</p>
           </div>
+          
+          
 
-
-
-
-
+          
+          
           <div class="section section-tasks">
             <a title="Tasks" name="tasks"></a>
             <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
 
-
-
-
+            
+            
 
             <ul class="task-list">
-              <nobr>
                 <li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithFSignalSource:amplitudeThreshold:">&ndash;&nbsp;initWithFSignalSource:amplitudeThreshold:</a></code>
     <span class="tooltip"><p>Initialize the tracked frequency.</p></span>
   </span>
-
-
+  
+  
 </li>
-              </nobr>
             </ul>
-
+            
           </div>
+          
+          
 
+          
+          
 
+          
 
-
-
-
-
-
-
+          
           <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
-
+            
             <div class="section-method">
   <a name="//api/name/initWithFSignalSource:amplitudeThreshold:" title="initWithFSignalSource:amplitudeThreshold:"></a>
   <h3 class="subsubtitle method-title">initWithFSignalSource:amplitudeThreshold:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Initialize the tracked frequency.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (instancetype)initWithFSignalSource:(AKFSignal *)<em>fSignalSource</em> amplitudeThreshold:(AKControl *)<em>amplitudeThreshold</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>fSignalSource</em></dt>
       <dd><p>Input mono F-Signal.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>amplitudeThreshold</em></dt>
       <dd><p>Amplitude threshold (0-1). Higher values will eliminate low-amplitude spectral components from being included in the analysis.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKTrackedFrequencyFromFSignal.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
           </div>
-
-
+          
+          
         </div>
       </div>

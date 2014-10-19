@@ -1,6 +1,7 @@
 ---
-section: docs
-title: Core Classes
+layout: docs
+title: Audio Kit's Core Classes
+header: Core Classes
 permalink: /core-classes/
 ---
 

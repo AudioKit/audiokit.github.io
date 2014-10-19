@@ -1,5 +1,5 @@
 ---
-section: docs
+layout: docs
 title: AKControlSegmentArray Class Reference
 ---
 
@@ -11,7 +11,7 @@ title: AKControlSegmentArray Class Reference
           </div>
         </div>
         <div id="container">
-
+          
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
@@ -21,10 +21,10 @@ title: AKControlSegmentArray Class Reference
   <td class="specification-value">AKControlSegmentArray.h<br />AKControlSegmentArray.m</td>
 </tr>
             </tbody></table></div>
+          
 
-
-
-
+          
+          
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
@@ -32,21 +32,20 @@ title: AKControlSegmentArray Class Reference
 between these points can either be linear, by default, or exponential,
 by sending invoking the <a href="#//api/name/useExponentialSegments">useExponentialSegments</a> method.</p>
           </div>
+          
+          
 
-
-
-
-
+          
+          
           <div class="section section-tasks">
             <a title="Tasks" name="tasks"></a>
             <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
 
-
-
+            
             <h3 class="subsubtitle task-title">Other Methods</h3>
 
             <ul class="task-list">
-              <nobr>
                 <li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithStartValue:toNextValue:afterDuration:">&ndash;&nbsp;initWithStartValue:toNextValue:afterDuration:</a></code>
@@ -54,260 +53,257 @@ by sending invoking the <a href="#//api/name/useExponentialSegments">useExponent
 Use addValue:afterDuration to add more segments to the array.
 An optional release segment can be added with addReleaseToFinalValue:afterDuration.</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/addValue:afterDuration:">&ndash;&nbsp;addValue:afterDuration:</a></code>
     <span class="tooltip"><p>Adds another segment.</p></span>
   </span>
-
-
+  
+  
 </li>
-              </nobr>
             </ul>
-
+            
 
             <a title="Optional Assignments" name="task_Optional Assignments"></a>
             <h3 class="subsubtitle task-title">Optional Assignments</h3>
 
             <ul class="task-list">
-              <nobr>
                 <li>
   <span class="tooltip">
     <code><a href="#//api/name/addReleaseToFinalValue:afterDuration:">&ndash;&nbsp;addReleaseToFinalValue:afterDuration:</a></code>
     <span class="tooltip"><p>Adds a release segment.</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/useExponentialSegments">&ndash;&nbsp;useExponentialSegments</a></code>
     <span class="tooltip"><p>Switches to an exponential segment generating opcode.</p></span>
   </span>
-
-
+  
+  
 </li>
-              </nobr>
             </ul>
-
+            
           </div>
+          
+          
 
+          
+          
 
+          
 
-
-
-
-
-
-
+          
           <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
-
+            
             <div class="section-method">
   <a name="//api/name/addReleaseToFinalValue:afterDuration:" title="addReleaseToFinalValue:afterDuration:"></a>
   <h3 class="subsubtitle method-title">addReleaseToFinalValue:afterDuration:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Adds a release segment.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (void)addReleaseToFinalValue:(AKConstant *)<em>finalValue</em> afterDuration:(AKConstant *)<em>releaseDuration</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>finalValue</em></dt>
       <dd><p>Last value to reach, typically zero.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>releaseDuration</em></dt>
       <dd><p>Length of time in seconds to get to finalValue.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKControlSegmentArray.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/addValue:afterDuration:" title="addValue:afterDuration:"></a>
   <h3 class="subsubtitle method-title">addValue:afterDuration:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Adds another segment.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (void)addValue:(AKConstant *)<em>nextSegmentTargetValue</em> afterDuration:(AKConstant *)<em>nextSegmentDuration</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>nextSegmentTargetValue</em></dt>
       <dd><p>Value after nextSegmentDuration seconds.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>nextSegmentDuration</em></dt>
       <dd><p>Duration in seconds.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKControlSegmentArray.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/initWithStartValue:toNextValue:afterDuration:" title="initWithStartValue:toNextValue:afterDuration:"></a>
   <h3 class="subsubtitle method-title">initWithStartValue:toNextValue:afterDuration:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Creates the AKSegmentArray and populates it with the minimum information.
 Use addValue:afterDuration to add more segments to the array.
 An optional release segment can be added with addReleaseToFinalValue:afterDuration.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (instancetype)initWithStartValue:(AKConstant *)<em>firstSegmentStartValue</em> toNextValue:(AKConstant *)<em>firstSegmentTargetValue</em> afterDuration:(AKConstant *)<em>firstSegmentDuration</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>firstSegmentStartValue</em></dt>
       <dd><p>Starting value.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>firstSegmentTargetValue</em></dt>
       <dd><p>Value after firstSegmentDuration seconds.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>firstSegmentDuration</em></dt>
       <dd><p>Duration in seconds of first segment. A zero or negative value will cause all initialization to be skipped.</p></dd>
     </dl>
-
+    
   </div>
+  
 
-
-
+  
   <div class="method-subsection return">
     <h4 class="method-subtitle parameter-title">Return Value</h4>
     <p>An AKSegment with the first segment specified.</p>
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKControlSegmentArray.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/useExponentialSegments" title="useExponentialSegments"></a>
   <h3 class="subsubtitle method-title">useExponentialSegments</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Switches to an exponential segment generating opcode.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (void)useExponentialSegments</code></div>
 
+    
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKControlSegmentArray.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
           </div>
-
-
+          
+          
         </div>
       </div>

@@ -1,5 +1,5 @@
 ---
-section: docs
+layout: docs
 title: AKLinearControlEnvelope Class Reference
 ---
 
@@ -11,7 +11,7 @@ title: AKLinearControlEnvelope Class Reference
           </div>
         </div>
         <div id="container">
-
+          
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
@@ -21,10 +21,10 @@ title: AKLinearControlEnvelope Class Reference
   <td class="specification-value">AKLinearControlEnvelope.h<br />AKLinearControlEnvelope.m</td>
 </tr>
             </tbody></table></div>
+          
 
-
-
-
+          
+          
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
@@ -37,109 +37,107 @@ periods overlap then both modifications will be in effect for that time. If the
 overall duration is exceeded in performance, the final decay will continue on in
 the same direction, going negative.</p>
           </div>
+          
+          
 
-
-
-
-
+          
+          
           <div class="section section-tasks">
             <a title="Tasks" name="tasks"></a>
             <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
 
-
-
-
+            
+            
 
             <ul class="task-list">
-              <nobr>
                 <li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithRiseTime:totalDuration:decayTime:amplitude:">&ndash;&nbsp;initWithRiseTime:totalDuration:decayTime:amplitude:</a></code>
     <span class="tooltip"><p>Creates a straight line rise and decay patter to an input signal.</p></span>
   </span>
-
-
+  
+  
 </li>
-              </nobr>
             </ul>
-
+            
           </div>
+          
+          
 
+          
+          
 
+          
 
-
-
-
-
-
-
+          
           <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
-
+            
             <div class="section-method">
   <a name="//api/name/initWithRiseTime:totalDuration:decayTime:amplitude:" title="initWithRiseTime:totalDuration:decayTime:amplitude:"></a>
   <h3 class="subsubtitle method-title">initWithRiseTime:totalDuration:decayTime:amplitude:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Creates a straight line rise and decay patter to an input signal.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (instancetype)initWithRiseTime:(AKConstant *)<em>riseTime</em> totalDuration:(AKConstant *)<em>totalDuration</em> decayTime:(AKConstant *)<em>decayTime</em> amplitude:(AKControl *)<em>amplitude</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>riseTime</em></dt>
       <dd><p>Rise time in seconds. A zero or negative value signifies no rise modification.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>totalDuration</em></dt>
       <dd><p>Overall duration in seconds. A zero or negative value will cause initialization to be skipped.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>decayTime</em></dt>
       <dd><p>Decay time in seconds. Zero means no decay. If it is greater than the total duration, it will cause a truncated decay.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>amplitude</em></dt>
       <dd><p>Amplitude to rise to and decay from.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKLinearControlEnvelope.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
           </div>
-
-
+          
+          
         </div>
       </div>

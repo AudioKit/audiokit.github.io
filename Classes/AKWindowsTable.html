@@ -1,5 +1,5 @@
 ---
-section: docs
+layout: docs
 title: AKWindowsTable Class Reference
 ---
 
@@ -11,7 +11,7 @@ title: AKWindowsTable Class Reference
           </div>
         </div>
         <div id="container">
-
+          
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
@@ -21,10 +21,10 @@ title: AKWindowsTable Class Reference
   <td class="specification-value">AKWindowsTable.h<br />AKWindowsTable.m</td>
 </tr>
             </tbody></table></div>
+          
 
-
-
-
+          
+          
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
@@ -46,288 +46,286 @@ spectrum analysis or for grain envelopes.</p>
 </ol>
 
           </div>
+          
+          
 
-
-
-
-
+          
+          
           <div class="section section-tasks">
             <a title="Tasks" name="tasks"></a>
             <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
 
-
-
-
+            
+            
 
             <ul class="task-list">
-              <nobr>
                 <li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithType:maximum:size:">&ndash;&nbsp;initWithType:maximum:size:</a></code>
     <span class="tooltip"><p>Instantiates the window function table.</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithType:size:">&ndash;&nbsp;initWithType:size:</a></code>
     <span class="tooltip"><p>Instantiates the window function table with a maximum value of 1.</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/initGaussianTypeWithBroadness:maximum:size:">&ndash;&nbsp;initGaussianTypeWithBroadness:maximum:size:</a></code>
     <span class="tooltip"><p>Creates a Gaussian Windown Function Table</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/initKaiserTypeWithOpenness:maximum:size:">&ndash;&nbsp;initKaiserTypeWithOpenness:maximum:size:</a></code>
     <span class="tooltip"><p>Creates a Kaiser Windown Function Table</p></span>
   </span>
-
-
+  
+  
 </li>
-              </nobr>
             </ul>
-
+            
           </div>
+          
+          
 
+          
+          
 
+          
 
-
-
-
-
-
-
+          
           <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
-
+            
             <div class="section-method">
   <a name="//api/name/initGaussianTypeWithBroadness:maximum:size:" title="initGaussianTypeWithBroadness:maximum:size:"></a>
   <h3 class="subsubtitle method-title">initGaussianTypeWithBroadness:maximum:size:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Creates a Gaussian Windown Function Table</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (instancetype)initGaussianTypeWithBroadness:(float)<em>windowBroadness</em> maximum:(float)<em>maximum</em> size:(int)<em>tableSize</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>windowBroadness</em></dt>
       <dd><p>Specifies how broad the window is, as the standard deviation of the curve; in this example the s.d. is 2. The default value is 1.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>maximum</em></dt>
       <dd><p>Absolute value at window peak point.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>tableSize</em></dt>
       <dd><p>Number of points in the table. Must be a power of 2 or power-of-2 plus 1.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKWindowsTable.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/initKaiserTypeWithOpenness:maximum:size:" title="initKaiserTypeWithOpenness:maximum:size:"></a>
   <h3 class="subsubtitle method-title">initKaiserTypeWithOpenness:maximum:size:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Creates a Kaiser Windown Function Table</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (instancetype)initKaiserTypeWithOpenness:(float)<em>windowOpenness</em> maximum:(float)<em>maximum</em> size:(int)<em>tableSize</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>windowOpenness</em></dt>
       <dd><p>Specifies how &ldquo;open&rdquo; the window is, for example a value of 0 results in a rectangular window and a value of 10 in a Hamming like window.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>maximum</em></dt>
       <dd><p>Absolute value at window peak point.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>tableSize</em></dt>
       <dd><p>Number of points in the table. Must be a power of 2 or power-of-2 plus 1.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKWindowsTable.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/initWithType:maximum:size:" title="initWithType:maximum:size:"></a>
   <h3 class="subsubtitle method-title">initWithType:maximum:size:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Instantiates the window function table.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (instancetype)initWithType:(WindowTableType)<em>windowType</em> maximum:(float)<em>maximum</em> size:(int)<em>tableSize</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>windowType</em></dt>
       <dd><p>Type of window to generate.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>maximum</em></dt>
       <dd><p>Absolute value at window peak point.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>tableSize</em></dt>
       <dd><p>Number of points in the table. Must be a power of 2 or power-of-2 plus 1.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKWindowsTable.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/initWithType:size:" title="initWithType:size:"></a>
   <h3 class="subsubtitle method-title">initWithType:size:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Instantiates the window function table with a maximum value of 1.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (instancetype)initWithType:(WindowTableType)<em>windowType</em> size:(int)<em>tableSize</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>windowType</em></dt>
       <dd><p>Type of window to generate.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>tableSize</em></dt>
       <dd><p>Number of points in the table. Must be a power of 2 or power-of-2 plus 1.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKWindowsTable.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
           </div>
-
-
+          
+          
         </div>
       </div>

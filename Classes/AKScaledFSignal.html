@@ -1,5 +1,5 @@
 ---
-section: docs
+layout: docs
 title: AKScaledFSignal Class Reference
 ---
 
@@ -11,7 +11,7 @@ title: AKScaledFSignal Class Reference
           </div>
         </div>
         <div id="container">
-
+          
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
@@ -21,10 +21,10 @@ title: AKScaledFSignal Class Reference
   <td class="specification-value">AKScaledFSignal.h<br />AKScaledFSignal.m</td>
 </tr>
             </tbody></table></div>
+          
 
-
-
-
+          
+          
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
@@ -35,172 +35,170 @@ Output amplitudes can be optionally modified in order to attempt formant preserv
 Liftered Cepstrum Formant preservation method is less intensive than the true envelope method,
 which might not be suited to realtime use.</p>
           </div>
+          
+          
 
-
-
-
-
+          
+          
           <div class="section section-tasks">
             <a title="Tasks" name="tasks"></a>
             <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
 
-
-
-
+            
+            
 
             <ul class="task-list">
-              <nobr>
                 <li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithInput:frequencyRatio:">&ndash;&nbsp;initWithInput:frequencyRatio:</a></code>
     <span class="tooltip"><p>Create a frequency-scaled phase vocoder stream from another stream</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithInput:frequencyRatio:formantRetainMethod:amplitudeRatio:cepstrumCoefficients:">&ndash;&nbsp;initWithInput:frequencyRatio:formantRetainMethod:amplitudeRatio:cepstrumCoefficients:</a></code>
     <span class="tooltip"><p>Create a frequency-scaled phase vocoder stream from another stream</p></span>
   </span>
-
-
+  
+  
 </li>
-              </nobr>
             </ul>
-
+            
           </div>
+          
+          
 
+          
+          
 
+          
 
-
-
-
-
-
-
+          
           <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
-
+            
             <div class="section-method">
   <a name="//api/name/initWithInput:frequencyRatio:" title="initWithInput:frequencyRatio:"></a>
   <h3 class="subsubtitle method-title">initWithInput:frequencyRatio:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Create a frequency-scaled phase vocoder stream from another stream</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKFSignal *)<em>input</em> frequencyRatio:(AKControl *)<em>frequencyRatio</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>input</em></dt>
       <dd><p>Source f-signal</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>frequencyRatio</em></dt>
       <dd><p>Scaling ratio.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKScaledFSignal.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/initWithInput:frequencyRatio:formantRetainMethod:amplitudeRatio:cepstrumCoefficients:" title="initWithInput:frequencyRatio:formantRetainMethod:amplitudeRatio:cepstrumCoefficients:"></a>
   <h3 class="subsubtitle method-title">initWithInput:frequencyRatio:formantRetainMethod:amplitudeRatio:cepstrumCoefficients:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Create a frequency-scaled phase vocoder stream from another stream</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKFSignal *)<em>input</em> frequencyRatio:(AKControl *)<em>frequencyRatio</em> formantRetainMethod:(FormantRetainMethodType)<em>formantRetainMethod</em> amplitudeRatio:(AKControl *)<em>amplitudeRatio</em> cepstrumCoefficients:(AKControl *)<em>numberOfCepstrumCoefficients</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>input</em></dt>
       <dd><p>Source f-signal.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>frequencyRatio</em></dt>
       <dd><p>Scaling ratio.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>formantRetainMethod</em></dt>
       <dd><p>Method by which to attempt to keep input signal formants.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>amplitudeRatio</em></dt>
       <dd><p>Amplitude scaling ratio (default 1.0 equals no change)</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>numberOfCepstrumCoefficients</em></dt>
       <dd><p>Number of coefficients to use in formant preservation (defaults ot 80).</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKScaledFSignal.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
           </div>
-
-
+          
+          
         </div>
       </div>

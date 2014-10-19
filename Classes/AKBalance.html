@@ -1,5 +1,5 @@
 ---
-section: docs
+layout: docs
 title: AKBalance Class Reference
 ---
 
@@ -11,7 +11,7 @@ title: AKBalance Class Reference
           </div>
         </div>
         <div id="container">
-
+          
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
@@ -21,10 +21,10 @@ title: AKBalance Class Reference
   <td class="specification-value">AKBalance.h<br />AKBalance.m</td>
 </tr>
             </tbody></table></div>
+          
 
-
-
-
+          
+          
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
@@ -32,152 +32,150 @@ title: AKBalance Class Reference
 
 <p>This operation outputs a version of the audio source, amplitude-modified so that its rms power is equal to that of the comparator audio source. Thus a signal that has suffered loss of power (eg., in passing through a filter bank) can be restored by matching it with, for instance, its own source. It should be noted that this modifies amplitude only; output signal is not altered in any other respect.</p>
           </div>
+          
+          
 
-
-
-
-
+          
+          
           <div class="section section-tasks">
             <a title="Tasks" name="tasks"></a>
             <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
 
-
-
-
+            
+            
 
             <ul class="task-list">
-              <nobr>
                 <li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithAudioSource:comparatorAudioSource:">&ndash;&nbsp;initWithAudioSource:comparatorAudioSource:</a></code>
     <span class="tooltip"><p>Instantiates the balance</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/setOptionalHalfPowerPoint:">&ndash;&nbsp;setOptionalHalfPowerPoint:</a></code>
     <span class="tooltip"><p>Set an optional half power point</p></span>
   </span>
-
-
+  
+  
 </li>
-              </nobr>
             </ul>
-
+            
           </div>
+          
+          
 
+          
+          
 
+          
 
-
-
-
-
-
-
+          
           <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
-
+            
             <div class="section-method">
   <a name="//api/name/initWithAudioSource:comparatorAudioSource:" title="initWithAudioSource:comparatorAudioSource:"></a>
   <h3 class="subsubtitle method-title">initWithAudioSource:comparatorAudioSource:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Instantiates the balance</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKAudio *)<em>audioSource</em> comparatorAudioSource:(AKAudio *)<em>comparatorAudioSource</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>audioSource</em></dt>
       <dd><p>Input audio signal</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>comparatorAudioSource</em></dt>
       <dd><p>The comparator signal</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKBalance.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/setOptionalHalfPowerPoint:" title="setOptionalHalfPowerPoint:"></a>
   <h3 class="subsubtitle method-title">setOptionalHalfPowerPoint:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Set an optional half power point</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (void)setOptionalHalfPowerPoint:(AKConstant *)<em>halfPowerPoint</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>halfPowerPoint</em></dt>
       <dd><p>Half-power point (in Hz) of a special internal low-pass filter. The default value is 10.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKBalance.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
           </div>
-
-
+          
+          
         </div>
       </div>

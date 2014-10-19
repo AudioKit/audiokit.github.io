@@ -1,5 +1,5 @@
 ---
-section: docs
+layout: docs
 header: Properties
 title: Audio Kit Properties
 permalink: /properties/

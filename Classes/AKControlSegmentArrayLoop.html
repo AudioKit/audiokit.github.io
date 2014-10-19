@@ -1,5 +1,5 @@
 ---
-section: docs
+layout: docs
 title: AKControlSegmentArrayLoop Class Reference
 ---
 
@@ -11,7 +11,7 @@ title: AKControlSegmentArrayLoop Class Reference
           </div>
         </div>
         <div id="container">
-
+          
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
@@ -21,10 +21,10 @@ title: AKControlSegmentArrayLoop Class Reference
   <td class="specification-value">AKControlSegmentArrayLoop.h<br />AKControlSegmentArrayLoop.m</td>
 </tr>
             </tbody></table></div>
+          
 
-
-
-
+          
+          
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
@@ -32,200 +32,198 @@ title: AKControlSegmentArrayLoop Class Reference
 
 <p>Generate control signal consisting of linear segments delimited by two or more specified points. The entire envelope is looped at a rate defined byt frequency. Each parameter can be varied as controls.</p>
           </div>
+          
+          
 
-
-
-
-
+          
+          
           <div class="section section-tasks">
             <a title="Tasks" name="tasks"></a>
             <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
 
-
-
-
+            
+            
 
             <ul class="task-list">
-              <nobr>
                 <li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithFrequency:startValue:">&ndash;&nbsp;initWithFrequency:startValue:</a></code>
     <span class="tooltip"><p>Instantiates the control segment array loop</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/addValue:afterDuration:">&ndash;&nbsp;addValue:afterDuration:</a></code>
     <span class="tooltip"><p>Adds another segment.</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/useExponentialSegments">&ndash;&nbsp;useExponentialSegments</a></code>
     <span class="tooltip"><p>Switches to an exponential segment generating opcode.</p></span>
   </span>
-
-
+  
+  
 </li>
-              </nobr>
             </ul>
-
+            
           </div>
+          
+          
 
+          
+          
 
+          
 
-
-
-
-
-
-
+          
           <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
-
+            
             <div class="section-method">
   <a name="//api/name/addValue:afterDuration:" title="addValue:afterDuration:"></a>
   <h3 class="subsubtitle method-title">addValue:afterDuration:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Adds another segment.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (void)addValue:(AKControl *)<em>nextSegmentTargetValue</em> afterDuration:(AKControl *)<em>durationFraction</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>nextSegmentTargetValue</em></dt>
       <dd><p>Value after nextSegmentDuration seconds.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>durationFraction</em></dt>
       <dd><p>Duration of points; expressed in fraction of a cycle.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKControlSegmentArrayLoop.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/initWithFrequency:startValue:" title="initWithFrequency:startValue:"></a>
   <h3 class="subsubtitle method-title">initWithFrequency:startValue:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Instantiates the control segment array loop</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (instancetype)initWithFrequency:(AKControl *)<em>frequency</em> startValue:(AKControl *)<em>startValue</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>frequency</em></dt>
       <dd><p>Repeat rate in Hz or fraction of Hz.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>startValue</em></dt>
       <dd><p>Initial value at time zero.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKControlSegmentArrayLoop.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/useExponentialSegments" title="useExponentialSegments"></a>
   <h3 class="subsubtitle method-title">useExponentialSegments</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Switches to an exponential segment generating opcode.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (void)useExponentialSegments</code></div>
 
+    
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKControlSegmentArrayLoop.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
           </div>
-
-
+          
+          
         </div>
       </div>

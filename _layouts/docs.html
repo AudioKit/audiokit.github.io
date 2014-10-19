@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+  <section class="docs">
+    <div class="grid">
+
+      <div class="unit four-fifths">
+        <article>
+          <h1>
+          {% if page.header != '' %}
+            {{ page.header }}
+          {% else %}
+            {{ page.title }}
+          {% endif %}
+          </h1>
+          {{ content }}
+        </article>
+      </div>
+
+      {% include docs-sidebar.html %}
+      <div class="clear"></div>
+
+    </div>
+  </section>

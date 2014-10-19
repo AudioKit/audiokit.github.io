@@ -1,5 +1,5 @@
 ---
-section: docs
+layout: docs
 title: AKPortamento Class Reference
 ---
 
@@ -11,7 +11,7 @@ title: AKPortamento Class Reference
           </div>
         </div>
         <div id="container">
-
+          
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
@@ -21,10 +21,10 @@ title: AKPortamento Class Reference
   <td class="specification-value">AKPortamento.h<br />AKPortamento.m</td>
 </tr>
             </tbody></table></div>
+          
 
-
-
-
+          
+          
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
@@ -32,99 +32,97 @@ title: AKPortamento Class Reference
 
 <p>applies portamento to a step-valued control signal. At each new step value, the output is low-pass filtered to move towards that value at a rate determined by halfTime. halfTime is the “half-time” of the function (in seconds), during which the curve will traverse half the distance towards the new value, then half as much again, etc., theoretically never reaching its asymptote.</p>
           </div>
+          
+          
 
-
-
-
-
+          
+          
           <div class="section section-tasks">
             <a title="Tasks" name="tasks"></a>
             <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
 
-
-
-
+            
+            
 
             <ul class="task-list">
-              <nobr>
                 <li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithControlSource:halfTime:">&ndash;&nbsp;initWithControlSource:halfTime:</a></code>
     <span class="tooltip"><p>Instantiates the portamento</p></span>
   </span>
-
-
+  
+  
 </li>
-              </nobr>
             </ul>
-
+            
           </div>
+          
+          
 
+          
+          
 
+          
 
-
-
-
-
-
-
+          
           <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
-
+            
             <div class="section-method">
   <a name="//api/name/initWithControlSource:halfTime:" title="initWithControlSource:halfTime:"></a>
   <h3 class="subsubtitle method-title">initWithControlSource:halfTime:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Instantiates the portamento</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (instancetype)initWithControlSource:(AKControl *)<em>controlSource</em> halfTime:(AKControl *)<em>halfTime</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>controlSource</em></dt>
       <dd><p>The input signal at control-rate.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>halfTime</em></dt>
       <dd><p>Half-time of the function in seconds.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKPortamento.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
           </div>
-
-
+          
+          
         </div>
       </div>

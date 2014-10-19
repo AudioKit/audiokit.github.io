@@ -1,5 +1,5 @@
 ---
-section: docs
+layout: docs
 title: AKLoopingOscillator Class Reference
 ---
 
@@ -11,7 +11,7 @@ title: AKLoopingOscillator Class Reference
           </div>
         </div>
         <div id="container">
-
+          
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
@@ -21,10 +21,10 @@ title: AKLoopingOscillator Class Reference
   <td class="specification-value">AKLoopingOscillator.h<br />AKLoopingOscillator.m</td>
 </tr>
             </tbody></table></div>
+          
 
-
-
-
+          
+          
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
@@ -32,283 +32,281 @@ title: AKLoopingOscillator Class Reference
 optional sustain and release looping, using cubic interpolation.</p><div class="warning"><p><strong>Warning:</strong> <em>Not fully implemented yet:</em> Currently no
 optional parameters are implemented.</p></div>
           </div>
+          
+          
 
-
-
-
-
+          
+          
           <div class="section section-tasks">
             <a title="Tasks" name="tasks"></a>
             <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
 
-
-
-
+            
+            
 
             <ul class="task-list">
-              <nobr>
                 <li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithSoundFileTable:">&ndash;&nbsp;initWithSoundFileTable:</a></code>
     <span class="tooltip"><p>Simplest initialization with a given file.</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithSoundFileTable:amplitude:">&ndash;&nbsp;initWithSoundFileTable:amplitude:</a></code>
     <span class="tooltip"><p>Initialization with a given file and amplitude</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithSoundFileTable:frequencyMultiplier:amplitude:">&ndash;&nbsp;initWithSoundFileTable:frequencyMultiplier:amplitude:</a></code>
     <span class="tooltip"><p>Initialization with a given file and amplitude and scale the frequency.</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithSoundFileTable:frequencyMultiplier:amplitude:type:">&ndash;&nbsp;initWithSoundFileTable:frequencyMultiplier:amplitude:type:</a></code>
     <span class="tooltip"><p>Initialization with a given file and amplitude and scale the frequency.</p></span>
   </span>
-
-
+  
+  
 </li>
-              </nobr>
             </ul>
-
+            
           </div>
+          
+          
 
+          
+          
 
+          
 
-
-
-
-
-
-
+          
           <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
-
+            
             <div class="section-method">
   <a name="//api/name/initWithSoundFileTable:" title="initWithSoundFileTable:"></a>
   <h3 class="subsubtitle method-title">initWithSoundFileTable:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Simplest initialization with a given file.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (instancetype)initWithSoundFileTable:(AKSoundFileTable *)<em>fileTable</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>fileTable</em></dt>
       <dd><p>Typically sampled sound segment with prescribed looping points. The source file may be mono or stereo.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKLoopingOscillator.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/initWithSoundFileTable:amplitude:" title="initWithSoundFileTable:amplitude:"></a>
   <h3 class="subsubtitle method-title">initWithSoundFileTable:amplitude:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Initialization with a given file and amplitude</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (instancetype)initWithSoundFileTable:(AKSoundFileTable *)<em>fileTable</em> amplitude:(AKParameter *)<em>amplitude</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>fileTable</em></dt>
       <dd><p>Typically sampled sound segment with prescribed looping points. The source file may be mono or stereo.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>amplitude</em></dt>
       <dd><p>Output of the signal in relation to the 0dB full scale amplitude.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKLoopingOscillator.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/initWithSoundFileTable:frequencyMultiplier:amplitude:" title="initWithSoundFileTable:frequencyMultiplier:amplitude:"></a>
   <h3 class="subsubtitle method-title">initWithSoundFileTable:frequencyMultiplier:amplitude:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Initialization with a given file and amplitude and scale the frequency.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (instancetype)initWithSoundFileTable:(AKSoundFileTable *)<em>fileTable</em> frequencyMultiplier:(AKControl *)<em>frequencyMultiplier</em> amplitude:(AKParameter *)<em>amplitude</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>fileTable</em></dt>
       <dd><p>Typically sampled sound segment with prescribed looping points. The source file may be mono or stereo.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>frequencyMultiplier</em></dt>
       <dd><p>Relative to a base frequency of 1.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>amplitude</em></dt>
       <dd><p>Output of the signal in relation to the 0dB full scale amplitude.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKLoopingOscillator.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/initWithSoundFileTable:frequencyMultiplier:amplitude:type:" title="initWithSoundFileTable:frequencyMultiplier:amplitude:type:"></a>
   <h3 class="subsubtitle method-title">initWithSoundFileTable:frequencyMultiplier:amplitude:type:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Initialization with a given file and amplitude and scale the frequency.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (instancetype)initWithSoundFileTable:(AKSoundFileTable *)<em>fileTable</em> frequencyMultiplier:(AKControl *)<em>frequencyMultiplier</em> amplitude:(AKParameter *)<em>amplitude</em> type:(LoopingOscillatorType)<em>type</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>fileTable</em></dt>
       <dd><p>Typically sampled sound segment with prescribed looping points. The source file may be mono or stereo.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>frequencyMultiplier</em></dt>
       <dd><p>Relative to a base frequency of 1.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>amplitude</em></dt>
       <dd><p>Output of the signal in relation to the 0dB full scale amplitude.</p></dd>
     </dl>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>type</em></dt>
       <dd><p>Behavior of the loop, no loop, normal, or forward and back</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKLoopingOscillator.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
           </div>
-
-
+          
+          
         </div>
       </div>

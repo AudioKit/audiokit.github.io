@@ -1,83 +1,12 @@
----
----
-<!DOCTYPE HTML>
-<html lang="en-US">
-{% if page.section == 'docs' %}
-  {% include head-docs.html %}
-{% else %}
-  {% include head.html %}
-{% endif %}
+{% include top.html %}
 
 <body class="wrap">
-  <header>
-  <nav class="mobile-nav show-on-mobiles">
-    <ul>
-{% include nav.html %}
-</ul>
-  </nav>
-  <div class="grid">
-    <div class="unit one-third center-on-mobiles">
-      <h1>
-        <a href="/">Audio Kit</a>
-      </h1>
-    </div>
-    <nav class="main-nav unit two-thirds hide-on-mobiles">
-      <ul>
-  {% include nav.html %}
-</ul>
-    </nav>
-  </div>
-</header>
+  {% include header.html %}
 
-    <section class="docs">
-    <div class="grid">
-      <div class="unit four-fifths">
-        <article>
-                  <h1>{{ page.header }}</h1>
-        {{ content }}
-  <div class="clear"></div>
-</div>
-        </article>
-      </div>
-      <div class="clear"></div>
-    </div>
-  </section>
+  {{ content }}
 
   {% include footer.html %}
-
-  <script>
-  var anchorForId = function (id) {
-    var anchor = document.createElement("a");
-    anchor.className = "header-link";
-    anchor.href      = "#" + id;
-    anchor.innerHTML = "<i class=\"fa fa-link\"></i>";
-    return anchor;
-  };
-
-  var linkifyAnchors = function (level, containingElement) {
-    var headers = containingElement.getElementsByTagName("h" + level);
-    for (var h = 0; h < headers.length; h++) {
-      var header = headers[h];
-
-      if (typeof header.id !== "undefined" && header.id !== "") {
-        header.appendChild(anchorForId(header.id));
-      }
-    }
-  };
-
-  document.onreadystatechange = function () {
-    if (this.readyState === "complete") {
-      var contentBlock = document.getElementsByClassName("docs")[0] || document.getElementsByClassName("news")[0];
-      if (!contentBlock) {
-        return;
-      }
-      for (var level = 1; level <= 6; level++) {
-        linkifyAnchors(level, contentBlock);
-      }
-    }
-  };
-</script>
+  {% include anchor_links.html %}
 
 </body>
 </html>
-
