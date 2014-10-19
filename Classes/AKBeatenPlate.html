@@ -1,0 +1,155 @@
+---
+section: docs
+title: AKBeatenPlate Class Reference
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKBeatenPlate Class Reference</h1>
+          </div>
+        </div>
+        <div id="container">
+
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKBeatenPlate.h<br />AKBeatenPlate.m</td>
+</tr>
+            </tbody></table></div>
+
+
+
+
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>A model of beaten plate consisting of two parallel delay-lines and two first-order lowpass filters.</p>
+
+<p>This  is a model of beaten plate consisting of two parallel delay-lines and two first-order lowpass filters. The two feedback lines are mixed and sent to the delay again each cycle.</p>
+          </div>
+
+
+
+
+
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+
+
+
+
+
+            <ul class="task-list">
+              <nobr>
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithAudioSource:frequency1:frequency2:cutoffFrequency1:cutoffFrequency2:feedback1:feedback2:">&ndash;&nbsp;initWithAudioSource:frequency1:frequency2:cutoffFrequency1:cutoffFrequency2:feedback1:feedback2:</a></code>
+    <span class="tooltip"><p>Instantiates the beaten plate</p></span>
+  </span>
+
+
+</li>
+              </nobr>
+            </ul>
+
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+
+            <div class="section-method">
+  <a name="//api/name/initWithAudioSource:frequency1:frequency2:cutoffFrequency1:cutoffFrequency2:feedback1:feedback2:" title="initWithAudioSource:frequency1:frequency2:cutoffFrequency1:cutoffFrequency2:feedback1:feedback2:"></a>
+  <h3 class="subsubtitle method-title">initWithAudioSource:frequency1:frequency2:cutoffFrequency1:cutoffFrequency2:feedback1:feedback2:</h3>
+
+
+
+  <div class="method-subsection brief-description">
+    <p>Instantiates the beaten plate</p>
+  </div>
+
+
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKAudio *)<em>audioSource</em> frequency1:(AKParameter *)<em>frequency1</em> frequency2:(AKParameter *)<em>frequency2</em> cutoffFrequency1:(AKControl *)<em>cutoffFrequency1</em> cutoffFrequency2:(AKControl *)<em>cutoffFrequency2</em> feedback1:(AKControl *)<em>feedback1</em> feedback2:(AKControl *)<em>feedback2</em></code></div>
+
+
+
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>audioSource</em></dt>
+      <dd><p>The excitation noise.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>frequency1</em></dt>
+      <dd><p>The inverse of delay time for the first of two parallel delay lines.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>frequency2</em></dt>
+      <dd><p>The inverse of delay time for the second of two parallel delay lines.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>cutoffFrequency1</em></dt>
+      <dd><p>The filter cutoff frequency in Hz for the first low-pass filter.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>cutoffFrequency2</em></dt>
+      <dd><p>The filter cutoff frequency in Hz for the second low-pass filter.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>feedback1</em></dt>
+      <dd><p>The feedback factor for the first effects loop.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>feedback2</em></dt>
+      <dd><p>The feedback factor for the second effects loop.</p></dd>
+    </dl>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKBeatenPlate.h</code><br />
+  </div>
+
+
+</div>
+
+          </div>
+
+
+        </div>
+      </div>

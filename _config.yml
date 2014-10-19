@@ -10,3 +10,10 @@ github_username:  AudioKit
 # Build settings
 markdown: kramdown
 highlighter: pygments
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"

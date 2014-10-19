@@ -1,5 +1,4 @@
 ---
-layout: page
 title: About Audio Kit
 nav_title: About
 permalink: /about/

@@ -1,0 +1,319 @@
+---
+section: docs
+title: AKMarimba Class Reference
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKMarimba Class Reference</h1>
+          </div>
+        </div>
+        <div id="container">
+
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKMarimba.h<br />AKMarimba.m</td>
+</tr>
+            </tbody></table></div>
+
+
+
+
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>Physical model related to the striking of a wooden block.</p>
+
+<p>Audio output is a tone related to the striking of a wooden block as found in a marimba. The method is a physical model developed from Perry Cook.</p>
+          </div>
+
+
+
+
+
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+
+
+
+
+
+            <ul class="task-list">
+              <nobr>
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithFrequency:maximumDuration:stickHardness:strikePosition:amplitude:vibratoShapeTable:vibratoFrequency:vibratoAmplitude:">&ndash;&nbsp;initWithFrequency:maximumDuration:stickHardness:strikePosition:amplitude:vibratoShapeTable:vibratoFrequency:vibratoAmplitude:</a></code>
+    <span class="tooltip"><p>Instantiates the marimba</p></span>
+  </span>
+
+
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalDoubleStrikePercentage:">&ndash;&nbsp;setOptionalDoubleStrikePercentage:</a></code>
+    <span class="tooltip"><p>Set an optional double strike percentage</p></span>
+  </span>
+
+
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalTripleStrikePercentage:">&ndash;&nbsp;setOptionalTripleStrikePercentage:</a></code>
+    <span class="tooltip"><p>Set an optional triple strike percentage</p></span>
+  </span>
+
+
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalStrikeImpulseTable:">&ndash;&nbsp;setOptionalStrikeImpulseTable:</a></code>
+    <span class="tooltip"><p>Set an optional custom strike impulse table</p></span>
+  </span>
+
+
+</li>
+              </nobr>
+            </ul>
+
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+
+            <div class="section-method">
+  <a name="//api/name/initWithFrequency:maximumDuration:stickHardness:strikePosition:amplitude:vibratoShapeTable:vibratoFrequency:vibratoAmplitude:" title="initWithFrequency:maximumDuration:stickHardness:strikePosition:amplitude:vibratoShapeTable:vibratoFrequency:vibratoAmplitude:"></a>
+  <h3 class="subsubtitle method-title">initWithFrequency:maximumDuration:stickHardness:strikePosition:amplitude:vibratoShapeTable:vibratoFrequency:vibratoAmplitude:</h3>
+
+
+
+  <div class="method-subsection brief-description">
+    <p>Instantiates the marimba</p>
+  </div>
+
+
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFrequency:(AKControl *)<em>frequency</em> maximumDuration:(AKConstant *)<em>maximumDuration</em> stickHardness:(AKConstant *)<em>stickHardness</em> strikePosition:(AKConstant *)<em>strikePosition</em> amplitude:(AKControl *)<em>amplitude</em> vibratoShapeTable:(AKFTable *)<em>vibratoShapeTable</em> vibratoFrequency:(AKControl *)<em>vibratoFrequency</em> vibratoAmplitude:(AKControl *)<em>vibratoAmplitude</em></code></div>
+
+
+
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>frequency</em></dt>
+      <dd><p>Frequency of note played.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>maximumDuration</em></dt>
+      <dd><p>Time before end of note when damping is introduced</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>stickHardness</em></dt>
+      <dd><p>The hardness of the stick used in the strike. A range of 0 to 1 is used. 0.5 is a suitable value.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>strikePosition</em></dt>
+      <dd><p>Where the block is hit, in the range 0 to 1.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>amplitude</em></dt>
+      <dd><p>Amplitude of note.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>vibratoShapeTable</em></dt>
+      <dd><p>Shape of vibrato, usually a sine table, created by a function</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>vibratoFrequency</em></dt>
+      <dd><p>Frequency of vibrato in Hertz. Suggested range is 0 to 12</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>vibratoAmplitude</em></dt>
+      <dd><p>Amplitude of the vibrato</p></dd>
+    </dl>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKMarimba.h</code><br />
+  </div>
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalDoubleStrikePercentage:" title="setOptionalDoubleStrikePercentage:"></a>
+  <h3 class="subsubtitle method-title">setOptionalDoubleStrikePercentage:</h3>
+
+
+
+  <div class="method-subsection brief-description">
+    <p>Set an optional double strike percentage</p>
+  </div>
+
+
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalDoubleStrikePercentage:(AKConstant *)<em>doubleStrikePercentage</em></code></div>
+
+
+
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>doubleStrikePercentage</em></dt>
+      <dd><p>Percentage of double strikes. Default is 40%.</p></dd>
+    </dl>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKMarimba.h</code><br />
+  </div>
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalStrikeImpulseTable:" title="setOptionalStrikeImpulseTable:"></a>
+  <h3 class="subsubtitle method-title">setOptionalStrikeImpulseTable:</h3>
+
+
+
+  <div class="method-subsection brief-description">
+    <p>Set an optional custom strike impulse table</p>
+  </div>
+
+
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalStrikeImpulseTable:(AKSoundFileTable *)<em>strikeImpulseTable</em></code></div>
+
+
+
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>strikeImpulseTable</em></dt>
+      <dd><p>Sound file table for the desired impulse response</p></dd>
+    </dl>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKMarimba.h</code><br />
+  </div>
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalTripleStrikePercentage:" title="setOptionalTripleStrikePercentage:"></a>
+  <h3 class="subsubtitle method-title">setOptionalTripleStrikePercentage:</h3>
+
+
+
+  <div class="method-subsection brief-description">
+    <p>Set an optional triple strike percentage</p>
+  </div>
+
+
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalTripleStrikePercentage:(AKConstant *)<em>tripleStrikePercentage</em></code></div>
+
+
+
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>tripleStrikePercentage</em></dt>
+      <dd><p>Percentage of triple strikes. Default is 20%.</p></dd>
+    </dl>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKMarimba.h</code><br />
+  </div>
+
+
+</div>
+
+          </div>
+
+
+        </div>
+      </div>

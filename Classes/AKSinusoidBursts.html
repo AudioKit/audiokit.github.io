@@ -1,0 +1,178 @@
+---
+section: docs
+title: AKSinusoidBursts Class Reference
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKSinusoidBursts Class Reference</h1>
+          </div>
+        </div>
+        <div id="container">
+
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKSinusoidBursts.h<br />AKSinusoidBursts.m</td>
+</tr>
+            </tbody></table></div>
+
+
+
+
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>Produces sinusoid bursts useful for formant and granular synthesis.</p>
+          </div>
+
+
+
+
+
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+
+
+
+
+
+            <ul class="task-list">
+              <nobr>
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithSineTable:riseShapeTable:overlaps:totalTime:octavationIndex:formantBandwidth:burstRiseTime:burstDuration:burstDecayTime:peakAmplitude:fundamentalFrequency:formantFrequency:">&ndash;&nbsp;initWithSineTable:riseShapeTable:overlaps:totalTime:octavationIndex:formantBandwidth:burstRiseTime:burstDuration:burstDecayTime:peakAmplitude:fundamentalFrequency:formantFrequency:</a></code>
+    <span class="tooltip"><p>Initialize the Sinusoid Bursts</p></span>
+  </span>
+
+
+</li>
+              </nobr>
+            </ul>
+
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+
+            <div class="section-method">
+  <a name="//api/name/initWithSineTable:riseShapeTable:overlaps:totalTime:octavationIndex:formantBandwidth:burstRiseTime:burstDuration:burstDecayTime:peakAmplitude:fundamentalFrequency:formantFrequency:" title="initWithSineTable:riseShapeTable:overlaps:totalTime:octavationIndex:formantBandwidth:burstRiseTime:burstDuration:burstDecayTime:peakAmplitude:fundamentalFrequency:formantFrequency:"></a>
+  <h3 class="subsubtitle method-title">initWithSineTable:riseShapeTable:overlaps:totalTime:octavationIndex:formantBandwidth:burstRiseTime:burstDuration:burstDecayTime:peakAmplitude:fundamentalFrequency:formantFrequency:</h3>
+
+
+
+  <div class="method-subsection brief-description">
+    <p>Initialize the Sinusoid Bursts</p>
+  </div>
+
+
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithSineTable:(AKSineTable *)<em>sineburstSynthesisTable</em> riseShapeTable:(AKFTable *)<em>riseShapeTable</em> overlaps:(AKConstant *)<em>numberOfOverlaps</em> totalTime:(AKConstant *)<em>totalTime</em> octavationIndex:(AKControl *)<em>octavationIndex</em> formantBandwidth:(AKControl *)<em>formantBandwidth</em> burstRiseTime:(AKControl *)<em>burstRiseTime</em> burstDuration:(AKControl *)<em>burstDuration</em> burstDecayTime:(AKControl *)<em>burstDecayTime</em> peakAmplitude:(AKParameter *)<em>peakAmplitude</em> fundamentalFrequency:(AKParameter *)<em>fundamentalFrequency</em> formantFrequency:(AKParameter *)<em>formantFrequency</em></code></div>
+
+
+
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>sineburstSynthesisTable</em></dt>
+      <dd><p>Sine table for sineburst synthesis (size of at least 4096 recommended)</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>riseShapeTable</em></dt>
+      <dd><p>Used forwards and backwards to shape the sineburst rise and decay; this may be linear or perhaps a sigmoid</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>numberOfOverlaps</em></dt>
+      <dd><p>Number of preallocated spaces needed to hold overlapping burst data. Overlaps are frequency dependent, and the space required depends on the maximum value of fundamentalFrequency and burstDuration. Can be over-estimated at no computation cost.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>totalTime</em></dt>
+      <dd><p>Total time during which the bursts will be active. Normally set to note duration. No new sineburst is created if it cannot complete its kdur within the remaining totalTime.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>octavationIndex</em></dt>
+      <dd><p>Normally zero. If greater than zero, lowers the effective fundamental frequency by attenuating odd-numbered sinebursts. Whole numbers are full octaves, fractions transitional.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>formantBandwidth</em></dt>
+      <dd><p>Formant bandwidth (at -6dB), expressed in Hz. The bandwidth determines the rate of exponential decay throughout the sineburst, before the enveloping described below is applied.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>burstRiseTime</em></dt>
+      <dd><p>Rise time in seconds.  Typical value for vocal imitation is 0.003.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>burstDuration</em></dt>
+      <dd><p>Overall duration in seconds.  Typical value for vocal imitation is 0.02.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>burstDecayTime</em></dt>
+      <dd><p>Decay time in seconds. Typical value for vocal imitation is 0.007.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>peakAmplitude</em></dt>
+      <dd><p>Peak amplitude of each sineburst, observed at the true end of its rise pattern. The rise may exceed this value given a large bandwidth (say, Q &lt; 10) and/or when the bursts are overlapping.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>fundamentalFrequency</em></dt>
+      <dd><p>Fundamental frequency (in Hertz) of the impulses that create new sinebursts.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>formantFrequency</em></dt>
+      <dd><p>Freq of the sinusoid burst induced by each fundamental frequency impulse. This frequency can be fixed for each burst or can vary continuously.</p></dd>
+    </dl>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKSinusoidBursts.h</code><br />
+  </div>
+
+
+</div>
+
+          </div>
+
+
+        </div>
+      </div>

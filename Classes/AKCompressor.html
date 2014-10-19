@@ -1,0 +1,227 @@
+---
+section: docs
+title: AKCompressor Class Reference
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKCompressor Class Reference</h1>
+          </div>
+        </div>
+        <div id="container">
+
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKCompressor.h<br />AKCompressor.m</td>
+</tr>
+            </tbody></table></div>
+
+
+
+
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>Compress, limit, expand, duck or gate an audio signal.</p>
+
+<p>This unit functions as an audio compressor, limiter, expander, or noise gate, using either
+soft-knee or hard-knee mapping, and with dynamically variable performance characteristics.
+It takes two audio input signals, affectedAudioSource and controllingAudioSource, the first of which is modified by a running
+analysis of the second. Both signals can be the same, or the first can be modified by a different
+controlling signal.</p>
+
+<p>This operation first examines the controllingAudioSource by performing envelope detection. This is directed
+by two control values attackTime and releaseTime, defining the attack and release time constants (in seconds)
+of the detector. The detector rides the peaks (not the RMS) of the control signal. Typical values
+are .01 and .1, the latter usually being similar to the optional lookAheadTime.</p>
+
+<p>The running envelope is next converted to decibels, then passed through a mapping function to
+determine what compresser action (if any) should be taken. The mapping function is defined by
+four decibel control values. These are given as positive values, where 0 db corresponds to an
+amplitude of 1, and 90 db corresponds to an amplitude of 32768.</p>
+          </div>
+
+
+
+
+
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+
+
+
+
+
+            <ul class="task-list">
+              <nobr>
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithAffectedAudioSource:controllingAudioSource:threshold:lowKnee:highKnee:compressionRatio:attackTime:releaseTime:">&ndash;&nbsp;initWithAffectedAudioSource:controllingAudioSource:threshold:lowKnee:highKnee:compressionRatio:attackTime:releaseTime:</a></code>
+    <span class="tooltip"><p>Instantiates the compressor</p></span>
+  </span>
+
+
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalLookAheadTime:">&ndash;&nbsp;setOptionalLookAheadTime:</a></code>
+    <span class="tooltip"><p>Set an optional look ahead time</p></span>
+  </span>
+
+
+</li>
+              </nobr>
+            </ul>
+
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+
+            <div class="section-method">
+  <a name="//api/name/initWithAffectedAudioSource:controllingAudioSource:threshold:lowKnee:highKnee:compressionRatio:attackTime:releaseTime:" title="initWithAffectedAudioSource:controllingAudioSource:threshold:lowKnee:highKnee:compressionRatio:attackTime:releaseTime:"></a>
+  <h3 class="subsubtitle method-title">initWithAffectedAudioSource:controllingAudioSource:threshold:lowKnee:highKnee:compressionRatio:attackTime:releaseTime:</h3>
+
+
+
+  <div class="method-subsection brief-description">
+    <p>Instantiates the compressor</p>
+  </div>
+
+
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAffectedAudioSource:(AKAudio *)<em>affectedAudioSource</em> controllingAudioSource:(AKAudio *)<em>controllingAudioSource</em> threshold:(AKControl *)<em>threshold</em> lowKnee:(AKControl *)<em>lowKnee</em> highKnee:(AKControl *)<em>highKnee</em> compressionRatio:(AKControl *)<em>compressionRatio</em> attackTime:(AKControl *)<em>attackTime</em> releaseTime:(AKControl *)<em>releaseTime</em></code></div>
+
+
+
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>affectedAudioSource</em></dt>
+      <dd><p>The audio signal that will be compressed.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>controllingAudioSource</em></dt>
+      <dd><p>The audio signal that defines the compression.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>threshold</em></dt>
+      <dd><p>Sets the lowest decibel level that will be allowed through. Normally 0 or less, but if higher the threshold will begin removing low-level signal energy such as background noise.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>lowKnee</em></dt>
+      <dd><p>Decibel break-points denoting where compression or expansion will begin. These set the boundaries of a soft-knee curve joining the low-amplitude 1:1 line and the higher-amplitude compression ratio line. Typical values are 48 and 60 db. If the two breakpoints are equal, a hard-knee (angled) map will result.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>highKnee</em></dt>
+      <dd><p>Decibel break-points denoting where compression or expansion will begin. These set the boundaries of a soft-knee curve joining the low-amplitude 1:1 line and the higher-amplitude compression ratio line. Typical values are 48 and 60 db. If the two breakpoints are equal, a hard-knee (angled) map will result.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>compressionRatio</em></dt>
+      <dd><p>Ratio of compression when the signal level is above the knee. The value 2 will advance the output just one decibel for every input gain of two; 3 will advance just one in three; 20 just one in twenty, etc. Inverse ratios will cause signal expansion: .5 gives two for one, .25 four for one, etc. The value 1 will result in no change.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>attackTime</em></dt>
+      <dd><p>Attack time in seconds.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>releaseTime</em></dt>
+      <dd><p>Release time in seconds.</p></dd>
+    </dl>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKCompressor.h</code><br />
+  </div>
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalLookAheadTime:" title="setOptionalLookAheadTime:"></a>
+  <h3 class="subsubtitle method-title">setOptionalLookAheadTime:</h3>
+
+
+
+  <div class="method-subsection brief-description">
+    <p>Set an optional look ahead time</p>
+  </div>
+
+
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalLookAheadTime:(AKConstant *)<em>lookAheadTime</em></code></div>
+
+
+
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>lookAheadTime</em></dt>
+      <dd><p>Look-ahead time in seconds, by which an internal envelope release can sense what is coming. This induces a delay between input and output, but a small amount of lookahead improves the performance of the envelope detector. Typical value is .05 seconds, sufficient to sense the peaks of the lowest frequency in the controllingAudioSource.</p></dd>
+    </dl>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKCompressor.h</code><br />
+  </div>
+
+
+</div>
+
+          </div>
+
+
+        </div>
+      </div>

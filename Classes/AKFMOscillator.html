@@ -1,0 +1,206 @@
+---
+section: docs
+title: AKFMOscillator Class Reference
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKFMOscillator Class Reference</h1>
+          </div>
+        </div>
+        <div id="container">
+
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKFMOscillator.h<br />AKFMOscillator.m</td>
+</tr>
+            </tbody></table></div>
+
+
+
+
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>Basic frequency modulated oscillator with linear interpolation.</p>
+
+<p>Interpolating generators will produce a noticeably cleaner output signal, but
+they may take as much as twice as long to run. Adequate accuracy can also be
+gained without the time cost of interpolation by using large stored function
+tables of 2K, 4K or 8K points if the space is available.</p>
+          </div>
+
+
+
+
+
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+
+
+
+
+
+            <ul class="task-list">
+              <nobr>
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithFTable:baseFrequency:carrierMultiplier:modulatingMultiplier:modulationIndex:amplitude:">&ndash;&nbsp;initWithFTable:baseFrequency:carrierMultiplier:modulatingMultiplier:modulationIndex:amplitude:</a></code>
+    <span class="tooltip"><p>Instantiates the fm oscillator</p></span>
+  </span>
+
+
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalPhase:">&ndash;&nbsp;setOptionalPhase:</a></code>
+    <span class="tooltip"><p>Set an optional phase</p></span>
+  </span>
+
+
+</li>
+              </nobr>
+            </ul>
+
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+
+            <div class="section-method">
+  <a name="//api/name/initWithFTable:baseFrequency:carrierMultiplier:modulatingMultiplier:modulationIndex:amplitude:" title="initWithFTable:baseFrequency:carrierMultiplier:modulatingMultiplier:modulationIndex:amplitude:"></a>
+  <h3 class="subsubtitle method-title">initWithFTable:baseFrequency:carrierMultiplier:modulatingMultiplier:modulationIndex:amplitude:</h3>
+
+
+
+  <div class="method-subsection brief-description">
+    <p>Instantiates the fm oscillator</p>
+  </div>
+
+
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFTable:(AKFTable *)<em>fTable</em> baseFrequency:(AKControl *)<em>baseFrequency</em> carrierMultiplier:(AKParameter *)<em>carrierMultiplier</em> modulatingMultiplier:(AKParameter *)<em>modulatingMultiplier</em> modulationIndex:(AKControl *)<em>modulationIndex</em> amplitude:(AKParameter *)<em>amplitude</em></code></div>
+
+
+
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>fTable</em></dt>
+      <dd><p>Function table to use.  Requires a wrap-around guard point.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>baseFrequency</em></dt>
+      <dd><p>In cycles per second</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>carrierMultiplier</em></dt>
+      <dd><p>This multiplied by the baseFrequency gives the carrier frequency.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>modulatingMultiplier</em></dt>
+      <dd><p>This multiplied by the baseFrequency gives the modulating frequency.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>modulationIndex</em></dt>
+      <dd><p>This multiplied by the modulating frequency gives the modulation amplitude.</p></dd>
+    </dl>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>amplitude</em></dt>
+      <dd><p>The amplitude of the output signal</p></dd>
+    </dl>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFMOscillator.h</code><br />
+  </div>
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalPhase:" title="setOptionalPhase:"></a>
+  <h3 class="subsubtitle method-title">setOptionalPhase:</h3>
+
+
+
+  <div class="method-subsection brief-description">
+    <p>Set an optional phase</p>
+  </div>
+
+
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalPhase:(AKConstant *)<em>phase</em></code></div>
+
+
+
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+
+    <dl class="argument-def parameter-def">
+      <dt><em>phase</em></dt>
+      <dd><p>Initial phase of waveform in fTable</p></dd>
+    </dl>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFMOscillator.h</code><br />
+  </div>
+
+
+</div>
+
+          </div>
+
+
+        </div>
+      </div>
