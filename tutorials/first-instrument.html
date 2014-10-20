@@ -1,7 +1,7 @@
 ---
 title: Coding Your First Instrument with Audio Kit
 header: Coding Your First Instrument
-permalink: /first-instrument/
+permalink: /tutorials/first-instrument/
 layout: page
 ---
 
@@ -117,8 +117,6 @@ Now we can create our sine wave generator, which is an instance of AKSineTable. 
     self = [super init];
     if (self) {
 
-        // INSTRUMENT DEFINITION ===============================================
-
         AKSineTable *sineTable = [[AKSineTable alloc] init];
         [self addFTable:sineTable];
 
@@ -130,8 +128,6 @@ Now we can create our sine wave generator, which is an instance of AKSineTable. 
                                          modulationIndex:akp(1.0)
                                                amplitude:akp(0.1)];
         [self connect:fmOscil];
-
-        // AUDIO OUTPUT ========================================================
 
         AKAudioOutput *audio = [[AKAudioOutput alloc] initWithAudioSource:fmOscil];
         [self connect:audio];
@@ -224,13 +220,13 @@ Next, open up the assistant editor, and make sure it’s set to ViewController.m
 
 <p>Add the code below inside of toggleInstrument:</p>
 {% highlight objective-c %}
-    if (isNewInstrumentPlaying) {
-        [newInstrument stop];
-        isNewInstrumentPlaying = NO;
-    } else {
-        [newInstrument play];
-        isNewInstrumentPlaying = YES;
-    }
+if (isNewInstrumentPlaying) {
+    [newInstrument stop];
+    isNewInstrumentPlaying = NO;
+} else {
+    [newInstrument play];
+    isNewInstrumentPlaying = YES;
+}
 {% endhighlight %}
 
 <p>
