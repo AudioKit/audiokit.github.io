@@ -1,0 +1,284 @@
+---
+title: Coding Your First Instrument with Audio Kit
+header: Coding Your First Instrument
+permalink: /first-instrument/
+layout: page
+---
+
+<p>
+Now that you’ve got Audio Kit added to your project, you can start making your instrument file. For this example, we’re going to make an app that will turn an FM oscillator on and off. We’ll show you how to add parameter control with sliders later on.
+</p>
+
+<p>
+To make an instrument file, first go to ‘File’, ‘New’, ‘File’ (command-N). Select a Cocoa Touch class under Source, as shown below. If you’re using Xcode 6 or later, make sure that the language is set to Objective-C. Later on, we’ll show you how to do this in Swift. Name your instrument file “NewInstrument”, and click Next.
+</p>
+
+
+<img src=/images/makeNewFile.png>
+
+
+<p>Name your instrument file “NewInstrument”, and click Next.</p>
+
+<img src=/images/namingInstrument.png>
+
+<p>Your .h and .m files will appear in the project navigator as shown below.</p>
+<img src=/images/projectNavigator.png>
+
+
+<p>
+Now that we’ve created the instrument file, we can write the code to make some audio! First, go to NewInstrument.h, and import AKFoundation.h. You can go ahead and delete UIKit/UIKit.h, you won’t be needing UIKit functionality for this particular file. Then, set the superclass of your instrument object to be AKInstrument. Your .h file should now look like this:
+</p>
+
+
+{% highlight objective-c %}
+#import "AKFoundation.h"
+
+@interface NewInstrument : AKInstrument
+
+@end
+{% endhighlight %}
+
+
+<p>Now comes the fun part…adding the code to make some sounds! Go to the .m file and delete</p>
+
+{% highlight objective-c %}
+@interface NewInstrument ()
+
+@end
+{% endhighlight %}
+
+<p>and everything below: </p>
+
+{% highlight objective-c %}
+@implementation NewInstrument
+{% endhighlight %}
+
+<p>Then, add the following lines underneath your interface declaration:</p>
+
+{% highlight objective-c %}
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+{% endhighlight %}
+
+<p>
+Now we can create our sine wave generator, which is an instance of AKSineTable. AKSineTable generates composite waveforms made up of weighted sums of simple sinusoids. The code below creates sineTable to be an instance of AKSineTable, and adds it to the audio processing graph.
+</p>
+
+{% highlight objective-c %}
+        AKSineTable *sineTable = [[AKSineTable alloc] init];
+        [self addFTable:sineTable];
+{% endhighlight %}
+
+<p>Next, we’re going to create an instance of AKFMOscillator called fmOscil using the line below:</p>
+{% highlight objective-c %}
+        AKFMOscillator *fmOscil;
+{% endhighlight %}
+
+<p>Then, we’re going to initialize fmOscil’s parameters with the code below:</p>
+
+{% highlight objective-c %}
+        AKFMOscillator *fmOscil;
+        fmOscil = [[AKFMOscillator alloc]initWithFTable:sineTable
+                                           baseFrequency:akp(440)
+                                       carrierMultiplier:akp(1)
+                                    modulatingMultiplier:akp(0.5)
+                                         modulationIndex:akp(1.0)
+                                             amplitude:akp(0.1)];
+{% endhighlight %}
+
+
+<p>Finally,  connect the FM oscillator to the audio graph with the line below: </p>
+
+{% highlight objective-c %}
+[self connect:fmOscil];
+{% endhighlight %}
+
+<p>Finish the file by adding the following lines underneath the last line you just made: </p>
+
+{% highlight objective-c %}
+    }
+    return self;
+}
+@end
+{% endhighlight %}
+
+
+<p>Once you’re finished, your instrument file should look like the code listing below:</p>
+
+{% highlight objective-c %}
+#import "NewInstrument.h"
+
+@implementation NewInstrument
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+
+        // INSTRUMENT DEFINITION ===============================================
+
+        AKSineTable *sineTable = [[AKSineTable alloc] init];
+        [self addFTable:sineTable];
+
+        AKFMOscillator *fmOscil;
+        fmOscil = [[AKFMOscillator alloc] initWithFTable:sineTable
+                                           baseFrequency:akp(440)
+                                       carrierMultiplier:akp(1)
+                                    modulatingMultiplier:akp(0.5)
+                                         modulationIndex:akp(1.0)
+                                               amplitude:akp(0.1)];
+        [self connect:fmOscil];
+
+        // AUDIO OUTPUT ========================================================
+
+        AKAudioOutput *audio = [[AKAudioOutput alloc] initWithAudioSource:fmOscil];
+        [self connect:audio];
+
+    }
+    return self;
+}
+@end
+{% endhighlight %}
+
+
+<p>
+To set up our instrument to be controlled by an On/Off switch, we need to edit our ViewController code. Go to ViewController.m, and import AKFoundation.h and NewInstrument.h:
+</p>
+
+{% highlight objective-c %}
+#import "AKFoundation.h"
+#import "NewInstrument.h"
+{% endhighlight %}
+
+
+Then, delete the two lines below:
+
+{% highlight objective-c %}
+@interface ViewController ()
+
+@end
+{% endhighlight %}
+
+
+<p>After @implementation ViewController, add the lines below:</p>
+
+{% highlight objective-c %}
+{
+    NewInstrument *newInstrument;
+    BOOL isNewInstrumentPlaying;
+}
+{% endhighlight %}
+
+<p>
+These lines create an instance of our  NewInstrument, and create a BOOL variable that we’ll use to see if the instrument is playing or not.
+</p>
+
+<p>Inside of viewDidLoad, add the line below:</p>
+
+{% highlight objective-c %}
+AKOrchestra *orch = [[AKOrchestra alloc] init];
+{% endhighlight %}
+
+<p>
+This will create an instance of  AKOrchestra, which is an AKInstrument collection that can be run by the AKManager.
+</p>
+
+<p>
+Then, we’ll add the last line of our  viewDidLoad function:
+</p>
+
+{% highlight objective-c %}
+[[AKManager sharedAKManager] runOrchestra:orch];
+{% endhighlight %}
+
+<p>Our completed viewDidLoad function should look like this:</p>
+
+{% highlight objective-c %}
+ - (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+
+    AKOrchestra *orch = [[AKOrchestra alloc] init];
+    newInstrument = [[NewInstrument alloc] init];
+    [orch addInstrument:newInstrument];
+    [[AKManager sharedAKManager] runOrchestra:orch];
+}
+{% endhighlight %}
+
+
+<p>
+Now it’s time for a bit of work in the storyboard. Open Main.storyboard, and drag a UISwitch onto the canvas. Make sure that the switch’s default state is set to “Off”. This way, our instrument won’t turn on right away until the user turns the switch to “On”.
+</p>
+
+<img src=/images/switchOff.png>
+
+<p>
+Next, open up the assistant editor, and make sure it’s set to ViewController.m. Control-drag from your switch to the view control, and create an IBAction named “toggleInstrument”.
+</p>
+
+
+<img src=/images/toggleInstrument.png>
+
+
+<p>Add the code below inside of toggleInstrument:</p>
+{% highlight objective-c %}
+    if (isNewInstrumentPlaying) {
+        [newInstrument stop];
+        isNewInstrumentPlaying = NO;
+    } else {
+        [newInstrument play];
+        isNewInstrumentPlaying = YES;
+    }
+{% endhighlight %}
+
+<p>
+This will check to see if an  newInstrument is playing. If it is, the ViewController turns it off, and sets isNewInstrumentPlaying to  NO. If the switch is in the off position, the instrument won’t play. If the value of the switch changes (i.e., it’s set to the “On” position), then newInstrument will turn on.
+</p>
+
+<p>Our completed ViewController.h file should look like this:</p>
+
+{% highlight objective-c %}
+#import "ViewController.h"
+#import "AKFoundation.h"
+#import "NewInstrument.h"
+
+@implementation ViewController
+
+{
+    NewInstrument *newInstrument;
+    BOOL isNewInstrumentPlaying;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+
+    AKOrchestra *orch = [[AKOrchestra alloc] init];
+    newInstrument = [[NewInstrument alloc] init];
+    [orch addInstrument:newInstrument];
+    [[AKManager sharedAKManager] runOrchestra:orch];
+}
+
+- (IBAction)toggleInstrument:(id)sender {
+    if (isNewInstrumentPlaying) {
+        [newInstrument stop];
+        isNewInstrumentPlaying = NO;
+    } else {
+        [newInstrument play];
+        isNewInstrumentPlaying = YES;
+    }
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+@end
+{% endhighlight %}
+
+<p>
+That’s it! We’ve made our first instrument with Audio Kit. Next, we’ll show you how to control our instrument with sliders.
+</p>
