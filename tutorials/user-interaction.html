@@ -16,14 +16,10 @@ First, if you're using Xcode6, you can go ahead and delete "LaunchScreen.xib", a
 <img src=/images/UIScreen.png>
 
 <p>
-Now we're going to set the value ranges for our sliders. Make sure the Xcode Utilities pane is visible.
+Now we're going to set the value ranges for our sliders. Make sure the Xcode Utilities pane is visible.Click on the Frequency slider, and add the values shown below
 </p>
 
 <img src=/images/utilitiesPane.png>
-
-<p>Click on the Frequency slider, and add the values shown below in the utilities pane:</p>
-
-<img src=/images/freqSliderSettings.png>
 
 <p>
 Click on the Carrier Multiplier slider and repeat the process. Use the same values for the Modulation Index slider.
@@ -125,19 +121,19 @@ Now we're going to add these properties to our instrument. Underneath the code y
         AKSineTable *sineTable = [[AKSineTable alloc] init];
         [self addFTable:sineTable];
 
-        AKFMOscillator *fmOscil;
-        fmOscil = [[AKFMOscillator alloc] initWithFTable:sineTable
+        AKfmOscillatorlatorlator *fmOscillatorlator;
+        fmOscillatorlator = [[AKfmOscillatorlatorlator alloc] initWithFTable:sineTable
                                            baseFrequency:_frequencyValue
                                        carrierMultiplier:_carrierMultValue
                                     modulatingMultiplier:akp(0.5)
                                          modulationIndex:_modIndexValue
                                                amplitude:_amplitudeValue];
-        [self connect:fmOscil];
+        [self connect:fmOscillatorlator];
 
         // AUDIO OUTPUT ========================================================
 
-        AKAudioOutput *audio = [[AKAudioOutput alloc] initWithAudioSource:fmOscil];
-        [self connect:audio];
+        AKAudioOutput *audioOutput = [[AKAudioOutput alloc] initWithAudioSource:fmOscillatorlator];
+        [self connect:audioOutput];
 
     }
     return self;
