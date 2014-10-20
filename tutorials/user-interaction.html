@@ -123,11 +123,11 @@ Now we're going to add these properties to our instrument. Underneath the code y
 
         AKfmOscillatorlatorlator *fmOscillatorlator;
         fmOscillatorlator = [[AKfmOscillatorlatorlator alloc] initWithFTable:sineTable
-                                           baseFrequency:_frequencyValue
-                                       carrierMultiplier:_carrierMultValue
-                                    modulatingMultiplier:akp(0.5)
-                                         modulationIndex:_modIndexValue
-                                               amplitude:_amplitudeValue];
+                                                               baseFrequency:_frequencyValue
+                                                           carrierMultiplier:_carrierMultValue
+                                                        modulatingMultiplier:akp(0.5)
+                                                             modulationIndex:_modIndexValue
+                                                                   amplitude:_amplitudeValue];
         [self connect:fmOscillatorlator];
 
         // AUDIO OUTPUT ========================================================

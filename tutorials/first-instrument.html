@@ -71,16 +71,16 @@ Now we can create our sine wave generator, which is an instance of AKSineTable. 
         [self addFTable:sineTable];
 {% endhighlight %}
 
-<p>Next, we’re going to create an instance of AKFMOscillator called fmOscil using the line below:</p>
+<p>Next, we’re going to create an instance of AKFMOscillator called fmOscillator using the line below:</p>
 {% highlight objective-c %}
-        AKFMOscillator *fmOscil;
+        AKFMOscillator *fmOscillator;
 {% endhighlight %}
 
-<p>Then, we’re going to initialize fmOscil’s parameters with the code below:</p>
+<p>Then, we’re going to initialize fmOscillator’s parameters with the code below:</p>
 
 {% highlight objective-c %}
-        AKFMOscillator *fmOscil;
-        fmOscil = [[AKFMOscillator alloc]initWithFTable:sineTable
+        AKFMOscillator *fmOscillator;
+        fmOscillator = [[AKFMOscillator alloc]initWithFTable:sineTable
                                            baseFrequency:akp(440)
                                        carrierMultiplier:akp(1)
                                     modulatingMultiplier:akp(0.5)
@@ -92,7 +92,7 @@ Now we can create our sine wave generator, which is an instance of AKSineTable. 
 <p>Finally,  connect the FM oscillator to the audio graph with the line below: </p>
 
 {% highlight objective-c %}
-[self connect:fmOscil];
+[self connect:fmOscillator];
 {% endhighlight %}
 
 <p>Finish the file by adding the following lines underneath the last line you just made: </p>
@@ -120,17 +120,17 @@ Now we can create our sine wave generator, which is an instance of AKSineTable. 
         AKSineTable *sineTable = [[AKSineTable alloc] init];
         [self addFTable:sineTable];
 
-        AKFMOscillator *fmOscil;
-        fmOscil = [[AKFMOscillator alloc] initWithFTable:sineTable
-                                           baseFrequency:akp(440)
-                                       carrierMultiplier:akp(1)
-                                    modulatingMultiplier:akp(0.5)
-                                         modulationIndex:akp(1.0)
-                                               amplitude:akp(0.1)];
-        [self connect:fmOscil];
+        AKFMOscillator *fmOscillator;
+        fmOscillator = [[AKFMOscillator alloc] initWithFTable:sineTable
+                                                baseFrequency:akp(440)
+                                            carrierMultiplier:akp(1)
+                                         modulatingMultiplier:akp(0.5)
+                                              modulationIndex:akp(1.0)
+                                                    amplitude:akp(0.1)];
+        [self connect:fmOscillator];
 
-        AKAudioOutput *audio = [[AKAudioOutput alloc] initWithAudioSource:fmOscil];
-        [self connect:audio];
+        AKAudioOutput *audioOutput = [[AKAudioOutput alloc] initWithAudioSource:fmOscil];
+        [self connect:audioOutput];
 
     }
     return self;
