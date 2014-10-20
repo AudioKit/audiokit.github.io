@@ -1,0 +1,298 @@
+---
+title: Adding User Interaction to your Audio Kit Project
+header: User Interaction
+permalink: /tutorials/user-interaction/
+layout: page
+---
+
+<p>
+Now that we've learned how how to make an instrument with Audio Kit, we're going to show you how to control our instrument with some UISlider elements. We're going to modify our project so that you'll be able to control the frequency, carrier multiplier, modulation index, and amplitude of our FM oscillator.
+</p>
+
+<p>
+First, if you're using Xcode6, you can go ahead and delete "LaunchScreen.xib", as we won't be needing that file. Next, add a label above your switch, and name it "On/Off". Now we're going to add some UISliders. Add some labels above your sliders as well. When you're done, your screen should look something like this:
+</p>
+
+<img src=/images/UIScreen.png>
+
+<p>
+Now we're going to set the value ranges for our sliders. Make sure the Xcode Utilities pane is visible.
+</p>
+
+<img src=/images/utilitiesPane.png>
+
+<p>Click on the Frequency slider, and add the values shown below in the utilities pane:</p>
+
+<img src=/images/freqSliderSettings.png>
+
+<p>
+Click on the Carrier Multiplier slider and repeat the process. Use the same values for the Modulation Index slider.
+</p>
+
+<img src=/images/multAndModSettings.png>
+
+<p>Finally, click on the Amplitude Slider, and add the settings below:</p>
+
+<img src=/images/amplitudeSettings.png>
+
+
+<p>
+Now, we're going to declare some properties for the parameters of our FM oscillator that we want to control. Navigate to NewInstrument.h, and add the following lines after @interface:
+</p>
+
+{% highlight objective-c %}
+@property (nonatomic, strong) AKInstrumentProperty *frequencyValue;
+@property (nonatomic, strong) AKInstrumentProperty *carrierMultValue;
+@property (nonatomic, strong) AKInstrumentProperty *modIndexValue;
+@property (nonatomic, strong) AKInstrumentProperty *amplitudeValue;
+{% endhighlight %}
+
+<p>
+What we're doing is delcaring that our instrument will have four properties that are instances of AKInstrumentProperty, which are properties of an instrument that are shared amongst all the notes that are created on that instrument.
+</p>
+
+<p>
+Go to NewInstrument.m, where we are going to initialize our instrument properites with an initial, maximum, and minimum values. Add the lines below above the instrument definition code, which we wrote in the previous example:
+</p>
+
+{% highlight objective-c %}
+_frequencyValue = [[AKInstrumentProperty alloc] initWithValue:440
+                                                minimum:220
+                                                maximum:880];
+
+_carrierMultValue   = [[AKInstrumentProperty alloc] initWithValue:0.5
+                                                    minimum:0
+                                                    maximum:1];
+
+_modIndexValue   = [[AKInstrumentProperty alloc] initWithValue:0.5
+                                                  minimum:0
+                                                  maximum:1];
+
+_amplitudeValue   = [[AKInstrumentProperty alloc] initWithValue:0.25
+                                                  minimum:0
+                                                  maximum:0.5];
+{% endhighlight %}
+
+
+<p>
+Now we're going to add these properties to our instrument. Underneath the code you just wrote, add the following lines:
+</p>
+
+{% highlight objective-c %}
+[self addProperty:_frequencyValue];
+[self addProperty:_carrierMultValue];
+[self addProperty:_modIndexValue];
+[self addProperty:_amplitudeValue];
+{% endhighlight %}
+
+<p>Your instrument file should now look like the one below:</p>
+
+
+{% highlight objective-c %}
+#import "NewInstrument.h"
+
+@implementation NewInstrument
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+
+        // INPUTS AND CONTROLS =================================================
+        _frequencyValue = [[AKInstrumentProperty alloc] initWithValue:440
+                                                              minimum:220
+                                                               maximum:880];
+
+        _carrierMultValue   = [[AKInstrumentProperty alloc] initWithValue:0.5
+                                                               minimum:0
+                                                               maximum:1];
+
+        _modIndexValue   = [[AKInstrumentProperty alloc] initWithValue:0.5
+                                                                  minimum:0
+                                                                  maximum:1];
+
+        _amplitudeValue   = [[AKInstrumentProperty alloc] initWithValue:0.25
+                                                                  minimum:0
+                                                                  maximum:0.5];
+
+        [self addProperty:_frequencyValue];
+        [self addProperty:_carrierMultValue];
+        [self addProperty:_modIndexValue];
+        [self addProperty:_amplitudeValue];
+
+        // INSTRUMENT DEFINITION ===============================================
+
+        AKSineTable *sineTable = [[AKSineTable alloc] init];
+        [self addFTable:sineTable];
+
+        AKFMOscillator *fmOscil;
+        fmOscil = [[AKFMOscillator alloc] initWithFTable:sineTable
+                                           baseFrequency:_frequencyValue
+                                       carrierMultiplier:_carrierMultValue
+                                    modulatingMultiplier:akp(0.5)
+                                         modulationIndex:_modIndexValue
+                                               amplitude:_amplitudeValue];
+        [self connect:fmOscil];
+
+        // AUDIO OUTPUT ========================================================
+
+        AKAudioOutput *audio = [[AKAudioOutput alloc] initWithAudioSource:fmOscil];
+        [self connect:audio];
+
+    }
+    return self;
+}
+@end
+{% endhighlight %}
+
+
+<p>
+We're almost done! All we need to do now is connect our instrument's properties to our UISlider elements. Go back to your storyboard, and then open ViewController.m in the assitant editor. Add the following import statement underneath your other imports:
+</p>
+
+{% highlight objective-c %}
+#import "AKTools.h"
+{% endhighlight %}
+
+<p>
+AKTools is the part of Audio Kit that allows us to connect UI elements to instrument properites, as well as perform some common math and MIDI conversion/scaling functions.
+</p>
+
+<p>
+To start connecting our sliders to our instrument, control-drag from the Frequency slider to ViewController.m, and create an IBAction method. Call this method 'changeFrequency'. It will look like the method shown below:
+</p>
+
+{% highlight objective-c %}
+- (IBAction)changeFrequency:(id)sender {
+}
+{% endhighlight %}
+
+
+<p>Repeat this process for the other sliders. Name the method for the Carrier Multiplier slider "changeCarrierMul", the method for the Modulation Index slider "changeModIndex", and the amplitude slider "changeAmplitude". These last three methods should resemble the listing below:
+</p>
+
+{% highlight objective-c %}
+- (IBAction)changeCarrierMult:(id)sender {
+}
+
+- (IBAction)changeModIndex:(id)sender {
+}
+
+- (IBAction)changeAmplitude:(id)sender {
+}
+{% endhighlight %}
+
+
+<p>
+Finally, we're going to set the value of our UISliders to be the value of our instrument properties. Whenever a slider is moved, it's value then set the value of the instrument property that we're controlling.
+
+<p>Add the line below in between the {} of your changeFrequency method:</p>
+
+{% highlight objective-c %}
+[AKTools setProperty:newInstrument.frequencyValue withSlider:(UISlider *)sender];
+{% endhighlight %}
+
+<p>Add the code below to your changeCarrierMult method </p>
+
+{% highlight objective-c %}
+[AKTools setProperty:newInstrument.carrierMultValue withSlider:(UISlider *)sender];
+{% endhighlight %}
+
+<p>Add the code below to your changeModIndex method </p>
+
+{% highlight objective-c %}
+[AKTools setProperty:newInstrument.modIndexValue withSlider:(UISlider *)sender];
+{% endhighlight %}
+
+<p>And finally, add the code below to your changeAmplitude method </p>
+
+{% highlight objective-c %}
+[AKTools setProperty:newInstrument.amplitudeValue withSlider:(UISlider *)sender];
+{% endhighlight %}
+
+
+<p>Your completed methods should look like the listing below:</p>
+
+{% highlight objective-c %}
+- (IBAction)changeFrequency:(id)sender {
+    [AKTools setProperty:newInstrument.frequencyValue withSlider:(UISlider *)sender];
+}
+
+- (IBAction)changeCarrierMult:(id)sender {
+    [AKTools setProperty:newInstrument.carrierMultValue withSlider:(UISlider *)sender];
+}
+
+- (IBAction)changeModIndex:(id)sender {
+    [AKTools setProperty:newInstrument.modIndexValue withSlider:(UISlider *)sender];
+}
+
+- (IBAction)changeAmplitude:(id)sender {
+    [AKTools setProperty:newInstrument.amplitudeValue withSlider:(UISlider *)sender];
+}
+{% endhighlight %}
+
+
+<p>Your completed ViewController.m file should now look like the one below:</p>
+
+{% highlight objective-c %}
+#import "ViewController.h"
+#import "AKFoundation.h"
+#import "NewInstrument.h"
+#import "AKTools.h"
+
+
+@implementation ViewController
+
+{
+    NewInstrument *newInstrument;
+    BOOL isNewInstrumentPlaying;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+
+    AKOrchestra *orch = [[AKOrchestra alloc] init];
+    newInstrument = [[NewInstrument alloc] init];
+    [orch addInstrument:newInstrument];
+    [[AKManager sharedAKManager] runOrchestra:orch];
+}
+
+- (IBAction)toggleInstrument:(id)sender {
+    if (isNewInstrumentPlaying) {
+        [newInstrument stop];
+        isNewInstrumentPlaying = NO;
+    } else {
+        [newInstrument play];
+        isNewInstrumentPlaying = YES;
+    }
+}
+
+- (IBAction)changeFrequency:(id)sender {
+    [AKTools setProperty:newInstrument.frequencyValue withSlider:(UISlider *)sender];
+}
+
+- (IBAction)changeCarrierMult:(id)sender {
+    [AKTools setProperty:newInstrument.carrierMultValue withSlider:(UISlider *)sender];
+}
+
+- (IBAction)changeModIndex:(id)sender {
+    [AKTools setProperty:newInstrument.modIndexValue withSlider:(UISlider *)sender];
+}
+
+- (IBAction)changeAmplitude:(id)sender {
+    [AKTools setProperty:newInstrument.amplitudeValue withSlider:(UISlider *)sender];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+@end
+{% endhighlight %}
+
+
+<p>
+Go ahead and run your app and turn it on. Move the sliders back and forth, and you should hear your instrument change its sound. If you don't notice the sliders have any effect, go back and make sure your code matches what's shown above.
+</p>
