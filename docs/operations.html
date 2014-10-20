@@ -5,244 +5,673 @@ header: Operations
 permalink: /operations/
 ---
 
+<h4> </h4>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKParameter+Operation.html">AKParameter+Operation</td>
+</table>
+
 <h4> Analysis</h4>
-<ul>
-<li><a href="/Classes/AKTrackedAmplitude.html">AKTrackedAmplitude</a></li>
-<li><a href="/Classes/AKTrackedAmplitudeFromFSignal.html">AKTrackedAmplitudeFromFSignal</a></li>
-<li><a href="/Classes/AKTrackedFrequency.html">AKTrackedFrequency</a></li>
-<li><a href="/Classes/AKTrackedFrequencyFromFSignal.html">AKTrackedFrequencyFromFSignal</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKTrackedAmplitude.html">AKTrackedAmplitude</td>
+ <td> Determines the root-mean-square amplitude of an audio signal.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKTrackedAmplitudeFromFSignal.html">AKTrackedAmplitudeFromFSignal</td>
+ <td> Track the amplitude of an F-Signal as control-rate variables.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKTrackedFrequency.html">AKTrackedFrequency</td>
+ <td> Tracks the pitch of a signal.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKTrackedFrequencyFromFSignal.html">AKTrackedFrequencyFromFSignal</td>
+ <td> Track the frequency of an F-Signal as control-rate variables.
+</td>
+</tr>
+</table>
 
 <h4> Mathematical Operations</h4>
-<ul>
-<li><a href="/Classes/AKAssignment.html">AKAssignment</a></li>
-<li><a href="/Classes/AKScaledControl.html">AKScaledControl</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKAssignment.html">AKAssignment</td>
+ <td> Simply a wrapper for the equal sign
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKScaledControl.html">AKScaledControl</td>
+ <td> Scales incoming value from 0 to 1 to user-definable range.
+</td>
+</tr>
+</table>
 
 <h4> Mathematical Operations - Mininum and Maximum</h4>
-<ul>
-<li><a href="/Classes/AKMaxAudio.html">AKMaxAudio</a></li>
-<li><a href="/Classes/AKMaxControl.html">AKMaxControl</a></li>
-<li><a href="/Classes/AKMinAudio.html">AKMinAudio</a></li>
-<li><a href="/Classes/AKMinControl.html">AKMinControl</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKMaxAudio.html">AKMaxAudio</td>
+ <td> Produces a signal that is the maximum of any number of input signals.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKMaxControl.html">AKMaxControl</td>
+ <td> Produces a signal that is the maximum of any number of input signals.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKMinAudio.html">AKMinAudio</td>
+ <td> Produces a signal that is the minimum of any number of input signals.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKMinControl.html">AKMinControl</td>
+ <td> Produces a signal that is the minimum of any number of input signals.
+</td>
+</tr>
+</table>
 
 <h4> Mathematical Operations - Mixing</h4>
-<ul>
-<li><a href="/Classes/AKMixedAudio.html">AKMixedAudio</a></li>
-<li><a href="/Classes/AKMixedControl.html">AKMixedControl</a></li>
-<li><a href="/Classes/AKProduct.html">AKProduct</a></li>
-<li><a href="/Classes/AKSum.html">AKSum</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKMixedAudio.html">AKMixedAudio</td>
+ <td> Calculates the weighted mean value of two input signals.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKMixedControl.html">AKMixedControl</td>
+ <td> Calculates the weighted mean value of two control signals.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKProduct.html">AKProduct</td>
+ <td> Multiplies any number of audio signals.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKSum.html">AKSum</td>
+</table>
 
 <h4> Mathematical Operations - Table Value</h4>
-<ul>
-<li><a href="/Classes/AKTableValue.html">AKTableValue</a></li>
-<li><a href="/Classes/AKTableValueConstant.html">AKTableValueConstant</a></li>
-<li><a href="/Classes/AKTableValueControl.html">AKTableValueControl</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKTableValue.html">AKTableValue</td>
+ <td> </td>
+</tr>
+<tr>
+<td><a href="/Classes/AKTableValueConstant.html">AKTableValueConstant</td>
+ <td> </td>
+</tr>
+<tr>
+<td><a href="/Classes/AKTableValueControl.html">AKTableValueControl</td>
+ <td> </td>
+</tr>
+</table>
 
 <h4> Phase Vocoder Streaming</h4>
-<ul>
-<li><a href="/Classes/AKAudioFromFSignal.html">AKAudioFromFSignal</a></li>
-<li><a href="/Classes/AKCrossSynthesis.html">AKCrossSynthesis</a></li>
-<li><a href="/Classes/AKFSignalFromMonoAudio.html">AKFSignalFromMonoAudio</a></li>
-<li><a href="/Classes/AKFSignalFromMonoWithAttackAnalysis.html">AKFSignalFromMonoWithAttackAnalysis</a></li>
-<li><a href="/Classes/AKFSignalMix.html">AKFSignalMix</a></li>
-<li><a href="/Classes/AKPhaseLockedVocoder.html">AKPhaseLockedVocoder</a></li>
-<li><a href="/Classes/AKScaledFSignal.html">AKScaledFSignal</a></li>
-<li><a href="/Classes/AKSpectralVocoder.html">AKSpectralVocoder</a></li>
-<li><a href="/Classes/AKWarp.html">AKWarp</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKAudioFromFSignal.html">AKAudioFromFSignal</td>
+ <td> Resynthesise phase vocoder data (f-signal) using a FFT overlap-add.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKCrossSynthesis.html">AKCrossSynthesis</td>
+ <td> Performs cross-synthesis between two source F-Signals.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKFSignalFromMonoAudio.html">AKFSignalFromMonoAudio</td>
+ <td> Generate an f-Signal from a mono audio source using phase vocoder overlap-add synthesis.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKFSignalFromMonoWithAttackAnalysis.html">AKFSignalFromMonoWithAttackAnalysis</td>
+ <td>  Phase vocoder analysis processing with onset detection/processing.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKFSignalMix.html">AKFSignalMix</td>
+ <td> Mix 'seamlessly' two pv signals. This opcode combines the most prominent
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKPhaseLockedVocoder.html">AKPhaseLockedVocoder</td>
+ <td> Phase-locked vocoder processing.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKScaledFSignal.html">AKScaledFSignal</td>
+ <td> Scale the frequency components of a pv stream, resulting in pitch shift.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKSpectralVocoder.html">AKSpectralVocoder</td>
+ <td> Combine the spectral envelope of one F-signal with the excitation (frequencies) of another.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKWarp.html">AKWarp</td>
+ <td> Warp the spectral envelope of a PVS signal by means of shifting and scaling.
+</td>
+</tr>
+</table>
 
 <h4> Signal Generators</h4>
-<ul>
-</ul>
+<table><tr>
+</table>
 
 <h4> Signal Generators - Granular Synthesis</h4>
-<ul>
-<li><a href="/Classes/AKGranularSynthesisTexture.html">AKGranularSynthesisTexture</a></li>
-<li><a href="/Classes/AKSinusoidBursts.html">AKSinusoidBursts</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKGranularSynthesisTexture.html">AKGranularSynthesisTexture</td>
+ <td> Generates granular synthesis textures.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKSinusoidBursts.html">AKSinusoidBursts</td>
+ <td> </td>
+</tr>
+</table>
 
 <h4> Signal Generators - Linear ADSR Envelopes</h4>
-<ul>
-<li><a href="/Classes/AKLinearADSRAudioEnvelope.html">AKLinearADSRAudioEnvelope</a></li>
-<li><a href="/Classes/AKLinearADSRControlEnvelope.html">AKLinearADSRControlEnvelope</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKLinearADSRAudioEnvelope.html">AKLinearADSRAudioEnvelope</td>
+ <td> Calculates the classical ADSR envelope using linear segments.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKLinearADSRControlEnvelope.html">AKLinearADSRControlEnvelope</td>
+ <td> Calculates the classical ADSR envelope using linear segments.
+</td>
+</tr>
+</table>
 
 <h4> Signal Generators - Linear Envelopes</h4>
-<ul>
-<li><a href="/Classes/AKLinearAudioEnvelope.html">AKLinearAudioEnvelope</a></li>
-<li><a href="/Classes/AKLinearControlEnvelope.html">AKLinearControlEnvelope</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKLinearAudioEnvelope.html">AKLinearAudioEnvelope</td>
+ <td> Applies a straight line rise and decay pattern to an input amp signal.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKLinearControlEnvelope.html">AKLinearControlEnvelope</td>
+ <td> Applies a straight line rise and decay pattern to an input amp signal.
+</td>
+</tr>
+</table>
 
 <h4> Signal Generators - Lines</h4>
-<ul>
-<li><a href="/Classes/AKLine.html">AKLine</a></li>
-<li><a href="/Classes/AKLinearControl.html">AKLinearControl</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKLine.html">AKLine</td>
+ <td> </td>
+</tr>
+<tr>
+<td><a href="/Classes/AKLinearControl.html">AKLinearControl</td>
+ <td> </td>
+</tr>
+</table>
 
 <h4> Signal Generators - Oscillators</h4>
-<ul>
-<li><a href="/Classes/AKFMOscillator.html">AKFMOscillator</a></li>
-<li><a href="/Classes/AKOscillatingControl.html">AKOscillatingControl</a></li>
-<li><a href="/Classes/AKOscillator.html">AKOscillator</a></li>
-<li><a href="/Classes/AKSineOscillator.html">AKSineOscillator</a></li>
-<li><a href="/Classes/AKVCOscillator.html">AKVCOscillator</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKFMOscillator.html">AKFMOscillator</td>
+ <td> Basic frequency modulated oscillator with linear interpolation.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKOscillatingControl.html">AKOscillatingControl</td>
+ <td> A simple oscillator with linear interpolation.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKOscillator.html">AKOscillator</td>
+ <td> A simple oscillator with linear interpolation.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKSineOscillator.html">AKSineOscillator</td>
+ <td> A simple, fast sine oscillator
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKVCOscillator.html">AKVCOscillator</td>
+ <td> Implementation of a band-limited oscillator using pre-calculated tables.  Meant to model vintage analog synthesizers.
+</td>
+</tr>
+</table>
 
 <h4> Signal Generators - Oscillators - Low Frequency Oscillators</h4>
-<ul>
-<li><a href="/Classes/AKLowFrequencyOscillatingControl.html">AKLowFrequencyOscillatingControl</a></li>
-<li><a href="/Classes/AKLowFrequencyOscillator.html">AKLowFrequencyOscillator</a></li>
-<li><a href="/Classes/AKLowFrequencyOscillatorConstants.html">AKLowFrequencyOscillatorConstants</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKLowFrequencyOscillatingControl.html">AKLowFrequencyOscillatingControl</td>
+ <td> A low frequency oscillator of various shapes.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKLowFrequencyOscillator.html">AKLowFrequencyOscillator</td>
+ <td> A low frequency oscillator of various shapes.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKLowFrequencyOscillatorConstants.html">AKLowFrequencyOscillatorConstants</td>
+</table>
 
 <h4> Signal Generators - Phasors</h4>
-<ul>
-<li><a href="/Classes/AKPhasingControl.html">AKPhasingControl</a></li>
-<li><a href="/Classes/AKPhasor.html">AKPhasor</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKPhasingControl.html">AKPhasingControl</td>
+ <td> A normalized moving phase value.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKPhasor.html">AKPhasor</td>
+ <td> A normalized moving phase value.
+</td>
+</tr>
+</table>
 
 <h4> Signal Generators - Physical Models</h4>
-<ul>
-<li><a href="/Classes/AKPluckedString.html">AKPluckedString</a></li>
-<li><a href="/Classes/AKStruckMetalBar.html">AKStruckMetalBar</a></li>
-<li><a href="/Classes/AKVibes.html">AKVibes</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKPluckedString.html">AKPluckedString</td>
+ <td> Physical model of the plucked string.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKStruckMetalBar.html">AKStruckMetalBar</td>
+ <td> Creates a tone similar to a struck metal bar.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKVibes.html">AKVibes</td>
+ <td> Physical model related to the striking of a metal block.
+</td>
+</tr>
+</table>
 
 <h4> Signal Generators - Physical Models - Mandolin</h4>
-<ul>
-<li><a href="/Classes/AKMandolin.html">AKMandolin</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKMandolin.html">AKMandolin</td>
+ <td> An emulation of a mandolin.
+</td>
+</tr>
+</table>
 
 <h4> Signal Generators - Physical Models - Marimba</h4>
-<ul>
-<li><a href="/Classes/AKMarimba.html">AKMarimba</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKMarimba.html">AKMarimba</td>
+ <td> Physical model related to the striking of a wooden block.
+</td>
+</tr>
+</table>
 
 <h4> Signal Generators - Physical Models - PhISEM</h4>
-<ul>
-<li><a href="/Classes/AKBamboo.html">AKBamboo</a></li>
-<li><a href="/Classes/AKCabasa.html">AKCabasa</a></li>
-<li><a href="/Classes/AKCrunch.html">AKCrunch</a></li>
-<li><a href="/Classes/AKDroplet.html">AKDroplet</a></li>
-<li><a href="/Classes/AKGuiro.html">AKGuiro</a></li>
-<li><a href="/Classes/AKSandPaper.html">AKSandPaper</a></li>
-<li><a href="/Classes/AKSekere.html">AKSekere</a></li>
-<li><a href="/Classes/AKSleighbells.html">AKSleighbells</a></li>
-<li><a href="/Classes/AKStick.html">AKStick</a></li>
-<li><a href="/Classes/AKTambourine.html">AKTambourine</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKBamboo.html">AKBamboo</td>
+ <td> Semi-physical model of a bamboo sound.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKCabasa.html">AKCabasa</td>
+ <td> Semi-physical model of a cabasa sound.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKCrunch.html">AKCrunch</td>
+ <td> Semi-physical model of a crunch sound.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKDroplet.html">AKDroplet</td>
+ <td> Semi-physical model of a water drop.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKGuiro.html">AKGuiro</td>
+ <td> Semi-physical model of a guiro sound.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKSandPaper.html">AKSandPaper</td>
+ <td> Semi-physical model of a sandpaper sound.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKSekere.html">AKSekere</td>
+ <td> Semi-physical model of a sekere sound.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKSleighbells.html">AKSleighbells</td>
+ <td> Semi-physical model of a sleighbell sound.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKStick.html">AKStick</td>
+ <td> Semi-physical model of a stick sound.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKTambourine.html">AKTambourine</td>
+ <td> Semi-physical model of a tambourine sound.
+</td>
+</tr>
+</table>
 
 <h4> Signal Generators - Physical Models - Waveguide</h4>
-<ul>
-<li><a href="/Classes/AKBeatenPlate.html">AKBeatenPlate</a></li>
-<li><a href="/Classes/AKBowedString.html">AKBowedString</a></li>
-<li><a href="/Classes/AKSimpleWaveGuideModel.html">AKSimpleWaveGuideModel</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKBeatenPlate.html">AKBeatenPlate</td>
+ <td> A model of beaten plate consisting of two parallel delay-lines and two first-order lowpass filters.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKBowedString.html">AKBowedString</td>
+ <td> Creates a tone similar to a bowed string.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKSimpleWaveGuideModel.html">AKSimpleWaveGuideModel</td>
+ <td> A simple waveguide model consisting of one delay-line and one first-order lowpass filter.
+</td>
+</tr>
+</table>
 
 <h4> Signal Generators - Random Generators</h4>
-<ul>
-<li><a href="/Classes/AKInterpolatedRandomNumberPulse.html">AKInterpolatedRandomNumberPulse</a></li>
-<li><a href="/Classes/AKJitter.html">AKJitter</a></li>
-<li><a href="/Classes/AKRandomAudio.html">AKRandomAudio</a></li>
-<li><a href="/Classes/AKRandomControl.html">AKRandomControl</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKInterpolatedRandomNumberPulse.html">AKInterpolatedRandomNumberPulse</td>
+ <td> Generates a controlled random number series with interpolation between each new number.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKJitter.html">AKJitter</td>
+ <td> Generates a segmented line whose segments are randomly generated.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKRandomAudio.html">AKRandomAudio</td>
+ <td> Generates a controlled pseudo-random number series between min and max values.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKRandomControl.html">AKRandomControl</td>
+ <td> Generates a controlled pseudo-random number series between min and max values.
+</td>
+</tr>
+</table>
 
 <h4> Signal Generators - Segment Arrays</h4>
-<ul>
-<li><a href="/Classes/AKAudioSegmentArray.html">AKAudioSegmentArray</a></li>
-<li><a href="/Classes/AKControlSegmentArray.html">AKControlSegmentArray</a></li>
-<li><a href="/Classes/AKControlSegmentArrayLoop.html">AKControlSegmentArrayLoop</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKAudioSegmentArray.html">AKAudioSegmentArray</td>
+ <td> </td>
+</tr>
+<tr>
+<td><a href="/Classes/AKControlSegmentArray.html">AKControlSegmentArray</td>
+ <td> </td>
+</tr>
+<tr>
+<td><a href="/Classes/AKControlSegmentArrayLoop.html">AKControlSegmentArrayLoop</td>
+ <td> Generate control signal consisting of linear segments delimited by two or more specified points.
+</td>
+</tr>
+</table>
 
 <h4> Signal Generators - Subtractive Synthesis</h4>
-<ul>
-<li><a href="/Classes/AKAdditiveCosines.html">AKAdditiveCosines</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKAdditiveCosines.html">AKAdditiveCosines</td>
+ <td> Generate an additive set of harmonically related cosine partials of a fundamental frequency,
+</td>
+</tr>
+</table>
 
 <h4> Signal Input and Output</h4>
-<ul>
-<li><a href="/Classes/AKAudioInput.html">AKAudioInput</a></li>
-<li><a href="/Classes/AKAudioOutput.html">AKAudioOutput</a></li>
-<li><a href="/Classes/AKFTablelooper.html">AKFTablelooper</a></li>
-<li><a href="/Classes/AKFileInput.html">AKFileInput</a></li>
-<li><a href="/Classes/AKMonoFileInput.html">AKMonoFileInput</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKAudioInput.html">AKAudioInput</td>
+ <td> Reads monophonic audio data from an external device or stream.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKAudioOutput.html">AKAudioOutput</td>
+ <td> Writes stereo audio data to an external device or stream.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKFTablelooper.html">AKFTablelooper</td>
+ <td> Function-table-based crossfading looper.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKFileInput.html">AKFileInput</td>
+ <td> Reads stereo audio data from a file.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKMonoFileInput.html">AKMonoFileInput</td>
+ <td> Reads mono audio data from a file.
+</td>
+</tr>
+</table>
 
 <h4> Signal Input and Output - Looping Oscillators</h4>
-<ul>
-<li><a href="/Classes/AKLoopingOscillator.html">AKLoopingOscillator</a></li>
-<li><a href="/Classes/AKLoopingOscillatorConstants.html">AKLoopingOscillatorConstants</a></li>
-<li><a href="/Classes/AKLoopingStereoOscillator.html">AKLoopingStereoOscillator</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKLoopingOscillator.html">AKLoopingOscillator</td>
+ <td> Read sampled sound (mono or stereo) from a table, with
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKLoopingOscillatorConstants.html">AKLoopingOscillatorConstants</td>
+<tr>
+<td><a href="/Classes/AKLoopingStereoOscillator.html">AKLoopingStereoOscillator</td>
+ <td> Read sampled stereo sound from a table, with
+</td>
+</tr>
+</table>
 
 <h4> Signal Modifiers</h4>
-<ul>
-</ul>
+<table><tr>
+</table>
 
 <h4> Signal Modifiers - Convolutions</h4>
-<ul>
-<li><a href="/Classes/AKConvolution.html">AKConvolution</a></li>
-<li><a href="/Classes/AKStereoConvolution.html">AKStereoConvolution</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKConvolution.html">AKConvolution</td>
+ <td>  Convolution based on a uniformly partitioned overlap-save algorithm.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKStereoConvolution.html">AKStereoConvolution</td>
+ <td>  Convolution based on a uniformly partitioned overlap-save algorithm.
+</td>
+</tr>
+</table>
 
 <h4> Signal Modifiers - Delays</h4>
-<ul>
-<li><a href="/Classes/AKDelay.html">AKDelay</a></li>
-<li><a href="/Classes/AKVariableDelay.html">AKVariableDelay</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKDelay.html">AKDelay</td>
+ <td> Simple audio delay
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKVariableDelay.html">AKVariableDelay</td>
+ <td> An interpolating variable time delay. */
+</td>
+</tr>
+</table>
 
 <h4> Signal Modifiers - Effects</h4>
-<ul>
-<li><a href="/Classes/AKCompressor.html">AKCompressor</a></li>
-<li><a href="/Classes/AKDopplerEffect.html">AKDopplerEffect</a></li>
-<li><a href="/Classes/AKFlanger.html">AKFlanger</a></li>
-<li><a href="/Classes/AKPortamento.html">AKPortamento</a></li>
-<li><a href="/Classes/AKVibrato.html">AKVibrato</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKCompressor.html">AKCompressor</td>
+ <td> Compress, limit, expand, duck or gate an audio signal.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKDopplerEffect.html">AKDopplerEffect</td>
+ <td> A fast and robust method for approximating sound propagation, achieving convincing Doppler shifts without having to solve equations.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKFlanger.html">AKFlanger</td>
+ <td> Flange effect
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKPortamento.html">AKPortamento</td>
+ <td> Applies portamento to a step-valued control signal.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKVibrato.html">AKVibrato</td>
+ <td> Generates a natural-sounding user-controllable vibrato.
+</td>
+</tr>
+</table>
 
 <h4> Signal Modifiers - Filters</h4>
-<ul>
-<li><a href="/Classes/AKCombFilter.html">AKCombFilter</a></li>
-<li><a href="/Classes/AKDCBlock.html">AKDCBlock</a></li>
-<li><a href="/Classes/AKEqualizerFilter.html">AKEqualizerFilter</a></li>
-<li><a href="/Classes/AKHighPassFilter.html">AKHighPassFilter</a></li>
-<li><a href="/Classes/AKHilbertTransformer.html">AKHilbertTransformer</a></li>
-<li><a href="/Classes/AKLowPassControlFilter.html">AKLowPassControlFilter</a></li>
-<li><a href="/Classes/AKLowPassFilter.html">AKLowPassFilter</a></li>
-<li><a href="/Classes/AKMoogLadder.html">AKMoogLadder</a></li>
-<li><a href="/Classes/AKMoogVCF.html">AKMoogVCF</a></li>
-<li><a href="/Classes/AKResonantFilter.html">AKResonantFilter</a></li>
-<li><a href="/Classes/AKThreePoleLowpassFilter.html">AKThreePoleLowpassFilter</a></li>
-<li><a href="/Classes/AKVariableFrequencyResponseBandPassFilter.html">AKVariableFrequencyResponseBandPassFilter</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKCombFilter.html">AKCombFilter</td>
+ <td> Reverberates an input signal with a “colored” frequency response.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKDCBlock.html">AKDCBlock</td>
+ <td> A DC blocking filter.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKEqualizerFilter.html">AKEqualizerFilter</td>
+ <td> Second-order tunable equalisation filter based on Regalia and Mitra design.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKHighPassFilter.html">AKHighPassFilter</td>
+ <td> A first-order recursive high-pass filter with variable frequency response.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKHilbertTransformer.html">AKHilbertTransformer</td>
+ <td> An IIR implementation of a Hilbert transformer.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKLowPassControlFilter.html">AKLowPassControlFilter</td>
+ <td> A first-order recursive low-pass filter with variable frequency response.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKLowPassFilter.html">AKLowPassFilter</td>
+ <td> A first-order recursive low-pass filter with variable frequency response.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKMoogLadder.html">AKMoogLadder</td>
+ <td> Moog ladder lowpass filter.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKMoogVCF.html">AKMoogVCF</td>
+ <td> A digital emulation of the Moog diode ladder filter configuration.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKResonantFilter.html">AKResonantFilter</td>
+ <td> A second-order resonant filter.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKThreePoleLowpassFilter.html">AKThreePoleLowpassFilter</td>
+ <td> A 3-pole sweepable resonant lowpass filter.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKVariableFrequencyResponseBandPassFilter.html">AKVariableFrequencyResponseBandPassFilter</td>
+ <td> A second-order resonant filter.
+</td>
+</tr>
+</table>
 
 <h4> Signal Modifiers - Filters - Butterworth Filters</h4>
-<ul>
-<li><a href="/Classes/AKBandPassButterworthFilter.html">AKBandPassButterworthFilter</a></li>
-<li><a href="/Classes/AKBandRejectButterworthFilter.html">AKBandRejectButterworthFilter</a></li>
-<li><a href="/Classes/AKHighPassButterworthFilter.html">AKHighPassButterworthFilter</a></li>
-<li><a href="/Classes/AKLowPassButterworthFilter.html">AKLowPassButterworthFilter</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKBandPassButterworthFilter.html">AKBandPassButterworthFilter</td>
+ <td> A band-pass Butterworth filter.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKBandRejectButterworthFilter.html">AKBandRejectButterworthFilter</td>
+ <td> A band-reject Butterworth filter.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKHighPassButterworthFilter.html">AKHighPassButterworthFilter</td>
+ <td> A high-pass Butterworth filter.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKLowPassButterworthFilter.html">AKLowPassButterworthFilter</td>
+ <td> A low-pass Butterworth filter.
+</td>
+</tr>
+</table>
 
 <h4> Signal Modifiers - Filters - declick</h4>
-<ul>
-<li><a href="/Classes/AKDeclick.html">AKDeclick</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKDeclick.html">AKDeclick</td>
+ <td> Removes clicks from signal start and end
+</td>
+</tr>
+</table>
 
 <h4> Signal Modifiers - Reverbs</h4>
-<ul>
-<li><a href="/Classes/AKBallWithinTheBoxReverb.html">AKBallWithinTheBoxReverb</a></li>
-<li><a href="/Classes/AKFlatFrequencyResponseReverb.html">AKFlatFrequencyResponseReverb</a></li>
-<li><a href="/Classes/AKParallelCombLowPassFilterReverb.html">AKParallelCombLowPassFilterReverb</a></li>
-<li><a href="/Classes/AKReverb.html">AKReverb</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKBallWithinTheBoxReverb.html">AKBallWithinTheBoxReverb</td>
+ <td> A physical model reverberator.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKFlatFrequencyResponseReverb.html">AKFlatFrequencyResponseReverb</td>
+ <td> Reverberates an input signal with a flat frequency response.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKParallelCombLowPassFilterReverb.html">AKParallelCombLowPassFilterReverb</td>
+ <td> A reverberator consisting of 6 parallel comb-lowpass filters.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKReverb.html">AKReverb</td>
+ <td> 8 delay line stereo FDN reverb, with feedback matrix based upon physical
+</td>
+</tr>
+</table>
 
 <h4> Signal Modifiers - Volume and Spatialization</h4>
-<ul>
-<li><a href="/Classes/AKBalance.html">AKBalance</a></li>
-<li><a href="/Classes/AKPanner.html">AKPanner</a></li>
-</ul>
+<table><tr>
+<tr>
+<td><a href="/Classes/AKBalance.html">AKBalance</td>
+ <td> Adjusts one audio signal according to the values of another.
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKPanner.html">AKPanner</td>
+ <td> Distribute an audio signal across two channels with a choice of methods.
+</td>
+</tr>
+</table>
