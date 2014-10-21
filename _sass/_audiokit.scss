@@ -3,3 +3,142 @@
 iframe {
   margin-bottom: 50px;
 }
+
+.parameters {
+  margin-left: 20px;
+}
+
+.subtitle-overview {
+  display: none;
+}
+
+
+/* @group Tasks section */
+
+.task-list, .section-overview {
+  list-style-type: none;
+  margin-top: 2.3em;
+  background: #333;
+  padding: 1em;
+  width: 100%;
+  background-color: #333;
+  margin: .5em 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.3);
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,.3);
+  box-shadow: 0 1px 3px rgba(0,0,0,.3);
+  margin-bottom: 2em;
+}
+
+.task-list li {
+  margin-bottom: 3px;
+  display: inline-block;
+}
+
+.task-list li span.tooltip code a {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.task-item-suffix {
+  color: #996;
+  font-size: 12px;
+  font-style: italic;
+  margin-left: 0.5em;
+}
+
+span.tooltip span.tooltip {
+  font-size: 1.0em;
+  display: none;
+  padding: 0.3em;
+  border: 1px solid #aaa;
+  background-color: black;
+  color: white;
+  text-align: left;
+}
+
+span.tooltip:hover span.tooltip {
+  display: block;
+  position: absolute;
+  margin-left: 2em;
+}
+
+.declared-in-section {
+  display: none;
+}
+
+/* @group Method section */
+
+.section-method {
+  margin-top: 2.3em;
+  padding: 0.2em 1em 1em 1em;
+  width: 100%;
+  background-color: #333;
+  margin: .5em 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.3);
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,.3);
+  box-shadow: 0 1px 3px rgba(0,0,0,.3);
+  margin-bottom: 2em;
+}
+
+.method-title {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.method-declaration code, .parameter-def dt em {
+  padding: 0.5em;
+  font-face: Courier, Consolas, monospace;
+  background: black;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.3);
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,.3);
+  box-shadow: 0 1px 3px rgba(0,0,0,.3);
+}
+
+.parameter-def dt em {
+  color: #fc0;
+}
+
+.argument-def {
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+.argument-def dd {
+  margin-left: 1.25em;
+}
+
+.see-also-section ul {
+  list-style-type: none;
+  padding-left: 0px;
+  margin-top: 0;
+}
+
+.see-also-section li {
+  margin-bottom: 3px;
+}
+
+#tocContainer.hideInXcode {
+  display: none;
+  border: 0px solid #333;
+}
+
+#top_header.hideInXcode {
+  display: none;
+}
+
+#contents.hideInXcode {
+  border: 0px solid #333;
+  top: 0px;
+  left: 0px;
+}
+
+/* @end */

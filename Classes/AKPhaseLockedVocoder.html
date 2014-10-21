@@ -1,17 +1,17 @@
 ---
 layout: docs
-title: AKPhaseLockedVocoder Class Reference
+title: AKPhaseLockedVocoder
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
         <div id="header">
           <div class="section-header">
-            <h1 class="title title-header">AKPhaseLockedVocoder Class Reference</h1>
+            <h1 class="title title-header">AKPhaseLockedVocoder</h1>
           </div>
         </div>
         <div id="container">
-          
+
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
@@ -21,29 +21,27 @@ title: AKPhaseLockedVocoder Class Reference
   <td class="specification-value">AKPhaseLockedVocoder.h<br />AKPhaseLockedVocoder.m</td>
 </tr>
             </tbody></table></div>
-          
 
-          
-          
+
+
+
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
             <p>Phase-locked vocoder processing.</p>
-
-<p>More detailed description from <a href="http://www.csounds.com/manual/html/mincer.html">http://www.csounds.com/manual/html/mincer.html</a></p>
           </div>
-          
-          
 
-          
-          
+
+
+
+
           <div class="section section-tasks">
             <a title="Tasks" name="tasks"></a>
             <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
 
-            
-            
+
+
+
 
             <ul class="task-list">
                 <li>
@@ -51,194 +49,194 @@ title: AKPhaseLockedVocoder Class Reference
     <code><a href="#//api/name/initWithSourceFTable:time:scaledPitch:amplitude:">&ndash;&nbsp;initWithSourceFTable:time:scaledPitch:amplitude:</a></code>
     <span class="tooltip"><p>Instantiates the phase locked vocoder</p></span>
   </span>
-  
-  
+
+
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/setOptionalSizeOfFFT:">&ndash;&nbsp;setOptionalSizeOfFFT:</a></code>
     <span class="tooltip"><p>Set an optional size of fft</p></span>
   </span>
-  
-  
+
+
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/setOptionalDecimation:">&ndash;&nbsp;setOptionalDecimation:</a></code>
     <span class="tooltip"><p>Set an optional decimation</p></span>
   </span>
-  
-  
+
+
 </li>
             </ul>
-            
+
           </div>
-          
-          
 
-          
-          
 
-          
 
-          
+
+
+
+
+
+
           <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithSourceFTable:time:scaledPitch:amplitude:" title="initWithSourceFTable:time:scaledPitch:amplitude:"></a>
   <h3 class="subsubtitle method-title">initWithSourceFTable:time:scaledPitch:amplitude:</h3>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     <p>Instantiates the phase locked vocoder</p>
   </div>
-  
-    
+
+
 
   <div class="method-subsection method-declaration"><code>- (instancetype)initWithSourceFTable:(AKControl *)<em>sourceFTable</em> time:(AKAudio *)<em>time</em> scaledPitch:(AKControl *)<em>scaledPitch</em> amplitude:(AKControl *)<em>amplitude</em></code></div>
 
-    
-  
+
+
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-    
+
     <dl class="argument-def parameter-def">
       <dt><em>sourceFTable</em></dt>
       <dd><p>Source signal function table. Only mono audio files work.</p></dd>
     </dl>
-    
+
     <dl class="argument-def parameter-def">
       <dt><em>time</em></dt>
       <dd><p>Time position of current audio sample in secs. Table reading wraps around the ends of the function table.</p></dd>
     </dl>
-    
+
     <dl class="argument-def parameter-def">
       <dt><em>scaledPitch</em></dt>
       <dd><p>Grain pitch scaling (1=normal pitch, &lt; 1 lower, > 1 higher; negative, backwards)</p></dd>
     </dl>
-    
+
     <dl class="argument-def parameter-def">
       <dt><em>amplitude</em></dt>
       <dd><p>Amplitude scaling</p></dd>
     </dl>
-    
+
   </div>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
+
+
+
+
+
+
+
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKPhaseLockedVocoder.h</code><br />
   </div>
-  
-  
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalDecimation:" title="setOptionalDecimation:"></a>
   <h3 class="subsubtitle method-title">setOptionalDecimation:</h3>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     <p>Set an optional decimation</p>
   </div>
-  
-    
+
+
 
   <div class="method-subsection method-declaration"><code>- (void)setOptionalDecimation:(AKConstant *)<em>decimation</em></code></div>
 
-    
-  
+
+
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-    
+
     <dl class="argument-def parameter-def">
       <dt><em>decimation</em></dt>
       <dd><p>Defaults to 4 (meaning hopsize = fftsize/4)</p></dd>
     </dl>
-    
+
   </div>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
+
+
+
+
+
+
+
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKPhaseLockedVocoder.h</code><br />
   </div>
-  
-  
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalSizeOfFFT:" title="setOptionalSizeOfFFT:"></a>
   <h3 class="subsubtitle method-title">setOptionalSizeOfFFT:</h3>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     <p>Set an optional size of fft</p>
   </div>
-  
-    
+
+
 
   <div class="method-subsection method-declaration"><code>- (void)setOptionalSizeOfFFT:(AKConstant *)<em>sizeOfFFT</em></code></div>
 
-    
-  
+
+
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-    
+
     <dl class="argument-def parameter-def">
       <dt><em>sizeOfFFT</em></dt>
       <dd><p>FFT size (power-of-two), defaults to 2048.</p></dd>
     </dl>
-    
+
   </div>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
+
+
+
+
+
+
+
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKPhaseLockedVocoder.h</code><br />
   </div>
-  
-  
+
+
 </div>
-            
+
           </div>
-          
-          
+
+
         </div>
       </div>

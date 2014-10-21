@@ -43,8 +43,8 @@ header h1, header nav {
   display: inline-block;
 }
 
-header h1 span {
-  display: none;
+header h1  {
+  display: block;
 }
 
 nav ul {
@@ -57,7 +57,7 @@ nav li {
 }
 
 .main-nav {
-  margin-top: 52px;
+  margin-top: 12px;
 }
 
 .main-nav li {
