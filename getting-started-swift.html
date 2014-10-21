@@ -1,0 +1,109 @@
+---
+title: Getting Started with Audio Kit in Swift
+header: Getting Started in Swift
+permalink: /tutorials/getting-started-swift/
+layout: page
+---
+
+
+<p>
+Making an Xcode project using Swift is just as straight-forward as making one in Objective-C. When you're presented with a screen that says "Choose options for your new project" select "Swift" from the drop-down menu.
+</p>
+
+<p>
+<img src=/images/makeSwiftProject.png>
+</p>
+
+<p>
+Now we can import Audio Kit into our Swift project. Navigate to your AudioKit repository. Then, drag the folder that says “AudioKit” into your project.
+</p>
+
+<p>
+<img src=/images/frameworkLocation.png>
+</p>
+
+<p>
+After you do this, you’ll see a screen that will ask you to choose some options for adding the files.
+</p>
+
+<p>
+<img src=/images/addingFrameworkSwift.png>
+</p>
+
+<p>
+Then, click Finish.
+</p>
+
+
+<p>Once you've imported Audio Kit, you'll be able to see it in the project navigator pane:</p>
+
+
+<p>
+<img src=/images/frameworkProjectLocationSwift.png>
+</p>
+
+<p>
+There's one additional step we need to make in order to use Audio Kit in our Swift project. One of the great things about Swift is that we're easily to use Objective-C code in Swift projects. In order for Audio Kit to be exposed to our Swift project, we need to make a Bridging-Header file.
+</p>
+
+<p>
+Make a new file (command-N), and select "Header File". Name the file "SwiftProject-Bridging-Header.h"Make sure you have "SwiftProject" selected under Targets.
+
+<p>
+<img src=/images/bridgingHeader.png>
+</p>
+
+<p>There's some default text in the bridging header file (shown below) that you can go ahead and delete that.</p>
+
+{% highlight ruby %}
+#ifndef SwiftProject_SwiftProject_Bridging_Header_h
+#define SwiftProject_SwiftProject_Bridging_Header_h
+
+#endif
+{% endhighlight %}
+
+
+<p>
+Then, add the following import statements to the bridging header. These will allow our project to access all of the features of AKFoundation and AKTools.
+</p>
+
+{% highlight ruby %}
+#import "AKFoundation.h"
+#import "AKTools.h"
+{% endhighlight %}
+
+<p>Next, go to your target's build settings. Click on "SwiftProject" under "Targets".</p>
+
+<p>
+<img src=/images/swiftProjectTarget.png>
+</p>
+
+<p>Navigate to the build settings</p>
+
+<p>
+<img src=/images/buildSettings.png>
+</p>
+
+<p>Search for "briding header" in the search bar. You should see "Objective-C Bridging Header" underneath "Swift Compiler - Code Generation".
+
+<p>
+<img src=/images/objectivecBridgingHeader.png>
+</p>
+
+<p>Double click on the that line. A white box will pop up that will let you enter in some text. Add "SwiftProject-BridgingHeader.h".
+</p>
+
+<p>
+<img src=/images/addingBridgingHeader.png>
+</p>
+
+<p>
+Hit Enter, and your screen should look like the one below.
+
+<p>
+<img src=/images/finishedBridgingHeaderAddition.png>
+</p>
+
+<p>
+Now that our Swift project is able to "see" AudioKit, we can go ahead and start making our first instrument in Swift!"
+</p>
