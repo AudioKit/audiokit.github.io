@@ -1,0 +1,195 @@
+---
+title: Coding Your First Swift Instrument with Audio Kit
+header: Coding Your First Swift Instrument
+permalink: /tutorials/first-swift-instrument/
+layout: page
+---
+
+
+<p>To make an instrument in swift, make a new file (command-n), and click "Swift file" under "Source".</p>
+
+<p>
+<img src=/images/makeNewSwiftFile.png>
+</p>
+
+<p>Name your file "Instrument".</p>
+
+<p>Open the file, and delete "import Foundation", as we won't be needing any of the Foundation frameworks's functionality for our instrument, just Audio Kit's. Then, you can declare a class of type AKInstrument. Call your class "FMSynth". Make sure to add some curly braces!
+</p>
+
+{% highlight ruby %}
+class FMSynth: AKInstrument {
+
+}
+{% endhighlight %}
+
+
+
+<p>Add the following lines inside of the brackets you just made:</p>
+
+{% highlight ruby %}
+override init() {
+    super.init()
+{% endhighlight %}
+
+<p>
+Next we're going to declare an instance of AKSineTable called "sine" with the code below and add it to the audio processing graph. The "let" keyword signifies that we are creating a constant. AKSineTable generates composite waveforms made up of weighted sums of simple sinusoids.
+</p>
+
+{% highlight ruby %}
+let sine = AKSineTable()
+addFTable(sine)
+{% endhighlight %}
+
+
+<p>Now we're going to declare an instance of AKFMOscillator called "fmOscillator".</p>
+
+{% highlight ruby %}
+let fmOscillator = AKFMOscillator(
+{% endhighlight %}
+
+
+<p>
+Add the lines below after the first parenthesis to initialize your FMOscillator instance's parameters with some default values.
+</p>
+
+{% highlight ruby %}
+FTable: sine,
+baseFrequency: AKConstant(float:440),
+carrierMultiplier:AKConstant(float:1),
+modulatingMultiplier:AKConstant(float:0.5),
+modulationIndex:AKConstant(float:1.0),
+amplitude:AKConstant(float:0.1)
+)
+{% endhighlight %}
+
+
+<p>Next, add the line below to connect your oscillator to the audio processing graph.</p>
+
+{% highlight ruby %}
+connect(fmOscillator)
+{% endhighlight %}
+
+<p>
+Finally, add the line below to connect your oscillator to AKAudioOutput, which writes stereo audio data to an external device or stream. This line also connects AKAudioOutput to the audio processing graph.
+</p>
+
+{% highlight ruby %}
+connect(AKAudioOutput(audioSource: fmOscillator)
+{% endhighlight %}
+
+<p>When you're done, your "Instrument.swift" file should look like the one below:</p>
+
+
+{% highlight ruby %}
+class FMSynth: AKInstrument {
+
+    // INSTRUMENT DEFINITION ===================================================
+
+    override init() {
+        super.init()
+
+        let sine = AKSineTable()
+        addFTable(sine)
+
+        let fmOscillator = AKFMOscillator(
+            FTable: sine,
+            baseFrequency: AKConstant(float:440),
+            carrierMultiplier:AKConstant(float:1),
+            modulatingMultiplier:AKConstant(float:0.5),
+            modulationIndex:AKConstant(float:1.0),
+            amplitude:AKConstant(float:0.1)
+        )
+        connect(fmOscillator)
+        connect(AKAudioOutput(audioSource: fmOscillator))
+    }
+}
+{% endhighlight %}
+
+
+
+<p>Now that we've finished making our instrument, we can set up a button to turn it on and off. You can delete "LaunchScreen.xib", we won't be needing it at all for this project. Then, navigate to "Main.storyboard", and drag a  UISwitch onto the canvas. Make sure that the switch’s default state is set to “Off”. This way, our instrument won’t turn on right away until the user turns the switch to “On”.
+</p>
+
+<img src=/images/switchOff.png>
+
+<p>
+Next, open up the assistant editor, and make sure it’s set to ViewController.swift. Control-drag from your switch to the view controller file, and create an IBAction named “toggleInstrument”.
+</p>
+
+<img src=/images/toggleInstrument.png>
+
+
+{% highlight ruby %}
+@IBAction func toggleInstrument(sender: AnyObject)
+{% endhighlight %}
+
+
+<p>
+Now, repeat the process, but create an IBOutlet instead of an IBAction called "toggleSwitchClicked". Add this above your instrument declaration. This will let us know what the current state (On or Off) of our toggle switch is.
+</p>
+
+{% highlight ruby %}
+@IBOutlet weak var toggleSwitchClicked: UISwitch!
+{% endhighlight %}
+
+<p>
+Now, add the code below inside of your "toggleInstrument" IBAction. If the current state of the toggle switch is "on", fmOscillator will play. Otherwise, fmOscillator will be turned off.
+<p>
+
+{% highlight ruby %}
+  if toggleSwitchClicked.on
+{
+  fmOscillator.play()
+}
+  else
+{
+  fmOscillator.stop()
+}
+{% endhighlight %}
+
+<p>Your ViewController.swift file should look like the code listing below:</p>
+
+
+
+{% highlight ruby %}
+import UIKit
+
+class ViewController: UIViewController {
+
+    @IBOutlet weak var toggleSwitchClicked: UISwitch!
+    let fmOscillator = FMSynth()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        let orchestra = AKOrchestra()
+        orchestra.addInstrument(fmOscillator)
+        let manager = AKManager.sharedAKManager()
+        manager.runOrchestra(orchestra)
+    }
+
+
+    @IBAction func toggleInstrument(sender: AnyObject) {
+        if toggleSwitchClicked.on
+        {
+            fmOscillator.play()
+        }
+        else
+        {
+            fmOscillator.stop()
+        }
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+}
+{% endhighlight %}
+
+<p>Go ahead and run your project. You should hear a 440Hz tone when you turn your switch on.</p>
+
+<p>
+Well done! You've made your first Audio Kit instrument in Switf. Next, we'll show you how to add some user interaction elements to your project.
+</p>
