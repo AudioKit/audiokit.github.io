@@ -12,6 +12,24 @@ iframe {
   display: none;
 }
 
+img {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 10px 20px rgba(0,0,0,.4);
+  -moz-box-shadow: 0 10px 20px rgba(0,0,0,.4);
+  box-shadow: 0 10px 20px rgba(0,0,0,.4);
+}
+
+a img {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+    -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0);
+  -moz-box-shadow: 0 10px 20px rgba(0,0,0,0);
+  box-shadow: 0 10px 20px rgba(0,0,0,0);
+}
+
 
 /* @group Tasks section */
 
@@ -20,7 +38,6 @@ iframe {
   margin-top: 2.3em;
   background: #333;
   padding: 1em;
-  width: 100%;
   background-color: #333;
   margin: .5em 0;
   -webkit-border-radius: 5px;
