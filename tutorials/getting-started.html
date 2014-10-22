@@ -9,7 +9,7 @@ next_section: /tutorials/first-instrument/
 
 
 <p>
-Setting up a project with Audio Kit is extremely easy. After you’ve created a new project in Xcode, navigate to your AudioKit repository. Then, drag the folder that says “AudioKit” (highlighted below) into your project.
+Setting up a project with Audio Kit is extremely easy. After you’ve created a new project in Xcode, navigate to your AudioKit repository. Then, drag the folder that says “AudioKit” into your project.
 </p>
 &nbsp;
 
@@ -41,14 +41,4 @@ After you’ve finished, you’ll see a folder on the left side of Xcode with Au
 </p>
 &nbsp;
 
-{% highlight objective-c %}
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-
-    AKOrchestra *orch = [[AKOrchestra alloc] init];
-    conv = [[ConvolutionInstrument alloc] init];
-    [orch addInstrument:conv];
-    [[AKManager sharedAKManager] runOrchestra:orch];
-}
-{% endhighlight %}
+<p>Now we'll show you how to make your first Audio Kit instrument!</p>
