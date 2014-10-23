@@ -1,0 +1,245 @@
+---
+title: User Interaction with your Audio Kit instrument in Swift
+header: User Interaction
+permalink: /tutorials/swift/user-interaction/
+layout: tutorials
+prev_section: /tutorials/swift/first-instrument/
+next_section:
+---
+
+<p>
+Now that we've learned how to make an instrument with Audio Kit in Swift, we're going to learn how to add some basic user interaction functionality to our app.
+</p>
+
+<p>
+Go to your storyboard files, and put four sliders on the view controller. Add some labels above your sliders as well. When you're done, your screen should look like this:
+</p>
+
+<img src=/images/UIScreen.png>
+
+<p>
+Now we're going to set the value ranges for our sliders. Make sure the Xcode Utilities pane is visible.Click on the Frequency slider, and add the values shown below
+</p>
+
+<img src=/images/utilitiesPane.png>
+
+<p>
+Click on the Carrier Multiplier slider and repeat the process. Use the same values for the Modulation Index slider.
+</p>
+
+<img src=/images/multAndModSettings.png>
+
+<p>Finally, click on the Amplitude Slider, and add the settings below:</p>
+
+<img src=/images/amplitudeSettings.png>
+
+
+<p>
+Now, we're going to declare some properties for the parameters of our FM oscillator that we want to control. Navigate to Instrument.swift, and add the following lines after the class definition:
+</p>
+
+
+{% highlight ruby %}
+var frequency            = AKInstrumentProperty(value: 440,  minimum: 150, maximum: 740)
+var carrierMultiplier    = AKInstrumentProperty(value: 0.5,  minimum: 0,   maximum: 1)
+var modulationIndex      = AKInstrumentProperty(value: 0.5,  minimum: 0,   maximum: 1)
+var amplitude            = AKInstrumentProperty(value: 0.25, minimum: 0,   maximum: 0.5)
+{% endhighlight %}
+
+<p>
+These properties are of type "var", which in Swift signifies that their value will be changed at some point. These properties are of type "AKInstrumentProperty", which allow us to set a default value ("value"), as well as minimum and maximum values.
+</p>
+
+<p>Now, add the lines below above the declaration for "sine" inside the instrument defintion:</p>
+
+{% highlight ruby %}
+addProperty(frequency)
+addProperty(amplitude)
+addProperty(carrierMultiplier)
+addProperty(modulationIndex)
+{% endhighlight %}
+
+<p>Now, our properties have been added to our instrument definition.</p>
+
+<p>When you're finished, your instrument file should look like the listing below:</p>
+
+{% highlight ruby %}
+class FMSynth: AKInstrument {
+
+    // INSTRUMENT CONTROLS =====================================================
+
+    var frequency            = AKInstrumentProperty(value: 440, minimum: 150, maximum: 740)
+    var carrierMultiplier    = AKInstrumentProperty(value: 0.5,   minimum: 0,  maximum: 1)
+    var modulationIndex      = AKInstrumentProperty(value: 0.5,  minimum: 0,  maximum: 1)
+    var amplitude            = AKInstrumentProperty(value: 0.25, minimum: 0,  maximum: 0.5)
+
+    // INSTRUMENT DEFINITION ===================================================
+
+    override init() {
+        super.init()
+
+        addProperty(frequency)
+        addProperty(amplitude)
+        addProperty(carrierMultiplier)
+        addProperty(modulationIndex)
+
+        let sine = AKSineTable()
+        addFTable(sine)
+
+        let fmOscillator = AKFMOscillator(
+            FTable: sine,
+            baseFrequency: frequency,
+            carrierMultiplier:carrierMultiplier,
+            modulatingMultiplier:AKConstant(float:0.5),
+            modulationIndex:modulationIndex,
+            amplitude:amplitude
+        )
+
+        connect(fmOscillator)
+        connect(AKAudioOutput(audioSource: fmOscillator))
+    }
+}
+{% endhighlight %}
+
+<p>Now, go to your "ViewController.swift" file. We're going to make some IBOutlets that will connect with our sliders in the storyboard. Control-drag from the Frequency slider to right below the IBOutlet "toggleSwitchClicked". Call this outlet "frequencySlider". Repeat the process for the rest of the sliders. When you're done, your new outlets should look like the listing below:
+</p>
+
+{% highlight ruby %}
+@IBOutlet var frequencySlider: UISlider!
+@IBOutlet var carrierMultiplierSlider : UISlider!
+@IBOutlet var modulationIndexSlider : UISlider!
+@IBOutlet var amplitudeSlider : UISlider!
+{% endhighlight %}
+
+<p>
+Now, add the line below at the end of your "viewDidLoad" method. This calls the "updateSliders" function, which we'll write next.
+</p>
+
+{% highlight ruby %}
+updateSliders()
+{% endhighlight %}
+
+<p>
+We're going to write the "updateSliders" function underneath "toggleInstrument". What we're doing is using "setSlider", a property of AKTools, to create a mapping between the outlets of our sliders and our instrument's properites. Add the code below to make this function.
+</p>
+
+
+{% highlight ruby %}
+    func updateSliders()->Void {
+        AKTools.setSlider(frequencySlider, withProperty: fmOscillator.frequency)
+        AKTools.setSlider(amplitudeSlider, withProperty: fmOscillator.amplitude)
+        AKTools.setSlider(carrierMultiplierSlider, withProperty: fmOscillator.carrierMultiplier)
+        AKTools.setSlider(modulationIndexSlider, withProperty: fmOscillator.modulationIndex)
+    }
+{% endhighlight %}
+
+
+<p>
+Finally, we're going to add the methods to detect when our sliders are moved. Control-drag from the frequency slider to somewhere below the "updateSliders" method, and create an IBAction named "frequencySliderMoved". Your IBAction will look like the line below:
+</p>
+
+{% highlight ruby %}
+    @IBAction func frequencySliderMoved(sender: AnyObject) {
+    }
+{% endhighlight %}
+
+<p>
+Repeat the process for your other sliders. Name these methods "carrierMultiplierSliderMoved", "modulationIndexSliderMoved", and "amplitudeSliderMoved".
+</p>
+
+<p>
+Inside of these methods, we update the appropriate instrument property everytime the slider is moved. Add the line below inside of the "frequencySliderMoved" function:
+</p>
+
+{% highlight ruby %}
+AKTools.setProperty(fmOscillator.frequency, withSlider: sender as UISlider)
+{% endhighlight %}
+
+<p>Repeat the process for the remaining methods. When you're down, they should look like the listing below:</p>
+
+{% highlight ruby %}
+@IBAction func frequencySliderMoved(sender : AnyObject) {
+    AKTools.setProperty(fmOscillator.frequency, withSlider: sender as UISlider)
+}
+
+@IBAction func carrierMultiplierSliderMoved(sender : AnyObject) {
+    AKTools.setProperty(fmOscillator.carrierMultiplier, withSlider: sender as UISlider)
+}
+
+@IBAction func modulationIndexSliderMoved(sender : AnyObject) {
+    AKTools.setProperty(fmOscillator.modulationIndex, withSlider: sender as UISlider)
+}
+@IBAction func amplitudeSliderMoved(sender : AnyObject) {
+    AKTools.setProperty(fmOscillator.amplitude, withSlider: sender as UISlider)
+}
+{% endhighlight %}
+
+<p>When you're finished, your ViewController.swift file should look like the listing below:</p>
+
+{% highlight ruby %}
+import UIKit
+
+class ViewController: UIViewController {
+
+    @IBOutlet weak var toggleSwitchClicked: UISwitch!
+    @IBOutlet var frequencySlider: UISlider!
+    @IBOutlet var carrierMultiplierSlider : UISlider!
+    @IBOutlet var modulationIndexSlider : UISlider!
+    @IBOutlet var amplitudeSlider : UISlider!
+
+    let fmOscillator = FMSynth()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        let orchestra = AKOrchestra()
+        orchestra.addInstrument(fmOscillator)
+        let manager = AKManager.sharedAKManager()
+        manager.runOrchestra(orchestra)
+        updateSliders()
+    }
+
+    @IBAction func toggleInstrument(sender: AnyObject) {
+        if toggleSwitchClicked.on
+        {
+            fmOscillator.play()
+        }
+        else
+        {
+            fmOscillator.stop()
+        }
+    }
+
+    func updateSliders()->Void {
+        AKTools.setSlider(frequencySlider, withProperty: fmOscillator.frequency)
+        AKTools.setSlider(amplitudeSlider, withProperty: fmOscillator.amplitude)
+        AKTools.setSlider(carrierMultiplierSlider, withProperty: fmOscillator.carrierMultiplier)
+        AKTools.setSlider(modulationIndexSlider, withProperty: fmOscillator.modulationIndex)
+    }
+
+
+    @IBAction func frequencySliderMoved(sender : AnyObject) {
+        AKTools.setProperty(fmOscillator.frequency, withSlider: sender as UISlider)
+    }
+
+    @IBAction func carrierMultiplierSliderMoved(sender : AnyObject) {
+        AKTools.setProperty(fmOscillator.carrierMultiplier, withSlider: sender as UISlider)
+    }
+
+    @IBAction func modulationIndexSliderMoved(sender : AnyObject) {
+        AKTools.setProperty(fmOscillator.modulationIndex, withSlider: sender as UISlider)
+    }
+    @IBAction func amplitudeSliderMoved(sender : AnyObject) {
+        AKTools.setProperty(fmOscillator.amplitude, withSlider: sender as UISlider)
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+}
+{% endhighlight %}
+
+<p>
+Run your app and turn on your instrument. When you move the sliders, you'll be able to hear how the sounds of the oscillator are changed.
+</p>
