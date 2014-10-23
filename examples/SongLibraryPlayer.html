@@ -5,8 +5,17 @@ permalink: /examples/SongLibraryPlayer/
 layout: examples
 ---
 
-<div class="grid">
-<div class="unit three-quarters">
+<div class="cd-mobile cd-5s-silver" style="margin-left: 1em; float: right">
+  <div class="cd-cam"></div>
+  <div class="cd-ear"></div>
+  <div class="cd-home"></div>
+  <div class="cd-screen">
+    <video controls class="cd-fill">
+      <source src="https://www.dropbox.com/s/x6qbvsesq5w47yx/SongLibraryPlayerExample.m4v?dl=1" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
 
 <p>In this example there is a lot of boiler plate code to access the user's song library, for which there are many example tutorials online.  </p>
 
@@ -23,31 +32,15 @@ reverb = [[AKReverb alloc] initWithSourceStereoAudio:fileIn
 <p>But, since we want to mix the reverb sound with the original, we need to mix the reverb audio with the original sound of the file:</p>
 
 {% highlight objective-c %}
-AKMixedAudio *leftMix = [[AKMixedAudio alloc] initWithSignal1:fileIn.leftOutput
-                                                      signal2:reverb.leftOutput
-                                                      balance:_mix];
+AKMixedAudio *leftMix;
+leftMix = [[AKMixedAudio alloc] initWithSignal1:fileIn.leftOutput
+                                        signal2:reverb.leftOutput
+                                        balance:_mix];
 [self connect:leftMix];
 
-AKMixedAudio *rightMix = [[AKMixedAudio alloc] initWithSignal1:fileIn.rightOutput
-                                                       signal2:reverb.rightOutput
-                                                       balance:_mix];
-[self connect:rightMix  ];
+AKMixedAudio *rightMix;
+rightMix = [[AKMixedAudio alloc] initWithSignal1:fileIn.rightOutput
+                                         signal2:reverb.rightOutput
+                                         balance:_mix];
+[self connect:rightMix];
 {% endhighlight %}
-
-</div>
-<div class="unit one-quarter">
-  <div class="cd-mobile cd-5s-silver">
-    <div class="cd-cam"></div>
-    <div class="cd-ear"></div>
-    <div class="cd-home"></div>
-    <div class="cd-screen">
-      <video controls class="cd-fill">
-        <source src="https://www.dropbox.com/s/x6qbvsesq5w47yx/SongLibraryPlayerExample.m4v?dl=1" type="video/mp4">
-      Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</div>
-
-</div>
-
