@@ -141,13 +141,8 @@ Now, add the code below inside of your "toggleInstrument" IBAction. If the curre
 
 {% highlight ruby %}
   if toggleSwitchClicked.on
-{
-  fmOscillator.play()
-}
-  else
-{
-  fmOscillator.stop()
-}
+        toggleSwitchClicked.on ?  fmOscillator.play() : fmOscillator.stop()
+
 {% endhighlight %}
 
 <p>Your ViewController.swift file should look like the code listing below:</p>
@@ -174,13 +169,7 @@ class ViewController: UIViewController {
 
     @IBAction func toggleInstrument(sender: AnyObject) {
         if toggleSwitchClicked.on
-        {
-            fmOscillator.play()
-        }
-        else
-        {
-            fmOscillator.stop()
-        }
+        toggleSwitchClicked.on ?  fmOscillator.play() : fmOscillator.stop()
     }
 
     override func didReceiveMemoryWarning() {

@@ -68,10 +68,10 @@ class FMSynth: AKInstrument {
 
     // INSTRUMENT CONTROLS =====================================================
 
-    var frequency            = AKInstrumentProperty(value: 440, minimum: 150, maximum: 740)
-    var carrierMultiplier    = AKInstrumentProperty(value: 0.5,   minimum: 0,  maximum: 1)
-    var modulationIndex      = AKInstrumentProperty(value: 0.5,  minimum: 0,  maximum: 1)
-    var amplitude            = AKInstrumentProperty(value: 0.25, minimum: 0,  maximum: 0.5)
+    var frequency            = AKInstrumentProperty(value: 440,  minimum: 150, maximum: 740)
+    var carrierMultiplier    = AKInstrumentProperty(value: 0.5,  minimum: 0,   maximum: 1)
+    var modulationIndex      = AKInstrumentProperty(value: 0.5,  minimum: 0,   maximum: 1)
+    var amplitude            = AKInstrumentProperty(value: 0.25, minimum: 0,   maximum: 0.5)
 
     // INSTRUMENT DEFINITION ===================================================
 
@@ -201,13 +201,7 @@ class ViewController: UIViewController {
 
     @IBAction func toggleInstrument(sender: AnyObject) {
         if toggleSwitchClicked.on
-        {
-            fmOscillator.play()
-        }
-        else
-        {
-            fmOscillator.stop()
-        }
+        toggleSwitchClicked.on ?  fmOscillator.play() : fmOscillator.stop()
     }
 
     func updateSliders()->Void {
