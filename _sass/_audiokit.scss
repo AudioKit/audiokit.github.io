@@ -57,7 +57,7 @@ a img {
   margin-top: 2.3em;
   background: #333;
   padding: 1em;
-  background-color: #333;
+  background-color: #fff;
   margin: .5em 0;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -73,13 +73,14 @@ a img {
 }
 
 .task-list li span.tooltip code a {
+  color: #36c;
   word-wrap: break-word;
   word-break: break-all;
 }
 
 .task-item-suffix {
   color: #996;
-  font-size: 12px;
+  font-size: 16px;
   font-style: italic;
   margin-left: 0.5em;
 }
@@ -89,8 +90,8 @@ span.tooltip span.tooltip {
   display: none;
   padding: 0.3em;
   border: 1px solid #aaa;
-  background-color: black;
-  color: white;
+  background-color: #fdfdc8;
+  color: black;
   text-align: left;
 }
 
@@ -110,7 +111,7 @@ span.tooltip:hover span.tooltip {
   margin-top: 2.3em;
   padding: 0.2em 1em 1em 1em;
   width: 100%;
-  background-color: #333;
+  background-color: #fff;
   margin: .5em 0;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -129,17 +130,18 @@ span.tooltip:hover span.tooltip {
 .method-declaration code, .parameter-def dt em {
   padding: 0.5em;
   font-face: Courier, Consolas, monospace;
-  background: black;
+  background: #e2e2e2;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.3);
   -moz-box-shadow: 0 1px 3px rgba(0,0,0,.3);
   box-shadow: 0 1px 3px rgba(0,0,0,.3);
+      border: 1px solid #bdbdbd;
 }
 
 .parameter-def dt em {
-  color: #fc0;
+  color: black;
 }
 
 .argument-def {
@@ -174,6 +176,16 @@ span.tooltip:hover span.tooltip {
   border: 0px solid #333;
   top: 0px;
   left: 0px;
+}
+
+.section-specification .specification-title {
+  font-weight: bold;
+  color: #ccc;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3a3a3a), to(#1e1e1e));
+  background-image: -webkit-linear-gradient(top, #3a3a3a 0%, #1e1e1e 100%);
+  background-image: -moz-linear-gradient(top, #3a3a3a 0%, #1e1e1e 100%);
+  background-image: -o-linear-gradient(top, #3a3a3a 0%, #1e1e1e 100%);
+  background-image: linear-gradient(to bottom, #3a3a3a 0%,#1e1e1e 100%);
 }
 
 /* @end */
