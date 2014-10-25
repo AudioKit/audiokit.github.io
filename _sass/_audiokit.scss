@@ -180,12 +180,8 @@ span.tooltip:hover span.tooltip {
 
 .section-specification .specification-title {
   font-weight: bold;
-  color: #ccc;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#3a3a3a), to(#1e1e1e));
-  background-image: -webkit-linear-gradient(top, #3a3a3a 0%, #1e1e1e 100%);
-  background-image: -moz-linear-gradient(top, #3a3a3a 0%, #1e1e1e 100%);
-  background-image: -o-linear-gradient(top, #3a3a3a 0%, #1e1e1e 100%);
-  background-image: linear-gradient(to bottom, #3a3a3a 0%,#1e1e1e 100%);
+  color: white;
+  background-color: #227bf9;
 }
 
 /* @end */
