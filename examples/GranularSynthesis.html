@@ -1,0 +1,62 @@
+---
+title: Audio Kit Examples - Granular Synthesis
+header: Granular Synthesis
+permalink: /examples/GranularSy/
+layout: examples
+---
+
+<div class="cd-mobile cd-5s-silver iphoneShadow hide-on-mobiles" style="margin-left: 1em; float: right">
+  <div class="cd-cam"></div>
+  <div class="cd-ear"></div>
+  <div class="cd-home"></div>
+  <div class="cd-screen">
+    <video controls class="cd-fill">
+      <source src="http://www.hearforyourself.com/movies/Convolution.m4v" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+<p>The first part is to load the loop and the impulse response files:</p>
+
+{% highlight objective-c %}
+NSString *file;
+file = [[NSBundle mainBundle] pathForResource:@"808loop" ofType:@"wav"];
+AKFileInput *loop = [[AKFileInput alloc] initWithFilename:file];
+[self connect:loop];
+
+NSString *dish = [[NSBundle mainBundle] pathForResource:@"dish" ofType:@"wav"];
+NSString *well = [[NSBundle mainBundle] pathForResource:@"Stairwell" ofType:@"wav"];
+{% endhighlight %}
+
+<p>Perform the convolutions:</p>
+
+{% highlight objective-c %}
+AKConvolution *dishConv;
+dishConv  = [[AKConvolution alloc] initWithAudioSource:loop.leftOutput
+                                   impulseResponseFile:dish];
+[self connect:dishConv];
+
+
+AKConvolution *wellConv;
+wellConv  = [[AKConvolution alloc] initWithAudioSource:loop.rightOutput
+                                   impulseResponseFile:well];
+[self connect:wellConv];
+{% endhighlight %}
+
+<p>and mix the results:</p>
+
+{% highlight objective-c %}
+AKMixedAudio *balance;
+balance = [[AKMixedAudio alloc] initWithSignal1:dishConv
+                                        signal2:wellConv
+                                        balance:_dishWellBalance];
+[self connect:balance];
+
+
+AKMixedAudio *dryWet;
+dryWet = [[AKMixedAudio alloc] initWithSignal1:loop.leftOutput
+                                       signal2:balance
+                                       balance:_dryWetBalance];
+[self connect:dryWet];
+{% endhighlight %}
