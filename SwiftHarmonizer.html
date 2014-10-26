@@ -1,0 +1,61 @@
+---
+title: Audio Kit Examples - Swift Harmonizer
+header: Swift Harmonizer
+permalink: /examples/SwiftHarmonizer/
+layout: examples
+---
+
+<p>
+This example demonstrates a simpler harmonzier, with the input signal being the device microphone. The code below (from "HarmonizerInstrument.swift") takes the audio input from the device microphone and applies a window to the signal.</p>
+
+{% highlight ruby %}
+let microphone: AKAudioInput = AKAudioInput ()
+connect (microphone)
+
+let fsig1 = AKFSignalFromMonoAudio(
+    audioSource: microphone,
+    fftSize: AKConstant(int: 2048),
+    overlap: AKConstant(int: 256),
+    windowType: kVonHannWindow,
+    windowFilterSize: AKConstant(int:2048))
+
+connect(fsig1)
+{% endhighlight %}
+
+
+<p>
+The input signal is then altered with two instances of "AKScaledFSignal", which scales the frequency of a phase vocoder stream, which results in a pitch shift.
+</p>
+
+{% highlight ruby %}
+AKScaledFSignal *fsig2;
+let fsig2 = AKScaledFSignal(input: fsig1,
+    frequencyRatio: AKConstant(int:2),
+    formantRetainMethod: kFormantRetainMethodLifteredCepstrum,
+    amplitudeRatio: nil,
+    cepstrumCoefficients: nil)
+connect(fsig2)
+
+let fsig3 = AKScaledFSignal(input: fsig1,
+    frequencyRatio: AKConstant(int:2),
+    formantRetainMethod: kFormantRetainMethodLifteredCepstrum,
+    amplitudeRatio: nil,
+    cepstrumCoefficients: nil)
+connect (fsig3)
+{% endhighlight %}
+
+<p>These phase vocoder signals are then mixed with an instance of AKFSignalMix: </p>
+
+{% highlight ruby %}
+let fsig4 = AKFSignalMix(input1: fsig2, input2: fsig3)
+connect(fsig4)
+{% endhighlight %}
+
+<p>
+Finally, the audio is resynthesized from the phase vocoder data using an instance of "AKAudioFromFSignal":
+</p>
+
+{% highlight ruby %}
+let a1 = AKAudioFromFSignal(source: fsig4)
+connect(a1)
+{% endhighlight %}
