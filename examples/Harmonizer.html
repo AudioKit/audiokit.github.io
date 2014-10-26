@@ -1,0 +1,64 @@
+---
+title: Audio Kit Examples - Harmonizer
+header: Harmonizer
+permalink: /examples/Harmonizer/
+layout: examples
+---
+
+<p>
+This example demonstrates a simpler harmonzier, with the input signal being the device microphone. The code below (from "HarmonizerInstrument.m") takes the audio input from the device microphone and applies a window to the signal.</p>
+
+{% highlight objective-c %}
+AKAudioInput *microphone = [[AKAudioInput alloc] init];
+[self connect:microphone];
+
+AKFSignalFromMonoAudio *fsig1;
+fsig1 = [[AKFSignalFromMonoAudio alloc] initWithAudioSource:microphone
+                                                    fftSize:akpi(2048)
+                                                    overlap:akpi(256)
+                                                windowType:kVonHannWindow
+                                          windowFilterSize:akpi(2048)];
+[self connect:fsig1];
+{% endhighlight %}
+
+
+<p>
+The input signal is then altered with two instances of "AKScaledFSignal", which scales the frequency of a phase vocoder stream, which results in a pitch shift.
+</p>
+
+{% highlight objective-c %}
+AKScaledFSignal *fsig2;
+fsig2 = [[AKScaledFSignal alloc] initWithInput:fsig1
+                               frequencyRatio:akp(2.0)
+                          formantRetainMethod:kFormantRetainMethodLifteredCepstrum
+                              amplitudeRatio:nil
+                        cepstrumCoefficients:nil];
+[self connect:fsig2];
+
+AKScaledFSignal *fsig3;
+fsig3 = [[AKScaledFSignal alloc] initWithInput:fsig1
+                                frequencyRatio:akp(2.0)
+                           formantRetainMethod:kFormantRetainMethodLifteredCepstrum
+                                amplitudeRatio:nil
+                          cepstrumCoefficients:nil];
+[self connect:fsig3];
+{% endhighlight %}
+
+
+<p>These phase vocoder signals are then mixed with an instance of AKFSignalMix: </p>
+
+{% highlight objective-c %}
+AKFSignalMix *fsig4;
+fsig4 = [[AKFSignalMix alloc] initWithInput1:fsig2 input2:fsig3];
+[self connect:fsig4];
+{% endhighlight %}
+
+<p>
+Finally, the audio is resynthesized from the phase vocoder data using an instance of "AKAudioFromFSignal":
+</p>
+
+{% highlight objective-c %}
+AKAudioFromFSignal *a1;
+a1 = [[AKAudioFromFSignal alloc] initWithSource:fsig4];
+[self connect:a1];
+{% endhighlight %}
