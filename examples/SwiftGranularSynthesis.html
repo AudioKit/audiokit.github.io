@@ -17,3 +17,40 @@ layout: examples
   </div>
 </div>
 
+<p>
+Here we demonstrate granular synthesis, with an audio file as the source. The code below (from "GranularInstrument.swift") loads an audio file into a sound file table.
+</p>
+
+{% highlight ruby %}
+let file = String (NSBundle .mainBundle() .pathForResource("PianoBassDrumLoop", ofType: "wav")!)
+
+let fileTable = AKSoundFileTable (filename: file, tableSize: 16384)
+connect(fileTable)
+{% endhighlight %}
+
+<p>
+Then, we apply a Hamming window, and set the base frequency to be the frequency of the original source file.
+</p>
+
+{% highlight ruby %}
+let hamming = AKWindowsTable (type: kWindowHamming, size: 512)
+connect(hamming)
+
+let baseFrequency = AKConstant(expression: String(format: "44100 / %@", fileTable.length()))
+{% endhighlight %}
+
+<p>
+Finally, we create a granular synthesis texture with the code below. Four parameters ("averageGrainDuration", "maximumFrequencyDeviation", "grainAmplitude", and "grainDensity") are controlled by UISliders.
+</p>
+
+{% highlight ruby %}
+let grainTexture =  AKGranularSynthesisTexture (grainFTable: fileTable,
+                                               windowFTable: hamming,
+                                       maximumGrainDuration: AKConstant(float: 0.05),
+                                       averageGrainDuration: averageGrainDuration,
+                                  maximumFrequencyDeviation: granularFrequencyDeviation,
+                                             grainFrequency: baseFrequency,
+                                  maximumAmplitudeDeviation: AKConstant(float: 0.05),
+                                             grainAmplitude: granularAmplitude,
+                                               grainDensity: grainDensity)
+{% endhighlight %}
