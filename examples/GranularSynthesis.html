@@ -17,3 +17,51 @@ layout: examples
   </div>
 </div>
 
+
+<p>
+Here we demonstrate granular synthesis, with an audio file as the source. The code below (from "GranularInstrument.h") loads an audio file into a sound file table.
+</p>
+
+{% highlight objective-c %}
+NSString *file = [[NSBundle mainBundle] pathForResource:@"PianoBassDrumLoop"
+                                                         ofType:@"wav"];
+AKSoundFileTable *fileTable;
+fileTable = [[AKSoundFileTable alloc] initWithFilename:file
+                                                     tableSize:16384];
+[self addFTable:fileTable];
+{% endhighlight %}
+
+
+<p>
+Then, we apply a Hamming window, and set the base frequency to be the frequency of the original source file.
+</p>
+
+{% highlight objective-c %}
+AKFTable *hamming;
+hamming = [[AKWindowsTable alloc] initWithType:kWindowHanning
+                                                  size:512 ];
+[self addFTable:hamming];
+
+AKConstant *baseFrequency;
+baseFrequency = [AKConstant parameterWithFormat:@"44100 / %@", [fileTable length]];
+{% endhighlight %}
+
+
+<p>
+Finally, we create a granular synthesis texture with the code below. Four parameters ("averageGrainDuration", "maximumFrequencyDeviation", "grainAmplitude", and "grainDensity") are controlled by UISliders.
+</p>
+
+
+{% highlight objective-c %}
+AKGranularSynthesisTexture *grainTexture;
+grainTexture = [[AKGranularSynthesisTexture alloc] initWithGrainFTable:fileTable
+                                                          windowFTable:hamming
+                                                  maximumGrainDuration:akp(0.05)
+                                                  averageGrainDuration:_averageGrainDuration
+                                             maximumFrequencyDeviation:_granularFrequencyDeviation
+                                                        grainFrequency:baseFrequency
+                                            maximumAmplitudeDeviation:akp(0.5)
+                                                       grainAmplitude:_granularAmplitude
+                                                         grainDensity:_grainDensity];
+[self connect:grainTexture];
+{% endhighlight %}
