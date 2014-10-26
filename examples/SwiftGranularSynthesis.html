@@ -1,7 +1,7 @@
 ---
-title: Audio Kit Examples - Swift Convolution
-header: Swift Convolution
-permalink: /examples/SwiftConvolution/
+title: Audio Kit Examples - Swift Granular Synthesis
+header: Granular Synthesis in Swift
+permalink: /examples/SwiftGranularSynthesis/
 layout: examples
 ---
 
@@ -11,39 +11,9 @@ layout: examples
   <div class="cd-home"></div>
   <div class="cd-screen">
     <video controls class="cd-fill">
-      <source src="http://www.hearforyourself.com/movies/Convolution.m4v" type="video/mp4">
+      <source src="http://www.hearforyourself.com/movies/GranularSynthesis.m4v" type="video/mp4">
     Your browser does not support the video tag.
     </video>
   </div>
 </div>
 
-<p>The first part is to load the loop and the impulse response files:</p>
-
-{% highlight ruby %}
-let file = String(NSBundle.mainBundle().pathForResource("808loop", ofType: "wav")!)
-let loop = AKFileInput(filename: file)
-connect(loop)
-
-let dish = String(NSBundle.mainBundle().pathForResource("dish", ofType: "wav")!)
-let well = String(NSBundle.mainBundle().pathForResource("Stairwell", ofType: "wav")!)
-{% endhighlight %}
-
-<p>Perform the convolutions:</p>
-
-{% highlight ruby %}
-let dishConv = AKConvolution(audioSource: loop.leftOutput, impulseResponseFile: dish)
-connect(dishConv)
-
-let wellConv = AKConvolution(audioSource: loop.rightOutput, impulseResponseFile: well)
-connect(wellConv)
-{% endhighlight %}
-
-<p>and mix the results:</p>
-
-{% highlight ruby %}
-let balance = AKMixedAudio(signal1: dishConv, signal2: wellConv, balance: dishWellBalance)
-connect(balance)
-
-let dryWet = AKMixedAudio(signal1: loop.leftOutput, signal2: balance, balance: dryWetBalance)
-connect(dryWet)
-{% endhighlight %}
