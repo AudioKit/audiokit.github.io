@@ -11,7 +11,20 @@ This is a Frequency-Modulation Oscillator implemented with Swift. It has five pa
 <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/172497122&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 
 <p>
-The code for creating the FM oscillator instrument is shown below.
+In "FMSynth.swift", five variables are declared for each synthesizer parameter we want to control. Each variable is an instance of AKInstrumentProperty, which are properties of an instrument that are shared amongst all the notes that are created on that instrument. These properties are used by UISliders in the "ViewController.swift" to alter each individual parameter.The code for creating these variables and setting their initial, minimum, and maximum values is shown below:
+</p>
+
+{% highlight ruby %}
+var frequency            = AKInstrumentProperty(value: 440, minimum: 20, maximum: 2000)
+var amplitude            = AKInstrumentProperty(value: 0.2, minimum: 0,  maximum: 1)
+var carrierMultiplier    = AKInstrumentProperty(value: 1,   minimum: 0,  maximum: 3)
+var modulatingMultiplier = AKInstrumentProperty(value: 1,   minimum: 0,  maximum: 3)
+var modulationIndex      = AKInstrumentProperty(value: 15,  minimum: 0,  maximum: 30)
+{% endhighlight %}
+
+
+<p>
+The code for creating the FM oscillator instrument is shown below. The properites are added to the instrument, and an instance of AKSineTable is created to be the source for the FMOscillator. The parameters of the oscillator are controlled by the variables declared above.
 </p>
 
 {% highlight ruby %}
