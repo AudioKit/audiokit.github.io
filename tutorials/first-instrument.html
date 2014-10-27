@@ -69,8 +69,8 @@ Now we can create our sine wave generator, which is an instance of AKSineTable. 
 </p>
 
 {% highlight objective-c %}
-        AKSineTable *sineTable = [[AKSineTable alloc] init];
-        [self addFTable:sineTable];
+AKSineTable *sineTable = [[AKSineTable alloc] init];
+[self addFTable:sineTable];
 {% endhighlight %}
 
 <p>Next, we’re going to create an instance of AKFMOscillator called fmOscillator using the line below:</p>
@@ -81,13 +81,13 @@ Now we can create our sine wave generator, which is an instance of AKSineTable. 
 <p>Then, we’re going to initialize fmOscillator’s parameters with the code below:</p>
 
 {% highlight objective-c %}
-        AKFMOscillator *fmOscillator;
-        fmOscillator = [[AKFMOscillator alloc]initWithFTable:sineTable
-                                               baseFrequency:akp(440)
-                                           carrierMultiplier:akp(1)
-                                        modulatingMultiplier:akp(0.5)
-                                             modulationIndex:akp(1.0)
-                                                   amplitude:akp(0.1)];
+AKFMOscillator *fmOscillator;
+fmOscillator = [[AKFMOscillator alloc]initWithFTable:sineTable
+                                       baseFrequency:akp(440)
+                                   carrierMultiplier:akp(1)
+                                modulatingMultiplier:akp(0.5)
+                                     modulationIndex:akp(1.0)
+                                           amplitude:akp(0.1)];
 {% endhighlight %}
 
 
@@ -242,9 +242,7 @@ This will check to see if an  newInstrument is playing. If it is, the ViewContro
 #import "AKFoundation.h"
 #import "NewInstrument.h"
 
-@implementation ViewController
-
-{
+@implementation ViewController {
     NewInstrument *newInstrument;
     BOOL isNewInstrumentPlaying;
 }

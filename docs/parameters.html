@@ -7,50 +7,46 @@ permalink: /parameters/
 
 <p>Parameters are arguments to <a href="/operations/">Operations</a>.  They come in three varieties for audio rate, control rate, and constant values. When something is declared as an <a href="/Classes/AKParameter.html">AKParameter</a>, it is at audio rate.  <a href="/docs/Classes/AKControl.html">AKControl</a> and <a href="/Classes/AKConstant.html">AKConstant</a> should be used for slower rate variables.</p>
 
-<p><a href="/Classes/AKAudio.html">AKAudio</a> is a parameter usually designated as an audible signal.  <a href="/Classes/AKStereoAudio.html">AKStereoAudio</a> is a left and right pair of <a href="/Classes/AKAudio.html">AKAudio</a> signals.</p>
-
-<p>An <a href="/Classes/AKArray.html">AKArray</a> is used for an arbitrarily long array of AKParameters.</p>
-
-<p><a href="/f-tables/">F-Tables</a> are also parameters.</p>
+<p><a href="/Classes/AKAudio.html">AKAudio</a> is a parameter usually designated as an audible signal.  <a href="/Classes/AKStereoAudio.html">AKStereoAudio</a> is a left and right pair of <a href="/Classes/AKAudio.html">AKAudio</a> signals.An <a href="/Classes/AKArray.html">AKArray</a> is used for an arbitrarily long array of AKParameters.  <a href="/f-tables/">Function tables</a> are considered constant parameters and have a variety of different tables types to chooose from.</p>
 
 <table><thead><th>Class</th><th>Description</th></tr></thead>
-<tr>
-<td><a href="/Classes/AKArray.html">AKArray</td>
- <td> Am array of AKParameter variables
+</tr>
+<tr class='primary-row'>
+<td><a href="/Classes/AKParameter.html">AKParameter</a></td>
+ <td> Parameters are arguments to Operations.
 </td>
 </tr>
 <tr>
-<td><a href="/Classes/AKAudio.html">AKAudio</td>
+<td><a href="/Classes/AKArray.html">AKArray</a></td>
+ <td> An array of AKParameter variables
+</td>
+</tr>
+<tr>
+<td><a href="/Classes/AKAudio.html">AKAudio</a></td>
  <td> This class specifies a parameter that is specifically updated at the audio rate.
 </td>
 </tr>
 <tr>
-<td><a href="/Classes/AKConstant.html">AKConstant</td>
+<td><a href="/Classes/AKConstant.html">AKConstant</a></td>
  <td> These are i-Rate parameters, constant for a given operation call or note
 </td>
 </tr>
 <tr>
-<td><a href="/Classes/AKControl.html">AKControl</td>
- <td> These are parameters that can change at k-Rate, or control rate
+<td><a href="/Classes/AKControl.html">AKControl</a></td>
+ <td> These are parameters that can change at control rate
 </td>
 </tr>
 <tr>
-<td><a href="/Classes/AKFSignal.html">AKFSignal</td>
+<td><a href="/Classes/AKFSignal.html">AKFSignal</a></td>
  <td> Phase Vocoder Streaming output type
 </td>
 </tr>
 <tr>
-<td><a href="/Classes/AKFTable.html">AKFTable</td>
+<td><a href="/Classes/AKFTable.html">AKFTable</a></td>
  <td> Generic AK Function Table definiton.
 </td>
-</tr>
 <tr>
-<td><a href="/Classes/AKParameter.html">AKParameter</td>
- <td> Parameters are arguments to Operations.  They come in three varieties for
-</td>
-</tr>
-<tr>
-<td><a href="/Classes/AKStereoAudio.html">AKStereoAudio</td>
+<td><a href="/Classes/AKStereoAudio.html">AKStereoAudio</a></td>
  <td> Stereo Audio Pair
 </td>
 </tr>

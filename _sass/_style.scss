@@ -4,11 +4,11 @@ $xcode-blue-color: #227bf9;
 
 /* Function Variable */
 
-$link-color: #060;
+$link-color: #03c;
 $hover-color: #666;
 
-$bright-hover-color: #fc3;
-$bright-link-color: #6f6;
+$bright-hover-color: #227bf9;
+$bright-link-color: #03c;
 
 $dark-color: #333;
 
@@ -17,17 +17,17 @@ $code-color: #000;
 
 /* Placement Variables */
 
-$gutter-color: #444;
+$gutter-color: #dadada;
 $article-text-color: #000;
 $text-bg-color: #f6f6f6;
 
-$note-code-bg-color: #fff;
+$note-code-bg-color: #999;
 $note-text-color: #fff;
 $info-text-color: $article-text-color;
 
 $top-border-color: $link-color;
 
-$aside-text-color: #fff;
+$aside-text-color: #333;
 $aside-link-color: $bright-link-color;
 $aside-hover-color: $bright-hover-color;
 
@@ -143,10 +143,7 @@ nav li {
 .main-nav li a:hover {
   background-color: $nav-hover-bg-color;
   color: $nav-hover-link-color;
-  -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,.5), 0 1px 0 rgba(255,255,255,.1);
-  -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,.5), 0 1px 0 rgba(255,255,255,.1);
-  box-shadow: inset 0 1px 3px rgba(0,0,0,.5), 0 1px 0 rgba(255,255,255,.1);
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  text-decoration: none;
 }
 
 .main-nav li.current a {
@@ -275,6 +272,7 @@ footer a:hover img {
 
 article {
   background-color: $text-bg-color;
+  font-weight: 300;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -319,7 +317,7 @@ aside h4 {
   padding: 0 0 10px 30px;
   margin-left: -30px;
   display: inline-block;
-  border-bottom: 1px solid #c00;
+  border-bottom: 1px solid #000;
 }
 
 aside ul {
@@ -332,19 +330,22 @@ aside ul:first-child {
 
 aside li {
   list-style-type: none;
+  margin-bottom: 10px;
 }
 
 aside li a {
   color: $aside-link-color;
-  font-size: 16px;
+  font-size: 17px;
+  font-weight: 500;
   position: relative
 }
 aside li a:hover {
   color: $aside-hover-color;
+  text-decoration: none;
 }
 
 aside li.current a {
-  color: $text-bg-color;
+  color: $bright-hover-color;
 }
 
 aside li.current a:before {
@@ -400,6 +401,7 @@ aside li.current a:before {
 .section-nav a:hover {
   color: $section-nav-hover-text-color;
   background-color: $section-nav-hover-bg-color;
+  text-decoration: none;
 }
 
 .section-nav .next, .section-nav .prev {
@@ -428,11 +430,13 @@ aside li.current a:before {
 .section-nav .prev, .section-nav .prev:hover {
   /*float: left;*/
   padding-left: 30px;
+  text-decoration: none;
 }
 
 .section-nav .next, .section-nav .next:hover {
   /*float: right;*/
   padding-right: 30px;
+  text-decoration: none;
 }
 
 .section-nav .disabled {
@@ -510,6 +514,7 @@ article a {
 
 a:hover {
   color: $hover-color;
+  text-decoration: underline;
 }
 
 strong {

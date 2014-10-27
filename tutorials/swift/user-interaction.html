@@ -125,12 +125,12 @@ We're going to write the "updateSliders" function underneath "toggleInstrument".
 
 
 {% highlight ruby %}
-    func updateSliders()->Void {
-        AKTools.setSlider(frequencySlider, withProperty: fmOscillator.frequency)
-        AKTools.setSlider(amplitudeSlider, withProperty: fmOscillator.amplitude)
-        AKTools.setSlider(carrierMultiplierSlider, withProperty: fmOscillator.carrierMultiplier)
-        AKTools.setSlider(modulationIndexSlider, withProperty: fmOscillator.modulationIndex)
-    }
+func updateSliders()->Void {
+    AKTools.setSlider(frequencySlider, withProperty: fmOscillator.frequency)
+    AKTools.setSlider(amplitudeSlider, withProperty: fmOscillator.amplitude)
+    AKTools.setSlider(carrierMultiplierSlider, withProperty: fmOscillator.carrierMultiplier)
+    AKTools.setSlider(modulationIndexSlider, withProperty: fmOscillator.modulationIndex)
+}
 {% endhighlight %}
 
 
@@ -139,8 +139,8 @@ Finally, we're going to add the methods to detect when our sliders are moved. Co
 </p>
 
 {% highlight ruby %}
-    @IBAction func frequencySliderMoved(sender: AnyObject) {
-    }
+@IBAction func frequencySliderMoved(sender: AnyObject) {
+}
 {% endhighlight %}
 
 <p>
