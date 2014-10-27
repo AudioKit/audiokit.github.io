@@ -12,8 +12,6 @@ The code below, from "EffectsProcessor.h", creates a reverb effect that modifies
 </p>
 
 {% highlight objective-c %}
-// INSTRUMENT DEFINITION ===============================================
-
 AKReverb * reverb = [[AKReverb alloc] initWithAudioSource:audioSource
                                             feedbackLevel:akp(0.8)
                                           cutoffFrequency:akp(12000)];
@@ -24,8 +22,6 @@ AKReverb * reverb = [[AKReverb alloc] initWithAudioSource:audioSource
 <p>The code below sends the reverb-affected audio signal to the output.</p>
 
 {% highlight objective-c %}
-// AUDIO OUTPUT ========================================================
-
 AKAudioOutput *audio;
 audio = [[AKAudioOutput alloc] initWithSourceStereoAudio:[reverb scaledBy:akp(0.2)] ];
 [self connect:audio];

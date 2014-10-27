@@ -13,7 +13,7 @@ $bright-link-color: #03c;
 $dark-color: #333;
 
 $code-bg-color: #fff;
-$code-color: #000;
+$code-color: #666;
 
 /* Placement Variables */
 
@@ -34,8 +34,8 @@ $aside-hover-color: $bright-hover-color;
 
 $nav-bg-color: $dark-color;
 $nav-link-color: $bright-link-color;
-$nav-hover-bg-color: #ccc;
-$nav-hover-link-color: #333;
+$nav-hover-bg-color: $bright-hover-color;
+$nav-hover-link-color: #fff;
 
 $current-nav-bg-color: $text-bg-color;
 $current-nav-link-color: $article-text-color;
@@ -45,13 +45,13 @@ $warning-color: $link-color;
 
 
 $section-nav-link-color: $article-text-color;
-$section-nav-bg-color: #222;
-$section-nav-hover-bg-color: white;
+$section-nav-bg-color: #ccc;
+$section-nav-hover-bg-color: $bright-hover-color;
 $section-nav-hover-text-color: #fff;
 
 
 $footer-text-color: $article-text-color;
-$footer-bg-color: #666;
+$footer-bg-color: #ccc;
 
 
 /* Base */
@@ -459,7 +459,7 @@ pre, code {
 /*  white-space: pre; */
   display: inline-block;
   margin: 0;
-  font: 14px/1.8em Menlo, Consolas, "Courier New", Courier, "Liberation Mono", monospace;
+  font: 13px/1.8em Menlo, Consolas, "Courier New", Courier, "Liberation Mono", monospace;
   padding: 0 0.5em;
 }
 
