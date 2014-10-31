@@ -5,10 +5,21 @@ permalink: /examples/SwiftFMOscillator/
 layout: examples
 ---
 
+<div class="cd-mobile cd-5s-silver iphoneShadow hide-on-mobiles" style="margin-left: 1em; float: right">
+  <div class="cd-cam"></div>
+  <div class="cd-ear"></div>
+  <div class="cd-home"></div>
+  <div class="cd-screen">
+    <video controls class="cd-fill">
+      <source src="http://www.hearforyourself.com/movies/SwiftFMOscillator.m4v" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
 <p>
 This is a Frequency-Modulation Oscillator implemented with Swift. It has five parameters controlled via UISliders: frequency, amplitude, carrier multiplier, modulating multiplier, and modulating index.
 </p>
-<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/172497122&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 
 <p>
 In "FMSynth.swift", five variables are declared for each synthesizer parameter we want to control. Each variable is an instance of AKInstrumentProperty, which are properties of an instrument that are shared amongst all the notes that are created on that instrument. These properties are used by UISliders in the "ViewController.swift" to alter each individual parameter.The code for creating these variables and setting their initial, minimum, and maximum values is shown below:
@@ -53,3 +64,7 @@ override init() {
     }
 }
 {% endhighlight %}
+
+<h2>Audio Clip</h2>
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/172497122&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
