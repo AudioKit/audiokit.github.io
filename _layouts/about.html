@@ -1,0 +1,30 @@
+---
+layout: default
+section: about
+---
+
+  <section class="about">
+    <div class="grid">
+
+      <div class="unit four-fifths">
+        <article>
+          <h1>
+          {% if page.header != '' %}
+            {{ page.header }}
+          {% else %}
+            {{ page.title }}
+          {% endif %}
+          </h1>
+          {{ content }}
+
+        </article>
+      </div>
+      <div class="unit one-fifth hide-on-mobiles">
+        <aside>
+          {% include sidebars/about.html %}
+        </aside>
+      </div>
+      <div class="clear"></div>
+
+    </div>
+  </section>
