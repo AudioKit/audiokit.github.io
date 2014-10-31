@@ -1,6 +1,6 @@
 ---
 title: Audio Kit Examples - Swift FMOscillator
-header: Swift FMOscillator
+header: Swift FM Oscillator
 permalink: /examples/SwiftFMOscillator/
 layout: examples
 ---
@@ -48,4 +48,8 @@ override init() {
         modulationIndex: modulationIndex,
         amplitude: amplitude
     )
+        connect(fmOscillator)
+        connect(AKAudioOutput(audioSource: fmOscillator))
+    }
+}
 {% endhighlight %}
