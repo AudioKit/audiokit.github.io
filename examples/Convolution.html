@@ -37,7 +37,6 @@ dishConv  = [[AKConvolution alloc] initWithAudioSource:loop.leftOutput
                                    impulseResponseFile:dish];
 [self connect:dishConv];
 
-
 AKConvolution *wellConv;
 wellConv  = [[AKConvolution alloc] initWithAudioSource:loop.rightOutput
                                    impulseResponseFile:well];
@@ -53,7 +52,6 @@ balance = [[AKMixedAudio alloc] initWithSignal1:dishConv
                                         balance:_dishWellBalance];
 [self connect:balance];
 
-
 AKMixedAudio *dryWet;
 dryWet = [[AKMixedAudio alloc] initWithSignal1:loop.leftOutput
                                        signal2:balance
@@ -65,9 +63,9 @@ dryWet = [[AKMixedAudio alloc] initWithSignal1:loop.leftOutput
 
 <p>The OS X and iOS versions of this example share the exact same AudioKit instrument files but they use different UI elements to hook into the instrument's properties.</p>
 
-<div class="cd-laptop">
+<div class="cd-laptop cd">
   <div class="cd-top" style="background-color: black;"></div>
-  <div class="cd-bottom"></div>
+  <div class="cd-bottom iphoneShadow"></div>
   <div class="cd-cam"></div>
   <div class="cd-notch"></div>
   <div class="cd-screen" style="background-color: #f6f6f6">
