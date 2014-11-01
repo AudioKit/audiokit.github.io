@@ -534,16 +534,24 @@ p {
 
 /* Article HTML */
 
+article {
+  h1 {
+    font-size: 3em;
+    font-weight: 300;
+    margin-bottom: 0.5em;
+  }
+  p {
+    margin-top: 0;
+  }
+}
+
 article h2,
 article h3,
 article h4,
 article h5,
 article h6 {
-  margin: 1em 0;
-}
-
-article h4 {
-  color: $article-text-color;
+  color: $green;
+  margin: 2em 0 0 0;
 }
 
 h5, h6 {
