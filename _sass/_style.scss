@@ -137,13 +137,14 @@ nav li {
   border-radius: 5px;
   font-weight: 900;
   font-size: 14px;
-  padding: 0.5em 1em;
+  padding: 0.5em 0.9em 0.5em 1em;
   text-shadow: none;
   text-transform: uppercase;
-  -webkit-transition: all .25s;
-  -moz-transition: all .25s;
-  -o-transition: all .25s;
-  transition: all .25s;
+  letter-spacing: 0.1em;
+  -webkit-transition: all .15s;
+  -moz-transition: all .15s;
+  -o-transition: all .15s;
+  transition: all .15s;
 }
 
 .main-nav li a:hover {
@@ -153,12 +154,8 @@ nav li {
 }
 
 .main-nav li.current a {
-  background-color: $current-nav-bg-color;
-  color: $current-nav-link-color;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.5), 0 1px 5px rgba(0,0,0,.5);
-  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.5), 0 1px 5px rgba(0,0,0,.5);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.5), 0 1px 5px rgba(0,0,0,.5);
-  text-shadow: 0 1px 0 rgba(255,255,255,.3);
+  background-color: $brand-color;
+  color: #FFF;
 }
 
 .mobile-nav ul {
