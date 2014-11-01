@@ -10,11 +10,11 @@ $brand-color: $red;
 
 /* Function Variable */
 
-$link-color: #03c;
+$link-color: $blue;
 $hover-color: #666;
 
-$bright-hover-color: #227bf9;
-$bright-link-color: #03c;
+$bright-hover-color: #FA2A00;
+$bright-link-color: #FA2A00;
 
 $dark-color: #333;
 
@@ -23,15 +23,15 @@ $code-color: #666;
 
 /* Placement Variables */
 
-$gutter-color: #dadada;
-$article-text-color: #000;
-$text-bg-color: #f6f6f6;
+$gutter-color: #F9F2E7;
+$article-text-color: $darkgray;
+$text-bg-color: #FFFFFF;
 
 $note-code-bg-color: #999;
 $note-text-color: #fff;
 $info-text-color: $article-text-color;
 
-$top-border-color: $link-color;
+$top-border-color: $bright-link-color;
 
 $aside-text-color: #333;
 $aside-link-color: $bright-link-color;
