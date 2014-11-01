@@ -120,7 +120,7 @@ nav li {
 }
 
 .main-nav {
-  margin-top: 12px;
+  margin-top: 9px;
 }
 
 .main-nav li {
@@ -269,7 +269,19 @@ footer a:hover img {
 
 @media (min-width: 569px) {
   .intro p {
-    font-size: 3.2em;
+    font-size: 2.2em;
+  }
+}
+
+.features {
+  padding-top: 40px;
+  h2 {
+    margin-top: 10px;
+    font-weight: 400;
+    color: $darkgray;
+  }
+  p {
+    margin-top: 0;
   }
 }
 
@@ -505,8 +517,6 @@ pre, code {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
-
-
 
 a {
   color: $link-color;
@@ -861,13 +871,45 @@ code.option, code.flag, code.filter, code.output {
 /* Quickstart */
 
 .quickstart {
-  background-color: #FFF;
-  color: #333;
-  margin: 60px 0;
+  background: #fabe28; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #fabe28 0%, #fc913a 65%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#fabe28), color-stop(65%,#fc913a)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg,  #fabe28 0%,#fc913a 65%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg,  #fabe28 0%,#fc913a 65%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg,  #fabe28 0%,#fc913a 65%); /* IE10+ */
+  background: linear-gradient(135deg,  #fabe28 0%,#fc913a 65%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fabe28', endColorstr='#fc913a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  color: #FFF;
+}
+
+.quickstart .grid.wrap {
+  max-width: 1200px;
+  padding: 20px;
+  margin-bottom: -60px;
+}
+
+.quickstart .vertical-align-container {
+  position: relative;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+  > div {
+    height: 230px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
 }
 
 .quickstart .content {
   padding: 0;
+}
+
+.quickstart p {
+  margin: 0;
+  padding: 0;
+  color:#FFF;
 }
 
 .quickstart h4 {
@@ -875,6 +917,10 @@ code.option, code.flag, code.filter, code.output {
   line-height: 24px;
   margin-top: 20px;
   text-shadow: 0 1px 3px rgba(0,0,0,.8);
+}
+
+.quickstart .cd-mobile {
+  margin: auto;
 }
 
 .quickstart .code {
@@ -892,6 +938,12 @@ code.option, code.flag, code.filter, code.output {
   .quickstart h4 {
     margin: 50px 0 0;
     text-align: center;
+  }
+  .quickstart .vertical-align-container {
+    height: 616px;
+    > div {
+      height: 220px;
+    }
   }
 }
 
@@ -981,3 +1033,29 @@ code.option, code.flag, code.filter, code.output {
 section .grid .unit {
   margin-bottom: 40px;
 }
+
+
+/* Buttons */
+
+.button {
+  border-radius: 3px;
+  padding: 1em 2em;
+  margin-right: 5px;
+  background: $blue;
+  color: #FFF;
+  text-transform: uppercase;
+  line-height: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  &.button-transparent {
+    background: transparent;
+    border: 2px solid #FFF;
+    margin-top: 30px;
+    &:hover {
+      background: #FFF;
+      color: $yellow;
+    }
+  }
+}
+
