@@ -8,6 +8,16 @@ iframe {
   margin-bottom: 50px;
 }
 
+img.homepage {
+  margin-bottom: 10px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+    -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0);
+  -moz-box-shadow: 0 10px 20px rgba(0,0,0,0);
+  box-shadow: 0 10px 20px rgba(0,0,0,0);
+}
+
 .iphoneShadow {
   -webkit-box-shadow: 0 10px 20px rgba(0,0,0,.4);
   -moz-box-shadow: 0 10px 20px rgba(0,0,0,.4);
