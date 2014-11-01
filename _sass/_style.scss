@@ -60,8 +60,8 @@ $section-nav-hover-bg-color: $bright-hover-color;
 $section-nav-hover-text-color: #fff;
 
 
-$footer-text-color: $article-text-color;
-$footer-bg-color: #ccc;
+$footer-text-color: #FFF;
+$footer-bg-color: $darkgray;
 
 
 /* Base */
@@ -220,6 +220,9 @@ footer {
 
 footer a {
   color: $footer-text-color;
+  &:hover {
+    color: $brand-color
+  }
 }
 
 footer .align-right p, footer img {
