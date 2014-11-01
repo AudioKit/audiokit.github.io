@@ -73,10 +73,6 @@ body {
   color: $article-text-color;
   background-color: $gutter-color;
   border-top: 5px solid $top-border-color;
-  -webkit-box-shadow: inset 0 3px 30px rgba(0,0,0,.3);
-  -moz-box-shadow: inset 0 3px 30px rgba(0,0,0,.3);
-  box-shadow: inset 0 3px 30px rgba(0,0,0,.3);
-  text-shadow: 0 1px 3px rgba(0,0,0,.1);
 }
 
 .clear {
