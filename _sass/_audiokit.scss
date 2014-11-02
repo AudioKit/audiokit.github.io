@@ -1,7 +1,7 @@
-$red: #FA2A00;
+$red: #b01400;
 $brown: #3D1C00;
 
-$brand-color: $red;
+$brand-color: $brown;
 
 /* AK */
 
@@ -12,7 +12,7 @@ $brand-color: $red;
   -o-transition: color .15s ease-in-out;
   transition: color .15s ease-in-out;
   &:hover {
-    color: $brown;
+    color: $red;
   }
 }
 

@@ -1,7 +1,7 @@
 /* Color Variables */
 
 $blue: #00B4FF;
-$red: #FA2A00;
+$red: #b01400;
 $darkgray: #29221F;
 $brown: #3D1C00;
 $purple: #7E5686;
@@ -9,7 +9,7 @@ $green: #00C176;
 $lightgray: #EBE7E0;
 $yellow: #FABE28;
 
-$table-thead-color: $yellow;
+$table-thead-color: $red;
 
 $brand-color: $red;
 
@@ -19,7 +19,7 @@ $link-color: $blue;
 $hover-color: #666;
 
 $bright-hover-color: $brown;
-$bright-link-color: $red;
+$bright-link-color: $brown;
 
 $dark-color: #333;
 
@@ -28,7 +28,7 @@ $code-color: #666;
 
 /* Placement Variables */
 
-$gutter-color: #F9F2E7;
+$gutter-color: #ddd;
 $article-text-color: $darkgray;
 $text-bg-color: #FFFFFF;
 
