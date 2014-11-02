@@ -870,15 +870,18 @@ code.option, code.flag, code.filter, code.output {
 
 /* Quickstart */
 
+$quickstart1: #7eae6a; /* fabe28 */
+$quickstart2: #0c913a; /* fc913a */
+
 .quickstart {
   background: #fabe28; /* Old browsers */
-  background: -moz-linear-gradient(-45deg,  #fabe28 0%, #fc913a 65%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#fabe28), color-stop(65%,#fc913a)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg,  #fabe28 0%,#fc913a 65%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg,  #fabe28 0%,#fc913a 65%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg,  #fabe28 0%,#fc913a 65%); /* IE10+ */
-  background: linear-gradient(135deg,  #fabe28 0%,#fc913a 65%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fabe28', endColorstr='#fc913a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: -moz-linear-gradient(-45deg,  $quickstart1 0%, $quickstart2 65%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,$quickstart1), color-stop(65%,$quickstart2)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg,  $quickstart1 0%,$quickstart2 65%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg,  $quickstart1 0%,$quickstart2 65%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg,  $quickstart1 0%,$quickstart2 65%); /* IE10+ */
+  background: linear-gradient(135deg,  $quickstart1 0%,$quickstart2 65%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$quickstart1', endColorstr='$quickstart2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   color: #FFF;
 }
 
