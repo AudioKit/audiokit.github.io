@@ -5,4 +5,107 @@ permalink: /examples/Keyboard/
 layout: examples
 ---
 
-This is a newly created example with information and video coming soon.
+<p>
+This example shows how pitches of an oscillator can be changed by using a simple keyboard interface.
+Additionally, a reverb and tone-control are used as a global effect that can be user-controlled.
+</p>
+
+<p>
+There are two parts to this example: "ToneGenerator" and "EffectsProcessor". In "ToneGenerator.m",
+</p>
+
+
+{% highlight objective-c %}
+ToneGeneratorNote *note = [[ToneGeneratorNote alloc] init];
+[self addNoteProperty:note.frequency];
+{% endhighlight %}
+
+<p>
+The property "_toneColor" is declared below, and initialized with some defaut values. This property is controlled by one of the sliders in the user interface.
+</p>
+
+{% highlight objective-c %}
+_toneColor  = [[AKInstrumentProperty alloc] initWithValue:0.5
+                                                  minimum:0.1
+                                                  maximum:1.0];
+[self addProperty:_toneColor];
+{% endhighlight %}
+
+
+<p>
+Below, an instance of AKFMOscillator is created, with a sine-wave table as the source. The values of carrier multiplier, modulating multiplier, and modulation index are controlled by the _toneColor parameter. These parameters are then scaled to be within a desired value range.
+</p>
+
+
+{% highlight objective-c %}
+AKSineTable *sineTable = [[AKSineTable alloc] init];
+[self addFTable:sineTable];
+
+AKFMOscillator *fmOscillator;
+fmOscillator = [[AKFMOscillator alloc] initWithFTable:sineTable
+                                        baseFrequency:note.frequency
+                                    carrierMultiplier:[_toneColor scaledBy:akp(2.0)]
+                                 modulatingMultiplier:[_toneColor scaledBy:akp(1.2)]
+                                      modulationIndex:[_toneColor scaledBy:akp(1.5)]
+                                            amplitude:akp(0.15)];
+[self connect:fmOscillator];
+{% endhighlight %}
+
+
+<p>
+An instance of AKDeclick is added below, which removes audible clicks from the audio signal when the user changes the pitch of the oscillator.
+</p>
+
+{% highlight objective-c %}
+AKDeclick *declick;
+declick = [[AKDeclick alloc] initWithAudioSource:fmOscillator];
+[self addUDO:declick];
+{% endhighlight %}
+
+<p>The output of "declick" is then sent to the speakers below:</p>
+
+{% highlight objective-c %}
+AKAudioOutput *audio = [[AKAudioOutput alloc] initWithAudioSource:declick];
+[self connect:audio];
+
+<p>
+Finally,
+</p>
+_auxilliaryOutput = [AKAudio globalParameter];
+[self assignOutput:_auxilliaryOutput to:fmOscillator];
+{% endhighlight %}
+
+
+<p>
+The reverb global effect is created in "EffectsProcessor.m". Below, an instance of of AKInstrumentProperty is crated, named "_reverb". This property is connected to one of the sliders in the user interface.
+</p>
+
+{% highlight objective-c %}
+_reverb  = [[AKInstrumentProperty alloc] initWithValue:0.0
+                                               minimum:0.0
+                                               maximum:1.0];
+[self addProperty:_reverb];
+{% endhighlight %}
+
+<p>
+An instance of AKReverb is then created, and the audio output is configured. The reverb's cutoff frequency is set to 4,000 Hz, and the feedback level is set by the "_reverb" property.
+</p>
+{% highlight objective-c %}
+
+AKReverb *reverb = [[AKReverb alloc] initWithAudioSource:audioSource
+                                           feedbackLevel:_reverb
+                                         cutoffFrequency:akp(4000)];
+[self connect:reverb];
+
+
+AKAudioOutput *audio;
+audio = [[AKAudioOutput alloc] initWithSourceStereoAudio:reverb];
+[self connect:audio];
+{% endhighlight %}
+
+<p>
+Finally, the line below will reset the parameter "audioSource".
+</p>
+{% highlight objective-c %}
+[self resetParam:audioSource];
+{% endhighlight %}
