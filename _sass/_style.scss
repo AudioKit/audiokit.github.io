@@ -1,14 +1,25 @@
 /* Color Variables */
 
-$xcode-blue-color: #227bf9;
+$blue: #00B4FF;
+$red: #FA2A00;
+$darkgray: #29221F;
+$brown: #3D1C00;
+$purple: #7E5686;
+$green: #00C176;
+$lightgray: #EBE7E0;
+$yellow: #FABE28;
+
+$table-thead-color: $yellow;
+
+$brand-color: $red;
 
 /* Function Variable */
 
-$link-color: #03c;
+$link-color: $blue;
 $hover-color: #666;
 
-$bright-hover-color: #227bf9;
-$bright-link-color: #03c;
+$bright-hover-color: $brown;
+$bright-link-color: $red;
 
 $dark-color: #333;
 
@@ -17,15 +28,15 @@ $code-color: #666;
 
 /* Placement Variables */
 
-$gutter-color: #dadada;
-$article-text-color: #000;
-$text-bg-color: #f6f6f6;
+$gutter-color: #F9F2E7;
+$article-text-color: $darkgray;
+$text-bg-color: #FFFFFF;
 
 $note-code-bg-color: #999;
 $note-text-color: #fff;
 $info-text-color: $article-text-color;
 
-$top-border-color: $link-color;
+$top-border-color: $bright-link-color;
 
 $aside-text-color: #333;
 $aside-link-color: $bright-link-color;
@@ -50,8 +61,8 @@ $section-nav-hover-bg-color: $bright-hover-color;
 $section-nav-hover-text-color: #fff;
 
 
-$footer-text-color: $article-text-color;
-$footer-bg-color: #ccc;
+$footer-text-color: #FFF;
+$footer-bg-color: $darkgray;
 
 
 /* Base */
@@ -67,10 +78,6 @@ body {
   color: $article-text-color;
   background-color: $gutter-color;
   border-top: 5px solid $top-border-color;
-  -webkit-box-shadow: inset 0 3px 30px rgba(0,0,0,.3);
-  -moz-box-shadow: inset 0 3px 30px rgba(0,0,0,.3);
-  box-shadow: inset 0 3px 30px rgba(0,0,0,.3);
-  text-shadow: 0 1px 3px rgba(0,0,0,.1);
 }
 
 .clear {
@@ -113,7 +120,7 @@ nav li {
 }
 
 .main-nav {
-  margin-top: 12px;
+  margin-top: 9px;
 }
 
 .main-nav li {
@@ -131,13 +138,14 @@ nav li {
   border-radius: 5px;
   font-weight: 900;
   font-size: 14px;
-  padding: 0.5em 1em;
+  padding: 0.5em 0.9em 0.5em 1em;
   text-shadow: none;
   text-transform: uppercase;
-  -webkit-transition: all .25s;
-  -moz-transition: all .25s;
-  -o-transition: all .25s;
-  transition: all .25s;
+  letter-spacing: 0.1em;
+  -webkit-transition: all .15s;
+  -moz-transition: all .15s;
+  -o-transition: all .15s;
+  transition: all .15s;
 }
 
 .main-nav li a:hover {
@@ -147,12 +155,8 @@ nav li {
 }
 
 .main-nav li.current a {
-  background-color: $current-nav-bg-color;
-  color: $current-nav-link-color;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.5), 0 1px 5px rgba(0,0,0,.5);
-  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.5), 0 1px 5px rgba(0,0,0,.5);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.5), 0 1px 5px rgba(0,0,0,.5);
-  text-shadow: 0 1px 0 rgba(255,255,255,.3);
+  background-color: $brand-color;
+  color: #FFF;
 }
 
 .mobile-nav ul {
@@ -217,6 +221,9 @@ footer {
 
 footer a {
   color: $footer-text-color;
+  &:hover {
+    color: $brand-color
+  }
 }
 
 footer .align-right p, footer img {
@@ -257,12 +264,24 @@ footer a:hover img {
 .intro p {
   font-size: 1.75em;
   line-height: 1em;
-  margin: 0;
+  color: $green;
 }
 
 @media (min-width: 569px) {
   .intro p {
-    font-size: 3.2em;
+    font-size: 2.2em;
+  }
+}
+
+.features {
+  padding-top: 40px;
+  h2 {
+    margin-top: 10px;
+    font-weight: 400;
+    color: $darkgray;
+  }
+  p {
+    margin-top: 0;
   }
 }
 
@@ -277,7 +296,7 @@ article {
   -moz-border-radius: 10px;
   border-radius: 10px;
   padding: 20px;
-  margin: 0 10px;
+  margin: 0 10px 0 0;
   -webkit-box-shadow: 0 3px 10px rgba(0,0,0,.1);
   -moz-box-shadow: 0 3px 10px rgba(0,0,0,.1);
   box-shadow: 0 3px 10px rgba(0,0,0,.1);
@@ -465,7 +484,7 @@ pre, code {
 
 @media (min-width: 768px) {
   pre, code {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -475,7 +494,8 @@ pre, code {
 /*  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px; */
-  border: 1px solid #666
+  border: 1px solid $lightgray;
+  border-radius: 4px;
 }
 
 .note code {
@@ -498,15 +518,9 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-
-
 a {
   color: $link-color;
   text-decoration: none;
-  -webkit-transition: all .25s;
-  -moz-transition: all .25s;
-  -o-transition: all .25s;
-  transition: all .25s;
 }
 article a {
     font-weight: bold;
@@ -514,7 +528,7 @@ article a {
 
 a:hover {
   color: $hover-color;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 strong {
@@ -533,16 +547,24 @@ p {
 
 /* Article HTML */
 
+article {
+  h1 {
+    font-size: 3em;
+    font-weight: 300;
+    margin-bottom: 0.5em;
+  }
+  p {
+    margin-top: 0;
+  }
+}
+
 article h2,
 article h3,
 article h4,
 article h5,
 article h6 {
-  margin: 1em 0;
-}
-
-article h4 {
-  color: $article-text-color;
+  color: $green;
+  margin: 2em 0 0 0;
 }
 
 h5, h6 {
@@ -571,6 +593,9 @@ blockquote {
   font-weight: 500;
 }
 
+.no-margin {
+  margin: 0;
+}
 
 /* Tables */
 
@@ -595,7 +620,7 @@ thead {
   -moz-border-radius-topright: 5px;
   border-top-right-radius: 5px;
   color: white;
-  background-color: $xcode-blue-color;
+  background-color: $table-thead-color;
 /*  background-image: -webkit-gradient(linear, left top, left bottom, from(#3a3a3a), to(#1e1e1e));
   background-image: -webkit-linear-gradient(top,                         #3a3a3a 0%,  #1e1e1e 100%);
   background-image: -moz-linear-gradient(top,                            #3a3a3a 0%,  #1e1e1e 100%);
@@ -633,10 +658,14 @@ td p {
 
 th {
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 14px;
   padding: .5em .75em;
-  text-shadow: 0 -1px 0 rgba(0,0,0,.9);
+  letter-spacing: 0.1em;
   color: white;
+  &:first-child {
+    text-align: left;
+    text-indent: 0.5em;
+  }
 }
 
 tbody td {
@@ -652,6 +681,10 @@ tbody td {
   background-image: -o-linear-gradient(top,                              rgba(255,255,255,0.9) 0%,  rgba(255,255,255,0.5) 100%);
   background-image: linear-gradient(to bottom,                           rgba(255,255,255,0.9) 0%,  rgba(255,255,255,0.5) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1affffff', endColorstr='#00ffffff',GradientType=0 ); */
+}
+
+thead + tbody tr:first-child td {
+  border-top: 1px solid $table-thead-color;
 }
 
 td p {
@@ -838,16 +871,45 @@ code.option, code.flag, code.filter, code.output {
 /* Quickstart */
 
 .quickstart {
-  background-color: #d2d2d2;
-  color: #333;
-  margin: 60px 0;
-  -webkit-box-shadow: inset 0 3px 10px rgba(0,0,0,.4);
-  -moz-box-shadow: inset 0 3px 10px rgba(0,0,0,.4);
-  box-shadow: inset 0 3px 10px rgba(0,0,0,.4);
+  background: #fabe28; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #fabe28 0%, #fc913a 65%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#fabe28), color-stop(65%,#fc913a)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg,  #fabe28 0%,#fc913a 65%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg,  #fabe28 0%,#fc913a 65%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg,  #fabe28 0%,#fc913a 65%); /* IE10+ */
+  background: linear-gradient(135deg,  #fabe28 0%,#fc913a 65%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fabe28', endColorstr='#fc913a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  color: #FFF;
+}
+
+.quickstart .grid.wrap {
+  max-width: 1200px;
+  padding: 20px;
+  margin-bottom: -60px;
+}
+
+.quickstart .vertical-align-container {
+  position: relative;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+  > div {
+    height: 230px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
 }
 
 .quickstart .content {
   padding: 0;
+}
+
+.quickstart p {
+  margin: 0;
+  padding: 0;
+  color:#FFF;
 }
 
 .quickstart h4 {
@@ -855,6 +917,10 @@ code.option, code.flag, code.filter, code.output {
   line-height: 24px;
   margin-top: 20px;
   text-shadow: 0 1px 3px rgba(0,0,0,.8);
+}
+
+.quickstart .cd-mobile {
+  margin: auto;
 }
 
 .quickstart .code {
@@ -872,6 +938,12 @@ code.option, code.flag, code.filter, code.output {
   .quickstart h4 {
     margin: 50px 0 0;
     text-align: center;
+  }
+  .quickstart .vertical-align-container {
+    height: 616px;
+    > div {
+      height: 220px;
+    }
   }
 }
 
@@ -954,5 +1026,36 @@ code.option, code.flag, code.filter, code.output {
 
 .quickstart .code .output {
   color: #888;
+}
+
+/* Grid Specific */
+
+section .grid .unit {
+  margin-bottom: 40px;
+}
+
+
+/* Buttons */
+
+.button {
+  border-radius: 3px;
+  padding: 1em 2em;
+  margin-right: 5px;
+  background: $blue;
+  color: #FFF;
+  text-transform: uppercase;
+  line-height: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  &.button-transparent {
+    background: transparent;
+    border: 2px solid #FFF;
+    margin-top: 30px;
+    &:hover {
+      background: #FFF;
+      color: $yellow;
+    }
+  }
 }
 
