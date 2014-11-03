@@ -84,13 +84,13 @@ body {
   display: block;
 }
 
-.clear:after {
+/* .clear:after {
   content: " ";
   display: block;
   height: 0;
   clear: both;
   visibility: hidden;
-}
+} */
 
 /* Sections */
 
@@ -1034,7 +1034,7 @@ $quickstart2: #0c913a; /* fc913a */
 /* Grid Specific */
 
 section .grid .unit {
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 
 
