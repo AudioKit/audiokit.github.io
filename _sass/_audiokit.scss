@@ -15,6 +15,18 @@ $brand-color: $brown;
     color: $red;
   }
 }
+.rotate {
+  -moz-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.rotate:hover {
+  -moz-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -o-transform:  rotate(-90deg);
+  transform:  rotate(-90deg) ;
+}
 
 iframe {
   margin-top: 20px;

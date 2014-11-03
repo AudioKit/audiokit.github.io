@@ -5,13 +5,23 @@ permalink: /examples/Keyboard/
 layout: examples
 ---
 
+
+<div class="cd-mobile cd-5s-silver iphoneShadow hide-on-mobiles rotate" style="margin-left: 1em; float: right;">
+  <div class="cd-cam"></div>
+  <div class="cd-ear"></div>
+  <div class="cd-home"></div>
+  <div class="cd-screen">
+    <img src="/images/keyboard.png" style="width:100%">
+  </div>
+</div>
+
+
 <p>
-This example shows how pitches of an oscillator can be changed by using a simple keyboard interface.
-Additionally, a reverb and tone-control are used as a global effect that can be user-controlled.
+This examples demonstrates how a simple keyboard can be created with UIButtons for keys and UISliders to control instrument properties and a global reverb effect.
 </p>
 
 <p>
-There are two parts to this example: "ToneGenerator" and "EffectsProcessor". In "ToneGenerator.m",
+There are two parts to this example: "ToneGenerator" and "EffectsProcessor". In "ToneGenerator.m", we create a note that has frequency as an independent property of a note, not of the instrument.
 </p>
 
 
@@ -21,7 +31,7 @@ ToneGeneratorNote *note = [[ToneGeneratorNote alloc] init];
 {% endhighlight %}
 
 <p>
-The property "_toneColor" is declared below, and initialized with some defaut values. This property is controlled by one of the sliders in the user interface.
+The property "toneColor" is declared below, and initialized with some defaut values. This property is controlled by one of the sliders in the user interface.
 </p>
 
 {% highlight objective-c %}
@@ -33,7 +43,7 @@ _toneColor  = [[AKInstrumentProperty alloc] initWithValue:0.5
 
 
 <p>
-Below, an instance of AKFMOscillator is created, with a sine-wave table as the source. The values of carrier multiplier, modulating multiplier, and modulation index are controlled by the _toneColor parameter. These parameters are then scaled to be within a desired value range.
+Below, an instance of AKFMOscillator is created, with a sine-wave table as the source. The values of carrier multiplier, modulating multiplier, and modulation index are controlled by the toneColor parameter. These parameters are then scaled to be within a desired value range.
 </p>
 
 
@@ -51,61 +61,28 @@ fmOscillator = [[AKFMOscillator alloc] initWithFTable:sineTable
 [self connect:fmOscillator];
 {% endhighlight %}
 
-
 <p>
-An instance of AKDeclick is added below, which removes audible clicks from the audio signal when the user changes the pitch of the oscillator.
+Most importantly, the output is routed to a globallly accessible auxilliary port.
 </p>
 
 {% highlight objective-c %}
-AKDeclick *declick;
-declick = [[AKDeclick alloc] initWithAudioSource:fmOscillator];
-[self addUDO:declick];
-{% endhighlight %}
-
-<p>The output of "declick" is then sent to the speakers below:</p>
-
-{% highlight objective-c %}
-AKAudioOutput *audio = [[AKAudioOutput alloc] initWithAudioSource:declick];
-[self connect:audio];
-
-<p>
-Finally,
-</p>
 _auxilliaryOutput = [AKAudio globalParameter];
 [self assignOutput:_auxilliaryOutput to:fmOscillator];
 {% endhighlight %}
 
 
 <p>
-The reverb global effect is created in "EffectsProcessor.m". Below, an instance of of AKInstrumentProperty is crated, named "_reverb". This property is connected to one of the sliders in the user interface.
+The reverb global effect is created in "EffectsProcessor.m" with a specific initialization that requires an input audio signal:
 </p>
 
 {% highlight objective-c %}
-_reverb  = [[AKInstrumentProperty alloc] initWithValue:0.0
-                                               minimum:0.0
-                                               maximum:1.0];
-[self addProperty:_reverb];
+- (instancetype)initWithAudioSource:(AKAudio *)audioSource
 {% endhighlight %}
 
-<p>
-An instance of AKReverb is then created, and the audio output is configured. The reverb's cutoff frequency is set to 4,000 Hz, and the feedback level is set by the "_reverb" property.
-</p>
+So, when the fx processor is instantiated, it is given the tone generator as its input:
+
 {% highlight objective-c %}
-
-AKReverb *reverb = [[AKReverb alloc] initWithAudioSource:audioSource
-                                           feedbackLevel:_reverb
-                                         cutoffFrequency:akp(4000)];
-[self connect:reverb];
-
-
-AKAudioOutput *audio;
-audio = [[AKAudioOutput alloc] initWithSourceStereoAudio:reverb];
-[self connect:audio];
+fx = [[EffectsProcessor alloc] initWithAudioSource:toneGenerator.auxilliaryOutput];
 {% endhighlight %}
 
-<p>
-Finally, the line below will reset the parameter "audioSource".
-</p>
-{% highlight objective-c %}
-[self resetParam:audioSource];
-{% endhighlight %}
+This is how you can tie instruments and processors together for global effects.
