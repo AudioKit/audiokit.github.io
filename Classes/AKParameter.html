@@ -11,7 +11,7 @@ title: AKParameter
           </div>
         </div>
         <div id="container">
-          
+
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
@@ -21,10 +21,10 @@ title: AKParameter
   <td class="specification-value">AKParameter.h<br />AKParameter.m</td>
 </tr>
             </tbody></table></div>
-          
 
-          
-          
+
+
+
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
@@ -33,17 +33,17 @@ audio rate, control rate, and constant values. When something is declared as an
 AKParameter, it is at audio rate.  <a href="../Classes/AKControl.html">AKControl</a> and <a href="../Classes/AKConstant.html">AKConstant</a> should be used for
 slower rate variables.</p>
           </div>
-          
-          
 
-          
-          
+
+
+
+
           <div class="section section-tasks">
             <a title="Tasks" name="tasks"></a>
             <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
 
-            
+
+
             <h3 class="subsubtitle task-title">Other Methods</h3>
 
             <ul class="task-list">
@@ -52,81 +52,74 @@ slower rate variables.</p>
     <code><a href="#//api/name/parameterWithString:">+&nbsp;parameterWithString:</a></code>
     <span class="tooltip"><p>Helper method to avoid alloc and <a href="#//api/name/init">init</a> each time.</p></span>
   </span>
-  
-  
+
+
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/globalParameter">+&nbsp;globalParameter</a></code>
     <span class="tooltip"><p>Create a parameter available to all instruments in the orchestra.</p></span>
   </span>
-  
-  
+
+
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/globalParameterWithString:">+&nbsp;globalParameterWithString:</a></code>
     <span class="tooltip"><p>Create a parameter available to all instruments in the orchestra.</p></span>
   </span>
-  
-  
+
+
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithExpression:">&ndash;&nbsp;initWithExpression:</a></code>
     <span class="tooltip"><p>Allows insertion of math into parameters</p></span>
   </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/parameterWithFormat:">+&nbsp;parameterWithFormat:</a></code>
-    <span class="tooltip"><p>Allows a parameter to be created using NSString style string formatting</p></span>
-  </span>
-  
-  
+
+
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/resetID">+&nbsp;resetID</a></code>
     <span class="tooltip"><p>Allows the unique identifying integer to be reset so that the numbers don&rsquo;t increment indefinitely.</p></span>
   </span>
-  
-  
+
+
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/plus:">&ndash;&nbsp;plus:</a></code>
     <span class="tooltip"><p>Helper function to create a new AKParameter combined with the original</p></span>
   </span>
-  
-  
+
+
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/scaledBy:">&ndash;&nbsp;scaledBy:</a></code>
     <span class="tooltip"><p>Helper function to create a new AKParameter with the output scaled by another parameter</p></span>
   </span>
-  
-  
+
+
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/dividedBy:">&ndash;&nbsp;dividedBy:</a></code>
     <span class="tooltip"><p>Helper function to create a new AKParameter with the output scaled</p></span>
   </span>
-  
-  
+
+
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/inverse">&ndash;&nbsp;inverse</a></code>
     <span class="tooltip"><p>Helper function to return one-over-this-parameter</p></span>
   </span>
-  
-  
+
+
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/amplitudeFromFullScaleDecibel">&ndash;&nbsp;amplitudeFromFullScaleDecibel</a></code>
     <span class="tooltip"><p>Helper fucntion to convert logarithmic full scale decibel values to properly scaled amplitude</p></span>
   </span>
-  
-  
+
+
 </li>
             </ul>
-            
+
 
             <a title="Operation Methods" name="task_Operation Methods"></a>
             <h3 class="subsubtitle task-title">Operation Methods</h3>
@@ -137,540 +130,498 @@ slower rate variables.</p>
     <code><a href="#//api/name/operationName">&ndash;&nbsp;operationName</a></code>
     <span class="tooltip"><p>The name of the class with the AK prefix.</p></span>
   </span>
-  
-  
+
+
 </li>
             </ul>
-            
+
           </div>
-          
-          
 
-          
-          
 
-          
+
+
+
+
+
           <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
             <h2 class="subtitle subtitle-methods">Class Methods</h2>
-            
+
             <div class="section-method">
   <a name="//api/name/globalParameter" title="globalParameter"></a>
   <h3 class="subsubtitle method-title">globalParameter</h3>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     <p>Create a parameter available to all instruments in the orchestra.</p>
   </div>
-  
-    
+
+
 
   <div class="method-subsection method-declaration"><code>+ (id)globalParameter</code></div>
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
+
+
+
+
+
+
+
+
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKParameter.h</code><br />
   </div>
-  
-  
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/globalParameterWithString:" title="globalParameterWithString:"></a>
   <h3 class="subsubtitle method-title">globalParameterWithString:</h3>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     <p>Create a parameter available to all instruments in the orchestra.</p>
   </div>
-  
-    
+
+
 
   <div class="method-subsection method-declaration"><code>+ (id)globalParameterWithString:(NSString *)<em>name</em></code></div>
 
-    
-  
+
+
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-    
+
     <dl class="argument-def parameter-def">
       <dt><em>name</em></dt>
       <dd><p>The name of the parameter as it should appear in the output File.</p></dd>
     </dl>
-    
+
   </div>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKParameter.h</code><br />
   </div>
-  
-  
+
+
 </div>
-            
-            <div class="section-method">
-  <a name="//api/name/parameterWithFormat:" title="parameterWithFormat:"></a>
-  <h3 class="subsubtitle method-title">parameterWithFormat:</h3>
 
-  
-  
-  <div class="method-subsection brief-description">
-    <p>Allows a parameter to be created using NSString style string formatting</p>
-  </div>
-  
-    
-
-  <div class="method-subsection method-declaration"><code>+ (id)parameterWithFormat:(NSString *)<em>format</em>, <em>...</em></code></div>
-
-    
-  
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
-    
-    <dl class="argument-def parameter-def">
-      <dt><em>format</em></dt>
-      <dd><p>NSString style string format.</p></dd>
-    </dl>
-    
-    <dl class="argument-def parameter-def">
-      <dt><em>...</em></dt>
-      <dd><p>Any necessary format values to insert.</p></dd>
-    </dl>
-    
-  </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  <div class="method-subsection declared-in-section">
-    <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKParameter.h</code><br />
-  </div>
-  
-  
-</div>
-            
             <div class="section-method">
   <a name="//api/name/parameterWithString:" title="parameterWithString:"></a>
   <h3 class="subsubtitle method-title">parameterWithString:</h3>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     <p>Helper method to avoid alloc and <a href="#//api/name/init">init</a> each time.</p>
   </div>
-  
-    
+
+
 
   <div class="method-subsection method-declaration"><code>+ (id)parameterWithString:(NSString *)<em>name</em></code></div>
 
-    
-  
+
+
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-    
+
     <dl class="argument-def parameter-def">
       <dt><em>name</em></dt>
       <dd><p>The name of the parameter as it should appear in the output file.</p></dd>
     </dl>
-    
+
   </div>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
+
+
+
+
+
+
+
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKParameter.h</code><br />
   </div>
-  
-  
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/resetID" title="resetID"></a>
   <h3 class="subsubtitle method-title">resetID</h3>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     <p>Allows the unique identifying integer to be reset so that the numbers don&rsquo;t increment indefinitely.</p>
   </div>
-  
-    
+
+
 
   <div class="method-subsection method-declaration"><code>+ (void)resetID</code></div>
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
+
+
+
+
+
+
+
+
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKParameter.h</code><br />
   </div>
-  
-  
-</div>
-            
-          </div>
-          
 
-          
+
+</div>
+
+          </div>
+
+
+
           <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
-            
+
             <div class="section-method">
   <a name="//api/name/amplitudeFromFullScaleDecibel" title="amplitudeFromFullScaleDecibel"></a>
   <h3 class="subsubtitle method-title">amplitudeFromFullScaleDecibel</h3>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     <p>Helper fucntion to convert logarithmic full scale decibel values to properly scaled amplitude</p>
   </div>
-  
-    
+
+
 
   <div class="method-subsection method-declaration"><code>- (id)amplitudeFromFullScaleDecibel</code></div>
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
+
+
+
+
+
+
+
+
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKParameter.h</code><br />
   </div>
-  
-  
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/dividedBy:" title="dividedBy:"></a>
   <h3 class="subsubtitle method-title">dividedBy:</h3>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     <p>Helper function to create a new AKParameter with the output scaled</p>
   </div>
-  
-    
+
+
 
   <div class="method-subsection method-declaration"><code>- (id)dividedBy:(AKParameter *)<em>divisor</em></code></div>
 
-    
-  
+
+
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-    
+
     <dl class="argument-def parameter-def">
       <dt><em>divisor</em></dt>
       <dd><p>The scaling factor should be divided by</p></dd>
     </dl>
-    
+
   </div>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
+
+
+
+
+
+
+
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKParameter.h</code><br />
   </div>
-  
-  
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithExpression:" title="initWithExpression:"></a>
   <h3 class="subsubtitle method-title">initWithExpression:</h3>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     <p>Allows insertion of math into parameters</p>
   </div>
-  
-    
+
+
 
   <div class="method-subsection method-declaration"><code>- (instancetype)initWithExpression:(NSString *)<em>expression</em></code></div>
 
-    
-  
+
+
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-    
+
     <dl class="argument-def parameter-def">
       <dt><em>expression</em></dt>
       <dd><p>A valid csound mathematical expression within an NSString.</p></dd>
     </dl>
-    
+
   </div>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
+
+
+
+
+
+
+
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKParameter.h</code><br />
   </div>
-  
-  
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/inverse" title="inverse"></a>
   <h3 class="subsubtitle method-title">inverse</h3>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     <p>Helper function to return one-over-this-parameter</p>
   </div>
-  
-    
+
+
 
   <div class="method-subsection method-declaration"><code>- (id)inverse</code></div>
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
+
+
+
+
+
+
+
+
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKParameter.h</code><br />
   </div>
-  
-  
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/operationName" title="operationName"></a>
   <h3 class="subsubtitle method-title">operationName</h3>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     <p>The name of the class with the AK prefix.</p>
   </div>
-  
-    
+
+
 
   <div class="method-subsection method-declaration"><code>- (NSString *)operationName</code></div>
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
+
+
+
+
+
+
+
+
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKParameter+Operation.h</code><br />
   </div>
-  
-  
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/plus:" title="plus:"></a>
   <h3 class="subsubtitle method-title">plus:</h3>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     <p>Helper function to create a new AKParameter combined with the original</p>
   </div>
-  
-    
+
+
 
   <div class="method-subsection method-declaration"><code>- (id)plus:(AKParameter *)<em>additionalParameter</em></code></div>
 
-    
-  
+
+
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-    
+
     <dl class="argument-def parameter-def">
       <dt><em>additionalParameter</em></dt>
       <dd><p>The additional parameter (should be of the same type)</p></dd>
     </dl>
-    
+
   </div>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
+
+
+
+
+
+
+
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKParameter.h</code><br />
   </div>
-  
-  
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/scaledBy:" title="scaledBy:"></a>
   <h3 class="subsubtitle method-title">scaledBy:</h3>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     <p>Helper function to create a new AKParameter with the output scaled by another parameter</p>
   </div>
-  
-    
+
+
 
   <div class="method-subsection method-declaration"><code>- (id)scaledBy:(AKParameter *)<em>scalingFactor</em></code></div>
 
-    
-  
+
+
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-    
+
     <dl class="argument-def parameter-def">
       <dt><em>scalingFactor</em></dt>
       <dd><p>The scaling factor should be multiplied by</p></dd>
     </dl>
-    
+
   </div>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
+
+
+
+
+
+
+
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKParameter.h</code><br />
   </div>
-  
-  
+
+
 </div>
-            
+
           </div>
-          
-          
+
+
         </div>
       </div>

@@ -33,7 +33,7 @@ fileTable = [[AKSoundFileTable alloc] initWithFilename:file
 
 
 <p>
-Then, we apply a Hamming window, and set the base frequency to be the frequency of the original source file.
+Then, we apply a Hamming window, and set the base frequency to be the average frequency of the original source file.
 </p>
 
 {% highlight objective-c %}
@@ -43,7 +43,8 @@ hamming = [[AKWindowsTable alloc] initWithType:kWindowHanning
 [self addFTable:hamming];
 
 AKConstant *baseFrequency;
-baseFrequency = [AKConstant parameterWithFormat:@"44100 / %@", [fileTable length]];
+NSString *frequencyMathString = [NSString stringWithFormat:@"44100 / %@", [fileTable length]];
+baseFrequency = [AKConstant parameterWithString:frequencyMathString];
 {% endhighlight %}
 
 
