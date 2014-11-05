@@ -14,12 +14,14 @@ connect (microphone)
 
 let fsig1 = AKFSignalFromMonoAudio(
     audioSource: microphone,
-    fftSize: AKConstant(int: 2048),
-    overlap: AKConstant(int: 256),
+    fftSize: 2048.ak,
+    overlap: 256.ak,
     windowType: kVonHannWindow,
-    windowFilterSize: AKConstant(int:2048))
+    windowFilterSize: 2048.ak)
 connect(fsig1)
 {% endhighlight %}
+
+<p>Notice that float and integers can't be directly used, they need to be converted into AudioKit constant parameters, which is simple done by append <code>.ak</code> to the end of the number.  This analagous to the Objective-C function <code>akp()</code>.</p>
 
 
 <p>
@@ -29,14 +31,14 @@ The input signal is then altered with two instances of "AKScaledFSignal", which 
 {% highlight ruby %}
 AKScaledFSignal *fsig2;
 let fsig2 = AKScaledFSignal(input: fsig1,
-    frequencyRatio: AKConstant(int:2),
+    frequencyRatio: 2.ak,
     formantRetainMethod: kFormantRetainMethodLifteredCepstrum,
     amplitudeRatio: nil,
     cepstrumCoefficients: nil)
 connect(fsig2)
 
 let fsig3 = AKScaledFSignal(input: fsig1,
-    frequencyRatio: AKConstant(int:2),
+    frequencyRatio: 2.ak,
     formantRetainMethod: kFormantRetainMethodLifteredCepstrum,
     amplitudeRatio: nil,
     cepstrumCoefficients: nil)
