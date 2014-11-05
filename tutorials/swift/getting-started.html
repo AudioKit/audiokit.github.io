@@ -25,7 +25,7 @@ Now we can import Audio Kit into our Swift project. Navigate to your AudioKit re
 </p>
 
 <p>
-After you do this, you’ll see a screen that will ask you to choose some options for adding the files.
+After you do this, you’ll see a screen that will ask you to choose some options for adding the files. If you're just experiementing with Audio Kit for now, you can leave "Copy items if needed" unchecked. If you're making an app that will be sold on the App Store, then you'll want to make sure "Copy items if needed" is checked.
 </p>
 
 <p>
@@ -43,6 +43,24 @@ Then, click Finish.
 <p>
 <img src=/images/frameworkProjectLocationSwift.png>
 </p>
+
+
+<p>
+The last thing we need to do is delete the libraries that we won't be using for this project. Open up the AudioKit folder, you'll see a folder that says "Libraries" as shown below.
+</p>
+
+<p>
+<img src=/images/libraries.png>
+</p>
+
+<p>
+Since we're making an iOS project that uses Swift, we need to delete the iOS and OSX folders. Make sure you click "Delete references", and not "Delete items". When you're finished, your library folder will look like the one shown below:
+</p>
+
+<p>
+<img src=/images/libraries-Swift.png>
+</p>
+
 
 <p>
 There's one additional step we need to make in order to use Audio Kit in our Swift project. One of the great things about Swift is that we're abile to easily use Objective-C code in Swift projects. In order for Audio Kit to be exposed to our Swift project, we need to make a Bridging-Header file.
