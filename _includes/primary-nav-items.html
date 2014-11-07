@@ -1,4 +1,7 @@
 <ul>
+  <li class="{% if page.url contains '/gallery/' %}current{% endif %}">
+    <a href="/gallery/">Gallery</a>
+  </li>
   <li class="{% if page.url contains '/examples/' %}current{% endif %}">
     <a href="/examples/">Examples</a>
   </li>
