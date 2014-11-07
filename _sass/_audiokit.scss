@@ -5,11 +5,18 @@ $brand-color: $brown;
 
 /* AK */
 
-img.mobile-movie {
+img.mobile-iphone-movie {
   width: 90%;
-  max-width: 255px;
+  max-width: 302px;
   text-align: center;
-  border: 1px solid black;
+  border: 0;
+}
+
+img.mobile-macbook-movie {
+  width: 90%;
+  max-width:302px;
+  text-align: center;
+  border: 0;
 }
 
 .audioKit {
