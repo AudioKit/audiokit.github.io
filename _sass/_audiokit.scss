@@ -62,6 +62,13 @@ img.homepage {
 .iphoneShadow {
 }
 
+iframe.gallery-movie {
+  border: 1px solid black;
+    -webkit-box-shadow: 0 4px 20px rgba(0,0,0,.4);
+  -moz-box-shadow: 0 4px 20px rgba(0,0,0,.4);
+  box-shadow: 0 4px 20px rgba(0,0,0,.4);
+}
+
 .cd-mobile.iphoneMinimal {
   border-color: #FFF;
   background-color: #FFF;
