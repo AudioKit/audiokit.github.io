@@ -1,0 +1,50 @@
+---
+title: Getting Started with Audio Kit on OSX
+header: Getting Started on OSX
+permalink: /tutorials/osx/getting-started/
+layout: tutorials
+---
+
+
+<p>
+Setting up an OSX application to use Audio Kit is not as easy as it is for iOS, but still not too hard. After you’ve created a new project in Xcode, navigate to your AudioKit repository. Then, drag the folder that says “AudioKit” into your project.
+</p>
+
+<p>
+<img src=/images/frameworkLocation.png>
+</p>
+
+<p>
+After you do this, you’ll see a screen that will ask you to choose some options for adding the files. If you're just experiementing with Audio Kit for now, you can leave "Copy items if needed" unchecked. If you're making an app that will be sold on the App Store, then you'll want to make sure "Copy items if needed" is checked.
+</p>
+
+<p>
+<img src=/images/addingFramework.png>
+</p>
+
+<p>
+Then, click Finish.
+</p>
+
+<p>
+After you’ve finished, you’ll see a folder on the left side of Xcode with AudioKit.
+</p>
+
+<p>
+<img src=/images/frameworkProjectLocation.png>
+</p>
+
+<p>
+The next thing we need to do is delete the libraries that we won't be using for this project. Open up the AudioKit folder, you'll see a folder that says "Libraries" as shown below.
+</p>
+
+<p>
+<img src=/images/libraries.png>
+</p>
+
+<p>
+Since we're making an OSX project that uses Objective-C, we will not need the Swift or iOS folders.
+</p>
+
+<p>
+Next, we need to add the necessary frameworks.

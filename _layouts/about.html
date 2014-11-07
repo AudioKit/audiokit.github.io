@@ -8,7 +8,14 @@ section: about
 
       <div class="unit four-fifths">
         <article>
-          <h1>
+          <h1 class="hide-on-mobiles">
+          {% if page.header != '' %}
+            {{ page.header }}
+          {% else %}
+            {{ page.title }}
+          {% endif %}
+          </h1>
+          <h1 class="small show-on-mobiles">
           {% if page.header != '' %}
             {{ page.header }}
           {% else %}

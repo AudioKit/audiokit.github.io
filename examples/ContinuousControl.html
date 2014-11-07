@@ -18,6 +18,12 @@ layout: examples
   </div>
 </div>
 
+<div class="show-on-mobiles">
+<p>
+<a href="https://dl.dropboxusercontent.com/u/31568349/movies/ContinuousControl.m4v"><img src="/images/ContinuousControl.png" class="mobile-movie"></a>
+</p>
+</div>
+
 
 <p>
 This demonstrates both user control and parameter automation. When the user starts the instrument, a frequency-modulation oscillator is turned on. Amplitude and modulation are controlled by the user with UISliders. The modulation index is automated.
@@ -44,7 +50,7 @@ fmOscil = [[AKFMOscillator alloc] initWithFTable:sineTable
 
 <p>The OS X and iOS versions of this example share the exact same AudioKit instrument files but they use different UI elements to hook into the instrument's properties.</p>
 
-<div class="cd-laptop">
+<div class="cd-laptop hide-on-mobiles">
   <div class="cd-top" style="background-color: black;"></div>
   <div class="cd-bottom iphoneShadow"></div>
   <div class="cd-cam"></div>

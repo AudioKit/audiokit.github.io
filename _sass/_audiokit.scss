@@ -5,6 +5,12 @@ $brand-color: $brown;
 
 /* AK */
 
+img.mobile-movie {
+  width: 90%;
+  text-align: center;
+  border: 1px solid black;
+}
+
 .audioKit {
   color: $brand-color;
   -webkit-transition: color .15s ease-in-out;
