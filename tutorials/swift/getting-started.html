@@ -13,7 +13,7 @@ Making an Xcode project using Swift is just as straight-forward as making one in
 </p>
 
 <p>
-<img src=/images/makeSwiftProject.png>
+<img src=/images/makeSwiftProject.png style="width:100%; max-width:254px">
 </p>
 
 <p>
@@ -21,7 +21,7 @@ Now we can import Audio Kit into our Swift project. Navigate to your AudioKit re
 </p>
 
 <p>
-<img src=/images/frameworkLocation.png>
+<img src=/images/frameworkLocation.png style="width:100%; max-width:254px">
 </p>
 
 <p>
@@ -29,7 +29,7 @@ After you do this, you’ll see a screen that will ask you to choose some option
 </p>
 
 <p>
-<img src=/images/addingFrameworkSwift.png>
+<img src=/images/addingFrameworkSwift.png style="width:100%; max-width:731px">
 </p>
 
 <p>
@@ -41,7 +41,7 @@ Then, click Finish.
 
 
 <p>
-<img src=/images/frameworkProjectLocationSwift.png>
+<img src=/images/frameworkProjectLocationSwift.png style="width:100%; max-width:243px">
 </p>
 
 
@@ -50,7 +50,7 @@ The last thing we need to do is delete the libraries that we won't be using for 
 </p>
 
 <p>
-<img src=/images/libraries.png>
+<img src=/images/libraries.png style="width:100%; max-width:254px">
 </p>
 
 <p>
@@ -58,7 +58,7 @@ Since we're making an iOS project that uses Swift, we need to delete the OSX fol
 </p>
 
 <p>
-<img src=/images/libraries-Swift.png>
+<img src=/images/libraries-Swift.png style="width:100%; max-width:256px">
 </p>
 
 
@@ -70,7 +70,7 @@ There's one additional step we need to make in order to use Audio Kit in our Swi
 Make a new file (command-N), and select "Header File". Name the file "SwiftProject-Bridging-Header.h"Make sure you have "SwiftProject" selected under Targets.
 
 <p>
-<img src=/images/bridgingHeader.png>
+<img src=/images/bridgingHeader.png style="width:100%; max-width:423px">
 </p>
 
 <p>There's some default text in the bridging header file (shown below) that you can go ahead and delete that.</p>
@@ -95,33 +95,33 @@ Then, add the following import statements to the bridging header. These will all
 <p>Next, go to your target's build settings. Click on "SwiftProject" under "Targets".</p>
 
 <p>
-<img src=/images/swiftProjectTarget.png>
+<img src=/images/swiftProjectTarget.png style="width:100%; max-width:168px">
 </p>
 
 <p>Navigate to the build settings</p>
 
 <p>
-<img src=/images/buildSettings.png>
+<img src=/images/buildSettings.png style="width:100%; max-width:567px">
 </p>
 
 <p>Search for "briding header" in the search bar. You should see "Objective-C Bridging Header" underneath "Swift Compiler - Code Generation".
 
 <p>
-<img src=/images/objectivecBridgingHeader.png>
+<img src=/images/objectivecBridgingHeader.png style="width:100%; max-width:482px">
 </p>
 
 <p>Double click on the that line. A white box will pop up that will let you enter in some text. Add "SwiftProject-BridgingHeader.h".
 </p>
 
 <p>
-<img src=/images/addingBridgingHeader.png>
+<img src=/images/addingBridgingHeader.png style="width:100%; max-width:345px">
 </p>
 
 <p>
 Hit Enter, and your screen should look like the one below.
 
 <p>
-<img src=/images/finishedBridgingHeaderAddition.png>
+<img src=/images/finishedBridgingHeaderAddition.png style="width:100%; max-width:703px">
 </p>
 
 <p>

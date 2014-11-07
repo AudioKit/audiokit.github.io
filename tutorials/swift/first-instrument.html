@@ -11,7 +11,7 @@ next_section: /tutorials/swift/user-interaction/
 <p>To make an instrument in swift, make a new file (command-n), and click "Swift file" under "Source".</p>
 
 <p>
-<img src=/images/makeNewSwiftFile.png>
+<img src=/images/makeNewSwiftFile.png style="width:100%; max-width:730px">
 </p>
 
 <p>Name your file "Instrument".</p>
@@ -111,13 +111,13 @@ class FMSynth: AKInstrument {
 <p>Now that we've finished making our instrument, we can set up a button to turn it on and off. You can delete "LaunchScreen.xib", we won't be needing it at all for this project. Then, navigate to "Main.storyboard", and drag a  UISwitch onto the canvas. Make sure that the switch’s default state is set to “Off”. This way, our instrument won’t turn on right away until the user turns the switch to “On”.
 </p>
 
-<img src=/images/switchOff.png>
+<img src=/images/switchOff.png style="width:100%; max-width:248px">
 
 <p>
 Next, open up the assistant editor, and make sure it’s set to ViewController.swift. Control-drag from your switch to the view controller file, and create an IBAction named “toggleInstrument”.
 </p>
 
-<img src=/images/toggleInstrument.png>
+<img src=/images/toggleInstrument.png style="width:100%; max-width:307px">
 
 
 {% highlight ruby %}
