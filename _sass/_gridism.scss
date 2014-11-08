@@ -74,6 +74,23 @@
 }
 
 /* Responsive Stuff */
+
+@media screen and (max-width: 1200px) {
+  /* Sometimes, you just want to be different on small screens */
+  .center-on-tablets-and-smaller {
+    text-align: center !important;
+  }
+  .hide-on-tablets-and-smaller {
+    display: none !important;
+  }
+  .show-on-tablets-and-smaller {
+    display: block !important;
+  }
+  a .show-on-mobiles {
+    display: inline !important;
+  }
+}
+
 @media screen and (max-width: 568px) {
   /* Stack anything that isn’t full-width on smaller screens */
   .grid .unit {
@@ -100,6 +117,9 @@
     display: inline !important;
   }
 }
+
+
+
 
 /* Expand the wrap a bit further on larger screens */
 /*@media screen and (min-width: 1180px) {

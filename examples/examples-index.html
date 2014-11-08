@@ -22,7 +22,7 @@ layout: examples
       This example demonstrates user control of modulation and amplitude using sliders and parameter automation of modulation index.
        <a href="/examples/ContinuousControl/"><nobr>more &rarr;</nobr></a>
     </p>
-    <div class="cd-laptop cd-xs cd-center hide-on-mobiles">
+    <div class="cd-laptop cd-xs cd-center hide-on-tablets-and-smaller">
       <div class="cd-top" style="background-color: black;"></div>
       <div class="cd-bottom iphoneShadow"></div>
       <div class="cd-cam"></div>
@@ -30,6 +30,18 @@ layout: examples
       <div class="cd-screen" style="background-color: #f6f6f6">
         <video controls class="cd-fill">
           <source src="https://dl.dropboxusercontent.com/u/31568349/movies/MacContinuousControl.m4v" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <div class="cd-mobile cd-sm cd-center cd-5s-silver iphoneShadow show-on-tablets-and-smaller hide-on-mobiles" style="display:none">
+      <div class="cd-cam"></div>
+      <div class="cd-ear"></div>
+      <div class="cd-home"></div>
+      <div class="cd-screen">
+        <video controls class="cd-fill">
+          <source src="https://dl.dropboxusercontent.com/u/31568349/movies/ContinuousControl.m4v" type="video/mp4">
         Your browser does not support the video tag.
         </video>
       </div>
@@ -44,7 +56,7 @@ layout: examples
     <p style="margin-top: 0;">
       Demonstrates convolving a drum loop with impulses of a dish or a stairwell resulting an interesting reverb effect that can be mixed. <a href="/examples/Convolution/"><nobr>more &rarr;</nobr></a>
     </p>
-    <div class="cd-laptop cd-xs cd-center hide-on-mobiles">
+    <div class="cd-laptop cd-xs cd-center hide-on-tablets-and-smaller">
       <div class="cd-top" style="background-color: black;"></div>
       <div class="cd-bottom iphoneShadow"></div>
       <div class="cd-cam"></div>
@@ -56,18 +68,42 @@ layout: examples
         </video>
       </div>
     </div>
+
+    <div class="cd-mobile cd-sm cd-center cd-5s-silver iphoneShadow show-on-tablets-and-smaller hide-on-mobiles" style="display:none;">
+      <div class="cd-cam"></div>
+      <div class="cd-ear"></div>
+      <div class="cd-home"></div>
+      <div class="cd-screen">
+        <video controls class="cd-fill">
+          <source src="https://dl.dropboxusercontent.com/u/31568349/movies/Convolution.m4v" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
   </div>
 </div>
 
 <div class="grid">
   <div class="unit half">
     <p class="no-margin">
-      <b><a href="/examples/GranularSynthesis/">Granular Synthesis</a> and <a href="/examples/SwiftGranularSynthesis/">Swift Granular Synthesis</a></b>
+      <b><a href="/examples/GranularSynthesis/">Granular Synthesis</a> <!--and <a href="/examples/SwiftGranularSynthesis/">Swift Granular Synthesis</a>--></b>
     </p>
     <p>
       This is a demonstration of granular synthesis with assignable grain duration, density, and maximum frequency deviation. <a href="/examples/GranularSynthesis/"><nobr>more &rarr;</nobr></a>
     </p>
-    <div class="cd-mobile cd-center cd-5s-silver cd-md iphoneShadow hide-on-mobiles" style="margin-bottom: 50px;margin-top: 0;">
+    <div class="cd-mobile cd-center cd-5s-silver cd-md iphoneShadow hide-on-tablets-and-smaller" style="margin-bottom: 50px;margin-top: 0;">
+      <div class="cd-cam"></div>
+      <div class="cd-ear"></div>
+      <div class="cd-home"></div>
+      <div class="cd-screen">
+        <video controls class="cd-fill">
+          <source src="https://dl.dropboxusercontent.com/u/31568349/movies/GranularSynthesis.m4v" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <div class="cd-mobile cd-sm cd-center cd-5s-silver iphoneShadow show-on-tablets-and-smaller hide-on-mobiles" style="margin-bottom: 50px;margin-top: 0;  display:none">
       <div class="cd-cam"></div>
       <div class="cd-ear"></div>
       <div class="cd-home"></div>
@@ -80,10 +116,24 @@ layout: examples
     </div>
   </div>
 
+
+
   <div class="unit half">
     <p class="no-margin"><b><a href="/examples/SongLibraryPlayer/">Song Library Player</a></b></p>
     <p>The example demonstrates enabling an interface to the iOS music library and effect processing of the user's songs.  <a href="/examples/SongLibraryPlayer/"><nobr>more &rarr;</nobr></a></p>
-    <div class="cd-mobile cd-center cd-5s-silver cd-md iphoneShadow hide-on-mobiles" style="margin-bottom: 50px;margin-top: 0;">
+    <div class="cd-mobile cd-center cd-5s-silver cd-md iphoneShadow hide-on-tablets-and-smaller" style="margin-bottom: 50px;margin-top: 0;">
+      <div class="cd-cam"></div>
+      <div class="cd-ear"></div>
+      <div class="cd-home"></div>
+      <div class="cd-screen">
+        <video controls class="cd-fill">
+          <source src="https://dl.dropboxusercontent.com/u/31568349/movies/SongLibraryPlayer.m4v" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <div class="cd-mobile cd-sm cd-center cd-5s-silver iphoneShadow show-on-tablets-and-smaller hide-on-mobiles" style="margin-bottom: 50px;margin-top: 0; display: none;">
       <div class="cd-cam"></div>
       <div class="cd-ear"></div>
       <div class="cd-home"></div>
@@ -140,9 +190,9 @@ A Frequency-Modulation Oscillator is controlleted through gestures along an X/Y 
 <table>
 <thead>
 <th>Example</th>
-<th>iOS (Objective-C)</th>
+<th>iOS (Obj-C)</th>
 <th>iOS (Swift)</th>
-<th>Mac (Objective-C)</th>
+<th>Mac (Obj-C)</th>
 <th>Mac (Swift)</th>
 </tr></thead>
 </tr>
