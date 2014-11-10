@@ -1,6 +1,6 @@
 # Site settings
 title: Audio Kit
-email: audiokit@hearforyourself.com
+email: audiokit@audiokit.io
 description: > #
   Audio Kit, an open-source audio synthesis, processing, and analysis platform.
 url: "http://audiokit.io" # the base hostname & protocol for your site
