@@ -1,0 +1,65 @@
+---
+title: OSX Application Configuration for AudioKit
+header: Configuring OSX Applications
+permalink: /tutorials/osx/configuration/
+layout: tutorials
+---
+
+<p>There is a certain amount of configuration that is required on OSX that is not required to build iOS apps.  The first step is to make sure the application knows where to search for the CsoundLib.framework file included within AudioKit.  This is accomplished in the Build Settins Tab.  In the screenshot below we use the <code>$(SRCROOT)</code> variable to refer to the source code root and move up a few directories to where we have AudioKit installed.  Your path will be different depending on where you've downloaded AudioKit to relative to your project.</p>
+<p>
+<img src=/images/macFrameworks.png style="width:100%; max-width:959px">
+</p>
+
+
+<p>Then on the Build Phases tab, click the "+" button on the upper left of the window</p>
+<p>
+<img src=/images/macBuildPhases1.png style="width:100%; max-width:677px">
+</p>
+
+<p>Choose the "New Copy Files Phase"</p>
+<p>
+<img src=/images/macBuildPhases2.png style="width:100%; max-width:675px">
+</p>
+
+<p>Click the "+" on the bottom left</p>
+<p>
+<img src=/images/macBuildPhases3.png style="width:100%; max-width:678px">
+</p>
+
+<p>Find the framework from the pull-down menu within Libraries/OSX/csound-OSX:</p>
+<p>
+<img src=/images/macBuildPhases4.png style="width:100%; max-width:398px">
+</p>
+
+<p>Change the Destination to "Frameworks" so that your Copy Files section now looks like this screenshot:</p>
+<p>
+<img src=/images/macBuildPhases5.png style="width:100%; max-width:676px">
+</p>
+
+<p>Next, add another build phase by clicking on the "+" in the upper left, but this time choose the "New Run Script Phase":</p>
+<p>
+<img src=/images/macBuildPhases6.png style="width:100%; max-width:677px">
+</p>
+
+<p>Change the Shell to <code>/bin/bash</code> and past in the code:</p>
+{% highlight objective-c %}
+EXECFILE=${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}
+LIBPATH=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}".app/Contents/Frameworks/CsoundLib64.framework/Versions/6.0"
+NEWLIBPATH="@loader_path/../Frameworks/CsoundLib64.framework/Versions/6.0"
+
+# space separated list of libraries
+TARGETS="CsoundLib64"
+for TARGET in ${TARGETS} ; do
+LIBFILE=${LIBPATH}/${TARGET}
+TARGETID=`otool -DX ${LIBPATH}/$TARGET`
+NEWTARGETID=${NEWLIBPATH}/${TARGET}
+install_name_tool -id ${NEWTARGETID} ${LIBFILE}
+install_name_tool -change ${TARGETID} ${NEWTARGETID} ${EXECFILE}
+done
+{% endhighlight %}
+<p>So that your run script phase looks like:</p>
+<p>
+<img src=/images/macBuildPhases7.png style="width:100%; max-width:1121px">
+</p>
+<p>Congratulations, your application should now be set up to include everything it needs to run AudioKit.</p>
+
