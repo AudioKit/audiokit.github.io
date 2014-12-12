@@ -48,24 +48,45 @@ title: AKGuiro
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithDuration:amplitude:">&ndash;&nbsp;initWithDuration:amplitude:</a></code>
-    <span class="tooltip"><p>Instantiates the guiro</p></span>
+    <code><a href="#//api/name/initWithCount:mainResonantFrequency:firstResonantFrequency:">&ndash;&nbsp;initWithCount:mainResonantFrequency:firstResonantFrequency:</a></code>
+    <span class="tooltip"><p>Instantiates the guiro with all values</p></span>
   </span>
   
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
+    <span class="tooltip"><p>Instantiates the guiro with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/audio">+&nbsp;audio</a></code>
+    <span class="tooltip"><p>Instantiates the guiro with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/count">&nbsp;&nbsp;count</a></code>
+    <span class="tooltip"><p>The number of beads/teeth/bells/timbrels/etc. [Default Value: 128]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
   
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/setOptionalCount:">&ndash;&nbsp;setOptionalCount:</a></code>
-    <span class="tooltip"><p>Set an optional count</p></span>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/count">count</a></p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/setOptionalEnergyReturn:">&ndash;&nbsp;setOptionalEnergyReturn:</a></code>
-    <span class="tooltip"><p>Set an optional energy return</p></span>
+    <code><a href="#//api/name/mainResonantFrequency">&nbsp;&nbsp;mainResonantFrequency</a></code>
+    <span class="tooltip"><p>The main resonant frequency. [Default Value: 2500]</p></span>
   </span>
-  
+  <span class="task-item-suffix">property</span>
   
 </li><li>
   <span class="tooltip">
@@ -73,6 +94,13 @@ title: AKGuiro
     <span class="tooltip"><p>Set an optional main resonant frequency</p></span>
   </span>
   
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/firstResonantFrequency">&nbsp;&nbsp;firstResonantFrequency</a></code>
+    <span class="tooltip"><p>The first resonant frequency. [Default Value: 4000]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
   
 </li><li>
   <span class="tooltip">
@@ -90,7 +118,163 @@ title: AKGuiro
 
           
           
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/count" title="count"></a>
+  <h3 class="subsubtitle method-title">count</h3>
 
+  
+  
+  <div class="method-subsection brief-description">
+    <p>The number of beads/teeth/bells/timbrels/etc. [Default Value: 128]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *count</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKGuiro.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/firstResonantFrequency" title="firstResonantFrequency"></a>
+  <h3 class="subsubtitle method-title">firstResonantFrequency</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>The first resonant frequency. [Default Value: 4000]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *firstResonantFrequency</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKGuiro.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/mainResonantFrequency" title="mainResonantFrequency"></a>
+  <h3 class="subsubtitle method-title">mainResonantFrequency</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>The main resonant frequency. [Default Value: 2500]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *mainResonantFrequency</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKGuiro.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/audio" title="audio"></a>
+  <h3 class="subsubtitle method-title">audio</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the guiro with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)audio</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKGuiro.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
           
 
           
@@ -99,18 +283,54 @@ title: AKGuiro
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithDuration:amplitude:" title="initWithDuration:amplitude:"></a>
-  <h3 class="subsubtitle method-title">initWithDuration:amplitude:</h3>
+  <a name="//api/name/init" title="init"></a>
+  <h3 class="subsubtitle method-title">init</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the guiro</p>
+    <p>Instantiates the guiro with default values</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithDuration:(AKConstant *)<em>duration</em> amplitude:(AKControl *)<em>amplitude</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKGuiro.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithCount:mainResonantFrequency:firstResonantFrequency:" title="initWithCount:mainResonantFrequency:firstResonantFrequency:"></a>
+  <h3 class="subsubtitle method-title">initWithCount:mainResonantFrequency:firstResonantFrequency:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the guiro with all values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithCount:(AKConstant *)<em>count</em> mainResonantFrequency:(AKConstant *)<em>mainResonantFrequency</em> firstResonantFrequency:(AKConstant *)<em>firstResonantFrequency</em></code></div>
 
     
   
@@ -118,13 +338,18 @@ title: AKGuiro
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>duration</em></dt>
-      <dd><p>Period of time over which all sound is stopped</p></dd>
+      <dt><em>count</em></dt>
+      <dd><p>The number of beads/teeth/bells/timbrels/etc.</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>Amplitude of output. Since these instruments are stochastic this is only an approximation.</p></dd>
+      <dt><em>mainResonantFrequency</em></dt>
+      <dd><p>The main resonant frequency.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>firstResonantFrequency</em></dt>
+      <dd><p>The first resonant frequency.</p></dd>
     </dl>
     
   </div>
@@ -156,7 +381,7 @@ title: AKGuiro
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional count</p>
+    <p>Set an optional <a href="#//api/name/count">count</a></p>
   </div>
   
     
@@ -170,53 +395,7 @@ title: AKGuiro
     
     <dl class="argument-def parameter-def">
       <dt><em>count</em></dt>
-      <dd><p>The number of beads, teeth, bells, timbrels, etc. The default value is 128.</p></dd>
-    </dl>
-    
-  </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  <div class="method-subsection declared-in-section">
-    <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKGuiro.h</code><br />
-  </div>
-  
-  
-</div>
-            
-            <div class="section-method">
-  <a name="//api/name/setOptionalEnergyReturn:" title="setOptionalEnergyReturn:"></a>
-  <h3 class="subsubtitle method-title">setOptionalEnergyReturn:</h3>
-
-  
-  
-  <div class="method-subsection brief-description">
-    <p>Set an optional energy return</p>
-  </div>
-  
-    
-
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalEnergyReturn:(AKConstant *)<em>energyReturn</em></code></div>
-
-    
-  
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
-    
-    <dl class="argument-def parameter-def">
-      <dt><em>energyReturn</em></dt>
-      <dd><p>Amount of energy to add back into the system. The value should be in range 0 to 1.</p></dd>
+      <dd><p>The number of beads/teeth/bells/timbrels/etc. [Default Value: 128]</p></dd>
     </dl>
     
   </div>
@@ -262,7 +441,7 @@ title: AKGuiro
     
     <dl class="argument-def parameter-def">
       <dt><em>firstResonantFrequency</em></dt>
-      <dd><p>The first resonant frequency. The default value is 4000.</p></dd>
+      <dd><p>The first resonant frequency. [Default Value: 4000]</p></dd>
     </dl>
     
   </div>
@@ -308,7 +487,7 @@ title: AKGuiro
     
     <dl class="argument-def parameter-def">
       <dt><em>mainResonantFrequency</em></dt>
-      <dd><p>The main resonant frequency. The default value is 2500.</p></dd>
+      <dd><p>The main resonant frequency. [Default Value: 2500]</p></dd>
     </dl>
     
   </div>

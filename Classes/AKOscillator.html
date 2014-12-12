@@ -30,7 +30,7 @@ title: AKOscillator
             <h2 class="subtitle subtitle-overview">Overview</h2>
             <p>A simple oscillator with linear interpolation.</p>
 
-<p>Reads from the function table sequentially and repeatedly at given frequency. Linear interpolation is applied for table look up from internal phase values.</p>
+<p>Reads from the function table sequentially and repeatedly at given <a href="#//api/name/frequency">frequency</a>. Linear interpolation is applied for table look up from internal <a href="#//api/name/phase">phase</a> values.</p>
           </div>
           
           
@@ -48,15 +48,78 @@ title: AKOscillator
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithFTable:frequency:amplitude:">&ndash;&nbsp;initWithFTable:frequency:amplitude:</a></code>
-    <span class="tooltip"><p>Instantiates the oscillator</p></span>
+    <code><a href="#//api/name/initWithFTable:frequency:amplitude:phase:">&ndash;&nbsp;initWithFTable:frequency:amplitude:phase:</a></code>
+    <span class="tooltip"><p>Instantiates the oscillator with all values</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
+    <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
+    <span class="tooltip"><p>Instantiates the oscillator with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/audio">+&nbsp;audio</a></code>
+    <span class="tooltip"><p>Instantiates the oscillator with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/fTable">&nbsp;&nbsp;fTable</a></code>
+    <span class="tooltip"><p>Requires a wrap-around guard point [Default Value: sine]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalFTable:">&ndash;&nbsp;setOptionalFTable:</a></code>
+    <span class="tooltip"><p>Set an optional f table</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/frequency">&nbsp;&nbsp;frequency</a></code>
+    <span class="tooltip"><p>Frequency in cycles per second [Default Value: 440]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalFrequency:">&ndash;&nbsp;setOptionalFrequency:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/frequency">frequency</a></p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/amplitude">&nbsp;&nbsp;amplitude</a></code>
+    <span class="tooltip"><p>Amplitude of the output [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalAmplitude:">&ndash;&nbsp;setOptionalAmplitude:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/phase">&nbsp;&nbsp;phase</a></code>
+    <span class="tooltip"><p>Initial phase of sampling, expressed as a fraction of a cycle (0 to 1). A negative value will cause phase initialization to be skipped. The default value is 0. [Default Value: 0]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
     <code><a href="#//api/name/setOptionalPhase:">&ndash;&nbsp;setOptionalPhase:</a></code>
-    <span class="tooltip"><p>Set an optional phase</p></span>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/phase">phase</a></p></span>
   </span>
   
   
@@ -69,7 +132,199 @@ title: AKOscillator
 
           
           
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/amplitude" title="amplitude"></a>
+  <h3 class="subsubtitle method-title">amplitude</h3>
 
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Amplitude of the output [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *amplitude</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/fTable" title="fTable"></a>
+  <h3 class="subsubtitle method-title">fTable</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Requires a wrap-around guard point [Default Value: sine]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKFTable *fTable</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/frequency" title="frequency"></a>
+  <h3 class="subsubtitle method-title">frequency</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Frequency in cycles per second [Default Value: 440]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *frequency</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/phase" title="phase"></a>
+  <h3 class="subsubtitle method-title">phase</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Initial phase of sampling, expressed as a fraction of a cycle (0 to 1). A negative value will cause phase initialization to be skipped. The default value is 0. [Default Value: 0]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *phase</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/audio" title="audio"></a>
+  <h3 class="subsubtitle method-title">audio</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the oscillator with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)audio</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
           
 
           
@@ -78,18 +333,54 @@ title: AKOscillator
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithFTable:frequency:amplitude:" title="initWithFTable:frequency:amplitude:"></a>
-  <h3 class="subsubtitle method-title">initWithFTable:frequency:amplitude:</h3>
+  <a name="//api/name/init" title="init"></a>
+  <h3 class="subsubtitle method-title">init</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the oscillator</p>
+    <p>Instantiates the oscillator with default values</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFTable:(AKFTable *)<em>fTable</em> frequency:(AKParameter *)<em>frequency</em> amplitude:(AKParameter *)<em>amplitude</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithFTable:frequency:amplitude:phase:" title="initWithFTable:frequency:amplitude:phase:"></a>
+  <h3 class="subsubtitle method-title">initWithFTable:frequency:amplitude:phase:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the oscillator with all values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFTable:(AKFTable *)<em>fTable</em> frequency:(AKParameter *)<em>frequency</em> amplitude:(AKParameter *)<em>amplitude</em> phase:(AKConstant *)<em>phase</em></code></div>
 
     
   
@@ -109,6 +400,149 @@ title: AKOscillator
     <dl class="argument-def parameter-def">
       <dt><em>amplitude</em></dt>
       <dd><p>Amplitude of the output</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>phase</em></dt>
+      <dd><p>Initial <a href="#//api/name/phase">phase</a> of sampling, expressed as a fraction of a cycle (0 to 1). A negative value will cause <a href="#//api/name/phase">phase</a> initialization to be skipped. The default value is 0.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalAmplitude:" title="setOptionalAmplitude:"></a>
+  <h3 class="subsubtitle method-title">setOptionalAmplitude:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalAmplitude:(AKParameter *)<em>amplitude</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>amplitude</em></dt>
+      <dd><p>Amplitude of the output [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalFTable:" title="setOptionalFTable:"></a>
+  <h3 class="subsubtitle method-title">setOptionalFTable:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional f table</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalFTable:(AKFTable *)<em>fTable</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>fTable</em></dt>
+      <dd><p>Requires a wrap-around guard point [Default Value: sine]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalFrequency:" title="setOptionalFrequency:"></a>
+  <h3 class="subsubtitle method-title">setOptionalFrequency:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional <a href="#//api/name/frequency">frequency</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalFrequency:(AKParameter *)<em>frequency</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>frequency</em></dt>
+      <dd><p>Frequency in cycles per second [Default Value: 440]</p></dd>
     </dl>
     
   </div>
@@ -140,7 +574,7 @@ title: AKOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional phase</p>
+    <p>Set an optional <a href="#//api/name/phase">phase</a></p>
   </div>
   
     
@@ -154,7 +588,7 @@ title: AKOscillator
     
     <dl class="argument-def parameter-def">
       <dt><em>phase</em></dt>
-      <dd><p>Initial phase of sampling, expressed as a fraction of a cycle (0 to 1). A negative value will cause phase initialization to be skipped. The default value is 0.</p></dd>
+      <dd><p>Initial <a href="#//api/name/phase">phase</a> of sampling, expressed as a fraction of a cycle (0 to 1). A negative value will cause <a href="#//api/name/phase">phase</a> initialization to be skipped. The default value is 0. [Default Value: 0]</p></dd>
     </dl>
     
   </div>
