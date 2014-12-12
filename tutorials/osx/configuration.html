@@ -5,11 +5,10 @@ permalink: /tutorials/osx/configuration/
 layout: tutorials
 ---
 
-<p>There is a certain amount of configuration that is required on OSX that is not required to build iOS apps.  The first step is to make sure the application knows where to search for the CsoundLib.framework file included within AudioKit.  This is accomplished in the Build Settins Tab.  In the screenshot below we use the <code>$(SRCROOT)</code> variable to refer to the source code root and move up a few directories to where we have AudioKit installed.  Your path will be different depending on where you've downloaded AudioKit to relative to your project.</p>
+<p>There is a certain amount of configuration that is required on OSX that is not required to build iOS apps.  The first step is to make sure the application knows where to search for the CsoundLib.framework file included within AudioKit.  This is accomplished in the Build Settings Tab.  In the screenshot below we use the <code>$(SRCROOT)</code> variable to refer to the source code root and move up a few directories to where we have AudioKit installed.  Your path will be different depending on where you've downloaded AudioKit to relative to your project.</p>
 <p>
 <img src=/images/macFrameworks.png style="width:100%; max-width:959px">
 </p>
-
 
 <p>Then on the Build Phases tab, click the "+" button on the upper left of the window</p>
 <p>
@@ -41,8 +40,8 @@ layout: tutorials
 <img src=/images/macBuildPhases6.png style="width:100%; max-width:677px">
 </p>
 
-<p>Change the Shell to <code>/bin/bash</code> and past in the code:</p>
-{% highlight objective-c %}
+<p>Change the Shell to <code>/bin/bash</code> and past in this shell script:</p>
+{% highlight bash %}
 EXECFILE=${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}
 LIBPATH=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}".app/Contents/Frameworks/CsoundLib64.framework/Versions/6.0"
 NEWLIBPATH="@loader_path/../Frameworks/CsoundLib64.framework/Versions/6.0"
@@ -61,5 +60,12 @@ done
 <p>
 <img src=/images/macBuildPhases7.png style="width:100%; max-width:1121px">
 </p>
-<p>Congratulations, your application should now be set up to include everything it needs to run AudioKit.</p>
+<p>
+Finally, you'll need to delete any of the library folders we're not using. Since this is a Mac project, delete the iOS folder. Your Libraries folder should now look like the one below:
+</p>
+<img src=/images/OSXlibraryOnly.png style="width:100%; max-width:202px">
+<p>
+Because this is an Objective-C project, you'll also need to delete the Swift folder. If you were making a Swift-based Mac project, you would need to keep that folder in place.
+</p>
 
+<p>Congratulations, your application should now be set up to include everything it needs to run AudioKit.  You should now be able to follow the AudioKit tutorials for either Objective-C or Swift.</p>

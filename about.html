@@ -48,3 +48,51 @@ If you run into any problems, go to GitHub and <a href="https://github.com/audio
 <li><a href="http://stuartyamartino.com/">Stuart Yamartino</a> for his awesome <a href="http://yamartino.github.io/CSSDevices/">CSSDevices</a> library.</li>
 <li>Icons made by <a href="http://www.icons8.com" title="Icons8">Icons8</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> are licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></li>
 </ul>
+
+
+
+
+
+<p>
+It's been about a month since we first released AudioKit, and we've been busy the entire time. AudioKit was featured on HackerNews, and now have over 570 Stargazers on GitHub. AudioKit was also showcased on GitHub's list of music repositories.
+</p>
+
+<p>
+We competed in the first ever AppleWatch Hackathon; winning the <a href="http://www.bizjournals.com/sanjose/news/2014/12/03/in-worlds-first-apple-watch-hackathon-apps.html?ana=twt">award for best design</a>. The judges stated the award was given not only for graphic design, but overall design which includes sound design and application design. We plan on having source code and a tutorial up for you all soon.
+</p>
+
+<p>
+But the biggest news we have is that version 1.1 is now released! Now, it's easier to get started with making a Mac project using AudioKit (link to new tutorial). You can now also create template AudioKit conductor, instrument, and processor files. You can download them here: (zip link).
+</p>
+
+<img src=/images/FileTemplates.png style="width:100%; max-width:725px">
+
+<p>
+We've also made improvements to the Physical Model operations, as well beginning the process of what we call "Sensible Defaults". Previously, when you created an instance of an object, you had to define all the values of the parameters in the Init function; as shown below with an example of AKSleighbells:
+</p>
+
+{% highlight objective-c %}
+AKSleighbells *sleighBells = [[AKSleighbells alloc]initWithIntensity:akp(32)
+                                                       dampingFactor:akp(0.2)
+                                               mainResonantFrequency:akp(2500)
+                                              firstResonantFrequency:akp(5300)
+                                             secondResonantFrequency:akp(6500)];
+[self connect:sleighBells];
+{% endhighlight %}
+
+<p>
+Sensible Defaults let you create an instance of an AudioKit object already initalized with parameter values that will let you hear a sound right away. So, the default AKSleighbells initialization code would look like the listing below:
+</p>
+
+{% highlight objective-c %}
+AKSleighbells *sleighBells = [AKSleighbells audio];
+[self connect:sleighBells];
+{% endhighlight %}
+
+<p>
+Finally, we've set up a <a href="https://groups.google.com/forum/#!forum/audiokit">Google group</a> for AudioKit users. Feel free to post if you have any questions or need some help with anything!
+</p>
+
+<p>
+Happy programming!
+</p>
