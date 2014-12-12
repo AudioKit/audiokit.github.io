@@ -160,7 +160,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         let orchestra = AKOrchestra()
         orchestra.addInstrument(fmOscillator)
-        let manager = AKManager.sharedAKManager()
+        let manager = AKManager.sharedManager()
         manager.runOrchestra(orchestra)
     }
 

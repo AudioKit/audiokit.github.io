@@ -189,7 +189,7 @@ Then, we’ll add the last line of our  viewDidLoad function:
 </p>
 
 {% highlight objective-c %}
-[[AKManager sharedAKManager] runOrchestra:orch];
+[[AKManager sharedManager] runOrchestra:orch];
 {% endhighlight %}
 
 <p>Our completed viewDidLoad function should look like this:</p>
@@ -202,7 +202,7 @@ Then, we’ll add the last line of our  viewDidLoad function:
     AKOrchestra *orch = [[AKOrchestra alloc] init];
     newInstrument = [[NewInstrument alloc] init];
     [orch addInstrument:newInstrument];
-    [[AKManager sharedAKManager] runOrchestra:orch];
+    [[AKManager sharedManager] runOrchestra:orch];
 }
 {% endhighlight %}
 
@@ -255,7 +255,7 @@ This will check to see if an  newInstrument is playing. If it is, the ViewContro
     AKOrchestra *orch = [[AKOrchestra alloc] init];
     newInstrument = [[NewInstrument alloc] init];
     [orch addInstrument:newInstrument];
-    [[AKManager sharedAKManager] runOrchestra:orch];
+    [[AKManager sharedManager] runOrchestra:orch];
 }
 
 - (IBAction)toggleInstrument:(id)sender {
