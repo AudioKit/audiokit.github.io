@@ -41,6 +41,25 @@ asig foscili 1, 440, 1, 1, 1, 0
 <p>With AudioKit 1.1, we’ve started rolling out what we call “Sensible Defaults”. Sensible defaults allow you to create an AudioKit object without having to guess what initial values are appropriate—when you create an object, the parameter values will automatically be set to values that make sense. Of course, just as before, you can specify the value of all parameters in the init function, or use the defaults and change the values using properties.
 </p>
 
+<p>Below is what an instance of AKSleighbells, a physical modelling object; looks like using Sensible Defaults:</p>
+
+{% highlight objective-c %}
+AKSleighbells *sleighBells = [AKSleighbells audio];
+[self connect:sleighBells];
+{% endhighlight %}
+
+<p>Previously, you would have had to set all of these values in the init function as shown below:</p>
+
+{% highlight objective-c %}
+AKSleighbells *sleighBells = [[AKSleighbells alloc]initWithIntensity:akp(32)
+                                                       dampingFactor:akp(0.2)
+                                               mainResonantFrequency:akp(2500)
+                                              firstResonantFrequency:akp(5300)
+                                             secondResonantFrequency:akp(6500)];
+[self connect:sleighBells];
+{% endhighlight %}
+
+
 <a name="easy_installation"></a>
 <h3>Easy Installation</h3>
 <p>We’ve worked to make it very easy to get AudioKit installed in your Xcode project and start using it right-away. To this end, we’ve also made several file templates for both Objective-C and Swift: a conductor template, an instrument template, and a processor template.
@@ -66,17 +85,17 @@ asig foscili 1, 440, 1, 1, 1, 0
 
 <a name="examples"></a>
 <h3>Many Examples</h3>
-<p>We’ve made many examples (link) for Mac and iOS platforms in Objective-C and Swift so that you can get started using AudioKit right away. Additionally, we have many tutorials (link) to help you get started as well.
+<p>We’ve made many <a href="/examples/">examples</a> for Mac and iOS platforms in Objective-C and Swift so that you can get started using AudioKit right away. Additionally, we have many tutorials <a href="/tutorials">tutorials</a> to help you get started as well.
 </p>
 
 <a name="tests"></a>
 <h3>Heavily Tested</h3>
-<p>Finally, we’ve added our previously internal test to the public repository, and will be adding more as we finish them. In the short-term feature, we’re going to be working to expand sensible defaults to every available AudioKit object.
+<p>Finally, we’ve added our previously internal test to the <a href="https://github.com/audiokit/AudioKit">public repository</a>, and will be adding more as we finish them. In the short-term feature, we’re going to be working to expand sensible defaults to every available AudioKit object.
 </p>
 
 <a name="utilities"></a>
 <h3>High-level Utilities</h3>
-<p>AudioKit includes several built-in, high-level utilities. Right now, these are a sampler, pitch-tracker, and a level. We'll be including more soon.
+<p>AudioKit includes several built-in, high-level utilities. Right now, these are a sampler, pitch-tracker, and a level meter. We'll be including more soon.
 </p>
 
 <a name="get_in_touch"></a>
