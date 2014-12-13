@@ -6,12 +6,12 @@ layout: features
 ---
 
 <a name="#open_source"></a>
-<h3>Open Source</h3>
+<h2>Open Source</h2>
 <p>We made AudioKit open-source because we believe that clear, powerful audio development is best developed and maintained through a large, active base of developers and users. If you’re interested in contributing more to the core of AudioKit, please get in touch (audiokit@audiokit.io).
 </p>
 
 <a name="#named_parameters"></a>
-<h3>Named Parameters</h3>
+<h2>Named Parameters</h2>
 <p>
 We value clarity and beauty in code, which is why AudioKit utilizes named parameters. In AudioKit, the creation and initialization of an FM oscillator would look like the code below:
 </p>
@@ -37,7 +37,7 @@ asig foscili 1, 440, 1, 1, 1, 0
 {% endhighlight %}
 
 <a name="sensible_defaults"></a>
-<h3>Sensible Defaults</h3>
+<h2>Sensible Defaults</h2>
 <p>With AudioKit 1.1, we’ve started rolling out what we call “Sensible Defaults”. Sensible defaults allow you to create an AudioKit object without having to guess what initial values are appropriate—when you create an object, the parameter values will automatically be set to values that make sense. Of course, just as before, you can specify the value of all parameters in the init function, or use the defaults and change the values using properties.
 </p>
 
@@ -61,12 +61,12 @@ AKSleighbells *sleighBells = [[AKSleighbells alloc]initWithIntensity:akp(32)
 
 
 <a name="easy_installation"></a>
-<h3>Easy Installation</h3>
+<h2>Easy Installation</h2>
 <p>We’ve worked to make it very easy to get AudioKit installed in your Xcode project and start using it right-away. To this end, we’ve also made several file templates for both Objective-C and Swift: a conductor template, an instrument template, and a processor template.
 </p>
 
 <a name="sequences"></a>
-<h3>Powerful Sequences and Phrases</h3>
+<h2>Powerful Sequences and Phrases</h2>
 <p>One of the most powerful features of AudioKit are sequences and phrases; two different ways to generate events. Sequences let you pass blocks of code as events. For example, you could pass in a block of sensor data that when received will change the parameters of an instrument.
 </p>
 
@@ -74,31 +74,31 @@ AKSleighbells *sleighBells = [[AKSleighbells alloc]initWithIntensity:akp(32)
 </p>
 
 <a name="integration"></a>
-<h3>Integrated Development</h3>
+<h2>Integrated Development</h2>
 <p>High-level audio programming is often done in a complete separate environment from general application programming. With AudioKit, your audio programming is done in the same language that your application is written in. You only need one program and one language for both audio and app logic implementation. 
 </p>
 
 <a name="documentation"></a>
-<h3>Clear Documentation</h3>
-<p>Xcode documentation is also available (link), so you can easily access information about AudioKit classes while you’re still in Xcode. And, since you’re using AudioKit directly within Xcode, you get all the benefits of code-completion.
+<h2>Clear Documentation</h2>
+<p> <a href="/tutorials/xcode">Xcode documentation</a> is also available, so you can easily access information about AudioKit classes while you’re still in Xcode. And, since you’re using AudioKit directly within Xcode, you get all the benefits of code-completion.
 </p>
 
 <a name="examples"></a>
-<h3>Many Examples</h3>
+<h2>Many Examples</h2>
 <p>We’ve made many <a href="/examples/">examples</a> for Mac and iOS platforms in Objective-C and Swift so that you can get started using AudioKit right away. Additionally, we have many tutorials <a href="/tutorials">tutorials</a> to help you get started as well.
 </p>
 
 <a name="tests"></a>
-<h3>Heavily Tested</h3>
+<h2>Heavily Tested</h2>
 <p>Finally, we’ve added our previously internal test to the <a href="https://github.com/audiokit/AudioKit">public repository</a>, and will be adding more as we finish them. In the short-term feature, we’re going to be working to expand sensible defaults to every available AudioKit object.
 </p>
 
 <a name="utilities"></a>
-<h3>High-level Utilities</h3>
+<h2>High-level Utilities</h2>
 <p>AudioKit includes several built-in, high-level utilities. Right now, these are a sampler, pitch-tracker, and a level meter. We'll be including more soon.
 </p>
 
-<a name="get_in_touch"></a>
-<h3>Get in touch!</h3>
-<p>We value your feedback, so please get in touch with any concerns, questions, or comments!
+<a name="community"></a>
+<h2>Community Driven</h2>
+<p>We actively encourage involvement from the open-source community. Our core code, tests, examples, and website are all available for contributions. We also have a <a href="https://groups.google.com/forum/#!forum/audiokit">Google group</a>, and you can follow us on <a href="https://twitter.com/AudioKitMan">Twitter!</a> 
 </p>
