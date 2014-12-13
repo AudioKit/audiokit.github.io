@@ -1,12 +1,12 @@
 ---
-title: Audio Kit Downloads
+title: AudioKit Downloads
 header: Downloads
 permalink: /downloads/
 layout: downloads
 ---
 
 <p>
-Audio Kit is currently available for Mac OSX and iOS, however we are platform agnostic and support the porting of Audio Kit's functionality to any language or device.  In fact, a browser-based version is in development and an Android version is currently being researched. Feel free to <a href="mailto:audiokit@hearforyourself.com">get in touch</a> if you would be interested in contributing!
+AudioKit is currently available for Mac OSX and iOS, however we are platform agnostic and support the porting of AudioKit's functionality to any language or device.  In fact, a browser-based version is in development and an Android version is currently being researched. Feel free to <a href="mailto:audiokit@hearforyourself.com">get in touch</a> if you would be interested in contributing!
 </p>
 
 <h2>Installing Source Code (including example projects)</h2>
@@ -26,4 +26,18 @@ $ git clone git@github.com:audiokit/AudioKit.git
 <li><a href="https://github.com/audiokit/AudioKit/archive/develop.zip">Development Branch (19.5MB zip)</a> - latest and greatest </li>
 </ul>
 </p>
-{% include docset_note.html %}
+
+<h2>Installing Xcode Documentation</h2>
+
+<p>Code completion, pop-ups, and sidebar information are automatically created in Xcode, but if you would like Apple-style API reference documentation, download the docset:</p>
+
+<p><a href="https://www.dropbox.com/s/k357kav4xxf1072/io.audiokit.AudioKit.docset.tar.gz?dl=0"><p>
+<img src=/images/docset.png style="width:100%; max-width:267px">
+</p></a></p>
+
+<p>
+Un-tar it and place it in the Shared Documentation folder:</p>
+
+{% highlight bash %}
+tar -xf ~/Downloads/io.audiokit.AudioKit.docset.tar.gz -C ~/Library/Developer/Shared/Documentation/DocSets/
+{% endhighlight %}

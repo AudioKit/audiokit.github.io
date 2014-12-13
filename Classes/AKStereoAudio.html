@@ -81,6 +81,20 @@ title: AKStereoAudio
   
 </li><li>
   <span class="tooltip">
+    <code><a href="#//api/name/globalParameter">+&nbsp;globalParameter</a></code>
+    <span class="tooltip"><p>Create a parameter available to all instruments in the orchestra.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/globalParameterWithString:">+&nbsp;globalParameterWithString:</a></code>
+    <span class="tooltip"><p>Create a parameter available to all instruments in the orchestra.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
     <code><a href="#//api/name/scaledBy:">&ndash;&nbsp;scaledBy:</a></code>
     <span class="tooltip"><p>Scale both sides of an audio pair equally.</p></span>
   </span>
@@ -178,6 +192,88 @@ title: AKStereoAudio
           <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
             <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/globalParameter" title="globalParameter"></a>
+  <h3 class="subsubtitle method-title">globalParameter</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create a parameter available to all instruments in the orchestra.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)globalParameter</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKStereoAudio.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/globalParameterWithString:" title="globalParameterWithString:"></a>
+  <h3 class="subsubtitle method-title">globalParameterWithString:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create a parameter available to all instruments in the orchestra.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)globalParameterWithString:(NSString *)<em>name</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>name</em></dt>
+      <dd><p>The name of the parameter as it should appear in the output File.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKStereoAudio.h</code><br />
+  </div>
+  
+  
+</div>
             
             <div class="section-method">
   <a name="//api/name/resetID" title="resetID"></a>
@@ -332,7 +428,7 @@ title: AKStereoAudio
   
     
 
-  <div class="method-subsection method-declaration"><code>- (id)scaledBy:(AKParameter *)<em>scalingFactor</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)scaledBy:(AKParameter *)<em>scalingFactor</em></code></div>
 
     
   

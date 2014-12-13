@@ -48,8 +48,92 @@ title: AKPluckedString
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithFrequency:pluckPosition:amplitude:samplePosition:reflectionCoefficient:excitationSignal:">&ndash;&nbsp;initWithFrequency:pluckPosition:amplitude:samplePosition:reflectionCoefficient:excitationSignal:</a></code>
-    <span class="tooltip"><p>Instantiates the plucked string</p></span>
+    <code><a href="#//api/name/initWithExcitationSignal:frequency:pluckPosition:samplePosition:reflectionCoefficient:amplitude:">&ndash;&nbsp;initWithExcitationSignal:frequency:pluckPosition:samplePosition:reflectionCoefficient:amplitude:</a></code>
+    <span class="tooltip"><p>Instantiates the plucked string with all values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithExcitationSignal:">&ndash;&nbsp;initWithExcitationSignal:</a></code>
+    <span class="tooltip"><p>Instantiates the plucked string with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/audioWithExcitationSignal:">+&nbsp;audioWithExcitationSignal:</a></code>
+    <span class="tooltip"><p>Instantiates the plucked string with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/frequency">&nbsp;&nbsp;frequency</a></code>
+    <span class="tooltip"><p>Frequency of the string [Default Value: 440]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalFrequency:">&ndash;&nbsp;setOptionalFrequency:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/frequency">frequency</a></p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/pluckPosition">&nbsp;&nbsp;pluckPosition</a></code>
+    <span class="tooltip"><p>  The point of pluck as a fraction of the way up the string (0 to 1). A pluck point of zero means no initial pluck. [Default Value: 0.01]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalPluckPosition:">&ndash;&nbsp;setOptionalPluckPosition:</a></code>
+    <span class="tooltip"><p>Set an optional pluck position</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/samplePosition">&nbsp;&nbsp;samplePosition</a></code>
+    <span class="tooltip"><p>  Proportion of the way along the string to sample the output. [Default Value: 0.1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalSamplePosition:">&ndash;&nbsp;setOptionalSamplePosition:</a></code>
+    <span class="tooltip"><p>Set an optional sample position</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/reflectionCoefficient">&nbsp;&nbsp;reflectionCoefficient</a></code>
+    <span class="tooltip"><p>The coefficient of reflection, indicating the lossiness and the rate of decay. It must be strictly between 0 and 1 (it will complain about both 0 and 1). [Default Value: 0.1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalReflectionCoefficient:">&ndash;&nbsp;setOptionalReflectionCoefficient:</a></code>
+    <span class="tooltip"><p>Set an optional reflection coefficient</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/amplitude">&nbsp;&nbsp;amplitude</a></code>
+    <span class="tooltip"><p>Amplitude of note. [Default Value: 1.0]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalAmplitude:">&ndash;&nbsp;setOptionalAmplitude:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p></span>
   </span>
   
   
@@ -62,7 +146,245 @@ title: AKPluckedString
 
           
           
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/amplitude" title="amplitude"></a>
+  <h3 class="subsubtitle method-title">amplitude</h3>
 
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Amplitude of note. [Default Value: 1.0]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKControl *amplitude</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPluckedString.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/frequency" title="frequency"></a>
+  <h3 class="subsubtitle method-title">frequency</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Frequency of the string [Default Value: 440]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *frequency</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPluckedString.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/pluckPosition" title="pluckPosition"></a>
+  <h3 class="subsubtitle method-title">pluckPosition</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>  The point of pluck as a fraction of the way up the string (0 to 1). A pluck point of zero means no initial pluck. [Default Value: 0.01]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *pluckPosition</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPluckedString.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/reflectionCoefficient" title="reflectionCoefficient"></a>
+  <h3 class="subsubtitle method-title">reflectionCoefficient</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>The coefficient of reflection, indicating the lossiness and the rate of decay. It must be strictly between 0 and 1 (it will complain about both 0 and 1). [Default Value: 0.1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKControl *reflectionCoefficient</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPluckedString.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/samplePosition" title="samplePosition"></a>
+  <h3 class="subsubtitle method-title">samplePosition</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>  Proportion of the way along the string to sample the output. [Default Value: 0.1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKControl *samplePosition</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPluckedString.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/audioWithExcitationSignal:" title="audioWithExcitationSignal:"></a>
+  <h3 class="subsubtitle method-title">audioWithExcitationSignal:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the plucked string with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)audioWithExcitationSignal:(AKAudio *)<em>excitationSignal</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>excitationSignal</em></dt>
+      <dd><p>A signal which excites the string.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPluckedString.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
           
 
           
@@ -71,23 +393,74 @@ title: AKPluckedString
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithFrequency:pluckPosition:amplitude:samplePosition:reflectionCoefficient:excitationSignal:" title="initWithFrequency:pluckPosition:amplitude:samplePosition:reflectionCoefficient:excitationSignal:"></a>
-  <h3 class="subsubtitle method-title">initWithFrequency:pluckPosition:amplitude:samplePosition:reflectionCoefficient:excitationSignal:</h3>
+  <a name="//api/name/initWithExcitationSignal:" title="initWithExcitationSignal:"></a>
+  <h3 class="subsubtitle method-title">initWithExcitationSignal:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the plucked string</p>
+    <p>Instantiates the plucked string with default values</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFrequency:(AKConstant *)<em>frequency</em> pluckPosition:(AKConstant *)<em>pluckPosition</em> amplitude:(AKControl *)<em>amplitude</em> samplePosition:(AKControl *)<em>samplePosition</em> reflectionCoefficient:(AKControl *)<em>reflectionCoefficient</em> excitationSignal:(AKAudio *)<em>excitationSignal</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithExcitationSignal:(AKAudio *)<em>excitationSignal</em></code></div>
 
     
   
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>excitationSignal</em></dt>
+      <dd><p>A signal which excites the string.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPluckedString.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithExcitationSignal:frequency:pluckPosition:samplePosition:reflectionCoefficient:amplitude:" title="initWithExcitationSignal:frequency:pluckPosition:samplePosition:reflectionCoefficient:amplitude:"></a>
+  <h3 class="subsubtitle method-title">initWithExcitationSignal:frequency:pluckPosition:samplePosition:reflectionCoefficient:amplitude:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the plucked string with all values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithExcitationSignal:(AKAudio *)<em>excitationSignal</em> frequency:(AKConstant *)<em>frequency</em> pluckPosition:(AKConstant *)<em>pluckPosition</em> samplePosition:(AKControl *)<em>samplePosition</em> reflectionCoefficient:(AKControl *)<em>reflectionCoefficient</em> amplitude:(AKControl *)<em>amplitude</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>excitationSignal</em></dt>
+      <dd><p>A signal which excites the string.</p></dd>
+    </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>frequency</em></dt>
@@ -97,11 +470,6 @@ title: AKPluckedString
     <dl class="argument-def parameter-def">
       <dt><em>pluckPosition</em></dt>
       <dd><p>The point of pluck as a fraction of the way up the string (0 to 1). A pluck point of zero means no initial pluck.</p></dd>
-    </dl>
-    
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>Amplitude of note.</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
@@ -115,8 +483,238 @@ title: AKPluckedString
     </dl>
     
     <dl class="argument-def parameter-def">
-      <dt><em>excitationSignal</em></dt>
-      <dd><p>A signal which excites the string.</p></dd>
+      <dt><em>amplitude</em></dt>
+      <dd><p>Amplitude of note.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPluckedString.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalAmplitude:" title="setOptionalAmplitude:"></a>
+  <h3 class="subsubtitle method-title">setOptionalAmplitude:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalAmplitude:(AKControl *)<em>amplitude</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>amplitude</em></dt>
+      <dd><p>Amplitude of note. [Default Value: 1.0]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPluckedString.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalFrequency:" title="setOptionalFrequency:"></a>
+  <h3 class="subsubtitle method-title">setOptionalFrequency:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional <a href="#//api/name/frequency">frequency</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalFrequency:(AKConstant *)<em>frequency</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>frequency</em></dt>
+      <dd><p>Frequency of the string [Default Value: 440]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPluckedString.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalPluckPosition:" title="setOptionalPluckPosition:"></a>
+  <h3 class="subsubtitle method-title">setOptionalPluckPosition:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional pluck position</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalPluckPosition:(AKConstant *)<em>pluckPosition</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>pluckPosition</em></dt>
+      <dd><p>The point of pluck as a fraction of the way up the string (0 to 1). A pluck point of zero means no initial pluck. [Default Value: 0.01]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPluckedString.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalReflectionCoefficient:" title="setOptionalReflectionCoefficient:"></a>
+  <h3 class="subsubtitle method-title">setOptionalReflectionCoefficient:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional reflection coefficient</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalReflectionCoefficient:(AKControl *)<em>reflectionCoefficient</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>reflectionCoefficient</em></dt>
+      <dd><p>The coefficient of reflection, indicating the lossiness and the rate of decay. It must be strictly between 0 and 1 (it will complain about both 0 and 1). [Default Value: 0.1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPluckedString.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalSamplePosition:" title="setOptionalSamplePosition:"></a>
+  <h3 class="subsubtitle method-title">setOptionalSamplePosition:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional sample position</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalSamplePosition:(AKControl *)<em>samplePosition</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>samplePosition</em></dt>
+      <dd><p>Proportion of the way along the string to sample the output. [Default Value: 0.1]</p></dd>
     </dl>
     
   </div>

@@ -49,7 +49,147 @@ title: AKStruckMetalBar
                 <li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithDecayTime:dimensionlessStiffness:highFrequencyLoss:strikePosition:strikeVelocity:strikeWidth:leftBoundaryCondition:rightBoundaryCondition:scanSpeed:">&ndash;&nbsp;initWithDecayTime:dimensionlessStiffness:highFrequencyLoss:strikePosition:strikeVelocity:strikeWidth:leftBoundaryCondition:rightBoundaryCondition:scanSpeed:</a></code>
-    <span class="tooltip"><p>Instantiates the struck metal bar</p></span>
+    <span class="tooltip"><p>Instantiates the struck metal bar with all values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
+    <span class="tooltip"><p>Instantiates the struck metal bar with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/audio">+&nbsp;audio</a></code>
+    <span class="tooltip"><p>Instantiates the struck metal bar with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/decayTime">&nbsp;&nbsp;decayTime</a></code>
+    <span class="tooltip"><p>30 db decay time in seconds. [Default Value: 2.0]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalDecayTime:">&ndash;&nbsp;setOptionalDecayTime:</a></code>
+    <span class="tooltip"><p>Set an optional decay time</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/dimensionlessStiffness">&nbsp;&nbsp;dimensionlessStiffness</a></code>
+    <span class="tooltip"><p>Dimensionless stiffness parameter. If this parameter is negative then the initialization is skipped and the previous state of the bar is continued. [Default Value: 100]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalDimensionlessStiffness:">&ndash;&nbsp;setOptionalDimensionlessStiffness:</a></code>
+    <span class="tooltip"><p>Set an optional dimensionless stiffness</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/highFrequencyLoss">&nbsp;&nbsp;highFrequencyLoss</a></code>
+    <span class="tooltip"><p>High-frequency loss parameter (keep this small). [Default Value: 0.001]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalHighFrequencyLoss:">&ndash;&nbsp;setOptionalHighFrequencyLoss:</a></code>
+    <span class="tooltip"><p>Set an optional high frequency loss</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/strikePosition">&nbsp;&nbsp;strikePosition</a></code>
+    <span class="tooltip"><p>Position along the bar that the strike occurs. [Default Value: 0.2]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalStrikePosition:">&ndash;&nbsp;setOptionalStrikePosition:</a></code>
+    <span class="tooltip"><p>Set an optional strike position</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/strikeVelocity">&nbsp;&nbsp;strikeVelocity</a></code>
+    <span class="tooltip"><p>Normalized strike velocity. [Default Value: 800]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalStrikeVelocity:">&ndash;&nbsp;setOptionalStrikeVelocity:</a></code>
+    <span class="tooltip"><p>Set an optional strike velocity</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/strikeWidth">&nbsp;&nbsp;strikeWidth</a></code>
+    <span class="tooltip"><p>Spatial width of strike. [Default Value: 0.2]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalStrikeWidth:">&ndash;&nbsp;setOptionalStrikeWidth:</a></code>
+    <span class="tooltip"><p>Set an optional strike width</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/leftBoundaryCondition">&nbsp;&nbsp;leftBoundaryCondition</a></code>
+    <span class="tooltip"><p>Boundary condition at left end of bar (1 is clamped; 2 pivoting and 3 free). [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalLeftBoundaryCondition:">&ndash;&nbsp;setOptionalLeftBoundaryCondition:</a></code>
+    <span class="tooltip"><p>Set an optional left boundary condition</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/rightBoundaryCondition">&nbsp;&nbsp;rightBoundaryCondition</a></code>
+    <span class="tooltip"><p>Boundary condition at right end of bar (1 is clamped; 2 pivoting and 3 free). [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalRightBoundaryCondition:">&ndash;&nbsp;setOptionalRightBoundaryCondition:</a></code>
+    <span class="tooltip"><p>Set an optional right boundary condition</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/scanSpeed">&nbsp;&nbsp;scanSpeed</a></code>
+    <span class="tooltip"><p>Speed of scanning the output location. [Default Value: 0.23]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalScanSpeed:">&ndash;&nbsp;setOptionalScanSpeed:</a></code>
+    <span class="tooltip"><p>Set an optional scan speed</p></span>
   </span>
   
   
@@ -62,7 +202,379 @@ title: AKStruckMetalBar
 
           
           
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/decayTime" title="decayTime"></a>
+  <h3 class="subsubtitle method-title">decayTime</h3>
 
+  
+  
+  <div class="method-subsection brief-description">
+    <p>30 db decay time in seconds. [Default Value: 2.0]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *decayTime</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKStruckMetalBar.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/dimensionlessStiffness" title="dimensionlessStiffness"></a>
+  <h3 class="subsubtitle method-title">dimensionlessStiffness</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Dimensionless stiffness parameter. If this parameter is negative then the initialization is skipped and the previous state of the bar is continued. [Default Value: 100]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *dimensionlessStiffness</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKStruckMetalBar.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/highFrequencyLoss" title="highFrequencyLoss"></a>
+  <h3 class="subsubtitle method-title">highFrequencyLoss</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>High-frequency loss parameter (keep this small). [Default Value: 0.001]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *highFrequencyLoss</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKStruckMetalBar.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/leftBoundaryCondition" title="leftBoundaryCondition"></a>
+  <h3 class="subsubtitle method-title">leftBoundaryCondition</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Boundary condition at left end of bar (1 is clamped; 2 pivoting and 3 free). [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKControl *leftBoundaryCondition</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKStruckMetalBar.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/rightBoundaryCondition" title="rightBoundaryCondition"></a>
+  <h3 class="subsubtitle method-title">rightBoundaryCondition</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Boundary condition at right end of bar (1 is clamped; 2 pivoting and 3 free). [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKControl *rightBoundaryCondition</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKStruckMetalBar.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/scanSpeed" title="scanSpeed"></a>
+  <h3 class="subsubtitle method-title">scanSpeed</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Speed of scanning the output location. [Default Value: 0.23]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKControl *scanSpeed</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKStruckMetalBar.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/strikePosition" title="strikePosition"></a>
+  <h3 class="subsubtitle method-title">strikePosition</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Position along the bar that the strike occurs. [Default Value: 0.2]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *strikePosition</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKStruckMetalBar.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/strikeVelocity" title="strikeVelocity"></a>
+  <h3 class="subsubtitle method-title">strikeVelocity</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Normalized strike velocity. [Default Value: 800]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *strikeVelocity</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKStruckMetalBar.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/strikeWidth" title="strikeWidth"></a>
+  <h3 class="subsubtitle method-title">strikeWidth</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Spatial width of strike. [Default Value: 0.2]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *strikeWidth</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKStruckMetalBar.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/audio" title="audio"></a>
+  <h3 class="subsubtitle method-title">audio</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the struck metal bar with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)audio</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKStruckMetalBar.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
           
 
           
@@ -71,13 +583,49 @@ title: AKStruckMetalBar
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
+  <a name="//api/name/init" title="init"></a>
+  <h3 class="subsubtitle method-title">init</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the struck metal bar with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKStruckMetalBar.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
   <a name="//api/name/initWithDecayTime:dimensionlessStiffness:highFrequencyLoss:strikePosition:strikeVelocity:strikeWidth:leftBoundaryCondition:rightBoundaryCondition:scanSpeed:" title="initWithDecayTime:dimensionlessStiffness:highFrequencyLoss:strikePosition:strikeVelocity:strikeWidth:leftBoundaryCondition:rightBoundaryCondition:scanSpeed:"></a>
   <h3 class="subsubtitle method-title">initWithDecayTime:dimensionlessStiffness:highFrequencyLoss:strikePosition:strikeVelocity:strikeWidth:leftBoundaryCondition:rightBoundaryCondition:scanSpeed:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the struck metal bar</p>
+    <p>Instantiates the struck metal bar with all values</p>
   </div>
   
     
@@ -101,7 +649,7 @@ title: AKStruckMetalBar
     
     <dl class="argument-def parameter-def">
       <dt><em>highFrequencyLoss</em></dt>
-      <dd><p>high-frequency loss parameter (keep this small).</p></dd>
+      <dd><p>High-frequency loss parameter (keep this small).</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
@@ -132,6 +680,420 @@ title: AKStruckMetalBar
     <dl class="argument-def parameter-def">
       <dt><em>scanSpeed</em></dt>
       <dd><p>Speed of scanning the output location.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKStruckMetalBar.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalDecayTime:" title="setOptionalDecayTime:"></a>
+  <h3 class="subsubtitle method-title">setOptionalDecayTime:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional decay time</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalDecayTime:(AKConstant *)<em>decayTime</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>decayTime</em></dt>
+      <dd><p>30 db decay time in seconds. [Default Value: 2.0]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKStruckMetalBar.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalDimensionlessStiffness:" title="setOptionalDimensionlessStiffness:"></a>
+  <h3 class="subsubtitle method-title">setOptionalDimensionlessStiffness:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional dimensionless stiffness</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalDimensionlessStiffness:(AKConstant *)<em>dimensionlessStiffness</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>dimensionlessStiffness</em></dt>
+      <dd><p>Dimensionless stiffness parameter. If this parameter is negative then the initialization is skipped and the previous state of the bar is continued. [Default Value: 100]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKStruckMetalBar.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalHighFrequencyLoss:" title="setOptionalHighFrequencyLoss:"></a>
+  <h3 class="subsubtitle method-title">setOptionalHighFrequencyLoss:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional high frequency loss</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalHighFrequencyLoss:(AKConstant *)<em>highFrequencyLoss</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>highFrequencyLoss</em></dt>
+      <dd><p>High-frequency loss parameter (keep this small). [Default Value: 0.001]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKStruckMetalBar.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalLeftBoundaryCondition:" title="setOptionalLeftBoundaryCondition:"></a>
+  <h3 class="subsubtitle method-title">setOptionalLeftBoundaryCondition:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional left boundary condition</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalLeftBoundaryCondition:(AKControl *)<em>leftBoundaryCondition</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>leftBoundaryCondition</em></dt>
+      <dd><p>Boundary condition at left end of bar (1 is clamped; 2 pivoting and 3 free). [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKStruckMetalBar.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalRightBoundaryCondition:" title="setOptionalRightBoundaryCondition:"></a>
+  <h3 class="subsubtitle method-title">setOptionalRightBoundaryCondition:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional right boundary condition</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalRightBoundaryCondition:(AKControl *)<em>rightBoundaryCondition</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>rightBoundaryCondition</em></dt>
+      <dd><p>Boundary condition at right end of bar (1 is clamped; 2 pivoting and 3 free). [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKStruckMetalBar.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalScanSpeed:" title="setOptionalScanSpeed:"></a>
+  <h3 class="subsubtitle method-title">setOptionalScanSpeed:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional scan speed</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalScanSpeed:(AKControl *)<em>scanSpeed</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>scanSpeed</em></dt>
+      <dd><p>Speed of scanning the output location. [Default Value: 0.23]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKStruckMetalBar.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalStrikePosition:" title="setOptionalStrikePosition:"></a>
+  <h3 class="subsubtitle method-title">setOptionalStrikePosition:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional strike position</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalStrikePosition:(AKConstant *)<em>strikePosition</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>strikePosition</em></dt>
+      <dd><p>Position along the bar that the strike occurs. [Default Value: 0.2]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKStruckMetalBar.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalStrikeVelocity:" title="setOptionalStrikeVelocity:"></a>
+  <h3 class="subsubtitle method-title">setOptionalStrikeVelocity:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional strike velocity</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalStrikeVelocity:(AKConstant *)<em>strikeVelocity</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>strikeVelocity</em></dt>
+      <dd><p>Normalized strike velocity. [Default Value: 800]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKStruckMetalBar.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalStrikeWidth:" title="setOptionalStrikeWidth:"></a>
+  <h3 class="subsubtitle method-title">setOptionalStrikeWidth:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional strike width</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalStrikeWidth:(AKConstant *)<em>strikeWidth</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>strikeWidth</em></dt>
+      <dd><p>Spatial width of strike. [Default Value: 0.2]</p></dd>
     </dl>
     
   </div>

@@ -11,7 +11,7 @@ title: AKManager
           </div>
         </div>
         <div id="container">
-
+          
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
@@ -21,27 +21,27 @@ title: AKManager
   <td class="specification-value">AKManager.h<br />AKManager.m</td>
 </tr>
             </tbody></table></div>
+          
 
-
-
-
+          
+          
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
             <p>The AKManager is a singleton class available to all controllers that need access to audio.</p>
           </div>
+          
+          
 
-
-
-
-
+          
+          
           <div class="section section-tasks">
             <a title="Tasks" name="tasks"></a>
             <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
 
-
-
-
+            
+            
 
             <ul class="task-list">
                 <li>
@@ -50,698 +50,870 @@ title: AKManager
     <span class="tooltip"><p>Determines whether or not AudioKit is available to send events to.</p></span>
   </span>
   <span class="task-item-suffix">property</span>
-
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/isLogging">&nbsp;&nbsp;isLogging</a></code>
+    <span class="tooltip"><p>Determines whether or not to log</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/orchestra">&nbsp;&nbsp;orchestra</a></code>
+    <span class="tooltip"><p>The default orchestra</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/midi">&nbsp;&nbsp;midi</a></code>
     <span class="tooltip"><p>Common midi property shared across the application</p></span>
   </span>
   <span class="task-item-suffix">property</span>
-
+  
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/sharedAKManager">+&nbsp;sharedAKManager</a></code>
+    <code><a href="#//api/name/sharedManager">+&nbsp;sharedManager</a></code>
     <span class="tooltip"><p>the shared instance of AKManager</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/runOrchestra:">&ndash;&nbsp;runOrchestra:</a></code>
-    <span class="tooltip"><p>Run AudioKit using an AKOrchestra</p></span>
+    <code><a href="#//api/name/runOrchestra">&ndash;&nbsp;runOrchestra</a></code>
+    <span class="tooltip"><p>Run AudioKit using an <a href="../Classes/AKOrchestra.html">AKOrchestra</a></p></span>
   </span>
-
-
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/runOrchestraForDuration:">&ndash;&nbsp;runOrchestraForDuration:</a></code>
+    <span class="tooltip"><p>Run AudioKit using an <a href="../Classes/AKOrchestra.html">AKOrchestra</a> for a specific amount of time</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/runTestOrchestra">&ndash;&nbsp;runTestOrchestra</a></code>
+    <span class="tooltip"><p>Test AudioKit by playing the first instrument for ten seconds</p></span>
+  </span>
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/stop">&ndash;&nbsp;stop</a></code>
     <span class="tooltip"><p>Stop AudioKit from making any more sound.</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/triggerEvent:">&ndash;&nbsp;triggerEvent:</a></code>
     <span class="tooltip"><p>Triggers an <a href="../Classes/AKEvent.html">AKEvent</a></p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/stopInstrument:">&ndash;&nbsp;stopInstrument:</a></code>
     <span class="tooltip"><p>Stop all notes of an instrument</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/stopNote:">&ndash;&nbsp;stopNote:</a></code>
     <span class="tooltip"><p>Stop playback of a given note</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/updateNote:">&ndash;&nbsp;updateNote:</a></code>
     <span class="tooltip"><p>Update playback of a given note</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/stringFromFile:">+&nbsp;stringFromFile:</a></code>
     <span class="tooltip"><p>Helper function to get the string out of a file.</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/enableAudioInput">&ndash;&nbsp;enableAudioInput</a></code>
     <span class="tooltip"><p>Enable Audio Input</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/disableAudioInput">&ndash;&nbsp;disableAudioInput</a></code>
     <span class="tooltip"><p>Disable AudioInput</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/enableMidi">&ndash;&nbsp;enableMidi</a></code>
     <span class="tooltip"><p>Enable MIDI</p></span>
   </span>
-
-
+  
+  
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/disableMidi">&ndash;&nbsp;disableMidi</a></code>
     <span class="tooltip"><p>Disable MIDI</p></span>
   </span>
-
-
+  
+  
 </li>
             </ul>
-
+            
           </div>
+          
+          
 
-
-
-
-
+          
+          
           <div class="section section-methods">
             <a title="Properties" name="properties"></a>
             <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/isLogging" title="isLogging"></a>
+  <h3 class="subsubtitle method-title">isLogging</h3>
 
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Determines whether or not to log</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property BOOL isLogging</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKManager.h</code><br />
+  </div>
+  
+  
+</div>
+            
             <div class="section-method">
   <a name="//api/name/isRunning" title="isRunning"></a>
   <h3 class="subsubtitle method-title">isRunning</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Determines whether or not AudioKit is available to send events to.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>@property (readonly) BOOL isRunning</code></div>
 
+    
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKManager.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/midi" title="midi"></a>
   <h3 class="subsubtitle method-title">midi</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Common midi property shared across the application</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>@property (readonly) AKMidi *midi</code></div>
 
+    
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKManager.h</code><br />
   </div>
-
-
+  
+  
 </div>
+            
+            <div class="section-method">
+  <a name="//api/name/orchestra" title="orchestra"></a>
+  <h3 class="subsubtitle method-title">orchestra</h3>
 
+  
+  
+  <div class="method-subsection brief-description">
+    <p>The default orchestra</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKOrchestra *orchestra</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKManager.h</code><br />
+  </div>
+  
+  
+</div>
+            
           </div>
+          
 
-
-
+          
           <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
             <h2 class="subtitle subtitle-methods">Class Methods</h2>
-
+            
             <div class="section-method">
-  <a name="//api/name/sharedAKManager" title="sharedAKManager"></a>
-  <h3 class="subsubtitle method-title">sharedAKManager</h3>
+  <a name="//api/name/sharedManager" title="sharedManager"></a>
+  <h3 class="subsubtitle method-title">sharedManager</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>the shared instance of AKManager</p>
   </div>
+  
+    
 
+  <div class="method-subsection method-declaration"><code>+ (AKManager *)sharedManager</code></div>
 
+    
+  
 
-  <div class="method-subsection method-declaration"><code>+ (AKManager *)sharedAKManager</code></div>
-
-
-
-
-
+  
   <div class="method-subsection return">
     <h4 class="method-subtitle parameter-title">Return Value</h4>
     <p>the shared instance of AKManager</p>
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKManager.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/stringFromFile:" title="stringFromFile:"></a>
   <h3 class="subsubtitle method-title">stringFromFile:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Helper function to get the string out of a file.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>+ (NSString *)stringFromFile:(NSString *)<em>filename</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>filename</em></dt>
       <dd><p>Full path of file on disk</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKManager.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
           </div>
+          
 
-
-
+          
           <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
-
+            
             <div class="section-method">
   <a name="//api/name/disableAudioInput" title="disableAudioInput"></a>
   <h3 class="subsubtitle method-title">disableAudioInput</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Disable AudioInput</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (void)disableAudioInput</code></div>
 
+    
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKManager.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/disableMidi" title="disableMidi"></a>
   <h3 class="subsubtitle method-title">disableMidi</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Disable MIDI</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (void)disableMidi</code></div>
 
+    
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKManager.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/enableAudioInput" title="enableAudioInput"></a>
   <h3 class="subsubtitle method-title">enableAudioInput</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Enable Audio Input</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (void)enableAudioInput</code></div>
 
+    
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKManager.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/enableMidi" title="enableMidi"></a>
   <h3 class="subsubtitle method-title">enableMidi</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Enable MIDI</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (void)enableMidi</code></div>
 
+    
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKManager.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
-  <a name="//api/name/runOrchestra:" title="runOrchestra:"></a>
-  <h3 class="subsubtitle method-title">runOrchestra:</h3>
+  <a name="//api/name/runOrchestra" title="runOrchestra"></a>
+  <h3 class="subsubtitle method-title">runOrchestra</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
-    <p>Run AudioKit using an AKOrechestra</p>
+    <p>Run AudioKit using an <a href="../Classes/AKOrchestra.html">AKOrchestra</a></p>
   </div>
+  
+    
 
+  <div class="method-subsection method-declaration"><code>- (void)runOrchestra</code></div>
 
+    
+  
 
-  <div class="method-subsection method-declaration"><code>- (void)runOrchestra:(AKOrchestra *)<em>orchestra</em></code></div>
+  
 
+  
 
+  
 
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKManager.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/runOrchestraForDuration:" title="runOrchestraForDuration:"></a>
+  <h3 class="subsubtitle method-title">runOrchestraForDuration:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Run AudioKit using an <a href="../Classes/AKOrchestra.html">AKOrchestra</a> for a specific amount of time</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)runOrchestraForDuration:(int)<em>duration</em></code></div>
+
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
-      <dt><em>orchestra</em></dt>
-      <dd><p>The <a href="../Classes/AKOrchestra.html">AKOrchestra</a> that will be started.</p></dd>
+      <dt><em>duration</em></dt>
+      <dd><p>Time for the <a href="#//api/name/orchestra">orchestra</a> to play in seconds</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKManager.h</code><br />
   </div>
-
-
+  
+  
 </div>
+            
+            <div class="section-method">
+  <a name="//api/name/runTestOrchestra" title="runTestOrchestra"></a>
+  <h3 class="subsubtitle method-title">runTestOrchestra</h3>
 
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Test AudioKit by playing the first instrument for ten seconds</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)runTestOrchestra</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKManager.h</code><br />
+  </div>
+  
+  
+</div>
+            
             <div class="section-method">
   <a name="//api/name/stop" title="stop"></a>
   <h3 class="subsubtitle method-title">stop</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Stop AudioKit from making any more sound.</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (void)stop</code></div>
 
+    
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKManager.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/stopInstrument:" title="stopInstrument:"></a>
   <h3 class="subsubtitle method-title">stopInstrument:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Stop all notes of an instrument</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (void)stopInstrument:(AKInstrument *)<em>instrument</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>instrument</em></dt>
       <dd><p>The instrument that needs to be turned off.</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKManager.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/stopNote:" title="stopNote:"></a>
   <h3 class="subsubtitle method-title">stopNote:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Stop playback of a given note</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (void)stopNote:(AKNote *)<em>note</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>note</em></dt>
       <dd><p>Note to <a href="#//api/name/stop">stop</a></p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKManager.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/triggerEvent:" title="triggerEvent:"></a>
   <h3 class="subsubtitle method-title">triggerEvent:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Triggers an <a href="../Classes/AKEvent.html">AKEvent</a></p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (void)triggerEvent:(AKEvent *)<em>event</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>event</em></dt>
       <dd><p><a href="../Classes/AKEvent.html">AKEvent</a> to be triggered</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKManager.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
             <div class="section-method">
   <a name="//api/name/updateNote:" title="updateNote:"></a>
   <h3 class="subsubtitle method-title">updateNote:</h3>
 
-
-
+  
+  
   <div class="method-subsection brief-description">
     <p>Update playback of a given note</p>
   </div>
-
-
+  
+    
 
   <div class="method-subsection method-declaration"><code>- (void)updateNote:(AKNote *)<em>note</em></code></div>
 
-
-
+    
+  
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-
+    
     <dl class="argument-def parameter-def">
       <dt><em>note</em></dt>
       <dd><p>Note to update</p></dd>
     </dl>
-
+    
   </div>
+  
 
+  
 
+  
 
+  
 
+  
 
+  
 
-
-
-
-
-
-
-
+  
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
     <code class="declared-in-ref">AKManager.h</code><br />
   </div>
-
-
+  
+  
 </div>
-
+            
           </div>
-
-
+          
+          
         </div>
       </div>

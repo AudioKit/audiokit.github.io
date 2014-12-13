@@ -153,7 +153,7 @@ instrument blocks.</p></span>
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/resetParam:">&ndash;&nbsp;resetParam:</a></code>
+    <code><a href="#//api/name/resetParameter:">&ndash;&nbsp;resetParameter:</a></code>
     <span class="tooltip"><p>Shortcut for setting a parameter&rsquo;s value to zero.</p></span>
   </span>
   
@@ -185,6 +185,20 @@ it sends the event to the appropriate orchestra.</p></span>
   <span class="tooltip">
     <code><a href="#//api/name/playNote:">&ndash;&nbsp;playNote:</a></code>
     <span class="tooltip"><p>Play the given note</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/playNote:afterDelay:">&ndash;&nbsp;playNote:afterDelay:</a></code>
+    <span class="tooltip"><p>Play the given note after a delay</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/playPhrase:">&ndash;&nbsp;playPhrase:</a></code>
+    <span class="tooltip"><p>Play the given note phrase</p></span>
   </span>
   
   
@@ -992,8 +1006,105 @@ it sends the event to the appropriate orchestra.</p>
 </div>
             
             <div class="section-method">
-  <a name="//api/name/resetParam:" title="resetParam:"></a>
-  <h3 class="subsubtitle method-title">resetParam:</h3>
+  <a name="//api/name/playNote:afterDelay:" title="playNote:afterDelay:"></a>
+  <h3 class="subsubtitle method-title">playNote:afterDelay:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Play the given note after a delay</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)playNote:(AKNote *)<em>note</em> afterDelay:(float)<em>delay</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>note</em></dt>
+      <dd><p>The note that will be played.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>delay</em></dt>
+      <dd><p>The amount of time to wait until playing the note</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKInstrument.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/playPhrase:" title="playPhrase:"></a>
+  <h3 class="subsubtitle method-title">playPhrase:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Play the given note phrase</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)playPhrase:(AKPhrase *)<em>phrase</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>phrase</em></dt>
+      <dd><p>The note phrase that will be played.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKInstrument.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/resetParameter:" title="resetParameter:"></a>
+  <h3 class="subsubtitle method-title">resetParameter:</h3>
 
   
   
@@ -1003,7 +1114,7 @@ it sends the event to the appropriate orchestra.</p>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)resetParam:(AKParameter *)<em>parameterToReset</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)resetParameter:(AKParameter *)<em>parameterToReset</em></code></div>
 
     
   
