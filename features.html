@@ -7,66 +7,107 @@ layout: features
 
 <a name="#open_source"></a>
 <h2>Open Source</h2>
-<p>We made AudioKit open-source because we believe that clear, powerful audio development is best developed and maintained through a large, active base of developers and users. If you’re interested in contributing more to the core of AudioKit, please get in touch (audiokit@audiokit.io).
+<p>We made AudioKit open-source because we believe that clear, powerful audio development is best developed and maintained through a large, active base of developers and users. If you’re interested in contributing to AudioKit, please get in touch <a href="mailto:audiokit@audiokit.io">directly</a>, or head over to the <a href="https://groups.google.com/forum/#!forum/audiokit">forum</a>.  
+</p>
+
+<p>
+<img src=/images/contributions.png style="width:75%; max-width:1019px">
 </p>
 
 <a name="#named_parameters"></a>
-<h2>Named Parameters</h2>
+<h2>Well-Named Classes and Parameters</h2>
+
 <p>
-We value clarity and beauty in code, which is why AudioKit utilizes named parameters. In AudioKit, the creation and initialization of an FM oscillator would look like the code below:
-</p>
+We value clarity and beauty in code, which is why AudioKit utilizes well-named classes and parameters. Tradional Music-N style audio languages are charactertized by succinctness at the expense of clarity. As a result, the code is often unclear and difficult to understand, especially as instruments grow more complex. The code below shows the creation and initialization of an FM oscillator in both Music-N and AudioKit; you be the judge. </p>
 
-{% highlight objective-c %}
-AKFMOscillator *fmOscil;
-fmOscil = [[AKFMOscillator alloc] initWithFTable:sineTable
-                                   baseFrequency:akp(440)
-                               carrierMultiplier:akp(1)
-                            modulatingMultiplier:akp(1)
-                                 modulationIndex:akp(1)
-                                       amplitude:akp(1)
-                                           phase:akp(0)];
-[self connect:fmOscil];
-{% endhighlight %}
-
-
-<p>Audio environments such as Csound, however, don’t utilize named parameters. As a result, the code is often unclear and difficult to understand at a first glance. For comparison, below is what the code for an FM oscillator in Csound would look like:
-</p>
-
+<p>
+<table><thead><tr><th><center>Music-N</center></th><th>AudioKit</th></tr></thead>
+<tr>
+  <td>
 {% highlight bash %}
 asig foscili 1, 440, 1, 1, 1, 0
 {% endhighlight %}
+  </td>
+  <td>
+{% highlight objective-c %}
+fmOscillator = [[AKFMOscillator alloc] initWithFTable:sineTable
+                                        baseFrequency:akp(440)
+                                    carrierMultiplier:akp(1)
+                                 modulatingMultiplier:akp(1)
+                                      modulationIndex:akp(1)
+                                            amplitude:akp(1)
+                                                phase:akp(0)];
+{% endhighlight %}
+  </td>
+</tr>
+</table>
+</p>
+
+
+
 
 <a name="sensible_defaults"></a>
 <h2>Sensible Defaults</h2>
 <p>With AudioKit 1.1, we’ve started rolling out what we call “Sensible Defaults”. Sensible defaults allow you to create an AudioKit object without having to guess what initial values are appropriate—when you create an object, the parameter values will automatically be set to values that make sense. Of course, just as before, you can specify the value of all parameters in the init function, or use the defaults and change the values using properties.
 </p>
 
-<p>Below is what an instance of AKSleighbells, a physical modelling object; looks like using Sensible Defaults:</p>
-
+<p>As an example, many physical models sound best with specific parameters that you will always want, so for a canonical sleighbell sound, you can use the simplified version on the right:</p>
+<p>
+<table><thead><tr><th><center>Full Initialization</center></th><th>Sensible Defaults</th></tr></thead>
+<tr>
+  <td rowspan=2>
 {% highlight objective-c %}
-AKSleighbells *sleighBells = [AKSleighbells audio];
-[self connect:sleighBells];
+sleighBells = [[AKSleighbells alloc]initWithIntensity:akp(32)
+                                        dampingFactor:akp(0.2)
+                                mainResonantFrequency:akp(2500)
+                               firstResonantFrequency:akp(5300)
+                              secondResonantFrequency:akp(6500)];
 {% endhighlight %}
-
-<p>Previously, you would have had to set all of these values in the init function as shown below:</p>
-
+  </td>
+  <td>
+    <b>Objective-C:</b><br>
 {% highlight objective-c %}
-AKSleighbells *sleighBells = [[AKSleighbells alloc]initWithIntensity:akp(32)
-                                                       dampingFactor:akp(0.2)
-                                               mainResonantFrequency:akp(2500)
-                                              firstResonantFrequency:akp(5300)
-                                             secondResonantFrequency:akp(6500)];
-[self connect:sleighBells];
+sleighBells = [AKSleighbells audio];
 {% endhighlight %}
+  </td>
+</tr>
+<tr>
+  <td>
+
+    <b>Swift:</b><br>
+{% highlight swift%}
+sleighBells = AKSleighbells();
+{% endhighlight %}
+  </td>
+</tr>
+</table>
+</p>
+
+
 
 <a name="operations"></a>
 <h2>100+ Operations</h2>
 <p>AudioKit has over 100 operations, including oscillators, physical models, reverbs, filters, synthesizers, samplers, and many more to come. </p>
 
-<a name="easy_installation"></a>
-<h2>Easy Installation</h2>
+
+
+
+
+<a name="documentation"></a>
+<a name="xcode_integration"></a>
+<h2>Tight Xcode Integration</h2>
+
+<p> <a href="/tutorials/xcode">Xcode documentation</a> is also available, so you can easily access information about AudioKit classes while you’re still in Xcode. And, since you’re using AudioKit directly within Xcode, you get all the benefits of code-completion.
+</p>
+
+
 <p>We’ve worked to make it very easy to get AudioKit installed in your Xcode project and start using it right-away. To this end, we’ve also made several file templates for both Objective-C and Swift: a conductor template, an instrument template, and a processor template.
 </p>
+
+<p>
+<img src=/images/FileTemplates.png style="width:100%; max-width:725px">
+</p>
+
 
 <a name="sequences"></a>
 <h2>Powerful Sequences and Phrases</h2>
@@ -81,10 +122,7 @@ AKSleighbells *sleighBells = [[AKSleighbells alloc]initWithIntensity:akp(32)
 <p>High-level audio programming is often done in a complete separate environment from general application programming. With AudioKit, your audio programming is done in the same language that your application is written in. You only need one program and one language for both audio and app logic implementation. 
 </p>
 
-<a name="documentation"></a>
-<h2>Clear Documentation</h2>
-<p> <a href="/tutorials/xcode">Xcode documentation</a> is also available, so you can easily access information about AudioKit classes while you’re still in Xcode. And, since you’re using AudioKit directly within Xcode, you get all the benefits of code-completion.
-</p>
+
 
 <a name="examples"></a>
 <h2>Many Examples</h2>
