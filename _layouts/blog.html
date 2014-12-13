@@ -1,0 +1,37 @@
+---
+layout: default
+section: blog
+---
+
+  <section class="about">
+    <div class="grid">
+
+      <div class="unit four-fifths">
+        <article>
+          <h1 class="hide-on-mobiles">
+          {% if page.header != '' %}
+            {{ page.header }}
+          {% else %}
+            {{ page.title }}
+          {% endif %}
+          </h1>
+          <h1 class="small show-on-mobiles">
+          {% if page.header != '' %}
+            {{ page.header }}
+          {% else %}
+            {{ page.title }}
+          {% endif %}
+          </h1>
+          {{ content }}
+
+        </article>
+      </div>
+      <div class="unit one-fifth hide-on-mobiles">
+        <aside>
+          {% include sidebars/blog.html %}
+        </aside>
+      </div>
+      <div class="clear"></div>
+
+    </div>
+  </section>
