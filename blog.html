@@ -42,6 +42,18 @@ AKSleighbells *sleighBells = [AKSleighbells audio];
 {% endhighlight %}
 
 <p>
+We've also open-sourced the internal tests we've been making to generate sensible defaults. So far, we have tests and sensible defaults for 23 operations. As we generate more tests, we'll add them to the repository.
+</p>
+
+<p>
+We have a new object too, AKPhrase. AKPhrase is an extension of the ideas behind AKSequence; that it should e easy to trigger events in code. Unlike AKSequence, which allows you to pass blocks of code to trigger events, AKPhrase allows instruments to trigger a series of note events.
+</p>
+
+<p>
+Additionally, we've made some Xcode file templates so you can get started with your project faster. There are templates for a Conductor, an Instrument, and a Processor; in both Objective-C and Swift.
+</p>
+
+<p>
 Finally, we've set up a <a href="https://groups.google.com/forum/#!forum/audiokit">Google group</a> for AudioKit users. Feel free to post if you have any questions or need some help with anything!
 </p>
 
