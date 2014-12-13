@@ -1,5 +1,5 @@
 ---
-title: User Interaction with your Audio Kit instrument in Swift
+title: User Interaction with your AudioKit instrument in Swift
 header: User Interaction
 permalink: /tutorials/swift/user-interaction/
 layout: tutorials
@@ -8,7 +8,7 @@ next_section:
 ---
 
 <p>
-Now that we've learned how to make an instrument with Audio Kit in Swift, we're going to learn how to add some basic user interaction functionality to our app.
+Now that we've learned how to make an instrument with AudioKit in Swift, we're going to learn how to add some basic user interaction functionality to our app.
 </p>
 
 <p>
@@ -194,7 +194,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         let orchestra = AKOrchestra()
         orchestra.addInstrument(fmOscillator)
-        let manager = AKManager.sharedAKManager()
+        let manager = AKManager.sharedManager()
         manager.runOrchestra(orchestra)
         updateSliders()
     }

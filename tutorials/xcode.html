@@ -1,0 +1,63 @@
+---
+title: AudioKit Xcode Tips
+header: Xcode Tips
+permalink: /tutorials/xcode/
+layout: tutorials
+---
+
+<h2>Installing and Using Xcode Templates</h2>
+
+<p>
+Included within AudioKit are Xcode templates that will help you get started when creating AudioKit classes from scratch.  The templates are for Objective-C or Swift and include a "conductor" class for managing audio, an "instrument" class for designing instruments and their associated notes, and a "processor" class, which is a special case of an instrument that process audio created by other instruments.
+</p>
+
+<p>To install the templates, make sure you have the Xcode folder for user file templates and if not, create it:</p>
+{% highlight bash %}
+mkdir -p ~/Library/Developer/Xcode/Templates/File\ Templates/
+{% endhighlight %}
+
+<p>Then, copy the "Templates / File Templates / AudioKit" folder from your downloaded AudioKit repository (in this case, AudioKit was installed in ~/Developer)</p>
+
+{% highlight bash %}
+cp ~/Developer/AudioKit/Templates/File\ Templates/AudioKit ~/Library/Developer/Xcode/Templates/File\ Templates/
+{% endhighlight %}
+
+<p>
+Now, when you choose "File / New / File..." in Xcode, the templates will appear in an AudioKit section of the dialog box:</p>
+
+<p>
+<img src=/images/FileTemplates.png style="width:100%; max-width:725px">
+</p>
+
+<h2>Installing Xcode Documentation</h2>
+
+<p>Code completion, pop-ups, and sidebar information are automatically created in Xcode, but if you would like Apple-style API reference documentation, download the docset:</p>
+
+<p><a href="https://www.dropbox.com/s/k357kav4xxf1072/io.audiokit.AudioKit.docset.tar.gz?dl=0"><p>
+<img src=/images/docset.png style="width:100%; max-width:267px">
+</p></a></p>
+
+<p>
+Un-tar it and place it in the Shared Documentation folder:</p>
+
+{% highlight bash %}
+tar -xf ~/Downloads/io.audiokit.AudioKit.docset.tar.gz -C ~/Library/Developer/Shared/Documentation/DocSets/
+{% endhighlight %}
+<p>
+Now, the documentation is available in the Xcode "Documentation and API Reference":
+<p>
+<img src=/images/xcode-docs.png style="width:100%; max-width:799px">
+</p>
+
+<p>But we wholeheartedly recommend download the application "Dash"</p>
+
+<p>
+<a href="http://kapeli.com/dash"><img src=/images/dash.png style="width:100%; max-width:256px"></a>
+</p>
+
+<p>Which provides an even nicer documentation interface:</p>
+<p>
+<img src=/images/dashcode.png style="width:100%; max-width:1037px">
+</p>
+
+

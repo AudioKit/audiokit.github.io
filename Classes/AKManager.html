@@ -74,7 +74,7 @@ title: AKManager
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/sharedAKManager">+&nbsp;sharedAKManager</a></code>
+    <code><a href="#//api/name/sharedManager">+&nbsp;sharedManager</a></code>
     <span class="tooltip"><p>the shared instance of AKManager</p></span>
   </span>
   
@@ -88,8 +88,15 @@ title: AKManager
   
 </li><li>
   <span class="tooltip">
+    <code><a href="#//api/name/runOrchestraForDuration:">&ndash;&nbsp;runOrchestraForDuration:</a></code>
+    <span class="tooltip"><p>Run AudioKit using an <a href="../Classes/AKOrchestra.html">AKOrchestra</a> for a specific amount of time</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
     <code><a href="#//api/name/runTestOrchestra">&ndash;&nbsp;runTestOrchestra</a></code>
-    <span class="tooltip"><p>Run AudioKit</p></span>
+    <span class="tooltip"><p>Test AudioKit by playing the first instrument for ten seconds</p></span>
   </span>
   
   
@@ -329,8 +336,8 @@ title: AKManager
             <h2 class="subtitle subtitle-methods">Class Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/sharedAKManager" title="sharedAKManager"></a>
-  <h3 class="subsubtitle method-title">sharedAKManager</h3>
+  <a name="//api/name/sharedManager" title="sharedManager"></a>
+  <h3 class="subsubtitle method-title">sharedManager</h3>
 
   
   
@@ -340,7 +347,7 @@ title: AKManager
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (AKManager *)sharedAKManager</code></div>
+  <div class="method-subsection method-declaration"><code>+ (AKManager *)sharedManager</code></div>
 
     
   
@@ -604,13 +611,59 @@ title: AKManager
 </div>
             
             <div class="section-method">
+  <a name="//api/name/runOrchestraForDuration:" title="runOrchestraForDuration:"></a>
+  <h3 class="subsubtitle method-title">runOrchestraForDuration:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Run AudioKit using an <a href="../Classes/AKOrchestra.html">AKOrchestra</a> for a specific amount of time</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)runOrchestraForDuration:(int)<em>duration</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>duration</em></dt>
+      <dd><p>Time for the <a href="#//api/name/orchestra">orchestra</a> to play in seconds</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKManager.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
   <a name="//api/name/runTestOrchestra" title="runTestOrchestra"></a>
   <h3 class="subsubtitle method-title">runTestOrchestra</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Run AudioKit</p>
+    <p>Test AudioKit by playing the first instrument for ten seconds</p>
   </div>
   
     

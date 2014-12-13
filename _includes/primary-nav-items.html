@@ -1,4 +1,7 @@
 <ul>
+  <li class="{% if page.url contains '/features/' %}current{% endif %}">
+    <a href="/features/">Features</a>
+  </li>
   <li class="{% if page.url contains '/gallery/' %}current{% endif %}">
     <a href="/gallery/">Gallery</a>
   </li>
@@ -11,10 +14,7 @@
   <li class="{% if page.section == 'docs' %}current{% endif %}">
     <a href="/docs/">Docs</a>
   </li>
-  <li class="hide-on-mobiles {% if page.permalink == '/downloads/' %}current{% endif %}">
-    <a href="/downloads/">Download</a>
-  </li>
-  <li class="{% if page.permalink == '/about/' %}current{% endif %}">
-    <a href="/about/">About</a>
+  <li class="{% if page.permalink == '/blog/' %}current{% endif %}">
+    <a href="/blog/">Blog</a>
   </li>
 </ul>
