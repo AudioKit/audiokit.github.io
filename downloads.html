@@ -26,4 +26,18 @@ $ git clone git@github.com:audiokit/AudioKit.git
 <li><a href="https://github.com/audiokit/AudioKit/archive/develop.zip">Development Branch (19.5MB zip)</a> - latest and greatest </li>
 </ul>
 </p>
-{% include docset_note.html %}
+
+<h2>Installing Xcode Documentation</h2>
+
+<p>Code completion, pop-ups, and sidebar information are automatically created in Xcode, but if you would like Apple-style API reference documentation, download the docset:</p>
+
+<p><a href="https://www.dropbox.com/s/k357kav4xxf1072/io.audiokit.AudioKit.docset.tar.gz?dl=0"><p>
+<img src=/images/docset.png style="width:100%; max-width:267px">
+</p></a></p>
+
+<p>
+Un-tar it and place it in the Shared Documentation folder:</p>
+
+{% highlight bash %}
+tar -xf ~/Downloads/io.audiokit.AudioKit.docset.tar.gz -C ~/Library/Developer/Shared/Documentation/DocSets/
+{% endhighlight %}
