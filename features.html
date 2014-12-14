@@ -20,7 +20,7 @@ layout: features
 <p>
 We value clarity and beauty in code, which is why AudioKit utilizes well-named classes and parameters. Tradional Music-N style audio languages are charactertized by succinctness at the expense of clarity. As a result, the code is often unclear and difficult to understand, especially as instruments grow more complex. The code below shows the creation and initialization of an FM oscillator in both Music-N and AudioKit; you be the judge. </p>
 
-<p>
+<div class="hide-on-mobiles">
 <table><thead><tr><th><center>Music-N</center></th><th>AudioKit</th></tr></thead>
 <tr>
   <td>
@@ -30,18 +30,44 @@ asig foscili 1, 440, 1, 1, 1, 0
   </td>
   <td>
 {% highlight objective-c %}
-fmOscillator = [[AKFMOscillator alloc] initWithFTable:sineTable
-                                        baseFrequency:akp(440)
-                                    carrierMultiplier:akp(1)
-                                 modulatingMultiplier:akp(1)
-                                      modulationIndex:akp(1)
-                                            amplitude:akp(1)
-                                                phase:akp(0)];
+[[AKFMOscillator alloc] initWithFTable:sineTable
+                         baseFrequency:akp(440)
+                     carrierMultiplier:akp(1)
+                  modulatingMultiplier:akp(1)
+                       modulationIndex:akp(1)
+                             amplitude:akp(1)
+                                 phase:akp(0)];
 {% endhighlight %}
   </td>
 </tr>
 </table>
-</p>
+</div>
+
+<div class="show-on-mobiles">
+<table><thead><tr><th><center>Music-N</center></th></tr></thead>
+<tr>
+  <td>
+{% highlight bash %}
+asig foscili 1, 440, 1, 1, 1, 0
+{% endhighlight %}
+  </td>
+  </tr>
+  <thead><tr><th>AudioKit</th></tr></thead>
+  <tr>
+  <td>
+{% highlight objective-c %}
+[[AKFMOscillator alloc] initWithFTable:sineTable
+                         baseFrequency:akp(440)
+                     carrierMultiplier:akp(1)
+                  modulatingMultiplier:akp(1)
+                       modulationIndex:akp(1)
+                             amplitude:akp(1)
+                                 phase:akp(0)];
+{% endhighlight %}
+  </td>
+</tr>
+</table>
+</div>
 
 
 
@@ -53,21 +79,23 @@ fmOscillator = [[AKFMOscillator alloc] initWithFTable:sineTable
 
 <p>As an example, many physical models sound best with specific parameters that you will always want, so for a canonical sleighbell sound, you can use the simplified version on the right:</p>
 <p>
+
+<div class="hide-on-mobiles">
 <table><thead><tr><th><center>Full Initialization</center></th><th>Sensible Defaults</th></tr></thead>
 <tr>
   <td rowspan=2>
 {% highlight objective-c %}
-sleighBells = [[AKSleighbells alloc]initWithIntensity:akp(32)
-                                        dampingFactor:akp(0.2)
-                                mainResonantFrequency:akp(2500)
-                               firstResonantFrequency:akp(5300)
-                              secondResonantFrequency:akp(6500)];
+[[AKSleighbells alloc]initWithIntensity:akp(32)
+                          dampingFactor:akp(0.2)
+                  mainResonantFrequency:akp(2500)
+                 firstResonantFrequency:akp(5300)
+                secondResonantFrequency:akp(6500)];
 {% endhighlight %}
   </td>
   <td>
     <b>Objective-C:</b><br>
 {% highlight objective-c %}
-sleighBells = [AKSleighbells audio];
+[AKSleighbells audio];
 {% endhighlight %}
   </td>
 </tr>
@@ -76,12 +104,46 @@ sleighBells = [AKSleighbells audio];
 
     <b>Swift:</b><br>
 {% highlight swift%}
-sleighBells = AKSleighbells();
+AKSleighbells();
 {% endhighlight %}
   </td>
 </tr>
 </table>
-</p>
+</div>
+
+<div class="show-on-mobiles">
+<table><thead><tr><th><center>Full Initialization</center></th></tr></thead>
+<tr>
+  <td rowspan=2>
+{% highlight objective-c %}
+[[AKSleighbells alloc]initWithIntensity:akp(32)
+                          dampingFactor:akp(0.2)
+                  mainResonantFrequency:akp(2500)
+                 firstResonantFrequency:akp(5300)
+                secondResonantFrequency:akp(6500)];
+{% endhighlight %}
+  </td>
+  </tr>
+  <thead><tr><th>Sensible Defaults</th></tr></thead>
+  <tr>
+  <td>
+    <b>Objective-C:</b><br>
+{% highlight objective-c %}
+[AKSleighbells audio];
+{% endhighlight %}
+  </td>
+</tr>
+<tr>
+  <td>
+
+    <b>Swift:</b><br>
+{% highlight swift%}
+AKSleighbells();
+{% endhighlight %}
+  </td>
+</tr>
+</table>
+</div>
 
 
 <a name="documentation"></a>
@@ -106,11 +168,11 @@ Complete <a href="/tutorials/xcode">Xcode documentation</a> is accomplished with
 <table><thead><tr><th width><center>Documentation</center></th><th>Xcode Templates</th></tr></thead>
 <tr>
   <td><center>
-<img src=/images/dashcode.png style="max-height:230px">
+<img src=/images/dashcode.png style="width: 100%">
 </center>
   </td>
   <td><center>
-<img src=/images/FileTemplates.png style="max-height:230px">
+<img src=/images/FileTemplates.png style="width: 100%">
 </center>
   </td>
 </tr>
