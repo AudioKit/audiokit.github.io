@@ -74,8 +74,19 @@ iframe.gallery-movie {
   background-color: #FFF;
 }
 
+.author-block {
+  display: inline-block;
+  float: left;
+  margin-right: 60px;
+}
+
+.author-pic img {
+  width: 200px;
+  height: 200px;
+}
 .author-pic {
   text-align: center;
+
 }
 
 .author-contact {
