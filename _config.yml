@@ -4,6 +4,7 @@ email: audiokit@audiokit.io
 description: > #
   AudioKit, an open-source audio synthesis, processing, and analysis platform.
 url: "http://audiokit.io" # the base hostname & protocol for your site
+port: 4444
 twitter_username:
 github_username:  AudioKit
 
