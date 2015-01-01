@@ -34,37 +34,12 @@ override init() {
     super.init()
 {% endhighlight %}
 
-<p>
-Next we're going to declare an instance of AKSineTable called "sine" with the code below and add it to the audio processing graph. The "let" keyword signifies that we are creating a constant. AKSineTable generates composite waveforms made up of weighted sums of simple sinusoids.
-</p>
-
-{% highlight ruby %}
-let sine = AKSineTable()
-addFTable(sine)
-{% endhighlight %}
-
 
 <p>Now we're going to declare an instance of AKFMOscillator called "fmOscillator".</p>
 
 {% highlight ruby %}
-let fmOscillator = AKFMOscillator(
+let fmOscillator = AKFMOscillator()
 {% endhighlight %}
-
-
-<p>
-Add the lines below after the first parenthesis to initialize your FMOscillator instance's parameters with some default values.
-</p>
-
-{% highlight ruby %}
-FTable: sine,
-baseFrequency: AKConstant(float:440),
-carrierMultiplier:AKConstant(float:1),
-modulatingMultiplier:AKConstant(float:0.5),
-modulationIndex:AKConstant(float:1.0),
-amplitude:AKConstant(float:0.1)
-)
-{% endhighlight %}
-
 
 <p>Next, add the line below to connect your oscillator to the audio processing graph.</p>
 
@@ -92,13 +67,7 @@ class FMSynth: AKInstrument {
         let sine = AKSineTable()
         addFTable(sine)
 
-        let fmOscillator = AKFMOscillator(
-            FTable: sine,
-            baseFrequency: AKConstant(float:440),
-            carrierMultiplier:AKConstant(float:1),
-            modulatingMultiplier:AKConstant(float:0.5),
-            modulationIndex:AKConstant(float:1.0),
-            amplitude:AKConstant(float:0.1)
+        let fmOscillator = AKFMOscillator()
         )
         connect(fmOscillator)
         connect(AKAudioOutput(audioSource: fmOscillator))
@@ -158,10 +127,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let orchestra = AKOrchestra()
-        orchestra.addInstrument(fmOscillator)
-        let manager = AKManager.sharedManager()
-        manager.runOrchestra(orchestra)
+
+        AKOrchestra.addInstrument(fmOscillator)
+        AKOrchestra.start()
     }
 
 
