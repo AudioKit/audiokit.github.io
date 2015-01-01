@@ -86,14 +86,12 @@ class FMSynth: AKInstrument {
         let sine = AKSineTable()
         addFTable(sine)
 
-        let fmOscillator = AKFMOscillator(
-            FTable: sine,
-            baseFrequency: frequency,
-            carrierMultiplier:carrierMultiplier,
-            modulatingMultiplier:AKConstant(float:0.5),
-            modulationIndex:modulationIndex,
-            amplitude:amplitude
-        )
+        let fmOscillator = AKFMOscillator()
+        
+        fmOscillator.baseFrequency = frequency
+        fmOscillator.carrierMultiplier = carrierMultiplier
+        fmOscillator.modulationIndex = modulationIndex
+        fmOscillator.amplitude = amplitude
 
         connect(fmOscillator)
         connect(AKAudioOutput(audioSource: fmOscillator))
@@ -192,10 +190,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let orchestra = AKOrchestra()
-        orchestra.addInstrument(fmOscillator)
-        let manager = AKManager.sharedManager()
-        manager.runOrchestra(orchestra)
+        AKOrchestra.addInstrument(fmOscillator)
+        AKOrchestra.start()
         updateSliders()
     }
 

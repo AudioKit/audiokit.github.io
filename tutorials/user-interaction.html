@@ -99,19 +99,19 @@ Now we're going to add these properties to our instrument. Underneath the code y
         // INPUTS AND CONTROLS =================================================
         _frequencyValue = [[AKInstrumentProperty alloc] initWithValue:440
                                                               minimum:220
-                                                               maximum:880];
+                                                              maximum:880];
 
         _carrierMultValue   = [[AKInstrumentProperty alloc] initWithValue:0.5
-                                                               minimum:0
-                                                               maximum:1];
-
-        _modIndexValue   = [[AKInstrumentProperty alloc] initWithValue:0.5
                                                                   minimum:0
                                                                   maximum:1];
 
+        _modIndexValue   = [[AKInstrumentProperty alloc] initWithValue:0.5
+                                                               minimum:0
+                                                               maximum:1];
+
         _amplitudeValue   = [[AKInstrumentProperty alloc] initWithValue:0.25
-                                                                  minimum:0
-                                                                  maximum:0.5];
+                                                                minimum:0
+                                                                maximum:0.5];
 
         [self addProperty:_frequencyValue];
         [self addProperty:_carrierMultValue];
@@ -119,18 +119,15 @@ Now we're going to add these properties to our instrument. Underneath the code y
         [self addProperty:_amplitudeValue];
 
         // INSTRUMENT DEFINITION ===============================================
+        
+        AKFMOscillator *fmOscillator;
+        fmOscillator = [[AKFMOscillator alloc] init];
+        fmOscillator.baseFrequency     = _frequency;
+        fmOscillator.carrierMultiplier = _carrierMultValue;
+        fmOscillator.modulationIndex   = _modIndexValue;
+        fmOscillator.amplitude         = _amplitudeValue;
 
-        AKSineTable *sineTable = [[AKSineTable alloc] init];
-        [self addFTable:sineTable];
-
-        AKfmOscillatorlatorlator *fmOscillatorlator;
-        fmOscillatorlator = [[AKfmOscillatorlatorlator alloc] initWithFTable:sineTable
-                                                               baseFrequency:_frequencyValue
-                                                           carrierMultiplier:_carrierMultValue
-                                                        modulatingMultiplier:akp(0.5)
-                                                             modulationIndex:_modIndexValue
-                                                                   amplitude:_amplitudeValue];
-        [self connect:fmOscillatorlator];
+        [self connect:fmOscillator];
 
         // AUDIO OUTPUT ========================================================
 

@@ -65,32 +65,17 @@ Now that we’ve created the instrument file, we can write the code to make some
     if (self) {
 {% endhighlight %}
 
-<p>
-Now we can create our sine wave generator, which is an instance of AKSineTable. AKSineTable generates composite waveforms made up of weighted sums of simple sinusoids. The code below creates sineTable to be an instance of AKSineTable, and adds it to the audio processing graph.
-</p>
-
-{% highlight objective-c %}
-AKSineTable *sineTable = [[AKSineTable alloc] init];
-[self addFTable:sineTable];
-{% endhighlight %}
 
 <p>Next, we’re going to create an instance of AKFMOscillator called fmOscillator using the line below:</p>
 {% highlight objective-c %}
         AKFMOscillator *fmOscillator;
 {% endhighlight %}
 
-<p>Then, we’re going to initialize fmOscillator’s parameters with the code below:</p>
+<p>Then, we’re going to initialize fmOscillator’s parameters with their default values using the code below:</p>
 
 {% highlight objective-c %}
-AKFMOscillator *fmOscillator;
-fmOscillator = [[AKFMOscillator alloc]initWithFTable:sineTable
-                                       baseFrequency:akp(440)
-                                   carrierMultiplier:akp(1)
-                                modulatingMultiplier:akp(0.5)
-                                     modulationIndex:akp(1.0)
-                                           amplitude:akp(0.1)];
+fmOscillator = [[AKFMOscillator alloc] init];
 {% endhighlight %}
-
 
 <p>Finally,  connect the FM oscillator to the audio graph with the line below: </p>
 
@@ -120,19 +105,11 @@ fmOscillator = [[AKFMOscillator alloc]initWithFTable:sineTable
     self = [super init];
     if (self) {
 
-        AKSineTable *sineTable = [[AKSineTable alloc] init];
-        [self addFTable:sineTable];
-
         AKFMOscillator *fmOscillator;
-        fmOscillator = [[AKFMOscillator alloc] initWithFTable:sineTable
-                                                baseFrequency:akp(440)
-                                            carrierMultiplier:akp(1)
-                                         modulatingMultiplier:akp(0.5)
-                                              modulationIndex:akp(1.0)
-                                                    amplitude:akp(0.1)];
+        fmOscillator = [[AKFMOscillator alloc] init];
         [self connect:fmOscillator];
 
-        AKAudioOutput *audioOutput = [[AKAudioOutput alloc] initWithAudioSource:fmOscil];
+        AKAudioOutput *audioOutput = [[AKAudioOutput alloc] initWithAudioSource:fmOscillator];
         [self connect:audioOutput];
 
     }
@@ -174,23 +151,19 @@ Then, delete the two lines below:
 These lines create an instance of our  NewInstrument, and create a BOOL variable that we’ll use to see if the instrument is playing or not.
 </p>
 
-<p>Inside of viewDidLoad, add the line below:</p>
+<p>Inside of viewDidLoad, we'll want to create an instance of NewInstrument and add it to the orchestra:</p>
 
 {% highlight objective-c %}
-AKOrchestra *orch = [[AKOrchestra alloc] init];
+newInstrument = [[NewInstrument alloc] init];
+[AKOrchestra addInstrument:newInstrument];
 {% endhighlight %}
 
-<p>
-This will create an instance of  AKOrchestra, which is an AKInstrument collection that can be run by the AKManager.
-</p>
-
-<p>
-Then, we’ll add the last line of our  viewDidLoad function:
-</p>
+<p>Then once our orchestra contains all the instruments it needs (only one in this case), we can start the orchestra:</p>
 
 {% highlight objective-c %}
-[[AKManager sharedManager] runOrchestra:orch];
+[AKOrchestra start];
 {% endhighlight %}
+
 
 <p>Our completed viewDidLoad function should look like this:</p>
 
@@ -199,11 +172,9 @@ Then, we’ll add the last line of our  viewDidLoad function:
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    AKOrchestra *orch = [[AKOrchestra alloc] init];
-    newInstrument = [[NewInstrument alloc] init];
-    [orch addInstrument:newInstrument];
-    [[AKManager sharedManager] runOrchestra:orch];
-}
+newInstrument = [[NewInstrument alloc] init];
+[AKOrchestra addInstrument:newInstrument];
+[AKOrchestra start];
 {% endhighlight %}
 
 
@@ -252,10 +223,9 @@ This will check to see if an  newInstrument is playing. If it is, the ViewContro
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    AKOrchestra *orch = [[AKOrchestra alloc] init];
     newInstrument = [[NewInstrument alloc] init];
-    [orch addInstrument:newInstrument];
-    [[AKManager sharedManager] runOrchestra:orch];
+    [AKOrchestra addInstrument:newInstrument];
+    [AKOrchestra start];
 }
 
 - (IBAction)toggleInstrument:(id)sender {
