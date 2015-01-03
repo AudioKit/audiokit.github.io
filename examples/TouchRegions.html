@@ -9,14 +9,19 @@ layout: examples
 A Frequency-Modulation Oscillator is controlleted through gestures along an X/Y axis. Moving a finger along the X axis of the red section controls frequency, and moving along the Y axis controls the carrier multiplier. Moving along the purple section's X-axis controls the modulating multiplier, and moving along the Y-axis controls the modulation index.
 </p>
 
-
-<div style="width: 100%; display: block;">
-
-<video controls>
+<div class="cd-ipad cd-silver cd-landscape-left hide-on-mobiles" style="margin-left: 1em;">
+  <div class="cd-body">
+    <div class="cd-camera"></div>
+    <div class="cd-home"></div>
+    <div class="cd-screen">
+    <video controls class="cd-fill">
       <source src="https://dl.dropboxusercontent.com/u/31568349/movies/TouchRegions.m4v" type="video/mp4">
     Your browser does not support the video tag.
     </video>
+    </div>
+  </div>
 </div>
+
 <p>
 The code below shows an FM oscillator with four parameters of control. Unlike the other example examples, the parameters for this instrument are controlled based on the position of touches on an X/Y axis.
 </p>
