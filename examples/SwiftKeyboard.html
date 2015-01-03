@@ -81,6 +81,10 @@ The reverb global effect is created in "EffectsProcessor.swift" with a specific 
 {% highlight ruby %}
 let reverb = AKReverb(
     input: audioSource,
+    feedback: feedbackLevel,
+    cutoffFrequency: 4000.ak
+)
+connect(reverb)
 {% endhighlight %}
 
 So, when the fx processor is instantiated in Conductor.swift, it is given the tone generator as its input:
