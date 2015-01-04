@@ -83,17 +83,15 @@ class FMSynth: AKInstrument {
         addProperty(carrierMultiplier)
         addProperty(modulationIndex)
 
-        let sine = AKSineTable()
-        addFTable(sine)
-
         let fmOscillator = AKFMOscillator()
-        
+
         fmOscillator.baseFrequency = frequency
         fmOscillator.carrierMultiplier = carrierMultiplier
         fmOscillator.modulationIndex = modulationIndex
         fmOscillator.amplitude = amplitude
 
         connect(fmOscillator)
+
         connect(AKAudioOutput(audioSource: fmOscillator))
     }
 }

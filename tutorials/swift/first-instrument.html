@@ -64,11 +64,7 @@ class FMSynth: AKInstrument {
     override init() {
         super.init()
 
-        let sine = AKSineTable()
-        addFTable(sine)
-
         let fmOscillator = AKFMOscillator()
-        )
         connect(fmOscillator)
         connect(AKAudioOutput(audioSource: fmOscillator))
     }
