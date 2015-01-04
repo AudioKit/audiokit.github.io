@@ -48,8 +48,36 @@ title: AKDelay
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithAudioSource:delayTime:">&ndash;&nbsp;initWithAudioSource:delayTime:</a></code>
-    <span class="tooltip"><p>Instantiates the delay</p></span>
+    <code><a href="#//api/name/initWithInput:delayTime:feedback:">&ndash;&nbsp;initWithInput:delayTime:feedback:</a></code>
+    <span class="tooltip"><p>Instantiates the delay with all values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithInput:delayTime:">&ndash;&nbsp;initWithInput:delayTime:</a></code>
+    <span class="tooltip"><p>Instantiates the delay with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/delayWithInput:delayTime:">+&nbsp;delayWithInput:delayTime:</a></code>
+    <span class="tooltip"><p>Instantiates the delay with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/feedback">&nbsp;&nbsp;feedback</a></code>
+    <span class="tooltip"><p>How much of the signal is sent back into the delay line.  Usually values range from 0-1. [Default Value: 0.0]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalFeedback:">&ndash;&nbsp;setOptionalFeedback:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/feedback">feedback</a></p></span>
   </span>
   
   
@@ -62,7 +90,106 @@ title: AKDelay
 
           
           
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/feedback" title="feedback"></a>
+  <h3 class="subsubtitle method-title">feedback</h3>
 
+  
+  
+  <div class="method-subsection brief-description">
+    <p>How much of the signal is sent back into the delay line.  Usually values range from 0-1. [Default Value: 0.0]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *feedback</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKDelay.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/delayWithInput:delayTime:" title="delayWithInput:delayTime:"></a>
+  <h3 class="subsubtitle method-title">delayWithInput:delayTime:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the delay with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)delayWithInput:(AKParameter *)<em>input</em> delayTime:(AKConstant *)<em>delayTime</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>Input signal, usually audio.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>delayTime</em></dt>
+      <dd><p>Requested delay time in seconds.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKDelay.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
           
 
           
@@ -71,18 +198,18 @@ title: AKDelay
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithAudioSource:delayTime:" title="initWithAudioSource:delayTime:"></a>
-  <h3 class="subsubtitle method-title">initWithAudioSource:delayTime:</h3>
+  <a name="//api/name/initWithInput:delayTime:" title="initWithInput:delayTime:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:delayTime:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the delay</p>
+    <p>Instantiates the delay with default values</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKAudio *)<em>audioSource</em> delayTime:(AKConstant *)<em>delayTime</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> delayTime:(AKConstant *)<em>delayTime</em></code></div>
 
     
   
@@ -90,13 +217,115 @@ title: AKDelay
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>audioSource</em></dt>
-      <dd><p>Audio signal</p></dd>
+      <dt><em>input</em></dt>
+      <dd><p>Input signal, usually audio.</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>delayTime</em></dt>
       <dd><p>Requested delay time in seconds.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKDelay.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithInput:delayTime:feedback:" title="initWithInput:delayTime:feedback:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:delayTime:feedback:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the delay with all values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> delayTime:(AKConstant *)<em>delayTime</em> feedback:(AKParameter *)<em>feedback</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>Input signal, usually audio. [Default Value: ]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>delayTime</em></dt>
+      <dd><p>Requested delay time in seconds. [Default Value: ]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>feedback</em></dt>
+      <dd><p>How much of the signal is sent back into the delay line.  Usually values range from 0-1. Updated at Control-rate. [Default Value: 0.0]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKDelay.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalFeedback:" title="setOptionalFeedback:"></a>
+  <h3 class="subsubtitle method-title">setOptionalFeedback:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional <a href="#//api/name/feedback">feedback</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalFeedback:(AKParameter *)<em>feedback</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>feedback</em></dt>
+      <dd><p>How much of the signal is sent back into the delay line.  Usually values range from 0-1. Updated at Control-rate. [Default Value: 0.0]</p></dd>
     </dl>
     
   </div>

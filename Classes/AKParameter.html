@@ -32,6 +32,8 @@ title: AKParameter
 audio rate, control rate, and constant values. When something is declared as an
 AKParameter, it is at audio rate.  <a href="../Classes/AKControl.html">AKControl</a> and <a href="../Classes/AKConstant.html">AKConstant</a> should be used for
 slower rate variables.</p>
+
+<p>This category allows for operations to simply be considered as parameters to other operations.</p>
           </div>
           
           
@@ -162,7 +164,14 @@ slower rate variables.</p>
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/plus:">&ndash;&nbsp;plus:</a></code>
-    <span class="tooltip"><p>Helper function to create a new AKParameter combined with the original</p></span>
+    <span class="tooltip"><p>Helper function to create a new AKParameter added to the additional parameter</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/minus:">&ndash;&nbsp;minus:</a></code>
+    <span class="tooltip"><p>Helper function to create a new AKParameter subtracted from the additional parameter</p></span>
   </span>
   
   
@@ -915,6 +924,52 @@ slower rate variables.</p>
 </div>
             
             <div class="section-method">
+  <a name="//api/name/minus:" title="minus:"></a>
+  <h3 class="subsubtitle method-title">minus:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Helper function to create a new AKParameter subtracted from the additional parameter</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)minus:(AKParameter *)<em>subtractedParameter</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>subtractedParameter</em></dt>
+      <dd><p>The subtracted parameter (should be of the same type)</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKParameter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
   <a name="//api/name/operationName" title="operationName"></a>
   <h3 class="subsubtitle method-title">operationName</h3>
 
@@ -957,7 +1012,7 @@ slower rate variables.</p>
   
   
   <div class="method-subsection brief-description">
-    <p>Helper function to create a new AKParameter combined with the original</p>
+    <p>Helper function to create a new AKParameter added to the additional parameter</p>
   </div>
   
     

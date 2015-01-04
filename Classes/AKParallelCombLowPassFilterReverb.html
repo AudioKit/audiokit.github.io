@@ -48,8 +48,50 @@ title: AKParallelCombLowPassFilterReverb
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithAudioSource:duration:highFrequencyDiffusivity:">&ndash;&nbsp;initWithAudioSource:duration:highFrequencyDiffusivity:</a></code>
-    <span class="tooltip"><p>Instantiates the arallel comb low pass filter reverb</p></span>
+    <code><a href="#//api/name/initWithInput:duration:highFrequencyDiffusivity:">&ndash;&nbsp;initWithInput:duration:highFrequencyDiffusivity:</a></code>
+    <span class="tooltip"><p>Instantiates the parallel comb low pass filter reverb with all values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithInput:">&ndash;&nbsp;initWithInput:</a></code>
+    <span class="tooltip"><p>Instantiates the parallel comb low pass filter reverb with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/reverbWithInput:">+&nbsp;reverbWithInput:</a></code>
+    <span class="tooltip"><p>Instantiates the parallel comb low pass filter reverb with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/duration">&nbsp;&nbsp;duration</a></code>
+    <span class="tooltip"><p>Length of reverbation in seconds. [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalDuration:">&ndash;&nbsp;setOptionalDuration:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/duration">duration</a></p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/highFrequencyDiffusivity">&nbsp;&nbsp;highFrequencyDiffusivity</a></code>
+    <span class="tooltip"><p>A value between 0 and 1.  At 0, all frequencies decay with the same speed.  At 1, high frequencies decay faster than lower ones. [Default Value: 0.5]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalHighFrequencyDiffusivity:">&ndash;&nbsp;setOptionalHighFrequencyDiffusivity:</a></code>
+    <span class="tooltip"><p>Set an optional high frequency diffusivity</p></span>
   </span>
   
   
@@ -62,7 +104,137 @@ title: AKParallelCombLowPassFilterReverb
 
           
           
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/duration" title="duration"></a>
+  <h3 class="subsubtitle method-title">duration</h3>
 
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Length of reverbation in seconds. [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *duration</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKParallelCombLowPassFilterReverb.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/highFrequencyDiffusivity" title="highFrequencyDiffusivity"></a>
+  <h3 class="subsubtitle method-title">highFrequencyDiffusivity</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>A value between 0 and 1.  At 0, all frequencies decay with the same speed.  At 1, high frequencies decay faster than lower ones. [Default Value: 0.5]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *highFrequencyDiffusivity</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKParallelCombLowPassFilterReverb.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/reverbWithInput:" title="reverbWithInput:"></a>
+  <h3 class="subsubtitle method-title">reverbWithInput:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the parallel comb low pass filter reverb with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)reverbWithInput:(AKParameter *)<em>input</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>Audio signal to be reverberated.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKParallelCombLowPassFilterReverb.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
           
 
           
@@ -71,18 +243,18 @@ title: AKParallelCombLowPassFilterReverb
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithAudioSource:duration:highFrequencyDiffusivity:" title="initWithAudioSource:duration:highFrequencyDiffusivity:"></a>
-  <h3 class="subsubtitle method-title">initWithAudioSource:duration:highFrequencyDiffusivity:</h3>
+  <a name="//api/name/initWithInput:" title="initWithInput:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the arallel comb low pass filter reverb</p>
+    <p>Instantiates the parallel comb low pass filter reverb with default values</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKAudio *)<em>audioSource</em> duration:(AKControl *)<em>duration</em> highFrequencyDiffusivity:(AKControl *)<em>highFrequencyDiffusivity</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em></code></div>
 
     
   
@@ -90,18 +262,156 @@ title: AKParallelCombLowPassFilterReverb
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>audioSource</em></dt>
+      <dt><em>input</em></dt>
       <dd><p>Audio signal to be reverberated.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKParallelCombLowPassFilterReverb.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithInput:duration:highFrequencyDiffusivity:" title="initWithInput:duration:highFrequencyDiffusivity:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:duration:highFrequencyDiffusivity:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the parallel comb low pass filter reverb with all values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> duration:(AKParameter *)<em>duration</em> highFrequencyDiffusivity:(AKParameter *)<em>highFrequencyDiffusivity</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>Audio signal to be reverberated. [Default Value: ]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>duration</em></dt>
-      <dd><p>Length of reverbation in seconds.</p></dd>
+      <dd><p>Length of reverbation in seconds. Updated at Control-rate. [Default Value: 1]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>highFrequencyDiffusivity</em></dt>
-      <dd><p>A value between 0 and 1.  At 0, all frequencies decay with the same speed.  At 1, high frequencies decay faster that lower ones.</p></dd>
+      <dd><p>A value between 0 and 1.  At 0, all frequencies decay with the same speed.  At 1, high frequencies decay faster than lower ones. Updated at Control-rate. [Default Value: 0.5]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKParallelCombLowPassFilterReverb.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalDuration:" title="setOptionalDuration:"></a>
+  <h3 class="subsubtitle method-title">setOptionalDuration:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional <a href="#//api/name/duration">duration</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalDuration:(AKParameter *)<em>duration</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>duration</em></dt>
+      <dd><p>Length of reverbation in seconds. Updated at Control-rate. [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKParallelCombLowPassFilterReverb.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalHighFrequencyDiffusivity:" title="setOptionalHighFrequencyDiffusivity:"></a>
+  <h3 class="subsubtitle method-title">setOptionalHighFrequencyDiffusivity:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional high frequency diffusivity</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalHighFrequencyDiffusivity:(AKParameter *)<em>highFrequencyDiffusivity</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>highFrequencyDiffusivity</em></dt>
+      <dd><p>A value between 0 and 1.  At 0, all frequencies decay with the same speed.  At 1, high frequencies decay faster than lower ones. Updated at Control-rate. [Default Value: 0.5]</p></dd>
     </dl>
     
   </div>

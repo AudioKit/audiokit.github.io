@@ -1,13 +1,13 @@
 ---
 layout: docs
-title: AKFTable
+title: AKFunctionTable
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
         <div id="header">
           <div class="section-header">
-            <h1 class="title title-header">AKFTable</h1>
+            <h1 class="title title-header">AKFunctionTable</h1>
           </div>
         </div>
         <div id="container">
@@ -15,10 +15,10 @@ title: AKFTable
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKConstant.html">AKConstant</a> : <a href="../Classes/AKControl.html">AKControl</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+  <td class="specification-value"><a href="../Classes/AKConstant.html">AKConstant</a> : <a href="../Classes/AKControl.html">AKControl</a> : <a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
-  <td class="specification-value">AKFTable.h<br />AKFTable.m</td>
+  <td class="specification-value">AKFunctionTable.h<br />AKFunctionTable.m</td>
 </tr>
             </tbody></table></div>
           
@@ -32,16 +32,6 @@ title: AKFTable
 
 <p>By default, the table will not be normalized,
 but it maybe normalized by setting the <a href="#//api/name/isNormalized">isNormalized</a> property to YES.</p>
-
-<p>Currently supported function table types are</p>
-
-<ul>
-<li>Sound File (<a href="../Classes/AKSoundFileTable.html">AKSoundFileTable</a>)</li>
-<li>Exponential Curves (<a href="../Classes/AKExponentialCurvesTable.html">AKExponentialCurvesTable</a>)</li>
-<li>Sines (<a href="../Classes/AKSineTable.html">AKSineTable</a>)</li>
-<li>Windows (<a href="../Classes/AKWindowsTable.html">AKWindowsTable</a>)</li>
-</ul>
-
           </div>
           
           
@@ -66,6 +56,27 @@ but it maybe normalized by setting the <a href="#//api/name/isNormalized">isNorm
   
 </li><li>
   <span class="tooltip">
+    <code><a href="#//api/name/parameters">&nbsp;&nbsp;parameters</a></code>
+    <span class="tooltip"><p>The parameters list which can be assigned by subclasses</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/size">&nbsp;&nbsp;size</a></code>
+    <span class="tooltip"><p>The size of the FunctionTable</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/functionName">&ndash;&nbsp;functionName</a></code>
+    <span class="tooltip"><p>The name of the function</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
     <code><a href="#//api/name/initWithType:size:parameters:">&ndash;&nbsp;initWithType:size:parameters:</a></code>
     <span class="tooltip"><p>Creates a function table at the most basic level.</p></span>
   </span>
@@ -74,7 +85,14 @@ but it maybe normalized by setting the <a href="#//api/name/isNormalized">isNorm
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithType:parameters:">&ndash;&nbsp;initWithType:parameters:</a></code>
-    <span class="tooltip"><p>Creates a function table without specifying a size, deferring that calculation.</p></span>
+    <span class="tooltip"><p>Creates a function table without specifying a <a href="#//api/name/size">size</a>, deferring that calculation.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithType:">&ndash;&nbsp;initWithType:</a></code>
+    <span class="tooltip"><p>Creates a function table without specifying a <a href="#//api/name/size">size</a> or <a href="#//api/name/parameters">parameters</a>.</p></span>
   </span>
   
   
@@ -128,7 +146,79 @@ but it maybe normalized by setting the <a href="#//api/name/isNormalized">isNorm
   
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKFTable.h</code><br />
+    <code class="declared-in-ref">AKFunctionTable.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/parameters" title="parameters"></a>
+  <h3 class="subsubtitle method-title">parameters</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>The parameters list which can be assigned by subclasses</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKArray *parameters</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFunctionTable.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/size" title="size"></a>
+  <h3 class="subsubtitle method-title">size</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>The size of the FunctionTable</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property int size</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFunctionTable.h</code><br />
   </div>
   
   
@@ -145,18 +235,54 @@ but it maybe normalized by setting the <a href="#//api/name/isNormalized">isNorm
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithType:parameters:" title="initWithType:parameters:"></a>
-  <h3 class="subsubtitle method-title">initWithType:parameters:</h3>
+  <a name="//api/name/functionName" title="functionName"></a>
+  <h3 class="subsubtitle method-title">functionName</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Creates a function table without specifying a size, deferring that calculation.</p>
+    <p>The name of the function</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithType:(FTableType)<em>fTableType</em> parameters:(AKArray *)<em>parameters</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (NSString *)functionName</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFunctionTable.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithType:" title="initWithType:"></a>
+  <h3 class="subsubtitle method-title">initWithType:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Creates a function table without specifying a <a href="#//api/name/size">size</a> or <a href="#//api/name/parameters">parameters</a>.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithType:(AKFunctionTableType)<em>functionTableType</em></code></div>
 
     
   
@@ -164,13 +290,8 @@ but it maybe normalized by setting the <a href="#//api/name/isNormalized">isNorm
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>fTableType</em></dt>
+      <dt><em>functionTableType</em></dt>
       <dd><p>One of the supported GeneratingRoutines.</p></dd>
-    </dl>
-    
-    <dl class="argument-def parameter-def">
-      <dt><em>parameters</em></dt>
-      <dd><p>An array of parameters that define the function table.</p></dd>
     </dl>
     
   </div>
@@ -189,7 +310,58 @@ but it maybe normalized by setting the <a href="#//api/name/isNormalized">isNorm
   
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKFTable.h</code><br />
+    <code class="declared-in-ref">AKFunctionTable.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithType:parameters:" title="initWithType:parameters:"></a>
+  <h3 class="subsubtitle method-title">initWithType:parameters:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Creates a function table without specifying a <a href="#//api/name/size">size</a>, deferring that calculation.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithType:(AKFunctionTableType)<em>functionTableType</em> parameters:(AKArray *)<em>parameters</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>functionTableType</em></dt>
+      <dd><p>One of the supported GeneratingRoutines.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>parameters</em></dt>
+      <dd><p>An array of <a href="#//api/name/parameters">parameters</a> that define the function table.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFunctionTable.h</code><br />
   </div>
   
   
@@ -207,7 +379,7 @@ but it maybe normalized by setting the <a href="#//api/name/isNormalized">isNorm
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithType:(FTableType)<em>fTableType</em> size:(int)<em>tableSize</em> parameters:(AKArray *)<em>parameters</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithType:(AKFunctionTableType)<em>functionTableType</em> size:(int)<em>tableSize</em> parameters:(AKArray *)<em>parameters</em></code></div>
 
     
   
@@ -215,7 +387,7 @@ but it maybe normalized by setting the <a href="#//api/name/isNormalized">isNorm
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>fTableType</em></dt>
+      <dt><em>functionTableType</em></dt>
       <dd><p>One of the supported GeneratingRoutines.</p></dd>
     </dl>
     
@@ -226,7 +398,7 @@ but it maybe normalized by setting the <a href="#//api/name/isNormalized">isNorm
     
     <dl class="argument-def parameter-def">
       <dt><em>parameters</em></dt>
-      <dd><p>An array of parameters that define the function table.</p></dd>
+      <dd><p>An array of <a href="#//api/name/parameters">parameters</a> that define the function table.</p></dd>
     </dl>
     
   </div>
@@ -245,7 +417,7 @@ but it maybe normalized by setting the <a href="#//api/name/isNormalized">isNorm
   
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKFTable.h</code><br />
+    <code class="declared-in-ref">AKFunctionTable.h</code><br />
   </div>
   
   
@@ -281,7 +453,7 @@ but it maybe normalized by setting the <a href="#//api/name/isNormalized">isNorm
   
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKFTable.h</code><br />
+    <code class="declared-in-ref">AKFunctionTable.h</code><br />
   </div>
   
   

@@ -48,21 +48,21 @@ title: AKSimpleWaveGuideModel
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithAudioSource:frequency:cutoff:feedback:">&ndash;&nbsp;initWithAudioSource:frequency:cutoff:feedback:</a></code>
+    <code><a href="#//api/name/initWithInput:frequency:cutoff:feedback:">&ndash;&nbsp;initWithInput:frequency:cutoff:feedback:</a></code>
     <span class="tooltip"><p>Instantiates the simple wave guide model with all values</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithAudioSource:">&ndash;&nbsp;initWithAudioSource:</a></code>
+    <code><a href="#//api/name/initWithInput:">&ndash;&nbsp;initWithInput:</a></code>
     <span class="tooltip"><p>Instantiates the simple wave guide model with default values</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/audioWithAudioSource:">+&nbsp;audioWithAudioSource:</a></code>
+    <code><a href="#//api/name/modelWithInput:">+&nbsp;modelWithInput:</a></code>
     <span class="tooltip"><p>Instantiates the simple wave guide model with default values</p></span>
   </span>
   
@@ -134,7 +134,7 @@ title: AKSimpleWaveGuideModel
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKControl *cutoff</code></div>
+  <div class="method-subsection method-declaration"><code>@property AKParameter *cutoff</code></div>
 
     
   
@@ -170,7 +170,7 @@ title: AKSimpleWaveGuideModel
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKControl *feedback</code></div>
+  <div class="method-subsection method-declaration"><code>@property AKParameter *feedback</code></div>
 
     
   
@@ -239,8 +239,8 @@ title: AKSimpleWaveGuideModel
             <h2 class="subtitle subtitle-methods">Class Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/audioWithAudioSource:" title="audioWithAudioSource:"></a>
-  <h3 class="subsubtitle method-title">audioWithAudioSource:</h3>
+  <a name="//api/name/modelWithInput:" title="modelWithInput:"></a>
+  <h3 class="subsubtitle method-title">modelWithInput:</h3>
 
   
   
@@ -250,7 +250,7 @@ title: AKSimpleWaveGuideModel
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)audioWithAudioSource:(AKAudio *)<em>audioSource</em></code></div>
+  <div class="method-subsection method-declaration"><code>+ (instancetype)modelWithInput:(AKParameter *)<em>input</em></code></div>
 
     
   
@@ -258,7 +258,7 @@ title: AKSimpleWaveGuideModel
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>audioSource</em></dt>
+      <dt><em>input</em></dt>
       <dd><p>The excitation noise.</p></dd>
     </dl>
     
@@ -293,8 +293,8 @@ title: AKSimpleWaveGuideModel
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithAudioSource:" title="initWithAudioSource:"></a>
-  <h3 class="subsubtitle method-title">initWithAudioSource:</h3>
+  <a name="//api/name/initWithInput:" title="initWithInput:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:</h3>
 
   
   
@@ -304,7 +304,7 @@ title: AKSimpleWaveGuideModel
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKAudio *)<em>audioSource</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em></code></div>
 
     
   
@@ -312,7 +312,7 @@ title: AKSimpleWaveGuideModel
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>audioSource</em></dt>
+      <dt><em>input</em></dt>
       <dd><p>The excitation noise.</p></dd>
     </dl>
     
@@ -339,8 +339,8 @@ title: AKSimpleWaveGuideModel
 </div>
             
             <div class="section-method">
-  <a name="//api/name/initWithAudioSource:frequency:cutoff:feedback:" title="initWithAudioSource:frequency:cutoff:feedback:"></a>
-  <h3 class="subsubtitle method-title">initWithAudioSource:frequency:cutoff:feedback:</h3>
+  <a name="//api/name/initWithInput:frequency:cutoff:feedback:" title="initWithInput:frequency:cutoff:feedback:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:frequency:cutoff:feedback:</h3>
 
   
   
@@ -350,7 +350,7 @@ title: AKSimpleWaveGuideModel
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKAudio *)<em>audioSource</em> frequency:(AKParameter *)<em>frequency</em> cutoff:(AKControl *)<em>cutoff</em> feedback:(AKControl *)<em>feedback</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> frequency:(AKParameter *)<em>frequency</em> cutoff:(AKParameter *)<em>cutoff</em> feedback:(AKParameter *)<em>feedback</em></code></div>
 
     
   
@@ -358,23 +358,23 @@ title: AKSimpleWaveGuideModel
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>audioSource</em></dt>
-      <dd><p>The excitation noise.</p></dd>
+      <dt><em>input</em></dt>
+      <dd><p>The excitation noise. [Default Value: ]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>frequency</em></dt>
-      <dd><p>The inverse of delay time.</p></dd>
+      <dd><p>The inverse of delay time. [Default Value: 440]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>cutoff</em></dt>
-      <dd><p>Filter cut-off <a href="#//api/name/frequency">frequency</a> in Hz</p></dd>
+      <dd><p>Filter cut-off <a href="#//api/name/frequency">frequency</a> in Hz Updated at Control-rate. [Default Value: 3000]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>feedback</em></dt>
-      <dd><p>Feedback factor usually between 0 and 1</p></dd>
+      <dd><p>Feedback factor usually between 0 and 1 Updated at Control-rate. [Default Value: 0.8]</p></dd>
     </dl>
     
   </div>
@@ -411,7 +411,7 @@ title: AKSimpleWaveGuideModel
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalCutoff:(AKControl *)<em>cutoff</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalCutoff:(AKParameter *)<em>cutoff</em></code></div>
 
     
   
@@ -420,7 +420,7 @@ title: AKSimpleWaveGuideModel
     
     <dl class="argument-def parameter-def">
       <dt><em>cutoff</em></dt>
-      <dd><p>Filter cut-off <a href="#//api/name/frequency">frequency</a> in Hz [Default Value: 3000]</p></dd>
+      <dd><p>Filter cut-off <a href="#//api/name/frequency">frequency</a> in Hz Updated at Control-rate. [Default Value: 3000]</p></dd>
     </dl>
     
   </div>
@@ -457,7 +457,7 @@ title: AKSimpleWaveGuideModel
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalFeedback:(AKControl *)<em>feedback</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalFeedback:(AKParameter *)<em>feedback</em></code></div>
 
     
   
@@ -466,7 +466,7 @@ title: AKSimpleWaveGuideModel
     
     <dl class="argument-def parameter-def">
       <dt><em>feedback</em></dt>
-      <dd><p>Feedback factor usually between 0 and 1 [Default Value: 0.8]</p></dd>
+      <dd><p>Feedback factor usually between 0 and 1 Updated at Control-rate. [Default Value: 0.8]</p></dd>
     </dl>
     
   </div>

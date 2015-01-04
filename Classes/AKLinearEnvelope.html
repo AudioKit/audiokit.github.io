@@ -1,0 +1,620 @@
+---
+layout: docs
+title: AKLinearEnvelope
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKLinearEnvelope</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKLinearEnvelope.h<br />AKLinearEnvelope.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>Applies a straight line rise and decay pattern to an input amp signal.</p>
+
+<p>Rise modifications are applied for the first irise seconds, and decay from time <a href="#//api/name/totalDuration">totalDuration</a> - <a href="#//api/name/decayTime">decayTime</a>. If these periods are separated in time there will be a steady state during which amp will be unmodified. If linen rise and decay periods overlap then both modifications will be in effect for that time. If the overall duration is exceeded in performance, the final decay will continue on in the same direction, going negative.</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            
+
+            <ul class="task-list">
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithRiseTime:decayTime:totalDuration:amplitude:">&ndash;&nbsp;initWithRiseTime:decayTime:totalDuration:amplitude:</a></code>
+    <span class="tooltip"><p>Instantiates the linear <a href="#//api/name/envelope">envelope</a> with all values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
+    <span class="tooltip"><p>Instantiates the linear <a href="#//api/name/envelope">envelope</a> with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/envelope">+&nbsp;envelope</a></code>
+    <span class="tooltip"><p>Instantiates the linear envelope with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/riseTime">&nbsp;&nbsp;riseTime</a></code>
+    <span class="tooltip"><p>Rise time in seconds. A zero or negative value signifies no rise modification. [Default Value: 0.33]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalRiseTime:">&ndash;&nbsp;setOptionalRiseTime:</a></code>
+    <span class="tooltip"><p>Set an optional rise time</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/decayTime">&nbsp;&nbsp;decayTime</a></code>
+    <span class="tooltip"><p>Decay time in seconds. Zero means no decay. If it is greater than the total duration, it will cause a truncated decay. [Default Value: 0.33]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalDecayTime:">&ndash;&nbsp;setOptionalDecayTime:</a></code>
+    <span class="tooltip"><p>Set an optional decay time</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/totalDuration">&nbsp;&nbsp;totalDuration</a></code>
+    <span class="tooltip"><p>Overall duration in seconds. [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalTotalDuration:">&ndash;&nbsp;setOptionalTotalDuration:</a></code>
+    <span class="tooltip"><p>Set an optional total duration</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/amplitude">&nbsp;&nbsp;amplitude</a></code>
+    <span class="tooltip"><p>mplitude to rise to and decay from. [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalAmplitude:">&ndash;&nbsp;setOptionalAmplitude:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p></span>
+  </span>
+  
+  
+</li>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/amplitude" title="amplitude"></a>
+  <h3 class="subsubtitle method-title">amplitude</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>mplitude to rise to and decay from. [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *amplitude</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLinearEnvelope.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/decayTime" title="decayTime"></a>
+  <h3 class="subsubtitle method-title">decayTime</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Decay time in seconds. Zero means no decay. If it is greater than the total duration, it will cause a truncated decay. [Default Value: 0.33]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *decayTime</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLinearEnvelope.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/riseTime" title="riseTime"></a>
+  <h3 class="subsubtitle method-title">riseTime</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Rise time in seconds. A zero or negative value signifies no rise modification. [Default Value: 0.33]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *riseTime</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLinearEnvelope.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/totalDuration" title="totalDuration"></a>
+  <h3 class="subsubtitle method-title">totalDuration</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Overall duration in seconds. [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *totalDuration</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLinearEnvelope.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/envelope" title="envelope"></a>
+  <h3 class="subsubtitle method-title">envelope</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the linear envelope with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)envelope</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLinearEnvelope.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/init" title="init"></a>
+  <h3 class="subsubtitle method-title">init</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the linear <a href="#//api/name/envelope">envelope</a> with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLinearEnvelope.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithRiseTime:decayTime:totalDuration:amplitude:" title="initWithRiseTime:decayTime:totalDuration:amplitude:"></a>
+  <h3 class="subsubtitle method-title">initWithRiseTime:decayTime:totalDuration:amplitude:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the linear <a href="#//api/name/envelope">envelope</a> with all values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithRiseTime:(AKConstant *)<em>riseTime</em> decayTime:(AKConstant *)<em>decayTime</em> totalDuration:(AKConstant *)<em>totalDuration</em> amplitude:(AKParameter *)<em>amplitude</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>riseTime</em></dt>
+      <dd><p>Rise time in seconds. A zero or negative value signifies no rise modification. [Default Value: 0.33]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>decayTime</em></dt>
+      <dd><p>Decay time in seconds. Zero means no decay. If it is greater than the total duration, it will cause a truncated decay. [Default Value: 0.33]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>totalDuration</em></dt>
+      <dd><p>Overall duration in seconds. [Default Value: 1]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>amplitude</em></dt>
+      <dd><p>mplitude to rise to and decay from. Updated at Control-rate. [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLinearEnvelope.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalAmplitude:" title="setOptionalAmplitude:"></a>
+  <h3 class="subsubtitle method-title">setOptionalAmplitude:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalAmplitude:(AKParameter *)<em>amplitude</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>amplitude</em></dt>
+      <dd><p>mplitude to rise to and decay from. Updated at Control-rate. [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLinearEnvelope.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalDecayTime:" title="setOptionalDecayTime:"></a>
+  <h3 class="subsubtitle method-title">setOptionalDecayTime:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional decay time</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalDecayTime:(AKConstant *)<em>decayTime</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>decayTime</em></dt>
+      <dd><p>Decay time in seconds. Zero means no decay. If it is greater than the total duration, it will cause a truncated decay. [Default Value: 0.33]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLinearEnvelope.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalRiseTime:" title="setOptionalRiseTime:"></a>
+  <h3 class="subsubtitle method-title">setOptionalRiseTime:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional rise time</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalRiseTime:(AKConstant *)<em>riseTime</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>riseTime</em></dt>
+      <dd><p>Rise time in seconds. A zero or negative value signifies no rise modification. [Default Value: 0.33]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLinearEnvelope.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalTotalDuration:" title="setOptionalTotalDuration:"></a>
+  <h3 class="subsubtitle method-title">setOptionalTotalDuration:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional total duration</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalTotalDuration:(AKConstant *)<em>totalDuration</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>totalDuration</em></dt>
+      <dd><p>Overall duration in seconds. [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLinearEnvelope.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+          
+        </div>
+      </div>

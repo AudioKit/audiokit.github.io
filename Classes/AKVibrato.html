@@ -15,7 +15,7 @@ title: AKVibrato
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKControl.html">AKControl</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+  <td class="specification-value"><a href="../Classes/AKControl.html">AKControl</a> : <a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKVibrato.h<br />AKVibrato.m</td>
@@ -28,9 +28,9 @@ title: AKVibrato
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Generates a natural-sounding user-controllable vibrato.</p>
+            <p>Generates a natural-sounding user-controllable <a href="#//api/name/vibrato">vibrato</a>.</p>
 
-<p>vibrato outputs a natural-sounding user-controllable vibrato. The concept is to randomly vary both frequency and amplitude of the oscillator generating the vibrato, in order to simulate the irregularities of a real vibrato. In order to have a total control of these random variations, several input arguments are present. Random variations are obtained by two separated segmented lines, the first controlling frequency deviations, the second the amplitude deviations. Average duration of each segment of each line can be shortened or enlarged by the minimum and maximum randomness arguments, and the deviation from the average amplitude and frequency values can be independently adjusted by means of randomness arguments.</p>
+<p>AKVibrato outputs a natural-sounding user-controllable <a href="#//api/name/vibrato">vibrato</a>. The concept is to randomly vary both frequency and amplitude of the oscillator generating the <a href="#//api/name/vibrato">vibrato</a>, in order to simulate the irregularities of a real <a href="#//api/name/vibrato">vibrato</a>. In order to have a total control of these random variations, several input arguments are present. Random variations are obtained by two separated segmented lines, the first controlling frequency deviations, the second the amplitude deviations. Average duration of each segment of each line can be shortened or enlarged by the minimum and maximum randomness arguments, and the deviation from the average amplitude and frequency values can be independently adjusted by means of randomness arguments.</p>
           </div>
           
           
@@ -48,15 +48,162 @@ title: AKVibrato
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithVibratoShapeTable:averageFrequency:frequencyRandomness:minimumFrequencyRandomness:maximumFrequencyRandomness:averageAmplitude:amplitudeDeviation:minimumAmplitudeRandomness:maximumAmplitudeRandomness:">&ndash;&nbsp;initWithVibratoShapeTable:averageFrequency:frequencyRandomness:minimumFrequencyRandomness:maximumFrequencyRandomness:averageAmplitude:amplitudeDeviation:minimumAmplitudeRandomness:maximumAmplitudeRandomness:</a></code>
-    <span class="tooltip"><p>Instantiates the vibrato</p></span>
+    <code><a href="#//api/name/initWithVibratoShapeTable:averageFrequency:frequencyRandomness:minimumFrequencyRandomness:maximumFrequencyRandomness:averageAmplitude:amplitudeDeviation:minimumAmplitudeRandomness:maximumAmplitudeRandomness:phase:">&ndash;&nbsp;initWithVibratoShapeTable:averageFrequency:frequencyRandomness:minimumFrequencyRandomness:maximumFrequencyRandomness:averageAmplitude:amplitudeDeviation:minimumAmplitudeRandomness:maximumAmplitudeRandomness:phase:</a></code>
+    <span class="tooltip"><p>Instantiates the <a href="#//api/name/vibrato">vibrato</a> with all values</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
+    <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
+    <span class="tooltip"><p>Instantiates the <a href="#//api/name/vibrato">vibrato</a> with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/vibrato">+&nbsp;vibrato</a></code>
+    <span class="tooltip"><p>Instantiates the vibrato with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/vibratoShapeTable">&nbsp;&nbsp;vibratoShapeTable</a></code>
+    <span class="tooltip"><p>Vibrato table. It normally contains a sine or a triangle wave. [Default Value: sine]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalVibratoShapeTable:">&ndash;&nbsp;setOptionalVibratoShapeTable:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/vibrato">vibrato</a> shape table</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/averageFrequency">&nbsp;&nbsp;averageFrequency</a></code>
+    <span class="tooltip"><p>Average frequency value of <a href="#//api/name/vibrato">vibrato</a> in Hz [Default Value: 2]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalAverageFrequency:">&ndash;&nbsp;setOptionalAverageFrequency:</a></code>
+    <span class="tooltip"><p>Set an optional average frequency</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/frequencyRandomness">&nbsp;&nbsp;frequencyRandomness</a></code>
+    <span class="tooltip"><p>Amount of random frequency deviation [Default Value: 0]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalFrequencyRandomness:">&ndash;&nbsp;setOptionalFrequencyRandomness:</a></code>
+    <span class="tooltip"><p>Set an optional frequency randomness</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/minimumFrequencyRandomness">&nbsp;&nbsp;minimumFrequencyRandomness</a></code>
+    <span class="tooltip"><p>Minimum frequency of random frequency deviation segments in Hz [Default Value: 0]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalMinimumFrequencyRandomness:">&ndash;&nbsp;setOptionalMinimumFrequencyRandomness:</a></code>
+    <span class="tooltip"><p>Set an optional minimum frequency randomness</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/maximumFrequencyRandomness">&nbsp;&nbsp;maximumFrequencyRandomness</a></code>
+    <span class="tooltip"><p>Maximum frequency of random frequency deviation segments in Hz [Default Value: 60]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalMaximumFrequencyRandomness:">&ndash;&nbsp;setOptionalMaximumFrequencyRandomness:</a></code>
+    <span class="tooltip"><p>Set an optional maximum frequency randomness</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/averageAmplitude">&nbsp;&nbsp;averageAmplitude</a></code>
+    <span class="tooltip"><p>Average amplitude value of <a href="#//api/name/vibrato">vibrato</a>. [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalAverageAmplitude:">&ndash;&nbsp;setOptionalAverageAmplitude:</a></code>
+    <span class="tooltip"><p>Set an optional average amplitude</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/amplitudeDeviation">&nbsp;&nbsp;amplitudeDeviation</a></code>
+    <span class="tooltip"><p>Amount of random amplitude deviation, [Default Value: 0]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalAmplitudeDeviation:">&ndash;&nbsp;setOptionalAmplitudeDeviation:</a></code>
+    <span class="tooltip"><p>Set an optional amplitude deviation</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/minimumAmplitudeRandomness">&nbsp;&nbsp;minimumAmplitudeRandomness</a></code>
+    <span class="tooltip"><p>Minimum frequency of random amplitude deviation segments in Hz [Default Value: 0]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalMinimumAmplitudeRandomness:">&ndash;&nbsp;setOptionalMinimumAmplitudeRandomness:</a></code>
+    <span class="tooltip"><p>Set an optional minimum amplitude randomness</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/maximumAmplitudeRandomness">&nbsp;&nbsp;maximumAmplitudeRandomness</a></code>
+    <span class="tooltip"><p>Maximum frequency of random amplitude deviation segments in Hz [Default Value: 0]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalMaximumAmplitudeRandomness:">&ndash;&nbsp;setOptionalMaximumAmplitudeRandomness:</a></code>
+    <span class="tooltip"><p>Set an optional maximum amplitude randomness</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/phase">&nbsp;&nbsp;phase</a></code>
+    <span class="tooltip"><p>Initial phase of table, expressed as a fraction of a cycle (0 to 1). [Default Value: 0]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
     <code><a href="#//api/name/setOptionalPhase:">&ndash;&nbsp;setOptionalPhase:</a></code>
-    <span class="tooltip"><p>Set an optional phase</p></span>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/phase">phase</a></p></span>
   </span>
   
   
@@ -69,7 +216,415 @@ title: AKVibrato
 
           
           
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/amplitudeDeviation" title="amplitudeDeviation"></a>
+  <h3 class="subsubtitle method-title">amplitudeDeviation</h3>
 
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Amount of random amplitude deviation, [Default Value: 0]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *amplitudeDeviation</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVibrato.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/averageAmplitude" title="averageAmplitude"></a>
+  <h3 class="subsubtitle method-title">averageAmplitude</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Average amplitude value of <a href="#//api/name/vibrato">vibrato</a>. [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *averageAmplitude</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVibrato.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/averageFrequency" title="averageFrequency"></a>
+  <h3 class="subsubtitle method-title">averageFrequency</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Average frequency value of <a href="#//api/name/vibrato">vibrato</a> in Hz [Default Value: 2]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *averageFrequency</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVibrato.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/frequencyRandomness" title="frequencyRandomness"></a>
+  <h3 class="subsubtitle method-title">frequencyRandomness</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Amount of random frequency deviation [Default Value: 0]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *frequencyRandomness</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVibrato.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/maximumAmplitudeRandomness" title="maximumAmplitudeRandomness"></a>
+  <h3 class="subsubtitle method-title">maximumAmplitudeRandomness</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Maximum frequency of random amplitude deviation segments in Hz [Default Value: 0]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *maximumAmplitudeRandomness</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVibrato.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/maximumFrequencyRandomness" title="maximumFrequencyRandomness"></a>
+  <h3 class="subsubtitle method-title">maximumFrequencyRandomness</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Maximum frequency of random frequency deviation segments in Hz [Default Value: 60]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *maximumFrequencyRandomness</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVibrato.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/minimumAmplitudeRandomness" title="minimumAmplitudeRandomness"></a>
+  <h3 class="subsubtitle method-title">minimumAmplitudeRandomness</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Minimum frequency of random amplitude deviation segments in Hz [Default Value: 0]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *minimumAmplitudeRandomness</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVibrato.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/minimumFrequencyRandomness" title="minimumFrequencyRandomness"></a>
+  <h3 class="subsubtitle method-title">minimumFrequencyRandomness</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Minimum frequency of random frequency deviation segments in Hz [Default Value: 0]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *minimumFrequencyRandomness</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVibrato.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/phase" title="phase"></a>
+  <h3 class="subsubtitle method-title">phase</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Initial phase of table, expressed as a fraction of a cycle (0 to 1). [Default Value: 0]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *phase</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVibrato.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/vibratoShapeTable" title="vibratoShapeTable"></a>
+  <h3 class="subsubtitle method-title">vibratoShapeTable</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Vibrato table. It normally contains a sine or a triangle wave. [Default Value: sine]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKFunctionTable *vibratoShapeTable</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVibrato.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/vibrato" title="vibrato"></a>
+  <h3 class="subsubtitle method-title">vibrato</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the vibrato with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)vibrato</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVibrato.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
           
 
           
@@ -78,18 +633,54 @@ title: AKVibrato
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithVibratoShapeTable:averageFrequency:frequencyRandomness:minimumFrequencyRandomness:maximumFrequencyRandomness:averageAmplitude:amplitudeDeviation:minimumAmplitudeRandomness:maximumAmplitudeRandomness:" title="initWithVibratoShapeTable:averageFrequency:frequencyRandomness:minimumFrequencyRandomness:maximumFrequencyRandomness:averageAmplitude:amplitudeDeviation:minimumAmplitudeRandomness:maximumAmplitudeRandomness:"></a>
-  <h3 class="subsubtitle method-title">initWithVibratoShapeTable:averageFrequency:frequencyRandomness:minimumFrequencyRandomness:maximumFrequencyRandomness:averageAmplitude:amplitudeDeviation:minimumAmplitudeRandomness:maximumAmplitudeRandomness:</h3>
+  <a name="//api/name/init" title="init"></a>
+  <h3 class="subsubtitle method-title">init</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the vibrato</p>
+    <p>Instantiates the <a href="#//api/name/vibrato">vibrato</a> with default values</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithVibratoShapeTable:(AKFTable *)<em>vibratoShapeTable</em> averageFrequency:(AKControl *)<em>averageFrequency</em> frequencyRandomness:(AKControl *)<em>frequencyRandomness</em> minimumFrequencyRandomness:(AKControl *)<em>minimumFrequencyRandomness</em> maximumFrequencyRandomness:(AKControl *)<em>maximumFrequencyRandomness</em> averageAmplitude:(AKControl *)<em>averageAmplitude</em> amplitudeDeviation:(AKControl *)<em>amplitudeDeviation</em> minimumAmplitudeRandomness:(AKControl *)<em>minimumAmplitudeRandomness</em> maximumAmplitudeRandomness:(AKControl *)<em>maximumAmplitudeRandomness</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVibrato.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithVibratoShapeTable:averageFrequency:frequencyRandomness:minimumFrequencyRandomness:maximumFrequencyRandomness:averageAmplitude:amplitudeDeviation:minimumAmplitudeRandomness:maximumAmplitudeRandomness:phase:" title="initWithVibratoShapeTable:averageFrequency:frequencyRandomness:minimumFrequencyRandomness:maximumFrequencyRandomness:averageAmplitude:amplitudeDeviation:minimumAmplitudeRandomness:maximumAmplitudeRandomness:phase:"></a>
+  <h3 class="subsubtitle method-title">initWithVibratoShapeTable:averageFrequency:frequencyRandomness:minimumFrequencyRandomness:maximumFrequencyRandomness:averageAmplitude:amplitudeDeviation:minimumAmplitudeRandomness:maximumAmplitudeRandomness:phase:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the <a href="#//api/name/vibrato">vibrato</a> with all values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithVibratoShapeTable:(AKFunctionTable *)<em>vibratoShapeTable</em> averageFrequency:(AKParameter *)<em>averageFrequency</em> frequencyRandomness:(AKParameter *)<em>frequencyRandomness</em> minimumFrequencyRandomness:(AKParameter *)<em>minimumFrequencyRandomness</em> maximumFrequencyRandomness:(AKParameter *)<em>maximumFrequencyRandomness</em> averageAmplitude:(AKParameter *)<em>averageAmplitude</em> amplitudeDeviation:(AKParameter *)<em>amplitudeDeviation</em> minimumAmplitudeRandomness:(AKParameter *)<em>minimumAmplitudeRandomness</em> maximumAmplitudeRandomness:(AKParameter *)<em>maximumAmplitudeRandomness</em> phase:(AKConstant *)<em>phase</em></code></div>
 
     
   
@@ -98,47 +689,420 @@ title: AKVibrato
     
     <dl class="argument-def parameter-def">
       <dt><em>vibratoShapeTable</em></dt>
-      <dd><p>Vibrato table. It normally contains a sine or a triangle wave.</p></dd>
+      <dd><p>Vibrato table. It normally contains a sine or a triangle wave. [Default Value: sine]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>averageFrequency</em></dt>
-      <dd><p>Average frequency value of vibrato in Hz</p></dd>
+      <dd><p>Average frequency value of <a href="#//api/name/vibrato">vibrato</a> in Hz Updated at Control-rate. [Default Value: 2]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>frequencyRandomness</em></dt>
-      <dd><p>Amount of random frequency deviation</p></dd>
+      <dd><p>Amount of random frequency deviation Updated at Control-rate. [Default Value: 0]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>minimumFrequencyRandomness</em></dt>
-      <dd><p>Minimum frequency of random frequency deviation segments in Hz</p></dd>
+      <dd><p>Minimum frequency of random frequency deviation segments in Hz Updated at Control-rate. [Default Value: 0]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>maximumFrequencyRandomness</em></dt>
-      <dd><p>Maximum frequency of random frequency deviation segments in Hz</p></dd>
+      <dd><p>Maximum frequency of random frequency deviation segments in Hz Updated at Control-rate. [Default Value: 60]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>averageAmplitude</em></dt>
-      <dd><p>Average amplitude value of vibrato.</p></dd>
+      <dd><p>Average amplitude value of <a href="#//api/name/vibrato">vibrato</a>. Updated at Control-rate. [Default Value: 1]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>amplitudeDeviation</em></dt>
-      <dd><p>Amount of random amplitude deviation,</p></dd>
+      <dd><p>Amount of random amplitude deviation, Updated at Control-rate. [Default Value: 0]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>minimumAmplitudeRandomness</em></dt>
-      <dd><p>Minimum frequency of random amplitude deviation segments in Hz</p></dd>
+      <dd><p>Minimum frequency of random amplitude deviation segments in Hz Updated at Control-rate. [Default Value: 0]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>maximumAmplitudeRandomness</em></dt>
-      <dd><p>Maximum frequency of random amplitude deviation segments in Hz</p></dd>
+      <dd><p>Maximum frequency of random amplitude deviation segments in Hz Updated at Control-rate. [Default Value: 0]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>phase</em></dt>
+      <dd><p>Initial <a href="#//api/name/phase">phase</a> of table, expressed as a fraction of a cycle (0 to 1). [Default Value: 0]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVibrato.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalAmplitudeDeviation:" title="setOptionalAmplitudeDeviation:"></a>
+  <h3 class="subsubtitle method-title">setOptionalAmplitudeDeviation:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional amplitude deviation</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalAmplitudeDeviation:(AKParameter *)<em>amplitudeDeviation</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>amplitudeDeviation</em></dt>
+      <dd><p>Amount of random amplitude deviation, Updated at Control-rate. [Default Value: 0]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVibrato.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalAverageAmplitude:" title="setOptionalAverageAmplitude:"></a>
+  <h3 class="subsubtitle method-title">setOptionalAverageAmplitude:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional average amplitude</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalAverageAmplitude:(AKParameter *)<em>averageAmplitude</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>averageAmplitude</em></dt>
+      <dd><p>Average amplitude value of <a href="#//api/name/vibrato">vibrato</a>. Updated at Control-rate. [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVibrato.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalAverageFrequency:" title="setOptionalAverageFrequency:"></a>
+  <h3 class="subsubtitle method-title">setOptionalAverageFrequency:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional average frequency</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalAverageFrequency:(AKParameter *)<em>averageFrequency</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>averageFrequency</em></dt>
+      <dd><p>Average frequency value of <a href="#//api/name/vibrato">vibrato</a> in Hz Updated at Control-rate. [Default Value: 2]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVibrato.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalFrequencyRandomness:" title="setOptionalFrequencyRandomness:"></a>
+  <h3 class="subsubtitle method-title">setOptionalFrequencyRandomness:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional frequency randomness</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalFrequencyRandomness:(AKParameter *)<em>frequencyRandomness</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>frequencyRandomness</em></dt>
+      <dd><p>Amount of random frequency deviation Updated at Control-rate. [Default Value: 0]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVibrato.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalMaximumAmplitudeRandomness:" title="setOptionalMaximumAmplitudeRandomness:"></a>
+  <h3 class="subsubtitle method-title">setOptionalMaximumAmplitudeRandomness:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional maximum amplitude randomness</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalMaximumAmplitudeRandomness:(AKParameter *)<em>maximumAmplitudeRandomness</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>maximumAmplitudeRandomness</em></dt>
+      <dd><p>Maximum frequency of random amplitude deviation segments in Hz Updated at Control-rate. [Default Value: 0]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVibrato.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalMaximumFrequencyRandomness:" title="setOptionalMaximumFrequencyRandomness:"></a>
+  <h3 class="subsubtitle method-title">setOptionalMaximumFrequencyRandomness:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional maximum frequency randomness</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalMaximumFrequencyRandomness:(AKParameter *)<em>maximumFrequencyRandomness</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>maximumFrequencyRandomness</em></dt>
+      <dd><p>Maximum frequency of random frequency deviation segments in Hz Updated at Control-rate. [Default Value: 60]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVibrato.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalMinimumAmplitudeRandomness:" title="setOptionalMinimumAmplitudeRandomness:"></a>
+  <h3 class="subsubtitle method-title">setOptionalMinimumAmplitudeRandomness:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional minimum amplitude randomness</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalMinimumAmplitudeRandomness:(AKParameter *)<em>minimumAmplitudeRandomness</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>minimumAmplitudeRandomness</em></dt>
+      <dd><p>Minimum frequency of random amplitude deviation segments in Hz Updated at Control-rate. [Default Value: 0]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVibrato.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalMinimumFrequencyRandomness:" title="setOptionalMinimumFrequencyRandomness:"></a>
+  <h3 class="subsubtitle method-title">setOptionalMinimumFrequencyRandomness:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional minimum frequency randomness</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalMinimumFrequencyRandomness:(AKParameter *)<em>minimumFrequencyRandomness</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>minimumFrequencyRandomness</em></dt>
+      <dd><p>Minimum frequency of random frequency deviation segments in Hz Updated at Control-rate. [Default Value: 0]</p></dd>
     </dl>
     
   </div>
@@ -170,7 +1134,7 @@ title: AKVibrato
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional phase</p>
+    <p>Set an optional <a href="#//api/name/phase">phase</a></p>
   </div>
   
     
@@ -184,7 +1148,53 @@ title: AKVibrato
     
     <dl class="argument-def parameter-def">
       <dt><em>phase</em></dt>
-      <dd><p>Initial phase of table, expressed as a fraction of a cycle (0 to 1).</p></dd>
+      <dd><p>Initial <a href="#//api/name/phase">phase</a> of table, expressed as a fraction of a cycle (0 to 1). [Default Value: 0]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVibrato.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalVibratoShapeTable:" title="setOptionalVibratoShapeTable:"></a>
+  <h3 class="subsubtitle method-title">setOptionalVibratoShapeTable:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional <a href="#//api/name/vibrato">vibrato</a> shape table</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalVibratoShapeTable:(AKFunctionTable *)<em>vibratoShapeTable</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>vibratoShapeTable</em></dt>
+      <dd><p>Vibrato table. It normally contains a sine or a triangle wave. [Default Value: sine]</p></dd>
     </dl>
     
   </div>

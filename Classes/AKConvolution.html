@@ -28,7 +28,7 @@ title: AKConvolution
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>  Convolution based on a uniformly partitioned overlap-save algorithm.</p>
+            <p>Convolution based on a uniformly partitioned overlap-save algorithm.</p>
           </div>
           
           
@@ -46,8 +46,15 @@ title: AKConvolution
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithAudioSource:impulseResponseFile:">&ndash;&nbsp;initWithAudioSource:impulseResponseFile:</a></code>
-    <span class="tooltip"><p>Create a convolution</p></span>
+    <code><a href="#//api/name/initWithInput:impulseResponseFilename:">&ndash;&nbsp;initWithInput:impulseResponseFilename:</a></code>
+    <span class="tooltip"><p>Instantiates the convolution with all values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/convolutionWithInput:impulseResponseFilename:">+&nbsp;convolutionWithInput:impulseResponseFilename:</a></code>
+    <span class="tooltip"><p>Instantiates the convolution with default values</p></span>
   </span>
   
   
@@ -62,25 +69,23 @@ title: AKConvolution
           
 
           
-
-          
           <div class="section section-methods">
-            <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithAudioSource:impulseResponseFile:" title="initWithAudioSource:impulseResponseFile:"></a>
-  <h3 class="subsubtitle method-title">initWithAudioSource:impulseResponseFile:</h3>
+  <a name="//api/name/convolutionWithInput:impulseResponseFilename:" title="convolutionWithInput:impulseResponseFilename:"></a>
+  <h3 class="subsubtitle method-title">convolutionWithInput:impulseResponseFilename:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Create a convolution</p>
+    <p>Instantiates the convolution with default values</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKAudio *)<em>audioSource</em> impulseResponseFile:(NSString *)<em>impulseResponseFilename</em></code></div>
+  <div class="method-subsection method-declaration"><code>+ (instancetype)convolutionWithInput:(AKParameter *)<em>input</em> impulseResponseFilename:(NSString *)<em>impulseResponseFilename</em></code></div>
 
     
   
@@ -88,13 +93,72 @@ title: AKConvolution
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>audioSource</em></dt>
-      <dd><p>Audio input to the convolution</p></dd>
+      <dt><em>input</em></dt>
+      <dd><p>Input to the convolution, usually audio.</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>impulseResponseFilename</em></dt>
-      <dd><p>Impulse response file. Multichannel files are supported, the file must have the same sample-rate as the orchestra.  Keep in mind that longer files require more calculation time [and probably larger partition sizes and more latency]. At current processor speeds, files longer than a few seconds may not render in real-time.</p></dd>
+      <dd><p>File contain the impulse response audio.  Usually a very short impulse sound.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKConvolution.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithInput:impulseResponseFilename:" title="initWithInput:impulseResponseFilename:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:impulseResponseFilename:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the convolution with all values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> impulseResponseFilename:(NSString *)<em>impulseResponseFilename</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>Input to the convolution, usually audio. [Default Value: ]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>impulseResponseFilename</em></dt>
+      <dd><p>File contain the impulse response audio.  Usually a very short impulse sound. [Default Value: ]</p></dd>
     </dl>
     
   </div>

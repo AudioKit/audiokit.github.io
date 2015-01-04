@@ -48,15 +48,120 @@ title: AKBallWithinTheBoxReverb
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithLengthOfXAxisEdge:lengthOfYAxisEdge:lengthOfZAxisEdge:xLocation:yLocation:zLocation:audioSource:">&ndash;&nbsp;initWithLengthOfXAxisEdge:lengthOfYAxisEdge:lengthOfZAxisEdge:xLocation:yLocation:zLocation:audioSource:</a></code>
-    <span class="tooltip"><p>Instantiates the ball within the box reverb</p></span>
+    <code><a href="#//api/name/initWithInput:lengthOfXAxisEdge:lengthOfYAxisEdge:lengthOfZAxisEdge:xLocation:yLocation:zLocation:diffusion:">&ndash;&nbsp;initWithInput:lengthOfXAxisEdge:lengthOfYAxisEdge:lengthOfZAxisEdge:xLocation:yLocation:zLocation:diffusion:</a></code>
+    <span class="tooltip"><p>Instantiates the ball within the box reverb with all values</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
+    <code><a href="#//api/name/initWithInput:">&ndash;&nbsp;initWithInput:</a></code>
+    <span class="tooltip"><p>Instantiates the ball within the box reverb with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/reverbWithInput:">+&nbsp;reverbWithInput:</a></code>
+    <span class="tooltip"><p>Instantiates the ball within the box reverb with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/lengthOfXAxisEdge">&nbsp;&nbsp;lengthOfXAxisEdge</a></code>
+    <span class="tooltip"><p>Length of x-axis edge of the box in meters. [Default Value: 14.39]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalLengthOfXAxisEdge:">&ndash;&nbsp;setOptionalLengthOfXAxisEdge:</a></code>
+    <span class="tooltip"><p>Set an optional length of x axis edge</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/lengthOfYAxisEdge">&nbsp;&nbsp;lengthOfYAxisEdge</a></code>
+    <span class="tooltip"><p>Length of y-axis edge of the box in meters. [Default Value: 11.86]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalLengthOfYAxisEdge:">&ndash;&nbsp;setOptionalLengthOfYAxisEdge:</a></code>
+    <span class="tooltip"><p>Set an optional length of y axis edge</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/lengthOfZAxisEdge">&nbsp;&nbsp;lengthOfZAxisEdge</a></code>
+    <span class="tooltip"><p>Length of z-axis edge of the box in meters. [Default Value: 10]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalLengthOfZAxisEdge:">&ndash;&nbsp;setOptionalLengthOfZAxisEdge:</a></code>
+    <span class="tooltip"><p>Set an optional length of z axis edge</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/xLocation">&nbsp;&nbsp;xLocation</a></code>
+    <span class="tooltip"><p>The virtual x-coordinate of the source of sound (the input signal). [Default Value: 6]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalXLocation:">&ndash;&nbsp;setOptionalXLocation:</a></code>
+    <span class="tooltip"><p>Set an optional x location</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/yLocation">&nbsp;&nbsp;yLocation</a></code>
+    <span class="tooltip"><p>The virtual y-coordinate of the source of sound (the input signal). [Default Value: 4]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalYLocation:">&ndash;&nbsp;setOptionalYLocation:</a></code>
+    <span class="tooltip"><p>Set an optional y location</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/zLocation">&nbsp;&nbsp;zLocation</a></code>
+    <span class="tooltip"><p>The virtual z-coordinate of the source of sound (the input signal). [Default Value: 3]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalZLocation:">&ndash;&nbsp;setOptionalZLocation:</a></code>
+    <span class="tooltip"><p>Set an optional z location</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/diffusion">&nbsp;&nbsp;diffusion</a></code>
+    <span class="tooltip"><p>Coefficient of diffusion at the walls, which regulates the amount of diffusion (0-1, where 0 = no diffusion, 1 = maximum diffusion, default= 1) [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
     <code><a href="#//api/name/setOptionalDiffusion:">&ndash;&nbsp;setOptionalDiffusion:</a></code>
-    <span class="tooltip"><p>Set an optional diffusion</p></span>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/diffusion">diffusion</a></p></span>
   </span>
   
   
@@ -69,7 +174,317 @@ title: AKBallWithinTheBoxReverb
 
           
           
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/diffusion" title="diffusion"></a>
+  <h3 class="subsubtitle method-title">diffusion</h3>
 
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Coefficient of diffusion at the walls, which regulates the amount of diffusion (0-1, where 0 = no diffusion, 1 = maximum diffusion, default= 1) [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *diffusion</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKBallWithinTheBoxReverb.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/lengthOfXAxisEdge" title="lengthOfXAxisEdge"></a>
+  <h3 class="subsubtitle method-title">lengthOfXAxisEdge</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Length of x-axis edge of the box in meters. [Default Value: 14.39]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *lengthOfXAxisEdge</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKBallWithinTheBoxReverb.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/lengthOfYAxisEdge" title="lengthOfYAxisEdge"></a>
+  <h3 class="subsubtitle method-title">lengthOfYAxisEdge</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Length of y-axis edge of the box in meters. [Default Value: 11.86]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *lengthOfYAxisEdge</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKBallWithinTheBoxReverb.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/lengthOfZAxisEdge" title="lengthOfZAxisEdge"></a>
+  <h3 class="subsubtitle method-title">lengthOfZAxisEdge</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Length of z-axis edge of the box in meters. [Default Value: 10]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *lengthOfZAxisEdge</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKBallWithinTheBoxReverb.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/xLocation" title="xLocation"></a>
+  <h3 class="subsubtitle method-title">xLocation</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>The virtual x-coordinate of the source of sound (the input signal). [Default Value: 6]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *xLocation</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKBallWithinTheBoxReverb.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/yLocation" title="yLocation"></a>
+  <h3 class="subsubtitle method-title">yLocation</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>The virtual y-coordinate of the source of sound (the input signal). [Default Value: 4]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *yLocation</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKBallWithinTheBoxReverb.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/zLocation" title="zLocation"></a>
+  <h3 class="subsubtitle method-title">zLocation</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>The virtual z-coordinate of the source of sound (the input signal). [Default Value: 3]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *zLocation</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKBallWithinTheBoxReverb.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/reverbWithInput:" title="reverbWithInput:"></a>
+  <h3 class="subsubtitle method-title">reverbWithInput:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the ball within the box reverb with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)reverbWithInput:(AKParameter *)<em>input</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>The input audio signal.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKBallWithinTheBoxReverb.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
           
 
           
@@ -78,18 +493,18 @@ title: AKBallWithinTheBoxReverb
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithLengthOfXAxisEdge:lengthOfYAxisEdge:lengthOfZAxisEdge:xLocation:yLocation:zLocation:audioSource:" title="initWithLengthOfXAxisEdge:lengthOfYAxisEdge:lengthOfZAxisEdge:xLocation:yLocation:zLocation:audioSource:"></a>
-  <h3 class="subsubtitle method-title">initWithLengthOfXAxisEdge:lengthOfYAxisEdge:lengthOfZAxisEdge:xLocation:yLocation:zLocation:audioSource:</h3>
+  <a name="//api/name/initWithInput:" title="initWithInput:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the ball within the box reverb</p>
+    <p>Instantiates the ball within the box reverb with default values</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithLengthOfXAxisEdge:(AKConstant *)<em>lengthOfXAxisEdge</em> lengthOfYAxisEdge:(AKConstant *)<em>lengthOfYAxisEdge</em> lengthOfZAxisEdge:(AKConstant *)<em>lengthOfZAxisEdge</em> xLocation:(AKControl *)<em>xLocation</em> yLocation:(AKControl *)<em>yLocation</em> zLocation:(AKControl *)<em>zLocation</em> audioSource:(AKAudio *)<em>audioSource</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em></code></div>
 
     
   
@@ -97,38 +512,89 @@ title: AKBallWithinTheBoxReverb
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>The input audio signal.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKBallWithinTheBoxReverb.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithInput:lengthOfXAxisEdge:lengthOfYAxisEdge:lengthOfZAxisEdge:xLocation:yLocation:zLocation:diffusion:" title="initWithInput:lengthOfXAxisEdge:lengthOfYAxisEdge:lengthOfZAxisEdge:xLocation:yLocation:zLocation:diffusion:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:lengthOfXAxisEdge:lengthOfYAxisEdge:lengthOfZAxisEdge:xLocation:yLocation:zLocation:diffusion:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the ball within the box reverb with all values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> lengthOfXAxisEdge:(AKConstant *)<em>lengthOfXAxisEdge</em> lengthOfYAxisEdge:(AKConstant *)<em>lengthOfYAxisEdge</em> lengthOfZAxisEdge:(AKConstant *)<em>lengthOfZAxisEdge</em> xLocation:(AKParameter *)<em>xLocation</em> yLocation:(AKParameter *)<em>yLocation</em> zLocation:(AKParameter *)<em>zLocation</em> diffusion:(AKConstant *)<em>diffusion</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>The input audio signal. [Default Value: ]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
       <dt><em>lengthOfXAxisEdge</em></dt>
-      <dd><p>Length of x-axis edge of the box in meters.</p></dd>
+      <dd><p>Length of x-axis edge of the box in meters. [Default Value: 14.39]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>lengthOfYAxisEdge</em></dt>
-      <dd><p>Length of y-axis edge of the box in meters.</p></dd>
+      <dd><p>Length of y-axis edge of the box in meters. [Default Value: 11.86]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>lengthOfZAxisEdge</em></dt>
-      <dd><p>Length of z-axis edge of the box in meters.</p></dd>
+      <dd><p>Length of z-axis edge of the box in meters. [Default Value: 10]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>xLocation</em></dt>
-      <dd><p>The virtual x-coordinate of the source of sound (the input signal).</p></dd>
+      <dd><p>The virtual x-coordinate of the source of sound (the input signal). Updated at Control-rate. [Default Value: 6]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>yLocation</em></dt>
-      <dd><p>The virtual y-coordinate of the source of sound (the input signal).</p></dd>
+      <dd><p>The virtual y-coordinate of the source of sound (the input signal). Updated at Control-rate. [Default Value: 4]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>zLocation</em></dt>
-      <dd><p>The virtual z-coordinate of the source of sound (the input signal).</p></dd>
+      <dd><p>The virtual z-coordinate of the source of sound (the input signal). Updated at Control-rate. [Default Value: 3]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
-      <dt><em>audioSource</em></dt>
-      <dd><p>The input signal</p></dd>
+      <dt><em>diffusion</em></dt>
+      <dd><p>Coefficient of <a href="#//api/name/diffusion">diffusion</a> at the walls, which regulates the amount of <a href="#//api/name/diffusion">diffusion</a> (0-1, where 0 = no <a href="#//api/name/diffusion">diffusion</a>, 1 = maximum <a href="#//api/name/diffusion">diffusion</a>, default= 1) [Default Value: 1]</p></dd>
     </dl>
     
   </div>
@@ -160,7 +626,7 @@ title: AKBallWithinTheBoxReverb
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional diffusion</p>
+    <p>Set an optional <a href="#//api/name/diffusion">diffusion</a></p>
   </div>
   
     
@@ -174,7 +640,283 @@ title: AKBallWithinTheBoxReverb
     
     <dl class="argument-def parameter-def">
       <dt><em>diffusion</em></dt>
-      <dd><p>Coefficient of diffusion at the walls, which regulates the amount of diffusion (0-1, where 0 = no diffusion, 1 = maximum diffusion, default= 1)</p></dd>
+      <dd><p>Coefficient of <a href="#//api/name/diffusion">diffusion</a> at the walls, which regulates the amount of <a href="#//api/name/diffusion">diffusion</a> (0-1, where 0 = no <a href="#//api/name/diffusion">diffusion</a>, 1 = maximum <a href="#//api/name/diffusion">diffusion</a>, default= 1) [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKBallWithinTheBoxReverb.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalLengthOfXAxisEdge:" title="setOptionalLengthOfXAxisEdge:"></a>
+  <h3 class="subsubtitle method-title">setOptionalLengthOfXAxisEdge:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional length of x axis edge</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalLengthOfXAxisEdge:(AKConstant *)<em>lengthOfXAxisEdge</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>lengthOfXAxisEdge</em></dt>
+      <dd><p>Length of x-axis edge of the box in meters. [Default Value: 14.39]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKBallWithinTheBoxReverb.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalLengthOfYAxisEdge:" title="setOptionalLengthOfYAxisEdge:"></a>
+  <h3 class="subsubtitle method-title">setOptionalLengthOfYAxisEdge:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional length of y axis edge</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalLengthOfYAxisEdge:(AKConstant *)<em>lengthOfYAxisEdge</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>lengthOfYAxisEdge</em></dt>
+      <dd><p>Length of y-axis edge of the box in meters. [Default Value: 11.86]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKBallWithinTheBoxReverb.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalLengthOfZAxisEdge:" title="setOptionalLengthOfZAxisEdge:"></a>
+  <h3 class="subsubtitle method-title">setOptionalLengthOfZAxisEdge:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional length of z axis edge</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalLengthOfZAxisEdge:(AKConstant *)<em>lengthOfZAxisEdge</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>lengthOfZAxisEdge</em></dt>
+      <dd><p>Length of z-axis edge of the box in meters. [Default Value: 10]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKBallWithinTheBoxReverb.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalXLocation:" title="setOptionalXLocation:"></a>
+  <h3 class="subsubtitle method-title">setOptionalXLocation:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional x location</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalXLocation:(AKParameter *)<em>xLocation</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>xLocation</em></dt>
+      <dd><p>The virtual x-coordinate of the source of sound (the input signal). Updated at Control-rate. [Default Value: 6]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKBallWithinTheBoxReverb.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalYLocation:" title="setOptionalYLocation:"></a>
+  <h3 class="subsubtitle method-title">setOptionalYLocation:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional y location</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalYLocation:(AKParameter *)<em>yLocation</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>yLocation</em></dt>
+      <dd><p>The virtual y-coordinate of the source of sound (the input signal). Updated at Control-rate. [Default Value: 4]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKBallWithinTheBoxReverb.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalZLocation:" title="setOptionalZLocation:"></a>
+  <h3 class="subsubtitle method-title">setOptionalZLocation:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional z location</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalZLocation:(AKParameter *)<em>zLocation</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>zLocation</em></dt>
+      <dd><p>The virtual z-coordinate of the source of sound (the input signal). Updated at Control-rate. [Default Value: 3]</p></dd>
     </dl>
     
   </div>

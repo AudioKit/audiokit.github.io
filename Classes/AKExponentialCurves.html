@@ -1,0 +1,239 @@
+---
+layout: docs
+title: AKExponentialCurves
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKExponentialCurves</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKFunctionTable.html">AKFunctionTable</a> : <a href="../Classes/AKConstant.html">AKConstant</a> : <a href="../Classes/AKControl.html">AKControl</a> : <a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKExponentialCurves.h<br />AKExponentialCurves.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>Constructs functions from segments of exponential curves.</p>
+
+<p>Ordinate values, in odd-numbered parts of the array, must be nonzero and must be alike in sign.</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            
+
+            <ul class="task-list">
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithValue:">&ndash;&nbsp;initWithValue:</a></code>
+    <span class="tooltip"><p>Start the exponential curves at a specific value</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/addValue:atIndex:">&ndash;&nbsp;addValue:atIndex:</a></code>
+    <span class="tooltip"><p>Add a junction point</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/appendValue:afterNumberOfElements:">&ndash;&nbsp;appendValue:afterNumberOfElements:</a></code>
+    <span class="tooltip"><p>Add a junction point</p></span>
+  </span>
+  
+  
+</li>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/addValue:atIndex:" title="addValue:atIndex:"></a>
+  <h3 class="subsubtitle method-title">addValue:atIndex:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Add a junction point</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)addValue:(float)<em>value</em> atIndex:(int)<em>index</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>value</em></dt>
+      <dd><p>The value at the given index</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>index</em></dt>
+      <dd><p>The index at which the value will be set</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKExponentialCurves.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/appendValue:afterNumberOfElements:" title="appendValue:afterNumberOfElements:"></a>
+  <h3 class="subsubtitle method-title">appendValue:afterNumberOfElements:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Add a junction point</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)appendValue:(float)<em>value</em> afterNumberOfElements:(int)<em>numberOfElements</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>value</em></dt>
+      <dd><p>The value at the given index</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>numberOfElements</em></dt>
+      <dd><p>The index at which the value will be set</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKExponentialCurves.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithValue:" title="initWithValue:"></a>
+  <h3 class="subsubtitle method-title">initWithValue:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Start the exponential curves at a specific value</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithValue:(float)<em>value</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>value</em></dt>
+      <dd><p>Initial value of the the first line segment</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKExponentialCurves.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+          
+        </div>
+      </div>

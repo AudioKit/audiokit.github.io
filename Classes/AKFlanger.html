@@ -30,8 +30,7 @@ title: AKFlanger
             <h2 class="subtitle subtitle-overview">Overview</h2>
             <p>Flange effect</p>
 
-<p>This is useful for generating choruses and flangers. The delay must be varied at
-audio-rate.</p>
+<p>This is useful for generating choruses and flangers. The delay must be varied at audio-rate connecting delay to an oscillator output.</p>
           </div>
           
           
@@ -49,8 +48,36 @@ audio-rate.</p>
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithSourceSignal:delayTime:feedback:">&ndash;&nbsp;initWithSourceSignal:delayTime:feedback:</a></code>
-    <span class="tooltip"><p>Instantiates the flanger</p></span>
+    <code><a href="#//api/name/initWithInput:delayTime:feedback:">&ndash;&nbsp;initWithInput:delayTime:feedback:</a></code>
+    <span class="tooltip"><p>Instantiates the flanger with all values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithInput:delayTime:">&ndash;&nbsp;initWithInput:delayTime:</a></code>
+    <span class="tooltip"><p>Instantiates the flanger with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/effectWithInput:delayTime:">+&nbsp;effectWithInput:delayTime:</a></code>
+    <span class="tooltip"><p>Instantiates the flanger with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/feedback">&nbsp;&nbsp;feedback</a></code>
+    <span class="tooltip"><p>Feedback amount (in normal tasks this should not exceed 1, even if bigger values are allowed) [Default Value: 0]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalFeedback:">&ndash;&nbsp;setOptionalFeedback:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/feedback">feedback</a></p></span>
   </span>
   
   
@@ -63,27 +90,67 @@ audio-rate.</p>
 
           
           
-
-          
-
-          
           <div class="section section-methods">
-            <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithSourceSignal:delayTime:feedback:" title="initWithSourceSignal:delayTime:feedback:"></a>
-  <h3 class="subsubtitle method-title">initWithSourceSignal:delayTime:feedback:</h3>
+  <a name="//api/name/feedback" title="feedback"></a>
+  <h3 class="subsubtitle method-title">feedback</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the flanger</p>
+    <p>Feedback amount (in normal tasks this should not exceed 1, even if bigger values are allowed) [Default Value: 0]</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithSourceSignal:(AKAudio *)<em>sourceSignal</em> delayTime:(AKAudio *)<em>delayTime</em> feedback:(AKControl *)<em>feedback</em></code></div>
+  <div class="method-subsection method-declaration"><code>@property AKParameter *feedback</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFlanger.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/effectWithInput:delayTime:" title="effectWithInput:delayTime:"></a>
+  <h3 class="subsubtitle method-title">effectWithInput:delayTime:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the flanger with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)effectWithInput:(AKParameter *)<em>input</em> delayTime:(AKParameter *)<em>delayTime</em></code></div>
 
     
   
@@ -91,7 +158,7 @@ audio-rate.</p>
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>sourceSignal</em></dt>
+      <dt><em>input</em></dt>
       <dd><p>Input signal.</p></dd>
     </dl>
     
@@ -100,9 +167,165 @@ audio-rate.</p>
       <dd><p>Delay in seconds</p></dd>
     </dl>
     
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFlanger.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithInput:delayTime:" title="initWithInput:delayTime:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:delayTime:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the flanger with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> delayTime:(AKParameter *)<em>delayTime</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>Input signal.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>delayTime</em></dt>
+      <dd><p>Delay in seconds</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFlanger.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithInput:delayTime:feedback:" title="initWithInput:delayTime:feedback:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:delayTime:feedback:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the flanger with all values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> delayTime:(AKParameter *)<em>delayTime</em> feedback:(AKParameter *)<em>feedback</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>Input signal. [Default Value: ]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>delayTime</em></dt>
+      <dd><p>Delay in seconds [Default Value: ]</p></dd>
+    </dl>
+    
     <dl class="argument-def parameter-def">
       <dt><em>feedback</em></dt>
-      <dd><p>Feedback amount (in normal tasks this should not exceed 1, even if bigger values are allowed)</p></dd>
+      <dd><p>Feedback amount (in normal tasks this should not exceed 1, even if bigger values are allowed) Updated at Control-rate. [Default Value: 0]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFlanger.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalFeedback:" title="setOptionalFeedback:"></a>
+  <h3 class="subsubtitle method-title">setOptionalFeedback:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional <a href="#//api/name/feedback">feedback</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalFeedback:(AKParameter *)<em>feedback</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>feedback</em></dt>
+      <dd><p>Feedback amount (in normal tasks this should not exceed 1, even if bigger values are allowed) Updated at Control-rate. [Default Value: 0]</p></dd>
     </dl>
     
   </div>

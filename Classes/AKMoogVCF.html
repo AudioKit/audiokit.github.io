@@ -30,7 +30,7 @@ title: AKMoogVCF
             <h2 class="subtitle subtitle-overview">Overview</h2>
             <p>A digital emulation of the Moog diode ladder filter configuration.</p>
 
-<p>This emulation is based loosely on the paper “Analyzing the Moog VCF with Considerations for Digital Implementation” by Stilson and Smith (CCRMA).</p>
+<p>This emulation is based loosely on the paper “Analyzing the Moog VCF with Considerations for Digital Implementation” by Stilson and Smith (CCRMA). This version was originally coded in Csound by Josep Comajuncosas. Some modifications and conversion to C were done by Hans Mikelson and then adjusted.</p>
           </div>
           
           
@@ -48,8 +48,50 @@ title: AKMoogVCF
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithAudioSource:cutoffFrequency:resonance:">&ndash;&nbsp;initWithAudioSource:cutoffFrequency:resonance:</a></code>
-    <span class="tooltip"><p>Instantiates the moog vcf</p></span>
+    <code><a href="#//api/name/initWithInput:cutoffFrequency:resonance:">&ndash;&nbsp;initWithInput:cutoffFrequency:resonance:</a></code>
+    <span class="tooltip"><p>Instantiates the moog vcf with all values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithInput:">&ndash;&nbsp;initWithInput:</a></code>
+    <span class="tooltip"><p>Instantiates the moog vcf with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/filterWithInput:">+&nbsp;filterWithInput:</a></code>
+    <span class="tooltip"><p>Instantiates the moog vcf with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/cutoffFrequency">&nbsp;&nbsp;cutoffFrequency</a></code>
+    <span class="tooltip"><p>Filter cut-off frequency in Hz. [Default Value: 1000]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalCutoffFrequency:">&ndash;&nbsp;setOptionalCutoffFrequency:</a></code>
+    <span class="tooltip"><p>Set an optional cutoff frequency</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/resonance">&nbsp;&nbsp;resonance</a></code>
+    <span class="tooltip"><p>Amount of resonance. Self-oscillation occurs when this is approximately one. [Default Value: 0.5]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalResonance:">&ndash;&nbsp;setOptionalResonance:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/resonance">resonance</a></p></span>
   </span>
   
   
@@ -62,7 +104,137 @@ title: AKMoogVCF
 
           
           
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/cutoffFrequency" title="cutoffFrequency"></a>
+  <h3 class="subsubtitle method-title">cutoffFrequency</h3>
 
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Filter cut-off frequency in Hz. [Default Value: 1000]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *cutoffFrequency</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKMoogVCF.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/resonance" title="resonance"></a>
+  <h3 class="subsubtitle method-title">resonance</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Amount of resonance. Self-oscillation occurs when this is approximately one. [Default Value: 0.5]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *resonance</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKMoogVCF.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/filterWithInput:" title="filterWithInput:"></a>
+  <h3 class="subsubtitle method-title">filterWithInput:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the moog vcf with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)filterWithInput:(AKParameter *)<em>input</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>Input signal.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKMoogVCF.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
           
 
           
@@ -71,18 +243,18 @@ title: AKMoogVCF
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithAudioSource:cutoffFrequency:resonance:" title="initWithAudioSource:cutoffFrequency:resonance:"></a>
-  <h3 class="subsubtitle method-title">initWithAudioSource:cutoffFrequency:resonance:</h3>
+  <a name="//api/name/initWithInput:" title="initWithInput:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the moog vcf</p>
+    <p>Instantiates the moog vcf with default values</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKAudio *)<em>audioSource</em> cutoffFrequency:(AKParameter *)<em>cutoffFrequency</em> resonance:(AKParameter *)<em>resonance</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em></code></div>
 
     
   
@@ -90,18 +262,156 @@ title: AKMoogVCF
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>audioSource</em></dt>
+      <dt><em>input</em></dt>
       <dd><p>Input signal.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKMoogVCF.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithInput:cutoffFrequency:resonance:" title="initWithInput:cutoffFrequency:resonance:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:cutoffFrequency:resonance:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the moog vcf with all values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> cutoffFrequency:(AKParameter *)<em>cutoffFrequency</em> resonance:(AKParameter *)<em>resonance</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>Input signal. [Default Value: ]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>cutoffFrequency</em></dt>
-      <dd><p>Filter cut-off frequency in Hz.</p></dd>
+      <dd><p>Filter cut-off frequency in Hz. [Default Value: 1000]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>resonance</em></dt>
-      <dd><p>Amount of resonance. Self-oscillation occurs when this is approximately one.</p></dd>
+      <dd><p>Amount of <a href="#//api/name/resonance">resonance</a>. Self-oscillation occurs when this is approximately one. [Default Value: 0.5]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKMoogVCF.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalCutoffFrequency:" title="setOptionalCutoffFrequency:"></a>
+  <h3 class="subsubtitle method-title">setOptionalCutoffFrequency:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional cutoff frequency</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalCutoffFrequency:(AKParameter *)<em>cutoffFrequency</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>cutoffFrequency</em></dt>
+      <dd><p>Filter cut-off frequency in Hz. [Default Value: 1000]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKMoogVCF.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalResonance:" title="setOptionalResonance:"></a>
+  <h3 class="subsubtitle method-title">setOptionalResonance:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional <a href="#//api/name/resonance">resonance</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalResonance:(AKParameter *)<em>resonance</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>resonance</em></dt>
+      <dd><p>Amount of <a href="#//api/name/resonance">resonance</a>. Self-oscillation occurs when this is approximately one. [Default Value: 0.5]</p></dd>
     </dl>
     
   </div>

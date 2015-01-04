@@ -15,7 +15,7 @@ title: AKInterpolatedRandomNumberPulse
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKControl.html">AKControl</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+  <td class="specification-value"><a href="../Classes/AKControl.html">AKControl</a> : <a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKInterpolatedRandomNumberPulse.h<br />AKInterpolatedRandomNumberPulse.m</td>
@@ -30,7 +30,7 @@ title: AKInterpolatedRandomNumberPulse
             <h2 class="subtitle subtitle-overview">Overview</h2>
             <p>Generates a controlled random number series with interpolation between each new number.</p>
 
-<p>New random numbers are generated at a given frequency between zero and a maximum upper bound.  In between random numbers, the value of this operation is linearly interpolated between the two numbers in time.</p>
+<p>New random numbers are generated at a given <a href="#//api/name/frequency">frequency</a> between zero and a maximum upper bound.  In between random numbers, the value of this operation is linearly interpolated between the two numbers in time.</p>
           </div>
           
           
@@ -48,8 +48,50 @@ title: AKInterpolatedRandomNumberPulse
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithMaximum:frequency:">&ndash;&nbsp;initWithMaximum:frequency:</a></code>
-    <span class="tooltip"><p>Instantiates the nterpolated random number pulse</p></span>
+    <code><a href="#//api/name/initWithUpperBound:frequency:">&ndash;&nbsp;initWithUpperBound:frequency:</a></code>
+    <span class="tooltip"><p>Instantiates the interpolated random number <a href="#//api/name/pulse">pulse</a> with all values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
+    <span class="tooltip"><p>Instantiates the interpolated random number <a href="#//api/name/pulse">pulse</a> with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/pulse">+&nbsp;pulse</a></code>
+    <span class="tooltip"><p>Instantiates the interpolated random number pulse with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/upperBound">&nbsp;&nbsp;upperBound</a></code>
+    <span class="tooltip"><p>Maximum maximum range limit.  Sampled values will be between 0 and this maximum [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalUpperBound:">&ndash;&nbsp;setOptionalUpperBound:</a></code>
+    <span class="tooltip"><p>Set an optional upper bound</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/frequency">&nbsp;&nbsp;frequency</a></code>
+    <span class="tooltip"><p>Frequency at which the new numbers are generated in Hz. [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalFrequency:">&ndash;&nbsp;setOptionalFrequency:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/frequency">frequency</a></p></span>
   </span>
   
   
@@ -62,7 +104,127 @@ title: AKInterpolatedRandomNumberPulse
 
           
           
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/frequency" title="frequency"></a>
+  <h3 class="subsubtitle method-title">frequency</h3>
 
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Frequency at which the new numbers are generated in Hz. [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *frequency</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKInterpolatedRandomNumberPulse.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/upperBound" title="upperBound"></a>
+  <h3 class="subsubtitle method-title">upperBound</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Maximum maximum range limit.  Sampled values will be between 0 and this maximum [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *upperBound</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKInterpolatedRandomNumberPulse.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/pulse" title="pulse"></a>
+  <h3 class="subsubtitle method-title">pulse</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the interpolated random number pulse with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)pulse</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKInterpolatedRandomNumberPulse.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
           
 
           
@@ -71,18 +233,54 @@ title: AKInterpolatedRandomNumberPulse
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithMaximum:frequency:" title="initWithMaximum:frequency:"></a>
-  <h3 class="subsubtitle method-title">initWithMaximum:frequency:</h3>
+  <a name="//api/name/init" title="init"></a>
+  <h3 class="subsubtitle method-title">init</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the nterpolated random number pulse</p>
+    <p>Instantiates the interpolated random number <a href="#//api/name/pulse">pulse</a> with default values</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithMaximum:(AKControl *)<em>maximum</em> frequency:(AKControl *)<em>frequency</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKInterpolatedRandomNumberPulse.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithUpperBound:frequency:" title="initWithUpperBound:frequency:"></a>
+  <h3 class="subsubtitle method-title">initWithUpperBound:frequency:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the interpolated random number <a href="#//api/name/pulse">pulse</a> with all values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithUpperBound:(AKParameter *)<em>upperBound</em> frequency:(AKParameter *)<em>frequency</em></code></div>
 
     
   
@@ -90,13 +288,105 @@ title: AKInterpolatedRandomNumberPulse
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>maximum</em></dt>
-      <dd><p>Maximum maximum range limit.  Sampled values will be between 0 and this maximum</p></dd>
+      <dt><em>upperBound</em></dt>
+      <dd><p>Maximum maximum range limit.  Sampled values will be between 0 and this maximum Updated at Control-rate. [Default Value: 1]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>frequency</em></dt>
-      <dd><p>Frequency at which the new numbers are generated.</p></dd>
+      <dd><p>Frequency at which the new numbers are generated in Hz. Updated at Control-rate. [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKInterpolatedRandomNumberPulse.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalFrequency:" title="setOptionalFrequency:"></a>
+  <h3 class="subsubtitle method-title">setOptionalFrequency:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional <a href="#//api/name/frequency">frequency</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalFrequency:(AKParameter *)<em>frequency</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>frequency</em></dt>
+      <dd><p>Frequency at which the new numbers are generated in Hz. Updated at Control-rate. [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKInterpolatedRandomNumberPulse.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalUpperBound:" title="setOptionalUpperBound:"></a>
+  <h3 class="subsubtitle method-title">setOptionalUpperBound:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional upper bound</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalUpperBound:(AKParameter *)<em>upperBound</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>upperBound</em></dt>
+      <dd><p>Maximum maximum range limit.  Sampled values will be between 0 and this maximum Updated at Control-rate. [Default Value: 1]</p></dd>
     </dl>
     
   </div>

@@ -30,7 +30,7 @@ title: AKCombFilter
             <h2 class="subtitle subtitle-overview">Overview</h2>
             <p>Reverberates an input signal with a “colored” frequency response.</p>
 
-<p>This filter reiterates input with an echo density determined by loopTime. The attenuation rate is independent and is determined by reverbTime, the reverberation time (defined as the time in seconds for a signal to decay to 1/1000, or 60dB down from its original amplitude). Output from a comb filter will appear only after loopTime seconds.</p>
+<p>This filter reiterates input with an echo density determined by <a href="#//api/name/loopDuration">loopDuration</a>. The attenuation rate is independent and is determined by <a href="#//api/name/reverbDuration">reverbDuration</a>, the reverberation duration (defined as the time in seconds for a signal to decay to 1/1000, or 60dB down from its original amplitude). Output from a comb filter will appear only after <a href="#//api/name/loopDuration">loopDuration</a> seconds.</p>
           </div>
           
           
@@ -48,15 +48,50 @@ title: AKCombFilter
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithAudioSource:reverbTime:loopTime:">&ndash;&nbsp;initWithAudioSource:reverbTime:loopTime:</a></code>
-    <span class="tooltip"><p>Instantiates the comb filter</p></span>
+    <code><a href="#//api/name/initWithInput:reverbDuration:loopDuration:">&ndash;&nbsp;initWithInput:reverbDuration:loopDuration:</a></code>
+    <span class="tooltip"><p>Instantiates the comb filter with all values</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/setOptionalRetainFeedbackFlag:">&ndash;&nbsp;setOptionalRetainFeedbackFlag:</a></code>
-    <span class="tooltip"><p>Set an optional delay offset.</p></span>
+    <code><a href="#//api/name/initWithInput:">&ndash;&nbsp;initWithInput:</a></code>
+    <span class="tooltip"><p>Instantiates the comb filter with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/filterWithInput:">+&nbsp;filterWithInput:</a></code>
+    <span class="tooltip"><p>Instantiates the comb filter with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/reverbDuration">&nbsp;&nbsp;reverbDuration</a></code>
+    <span class="tooltip"><p>The time in seconds for a signal to decay to 1/1000, or 60dB from its original amplitude. [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalReverbDuration:">&ndash;&nbsp;setOptionalReverbDuration:</a></code>
+    <span class="tooltip"><p>Set an optional reverb duration</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/loopDuration">&nbsp;&nbsp;loopDuration</a></code>
+    <span class="tooltip"><p>Determines frequency response curve, loopDuration * sr/2 peaks spaced evenly between 0 and sr/2. [Default Value: 0.1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalLoopDuration:">&ndash;&nbsp;setOptionalLoopDuration:</a></code>
+    <span class="tooltip"><p>Set an optional loop duration</p></span>
   </span>
   
   
@@ -69,7 +104,137 @@ title: AKCombFilter
 
           
           
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/loopDuration" title="loopDuration"></a>
+  <h3 class="subsubtitle method-title">loopDuration</h3>
 
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Determines frequency response curve, loopDuration * sr/2 peaks spaced evenly between 0 and sr/2. [Default Value: 0.1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *loopDuration</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKCombFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/reverbDuration" title="reverbDuration"></a>
+  <h3 class="subsubtitle method-title">reverbDuration</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>The time in seconds for a signal to decay to 1/1000, or 60dB from its original amplitude. [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *reverbDuration</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKCombFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/filterWithInput:" title="filterWithInput:"></a>
+  <h3 class="subsubtitle method-title">filterWithInput:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the comb filter with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)filterWithInput:(AKParameter *)<em>input</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>Input signal, usually audio.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKCombFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
           
 
           
@@ -78,18 +243,18 @@ title: AKCombFilter
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithAudioSource:reverbTime:loopTime:" title="initWithAudioSource:reverbTime:loopTime:"></a>
-  <h3 class="subsubtitle method-title">initWithAudioSource:reverbTime:loopTime:</h3>
+  <a name="//api/name/initWithInput:" title="initWithInput:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the comb filter</p>
+    <p>Instantiates the comb filter with default values</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKAudio *)<em>audioSource</em> reverbTime:(AKControl *)<em>reverbTime</em> loopTime:(AKConstant *)<em>loopTime</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em></code></div>
 
     
   
@@ -97,18 +262,8 @@ title: AKCombFilter
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>audioSource</em></dt>
-      <dd><p>Input Audio Signal</p></dd>
-    </dl>
-    
-    <dl class="argument-def parameter-def">
-      <dt><em>reverbTime</em></dt>
-      <dd><p>The time in seconds for a signal to decay to 1/1000, or 60dB from its original amplitude.</p></dd>
-    </dl>
-    
-    <dl class="argument-def parameter-def">
-      <dt><em>loopTime</em></dt>
-      <dd><p>Determines frequency response curve, loopTime * sr/2 peaks spaced evenly between 0 and sr/2.</p></dd>
+      <dt><em>input</em></dt>
+      <dd><p>Input signal, usually audio.</p></dd>
     </dl>
     
   </div>
@@ -134,18 +289,18 @@ title: AKCombFilter
 </div>
             
             <div class="section-method">
-  <a name="//api/name/setOptionalRetainFeedbackFlag:" title="setOptionalRetainFeedbackFlag:"></a>
-  <h3 class="subsubtitle method-title">setOptionalRetainFeedbackFlag:</h3>
+  <a name="//api/name/initWithInput:reverbDuration:loopDuration:" title="initWithInput:reverbDuration:loopDuration:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:reverbDuration:loopDuration:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional delay offset.</p>
+    <p>Instantiates the comb filter with all values</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalRetainFeedbackFlag:(BOOL)<em>isFeedbackRetained</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> reverbDuration:(AKParameter *)<em>reverbDuration</em> loopDuration:(AKConstant *)<em>loopDuration</em></code></div>
 
     
   
@@ -153,8 +308,110 @@ title: AKCombFilter
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>isFeedbackRetained</em></dt>
-      <dd><p>Initial disposition of delay-loop data space. True retains previous information in feedback loop.</p></dd>
+      <dt><em>input</em></dt>
+      <dd><p>Input signal, usually audio. [Default Value: ]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>reverbDuration</em></dt>
+      <dd><p>The time in seconds for a signal to decay to 1/1000, or 60dB from its original amplitude. Updated at Control-rate. [Default Value: 1]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>loopDuration</em></dt>
+      <dd><p>Determines frequency response curve, <a href="#//api/name/loopDuration">loopDuration</a> * sr/2 peaks spaced evenly between 0 and sr/2. [Default Value: 0.1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKCombFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalLoopDuration:" title="setOptionalLoopDuration:"></a>
+  <h3 class="subsubtitle method-title">setOptionalLoopDuration:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional loop duration</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalLoopDuration:(AKConstant *)<em>loopDuration</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>loopDuration</em></dt>
+      <dd><p>Determines frequency response curve, <a href="#//api/name/loopDuration">loopDuration</a> * sr/2 peaks spaced evenly between 0 and sr/2. [Default Value: 0.1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKCombFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalReverbDuration:" title="setOptionalReverbDuration:"></a>
+  <h3 class="subsubtitle method-title">setOptionalReverbDuration:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional reverb duration</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalReverbDuration:(AKParameter *)<em>reverbDuration</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>reverbDuration</em></dt>
+      <dd><p>The time in seconds for a signal to decay to 1/1000, or 60dB from its original amplitude. Updated at Control-rate. [Default Value: 1]</p></dd>
     </dl>
     
   </div>

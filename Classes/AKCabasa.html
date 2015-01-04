@@ -28,7 +28,7 @@ title: AKCabasa
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Semi-physical model of a cabasa sound.</p>
+            <p>Semi-physical model of a <a href="#//api/name/cabasa">cabasa</a> sound.</p>
 
 <p>This one of the PhISEM percussion opcodes. PhISEM (Physically Informed Stochastic Event Modeling) is an algorithmic approach for simulating collisions of multiple independent sound producing objects.</p>
           </div>
@@ -48,21 +48,21 @@ title: AKCabasa
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithCount:dampingFactor:">&ndash;&nbsp;initWithCount:dampingFactor:</a></code>
-    <span class="tooltip"><p>Instantiates the cabasa with all values</p></span>
+    <code><a href="#//api/name/initWithCount:dampingFactor:amplitude:">&ndash;&nbsp;initWithCount:dampingFactor:amplitude:</a></code>
+    <span class="tooltip"><p>Instantiates the <a href="#//api/name/cabasa">cabasa</a> with all values</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
-    <span class="tooltip"><p>Instantiates the cabasa with default values</p></span>
+    <span class="tooltip"><p>Instantiates the <a href="#//api/name/cabasa">cabasa</a> with default values</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/audio">+&nbsp;audio</a></code>
+    <code><a href="#//api/name/cabasa">+&nbsp;cabasa</a></code>
     <span class="tooltip"><p>Instantiates the cabasa with default values</p></span>
   </span>
   
@@ -95,6 +95,20 @@ title: AKCabasa
   </span>
   
   
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/amplitude">&nbsp;&nbsp;amplitude</a></code>
+    <span class="tooltip"><p>Amplitude of output. As these instruments are stochastic this is only a approximation. [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalAmplitude:">&ndash;&nbsp;setOptionalAmplitude:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p></span>
+  </span>
+  
+  
 </li>
             </ul>
             
@@ -107,6 +121,42 @@ title: AKCabasa
           <div class="section section-methods">
             <a title="Properties" name="properties"></a>
             <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/amplitude" title="amplitude"></a>
+  <h3 class="subsubtitle method-title">amplitude</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Amplitude of output. As these instruments are stochastic this is only a approximation. [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *amplitude</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKCabasa.h</code><br />
+  </div>
+  
+  
+</div>
             
             <div class="section-method">
   <a name="//api/name/count" title="count"></a>
@@ -189,8 +239,8 @@ title: AKCabasa
             <h2 class="subtitle subtitle-methods">Class Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/audio" title="audio"></a>
-  <h3 class="subsubtitle method-title">audio</h3>
+  <a name="//api/name/cabasa" title="cabasa"></a>
+  <h3 class="subsubtitle method-title">cabasa</h3>
 
   
   
@@ -200,7 +250,7 @@ title: AKCabasa
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)audio</code></div>
+  <div class="method-subsection method-declaration"><code>+ (instancetype)cabasa</code></div>
 
     
   
@@ -239,7 +289,7 @@ title: AKCabasa
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the cabasa with default values</p>
+    <p>Instantiates the <a href="#//api/name/cabasa">cabasa</a> with default values</p>
   </div>
   
     
@@ -269,18 +319,18 @@ title: AKCabasa
 </div>
             
             <div class="section-method">
-  <a name="//api/name/initWithCount:dampingFactor:" title="initWithCount:dampingFactor:"></a>
-  <h3 class="subsubtitle method-title">initWithCount:dampingFactor:</h3>
+  <a name="//api/name/initWithCount:dampingFactor:amplitude:" title="initWithCount:dampingFactor:amplitude:"></a>
+  <h3 class="subsubtitle method-title">initWithCount:dampingFactor:amplitude:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the cabasa with all values</p>
+    <p>Instantiates the <a href="#//api/name/cabasa">cabasa</a> with all values</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithCount:(AKConstant *)<em>count</em> dampingFactor:(AKConstant *)<em>dampingFactor</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithCount:(AKConstant *)<em>count</em> dampingFactor:(AKConstant *)<em>dampingFactor</em> amplitude:(AKConstant *)<em>amplitude</em></code></div>
 
     
   
@@ -289,12 +339,63 @@ title: AKCabasa
     
     <dl class="argument-def parameter-def">
       <dt><em>count</em></dt>
-      <dd><p>The number of beads, teeth, bells, timbrels, etc.</p></dd>
+      <dd><p>The number of beads, teeth, bells, timbrels, etc. [Default Value: 100]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>dampingFactor</em></dt>
-      <dd><p>Damping factor where 0 is no damping and 1 is fully damped.</p></dd>
+      <dd><p>Damping factor where 0 is no damping and 1 is fully damped. [Default Value: 0.14]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>amplitude</em></dt>
+      <dd><p>Amplitude of output. As these instruments are stochastic this is only a approximation. [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKCabasa.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalAmplitude:" title="setOptionalAmplitude:"></a>
+  <h3 class="subsubtitle method-title">setOptionalAmplitude:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalAmplitude:(AKConstant *)<em>amplitude</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>amplitude</em></dt>
+      <dd><p>Amplitude of output. As these instruments are stochastic this is only a approximation. [Default Value: 1]</p></dd>
     </dl>
     
   </div>

@@ -32,7 +32,7 @@ title: AKPhasor
 
 <p>An internal <a href="#//api/name/phase">phase</a> is successively accumulated in accordance with the <a href="#//api/name/frequency">frequency</a> to produce a moving <a href="#//api/name/phase">phase</a> value, normalized to lie in the range 0 &lt;= <a href="#//api/name/phase">phase</a> &lt; 1.
 When used as the index to a table unit, this <a href="#//api/name/phase">phase</a> (multiplied by the desired function table length) will cause it to behave like an oscillator.
-Note that phasor is a special kind of integrator, accumulating <a href="#//api/name/phase">phase</a> increments that represent <a href="#//api/name/frequency">frequency</a> settings.</p>
+Note that <a href="#//api/name/phasor">phasor</a> is a special kind of integrator, accumulating <a href="#//api/name/phase">phase</a> increments that represent <a href="#//api/name/frequency">frequency</a> settings.</p>
           </div>
           
           
@@ -51,20 +51,20 @@ Note that phasor is a special kind of integrator, accumulating <a href="#//api/n
                 <li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithFrequency:phase:">&ndash;&nbsp;initWithFrequency:phase:</a></code>
-    <span class="tooltip"><p>Instantiates the phasor with all values</p></span>
+    <span class="tooltip"><p>Instantiates the <a href="#//api/name/phasor">phasor</a> with all values</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
-    <span class="tooltip"><p>Instantiates the phasor with default values</p></span>
+    <span class="tooltip"><p>Instantiates the <a href="#//api/name/phasor">phasor</a> with default values</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/audio">+&nbsp;audio</a></code>
+    <code><a href="#//api/name/phasor">+&nbsp;phasor</a></code>
     <span class="tooltip"><p>Instantiates the phasor with default values</p></span>
   </span>
   
@@ -191,8 +191,8 @@ Note that phasor is a special kind of integrator, accumulating <a href="#//api/n
             <h2 class="subtitle subtitle-methods">Class Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/audio" title="audio"></a>
-  <h3 class="subsubtitle method-title">audio</h3>
+  <a name="//api/name/phasor" title="phasor"></a>
+  <h3 class="subsubtitle method-title">phasor</h3>
 
   
   
@@ -202,7 +202,7 @@ Note that phasor is a special kind of integrator, accumulating <a href="#//api/n
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)audio</code></div>
+  <div class="method-subsection method-declaration"><code>+ (instancetype)phasor</code></div>
 
     
   
@@ -241,7 +241,7 @@ Note that phasor is a special kind of integrator, accumulating <a href="#//api/n
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the phasor with default values</p>
+    <p>Instantiates the <a href="#//api/name/phasor">phasor</a> with default values</p>
   </div>
   
     
@@ -277,7 +277,7 @@ Note that phasor is a special kind of integrator, accumulating <a href="#//api/n
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the phasor with all values</p>
+    <p>Instantiates the <a href="#//api/name/phasor">phasor</a> with all values</p>
   </div>
   
     
@@ -291,12 +291,12 @@ Note that phasor is a special kind of integrator, accumulating <a href="#//api/n
     
     <dl class="argument-def parameter-def">
       <dt><em>frequency</em></dt>
-      <dd><p>Frequency in cycles per second.</p></dd>
+      <dd><p>Frequency in cycles per second. [Default Value: 440]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>phase</em></dt>
-      <dd><p>Initial <a href="#//api/name/phase">phase</a>, expressed as a fraction of a cycle (0 to 1).</p></dd>
+      <dd><p>Initial <a href="#//api/name/phase">phase</a>, expressed as a fraction of a cycle (0 to 1). [Default Value: 0]</p></dd>
     </dl>
     
   </div>

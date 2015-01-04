@@ -95,22 +95,22 @@ title: AKInstrument
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/fTables">&nbsp;&nbsp;fTables</a></code>
-    <span class="tooltip"><p>All FTables that are required by the instrument are stored here and declared
+    <code><a href="#//api/name/functionTables">&nbsp;&nbsp;functionTables</a></code>
+    <span class="tooltip"><p>All FunctionTables that are required by the instrument are stored here and declared
 once in the F-Statement section.</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/addFTable:">&ndash;&nbsp;addFTable:</a></code>
+    <code><a href="#//api/name/addFunctionTable:">&ndash;&nbsp;addFunctionTable:</a></code>
     <span class="tooltip"><p>Adds the function table to the Orchestra, so it is only processed once.</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/addDynamicFTable:">&ndash;&nbsp;addDynamicFTable:</a></code>
+    <code><a href="#//api/name/addDynamicFunctionTable:">&ndash;&nbsp;addDynamicFunctionTable:</a></code>
     <span class="tooltip"><p>Adds the function table to the AKInstrument dynamically, processed for each note.</p></span>
   </span>
   
@@ -155,6 +155,13 @@ instrument blocks.</p></span>
   <span class="tooltip">
     <code><a href="#//api/name/resetParameter:">&ndash;&nbsp;resetParameter:</a></code>
     <span class="tooltip"><p>Shortcut for setting a parameter&rsquo;s value to zero.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/enableParameterLog:parameter:timeInterval:">&ndash;&nbsp;enableParameterLog:parameter:timeInterval:</a></code>
+    <span class="tooltip"><p>Log parameter values at a given frequency with a message.</p></span>
   </span>
   
   
@@ -223,19 +230,19 @@ it sends the event to the appropriate orchestra.</p></span>
             <h2 class="subtitle subtitle-methods">Properties</h2>
             
             <div class="section-method">
-  <a name="//api/name/fTables" title="fTables"></a>
-  <h3 class="subsubtitle method-title">fTables</h3>
+  <a name="//api/name/functionTables" title="functionTables"></a>
+  <h3 class="subsubtitle method-title">functionTables</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>All FTables that are required by the instrument are stored here and declared
+    <p>All FunctionTables that are required by the instrument are stored here and declared
 once in the F-Statement section.</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSMutableSet *fTables</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSMutableSet *functionTables</code></div>
 
     
   
@@ -421,8 +428,8 @@ instrument blocks.</p>
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/addDynamicFTable:" title="addDynamicFTable:"></a>
-  <h3 class="subsubtitle method-title">addDynamicFTable:</h3>
+  <a name="//api/name/addDynamicFunctionTable:" title="addDynamicFunctionTable:"></a>
+  <h3 class="subsubtitle method-title">addDynamicFunctionTable:</h3>
 
   
   
@@ -432,7 +439,7 @@ instrument blocks.</p>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)addDynamicFTable:(AKFTable *)<em>newFTable</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)addDynamicFunctionTable:(AKFunctionTable *)<em>newFunctionTable</em></code></div>
 
     
   
@@ -440,7 +447,7 @@ instrument blocks.</p>
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>newFTable</em></dt>
+      <dt><em>newFunctionTable</em></dt>
       <dd><p>New function table to add to the instrument.</p></dd>
     </dl>
     
@@ -467,8 +474,8 @@ instrument blocks.</p>
 </div>
             
             <div class="section-method">
-  <a name="//api/name/addFTable:" title="addFTable:"></a>
-  <h3 class="subsubtitle method-title">addFTable:</h3>
+  <a name="//api/name/addFunctionTable:" title="addFunctionTable:"></a>
+  <h3 class="subsubtitle method-title">addFunctionTable:</h3>
 
   
   
@@ -478,7 +485,7 @@ instrument blocks.</p>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)addFTable:(AKFTable *)<em>newFTable</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)addFunctionTable:(AKFunctionTable *)<em>newFunctionTable</em></code></div>
 
     
   
@@ -486,7 +493,7 @@ instrument blocks.</p>
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>newFTable</em></dt>
+      <dt><em>newFunctionTable</em></dt>
       <dd><p>New function table to add to the instrument.</p></dd>
     </dl>
     
@@ -769,6 +776,62 @@ instrument blocks.</p>
     <dl class="argument-def parameter-def">
       <dt><em>newOperation</em></dt>
       <dd><p>New operation to add to the instrument.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKInstrument.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/enableParameterLog:parameter:timeInterval:" title="enableParameterLog:parameter:timeInterval:"></a>
+  <h3 class="subsubtitle method-title">enableParameterLog:parameter:timeInterval:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Log parameter values at a given frequency with a message.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)enableParameterLog:(NSString *)<em>message</em> parameter:(AKParameter *)<em>parameter</em> timeInterval:(float)<em>timeInterval</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>message</em></dt>
+      <dd><p>Message to print first. Usually something like &ldquo;myParameter = &rdquo;</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>parameter</em></dt>
+      <dd><p>The parameter to log the float value of</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>timeInterval</em></dt>
+      <dd><p>Time in seconds between printouts.</p></dd>
     </dl>
     
   </div>

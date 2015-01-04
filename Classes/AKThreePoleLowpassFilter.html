@@ -30,7 +30,7 @@ title: AKThreePoleLowpassFilter
             <h2 class="subtitle subtitle-overview">Overview</h2>
             <p>A 3-pole sweepable resonant lowpass filter.</p>
 
-<p>This a digital emulation of a 3 pole (18 dB/oct.) lowpass filter capable of self-oscillation with a built-in distortion unit. It is really a 3-pole version of moogvcf, retuned, recalibrated and with some performance improvements. The tuning and feedback tables use no more than 6 adds and 6 multiplies per control rate. The distortion unit, itself, is based on a modified tanh function driven by the filter controls.</p>
+<p>This a digital emulation of a 3 pole (18 dB/oct.) lowpass filter capable of self-oscillation with a built-in <a href="#//api/name/distortion">distortion</a> unit. It is really a 3-pole version of moogvcf, retuned, recalibrated and with some performance improvements. The tuning and feedback tables use no more than 6 adds and 6 multiplies per control rate. The <a href="#//api/name/distortion">distortion</a> unit, itself, is based on a modified tanh function driven by the filter controls.</p>
           </div>
           
           
@@ -48,8 +48,64 @@ title: AKThreePoleLowpassFilter
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithAudioSource:distortion:cutoffFrequency:resonance:">&ndash;&nbsp;initWithAudioSource:distortion:cutoffFrequency:resonance:</a></code>
-    <span class="tooltip"><p>Instantiates the three pole lowpass filter</p></span>
+    <code><a href="#//api/name/initWithInput:distortion:cutoffFrequency:resonance:">&ndash;&nbsp;initWithInput:distortion:cutoffFrequency:resonance:</a></code>
+    <span class="tooltip"><p>Instantiates the three pole lowpass filter with all values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithInput:">&ndash;&nbsp;initWithInput:</a></code>
+    <span class="tooltip"><p>Instantiates the three pole lowpass filter with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/filterWithInput:">+&nbsp;filterWithInput:</a></code>
+    <span class="tooltip"><p>Instantiates the three pole lowpass filter with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/distortion">&nbsp;&nbsp;distortion</a></code>
+    <span class="tooltip"><p>Amount of distortion. Zero gives a clean output. kdist > 0 adds tanh() distortion controlled by the filter parameters, in such a way that both low cutoff and high <a href="#//api/name/resonance">resonance</a> increase the distortion amount. Some experimentation is encouraged. [Default Value: 0.5]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalDistortion:">&ndash;&nbsp;setOptionalDistortion:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/distortion">distortion</a></p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/cutoffFrequency">&nbsp;&nbsp;cutoffFrequency</a></code>
+    <span class="tooltip"><p>The filter cutoff frequency in Hz. [Default Value: 1500]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalCutoffFrequency:">&ndash;&nbsp;setOptionalCutoffFrequency:</a></code>
+    <span class="tooltip"><p>Set an optional cutoff frequency</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/resonance">&nbsp;&nbsp;resonance</a></code>
+    <span class="tooltip"><p>Amount of resonance. Self-oscillation occurs when approximately 1. Should usually be in the range 0 to 1, however, values slightly greater than 1 are possible for more sustained oscillation and an “overdrive” effect. [Default Value: 0.5]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalResonance:">&ndash;&nbsp;setOptionalResonance:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/resonance">resonance</a></p></span>
   </span>
   
   
@@ -62,7 +118,173 @@ title: AKThreePoleLowpassFilter
 
           
           
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/cutoffFrequency" title="cutoffFrequency"></a>
+  <h3 class="subsubtitle method-title">cutoffFrequency</h3>
 
+  
+  
+  <div class="method-subsection brief-description">
+    <p>The filter cutoff frequency in Hz. [Default Value: 1500]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *cutoffFrequency</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKThreePoleLowpassFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/distortion" title="distortion"></a>
+  <h3 class="subsubtitle method-title">distortion</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Amount of distortion. Zero gives a clean output. kdist > 0 adds tanh() distortion controlled by the filter parameters, in such a way that both low cutoff and high <a href="#//api/name/resonance">resonance</a> increase the distortion amount. Some experimentation is encouraged. [Default Value: 0.5]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *distortion</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKThreePoleLowpassFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/resonance" title="resonance"></a>
+  <h3 class="subsubtitle method-title">resonance</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Amount of resonance. Self-oscillation occurs when approximately 1. Should usually be in the range 0 to 1, however, values slightly greater than 1 are possible for more sustained oscillation and an “overdrive” effect. [Default Value: 0.5]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *resonance</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKThreePoleLowpassFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/filterWithInput:" title="filterWithInput:"></a>
+  <h3 class="subsubtitle method-title">filterWithInput:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the three pole lowpass filter with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)filterWithInput:(AKParameter *)<em>input</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>Signal that will be modified.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKThreePoleLowpassFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
           
 
           
@@ -71,18 +293,18 @@ title: AKThreePoleLowpassFilter
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithAudioSource:distortion:cutoffFrequency:resonance:" title="initWithAudioSource:distortion:cutoffFrequency:resonance:"></a>
-  <h3 class="subsubtitle method-title">initWithAudioSource:distortion:cutoffFrequency:resonance:</h3>
+  <a name="//api/name/initWithInput:" title="initWithInput:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the three pole lowpass filter</p>
+    <p>Instantiates the three pole lowpass filter with default values</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKAudio *)<em>audioSource</em> distortion:(AKControl *)<em>distortion</em> cutoffFrequency:(AKControl *)<em>cutoffFrequency</em> resonance:(AKControl *)<em>resonance</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em></code></div>
 
     
   
@@ -90,23 +312,207 @@ title: AKThreePoleLowpassFilter
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>audioSource</em></dt>
+      <dt><em>input</em></dt>
       <dd><p>Signal that will be modified.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKThreePoleLowpassFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithInput:distortion:cutoffFrequency:resonance:" title="initWithInput:distortion:cutoffFrequency:resonance:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:distortion:cutoffFrequency:resonance:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the three pole lowpass filter with all values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> distortion:(AKParameter *)<em>distortion</em> cutoffFrequency:(AKParameter *)<em>cutoffFrequency</em> resonance:(AKParameter *)<em>resonance</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>Signal that will be modified. [Default Value: ]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>distortion</em></dt>
-      <dd><p>Amount of distortion. Zero gives a clean output. kdist > 0 adds tanh() distortion controlled by the filter parameters, in such a way that both low cutoff and high resonance increase the distortion amount. Some experimentation is encouraged.</p></dd>
+      <dd><p>Amount of <a href="#//api/name/distortion">distortion</a>. Zero gives a clean output. kdist > 0 adds tanh() <a href="#//api/name/distortion">distortion</a> controlled by the filter parameters, in such a way that both low cutoff and high <a href="#//api/name/resonance">resonance</a> increase the <a href="#//api/name/distortion">distortion</a> amount. Some experimentation is encouraged. Updated at Control-rate. [Default Value: 0.5]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>cutoffFrequency</em></dt>
-      <dd><p>The filter cutoff frequency in Hz.</p></dd>
+      <dd><p>The filter cutoff frequency in Hz. Updated at Control-rate. [Default Value: 1500]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>resonance</em></dt>
-      <dd><p>Amount of resonance. Self-oscillation occurs when approximately 1. Should usually be in the range 0 to 1, however, values slightly greater than 1 are possible for more sustained oscillation and an “overdrive” effect.</p></dd>
+      <dd><p>Amount of <a href="#//api/name/resonance">resonance</a>. Self-oscillation occurs when approximately 1. Should usually be in the range 0 to 1, however, values slightly greater than 1 are possible for more sustained oscillation and an “overdrive” effect. Updated at Control-rate. [Default Value: 0.5]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKThreePoleLowpassFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalCutoffFrequency:" title="setOptionalCutoffFrequency:"></a>
+  <h3 class="subsubtitle method-title">setOptionalCutoffFrequency:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional cutoff frequency</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalCutoffFrequency:(AKParameter *)<em>cutoffFrequency</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>cutoffFrequency</em></dt>
+      <dd><p>The filter cutoff frequency in Hz. Updated at Control-rate. [Default Value: 1500]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKThreePoleLowpassFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalDistortion:" title="setOptionalDistortion:"></a>
+  <h3 class="subsubtitle method-title">setOptionalDistortion:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional <a href="#//api/name/distortion">distortion</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalDistortion:(AKParameter *)<em>distortion</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>distortion</em></dt>
+      <dd><p>Amount of <a href="#//api/name/distortion">distortion</a>. Zero gives a clean output. kdist > 0 adds tanh() <a href="#//api/name/distortion">distortion</a> controlled by the filter parameters, in such a way that both low cutoff and high <a href="#//api/name/resonance">resonance</a> increase the <a href="#//api/name/distortion">distortion</a> amount. Some experimentation is encouraged. Updated at Control-rate. [Default Value: 0.5]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKThreePoleLowpassFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalResonance:" title="setOptionalResonance:"></a>
+  <h3 class="subsubtitle method-title">setOptionalResonance:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional <a href="#//api/name/resonance">resonance</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalResonance:(AKParameter *)<em>resonance</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>resonance</em></dt>
+      <dd><p>Amount of <a href="#//api/name/resonance">resonance</a>. Self-oscillation occurs when approximately 1. Should usually be in the range 0 to 1, however, values slightly greater than 1 are possible for more sustained oscillation and an “overdrive” effect. Updated at Control-rate. [Default Value: 0.5]</p></dd>
     </dl>
     
   </div>

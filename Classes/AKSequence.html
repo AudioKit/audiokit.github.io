@@ -28,7 +28,7 @@ title: AKSequence
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>A sequence is a chain of <a href="#//api/name/events">events</a>.</p>
+            <p>A <a href="#//api/name/sequence">sequence</a> is a chain of <a href="#//api/name/events">events</a>.</p>
           </div>
           
           
@@ -47,35 +47,42 @@ title: AKSequence
                 <li>
   <span class="tooltip">
     <code><a href="#//api/name/events">&nbsp;&nbsp;events</a></code>
-    <span class="tooltip"><p>The array of events contained in the sequence.</p></span>
+    <span class="tooltip"><p>The array of events contained in the <a href="#//api/name/sequence">sequence</a>.</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/times">&nbsp;&nbsp;times</a></code>
-    <span class="tooltip"><p>The start times for all the <a href="#//api/name/events">events</a> in the sequence.</p></span>
+    <span class="tooltip"><p>The start times for all the <a href="#//api/name/events">events</a> in the <a href="#//api/name/sequence">sequence</a>.</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
 </li><li>
   <span class="tooltip">
+    <code><a href="#//api/name/sequence">+&nbsp;sequence</a></code>
+    <span class="tooltip"><p>Class-level initializer for empty sequence</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
     <code><a href="#//api/name/play">&ndash;&nbsp;play</a></code>
-    <span class="tooltip"><p>Trigger playback of the sequence.</p></span>
+    <span class="tooltip"><p>Trigger playback of the <a href="#//api/name/sequence">sequence</a>.</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/pause">&ndash;&nbsp;pause</a></code>
-    <span class="tooltip"><p>Pause playback of the sequence.</p></span>
+    <span class="tooltip"><p>Pause playback of the <a href="#//api/name/sequence">sequence</a>.</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/stop">&ndash;&nbsp;stop</a></code>
-    <span class="tooltip"><p>Stop playback of the sequence, stopping all the notes in the sequence.</p></span>
+    <span class="tooltip"><p>Stop playback of the <a href="#//api/name/sequence">sequence</a>, stopping all the notes in the <a href="#//api/name/sequence">sequence</a>.</p></span>
   </span>
   
   
@@ -120,7 +127,7 @@ title: AKSequence
   
   
   <div class="method-subsection brief-description">
-    <p>The array of events contained in the sequence.</p>
+    <p>The array of events contained in the <a href="#//api/name/sequence">sequence</a>.</p>
   </div>
   
     
@@ -156,7 +163,7 @@ title: AKSequence
   
   
   <div class="method-subsection brief-description">
-    <p>The start times for all the <a href="#//api/name/events">events</a> in the sequence.</p>
+    <p>The start times for all the <a href="#//api/name/events">events</a> in the <a href="#//api/name/sequence">sequence</a>.</p>
   </div>
   
     
@@ -188,6 +195,48 @@ title: AKSequence
           </div>
           
 
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/sequence" title="sequence"></a>
+  <h3 class="subsubtitle method-title">sequence</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Class-level initializer for empty sequence</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKSequence *)sequence</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKSequence.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
           
 
           
@@ -318,7 +367,7 @@ title: AKSequence
     
     <dl class="argument-def parameter-def">
       <dt><em>timeSinceStart</em></dt>
-      <dd><p>Exact time at which the event will be trigger relative to the start of the sequence.</p></dd>
+      <dd><p>Exact time at which the event will be trigger relative to the start of the <a href="#//api/name/sequence">sequence</a>.</p></dd>
     </dl>
     
   </div>
@@ -350,7 +399,7 @@ title: AKSequence
   
   
   <div class="method-subsection brief-description">
-    <p>Pause playback of the sequence.</p>
+    <p>Pause playback of the <a href="#//api/name/sequence">sequence</a>.</p>
   </div>
   
     
@@ -386,7 +435,7 @@ title: AKSequence
   
   
   <div class="method-subsection brief-description">
-    <p>Trigger playback of the sequence.</p>
+    <p>Trigger playback of the <a href="#//api/name/sequence">sequence</a>.</p>
   </div>
   
     
@@ -422,7 +471,7 @@ title: AKSequence
   
   
   <div class="method-subsection brief-description">
-    <p>Stop playback of the sequence, stopping all the notes in the sequence.</p>
+    <p>Stop playback of the <a href="#//api/name/sequence">sequence</a>, stopping all the notes in the <a href="#//api/name/sequence">sequence</a>.</p>
   </div>
   
     

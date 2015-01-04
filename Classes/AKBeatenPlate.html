@@ -48,21 +48,21 @@ title: AKBeatenPlate
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithAudioSource:frequency1:frequency2:cutoffFrequency1:cutoffFrequency2:feedback1:feedback2:">&ndash;&nbsp;initWithAudioSource:frequency1:frequency2:cutoffFrequency1:cutoffFrequency2:feedback1:feedback2:</a></code>
+    <code><a href="#//api/name/initWithInput:frequency1:frequency2:cutoffFrequency1:cutoffFrequency2:feedback1:feedback2:">&ndash;&nbsp;initWithInput:frequency1:frequency2:cutoffFrequency1:cutoffFrequency2:feedback1:feedback2:</a></code>
     <span class="tooltip"><p>Instantiates the beaten plate with all values</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithAudioSource:">&ndash;&nbsp;initWithAudioSource:</a></code>
+    <code><a href="#//api/name/initWithInput:">&ndash;&nbsp;initWithInput:</a></code>
     <span class="tooltip"><p>Instantiates the beaten plate with default values</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/audioWithAudioSource:">+&nbsp;audioWithAudioSource:</a></code>
+    <code><a href="#//api/name/beatenPlateWithInput:">+&nbsp;beatenPlateWithInput:</a></code>
     <span class="tooltip"><p>Instantiates the beaten plate with default values</p></span>
   </span>
   
@@ -176,7 +176,7 @@ title: AKBeatenPlate
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKControl *cutoffFrequency1</code></div>
+  <div class="method-subsection method-declaration"><code>@property AKParameter *cutoffFrequency1</code></div>
 
     
   
@@ -212,7 +212,7 @@ title: AKBeatenPlate
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKControl *cutoffFrequency2</code></div>
+  <div class="method-subsection method-declaration"><code>@property AKParameter *cutoffFrequency2</code></div>
 
     
   
@@ -248,7 +248,7 @@ title: AKBeatenPlate
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKControl *feedback1</code></div>
+  <div class="method-subsection method-declaration"><code>@property AKParameter *feedback1</code></div>
 
     
   
@@ -284,7 +284,7 @@ title: AKBeatenPlate
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKControl *feedback2</code></div>
+  <div class="method-subsection method-declaration"><code>@property AKParameter *feedback2</code></div>
 
     
   
@@ -389,8 +389,8 @@ title: AKBeatenPlate
             <h2 class="subtitle subtitle-methods">Class Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/audioWithAudioSource:" title="audioWithAudioSource:"></a>
-  <h3 class="subsubtitle method-title">audioWithAudioSource:</h3>
+  <a name="//api/name/beatenPlateWithInput:" title="beatenPlateWithInput:"></a>
+  <h3 class="subsubtitle method-title">beatenPlateWithInput:</h3>
 
   
   
@@ -400,7 +400,7 @@ title: AKBeatenPlate
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)audioWithAudioSource:(AKAudio *)<em>audioSource</em></code></div>
+  <div class="method-subsection method-declaration"><code>+ (instancetype)beatenPlateWithInput:(AKParameter *)<em>input</em></code></div>
 
     
   
@@ -408,7 +408,7 @@ title: AKBeatenPlate
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>audioSource</em></dt>
+      <dt><em>input</em></dt>
       <dd><p>The excitation noise.</p></dd>
     </dl>
     
@@ -443,8 +443,8 @@ title: AKBeatenPlate
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithAudioSource:" title="initWithAudioSource:"></a>
-  <h3 class="subsubtitle method-title">initWithAudioSource:</h3>
+  <a name="//api/name/initWithInput:" title="initWithInput:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:</h3>
 
   
   
@@ -454,7 +454,7 @@ title: AKBeatenPlate
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKAudio *)<em>audioSource</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em></code></div>
 
     
   
@@ -462,7 +462,7 @@ title: AKBeatenPlate
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>audioSource</em></dt>
+      <dt><em>input</em></dt>
       <dd><p>The excitation noise.</p></dd>
     </dl>
     
@@ -489,8 +489,8 @@ title: AKBeatenPlate
 </div>
             
             <div class="section-method">
-  <a name="//api/name/initWithAudioSource:frequency1:frequency2:cutoffFrequency1:cutoffFrequency2:feedback1:feedback2:" title="initWithAudioSource:frequency1:frequency2:cutoffFrequency1:cutoffFrequency2:feedback1:feedback2:"></a>
-  <h3 class="subsubtitle method-title">initWithAudioSource:frequency1:frequency2:cutoffFrequency1:cutoffFrequency2:feedback1:feedback2:</h3>
+  <a name="//api/name/initWithInput:frequency1:frequency2:cutoffFrequency1:cutoffFrequency2:feedback1:feedback2:" title="initWithInput:frequency1:frequency2:cutoffFrequency1:cutoffFrequency2:feedback1:feedback2:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:frequency1:frequency2:cutoffFrequency1:cutoffFrequency2:feedback1:feedback2:</h3>
 
   
   
@@ -500,7 +500,7 @@ title: AKBeatenPlate
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKAudio *)<em>audioSource</em> frequency1:(AKParameter *)<em>frequency1</em> frequency2:(AKParameter *)<em>frequency2</em> cutoffFrequency1:(AKControl *)<em>cutoffFrequency1</em> cutoffFrequency2:(AKControl *)<em>cutoffFrequency2</em> feedback1:(AKControl *)<em>feedback1</em> feedback2:(AKControl *)<em>feedback2</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> frequency1:(AKParameter *)<em>frequency1</em> frequency2:(AKParameter *)<em>frequency2</em> cutoffFrequency1:(AKParameter *)<em>cutoffFrequency1</em> cutoffFrequency2:(AKParameter *)<em>cutoffFrequency2</em> feedback1:(AKParameter *)<em>feedback1</em> feedback2:(AKParameter *)<em>feedback2</em></code></div>
 
     
   
@@ -508,38 +508,38 @@ title: AKBeatenPlate
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>audioSource</em></dt>
-      <dd><p>The excitation noise.</p></dd>
+      <dt><em>input</em></dt>
+      <dd><p>The excitation noise. [Default Value: ]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>frequency1</em></dt>
-      <dd><p>The inverse of delay time for the first of two parallel delay lines.</p></dd>
+      <dd><p>The inverse of delay time for the first of two parallel delay lines. [Default Value: 5000]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>frequency2</em></dt>
-      <dd><p>The inverse of delay time for the second of two parallel delay lines.</p></dd>
+      <dd><p>The inverse of delay time for the second of two parallel delay lines. [Default Value: 2000]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>cutoffFrequency1</em></dt>
-      <dd><p>The filter cutoff frequency in Hz for the first low-pass filter.</p></dd>
+      <dd><p>The filter cutoff frequency in Hz for the first low-pass filter. Updated at Control-rate. [Default Value: 3000]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>cutoffFrequency2</em></dt>
-      <dd><p>The filter cutoff frequency in Hz for the second low-pass filter.</p></dd>
+      <dd><p>The filter cutoff frequency in Hz for the second low-pass filter. Updated at Control-rate. [Default Value: 1500]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>feedback1</em></dt>
-      <dd><p>The feedback factor for the first effects loop.</p></dd>
+      <dd><p>The feedback factor for the first effects loop. Updated at Control-rate. [Default Value: 0.25]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>feedback2</em></dt>
-      <dd><p>The feedback factor for the second effects loop.</p></dd>
+      <dd><p>The feedback factor for the second effects loop. Updated at Control-rate. [Default Value: 0.25]</p></dd>
     </dl>
     
   </div>
@@ -576,7 +576,7 @@ title: AKBeatenPlate
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalCutoffFrequency1:(AKControl *)<em>cutoffFrequency1</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalCutoffFrequency1:(AKParameter *)<em>cutoffFrequency1</em></code></div>
 
     
   
@@ -585,7 +585,7 @@ title: AKBeatenPlate
     
     <dl class="argument-def parameter-def">
       <dt><em>cutoffFrequency1</em></dt>
-      <dd><p>The filter cutoff frequency in Hz for the first low-pass filter. [Default Value: 3000]</p></dd>
+      <dd><p>The filter cutoff frequency in Hz for the first low-pass filter. Updated at Control-rate. [Default Value: 3000]</p></dd>
     </dl>
     
   </div>
@@ -622,7 +622,7 @@ title: AKBeatenPlate
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalCutoffFrequency2:(AKControl *)<em>cutoffFrequency2</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalCutoffFrequency2:(AKParameter *)<em>cutoffFrequency2</em></code></div>
 
     
   
@@ -631,7 +631,7 @@ title: AKBeatenPlate
     
     <dl class="argument-def parameter-def">
       <dt><em>cutoffFrequency2</em></dt>
-      <dd><p>The filter cutoff frequency in Hz for the second low-pass filter. [Default Value: 1500]</p></dd>
+      <dd><p>The filter cutoff frequency in Hz for the second low-pass filter. Updated at Control-rate. [Default Value: 1500]</p></dd>
     </dl>
     
   </div>
@@ -668,7 +668,7 @@ title: AKBeatenPlate
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalFeedback1:(AKControl *)<em>feedback1</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalFeedback1:(AKParameter *)<em>feedback1</em></code></div>
 
     
   
@@ -677,7 +677,7 @@ title: AKBeatenPlate
     
     <dl class="argument-def parameter-def">
       <dt><em>feedback1</em></dt>
-      <dd><p>The feedback factor for the first effects loop. [Default Value: 0.25]</p></dd>
+      <dd><p>The feedback factor for the first effects loop. Updated at Control-rate. [Default Value: 0.25]</p></dd>
     </dl>
     
   </div>
@@ -714,7 +714,7 @@ title: AKBeatenPlate
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalFeedback2:(AKControl *)<em>feedback2</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalFeedback2:(AKParameter *)<em>feedback2</em></code></div>
 
     
   
@@ -723,7 +723,7 @@ title: AKBeatenPlate
     
     <dl class="argument-def parameter-def">
       <dt><em>feedback2</em></dt>
-      <dd><p>The feedback factor for the second effects loop. [Default Value: 0.25]</p></dd>
+      <dd><p>The feedback factor for the second effects loop. Updated at Control-rate. [Default Value: 0.25]</p></dd>
     </dl>
     
   </div>

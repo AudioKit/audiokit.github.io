@@ -48,10 +48,31 @@ title: AKBalance
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithAudioSource:comparatorAudioSource:">&ndash;&nbsp;initWithAudioSource:comparatorAudioSource:</a></code>
-    <span class="tooltip"><p>Instantiates the balance</p></span>
+    <code><a href="#//api/name/initWithInput:comparatorAudioSource:halfPowerPoint:">&ndash;&nbsp;initWithInput:comparatorAudioSource:halfPowerPoint:</a></code>
+    <span class="tooltip"><p>Instantiates the balance with all values</p></span>
   </span>
   
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithInput:comparatorAudioSource:">&ndash;&nbsp;initWithInput:comparatorAudioSource:</a></code>
+    <span class="tooltip"><p>Instantiates the balance with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/balanceWithInput:comparatorAudioSource:">+&nbsp;balanceWithInput:comparatorAudioSource:</a></code>
+    <span class="tooltip"><p>Instantiates the balance with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/halfPowerPoint">&nbsp;&nbsp;halfPowerPoint</a></code>
+    <span class="tooltip"><p>Half-power point (in Hz) of a special internal low-pass filter. The default value is 10. [Default Value: 10]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
   
 </li><li>
   <span class="tooltip">
@@ -69,7 +90,106 @@ title: AKBalance
 
           
           
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/halfPowerPoint" title="halfPowerPoint"></a>
+  <h3 class="subsubtitle method-title">halfPowerPoint</h3>
 
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Half-power point (in Hz) of a special internal low-pass filter. The default value is 10. [Default Value: 10]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *halfPowerPoint</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKBalance.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/balanceWithInput:comparatorAudioSource:" title="balanceWithInput:comparatorAudioSource:"></a>
+  <h3 class="subsubtitle method-title">balanceWithInput:comparatorAudioSource:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the balance with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)balanceWithInput:(AKParameter *)<em>input</em> comparatorAudioSource:(AKParameter *)<em>comparatorAudioSource</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>Input audio signal</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>comparatorAudioSource</em></dt>
+      <dd><p>The comparator signal</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKBalance.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
           
 
           
@@ -78,18 +198,18 @@ title: AKBalance
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithAudioSource:comparatorAudioSource:" title="initWithAudioSource:comparatorAudioSource:"></a>
-  <h3 class="subsubtitle method-title">initWithAudioSource:comparatorAudioSource:</h3>
+  <a name="//api/name/initWithInput:comparatorAudioSource:" title="initWithInput:comparatorAudioSource:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:comparatorAudioSource:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the balance</p>
+    <p>Instantiates the balance with default values</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKAudio *)<em>audioSource</em> comparatorAudioSource:(AKAudio *)<em>comparatorAudioSource</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> comparatorAudioSource:(AKParameter *)<em>comparatorAudioSource</em></code></div>
 
     
   
@@ -97,13 +217,69 @@ title: AKBalance
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>audioSource</em></dt>
+      <dt><em>input</em></dt>
       <dd><p>Input audio signal</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>comparatorAudioSource</em></dt>
       <dd><p>The comparator signal</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKBalance.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithInput:comparatorAudioSource:halfPowerPoint:" title="initWithInput:comparatorAudioSource:halfPowerPoint:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:comparatorAudioSource:halfPowerPoint:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the balance with all values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> comparatorAudioSource:(AKParameter *)<em>comparatorAudioSource</em> halfPowerPoint:(AKConstant *)<em>halfPowerPoint</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>Input audio signal [Default Value: ]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>comparatorAudioSource</em></dt>
+      <dd><p>The comparator signal [Default Value: ]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>halfPowerPoint</em></dt>
+      <dd><p>Half-power point (in Hz) of a special internal low-pass filter. The default value is 10. [Default Value: 10]</p></dd>
     </dl>
     
   </div>
@@ -149,7 +325,7 @@ title: AKBalance
     
     <dl class="argument-def parameter-def">
       <dt><em>halfPowerPoint</em></dt>
-      <dd><p>Half-power point (in Hz) of a special internal low-pass filter. The default value is 10.</p></dd>
+      <dd><p>Half-power point (in Hz) of a special internal low-pass filter. The default value is 10. [Default Value: 10]</p></dd>
     </dl>
     
   </div>

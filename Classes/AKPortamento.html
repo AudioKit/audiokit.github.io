@@ -15,7 +15,7 @@ title: AKPortamento
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKControl.html">AKControl</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+  <td class="specification-value"><a href="../Classes/AKControl.html">AKControl</a> : <a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKPortamento.h<br />AKPortamento.m</td>
@@ -30,7 +30,7 @@ title: AKPortamento
             <h2 class="subtitle subtitle-overview">Overview</h2>
             <p>Applies portamento to a step-valued control signal.</p>
 
-<p>applies portamento to a step-valued control signal. At each new step value, the output is low-pass filtered to move towards that value at a rate determined by halfTime. halfTime is the “half-time” of the function (in seconds), during which the curve will traverse half the distance towards the new value, then half as much again, etc., theoretically never reaching its asymptote.</p>
+<p>Applies portamento to a step-valued control signal. At each new step value, the output is low-pass filtered to move towards that value at a rate determined by <a href="#//api/name/halfTime">halfTime</a>. <a href="#//api/name/halfTime">halfTime</a> is the “half-time” of the function (in seconds), during which the curve will traverse half the distance towards the new value, then half as much again, etc., theoretically never reaching its asymptote.</p>
           </div>
           
           
@@ -48,8 +48,36 @@ title: AKPortamento
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithControlSource:halfTime:">&ndash;&nbsp;initWithControlSource:halfTime:</a></code>
-    <span class="tooltip"><p>Instantiates the portamento</p></span>
+    <code><a href="#//api/name/initWithInput:halfTime:">&ndash;&nbsp;initWithInput:halfTime:</a></code>
+    <span class="tooltip"><p>Instantiates the portamento with all values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithInput:">&ndash;&nbsp;initWithInput:</a></code>
+    <span class="tooltip"><p>Instantiates the portamento with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/portamentoWithInput:">+&nbsp;portamentoWithInput:</a></code>
+    <span class="tooltip"><p>Instantiates the portamento with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/halfTime">&nbsp;&nbsp;halfTime</a></code>
+    <span class="tooltip"><p>Half-time of the function in seconds. [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalHalfTime:">&ndash;&nbsp;setOptionalHalfTime:</a></code>
+    <span class="tooltip"><p>Set an optional half time</p></span>
   </span>
   
   
@@ -62,7 +90,101 @@ title: AKPortamento
 
           
           
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/halfTime" title="halfTime"></a>
+  <h3 class="subsubtitle method-title">halfTime</h3>
 
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Half-time of the function in seconds. [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *halfTime</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPortamento.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/portamentoWithInput:" title="portamentoWithInput:"></a>
+  <h3 class="subsubtitle method-title">portamentoWithInput:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the portamento with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)portamentoWithInput:(AKParameter *)<em>input</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>The input signal at control-rate.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPortamento.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
           
 
           
@@ -71,18 +193,18 @@ title: AKPortamento
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithControlSource:halfTime:" title="initWithControlSource:halfTime:"></a>
-  <h3 class="subsubtitle method-title">initWithControlSource:halfTime:</h3>
+  <a name="//api/name/initWithInput:" title="initWithInput:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the portamento</p>
+    <p>Instantiates the portamento with default values</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithControlSource:(AKControl *)<em>controlSource</em> halfTime:(AKControl *)<em>halfTime</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em></code></div>
 
     
   
@@ -90,13 +212,105 @@ title: AKPortamento
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>controlSource</em></dt>
+      <dt><em>input</em></dt>
       <dd><p>The input signal at control-rate.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPortamento.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithInput:halfTime:" title="initWithInput:halfTime:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:halfTime:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the portamento with all values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> halfTime:(AKParameter *)<em>halfTime</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>The input signal at control-rate. Updated at Control-rate. [Default Value: ]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>halfTime</em></dt>
-      <dd><p>Half-time of the function in seconds.</p></dd>
+      <dd><p>Half-time of the function in seconds. Updated at Control-rate. [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPortamento.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalHalfTime:" title="setOptionalHalfTime:"></a>
+  <h3 class="subsubtitle method-title">setOptionalHalfTime:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional half time</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalHalfTime:(AKParameter *)<em>halfTime</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>halfTime</em></dt>
+      <dd><p>Half-time of the function in seconds. Updated at Control-rate. [Default Value: 1]</p></dd>
     </dl>
     
   </div>

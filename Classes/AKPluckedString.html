@@ -62,7 +62,7 @@ title: AKPluckedString
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/audioWithExcitationSignal:">+&nbsp;audioWithExcitationSignal:</a></code>
+    <code><a href="#//api/name/pluckWithExcitationSignal:">+&nbsp;pluckWithExcitationSignal:</a></code>
     <span class="tooltip"><p>Instantiates the plucked string with default values</p></span>
   </span>
   
@@ -84,7 +84,7 @@ title: AKPluckedString
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/pluckPosition">&nbsp;&nbsp;pluckPosition</a></code>
-    <span class="tooltip"><p>  The point of pluck as a fraction of the way up the string (0 to 1). A pluck point of zero means no initial pluck. [Default Value: 0.01]</p></span>
+    <span class="tooltip"><p>The point of pluck as a fraction of the way up the string (0 to 1). A pluck point of zero means no initial pluck. [Default Value: 0.01]</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
@@ -98,7 +98,7 @@ title: AKPluckedString
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/samplePosition">&nbsp;&nbsp;samplePosition</a></code>
-    <span class="tooltip"><p>  Proportion of the way along the string to sample the output. [Default Value: 0.1]</p></span>
+    <span class="tooltip"><p>Proportion of the way along the string to sample the output. [Default Value: 0.1]</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
@@ -162,7 +162,7 @@ title: AKPluckedString
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKControl *amplitude</code></div>
+  <div class="method-subsection method-declaration"><code>@property AKParameter *amplitude</code></div>
 
     
   
@@ -229,7 +229,7 @@ title: AKPluckedString
   
   
   <div class="method-subsection brief-description">
-    <p>  The point of pluck as a fraction of the way up the string (0 to 1). A pluck point of zero means no initial pluck. [Default Value: 0.01]</p>
+    <p>The point of pluck as a fraction of the way up the string (0 to 1). A pluck point of zero means no initial pluck. [Default Value: 0.01]</p>
   </div>
   
     
@@ -270,7 +270,7 @@ title: AKPluckedString
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKControl *reflectionCoefficient</code></div>
+  <div class="method-subsection method-declaration"><code>@property AKParameter *reflectionCoefficient</code></div>
 
     
   
@@ -301,12 +301,12 @@ title: AKPluckedString
   
   
   <div class="method-subsection brief-description">
-    <p>  Proportion of the way along the string to sample the output. [Default Value: 0.1]</p>
+    <p>Proportion of the way along the string to sample the output. [Default Value: 0.1]</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKControl *samplePosition</code></div>
+  <div class="method-subsection method-declaration"><code>@property AKParameter *samplePosition</code></div>
 
     
   
@@ -339,8 +339,8 @@ title: AKPluckedString
             <h2 class="subtitle subtitle-methods">Class Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/audioWithExcitationSignal:" title="audioWithExcitationSignal:"></a>
-  <h3 class="subsubtitle method-title">audioWithExcitationSignal:</h3>
+  <a name="//api/name/pluckWithExcitationSignal:" title="pluckWithExcitationSignal:"></a>
+  <h3 class="subsubtitle method-title">pluckWithExcitationSignal:</h3>
 
   
   
@@ -350,7 +350,7 @@ title: AKPluckedString
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)audioWithExcitationSignal:(AKAudio *)<em>excitationSignal</em></code></div>
+  <div class="method-subsection method-declaration"><code>+ (instancetype)pluckWithExcitationSignal:(AKParameter *)<em>excitationSignal</em></code></div>
 
     
   
@@ -404,7 +404,7 @@ title: AKPluckedString
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithExcitationSignal:(AKAudio *)<em>excitationSignal</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithExcitationSignal:(AKParameter *)<em>excitationSignal</em></code></div>
 
     
   
@@ -450,7 +450,7 @@ title: AKPluckedString
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithExcitationSignal:(AKAudio *)<em>excitationSignal</em> frequency:(AKConstant *)<em>frequency</em> pluckPosition:(AKConstant *)<em>pluckPosition</em> samplePosition:(AKControl *)<em>samplePosition</em> reflectionCoefficient:(AKControl *)<em>reflectionCoefficient</em> amplitude:(AKControl *)<em>amplitude</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithExcitationSignal:(AKParameter *)<em>excitationSignal</em> frequency:(AKConstant *)<em>frequency</em> pluckPosition:(AKConstant *)<em>pluckPosition</em> samplePosition:(AKParameter *)<em>samplePosition</em> reflectionCoefficient:(AKParameter *)<em>reflectionCoefficient</em> amplitude:(AKParameter *)<em>amplitude</em></code></div>
 
     
   
@@ -459,32 +459,32 @@ title: AKPluckedString
     
     <dl class="argument-def parameter-def">
       <dt><em>excitationSignal</em></dt>
-      <dd><p>A signal which excites the string.</p></dd>
+      <dd><p>A signal which excites the string. [Default Value: ]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>frequency</em></dt>
-      <dd><p>Frequency of the string</p></dd>
+      <dd><p>Frequency of the string [Default Value: 440]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>pluckPosition</em></dt>
-      <dd><p>The point of pluck as a fraction of the way up the string (0 to 1). A pluck point of zero means no initial pluck.</p></dd>
+      <dd><p>The point of pluck as a fraction of the way up the string (0 to 1). A pluck point of zero means no initial pluck. [Default Value: 0.01]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>samplePosition</em></dt>
-      <dd><p>Proportion of the way along the string to sample the output.</p></dd>
+      <dd><p>Proportion of the way along the string to sample the output. Updated at Control-rate. [Default Value: 0.1]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>reflectionCoefficient</em></dt>
-      <dd><p>The coefficient of reflection, indicating the lossiness and the rate of decay. It must be strictly between 0 and 1 (it will complain about both 0 and 1).</p></dd>
+      <dd><p>The coefficient of reflection, indicating the lossiness and the rate of decay. It must be strictly between 0 and 1 (it will complain about both 0 and 1). Updated at Control-rate. [Default Value: 0.1]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>amplitude</em></dt>
-      <dd><p>Amplitude of note.</p></dd>
+      <dd><p>Amplitude of note. Updated at Control-rate. [Default Value: 1.0]</p></dd>
     </dl>
     
   </div>
@@ -521,7 +521,7 @@ title: AKPluckedString
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalAmplitude:(AKControl *)<em>amplitude</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalAmplitude:(AKParameter *)<em>amplitude</em></code></div>
 
     
   
@@ -530,7 +530,7 @@ title: AKPluckedString
     
     <dl class="argument-def parameter-def">
       <dt><em>amplitude</em></dt>
-      <dd><p>Amplitude of note. [Default Value: 1.0]</p></dd>
+      <dd><p>Amplitude of note. Updated at Control-rate. [Default Value: 1.0]</p></dd>
     </dl>
     
   </div>
@@ -659,7 +659,7 @@ title: AKPluckedString
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalReflectionCoefficient:(AKControl *)<em>reflectionCoefficient</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalReflectionCoefficient:(AKParameter *)<em>reflectionCoefficient</em></code></div>
 
     
   
@@ -668,7 +668,7 @@ title: AKPluckedString
     
     <dl class="argument-def parameter-def">
       <dt><em>reflectionCoefficient</em></dt>
-      <dd><p>The coefficient of reflection, indicating the lossiness and the rate of decay. It must be strictly between 0 and 1 (it will complain about both 0 and 1). [Default Value: 0.1]</p></dd>
+      <dd><p>The coefficient of reflection, indicating the lossiness and the rate of decay. It must be strictly between 0 and 1 (it will complain about both 0 and 1). Updated at Control-rate. [Default Value: 0.1]</p></dd>
     </dl>
     
   </div>
@@ -705,7 +705,7 @@ title: AKPluckedString
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalSamplePosition:(AKControl *)<em>samplePosition</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalSamplePosition:(AKParameter *)<em>samplePosition</em></code></div>
 
     
   
@@ -714,7 +714,7 @@ title: AKPluckedString
     
     <dl class="argument-def parameter-def">
       <dt><em>samplePosition</em></dt>
-      <dd><p>Proportion of the way along the string to sample the output. [Default Value: 0.1]</p></dd>
+      <dd><p>Proportion of the way along the string to sample the output. Updated at Control-rate. [Default Value: 0.1]</p></dd>
     </dl>
     
   </div>

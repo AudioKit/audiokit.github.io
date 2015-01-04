@@ -48,17 +48,59 @@ title: AKDopplerEffect
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithAudioSource:micPosition:sourcePosition:">&ndash;&nbsp;initWithAudioSource:micPosition:sourcePosition:</a></code>
-    <span class="tooltip"><p>Instantiates the doppler effect</p></span>
+    <code><a href="#//api/name/initWithInput:sourcePosition:micPosition:smoothingFilterUpdateRate:">&ndash;&nbsp;initWithInput:sourcePosition:micPosition:smoothingFilterUpdateRate:</a></code>
+    <span class="tooltip"><p>Instantiates the doppler effect with all values</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/setOptionalSoundSpeed:">&ndash;&nbsp;setOptionalSoundSpeed:</a></code>
-    <span class="tooltip"><p>Set an optional sound speed</p></span>
+    <code><a href="#//api/name/initWithInput:">&ndash;&nbsp;initWithInput:</a></code>
+    <span class="tooltip"><p>Instantiates the doppler effect with default values</p></span>
   </span>
   
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/effectWithInput:">+&nbsp;effectWithInput:</a></code>
+    <span class="tooltip"><p>Instantiates the doppler effect with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/sourcePosition">&nbsp;&nbsp;sourcePosition</a></code>
+    <span class="tooltip"><p>Position of the source sound in meters. The distance between source and mic should not be changed faster than about &frac34; the speed of sound. [Default Value: 0]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalSourcePosition:">&ndash;&nbsp;setOptionalSourcePosition:</a></code>
+    <span class="tooltip"><p>Set an optional source position</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/micPosition">&nbsp;&nbsp;micPosition</a></code>
+    <span class="tooltip"><p>Position of the recording microphone in meters. The distance between source and mic should not be changed faster than about &frac34; the speed of sound. [Default Value: 0]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalMicPosition:">&ndash;&nbsp;setOptionalMicPosition:</a></code>
+    <span class="tooltip"><p>Set an optional mic position</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/smoothingFilterUpdateRate">&nbsp;&nbsp;smoothingFilterUpdateRate</a></code>
+    <span class="tooltip"><p>Rate of updating the position smoothing filter, in cycles/second. [Default Value: 6]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
   
 </li><li>
   <span class="tooltip">
@@ -76,7 +118,173 @@ title: AKDopplerEffect
 
           
           
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/micPosition" title="micPosition"></a>
+  <h3 class="subsubtitle method-title">micPosition</h3>
 
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Position of the recording microphone in meters. The distance between source and mic should not be changed faster than about &frac34; the speed of sound. [Default Value: 0]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *micPosition</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKDopplerEffect.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/smoothingFilterUpdateRate" title="smoothingFilterUpdateRate"></a>
+  <h3 class="subsubtitle method-title">smoothingFilterUpdateRate</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Rate of updating the position smoothing filter, in cycles/second. [Default Value: 6]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *smoothingFilterUpdateRate</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKDopplerEffect.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/sourcePosition" title="sourcePosition"></a>
+  <h3 class="subsubtitle method-title">sourcePosition</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Position of the source sound in meters. The distance between source and mic should not be changed faster than about &frac34; the speed of sound. [Default Value: 0]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *sourcePosition</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKDopplerEffect.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/effectWithInput:" title="effectWithInput:"></a>
+  <h3 class="subsubtitle method-title">effectWithInput:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the doppler effect with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)effectWithInput:(AKParameter *)<em>input</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>Input signal at the sound source.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKDopplerEffect.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
           
 
           
@@ -85,18 +293,18 @@ title: AKDopplerEffect
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithAudioSource:micPosition:sourcePosition:" title="initWithAudioSource:micPosition:sourcePosition:"></a>
-  <h3 class="subsubtitle method-title">initWithAudioSource:micPosition:sourcePosition:</h3>
+  <a name="//api/name/initWithInput:" title="initWithInput:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the doppler effect</p>
+    <p>Instantiates the doppler effect with default values</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKAudio *)<em>audioSource</em> micPosition:(AKControl *)<em>micPosition</em> sourcePosition:(AKControl *)<em>sourcePosition</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em></code></div>
 
     
   
@@ -104,18 +312,115 @@ title: AKDopplerEffect
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>audioSource</em></dt>
+      <dt><em>input</em></dt>
       <dd><p>Input signal at the sound source.</p></dd>
     </dl>
     
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKDopplerEffect.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithInput:sourcePosition:micPosition:smoothingFilterUpdateRate:" title="initWithInput:sourcePosition:micPosition:smoothingFilterUpdateRate:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:sourcePosition:micPosition:smoothingFilterUpdateRate:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the doppler effect with all values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> sourcePosition:(AKParameter *)<em>sourcePosition</em> micPosition:(AKParameter *)<em>micPosition</em> smoothingFilterUpdateRate:(AKConstant *)<em>smoothingFilterUpdateRate</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
     <dl class="argument-def parameter-def">
-      <dt><em>micPosition</em></dt>
-      <dd><p>Position of the recording microphone in meters. The distance between source and mic should not be changed faster than about &frac34; the speed of sound.</p></dd>
+      <dt><em>input</em></dt>
+      <dd><p>Input signal at the sound source. [Default Value: ]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>sourcePosition</em></dt>
-      <dd><p>Position of the source sound in meters. The distance between source and mic should not be changed faster than about &frac34; the speed of sound.</p></dd>
+      <dd><p>Position of the source sound in meters. The distance between source and mic should not be changed faster than about &frac34; the speed of sound. Updated at Control-rate. [Default Value: 0]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>micPosition</em></dt>
+      <dd><p>Position of the recording microphone in meters. The distance between source and mic should not be changed faster than about &frac34; the speed of sound. Updated at Control-rate. [Default Value: 0]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>smoothingFilterUpdateRate</em></dt>
+      <dd><p>Rate of updating the position smoothing filter, in cycles/second. [Default Value: 6]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKDopplerEffect.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalMicPosition:" title="setOptionalMicPosition:"></a>
+  <h3 class="subsubtitle method-title">setOptionalMicPosition:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional mic position</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalMicPosition:(AKParameter *)<em>micPosition</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>micPosition</em></dt>
+      <dd><p>Position of the recording microphone in meters. The distance between source and mic should not be changed faster than about &frac34; the speed of sound. Updated at Control-rate. [Default Value: 0]</p></dd>
     </dl>
     
   </div>
@@ -161,7 +466,7 @@ title: AKDopplerEffect
     
     <dl class="argument-def parameter-def">
       <dt><em>smoothingFilterUpdateRate</em></dt>
-      <dd><p>Rate of updating the position smoothing filter, in cycles/second.</p></dd>
+      <dd><p>Rate of updating the position smoothing filter, in cycles/second. [Default Value: 6]</p></dd>
     </dl>
     
   </div>
@@ -187,18 +492,18 @@ title: AKDopplerEffect
 </div>
             
             <div class="section-method">
-  <a name="//api/name/setOptionalSoundSpeed:" title="setOptionalSoundSpeed:"></a>
-  <h3 class="subsubtitle method-title">setOptionalSoundSpeed:</h3>
+  <a name="//api/name/setOptionalSourcePosition:" title="setOptionalSourcePosition:"></a>
+  <h3 class="subsubtitle method-title">setOptionalSourcePosition:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional sound speed</p>
+    <p>Set an optional source position</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalSoundSpeed:(AKConstant *)<em>soundSpeed</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalSourcePosition:(AKParameter *)<em>sourcePosition</em></code></div>
 
     
   
@@ -206,8 +511,8 @@ title: AKDopplerEffect
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>soundSpeed</em></dt>
-      <dd><p>Speed of sound in meters/second.</p></dd>
+      <dt><em>sourcePosition</em></dt>
+      <dd><p>Position of the source sound in meters. The distance between source and mic should not be changed faster than about &frac34; the speed of sound. Updated at Control-rate. [Default Value: 0]</p></dd>
     </dl>
     
   </div>

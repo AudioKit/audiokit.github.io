@@ -28,7 +28,9 @@ title: AKLowFrequencyOscillator
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>A low frequency oscillator of various shapes.s</p>
+            <p>A low frequency oscillator of various shapes.</p>
+
+<p>More detailed description from <a href="http://www.csounds.com/manual/html/">http://www.csounds.com/manual/html/</a></p>
           </div>
           
           
@@ -46,15 +48,64 @@ title: AKLowFrequencyOscillator
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithFrequency:amplitude:">&ndash;&nbsp;initWithFrequency:amplitude:</a></code>
-    <span class="tooltip"><p>Instantiates the low frequency oscillator</p></span>
+    <code><a href="#//api/name/initWithType:frequency:amplitude:">&ndash;&nbsp;initWithType:frequency:amplitude:</a></code>
+    <span class="tooltip"><p>Instantiates the low <a href="#//api/name/frequency">frequency</a> <a href="#//api/name/oscillator">oscillator</a> with all values</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
+    <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
+    <span class="tooltip"><p>Instantiates the low <a href="#//api/name/frequency">frequency</a> <a href="#//api/name/oscillator">oscillator</a> with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/oscillator">+&nbsp;oscillator</a></code>
+    <span class="tooltip"><p>Instantiates the low <a href="#//api/name/frequency">frequency</a> oscillator with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/type">&nbsp;&nbsp;type</a></code>
+    <span class="tooltip"><p>Waveform of the <a href="#//api/name/oscillator">oscillator</a>, can be sine, triangle, square (bipolar), square (unipolar), saw-tooth, saw-tooth (down). [Default Value: AKLowFrequencyOscillatorTypeSine]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
     <code><a href="#//api/name/setOptionalType:">&ndash;&nbsp;setOptionalType:</a></code>
-    <span class="tooltip"><p>Set an optional type</p></span>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/type">type</a></p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/frequency">&nbsp;&nbsp;frequency</a></code>
+    <span class="tooltip"><p>Frequency of the note. [Default Value: 110]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalFrequency:">&ndash;&nbsp;setOptionalFrequency:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/frequency">frequency</a></p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/amplitude">&nbsp;&nbsp;amplitude</a></code>
+    <span class="tooltip"><p>Amplitude of output. [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalAmplitude:">&ndash;&nbsp;setOptionalAmplitude:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p></span>
   </span>
   
   
@@ -67,7 +118,163 @@ title: AKLowFrequencyOscillator
 
           
           
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/amplitude" title="amplitude"></a>
+  <h3 class="subsubtitle method-title">amplitude</h3>
 
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Amplitude of output. [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *amplitude</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLowFrequencyOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/frequency" title="frequency"></a>
+  <h3 class="subsubtitle method-title">frequency</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Frequency of the note. [Default Value: 110]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *frequency</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLowFrequencyOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/type" title="type"></a>
+  <h3 class="subsubtitle method-title">type</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Waveform of the <a href="#//api/name/oscillator">oscillator</a>, can be sine, triangle, square (bipolar), square (unipolar), saw-tooth, saw-tooth (down). [Default Value: AKLowFrequencyOscillatorTypeSine]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKLowFrequencyOscillatorType type</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLowFrequencyOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/oscillator" title="oscillator"></a>
+  <h3 class="subsubtitle method-title">oscillator</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the low <a href="#//api/name/frequency">frequency</a> oscillator with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)oscillator</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLowFrequencyOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
           
 
           
@@ -76,18 +283,156 @@ title: AKLowFrequencyOscillator
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithFrequency:amplitude:" title="initWithFrequency:amplitude:"></a>
-  <h3 class="subsubtitle method-title">initWithFrequency:amplitude:</h3>
+  <a name="//api/name/init" title="init"></a>
+  <h3 class="subsubtitle method-title">init</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the low frequency oscillator</p>
+    <p>Instantiates the low <a href="#//api/name/frequency">frequency</a> <a href="#//api/name/oscillator">oscillator</a> with default values</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFrequency:(AKControl *)<em>frequency</em> amplitude:(AKControl *)<em>amplitude</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLowFrequencyOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithType:frequency:amplitude:" title="initWithType:frequency:amplitude:"></a>
+  <h3 class="subsubtitle method-title">initWithType:frequency:amplitude:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the low <a href="#//api/name/frequency">frequency</a> <a href="#//api/name/oscillator">oscillator</a> with all values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithType:(AKLowFrequencyOscillatorType)<em>type</em> frequency:(AKParameter *)<em>frequency</em> amplitude:(AKParameter *)<em>amplitude</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>type</em></dt>
+      <dd><p>Waveform of the <a href="#//api/name/oscillator">oscillator</a>, can be sine, triangle, square (bipolar), square (unipolar), saw-tooth, saw-tooth (down). [Default Value: AKLowFrequencyOscillatorTypeSine]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>frequency</em></dt>
+      <dd><p>Frequency of the note. Updated at Control-rate. [Default Value: 110]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>amplitude</em></dt>
+      <dd><p>Amplitude of output. Updated at Control-rate. [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLowFrequencyOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalAmplitude:" title="setOptionalAmplitude:"></a>
+  <h3 class="subsubtitle method-title">setOptionalAmplitude:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalAmplitude:(AKParameter *)<em>amplitude</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>amplitude</em></dt>
+      <dd><p>Amplitude of output. Updated at Control-rate. [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLowFrequencyOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalFrequency:" title="setOptionalFrequency:"></a>
+  <h3 class="subsubtitle method-title">setOptionalFrequency:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional <a href="#//api/name/frequency">frequency</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalFrequency:(AKParameter *)<em>frequency</em></code></div>
 
     
   
@@ -96,12 +441,7 @@ title: AKLowFrequencyOscillator
     
     <dl class="argument-def parameter-def">
       <dt><em>frequency</em></dt>
-      <dd><p>Frequency of the note.</p></dd>
-    </dl>
-    
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>Amplitude of output.</p></dd>
+      <dd><p>Frequency of the note. Updated at Control-rate. [Default Value: 110]</p></dd>
     </dl>
     
   </div>
@@ -133,12 +473,12 @@ title: AKLowFrequencyOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional type</p>
+    <p>Set an optional <a href="#//api/name/type">type</a></p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalType:(LFOType)<em>type</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalType:(AKLowFrequencyOscillatorType)<em>type</em></code></div>
 
     
   
@@ -147,7 +487,7 @@ title: AKLowFrequencyOscillator
     
     <dl class="argument-def parameter-def">
       <dt><em>type</em></dt>
-      <dd><p>Waveform of the oscillator, can be sine, triangle, square (bipolar), square (unipolar), saw-tooth, saw-tooth (down).</p></dd>
+      <dd><p>Waveform of the <a href="#//api/name/oscillator">oscillator</a>, can be sine, triangle, square (bipolar), square (unipolar), saw-tooth, saw-tooth (down). [Default Value: AKLowFrequencyOscillatorTypeSine]</p></dd>
     </dl>
     
   </div>

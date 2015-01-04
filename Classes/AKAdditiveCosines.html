@@ -28,11 +28,9 @@ title: AKAdditiveCosines
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Generate an additive set of harmonically related cosine partials of a fundamental frequency,
-and whose amplitudes are scaled so their summation peak equal the given amplitude property.
-Properties determine the selection and strength of partials. This is a band-limited pulse train:
-if the partials extend to the Nyquist, i.e. harmonicsCount = int (sr / 2 / fundamental freq.),
-the result is a real pulse train of amplitude (amplitude).</p>
+            <p>A set of harmonically related cosine partials.</p>
+
+<p>More detailed description from <a href="http://www.csounds.com/manual/html/">http://www.csounds.com/manual/html/</a></p>
           </div>
           
           
@@ -50,8 +48,106 @@ the result is a real pulse train of amplitude (amplitude).</p>
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithFTable:harmonicsCount:firstHarmonicIndex:partialMultiplier:fundamentalFrequency:amplitude:">&ndash;&nbsp;initWithFTable:harmonicsCount:firstHarmonicIndex:partialMultiplier:fundamentalFrequency:amplitude:</a></code>
-    <span class="tooltip"><p>Create a set of harmonically related cosine partials</p></span>
+    <code><a href="#//api/name/initWithCosineTable:harmonicsCount:firstHarmonicIndex:partialMultiplier:fundamentalFrequency:amplitude:phase:">&ndash;&nbsp;initWithCosineTable:harmonicsCount:firstHarmonicIndex:partialMultiplier:fundamentalFrequency:amplitude:phase:</a></code>
+    <span class="tooltip"><p>Instantiates the additive cosines with all values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithCosineTable:">&ndash;&nbsp;initWithCosineTable:</a></code>
+    <span class="tooltip"><p>Instantiates the additive cosines with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/cosinesWithCosineTable:">+&nbsp;cosinesWithCosineTable:</a></code>
+    <span class="tooltip"><p>Instantiates the additive cosines with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/harmonicsCount">&nbsp;&nbsp;harmonicsCount</a></code>
+    <span class="tooltip"><p>Total number of harmonics requested. [Default Value: 10]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalHarmonicsCount:">&ndash;&nbsp;setOptionalHarmonicsCount:</a></code>
+    <span class="tooltip"><p>Set an optional harmonics count</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/firstHarmonicIndex">&nbsp;&nbsp;firstHarmonicIndex</a></code>
+    <span class="tooltip"><p>The lowest harmonic present. [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalFirstHarmonicIndex:">&ndash;&nbsp;setOptionalFirstHarmonicIndex:</a></code>
+    <span class="tooltip"><p>Set an optional first harmonic index</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/partialMultiplier">&nbsp;&nbsp;partialMultiplier</a></code>
+    <span class="tooltip"><p>The multiplier in the series of <a href="#//api/name/amplitude">amplitude</a> coefficients. [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalPartialMultiplier:">&ndash;&nbsp;setOptionalPartialMultiplier:</a></code>
+    <span class="tooltip"><p>Set an optional partial multiplier</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/fundamentalFrequency">&nbsp;&nbsp;fundamentalFrequency</a></code>
+    <span class="tooltip"><p>The fundamental frequency which can be modulated at any rate. [Default Value: 220]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalFundamentalFrequency:">&ndash;&nbsp;setOptionalFundamentalFrequency:</a></code>
+    <span class="tooltip"><p>Set an optional fundamental frequency</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/amplitude">&nbsp;&nbsp;amplitude</a></code>
+    <span class="tooltip"><p>The total amplitude of the output of all the cosines. [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalAmplitude:">&ndash;&nbsp;setOptionalAmplitude:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/phase">&nbsp;&nbsp;phase</a></code>
+    <span class="tooltip"><p>Initial phase of the fundamental frequency, expressed as a fraction of a cycle (0 to 1). [Default Value: 0]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalPhase:">&ndash;&nbsp;setOptionalPhase:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/phase">phase</a></p></span>
   </span>
   
   
@@ -64,27 +160,247 @@ the result is a real pulse train of amplitude (amplitude).</p>
 
           
           
-
-          
-
-          
           <div class="section section-methods">
-            <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithFTable:harmonicsCount:firstHarmonicIndex:partialMultiplier:fundamentalFrequency:amplitude:" title="initWithFTable:harmonicsCount:firstHarmonicIndex:partialMultiplier:fundamentalFrequency:amplitude:"></a>
-  <h3 class="subsubtitle method-title">initWithFTable:harmonicsCount:firstHarmonicIndex:partialMultiplier:fundamentalFrequency:amplitude:</h3>
+  <a name="//api/name/amplitude" title="amplitude"></a>
+  <h3 class="subsubtitle method-title">amplitude</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Create a set of harmonically related cosine partials</p>
+    <p>The total amplitude of the output of all the cosines. [Default Value: 1]</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFTable:(AKFTable *)<em>cosineTable</em> harmonicsCount:(AKControl *)<em>harmonicsCount</em> firstHarmonicIndex:(AKControl *)<em>firstHarmonicIndex</em> partialMultiplier:(AKControl *)<em>partialMultiplier</em> fundamentalFrequency:(AKParameter *)<em>fundamentalFrequency</em> amplitude:(AKParameter *)<em>amplitude</em></code></div>
+  <div class="method-subsection method-declaration"><code>@property AKParameter *amplitude</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKAdditiveCosines.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/firstHarmonicIndex" title="firstHarmonicIndex"></a>
+  <h3 class="subsubtitle method-title">firstHarmonicIndex</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>The lowest harmonic present. [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *firstHarmonicIndex</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKAdditiveCosines.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/fundamentalFrequency" title="fundamentalFrequency"></a>
+  <h3 class="subsubtitle method-title">fundamentalFrequency</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>The fundamental frequency which can be modulated at any rate. [Default Value: 220]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *fundamentalFrequency</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKAdditiveCosines.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/harmonicsCount" title="harmonicsCount"></a>
+  <h3 class="subsubtitle method-title">harmonicsCount</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Total number of harmonics requested. [Default Value: 10]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *harmonicsCount</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKAdditiveCosines.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/partialMultiplier" title="partialMultiplier"></a>
+  <h3 class="subsubtitle method-title">partialMultiplier</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>The multiplier in the series of <a href="#//api/name/amplitude">amplitude</a> coefficients. [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *partialMultiplier</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKAdditiveCosines.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/phase" title="phase"></a>
+  <h3 class="subsubtitle method-title">phase</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Initial phase of the fundamental frequency, expressed as a fraction of a cycle (0 to 1). [Default Value: 0]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *phase</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKAdditiveCosines.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/cosinesWithCosineTable:" title="cosinesWithCosineTable:"></a>
+  <h3 class="subsubtitle method-title">cosinesWithCosineTable:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the additive cosines with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)cosinesWithCosineTable:(AKFunctionTable *)<em>cosineTable</em></code></div>
 
     
   
@@ -93,32 +409,413 @@ the result is a real pulse train of amplitude (amplitude).</p>
     
     <dl class="argument-def parameter-def">
       <dt><em>cosineTable</em></dt>
-      <dd><p>A cosine table with at least 8192 points is recommended</p></dd>
+      <dd><p>A cosine table with at least 8192 points is recommended.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKAdditiveCosines.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithCosineTable:" title="initWithCosineTable:"></a>
+  <h3 class="subsubtitle method-title">initWithCosineTable:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the additive cosines with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithCosineTable:(AKFunctionTable *)<em>cosineTable</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>cosineTable</em></dt>
+      <dd><p>A cosine table with at least 8192 points is recommended.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKAdditiveCosines.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithCosineTable:harmonicsCount:firstHarmonicIndex:partialMultiplier:fundamentalFrequency:amplitude:phase:" title="initWithCosineTable:harmonicsCount:firstHarmonicIndex:partialMultiplier:fundamentalFrequency:amplitude:phase:"></a>
+  <h3 class="subsubtitle method-title">initWithCosineTable:harmonicsCount:firstHarmonicIndex:partialMultiplier:fundamentalFrequency:amplitude:phase:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the additive cosines with all values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithCosineTable:(AKFunctionTable *)<em>cosineTable</em> harmonicsCount:(AKParameter *)<em>harmonicsCount</em> firstHarmonicIndex:(AKParameter *)<em>firstHarmonicIndex</em> partialMultiplier:(AKParameter *)<em>partialMultiplier</em> fundamentalFrequency:(AKParameter *)<em>fundamentalFrequency</em> amplitude:(AKParameter *)<em>amplitude</em> phase:(AKConstant *)<em>phase</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>cosineTable</em></dt>
+      <dd><p>A cosine table with at least 8192 points is recommended. [Default Value: ]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>harmonicsCount</em></dt>
-      <dd><p>Total number of harmonics requested.</p></dd>
+      <dd><p>Total number of harmonics requested. Updated at Control-rate. [Default Value: 10]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>firstHarmonicIndex</em></dt>
-      <dd><p>The lowest harmonic present.</p></dd>
+      <dd><p>The lowest harmonic present. Updated at Control-rate. [Default Value: 1]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>partialMultiplier</em></dt>
-      <dd><p>The multiplier in the series of amplitude coefficients.</p></dd>
+      <dd><p>The multiplier in the series of <a href="#//api/name/amplitude">amplitude</a> coefficients. Updated at Control-rate. [Default Value: 1]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>fundamentalFrequency</em></dt>
-      <dd><p>Thefrequency which can be modulated at any rate.</p></dd>
+      <dd><p>The fundamental frequency which can be modulated at any rate. [Default Value: 220]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>amplitude</em></dt>
-      <dd><p>Total amplitude which can be modulated at any rate.</p></dd>
+      <dd><p>The total <a href="#//api/name/amplitude">amplitude</a> of the output of all the cosines. [Default Value: 1]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>phase</em></dt>
+      <dd><p>Initial <a href="#//api/name/phase">phase</a> of the fundamental frequency, expressed as a fraction of a cycle (0 to 1). [Default Value: 0]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKAdditiveCosines.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalAmplitude:" title="setOptionalAmplitude:"></a>
+  <h3 class="subsubtitle method-title">setOptionalAmplitude:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalAmplitude:(AKParameter *)<em>amplitude</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>amplitude</em></dt>
+      <dd><p>The total <a href="#//api/name/amplitude">amplitude</a> of the output of all the cosines. [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKAdditiveCosines.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalFirstHarmonicIndex:" title="setOptionalFirstHarmonicIndex:"></a>
+  <h3 class="subsubtitle method-title">setOptionalFirstHarmonicIndex:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional first harmonic index</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalFirstHarmonicIndex:(AKParameter *)<em>firstHarmonicIndex</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>firstHarmonicIndex</em></dt>
+      <dd><p>The lowest harmonic present. Updated at Control-rate. [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKAdditiveCosines.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalFundamentalFrequency:" title="setOptionalFundamentalFrequency:"></a>
+  <h3 class="subsubtitle method-title">setOptionalFundamentalFrequency:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional fundamental frequency</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalFundamentalFrequency:(AKParameter *)<em>fundamentalFrequency</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>fundamentalFrequency</em></dt>
+      <dd><p>The fundamental frequency which can be modulated at any rate. [Default Value: 220]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKAdditiveCosines.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalHarmonicsCount:" title="setOptionalHarmonicsCount:"></a>
+  <h3 class="subsubtitle method-title">setOptionalHarmonicsCount:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional harmonics count</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalHarmonicsCount:(AKParameter *)<em>harmonicsCount</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>harmonicsCount</em></dt>
+      <dd><p>Total number of harmonics requested. Updated at Control-rate. [Default Value: 10]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKAdditiveCosines.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalPartialMultiplier:" title="setOptionalPartialMultiplier:"></a>
+  <h3 class="subsubtitle method-title">setOptionalPartialMultiplier:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional partial multiplier</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalPartialMultiplier:(AKParameter *)<em>partialMultiplier</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>partialMultiplier</em></dt>
+      <dd><p>The multiplier in the series of <a href="#//api/name/amplitude">amplitude</a> coefficients. Updated at Control-rate. [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKAdditiveCosines.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalPhase:" title="setOptionalPhase:"></a>
+  <h3 class="subsubtitle method-title">setOptionalPhase:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional <a href="#//api/name/phase">phase</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalPhase:(AKConstant *)<em>phase</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>phase</em></dt>
+      <dd><p>Initial <a href="#//api/name/phase">phase</a> of the fundamental frequency, expressed as a fraction of a cycle (0 to 1). [Default Value: 0]</p></dd>
     </dl>
     
   </div>

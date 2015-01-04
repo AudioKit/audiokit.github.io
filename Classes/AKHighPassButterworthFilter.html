@@ -48,8 +48,36 @@ title: AKHighPassButterworthFilter
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithAudioSource:cutoffFrequency:">&ndash;&nbsp;initWithAudioSource:cutoffFrequency:</a></code>
-    <span class="tooltip"><p>Instantiates the high pass butterworth filter</p></span>
+    <code><a href="#//api/name/initWithInput:cutoffFrequency:">&ndash;&nbsp;initWithInput:cutoffFrequency:</a></code>
+    <span class="tooltip"><p>Instantiates the high pass butterworth filter with all values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithInput:">&ndash;&nbsp;initWithInput:</a></code>
+    <span class="tooltip"><p>Instantiates the high pass butterworth filter with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/filterWithInput:">+&nbsp;filterWithInput:</a></code>
+    <span class="tooltip"><p>Instantiates the high pass butterworth filter with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/cutoffFrequency">&nbsp;&nbsp;cutoffFrequency</a></code>
+    <span class="tooltip"><p>Cutoff frequency for each of the filters. [Default Value: 500]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalCutoffFrequency:">&ndash;&nbsp;setOptionalCutoffFrequency:</a></code>
+    <span class="tooltip"><p>Set an optional cutoff frequency</p></span>
   </span>
   
   
@@ -62,7 +90,101 @@ title: AKHighPassButterworthFilter
 
           
           
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/cutoffFrequency" title="cutoffFrequency"></a>
+  <h3 class="subsubtitle method-title">cutoffFrequency</h3>
 
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Cutoff frequency for each of the filters. [Default Value: 500]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *cutoffFrequency</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKHighPassButterworthFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/filterWithInput:" title="filterWithInput:"></a>
+  <h3 class="subsubtitle method-title">filterWithInput:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the high pass butterworth filter with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)filterWithInput:(AKParameter *)<em>input</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>Input signal to be filtered.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKHighPassButterworthFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
           
 
           
@@ -71,18 +193,18 @@ title: AKHighPassButterworthFilter
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithAudioSource:cutoffFrequency:" title="initWithAudioSource:cutoffFrequency:"></a>
-  <h3 class="subsubtitle method-title">initWithAudioSource:cutoffFrequency:</h3>
+  <a name="//api/name/initWithInput:" title="initWithInput:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the high pass butterworth filter</p>
+    <p>Instantiates the high pass butterworth filter with default values</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKAudio *)<em>audioSource</em> cutoffFrequency:(AKControl *)<em>cutoffFrequency</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em></code></div>
 
     
   
@@ -90,13 +212,105 @@ title: AKHighPassButterworthFilter
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>audioSource</em></dt>
+      <dt><em>input</em></dt>
       <dd><p>Input signal to be filtered.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKHighPassButterworthFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithInput:cutoffFrequency:" title="initWithInput:cutoffFrequency:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:cutoffFrequency:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the high pass butterworth filter with all values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> cutoffFrequency:(AKParameter *)<em>cutoffFrequency</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>Input signal to be filtered. [Default Value: ]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>cutoffFrequency</em></dt>
-      <dd><p>Cutoff frequency for each of the filters.</p></dd>
+      <dd><p>Cutoff frequency for each of the filters. Updated at Control-rate. [Default Value: 500]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKHighPassButterworthFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalCutoffFrequency:" title="setOptionalCutoffFrequency:"></a>
+  <h3 class="subsubtitle method-title">setOptionalCutoffFrequency:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional cutoff frequency</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalCutoffFrequency:(AKParameter *)<em>cutoffFrequency</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>cutoffFrequency</em></dt>
+      <dd><p>Cutoff frequency for each of the filters. Updated at Control-rate. [Default Value: 500]</p></dd>
     </dl>
     
   </div>

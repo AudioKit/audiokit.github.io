@@ -30,7 +30,7 @@ title: AKResonantFilter
             <h2 class="subtitle subtitle-overview">Overview</h2>
             <p>A second-order resonant filter.</p>
 
-<p>This is a second-order filter defined by a center frequency which is the frequency position of the peak response, and a bandwidth which is the frequency difference between the upper and lower half-power points.</p>
+<p>This is a second-order filter defined by a center frequency which is the frequency position of the peak response, and a <a href="#//api/name/bandwidth">bandwidth</a> which is the frequency difference between the upper and lower half-power points.</p>
           </div>
           
           
@@ -49,7 +49,49 @@ title: AKResonantFilter
                 <li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithAudioSource:centerFrequency:bandwidth:">&ndash;&nbsp;initWithAudioSource:centerFrequency:bandwidth:</a></code>
-    <span class="tooltip"><p>Instantiates the resonant filter</p></span>
+    <span class="tooltip"><p>Instantiates the resonant filter with all values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithAudioSource:">&ndash;&nbsp;initWithAudioSource:</a></code>
+    <span class="tooltip"><p>Instantiates the resonant filter with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/filterWithAudioSource:">+&nbsp;filterWithAudioSource:</a></code>
+    <span class="tooltip"><p>Instantiates the resonant filter with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/centerFrequency">&nbsp;&nbsp;centerFrequency</a></code>
+    <span class="tooltip"><p>Center frequency of the filter, or frequency position of the peak response. [Default Value: 1000]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalCenterFrequency:">&ndash;&nbsp;setOptionalCenterFrequency:</a></code>
+    <span class="tooltip"><p>Set an optional center frequency</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/bandwidth">&nbsp;&nbsp;bandwidth</a></code>
+    <span class="tooltip"><p>Bandwidth of the filter (the Hz difference between the upper and lower half-power points). [Default Value: 10]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalBandwidth:">&ndash;&nbsp;setOptionalBandwidth:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/bandwidth">bandwidth</a></p></span>
   </span>
   
   
@@ -62,27 +104,103 @@ title: AKResonantFilter
 
           
           
-
-          
-
-          
           <div class="section section-methods">
-            <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithAudioSource:centerFrequency:bandwidth:" title="initWithAudioSource:centerFrequency:bandwidth:"></a>
-  <h3 class="subsubtitle method-title">initWithAudioSource:centerFrequency:bandwidth:</h3>
+  <a name="//api/name/bandwidth" title="bandwidth"></a>
+  <h3 class="subsubtitle method-title">bandwidth</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the resonant filter</p>
+    <p>Bandwidth of the filter (the Hz difference between the upper and lower half-power points). [Default Value: 10]</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKAudio *)<em>audioSource</em> centerFrequency:(AKControl *)<em>centerFrequency</em> bandwidth:(AKControl *)<em>bandwidth</em></code></div>
+  <div class="method-subsection method-declaration"><code>@property AKParameter *bandwidth</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKResonantFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/centerFrequency" title="centerFrequency"></a>
+  <h3 class="subsubtitle method-title">centerFrequency</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Center frequency of the filter, or frequency position of the peak response. [Default Value: 1000]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *centerFrequency</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKResonantFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/filterWithAudioSource:" title="filterWithAudioSource:"></a>
+  <h3 class="subsubtitle method-title">filterWithAudioSource:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the resonant filter with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)filterWithAudioSource:(AKParameter *)<em>audioSource</em></code></div>
 
     
   
@@ -94,14 +212,206 @@ title: AKResonantFilter
       <dd><p>The input audio stream.</p></dd>
     </dl>
     
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKResonantFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithAudioSource:" title="initWithAudioSource:"></a>
+  <h3 class="subsubtitle method-title">initWithAudioSource:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the resonant filter with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKParameter *)<em>audioSource</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>audioSource</em></dt>
+      <dd><p>The input audio stream.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKResonantFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithAudioSource:centerFrequency:bandwidth:" title="initWithAudioSource:centerFrequency:bandwidth:"></a>
+  <h3 class="subsubtitle method-title">initWithAudioSource:centerFrequency:bandwidth:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the resonant filter with all values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKParameter *)<em>audioSource</em> centerFrequency:(AKParameter *)<em>centerFrequency</em> bandwidth:(AKParameter *)<em>bandwidth</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>audioSource</em></dt>
+      <dd><p>The input audio stream. [Default Value: ]</p></dd>
+    </dl>
+    
     <dl class="argument-def parameter-def">
       <dt><em>centerFrequency</em></dt>
-      <dd><p>Center frequency of the filter, or frequency position of the peak response.</p></dd>
+      <dd><p>Center frequency of the filter, or frequency position of the peak response. Updated at Control-rate. [Default Value: 1000]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>bandwidth</em></dt>
-      <dd><p>Bandwidth of the filter (the Hz difference between the upper and lower half-power points).</p></dd>
+      <dd><p>Bandwidth of the filter (the Hz difference between the upper and lower half-power points). Updated at Control-rate. [Default Value: 10]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKResonantFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalBandwidth:" title="setOptionalBandwidth:"></a>
+  <h3 class="subsubtitle method-title">setOptionalBandwidth:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional <a href="#//api/name/bandwidth">bandwidth</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalBandwidth:(AKParameter *)<em>bandwidth</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>bandwidth</em></dt>
+      <dd><p>Bandwidth of the filter (the Hz difference between the upper and lower half-power points). Updated at Control-rate. [Default Value: 10]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKResonantFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalCenterFrequency:" title="setOptionalCenterFrequency:"></a>
+  <h3 class="subsubtitle method-title">setOptionalCenterFrequency:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional center frequency</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalCenterFrequency:(AKParameter *)<em>centerFrequency</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>centerFrequency</em></dt>
+      <dd><p>Center frequency of the filter, or frequency position of the peak response. Updated at Control-rate. [Default Value: 1000]</p></dd>
     </dl>
     
   </div>

@@ -1,0 +1,258 @@
+---
+layout: docs
+title: AKMultitapDelay
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKMultitapDelay</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKMultitapDelay.h<br />AKMultitapDelay.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>Multitap delay line implementation.</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            
+
+            <ul class="task-list">
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithInput:firstEchoTime:firstEchoGain:">&ndash;&nbsp;initWithInput:firstEchoTime:firstEchoGain:</a></code>
+    <span class="tooltip"><p>Instantiates the multitap delay</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/delayWithInput:firstEchoTime:firstEchoGain:">+&nbsp;delayWithInput:firstEchoTime:firstEchoGain:</a></code>
+    <span class="tooltip"><p>Instantiates the multitap delay</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/addEchoAtTime:gain:">&ndash;&nbsp;addEchoAtTime:gain:</a></code>
+    <span class="tooltip"><p>Adds an echo or tap to the multi-tap delay line</p></span>
+  </span>
+  
+  
+</li>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/delayWithInput:firstEchoTime:firstEchoGain:" title="delayWithInput:firstEchoTime:firstEchoGain:"></a>
+  <h3 class="subsubtitle method-title">delayWithInput:firstEchoTime:firstEchoGain:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the multitap delay</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)delayWithInput:(AKParameter *)<em>input</em> firstEchoTime:(AKConstant *)<em>firstEchoTime</em> firstEchoGain:(AKConstant *)<em>firstEchoGain</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>Input signal to be delayed.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>firstEchoTime</em></dt>
+      <dd><p>Time in seconds to delay the firsted delayed playback.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>firstEchoGain</em></dt>
+      <dd><p>The relative amplitude of the first echo.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKMultitapDelay.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/addEchoAtTime:gain:" title="addEchoAtTime:gain:"></a>
+  <h3 class="subsubtitle method-title">addEchoAtTime:gain:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Adds an echo or tap to the multi-tap delay line</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)addEchoAtTime:(AKConstant *)<em>time</em> gain:(AKConstant *)<em>gain</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>time</em></dt>
+      <dd><p>Time in seconds to delay the firsted delayed playback.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>gain</em></dt>
+      <dd><p>The relative amplitude of the first echo.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKMultitapDelay.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithInput:firstEchoTime:firstEchoGain:" title="initWithInput:firstEchoTime:firstEchoGain:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:firstEchoTime:firstEchoGain:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the multitap delay</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> firstEchoTime:(AKConstant *)<em>firstEchoTime</em> firstEchoGain:(AKConstant *)<em>firstEchoGain</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>Input signal to be delayed. [Default Value: ]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>firstEchoTime</em></dt>
+      <dd><p>Time in seconds to delay the firsted delayed playback. [Default Value: ]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>firstEchoGain</em></dt>
+      <dd><p>The relative amplitude of the first echo. [Default Value: ]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKMultitapDelay.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+          
+        </div>
+      </div>

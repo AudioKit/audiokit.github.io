@@ -1,13 +1,13 @@
 ---
 layout: docs
-title: AKSoundFileTable
+title: AKSoundFile
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
         <div id="header">
           <div class="section-header">
-            <h1 class="title title-header">AKSoundFileTable</h1>
+            <h1 class="title title-header">AKSoundFile</h1>
           </div>
         </div>
         <div id="container">
@@ -15,10 +15,10 @@ title: AKSoundFileTable
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKFTable.html">AKFTable</a> : <a href="../Classes/AKConstant.html">AKConstant</a> : <a href="../Classes/AKControl.html">AKControl</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+  <td class="specification-value"><a href="../Classes/AKFunctionTable.html">AKFunctionTable</a> : <a href="../Classes/AKConstant.html">AKConstant</a> : <a href="../Classes/AKControl.html">AKControl</a> : <a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
-  <td class="specification-value">AKSoundFileTable.h<br />AKSoundFileTable.m</td>
+  <td class="specification-value">AKSoundFile.h<br />AKSoundFile.m</td>
 </tr>
             </tbody></table></div>
           
@@ -31,28 +31,6 @@ title: AKSoundFileTable
             <p>Transfers data from a soundfile into a function table.</p>
 
 <p>File types supported are given here: <a href="http://www.mega-nerd.com/libsndfile/">http://www.mega-nerd.com/libsndfile/</a></p>
-
-<p><code>tableSize</code> is the number of points in the table. Ordinarily a power of 2 or a power-of-2 plus 1
-The maximum tableSize is 16777216 (224) points. The allocation of table memory can be deferred
-by setting this parameter to 0; the size allocated is then the number of points in the file
-(probably not a power-of-2), and the table is not usable by normal oscillators, but it is usable
-by an AKLoopoingOscillator. The soundfile can also be mono or stereo.</p>
-
-<p><em>Important:</em> Reading stops at end-of-file or when the table is full.
-Table locations not filled will contain zeros.</p><div class="warning"><p><strong>Warning:</strong> <em>Unsupported Functions</em></p>
-
-<p><code>skiptime</code> &ndash; begin reading at skiptime seconds into the file.</p>
-
-<p><code>channel</code> &ndash; channel number to read in. 0 denotes read all <a href="#//api/name/channels">channels</a>.</p>
-
-<p><code>format</code> &ndash; specifies the audio data-file format:</p>
-
-<pre><code>1 - 8-bit signed character    4 - 16-bit short integers 
-2 - 8-bit A-law bytes         5 - 32-bit long integers 
-3 - 8-bit U-law bytes         6 - 32-bit floats
-</code></pre>
-
-<p>If <code>format</code> = 0 the sample format is taken from the soundfile header, or by default from the CSound -o command-line flag.</p></div>
           </div>
           
           
@@ -72,13 +50,6 @@ Table locations not filled will contain zeros.</p><div class="warning"><p><stron
   <span class="tooltip">
     <code><a href="#//api/name/initWithFilename:">&ndash;&nbsp;initWithFilename:</a></code>
     <span class="tooltip"><p>Store file with a filename</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithFilename:tableSize:">&ndash;&nbsp;initWithFilename:tableSize:</a></code>
-    <span class="tooltip"><p>Store file with a filename using a specifically sized function table</p></span>
   </span>
   
   
@@ -136,7 +107,7 @@ Table locations not filled will contain zeros.</p><div class="warning"><p><stron
   
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKSoundFileTable.h</code><br />
+    <code class="declared-in-ref">AKSoundFile.h</code><br />
   </div>
   
   
@@ -182,58 +153,7 @@ Table locations not filled will contain zeros.</p><div class="warning"><p><stron
   
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKSoundFileTable.h</code><br />
-  </div>
-  
-  
-</div>
-            
-            <div class="section-method">
-  <a name="//api/name/initWithFilename:tableSize:" title="initWithFilename:tableSize:"></a>
-  <h3 class="subsubtitle method-title">initWithFilename:tableSize:</h3>
-
-  
-  
-  <div class="method-subsection brief-description">
-    <p>Store file with a filename using a specifically sized function table</p>
-  </div>
-  
-    
-
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFilename:(NSString *)<em>filename</em> tableSize:(int)<em>tableSize</em></code></div>
-
-    
-  
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
-    
-    <dl class="argument-def parameter-def">
-      <dt><em>filename</em></dt>
-      <dd><p>Audio file to load.  Most types are supported.</p></dd>
-    </dl>
-    
-    <dl class="argument-def parameter-def">
-      <dt><em>tableSize</em></dt>
-      <dd><p>Size of the table to use.  Necessary for some opcodes.</p></dd>
-    </dl>
-    
-  </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  <div class="method-subsection declared-in-section">
-    <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKSoundFileTable.h</code><br />
+    <code class="declared-in-ref">AKSoundFile.h</code><br />
   </div>
   
   

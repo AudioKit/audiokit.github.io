@@ -28,9 +28,9 @@ title: AKLine
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Creates a line that extends from a starting to a second point over the given time duration.
-After that duration, the line continues at the same slope until
-the note event ends.  Can be an audio signal or control rate parameter.</p>
+            <p>Creates an infinitely long <a href="#//api/name/line">line</a> that connects a starting to an ending point over the given time duration.</p>
+
+<p>If this value is used past the duration point, the <a href="#//api/name/line">line</a> continues indefinitely.</p>
           </div>
           
           
@@ -48,8 +48,64 @@ the note event ends.  Can be an audio signal or control rate parameter.</p>
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initFromValue:toValue:duration:">&ndash;&nbsp;initFromValue:toValue:duration:</a></code>
-    <span class="tooltip"><p>Initialize a linear transition from one value to another over specified time.</p></span>
+    <code><a href="#//api/name/initWithFirstPoint:secondPoint:durationBetweenPoints:">&ndash;&nbsp;initWithFirstPoint:secondPoint:durationBetweenPoints:</a></code>
+    <span class="tooltip"><p>Instantiates the <a href="#//api/name/line">line</a> with all values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
+    <span class="tooltip"><p>Instantiates the <a href="#//api/name/line">line</a> with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/line">+&nbsp;line</a></code>
+    <span class="tooltip"><p>Instantiates the line with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/firstPoint">&nbsp;&nbsp;firstPoint</a></code>
+    <span class="tooltip"><p>Value to start the <a href="#//api/name/line">line</a> from. [Default Value: 0]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalFirstPoint:">&ndash;&nbsp;setOptionalFirstPoint:</a></code>
+    <span class="tooltip"><p>Set an optional first point</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/secondPoint">&nbsp;&nbsp;secondPoint</a></code>
+    <span class="tooltip"><p>Value to end the <a href="#//api/name/line">line</a> at. [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalSecondPoint:">&ndash;&nbsp;setOptionalSecondPoint:</a></code>
+    <span class="tooltip"><p>Set an optional second point</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/durationBetweenPoints">&nbsp;&nbsp;durationBetweenPoints</a></code>
+    <span class="tooltip"><p>Duration in seconds between the defining points. [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalDurationBetweenPoints:">&ndash;&nbsp;setOptionalDurationBetweenPoints:</a></code>
+    <span class="tooltip"><p>Set an optional duration between points</p></span>
   </span>
   
   
@@ -62,7 +118,163 @@ the note event ends.  Can be an audio signal or control rate parameter.</p>
 
           
           
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/durationBetweenPoints" title="durationBetweenPoints"></a>
+  <h3 class="subsubtitle method-title">durationBetweenPoints</h3>
 
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Duration in seconds between the defining points. [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *durationBetweenPoints</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLine.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/firstPoint" title="firstPoint"></a>
+  <h3 class="subsubtitle method-title">firstPoint</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Value to start the <a href="#//api/name/line">line</a> from. [Default Value: 0]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *firstPoint</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLine.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/secondPoint" title="secondPoint"></a>
+  <h3 class="subsubtitle method-title">secondPoint</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Value to end the <a href="#//api/name/line">line</a> at. [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *secondPoint</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLine.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/line" title="line"></a>
+  <h3 class="subsubtitle method-title">line</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the line with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)line</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLine.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
           
 
           
@@ -71,18 +283,54 @@ the note event ends.  Can be an audio signal or control rate parameter.</p>
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initFromValue:toValue:duration:" title="initFromValue:toValue:duration:"></a>
-  <h3 class="subsubtitle method-title">initFromValue:toValue:duration:</h3>
+  <a name="//api/name/init" title="init"></a>
+  <h3 class="subsubtitle method-title">init</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Initialize a linear transition from one value to another over specified time.</p>
+    <p>Instantiates the <a href="#//api/name/line">line</a> with default values</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initFromValue:(AKConstant *)<em>startingValue</em> toValue:(AKConstant *)<em>endingValue</em> duration:(AKConstant *)<em>duration</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLine.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithFirstPoint:secondPoint:durationBetweenPoints:" title="initWithFirstPoint:secondPoint:durationBetweenPoints:"></a>
+  <h3 class="subsubtitle method-title">initWithFirstPoint:secondPoint:durationBetweenPoints:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the <a href="#//api/name/line">line</a> with all values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFirstPoint:(AKConstant *)<em>firstPoint</em> secondPoint:(AKConstant *)<em>secondPoint</em> durationBetweenPoints:(AKConstant *)<em>durationBetweenPoints</em></code></div>
 
     
   
@@ -90,28 +338,161 @@ the note event ends.  Can be an audio signal or control rate parameter.</p>
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>startingValue</em></dt>
-      <dd><p>Value to start the line from.</p></dd>
+      <dt><em>firstPoint</em></dt>
+      <dd><p>Value to start the <a href="#//api/name/line">line</a> from. [Default Value: 0]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
-      <dt><em>endingValue</em></dt>
-      <dd><p>Value to end the line at.</p></dd>
+      <dt><em>secondPoint</em></dt>
+      <dd><p>Value to end the <a href="#//api/name/line">line</a> at. [Default Value: 1]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
-      <dt><em>duration</em></dt>
-      <dd><p>Duration of linear transition in seconds.</p></dd>
+      <dt><em>durationBetweenPoints</em></dt>
+      <dd><p>Duration in seconds between the defining points. [Default Value: 1]</p></dd>
     </dl>
     
   </div>
   
 
   
-  <div class="method-subsection return">
-    <h4 class="method-subtitle parameter-title">Return Value</h4>
-    <p>An opcode to perform a linear transition over a given duration.</p>
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLine.h</code><br />
   </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalDurationBetweenPoints:" title="setOptionalDurationBetweenPoints:"></a>
+  <h3 class="subsubtitle method-title">setOptionalDurationBetweenPoints:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional duration between points</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalDurationBetweenPoints:(AKConstant *)<em>durationBetweenPoints</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>durationBetweenPoints</em></dt>
+      <dd><p>Duration in seconds between the defining points. [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLine.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalFirstPoint:" title="setOptionalFirstPoint:"></a>
+  <h3 class="subsubtitle method-title">setOptionalFirstPoint:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional first point</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalFirstPoint:(AKConstant *)<em>firstPoint</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>firstPoint</em></dt>
+      <dd><p>Value to start the <a href="#//api/name/line">line</a> from. [Default Value: 0]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLine.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalSecondPoint:" title="setOptionalSecondPoint:"></a>
+  <h3 class="subsubtitle method-title">setOptionalSecondPoint:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional second point</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalSecondPoint:(AKConstant *)<em>secondPoint</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>secondPoint</em></dt>
+      <dd><p>Value to end the <a href="#//api/name/line">line</a> at. [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
   
 
   

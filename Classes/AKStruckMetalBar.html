@@ -30,7 +30,8 @@ title: AKStruckMetalBar
             <h2 class="subtitle subtitle-overview">Overview</h2>
             <p>Creates a tone similar to a struck metal bar.</p>
 
-<p>Audio output is a tone similar to a struck metal bar, using a physical model developed from solving the partial differential equation. There are controls over the boundary conditions as well as the bar characteristics.</p>
+<p>Audio output is a tone similar to a struck metal bar, using a physical model developed from solving the partial differential equation. There are controls over the boundary conditions as well as the bar characteristics.
+More information regarding scanned synthesis can be found at <a href="http://dafx12.york.ac.uk/papers/dafx12">http://dafx12.york.ac.uk/papers/dafx12</a>_submission_18.pdf and <a href="http://www.billverplank.com/ScannedSynthesis.PDF">http://www.billverplank.com/ScannedSynthesis.PDF</a></p>
           </div>
           
           
@@ -62,7 +63,7 @@ title: AKStruckMetalBar
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/audio">+&nbsp;audio</a></code>
+    <code><a href="#//api/name/strike">+&nbsp;strike</a></code>
     <span class="tooltip"><p>Instantiates the struck metal bar with default values</p></span>
   </span>
   
@@ -112,49 +113,49 @@ title: AKStruckMetalBar
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/strikePosition">&nbsp;&nbsp;strikePosition</a></code>
-    <span class="tooltip"><p>Position along the bar that the strike occurs. [Default Value: 0.2]</p></span>
+    <span class="tooltip"><p>Position along the bar that the <a href="#//api/name/strike">strike</a> occurs. [Default Value: 0.2]</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/setOptionalStrikePosition:">&ndash;&nbsp;setOptionalStrikePosition:</a></code>
-    <span class="tooltip"><p>Set an optional strike position</p></span>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/strike">strike</a> position</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/strikeVelocity">&nbsp;&nbsp;strikeVelocity</a></code>
-    <span class="tooltip"><p>Normalized strike velocity. [Default Value: 800]</p></span>
+    <span class="tooltip"><p>Normalized <a href="#//api/name/strike">strike</a> velocity. [Default Value: 800]</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/setOptionalStrikeVelocity:">&ndash;&nbsp;setOptionalStrikeVelocity:</a></code>
-    <span class="tooltip"><p>Set an optional strike velocity</p></span>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/strike">strike</a> velocity</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/strikeWidth">&nbsp;&nbsp;strikeWidth</a></code>
-    <span class="tooltip"><p>Spatial width of strike. [Default Value: 0.2]</p></span>
+    <span class="tooltip"><p>Spatial width of <a href="#//api/name/strike">strike</a>. [Default Value: 0.2]</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/setOptionalStrikeWidth:">&ndash;&nbsp;setOptionalStrikeWidth:</a></code>
-    <span class="tooltip"><p>Set an optional strike width</p></span>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/strike">strike</a> width</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/leftBoundaryCondition">&nbsp;&nbsp;leftBoundaryCondition</a></code>
-    <span class="tooltip"><p>Boundary condition at left end of bar (1 is clamped; 2 pivoting and 3 free). [Default Value: 1]</p></span>
+    <span class="tooltip"><p>Boundary condition at left end of bar. [Default Value: AKStruckMetalBarBoundaryConditionClamped]</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
@@ -168,7 +169,7 @@ title: AKStruckMetalBar
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/rightBoundaryCondition">&nbsp;&nbsp;rightBoundaryCondition</a></code>
-    <span class="tooltip"><p>Boundary condition at right end of bar (1 is clamped; 2 pivoting and 3 free). [Default Value: 1]</p></span>
+    <span class="tooltip"><p>Boundary condition at right end of bar. [Default Value: AKStruckMetalBarBoundaryConditionClamped]</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
@@ -321,12 +322,12 @@ title: AKStruckMetalBar
   
   
   <div class="method-subsection brief-description">
-    <p>Boundary condition at left end of bar (1 is clamped; 2 pivoting and 3 free). [Default Value: 1]</p>
+    <p>Boundary condition at left end of bar. [Default Value: AKStruckMetalBarBoundaryConditionClamped]</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKControl *leftBoundaryCondition</code></div>
+  <div class="method-subsection method-declaration"><code>@property AKStruckMetalBarBoundaryCondition leftBoundaryCondition</code></div>
 
     
   
@@ -357,12 +358,12 @@ title: AKStruckMetalBar
   
   
   <div class="method-subsection brief-description">
-    <p>Boundary condition at right end of bar (1 is clamped; 2 pivoting and 3 free). [Default Value: 1]</p>
+    <p>Boundary condition at right end of bar. [Default Value: AKStruckMetalBarBoundaryConditionClamped]</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKControl *rightBoundaryCondition</code></div>
+  <div class="method-subsection method-declaration"><code>@property AKStruckMetalBarBoundaryCondition rightBoundaryCondition</code></div>
 
     
   
@@ -398,7 +399,7 @@ title: AKStruckMetalBar
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKControl *scanSpeed</code></div>
+  <div class="method-subsection method-declaration"><code>@property AKParameter *scanSpeed</code></div>
 
     
   
@@ -429,7 +430,7 @@ title: AKStruckMetalBar
   
   
   <div class="method-subsection brief-description">
-    <p>Position along the bar that the strike occurs. [Default Value: 0.2]</p>
+    <p>Position along the bar that the <a href="#//api/name/strike">strike</a> occurs. [Default Value: 0.2]</p>
   </div>
   
     
@@ -465,7 +466,7 @@ title: AKStruckMetalBar
   
   
   <div class="method-subsection brief-description">
-    <p>Normalized strike velocity. [Default Value: 800]</p>
+    <p>Normalized <a href="#//api/name/strike">strike</a> velocity. [Default Value: 800]</p>
   </div>
   
     
@@ -501,7 +502,7 @@ title: AKStruckMetalBar
   
   
   <div class="method-subsection brief-description">
-    <p>Spatial width of strike. [Default Value: 0.2]</p>
+    <p>Spatial width of <a href="#//api/name/strike">strike</a>. [Default Value: 0.2]</p>
   </div>
   
     
@@ -539,8 +540,8 @@ title: AKStruckMetalBar
             <h2 class="subtitle subtitle-methods">Class Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/audio" title="audio"></a>
-  <h3 class="subsubtitle method-title">audio</h3>
+  <a name="//api/name/strike" title="strike"></a>
+  <h3 class="subsubtitle method-title">strike</h3>
 
   
   
@@ -550,7 +551,7 @@ title: AKStruckMetalBar
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)audio</code></div>
+  <div class="method-subsection method-declaration"><code>+ (instancetype)strike</code></div>
 
     
   
@@ -630,7 +631,7 @@ title: AKStruckMetalBar
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithDecayTime:(AKConstant *)<em>decayTime</em> dimensionlessStiffness:(AKConstant *)<em>dimensionlessStiffness</em> highFrequencyLoss:(AKConstant *)<em>highFrequencyLoss</em> strikePosition:(AKConstant *)<em>strikePosition</em> strikeVelocity:(AKConstant *)<em>strikeVelocity</em> strikeWidth:(AKConstant *)<em>strikeWidth</em> leftBoundaryCondition:(AKControl *)<em>leftBoundaryCondition</em> rightBoundaryCondition:(AKControl *)<em>rightBoundaryCondition</em> scanSpeed:(AKControl *)<em>scanSpeed</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithDecayTime:(AKConstant *)<em>decayTime</em> dimensionlessStiffness:(AKConstant *)<em>dimensionlessStiffness</em> highFrequencyLoss:(AKConstant *)<em>highFrequencyLoss</em> strikePosition:(AKConstant *)<em>strikePosition</em> strikeVelocity:(AKConstant *)<em>strikeVelocity</em> strikeWidth:(AKConstant *)<em>strikeWidth</em> leftBoundaryCondition:(AKStruckMetalBarBoundaryCondition)<em>leftBoundaryCondition</em> rightBoundaryCondition:(AKStruckMetalBarBoundaryCondition)<em>rightBoundaryCondition</em> scanSpeed:(AKParameter *)<em>scanSpeed</em></code></div>
 
     
   
@@ -639,47 +640,47 @@ title: AKStruckMetalBar
     
     <dl class="argument-def parameter-def">
       <dt><em>decayTime</em></dt>
-      <dd><p>30 db decay time in seconds.</p></dd>
+      <dd><p>30 db decay time in seconds. [Default Value: 2.0]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>dimensionlessStiffness</em></dt>
-      <dd><p>Dimensionless stiffness parameter. If this parameter is negative then the initialization is skipped and the previous state of the bar is continued.</p></dd>
+      <dd><p>Dimensionless stiffness parameter. If this parameter is negative then the initialization is skipped and the previous state of the bar is continued. [Default Value: 100]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>highFrequencyLoss</em></dt>
-      <dd><p>High-frequency loss parameter (keep this small).</p></dd>
+      <dd><p>High-frequency loss parameter (keep this small). [Default Value: 0.001]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>strikePosition</em></dt>
-      <dd><p>Position along the bar that the strike occurs.</p></dd>
+      <dd><p>Position along the bar that the <a href="#//api/name/strike">strike</a> occurs. [Default Value: 0.2]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>strikeVelocity</em></dt>
-      <dd><p>Normalized strike velocity.</p></dd>
+      <dd><p>Normalized <a href="#//api/name/strike">strike</a> velocity. [Default Value: 800]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>strikeWidth</em></dt>
-      <dd><p>Spatial width of strike.</p></dd>
+      <dd><p>Spatial width of <a href="#//api/name/strike">strike</a>. [Default Value: 0.2]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>leftBoundaryCondition</em></dt>
-      <dd><p>Boundary condition at left end of bar (1 is clamped; 2 pivoting and 3 free).</p></dd>
+      <dd><p>Boundary condition at left end of bar. [Default Value: AKStruckMetalBarBoundaryConditionClamped]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>rightBoundaryCondition</em></dt>
-      <dd><p>Boundary condition at right end of bar (1 is clamped; 2 pivoting and 3 free).</p></dd>
+      <dd><p>Boundary condition at right end of bar. [Default Value: AKStruckMetalBarBoundaryConditionClamped]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>scanSpeed</em></dt>
-      <dd><p>Speed of scanning the output location.</p></dd>
+      <dd><p>Speed of scanning the output location. Updated at Control-rate. [Default Value: 0.23]</p></dd>
     </dl>
     
   </div>
@@ -854,7 +855,7 @@ title: AKStruckMetalBar
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalLeftBoundaryCondition:(AKControl *)<em>leftBoundaryCondition</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalLeftBoundaryCondition:(AKStruckMetalBarBoundaryCondition)<em>leftBoundaryCondition</em></code></div>
 
     
   
@@ -863,7 +864,7 @@ title: AKStruckMetalBar
     
     <dl class="argument-def parameter-def">
       <dt><em>leftBoundaryCondition</em></dt>
-      <dd><p>Boundary condition at left end of bar (1 is clamped; 2 pivoting and 3 free). [Default Value: 1]</p></dd>
+      <dd><p>Boundary condition at left end of bar. [Default Value: AKStruckMetalBarBoundaryConditionClamped]</p></dd>
     </dl>
     
   </div>
@@ -900,7 +901,7 @@ title: AKStruckMetalBar
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalRightBoundaryCondition:(AKControl *)<em>rightBoundaryCondition</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalRightBoundaryCondition:(AKStruckMetalBarBoundaryCondition)<em>rightBoundaryCondition</em></code></div>
 
     
   
@@ -909,7 +910,7 @@ title: AKStruckMetalBar
     
     <dl class="argument-def parameter-def">
       <dt><em>rightBoundaryCondition</em></dt>
-      <dd><p>Boundary condition at right end of bar (1 is clamped; 2 pivoting and 3 free). [Default Value: 1]</p></dd>
+      <dd><p>Boundary condition at right end of bar. [Default Value: AKStruckMetalBarBoundaryConditionClamped]</p></dd>
     </dl>
     
   </div>
@@ -946,7 +947,7 @@ title: AKStruckMetalBar
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalScanSpeed:(AKControl *)<em>scanSpeed</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalScanSpeed:(AKParameter *)<em>scanSpeed</em></code></div>
 
     
   
@@ -955,7 +956,7 @@ title: AKStruckMetalBar
     
     <dl class="argument-def parameter-def">
       <dt><em>scanSpeed</em></dt>
-      <dd><p>Speed of scanning the output location. [Default Value: 0.23]</p></dd>
+      <dd><p>Speed of scanning the output location. Updated at Control-rate. [Default Value: 0.23]</p></dd>
     </dl>
     
   </div>
@@ -987,7 +988,7 @@ title: AKStruckMetalBar
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional strike position</p>
+    <p>Set an optional <a href="#//api/name/strike">strike</a> position</p>
   </div>
   
     
@@ -1001,7 +1002,7 @@ title: AKStruckMetalBar
     
     <dl class="argument-def parameter-def">
       <dt><em>strikePosition</em></dt>
-      <dd><p>Position along the bar that the strike occurs. [Default Value: 0.2]</p></dd>
+      <dd><p>Position along the bar that the <a href="#//api/name/strike">strike</a> occurs. [Default Value: 0.2]</p></dd>
     </dl>
     
   </div>
@@ -1033,7 +1034,7 @@ title: AKStruckMetalBar
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional strike velocity</p>
+    <p>Set an optional <a href="#//api/name/strike">strike</a> velocity</p>
   </div>
   
     
@@ -1047,7 +1048,7 @@ title: AKStruckMetalBar
     
     <dl class="argument-def parameter-def">
       <dt><em>strikeVelocity</em></dt>
-      <dd><p>Normalized strike velocity. [Default Value: 800]</p></dd>
+      <dd><p>Normalized <a href="#//api/name/strike">strike</a> velocity. [Default Value: 800]</p></dd>
     </dl>
     
   </div>
@@ -1079,7 +1080,7 @@ title: AKStruckMetalBar
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional strike width</p>
+    <p>Set an optional <a href="#//api/name/strike">strike</a> width</p>
   </div>
   
     
@@ -1093,7 +1094,7 @@ title: AKStruckMetalBar
     
     <dl class="argument-def parameter-def">
       <dt><em>strikeWidth</em></dt>
-      <dd><p>Spatial width of strike. [Default Value: 0.2]</p></dd>
+      <dd><p>Spatial width of <a href="#//api/name/strike">strike</a>. [Default Value: 0.2]</p></dd>
     </dl>
     
   </div>

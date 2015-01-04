@@ -29,6 +29,8 @@ title: AKLowPassFilter
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
             <p>A first-order recursive low-pass filter with variable frequency response.</p>
+
+<p>More detailed description from <a href="http://www.csounds.com/manual/html/tone.html">http://www.csounds.com/manual/html/tone.html</a></p>
           </div>
           
           
@@ -47,7 +49,35 @@ title: AKLowPassFilter
                 <li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithAudioSource:halfPowerPoint:">&ndash;&nbsp;initWithAudioSource:halfPowerPoint:</a></code>
-    <span class="tooltip"><p>Instantiates the low pass filter</p></span>
+    <span class="tooltip"><p>Instantiates the low pass filter with all values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithAudioSource:">&ndash;&nbsp;initWithAudioSource:</a></code>
+    <span class="tooltip"><p>Instantiates the low pass filter with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/filterWithAudioSource:">+&nbsp;filterWithAudioSource:</a></code>
+    <span class="tooltip"><p>Instantiates the low pass filter with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/halfPowerPoint">&nbsp;&nbsp;halfPowerPoint</a></code>
+    <span class="tooltip"><p>The response curve&rsquo;s half-power point, in Hertz. Half power is defined as peak power / root 2. [Default Value: 1000]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalHalfPowerPoint:">&ndash;&nbsp;setOptionalHalfPowerPoint:</a></code>
+    <span class="tooltip"><p>Set an optional half power point</p></span>
   </span>
   
   
@@ -60,27 +90,67 @@ title: AKLowPassFilter
 
           
           
-
-          
-
-          
           <div class="section section-methods">
-            <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithAudioSource:halfPowerPoint:" title="initWithAudioSource:halfPowerPoint:"></a>
-  <h3 class="subsubtitle method-title">initWithAudioSource:halfPowerPoint:</h3>
+  <a name="//api/name/halfPowerPoint" title="halfPowerPoint"></a>
+  <h3 class="subsubtitle method-title">halfPowerPoint</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the low pass filter</p>
+    <p>The response curve&rsquo;s half-power point, in Hertz. Half power is defined as peak power / root 2. [Default Value: 1000]</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKAudio *)<em>audioSource</em> halfPowerPoint:(AKControl *)<em>halfPowerPoint</em></code></div>
+  <div class="method-subsection method-declaration"><code>@property AKParameter *halfPowerPoint</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLowPassFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/filterWithAudioSource:" title="filterWithAudioSource:"></a>
+  <h3 class="subsubtitle method-title">filterWithAudioSource:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the low pass filter with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)filterWithAudioSource:(AKParameter *)<em>audioSource</em></code></div>
 
     
   
@@ -89,12 +159,158 @@ title: AKLowPassFilter
     
     <dl class="argument-def parameter-def">
       <dt><em>audioSource</em></dt>
-      <dd><p>The audio to be filtered</p></dd>
+      <dd><p>The control to be filtered</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLowPassFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithAudioSource:" title="initWithAudioSource:"></a>
+  <h3 class="subsubtitle method-title">initWithAudioSource:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the low pass filter with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKParameter *)<em>audioSource</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>audioSource</em></dt>
+      <dd><p>The control to be filtered</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLowPassFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithAudioSource:halfPowerPoint:" title="initWithAudioSource:halfPowerPoint:"></a>
+  <h3 class="subsubtitle method-title">initWithAudioSource:halfPowerPoint:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the low pass filter with all values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKParameter *)<em>audioSource</em> halfPowerPoint:(AKParameter *)<em>halfPowerPoint</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>audioSource</em></dt>
+      <dd><p>The control to be filtered [Default Value: ]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>halfPowerPoint</em></dt>
-      <dd><p>The response curve&rsquo;s half-power point, in Hertz. Half power is defined as peak power / root 2.</p></dd>
+      <dd><p>The response curve&rsquo;s half-power point, in Hertz. Half power is defined as peak power / root 2. Updated at Control-rate. [Default Value: 1000]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLowPassFilter.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalHalfPowerPoint:" title="setOptionalHalfPowerPoint:"></a>
+  <h3 class="subsubtitle method-title">setOptionalHalfPowerPoint:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional half power point</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalHalfPowerPoint:(AKParameter *)<em>halfPowerPoint</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>halfPowerPoint</em></dt>
+      <dd><p>The response curve&rsquo;s half-power point, in Hertz. Half power is defined as peak power / root 2. Updated at Control-rate. [Default Value: 1000]</p></dd>
     </dl>
     
   </div>
