@@ -11,7 +11,7 @@ layout: features
 </p>
 
 <p>
-<img src=/images/contributions.png style="width:75%; max-width:1040px">
+<img src=/images/contributions.png style="width:75%; max-width:945px">
 </p>
 
 <a name="well_named"></a>
@@ -30,13 +30,12 @@ asig foscili 1, 440, 1, 1, 1, 0
   </td>
   <td>
 {% highlight objective-c %}
-[[AKFMOscillator alloc] initWithFTable:sineTable
-                         baseFrequency:akp(440)
-                     carrierMultiplier:akp(1)
-                  modulatingMultiplier:akp(1)
-                       modulationIndex:akp(1)
-                             amplitude:akp(1)
-                                 phase:akp(0)];
+[[AKFMOscillator alloc] initWithFunctionTable:sineTable
+                                baseFrequency:akp(440)
+                            carrierMultiplier:akp(1)
+                         modulatingMultiplier:akp(1)
+                              modulationIndex:akp(1)
+                                    amplitude:akp(1)];
 {% endhighlight %}
   </td>
 </tr>
@@ -56,13 +55,12 @@ asig foscili 1, 440, 1, 1, 1, 0
   <tr>
   <td>
 {% highlight objective-c %}
-[[AKFMOscillator alloc] initWithFTable:sineTable
-                         baseFrequency:akp(440)
-                     carrierMultiplier:akp(1)
-                  modulatingMultiplier:akp(1)
-                       modulationIndex:akp(1)
-                             amplitude:akp(1)
-                                 phase:akp(0)];
+[[AKFMOscillator alloc] initWithFunctionTable:sineTable
+                                baseFrequency:akp(440)
+                            carrierMultiplier:akp(1)
+                         modulatingMultiplier:akp(1)
+                              modulationIndex:akp(1)
+                                    amplitude:akp(1))];
 {% endhighlight %}
   </td>
 </tr>
@@ -74,7 +72,7 @@ asig foscili 1, 440, 1, 1, 1, 0
 
 <a name="sensible_defaults"></a>
 <h2>Sensible Defaults</h2>
-<p>With AudioKit 1.1, we’ve started rolling out what we call “Sensible Defaults”. Sensible defaults allow you to create an AudioKit object without having to guess what initial values are appropriate—when you create an object, the parameter values will automatically be set to values that make sense. Of course, just as before, you can specify the value of all parameters in the init function, or use the defaults and change the values using properties.
+<p>Sensible defaults allow you to create an AudioKit object without having to guess what initial values are appropriate—when you create an object, the parameter values will automatically be set to values that make sense. Of course, just as before, you can specify the value of all parameters in the init function, or use the defaults and change the values using properties.
 </p>
 
 <p>As an example, many physical models sound best with specific parameters that you will always want, so for a canonical sleighbell sound, you can use the simplified version on the right:</p>
@@ -95,7 +93,7 @@ asig foscili 1, 440, 1, 1, 1, 0
   <td>
     <b>Objective-C:</b><br>
 {% highlight objective-c %}
-[AKSleighbells audio];
+[AKSleighbells sleighbells];
 {% endhighlight %}
   </td>
 </tr>
