@@ -33,9 +33,8 @@ layout: examples
 
 {% highlight objective-c %}
 AKReverb *reverb;
-reverb = [[AKReverb alloc] initWithSourceStereoAudio:fileIn
-                                       feedbackLevel:_reverbAmount
-                                     cutoffFrequency:akp(12000)];
+reverb = [[AKReverb alloc] initWithInput:fileIn];
+reverb.feedback = _reverbFeedback;
 [self connect:reverb];
 {% endhighlight %}
 

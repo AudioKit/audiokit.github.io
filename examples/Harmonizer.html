@@ -12,13 +12,13 @@ This example demonstrates a simpler harmonzier, with the input signal being the 
 AKAudioInput *microphone = [[AKAudioInput alloc] init];
 [self connect:microphone];
 
-AKFSignalFromMonoAudio *fsig1;
-fsig1 = [[AKFSignalFromMonoAudio alloc] initWithAudioSource:microphone
-                                                    fftSize:akpi(2048)
-                                                    overlap:akpi(256)
-                                                windowType:kVonHannWindow
-                                          windowFilterSize:akpi(2048)];
-[self connect:fsig1];
+AKFSignalFromMonoAudio *microphoneFFT;
+microphoneFFT = [[AKFSignalFromMonoAudio alloc] initWithAudioSource:microphone
+                                                            fftSize:akpi(2048)
+                                                            overlap:akpi(256)
+                                                         windowType:AKFSignalFromMonoAudioWindowTypeVonHann
+                                                   windowFilterSize:akpi(2048)];
+[self connect:microphoneFFT];
 {% endhighlight %}
 
 
@@ -27,30 +27,21 @@ The input signal is then altered with two instances of "AKScaledFSignal", which 
 </p>
 
 {% highlight objective-c %}
-AKScaledFSignal *fsig2;
-fsig2 = [[AKScaledFSignal alloc] initWithInput:fsig1
-                               frequencyRatio:akp(2.0)
-                          formantRetainMethod:kFormantRetainMethodLifteredCepstrum
-                              amplitudeRatio:nil
-                        cepstrumCoefficients:nil];
-[self connect:fsig2];
-
-AKScaledFSignal *fsig3;
-fsig3 = [[AKScaledFSignal alloc] initWithInput:fsig1
-                                frequencyRatio:akp(2.0)
-                           formantRetainMethod:kFormantRetainMethodLifteredCepstrum
-                                amplitudeRatio:nil
-                          cepstrumCoefficients:nil];
-[self connect:fsig3];
+AKScaledFSignal *scaledFFT;
+scaledFFT = [[AKScaledFSignal alloc] initWithInput:microphoneFFT
+                                    frequencyRatio:akp(2.0)
+                               formantRetainMethod:AKScaledFSignalFormantRetainMethodLifteredCepstrum
+                                    amplitudeRatio:nil
+                              cepstrumCoefficients:nil];
+[self connect:scaledFFT];
 {% endhighlight %}
 
 
 <p>These phase vocoder signals are then mixed with an instance of AKFSignalMix: </p>
 
 {% highlight objective-c %}
-AKFSignalMix *fsig4;
-fsig4 = [[AKFSignalMix alloc] initWithInput1:fsig2 input2:fsig3];
-[self connect:fsig4];
+AKFSignalMix *mixedFFT = [[AKFSignalMix alloc] initWithInput1:microphoneFFT input2:scaledFFT];
+[self connect:mixedFFT];
 {% endhighlight %}
 
 <p>
@@ -58,7 +49,6 @@ Finally, the audio is resynthesized from the phase vocoder data using an instanc
 </p>
 
 {% highlight objective-c %}
-AKAudioFromFSignal *a1;
-a1 = [[AKAudioFromFSignal alloc] initWithSource:fsig4];
-[self connect:a1];
+AKAudioFromFSignal *audioOutput = [[AKAudioFromFSignal alloc] initWithSource:mixedFFT];
+[self connect:audioOutput];
 {% endhighlight %}
