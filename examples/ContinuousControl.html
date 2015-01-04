@@ -36,9 +36,6 @@ The code for implementing the FM oscillator instrument controlled with user and 
 </p>
 
 {% highlight objective-c %}
-AKSineTable *sineTable = [[AKSineTable alloc] init];
-[self addFTable:sineTable];
-
 AKFMOscillator *fmOscil;
 AKFMOscillator *fmOscillator = [AKFMOscillator oscillator];
 fmOscillator.baseFrequency = _frequency;
