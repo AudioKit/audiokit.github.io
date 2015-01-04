@@ -40,13 +40,12 @@ AKSineTable *sineTable = [[AKSineTable alloc] init];
 [self addFTable:sineTable];
 
 AKFMOscillator *fmOscil;
-fmOscil = [[AKFMOscillator alloc] initWithFTable:sineTable
-                                   baseFrequency:_frequency
-                               carrierMultiplier:akp(1)
-                            modulatingMultiplier:_modulation
-                                 modulationIndex:_modIndex
-                                       amplitude:_amplitude];
-[self connect:fmOscil];
+AKFMOscillator *fmOscillator = [AKFMOscillator oscillator];
+fmOscillator.baseFrequency = _frequency;
+fmOscillator.modulatingMultiplier = _modulation;
+fmOscillator.modulationIndex = _modIndex;
+fmOscillator.amplitude = _amplitude;
+[self connect:fmOscillator];
 {% endhighlight %}
 
 <h2> Mac Version </h2>
