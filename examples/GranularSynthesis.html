@@ -35,11 +35,11 @@ Here we demonstrate granular synthesis, with an audio file as the source. The co
 
 {% highlight objective-c %}
 NSString *file = [[NSBundle mainBundle] pathForResource:@"PianoBassDrumLoop"
-                                                         ofType:@"wav"];
-AKSoundFileTable *fileTable;
-fileTable = [[AKSoundFileTable alloc] initWithFilename:file
-                                                     tableSize:16384];
-[self addFTable:fileTable];
+                                                 ofType:@"wav"];
+AKSoundFile *fileTable;
+fileTable = [[AKSoundFile alloc] initWithFilename:file];
+fileTable.size = 16384;
+[self addFunctionTable:fileTable];
 {% endhighlight %}
 
 
@@ -48,10 +48,10 @@ Then, we apply a Hamming window, and set the base frequency to be the average fr
 </p>
 
 {% highlight objective-c %}
-AKFTable *hamming;
-hamming = [[AKWindowsTable alloc] initWithType:kWindowHanning
-                                                  size:512 ];
-[self addFTable:hamming];
+AKFunctionTable *hamming;
+hamming = [[AKWindowsTable alloc] initWithType:AKWindowTableTypeHamming
+                                          size:512 ];
+[self addFunctionTable:hamming];
 
 AKConstant *baseFrequency;
 NSString *frequencyMathString = [NSString stringWithFormat:@"44100 / %@", [fileTable length]];
@@ -66,14 +66,12 @@ Finally, we create a granular synthesis texture with the code below. Four parame
 
 {% highlight objective-c %}
 AKGranularSynthesisTexture *grainTexture;
-grainTexture = [[AKGranularSynthesisTexture alloc] initWithGrainFTable:fileTable
-                                                          windowFTable:hamming
-                                                  maximumGrainDuration:akp(0.05)
-                                                  averageGrainDuration:_averageGrainDuration
-                                             maximumFrequencyDeviation:_granularFrequencyDeviation
-                                                        grainFrequency:baseFrequency
-                                            maximumAmplitudeDeviation:akp(0.5)
-                                                       grainAmplitude:_granularAmplitude
-                                                         grainDensity:_grainDensity];
+grainTexture = [AKGranularSynthesisTexture textureWithGrainFunctionTable:fileTable
+                                                     windowFunctionTable:hamming];
+grainTexture.averageGrainDuration = _averageGrainDuration;
+grainTexture.maximumFrequencyDeviation = _granularFrequencyDeviation;
+grainTexture.grainFrequency = baseFrequency;
+grainTexture.grainAmplitude = _granularAmplitude;
+grainTexture.grainDensity = _grainDensity;
 [self connect:grainTexture];
 {% endhighlight %}
