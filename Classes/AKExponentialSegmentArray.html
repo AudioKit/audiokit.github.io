@@ -1,0 +1,193 @@
+---
+layout: docs
+title: AKExponentialSegmentArray
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKExponentialSegmentArray</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKExponentialSegmentArray.h<br />AKExponentialSegmentArray.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>Trace a series of exponential segments between specified points.</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            
+
+            <ul class="task-list">
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithInitialValue:targetValue:afterDuration:">&ndash;&nbsp;initWithInitialValue:targetValue:afterDuration:</a></code>
+    <span class="tooltip"><p>Creates the exponential segment array and populates it with the minimum information.
+Use addValue:afterDuration to add more segments to the array.
+An optional release segment can be added with addReleaseToFinalValue:afterDuration.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/addValue:afterDuration:">&ndash;&nbsp;addValue:afterDuration:</a></code>
+    <span class="tooltip"><p>Adds another segment.</p></span>
+  </span>
+  
+  
+</li>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/addValue:afterDuration:" title="addValue:afterDuration:"></a>
+  <h3 class="subsubtitle method-title">addValue:afterDuration:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Adds another segment.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)addValue:(AKConstant *)<em>value</em> afterDuration:(AKConstant *)<em>duration</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>value</em></dt>
+      <dd><p>Value after time given by duration.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>duration</em></dt>
+      <dd><p>Duration in seconds.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKExponentialSegmentArray.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithInitialValue:targetValue:afterDuration:" title="initWithInitialValue:targetValue:afterDuration:"></a>
+  <h3 class="subsubtitle method-title">initWithInitialValue:targetValue:afterDuration:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Creates the exponential segment array and populates it with the minimum information.
+Use addValue:afterDuration to add more segments to the array.
+An optional release segment can be added with addReleaseToFinalValue:afterDuration.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInitialValue:(AKConstant *)<em>initialValue</em> targetValue:(AKConstant *)<em>targetValue</em> afterDuration:(AKConstant *)<em>duration</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>initialValue</em></dt>
+      <dd><p>Starting value.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>targetValue</em></dt>
+      <dd><p>Value after time given by duration.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>duration</em></dt>
+      <dd><p>Duration in seconds of first segment.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKExponentialSegmentArray.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+          
+        </div>
+      </div>
