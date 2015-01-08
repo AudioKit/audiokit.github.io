@@ -9,10 +9,12 @@ layout: downloads
 AudioKit is currently available for Mac OSX and iOS, however we are platform agnostic and support the porting of AudioKit's functionality to any language or device.  In fact, a browser-based version is in development and an Android version is currently being researched. Feel free to <a href="mailto:audiokit@hearforyourself.com">get in touch</a> if you would be interested in contributing!
 </p>
 
-<h2>Installing Source Code (including example projects)</h2>
+<h2>Installation</h2>
 
 <p>
-We include a variety of sample projects alongside the toolkit so that you can get started right away.  Here's how to get the complete package:</p>
+We include a variety of sample projects alongside the toolkit so that you can get started right away.  Here's how to get the complete package.</p>
+
+<h3>Installing using Git</h3>
 
 <p>Installing from command line (defaults to "develop" branch):</p>
 
@@ -26,6 +28,20 @@ $ git clone git@github.com:audiokit/AudioKit.git
 <li><a href="https://github.com/audiokit/AudioKit/archive/develop.zip">Development Branch (19.5MB zip)</a> - latest and greatest </li>
 </ul>
 </p>
+
+<h3>Installing using CocoaPods</h3>
+
+<p>In your project, update your Podfile:</p>
+
+{% highlight ruby %}
+pod 'AudioKit', '~> 1.2'
+{% endhighlight %}
+
+Then execute:
+
+{% highlight bash %}
+$ gpod install
+{% endhighlight %}
 
 <h2>Installing Xcode Documentation</h2>
 
