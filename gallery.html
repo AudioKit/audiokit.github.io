@@ -5,34 +5,10 @@ permalink: /gallery/
 layout: examples
 ---
 
+  {% for movie in site.gallery %}
+    <a href="{{ movie.url }}">{{ movie.title }}</a>
+    {{ movie.content }}
+  {% endfor %}
 
-<div class="hide-on-mobiles">
-<iframe src="//player.vimeo.com/video/116433756" width="500" height="313" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="gallery-movie"></iframe> 
-</div>
 
-<div class="show-on-mobiles">
-<iframe src="//player.vimeo.com/video/116433756" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="gallery-movie"></iframe> 
-</div>
-
-<div class="hide-on-mobiles">
-<iframe src="//player.vimeo.com/video/115951284" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="gallery-movie"></iframe>
-</div>
-<div class="show-on-mobiles">
-<iframe src="//player.vimeo.com/video/115951284" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="gallery-movie"></iframe>
-</div>
-
-<div class="hide-on-mobiles">
-<iframe src="//player.vimeo.com/video/86587529" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="gallery-movie"></iframe>
-</div>
-
-<div class="show-on-mobiles">
-<iframe src="//player.vimeo.com/video/86587529" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="gallery-movie"></iframe>
-</div>
-
-<div class="hide-on-mobiles">
-<iframe src="//player.vimeo.com/video/88030682" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="gallery-movie"></iframe>
-</div>
-<div class="show-on-mobiles">
-<iframe src="//player.vimeo.com/video/88030682" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="gallery-movie"></iframe>
-</div>
 
