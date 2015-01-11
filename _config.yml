@@ -5,6 +5,7 @@ description: > #
   AudioKit, an open-source audio synthesis, processing, and analysis platform.
 url: "http://audiokit.io" # the base hostname & protocol for your site
 port: 4444
+permalink: /blog/:year/:month/:day/:title/
 twitter_username:
 github_username:  AudioKit
 

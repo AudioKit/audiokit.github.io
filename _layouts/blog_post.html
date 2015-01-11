@@ -1,0 +1,22 @@
+---
+layout: blog
+section: blog
+---
+
+<h2>
+  {{ page.title }}
+  <a href="{{ page.url }}" class="permalink" title="Permalink">∞</a>
+</h2>
+<span class="post-category">
+  <span class="label">
+    {{ page.categories | array_to_sentence_string }}
+  </span>
+</span>
+<div class="post-meta">
+  <span class="post-date">
+    {{ page.date | date_to_string }}
+  </span>
+</div>
+<div class="post-content">
+  {{ content }}
+</div>
