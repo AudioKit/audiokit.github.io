@@ -50,15 +50,15 @@ NEWLIBPATH="@loader_path/../Frameworks/CsoundLib64.framework/Versions/6.0"
 TARGETS="CsoundLib64"
 for TARGET in ${TARGETS} ; do
 LIBFILE=${LIBPATH}/${TARGET}
-TARGETID=`otool -DX ${LIBPATH}/$TARGET`
+TARGETID=`otool -DX "${LIBPATH}/$TARGET"`
 NEWTARGETID=${NEWLIBPATH}/${TARGET}
-install_name_tool -id ${NEWTARGETID} ${LIBFILE}
-install_name_tool -change ${TARGETID} ${NEWTARGETID} ${EXECFILE}
+install_name_tool -id "${NEWTARGETID}" "${LIBFILE}"
+install_name_tool -change "${TARGETID}" "${NEWTARGETID}" "${EXECFILE}"
 done
 {% endhighlight %}
 <p>So that your run script phase looks like:</p>
 <p>
-<img src=/images/macBuildPhases7.png style="width:100%; max-width:1121px">
+<img src=/images/macBuildPhases7.png style="width:100%; max-width:1119px">
 </p>
 <p>
 Finally, you'll need to delete any of the library folders we're not using. Since this is a Mac project, delete the iOS folder. Your Libraries folder should now look like the one below:
