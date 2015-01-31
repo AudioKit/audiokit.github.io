@@ -29,27 +29,12 @@ layout: examples
 
 <p>In this example there is a lot of boiler plate code to access the user's song library, for which there are many example tutorials online.  </p>
 
-<p>The processing of the songs is just a simple stereo reverb:</p>
+<p>The user can choose to process one of the two included sample loops in addition to songs from their iTunes Library.</p>
 
-{% highlight objective-c %}
-AKReverb *reverb;
-reverb = [[AKReverb alloc] initWithInput:fileIn];
-reverb.feedback = _reverbFeedback;
-[self connect:reverb];
-{% endhighlight %}
+<p>These input sources are modified by a growing number of effects including delay, a Moog Ladder filter, and reverb.</p>
 
-<p>But, since we want to mix the reverb sound with the original, we need to mix the reverb audio with the original sound of the file:</p>
+<p>Since this is a bit more complicated than a new user might want to see at first, it is not included in AudioKit's example folder, but instead offered as a separate repository on GitHub:</p>
 
-{% highlight objective-c %}
-AKMixedAudio *leftMix;
-leftMix = [[AKMixedAudio alloc] initWithSignal1:fileIn.leftOutput
-                                        signal2:reverb.leftOutput
-                                        balance:_mix];
-[self connect:leftMix];
 
-AKMixedAudio *rightMix;
-rightMix = [[AKMixedAudio alloc] initWithSignal1:fileIn.rightOutput
-                                         signal2:reverb.rightOutput
-                                         balance:_mix];
-[self connect:rightMix];
-{% endhighlight %}
+<p><a href="https://github.com/audiokit/EffectsProcessorDemo">https://github.com/audiokit/EffectsProcessorDemo</a></p>
+
