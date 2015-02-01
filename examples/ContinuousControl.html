@@ -3,6 +3,7 @@ title: AudioKit Examples - Continuous Control
 header: Continuous Control
 permalink: /examples/ContinuousControl/
 layout: examples
+last-review-date: 2015/02/01
 ---
 
 <div class="cd-iphone-5s cd-silver hide-on-tablets-and-smaller" style="margin-left: 1em; float: right">
@@ -27,16 +28,14 @@ layout: examples
 </p>
 </div>
 
-
 <p>
-This demonstrates both user control and parameter automation. When the user starts the instrument, a frequency-modulation oscillator is turned on. Amplitude and modulation are controlled by the user with UISliders. The modulation index is automated.
+This example is a beginner level example, that only uses one instrument and demonstrates both user control and parameter automation. When the user starts the instrument, a frequency-modulation oscillator is turned on. Amplitude and modulation are controlled by the user with UISliders. The modulation index is automated.
 </p>
 <p>
 The code for implementing the FM oscillator instrument controlled with user and automated parameters is shown below.
 </p>
 
 {% highlight objective-c %}
-AKFMOscillator *fmOscil;
 AKFMOscillator *fmOscillator = [AKFMOscillator oscillator];
 fmOscillator.baseFrequency = _frequency;
 fmOscillator.modulatingMultiplier = _modulation;
@@ -47,7 +46,7 @@ fmOscillator.amplitude = _amplitude;
 
 <h2> Mac Version </h2>
 
-<p>The OS X and iOS versions of this example share the exact same AudioKit instrument files but they use different UI elements to hook into the instrument's properties.</p>
+<p>The OS X and iOS versions of this example share the exact same AudioKit instrument files, but they use different UI elements to connect to the instrument's properties.</p>
 
 
 <div class="cd-mac hide-on-mobiles">

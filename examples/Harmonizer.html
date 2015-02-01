@@ -3,10 +3,11 @@ title: AudioKit Examples - Harmonizer
 header: Harmonizer
 permalink: /examples/Harmonizer/
 layout: examples
+last-review-date: 2015/02/01
 ---
 
 <p>
-This example demonstrates a simpler harmonzier, with the input signal being the device microphone. The code below (from "HarmonizerInstrument.m") takes the audio input from the device microphone and applies a window to the signal.</p>
+This example demonstrates a simple harmonzier, with the input signal being the device microphone. The code below (from "HarmonizerInstrument.m") takes the audio input from the device microphone and applies a window to the signal.</p>
 
 {% highlight objective-c %}
 AKAudioInput *microphone = [[AKAudioInput alloc] init];
@@ -23,32 +24,32 @@ microphoneFFT = [[AKFSignalFromMonoAudio alloc] initWithAudioSource:microphone
 
 
 <p>
-The input signal is then altered with two instances of "AKScaledFSignal", which scales the frequency of a phase vocoder stream, which results in a pitch shift.
+The input signal is then altered with two instances of "AKScaledFFT", which scales the frequency of the FFT, which results in a pitch shift.
 </p>
 
 {% highlight objective-c %}
-AKScaledFSignal *scaledFFT;
-scaledFFT = [[AKScaledFSignal alloc] initWithInput:microphoneFFT
-                                    frequencyRatio:akp(2.0)
-                               formantRetainMethod:AKScaledFSignalFormantRetainMethodLifteredCepstrum
-                                    amplitudeRatio:nil
-                              cepstrumCoefficients:nil];
+AKScaledFFT *scaledFFT;
+scaledFFT = [[AKScaledFFT alloc] initWithSignal:microphoneFFT
+                                 frequencyRatio:akp(2.0)
+                            formantRetainMethod:AKScaledFFTFormantRetainMethodLifteredCepstrum
+                                 amplitudeRatio:akp(2.0)
+                           cepstrumCoefficients:nil];
 [self connect:scaledFFT];
 {% endhighlight %}
 
 
-<p>These phase vocoder signals are then mixed with an instance of AKFSignalMix: </p>
+<p>These signals are then mixed with an instance of AKMixedFFT: </p>
 
 {% highlight objective-c %}
-AKFSignalMix *mixedFFT = [[AKFSignalMix alloc] initWithInput1:microphoneFFT input2:scaledFFT];
+AKMixedFFT *mixedFFT = [[AKMixedFFT alloc] initWithSignal1:microphoneFFT signal2:scaledFFT];
 [self connect:mixedFFT];
 {% endhighlight %}
 
 <p>
-Finally, the audio is resynthesized from the phase vocoder data using an instance of "AKAudioFromFSignal":
+Finally, the audio is resynthesized from the FFT data using an instance of "AKResynthesizedAudio":
 </p>
 
 {% highlight objective-c %}
-AKAudioFromFSignal *audioOutput = [[AKAudioFromFSignal alloc] initWithSource:mixedFFT];
+AKResynthesizedAudio *audioOutput = [[AKResynthesizedAudio alloc] initWithSignal:mixedFFT];
 [self connect:audioOutput];
 {% endhighlight %}
