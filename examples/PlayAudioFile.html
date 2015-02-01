@@ -21,7 +21,7 @@ NSString *file;
 file = [[NSBundle mainBundle] pathForResource:@"blaster" ofType:@"aiff"];
 AKSoundFileTable *fileTable;
 fileTable = [[AKSoundFileTable alloc] initWithFilename:file];
-[self connect:fileTable];
+[self addFunctionTable:fileTable];
 {% endhighlight %}
 
 <p>
@@ -29,12 +29,11 @@ Next, and instance of AKLoopingOscillator is created, which reads sampled sound 
 </p>
 
 {% highlight objective-c %}
-AKLoopingOscillator *oscil;
-oscil = [[AKLoopingOscillator alloc] initWithSoundFileTable:fileTable
-                                        frequencyMultiplier:note.speed
-                                                  amplitude:akp(0.5)
-                                                       type:kLoopingOscillatorNoLoop];
-[self connect:oscil];
+AKMonoSoundFileLooper *looper;
+looper = [AKMonoSoundFileLooper looperWithSoundFile:fileTable];
+looper.frequencyRatio = note.speed;
+looper.loopMode = AKSoundFileLooperModeNoLoop;
+[self connect:looper];
 {% endhighlight %}
 
 
@@ -42,9 +41,8 @@ oscil = [[AKLoopingOscillator alloc] initWithSoundFileTable:fileTable
 
 {% highlight objective-c %}
 AKReverb *reverb;
-reverb = [[AKReverb alloc] initWithAudioSource:oscil
-                                 feedbackLevel:akp(0.85)
-                               cutoffFrequency:akp(12000)];
+reverb = [AKReverb reverbWithInput:looper];
+reverb.feedback.value = 0.85;
 [self connect:reverb];
 {% endhighlight %}
 
