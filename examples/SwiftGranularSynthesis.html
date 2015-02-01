@@ -3,6 +3,7 @@ title: AudioKit Examples - Swift Granular Synthesis
 header: Granular Synthesis in Swift
 permalink: /examples/SwiftGranularSynthesis/
 layout: examples
+last-review-date: 2015/02/01
 ---
 
 <div class="cd-iphone-5s cd-silver hide-on-tablets-and-smaller" style="margin-left: 1em; float: right">
@@ -45,7 +46,8 @@ Then, we apply a Hamming window, and set the base frequency to be the frequency 
 </p>
 
 {% highlight ruby %}
-let hamming = AKWindowsTable (type: AKWindowTableType.Hamming, size: 512)
+let hamming = AKWindow(type: AKWindowTableType.Hamming)
+hamming.size = 512;
 connect(hamming)
 
 let baseFrequency = AKConstant(expression: String(format: "44100 / %@", fileTable.length()))
@@ -57,9 +59,9 @@ Finally, we create a granular synthesis texture with the code below. Four parame
 
 {% highlight ruby %}
 let grainTexture =  AKGranularSynthesisTexture (
-          grainFunctionTable: fileTable,
-          windowFunctionTable: hamming
-      )
+    grainFunctionTable: fileTable,
+    windowFunctionTable: hamming
+)
 grainTexture.averageGrainDuration = averageGrainDuration
 grainTexture.maximumFrequencyDeviation = granularFrequencyDeviation
 grainTexture.grainFrequency = baseFrequency

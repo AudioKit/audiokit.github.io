@@ -3,6 +3,7 @@ title: AudioKit Examples - Swift Harmonizer
 header: Swift Harmonizer
 permalink: /examples/SwiftHarmonizer/
 layout: examples
+last-review-date: 2015/02/01
 ---
 
 <p>
@@ -25,38 +26,32 @@ connect(fsig1)
 
 
 <p>
-The input signal is then altered with two instances of "AKScaledFSignal", which scales the frequency of a phase vocoder stream, which results in a pitch shift.
+The input signal is then altered with two instances of "AKScaledFFT", which scales the frequency of the FFT, which results in a pitch shift.
 </p>
 
 {% highlight ruby %}
-AKScaledFSignal *fsig2;
-let fsig2 = AKScaledFSignal(input: fsig1,
+let scaledFFT = AKScaledFFT(
+    signal: microphoneFFT,
     frequencyRatio: 2.ak,
-    formantRetainMethod: kFormantRetainMethodLifteredCepstrum,
-    amplitudeRatio: nil,
-    cepstrumCoefficients: nil)
-connect(fsig2)
-
-let fsig3 = AKScaledFSignal(input: fsig1,
-    frequencyRatio: 2.ak,
-    formantRetainMethod: kFormantRetainMethodLifteredCepstrum,
-    amplitudeRatio: nil,
-    cepstrumCoefficients: nil)
-connect (fsig3)
+    formantRetainMethod: AKScaledFFTFormantRetainMethod.LifteredCepstrum,
+    amplitudeRatio: 2.ak,
+    cepstrumCoefficients: nil
+)
+connect(scaledFFT)
 {% endhighlight %}
 
-<p>These phase vocoder signals are then mixed with an instance of AKFSignalMix: </p>
+<p>These signals are then mixed with an instance of AKMixedFFT: </p>
 
 {% highlight ruby %}
-let fsig4 = AKFSignalMix(input1: fsig2, input2: fsig3)
-connect(fsig4)
+let mixedFFT = AKMixedFFT(signal1: microphoneFFT, signal2: scaledFFT)
+connect(mixedFFT)
 {% endhighlight %}
 
 <p>
-Finally, the audio is resynthesized from the phase vocoder data using an instance of "AKAudioFromFSignal":
+Finally, the audio is resynthesized from the FFT data using an instance of "AKResynthesizedAudio":
 </p>
 
 {% highlight ruby %}
-let a1 = AKAudioFromFSignal(source: fsig4)
-connect(a1)
+let audioOutput = AKResynthesizedAudio(signal: mixedFFT)
+connect(audioOutput)
 {% endhighlight %}

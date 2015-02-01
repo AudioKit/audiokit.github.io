@@ -3,6 +3,7 @@ title: AudioKit Examples - Swift Convolution
 header: Swift Convolution
 permalink: /examples/SwiftConvolution/
 layout: examples
+last-review-date: 2015/02/01
 ---
 
 <div class="cd-iphone-5s cd-silver hide-on-tablets-and-smaller" style="margin-left: 1em; float: right">
@@ -27,7 +28,9 @@ layout: examples
 </p>
 </div>
 
-<p>The first part is to load the loop and the impulse response files:</p>
+<p>This example uses a sampled audio file as the sound source, and applies a convolution effect to produce an interesting reverb and tone-shaped output.  There are two impulse files that are used for the convultion that produce either a ringing bowl effect or a stairwell reverb.  The user controls the mix of both of these effects with the original sound.</p>
+
+<p>The first step is to load the loop and the impulse response files:</p>
 
 {% highlight ruby %}
 let file = String(NSBundle.mainBundle().pathForResource("808loop", ofType: "wav")!)
@@ -41,10 +44,10 @@ let well = String(NSBundle.mainBundle().pathForResource("Stairwell", ofType: "wa
 <p>Perform the convolutions:</p>
 
 {% highlight ruby %}
-let dishConv = AKConvolution(audioSource: loop.leftOutput, impulseResponseFile: dish)
+let dishConv = AKConvolution(input: loop.leftOutput, impulseResponseFilename: dish)
 connect(dishConv)
 
-let wellConv = AKConvolution(audioSource: loop.rightOutput, impulseResponseFile: well)
+let wellConv = AKConvolution(input: loop.rightOutput, impulseResponseFilename: well)
 connect(wellConv)
 {% endhighlight %}
 
@@ -61,7 +64,7 @@ connect(dryWet)
 
 <h2> Mac Version </h2>
 
-<p>The OS X and iOS versions of this example share the exact same AudioKit instrument files but they use different UI elements to hook into the instrument's properties.</p>
+<p>The OS X and iOS versions of this example share the exact same AudioKit instrument files, but they use different UI elements to connect to the instrument's properties.</p>
 
 <div class="cd-mac hide-on-mobiles">
   <div class="cd-top"></div>
