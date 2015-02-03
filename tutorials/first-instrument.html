@@ -77,11 +77,20 @@ Now that we’ve created the instrument file, we can write the code to make some
 fmOscillator = [[AKFMOscillator alloc] init];
 {% endhighlight %}
 
-<p>Finally,  connect the FM oscillator to the audio graph with the line below: </p>
+<p>Connect the FM oscillator to the audio graph with the line below: </p>
 
 {% highlight objective-c %}
 [self connect:fmOscillator];
 {% endhighlight %}
+
+<p>Finally, we'll set up our audio output by creating an instance of AKAUudioOutput, and initializing it with our FMOscillator. </p>
+
+
+{% highlight objective-c %}
+AKAudioOutput *audioOutput = [[AKAudioOutput alloc] initWithAudioSource:fmOscillator];
+[self connect:audioOutput];
+{% endhighlight %}
+
 
 <p>Finish the file by adding the following lines underneath the last line you just made: </p>
 
