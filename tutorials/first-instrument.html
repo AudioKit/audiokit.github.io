@@ -201,14 +201,19 @@ Next, open up the assistant editor, and make sure it’s set to ViewController.m
 <img src=/images/toggleInstrument.png style="width:100%; max-width:307px">
 
 
+<p>Now, we're going to create a new method called toggleInstrument below our viewDidLoad method:</p>
+
+
 <p>Add the code below inside of toggleInstrument:</p>
 {% highlight objective-c %}
-if (isNewInstrumentPlaying) {
-    [newInstrument stop];
-    isNewInstrumentPlaying = NO;
-} else {
-    [newInstrument play];
-    isNewInstrumentPlaying = YES;
+- (IBAction)toggleInstrument:(id)sender {
+    if (isNewInstrumentPlaying) {
+        [newInstrument stop];
+        isNewInstrumentPlaying = NO;
+    } else {
+        [newInstrument play];
+        isNewInstrumentPlaying = YES;
+    }
 }
 {% endhighlight %}
 
