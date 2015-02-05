@@ -146,9 +146,7 @@ class ViewController: UIViewController {
 
 
     @IBAction func toggleInstrument(sender: AnyObject) {
-        if toggleSwitchClicked.on{
         toggleSwitchClicked.on ?  fmOscillator.play() : fmOscillator.stop()
-        }
     }
 
     override func didReceiveMemoryWarning() {
