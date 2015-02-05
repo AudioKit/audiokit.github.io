@@ -48,12 +48,14 @@ connect(fmOscillator)
 {% endhighlight %}
 
 <p>
-Finally, add the line below to connect your oscillator to AKAudioOutput, which writes stereo audio data to an external device or stream. This line also connects AKAudioOutput to the audio processing graph.
+Finally, add the line below to connect your oscillator to AKAudioOutput, which writes stereo audio data to an external device or stream. This line also connects AKAudioOutput to the audio processing graph. 
 </p>
 
 {% highlight ruby %}
-connect(AKAudioOutput(audioSource: fmOscillator)
+connect(AKAudioOutput(audioSource: fmOscillator))
 {% endhighlight %}
+
+<p>Don't forget to add a final '}' on the next two lines to close the init method and class definition.</p>
 
 <p>When you're done, your "Instrument.swift" file should look like the one below:</p>
 
