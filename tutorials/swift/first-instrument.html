@@ -73,9 +73,25 @@ class FMSynth: AKInstrument {
 }
 {% endhighlight %}
 
+<p>Next, navigate to your ViewController.swift file, and add the line below inside of the  'class ViewController:' line:
+</p>
+
+{% highlight ruby %}
+let fmOscillator = FMSynth()
+{% endhighlight %}
+
+<p>That will create an insance of our fmOscillator instrument called 'FMSynth'</p>
+
+<p>Next, we're going to add the instrument to the orchestar and start the orchestra by adding the lines below inside of the viewDidLoad method:
+</p>
+
+{% highlight ruby %}
+AKOrchestra.addInstrument(fmOscillator)
+AKOrchestra.start()
+{% endhighlight %}
 
 
-<p>Now that we've finished making our instrument, we can set up a button to turn it on and off. Navigate to "Main.storyboard", and drag a UISwitch onto the canvas. Make sure that the switch’s default state is set to “Off”. This way, our instrument won’t turn on right away until the user turns the switch to “On”.
+<p>Now that we've finished making our instrument and adding an instance of it to our View Controller, we can set up a button to turn it on and off. Navigate to "Main.storyboard", and drag a UISwitch onto the canvas. Make sure that the switch’s default state is set to “Off”. This way, our instrument won’t turn on right away until the user turns the switch to “On”.
 </p>
 
 <img src=/images/switchOff.png style="width:100%; max-width:248px">
@@ -111,7 +127,6 @@ Now, add the code below inside of your "toggleInstrument" IBAction. If the curre
 {% endhighlight %}
 
 <p>Your ViewController.swift file should look like the code listing below:</p>
-
 
 
 {% highlight ruby %}
