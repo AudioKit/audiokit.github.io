@@ -61,6 +61,15 @@ addProperty(modulationIndex)
 
 <p>Now, our properties have been added to our instrument definition.</p>
 
+<p>Finally, we need to connect our oscillator's parameters to our properties: 
+
+{% highlight ruby %}
+fmOscillator.baseFrequency = frequency
+fmOscillator.carrierMultiplier = carrierMultiplier
+fmOscillator.modulationIndex = modulationIndex
+fmOscillator.amplitude = amplitude
+{% endhighlight %}
+
 <p>When you're finished, your instrument file should look like the listing below:</p>
 
 {% highlight ruby %}
