@@ -12,6 +12,10 @@ Now that you’ve got AudioKit added to your project, you can start making your 
 </p>
 
 <p>
+You can either follow along step by step, or take a look at the completed example project here: <a href="https://github.com/audiokit/FirstInstrumentTutorial">FirstInstrumentTutorial Project</a>. 
+</p>
+
+<p>
 To make an instrument file, first go to ‘File’, ‘New’, ‘File’ (command-N). Select a Cocoa Touch class under Source, as shown below. If you’re using Xcode 6 or later, make sure that the language is set to Objective-C. Later on, we’ll show you how to do this in Swift. Name your instrument file “NewInstrument”, and click Next.
 </p>
 
@@ -77,11 +81,20 @@ Now that we’ve created the instrument file, we can write the code to make some
 fmOscillator = [[AKFMOscillator alloc] init];
 {% endhighlight %}
 
-<p>Finally,  connect the FM oscillator to the audio graph with the line below: </p>
+<p>Connect the FM oscillator to the audio graph with the line below: </p>
 
 {% highlight objective-c %}
 [self connect:fmOscillator];
 {% endhighlight %}
+
+<p>Finally, we'll set up our audio output by creating an instance of AKAudioOutput, and initializing it with our FMOscillator. </p>
+
+
+{% highlight objective-c %}
+AKAudioOutput *audioOutput = [[AKAudioOutput alloc] initWithAudioSource:fmOscillator];
+[self connect:audioOutput];
+{% endhighlight %}
+
 
 <p>Finish the file by adding the following lines underneath the last line you just made: </p>
 
@@ -172,9 +185,9 @@ newInstrument = [[NewInstrument alloc] init];
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-newInstrument = [[NewInstrument alloc] init];
-[AKOrchestra addInstrument:newInstrument];
-[AKOrchestra start];
+    newInstrument = [[NewInstrument alloc] init];
+    [AKOrchestra addInstrument:newInstrument];
+    [AKOrchestra start];
 {% endhighlight %}
 
 
@@ -190,6 +203,9 @@ Next, open up the assistant editor, and make sure it’s set to ViewController.m
 
 
 <img src=/images/toggleInstrument.png style="width:100%; max-width:307px">
+
+
+<p>Now, we're going to create a new method called toggleInstrument below our viewDidLoad method:</p>
 
 
 <p>Add the code below inside of toggleInstrument:</p>

@@ -7,6 +7,9 @@ prev_section: /tutorials/swift/getting-started/
 next_section: /tutorials/swift/user-interaction/
 ---
 
+<p>
+You can either follow along step by step, or take a look at the completed example project here: <a href="hhttps://github.com/audiokit/FirstInstrumentTutorialInSwift">FirstInstrumentTutorialInSwift Project</a>. 
+</p>
 
 <p>To make an instrument in swift, make a new file (command-n), and click "Swift file" under "Source".</p>
 
@@ -48,12 +51,14 @@ connect(fmOscillator)
 {% endhighlight %}
 
 <p>
-Finally, add the line below to connect your oscillator to AKAudioOutput, which writes stereo audio data to an external device or stream. This line also connects AKAudioOutput to the audio processing graph.
+Finally, add the line below to connect your oscillator to AKAudioOutput, which writes stereo audio data to an external device or stream. This line also connects AKAudioOutput to the audio processing graph. 
 </p>
 
 {% highlight ruby %}
-connect(AKAudioOutput(audioSource: fmOscillator)
+connect(AKAudioOutput(audioSource: fmOscillator))
 {% endhighlight %}
+
+<p>Don't forget to add a final '}' on the next two lines to close the init method and class definition.</p>
 
 <p>When you're done, your "Instrument.swift" file should look like the one below:</p>
 
@@ -71,9 +76,25 @@ class FMSynth: AKInstrument {
 }
 {% endhighlight %}
 
+<p>Next, navigate to your ViewController.swift file, and add the line below inside of the  'class ViewController:' line:
+</p>
+
+{% highlight ruby %}
+let fmOscillator = FMSynth()
+{% endhighlight %}
+
+<p>That will create an insance of our fmOscillator instrument called 'FMSynth'</p>
+
+<p>Next, we're going to add the instrument to the orchestar and start the orchestra by adding the lines below inside of the viewDidLoad method:
+</p>
+
+{% highlight ruby %}
+AKOrchestra.addInstrument(fmOscillator)
+AKOrchestra.start()
+{% endhighlight %}
 
 
-<p>Now that we've finished making our instrument, we can set up a button to turn it on and off. You can delete "LaunchScreen.xib", we won't be needing it at all for this project. Then, navigate to "Main.storyboard", and drag a UISwitch onto the canvas. Make sure that the switch’s default state is set to “Off”. This way, our instrument won’t turn on right away until the user turns the switch to “On”.
+<p>Now that we've finished making our instrument and adding an instance of it to our View Controller, we can set up a button to turn it on and off. Navigate to "Main.storyboard", and drag a UISwitch onto the canvas. Make sure that the switch’s default state is set to “Off”. This way, our instrument won’t turn on right away until the user turns the switch to “On”.
 </p>
 
 <img src=/images/switchOff.png style="width:100%; max-width:248px">
@@ -91,7 +112,7 @@ Next, open up the assistant editor, and make sure it’s set to ViewController.s
 
 
 <p>
-Now, repeat the process, but create an IBOutlet instead of an IBAction called "toggleSwitchClicked". Add this above your instrument declaration. This will let us know what the current state (On or Off) of our toggle switch is.
+Now, repeat the process, but create an IBOutlet instead of an IBAction called "toggleSwitchClicked". This will let us know what the current state (On or Off) of our toggle switch is.
 </p>
 
 {% highlight ruby %}
@@ -105,11 +126,9 @@ Now, add the code below inside of your "toggleInstrument" IBAction. If the curre
 {% highlight ruby %}
   if toggleSwitchClicked.on
         toggleSwitchClicked.on ?  fmOscillator.play() : fmOscillator.stop()
-
 {% endhighlight %}
 
 <p>Your ViewController.swift file should look like the code listing below:</p>
-
 
 
 {% highlight ruby %}
@@ -130,7 +149,6 @@ class ViewController: UIViewController {
 
 
     @IBAction func toggleInstrument(sender: AnyObject) {
-        if toggleSwitchClicked.on
         toggleSwitchClicked.on ?  fmOscillator.play() : fmOscillator.stop()
     }
 
