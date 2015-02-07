@@ -119,10 +119,10 @@ Now we're going to add these properties to our instrument. Underneath the code y
         [self addProperty:_amplitudeValue];
 
         // INSTRUMENT DEFINITION ===============================================
-        
+
         AKFMOscillator *fmOscillator;
         fmOscillator = [[AKFMOscillator alloc] init];
-        fmOscillator.baseFrequency     = _frequency;
+        fmOscillator.baseFrequency     = _frequencyValue;
         fmOscillator.carrierMultiplier = _carrierMultValue;
         fmOscillator.modulationIndex   = _modIndexValue;
         fmOscillator.amplitude         = _amplitudeValue;
@@ -131,7 +131,7 @@ Now we're going to add these properties to our instrument. Underneath the code y
 
         // AUDIO OUTPUT ========================================================
 
-        AKAudioOutput *audioOutput = [[AKAudioOutput alloc] initWithAudioSource:fmOscillatorlator];
+        AKAudioOutput *audioOutput = [[AKAudioOutput alloc] initWithAudioSource:fmOscillator];
         [self connect:audioOutput];
 
     }
