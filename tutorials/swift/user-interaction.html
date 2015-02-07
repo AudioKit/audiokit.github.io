@@ -6,6 +6,9 @@ layout: tutorials
 prev_section: /tutorials/swift/first-instrument/
 next_section:
 ---
+<p>
+You can either follow along step by step, or take a look at the completed example project here: <a href="https://github.com/audiokit/UserInteractionTutorialInSwift">UserInteractionTutorialInSwift Project</a>. 
+</p>
 
 <p>
 Now that we've learned how to make an instrument with AudioKit in Swift, we're going to learn how to add some basic user interaction functionality to our app.
@@ -50,7 +53,7 @@ var amplitude            = AKInstrumentProperty(value: 0.25, minimum: 0,   maxim
 These properties are of type "var", which in Swift signifies that their value will be changed at some point. These properties are of type "AKInstrumentProperty", which allow us to set a default value ("value"), as well as minimum and maximum values.
 </p>
 
-<p>Now, add the lines below above the declaration for "sine" inside the instrument defintion:</p>
+<p>Now, add the lines below above the declaration for fmOscillator:</p>
 
 {% highlight ruby %}
 addProperty(frequency)
@@ -60,6 +63,15 @@ addProperty(modulationIndex)
 {% endhighlight %}
 
 <p>Now, our properties have been added to our instrument definition.</p>
+
+<p>Finally, we need to connect our oscillator's parameters to our properties: 
+
+{% highlight ruby %}
+fmOscillator.baseFrequency = frequency
+fmOscillator.carrierMultiplier = carrierMultiplier
+fmOscillator.modulationIndex = modulationIndex
+fmOscillator.amplitude = amplitude
+{% endhighlight %}
 
 <p>When you're finished, your instrument file should look like the listing below:</p>
 
