@@ -83,8 +83,18 @@ Now we're going to add these properties to our instrument. Underneath the code y
 [self addProperty:_amplitudeValue];
 {% endhighlight %}
 
-<p>Your instrument file should now look like the one below:</p>
+<p>
+Finally, we're going to connect these properties to our instrument's parameters. Add the lines below underneath where we create our instance of AKFMOscillator. 
+</p>
 
+{% highlight objective-c %}
+fmOscillator.baseFrequency     = _frequencyValue;
+fmOscillator.carrierMultiplier = _carrierMultValue;
+fmOscillator.modulationIndex   = _modIndexValue;
+fmOscillator.amplitude         = _amplitudeValue;
+{% endhighlight %}
+
+<p>Your instrument file should now look like the one below:</p>
 
 {% highlight objective-c %}
 #import "NewInstrument.h"
@@ -100,29 +110,32 @@ Now we're going to add these properties to our instrument. Underneath the code y
         _frequencyValue = [[AKInstrumentProperty alloc] initWithValue:440
                                                               minimum:220
                                                               maximum:880];
+        [self addProperty:_frequencyValue];
+
 
         _carrierMultValue   = [[AKInstrumentProperty alloc] initWithValue:0.5
                                                                   minimum:0
                                                                   maximum:1];
+        [self addProperty:_carrierMultValue];
+
 
         _modIndexValue   = [[AKInstrumentProperty alloc] initWithValue:0.5
                                                                minimum:0
                                                                maximum:1];
+        [self addProperty:_modIndexValue];
+
 
         _amplitudeValue   = [[AKInstrumentProperty alloc] initWithValue:0.25
                                                                 minimum:0
                                                                 maximum:0.5];
 
-        [self addProperty:_frequencyValue];
-        [self addProperty:_carrierMultValue];
-        [self addProperty:_modIndexValue];
         [self addProperty:_amplitudeValue];
 
         // INSTRUMENT DEFINITION ===============================================
         
         AKFMOscillator *fmOscillator;
         fmOscillator = [[AKFMOscillator alloc] init];
-        fmOscillator.baseFrequency     = _frequency;
+        fmOscillator.baseFrequency     = _frequencyValue;
         fmOscillator.carrierMultiplier = _carrierMultValue;
         fmOscillator.modulationIndex   = _modIndexValue;
         fmOscillator.amplitude         = _amplitudeValue;
@@ -154,7 +167,8 @@ AKTools is the part of AudioKit that allows us to connect UI elements to instrum
 </p>
 
 <p>
-To start connecting our sliders to our instrument, control-drag from the Frequency slider to ViewController.m, and create an IBAction method. Call this method 'changeFrequency'. It will look like the method shown below:
+To start connecting our sliders to our instrument, control-drag from the Frequency slider to ViewController.m, and create an IBAction method underneath our method for turning the instrument on and off. Call this method 'changeFrequency
+. It will look like the method shown below:
 </p>
 
 {% highlight objective-c %}
@@ -179,7 +193,7 @@ To start connecting our sliders to our instrument, control-drag from the Frequen
 
 
 <p>
-Finally, we're going to set the value of our UISliders to be the value of our instrument properties. Whenever a slider is moved, it's value then set the value of the instrument property that we're controlling.
+Finally, we're going to set the value of our instrument properties to be the value of our UISliders. Whenever a slider is moved, it's value then set the value of the instrument property that we're controlling.
 
 <p>Add the line below in between the {} of your changeFrequency method:</p>
 
