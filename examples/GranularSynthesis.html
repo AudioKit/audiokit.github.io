@@ -31,48 +31,44 @@ last-review-date: 2015/02/01
 
 
 <p>
-Here we demonstrate granular synthesis, with an audio file as the source. The code below (from "GranularInstrument.h") loads an audio file into a sound file table.
+Here we demonstrate granular synthesis, with two audio files as the sources.  The parameters that can be altered are:
+
+{% highlight objective-c %}
+@property (nonatomic, strong) AKInstrumentProperty *mix;
+@property (nonatomic, strong) AKInstrumentProperty *frequency;
+@property (nonatomic, strong) AKInstrumentProperty *duration;
+@property (nonatomic, strong) AKInstrumentProperty *density;
+@property (nonatomic, strong) AKInstrumentProperty *frequencyVariation;
+@property (nonatomic, strong) AKInstrumentProperty *frequencyVariationDistribution;
+{% endhighlight %}
+
+where mix is simply the balance betwen the two inputs, but the others are characteristic of AKGranularSynthesizer.
+</p>
+
+<p>
+The we create two instances of AKGranularSynthesizer, where the first step is to load an audio file into a sound file table.
 </p>
 
 {% highlight objective-c %}
 NSString *file = [[NSBundle mainBundle] pathForResource:@"PianoBassDrumLoop"
                                                  ofType:@"wav"];
-AKSoundFile *fileTable;
-fileTable = [[AKSoundFile alloc] initWithFilename:file];
-fileTable.size = 16384;
-[self addFunctionTable:fileTable];
+AKSoundFile *soundFile;
+soundFile = [[AKSoundFile alloc] initWithFilename:file];
+soundFile.size = 16384;
+[self addFunctionTable:soundFile];
 {% endhighlight %}
 
-
 <p>
-Then, we apply a Hamming window, and set the base frequency to be the average frequency of the original source file.
+And then create the synthesizer:
 </p>
 
 {% highlight objective-c %}
-AKFunctionTable *hamming;
-hamming = [[AKWindow alloc] initWithType:AKWindowTableTypeHamming];
-hamming.size = 512;
-[self addFunctionTable:hamming];
-
-AKConstant *baseFrequency;
-NSString *frequencyMathString = [NSString stringWithFormat:@"44100 / %@", [fileTable length]];
-baseFrequency = [[AKConstant alloc] initWithExpression:frequencyMathString];
-{% endhighlight %}
-
-
-<p>
-Finally, we create a granular synthesis texture with the code below. Four parameters ("averageGrainDuration", "maximumFrequencyDeviation", "grainAmplitude", and "grainDensity") are controlled by UISliders.
-</p>
-
-
-{% highlight objective-c %}
-AKGranularSynthesisTexture *grainTexture;
-grainTexture = [AKGranularSynthesisTexture textureWithGrainFunctionTable:fileTable
-                                                     windowFunctionTable:hamming];
-grainTexture.averageGrainDuration = _averageGrainDuration;
-grainTexture.maximumFrequencyDeviation = _granularFrequencyDeviation;
-grainTexture.grainFrequency = baseFrequency;
-grainTexture.grainAmplitude = _granularAmplitude;
-grainTexture.grainDensity = _grainDensity;
-[self connect:grainTexture];
+AKGranularSynthesizer *synth;
+synth = [[AKGranularSynthesizer alloc] initWithGrainWaveform:soundFile
+                                                   frequency:_frequency];
+synth.duration = _duration;
+synth.density = _density;
+synth.frequencyVariation = _frequencyVariation;
+synth.frequencyVariationDistribution = _frequencyVariationDistribution;
+[self connect:synth];
 {% endhighlight %}

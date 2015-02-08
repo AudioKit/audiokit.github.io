@@ -29,45 +29,46 @@ last-review-date: 2015/02/01
 </p>
 </div>
 
+
 <p>
-Here we demonstrate granular synthesis, with an audio file as the source. The code below (from "GranularInstrument.swift") loads an audio file into a sound file table.
+Here we demonstrate granular synthesis, with two audio files as the sources.  The parameters that can be altered are:
+
+{% highlight ruby %}
+addProperty(mix)
+addProperty(frequency)
+addProperty(duration)
+addProperty(density)
+addProperty(frequencyVariation)
+addProperty(frequencyVariationDistribution)
+{% endhighlight %}
+
+where mix is simply the balance betwen the two inputs, but the others are characteristic of AKGranularSynthesizer.
+</p>
+
+<p>
+The we create two instances of AKGranularSynthesizer, where the first step is to load an audio file into a sound file table.
 </p>
 
 {% highlight ruby %}
-let file = String (NSBundle .mainBundle() .pathForResource("PianoBassDrumLoop", ofType: "wav")!)
+let file = String (NSBundle.mainBundle().pathForResource("PianoBassDrumLoop", ofType: "wav")!)
 
-let fileTable = AKSoundFile (filename: file)
-fileTable.size = 16384
-connect(fileTable)
+let soundFile = AKSoundFile(filename: file)
+soundFile.size = 16384
+addFunctionTable(soundFile)
 {% endhighlight %}
 
 <p>
-Then, we apply a Hamming window, and set the base frequency to be the frequency of the original source file.
+And then create the synthesizer:
 </p>
 
 {% highlight ruby %}
-let hamming = AKWindow(type: AKWindowTableType.Hamming)
-hamming.size = 512;
-connect(hamming)
-
-let baseFrequency = AKConstant(expression: String(format: "44100 / %@", fileTable.length()))
-{% endhighlight %}
-
-<p>
-Finally, we create a granular synthesis texture with the code below. Four parameters ("averageGrainDuration", "maximumFrequencyDeviation", "grainAmplitude", and "grainDensity") are controlled by UISliders.
-</p>
-
-{% highlight ruby %}
-let grainTexture =  AKGranularSynthesisTexture (
-    grainFunctionTable: fileTable,
-    windowFunctionTable: hamming
+let synth =  AKGranularSynthesizer(
+    grainWaveform: soundFile,
+    frequency: frequency
 )
-grainTexture.averageGrainDuration = averageGrainDuration
-grainTexture.maximumFrequencyDeviation = granularFrequencyDeviation
-grainTexture.grainFrequency = baseFrequency
-grainTexture.grainAmplitude = granularAmplitude
-grainTexture.grainDensity = grainDensity
-connect(grainTexture)
-
-connect(AKAudioOutput(audioSource: grainTexture))
+synth.duration = duration
+synth.density = density
+synth.frequencyVariation = frequencyVariation
+synth.frequencyVariationDistribution = frequencyVariationDistribution
+connect(synth)
 {% endhighlight %}
