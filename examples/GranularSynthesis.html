@@ -34,12 +34,12 @@ last-review-date: 2015/02/01
 Here we demonstrate granular synthesis, with two audio files as the sources.  The parameters that can be altered are:
 
 {% highlight objective-c %}
-@property (nonatomic, strong) AKInstrumentProperty *mix;
-@property (nonatomic, strong) AKInstrumentProperty *frequency;
-@property (nonatomic, strong) AKInstrumentProperty *duration;
-@property (nonatomic, strong) AKInstrumentProperty *density;
-@property (nonatomic, strong) AKInstrumentProperty *frequencyVariation;
-@property (nonatomic, strong) AKInstrumentProperty *frequencyVariationDistribution;
+@property AKInstrumentProperty *mix;
+@property AKInstrumentProperty *frequency;
+@property AKInstrumentProperty *duration;
+@property AKInstrumentProperty *density;
+@property AKInstrumentProperty *frequencyVariation;
+@property AKInstrumentProperty *frequencyVariationDistribution;
 {% endhighlight %}
 
 where mix is simply the balance betwen the two inputs, but the others are characteristic of AKGranularSynthesizer.
@@ -72,3 +72,5 @@ synth.frequencyVariation = _frequencyVariation;
 synth.frequencyVariationDistribution = _frequencyVariationDistribution;
 [self connect:synth];
 {% endhighlight %}
+
+<p>This is repeated for the second audio file and then they are mixed and sent to the audio output.</p>
