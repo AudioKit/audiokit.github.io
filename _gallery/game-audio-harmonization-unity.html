@@ -1,6 +1,7 @@
 ---
 title: Game Audio using Unity+AudioKit
 layout: gallery_movie
+vimeo_id: 119179438
 ---
 <div class="hide-on-mobiles">
 <iframe src="//player.vimeo.com/video/119179438" width="750" height="470" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="gallery-movie"></iframe>
@@ -10,3 +11,16 @@ layout: gallery_movie
 <iframe src="//player.vimeo.com/video/119179438" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
 
+<p><b>1.: Unity iOS + AudioKit</b> : Harmonization of game sounds against musical User Generated Content</p>
+<p><b>2: Player chooses a song</b> : Query of Echo Nest returns Key and Mode (Bb Minor)</p>
+<p><b>3: Rain synthesized using AKDroplet</b> : Resonant frequencies of the PhiSEM model tuned to the harmonic triad as determined by the harmonizer.</p>
+<p><b>4: Flying bot sound: AKTambourine</b> : A PhiSEM model of a tambourine, resonant frequencies tuned to harmonic triad.</p>
+<p><b>5: Player regenerates health</b> : An ascending arpeggio based on harmonic triad is synthesized using AKFMOscillator when player character's health regenerates to full amount.</p>
+<p><b>6: Synthesis of a tritone (Aug Fourth)</b> : Tritone plays when player character is spotted by a bot, or takes damage faster than is able to regenerate health.</p>
+<p><b>7: Proximity explosion (crawling bot)</b> : Synthesized using AKSleighbells, another PhiSEM opcode, whose resonant frequencies are tuned to the harmonic triad.</p>
+<p><b>8: Player chooses a new song</b> : Harmonizer switches target key and mode to C Major.</p>
+<p><b>9: Player fires weapon</b> : Weapon sound is synthesized using AKFMOscillator which plays the perfect fifth of the harmonic triad, and a PhiSEM opcode of a crunch sound, AKCrunch, which is untuned.</p>
+<p><b>10: Player takes damage repeatedly</b> : Player's health affects parameters of AKFMOscillator (carrier multiplier, modulating multiplier, modulation index), resulting in a more chaotic sound as health decreases.</p>
+<p><b>11: Player dies and respawns</b> : A descinding arpeggio based on the harmonic triad is synthesized and played using AKFMOscillator</p>
+<p><b>12: Player chooses a new song</b> : Harmonizer now harmonizes against D Major for the climactic battle!</p>
+<p><b>13: Mech bot fires missiles</b> : For comedic effect, the missile sounds are synthesized using a physical model of a plucked string, AKPluckedString, where the main frequency is tuned to the root note of the harmonic triad.</p>
