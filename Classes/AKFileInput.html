@@ -51,6 +51,48 @@ title: AKFileInput
   </span>
   
   
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithFilename:speed:startTime:">&ndash;&nbsp;initWithFilename:speed:startTime:</a></code>
+    <span class="tooltip"><p>Create a file input.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/speed">&nbsp;&nbsp;speed</a></code>
+    <span class="tooltip"><p>Speed of the playback relative to 1 [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalSpeed:">&ndash;&nbsp;setOptionalSpeed:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/speed">speed</a></p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/startTime">&nbsp;&nbsp;startTime</a></code>
+    <span class="tooltip"><p>Set the start time (useful for pause/resume</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalStartTime:">&ndash;&nbsp;setOptionalStartTime:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/speed">speed</a></p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/normalizeTo:">&ndash;&nbsp;normalizeTo:</a></code>
+    <span class="tooltip"><p>Normalize the output</p></span>
+  </span>
+  
+  
 </li>
             </ul>
             
@@ -59,6 +101,84 @@ title: AKFileInput
           
 
           
+          
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/speed" title="speed"></a>
+  <h3 class="subsubtitle method-title">speed</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Speed of the playback relative to 1 [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *speed</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFileInput.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/startTime" title="startTime"></a>
+  <h3 class="subsubtitle method-title">startTime</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set the start time (useful for pause/resume</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *startTime</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFileInput.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
           
 
           
@@ -90,6 +210,200 @@ title: AKFileInput
     <dl class="argument-def parameter-def">
       <dt><em>fileName</em></dt>
       <dd><p>Location of the file on disk.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFileInput.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithFilename:speed:startTime:" title="initWithFilename:speed:startTime:"></a>
+  <h3 class="subsubtitle method-title">initWithFilename:speed:startTime:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create a file input.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFilename:(NSString *)<em>fileName</em> speed:(AKParameter *)<em>speed</em> startTime:(AKConstant *)<em>startTime</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>fileName</em></dt>
+      <dd><p>Location of the file on disk.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>speed</em></dt>
+      <dd><p>Speed of the playback relative to 1 [Default Value: 1]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>startTime</em></dt>
+      <dd><p>Time in second to start the playback (useful for pause/resume)</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFileInput.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/normalizeTo:" title="normalizeTo:"></a>
+  <h3 class="subsubtitle method-title">normalizeTo:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Normalize the output</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)normalizeTo:(float)<em>maximumAmplitude</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>maximumAmplitude</em></dt>
+      <dd><p>The maximum amplitude will be normalized to this amount.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFileInput.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalSpeed:" title="setOptionalSpeed:"></a>
+  <h3 class="subsubtitle method-title">setOptionalSpeed:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional <a href="#//api/name/speed">speed</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalSpeed:(AKParameter *)<em>speed</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>speed</em></dt>
+      <dd><p>Speed of the playback relative to 1 [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFileInput.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalStartTime:" title="setOptionalStartTime:"></a>
+  <h3 class="subsubtitle method-title">setOptionalStartTime:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional <a href="#//api/name/speed">speed</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalStartTime:(AKConstant *)<em>startTime</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>startTime</em></dt>
+      <dd><p>Time in second to start the playback (useful for pause/resume)</p></dd>
     </dl>
     
   </div>

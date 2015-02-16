@@ -112,7 +112,7 @@ title: AKLinearEnvelope
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/amplitude">&nbsp;&nbsp;amplitude</a></code>
-    <span class="tooltip"><p>mplitude to rise to and decay from. [Default Value: 1]</p></span>
+    <span class="tooltip"><p>Amplitude to rise to and decay from. [Default Value: 1]</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
@@ -120,6 +120,13 @@ title: AKLinearEnvelope
   <span class="tooltip">
     <code><a href="#//api/name/setOptionalAmplitude:">&ndash;&nbsp;setOptionalAmplitude:</a></code>
     <span class="tooltip"><p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/decayOnlyOnRelease:">&ndash;&nbsp;decayOnlyOnRelease:</a></code>
+    <span class="tooltip"><p>Set decay to only occur when the note is explicitly released by a &ldquo;stop&rdquo; command</p></span>
   </span>
   
   
@@ -143,7 +150,7 @@ title: AKLinearEnvelope
   
   
   <div class="method-subsection brief-description">
-    <p>mplitude to rise to and decay from. [Default Value: 1]</p>
+    <p>Amplitude to rise to and decay from. [Default Value: 1]</p>
   </div>
   
     
@@ -331,6 +338,52 @@ title: AKLinearEnvelope
           <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/decayOnlyOnRelease:" title="decayOnlyOnRelease:"></a>
+  <h3 class="subsubtitle method-title">decayOnlyOnRelease:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set decay to only occur when the note is explicitly released by a &ldquo;stop&rdquo; command</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)decayOnlyOnRelease:(BOOL)<em>decayOnRelease</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>decayOnRelease</em></dt>
+      <dd><p>Boolean flag to not start decay phase until a stop command is issued</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLinearEnvelope.h</code><br />
+  </div>
+  
+  
+</div>
             
             <div class="section-method">
   <a name="//api/name/init" title="init"></a>

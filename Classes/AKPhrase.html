@@ -46,6 +46,27 @@ title: AKPhrase
             <ul class="task-list">
                 <li>
   <span class="tooltip">
+    <code><a href="#//api/name/count">&nbsp;&nbsp;count</a></code>
+    <span class="tooltip"><p>Number of notes in the phrase</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/duration">&nbsp;&nbsp;duration</a></code>
+    <span class="tooltip"><p>Length of the phrase in seconds</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/reset">&ndash;&nbsp;reset</a></code>
+    <span class="tooltip"><p>Remove all notes</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
     <code><a href="#//api/name/addNote:">&ndash;&nbsp;addNote:</a></code>
     <span class="tooltip"><p>Add a note to the beginning of the phrase</p></span>
   </span>
@@ -55,6 +76,27 @@ title: AKPhrase
   <span class="tooltip">
     <code><a href="#//api/name/addNote:atTime:">&ndash;&nbsp;addNote:atTime:</a></code>
     <span class="tooltip"><p>Add a note to the phrase at a specific time</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/startNote:atTime:">&ndash;&nbsp;startNote:atTime:</a></code>
+    <span class="tooltip"><p>Add a note to the phrase at a specific time</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/stopNote:atTime:">&ndash;&nbsp;stopNote:atTime:</a></code>
+    <span class="tooltip"><p>Stop a note in the phrase at a specific time</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/updateNoteProperty:withValue:atTime:">&ndash;&nbsp;updateNoteProperty:withValue:atTime:</a></code>
+    <span class="tooltip"><p>Update a note property with a specific value at a specific time</p></span>
   </span>
   
   
@@ -73,6 +115,84 @@ title: AKPhrase
           
 
           
+          
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/count" title="count"></a>
+  <h3 class="subsubtitle method-title">count</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Number of notes in the phrase</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property (readonly) int count</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPhrase.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/duration" title="duration"></a>
+  <h3 class="subsubtitle method-title">duration</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Length of the phrase in seconds</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property (readonly) float duration</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPhrase.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
           
 
           
@@ -201,6 +321,200 @@ title: AKPhrase
     <dl class="argument-def parameter-def">
       <dt><em>instrument</em></dt>
       <dd><p>Instrument that will play the notes in the phrase</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPhrase.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/reset" title="reset"></a>
+  <h3 class="subsubtitle method-title">reset</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Remove all notes</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)reset</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPhrase.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/startNote:atTime:" title="startNote:atTime:"></a>
+  <h3 class="subsubtitle method-title">startNote:atTime:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Add a note to the phrase at a specific time</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)startNote:(AKNote *)<em>note</em> atTime:(float)<em>time</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>note</em></dt>
+      <dd><p>Note to be added</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>time</em></dt>
+      <dd><p>Time the note will be played</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPhrase.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/stopNote:atTime:" title="stopNote:atTime:"></a>
+  <h3 class="subsubtitle method-title">stopNote:atTime:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Stop a note in the phrase at a specific time</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)stopNote:(AKNote *)<em>note</em> atTime:(float)<em>time</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>note</em></dt>
+      <dd><p>Note to be stopped</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>time</em></dt>
+      <dd><p>Time the note will be stopped</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPhrase.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/updateNoteProperty:withValue:atTime:" title="updateNoteProperty:withValue:atTime:"></a>
+  <h3 class="subsubtitle method-title">updateNoteProperty:withValue:atTime:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Update a note property with a specific value at a specific time</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)updateNoteProperty:(AKNoteProperty *)<em>noteProperty</em> withValue:(float)<em>value</em> atTime:(float)<em>time</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>noteProperty</em></dt>
+      <dd><p>Note property to change the value of</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>value</em></dt>
+      <dd><p>Value of the note property</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>time</em></dt>
+      <dd><p>Time the note will be stopped</p></dd>
     </dl>
     
   </div>

@@ -1,0 +1,988 @@
+---
+layout: docs
+title: AKTools
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKTools</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value">NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKTools.h<br />AKTools.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>A suite of useful methods for working with AudioKit</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            
+
+            <ul class="task-list">
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/randomFloatFrom:to:">+&nbsp;randomFloatFrom:to:</a></code>
+    <span class="tooltip"><p>Random number within a range</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/scaleValue:fromMinimum:fromMaximum:toMinimum:toMaximum:">+&nbsp;scaleValue:fromMinimum:fromMaximum:toMinimum:toMaximum:</a></code>
+    <span class="tooltip"><p>Scale a value from within one range to another</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/scaleLogValue:fromMinimum:fromMaximum:toMinimum:toMaximum:">+&nbsp;scaleLogValue:fromMinimum:fromMaximum:toMinimum:toMaximum:</a></code>
+    <span class="tooltip"><p>Scale the log of a value from one range to another</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/scaleProperty:withScalingFactor:">+&nbsp;scaleProperty:withScalingFactor:</a></code>
+    <span class="tooltip"><p>Scales the property with a scaling factor between 0 and 1. 0->minimum, 1->maximum</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/scaleProperty:withInverseScalingFactor:">+&nbsp;scaleProperty:withInverseScalingFactor:</a></code>
+    <span class="tooltip"><p>Scales the property with a scaling factor between 0 and 1. 0->maximum, 1->minimum</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setSlider:withValue:minimum:maximum:">+&nbsp;setSlider:withValue:minimum:maximum:</a></code>
+    <span class="tooltip"><p>Reposition a slider&rsquo;s value and range</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/scaleValueFromSlider:minimum:maximum:">+&nbsp;scaleValueFromSlider:minimum:maximum:</a></code>
+    <span class="tooltip"><p>Get the value from a slide with the minimum and maximum given here</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/scaleLogValueFromSlider:minimum:maximum:">+&nbsp;scaleLogValueFromSlider:minimum:maximum:</a></code>
+    <span class="tooltip"><p>Get the logvalue from a slide with the minimum and maximum given here</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setSlider:withProperty:">+&nbsp;setSlider:withProperty:</a></code>
+    <span class="tooltip"><p>Set a slider with an <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a></p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setProgressView:withProperty:">+&nbsp;setProgressView:withProperty:</a></code>
+    <span class="tooltip"><p>Set a progress view with an <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a></p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setProperty:withSlider:">+&nbsp;setProperty:withSlider:</a></code>
+    <span class="tooltip"><p>Set an <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a> from a slider</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setTextField:withProperty:">+&nbsp;setTextField:withProperty:</a></code>
+    <span class="tooltip"><p>Populate a text field with the value from <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a></p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setLabel:withProperty:">+&nbsp;setLabel:withProperty:</a></code>
+    <span class="tooltip"><p>Populate a label with the value from <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a></p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/midiNoteToFrequency:">+&nbsp;midiNoteToFrequency:</a></code>
+    <span class="tooltip"><p>Convert a MIDI note number to a frequency</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/scaleControllerValue:fromMinimum:toMaximum:">+&nbsp;scaleControllerValue:fromMinimum:toMaximum:</a></code>
+    <span class="tooltip"><p>Scale a MIDI controller to a new range</p></span>
+  </span>
+  
+  
+</li>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/midiNoteToFrequency:" title="midiNoteToFrequency:"></a>
+  <h3 class="subsubtitle method-title">midiNoteToFrequency:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Convert a MIDI note number to a frequency</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (float)midiNoteToFrequency:(int)<em>note</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>note</em></dt>
+      <dd><p>MIDI note as an integer</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTools.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/randomFloatFrom:to:" title="randomFloatFrom:to:"></a>
+  <h3 class="subsubtitle method-title">randomFloatFrom:to:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Random number within a range</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (float)randomFloatFrom:(float)<em>minimum</em> to:(float)<em>maximum</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>minimum</em></dt>
+      <dd><p>Lower bound for the random number</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>maximum</em></dt>
+      <dd><p>Upper bound for the random number</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTools.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/scaleControllerValue:fromMinimum:toMaximum:" title="scaleControllerValue:fromMinimum:toMaximum:"></a>
+  <h3 class="subsubtitle method-title">scaleControllerValue:fromMinimum:toMaximum:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Scale a MIDI controller to a new range</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (float)scaleControllerValue:(float)<em>value</em> fromMinimum:(float)<em>minimum</em> toMaximum:(float)<em>maximum</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>value</em></dt>
+      <dd><p>The current controller value</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>minimum</em></dt>
+      <dd><p>Lower bound of the output</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>maximum</em></dt>
+      <dd><p>Upper bound of the output</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTools.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/scaleLogValue:fromMinimum:fromMaximum:toMinimum:toMaximum:" title="scaleLogValue:fromMinimum:fromMaximum:toMinimum:toMaximum:"></a>
+  <h3 class="subsubtitle method-title">scaleLogValue:fromMinimum:fromMaximum:toMinimum:toMaximum:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Scale the log of a value from one range to another</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (float)scaleLogValue:(float)<em>logValue</em> fromMinimum:(float)<em>fromMinimum</em> fromMaximum:(float)<em>fromMaximum</em> toMinimum:(float)<em>toMinimum</em> toMaximum:(float)<em>toMaximum</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>logValue</em></dt>
+      <dd><p>Current value</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>fromMinimum</em></dt>
+      <dd><p>Lower bound of the current value</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>fromMaximum</em></dt>
+      <dd><p>Upper bound of the current value</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>toMinimum</em></dt>
+      <dd><p>Lower bound of the output</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>toMaximum</em></dt>
+      <dd><p>Upper bound of the output</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTools.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/scaleLogValueFromSlider:minimum:maximum:" title="scaleLogValueFromSlider:minimum:maximum:"></a>
+  <h3 class="subsubtitle method-title">scaleLogValueFromSlider:minimum:maximum:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Get the logvalue from a slide with the minimum and maximum given here</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (float)scaleLogValueFromSlider:(UISlider *)<em>slider</em> minimum:(float)<em>minimum</em> maximum:(float)<em>maximum</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>slider</em></dt>
+      <dd><p>The slider to get the value from</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>minimum</em></dt>
+      <dd><p>Lower bound of the output</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>maximum</em></dt>
+      <dd><p>Upper bound of the output</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTools.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/scaleProperty:withInverseScalingFactor:" title="scaleProperty:withInverseScalingFactor:"></a>
+  <h3 class="subsubtitle method-title">scaleProperty:withInverseScalingFactor:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Scales the property with a scaling factor between 0 and 1. 0->maximum, 1->minimum</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (void)scaleProperty:(id)<em>property</em> withInverseScalingFactor:(float)<em>scalingFactor</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>property</em></dt>
+      <dd><p>An <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a> to be scaled</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>scalingFactor</em></dt>
+      <dd><p>Scaling factor between 0 and 1. 0->maximum, 1->minimum</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTools.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/scaleProperty:withScalingFactor:" title="scaleProperty:withScalingFactor:"></a>
+  <h3 class="subsubtitle method-title">scaleProperty:withScalingFactor:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Scales the property with a scaling factor between 0 and 1. 0->minimum, 1->maximum</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (void)scaleProperty:(id)<em>property</em> withScalingFactor:(float)<em>scalingFactor</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>property</em></dt>
+      <dd><p>An <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a> to be scaled</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>scalingFactor</em></dt>
+      <dd><p>Scaling factor between 0 and 1. 0->minimum, 1->maximum</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTools.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/scaleValue:fromMinimum:fromMaximum:toMinimum:toMaximum:" title="scaleValue:fromMinimum:fromMaximum:toMinimum:toMaximum:"></a>
+  <h3 class="subsubtitle method-title">scaleValue:fromMinimum:fromMaximum:toMinimum:toMaximum:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Scale a value from within one range to another</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (float)scaleValue:(float)<em>value</em> fromMinimum:(float)<em>fromMinimum</em> fromMaximum:(float)<em>fromMaximum</em> toMinimum:(float)<em>toMinimum</em> toMaximum:(float)<em>toMaximum</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>value</em></dt>
+      <dd><p>Current value</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>fromMinimum</em></dt>
+      <dd><p>Lower bound of the current value</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>fromMaximum</em></dt>
+      <dd><p>Upper bound of the current value</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>toMinimum</em></dt>
+      <dd><p>Lower bound of the output</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>toMaximum</em></dt>
+      <dd><p>Upper bound of the output</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTools.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/scaleValueFromSlider:minimum:maximum:" title="scaleValueFromSlider:minimum:maximum:"></a>
+  <h3 class="subsubtitle method-title">scaleValueFromSlider:minimum:maximum:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Get the value from a slide with the minimum and maximum given here</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (float)scaleValueFromSlider:(UISlider *)<em>slider</em> minimum:(float)<em>minimum</em> maximum:(float)<em>maximum</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>slider</em></dt>
+      <dd><p>The slider to get the value from</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>minimum</em></dt>
+      <dd><p>Lower bound of the output</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>maximum</em></dt>
+      <dd><p>Upper bound of the output</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTools.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setLabel:withProperty:" title="setLabel:withProperty:"></a>
+  <h3 class="subsubtitle method-title">setLabel:withProperty:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Populate a label with the value from <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (void)setLabel:(UILabel *)<em>label</em> withProperty:(id)<em>property</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>label</em></dt>
+      <dd><p>The label to set up</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>property</em></dt>
+      <dd><p>The <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a> to use to set up the slider</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTools.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setProgressView:withProperty:" title="setProgressView:withProperty:"></a>
+  <h3 class="subsubtitle method-title">setProgressView:withProperty:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set a progress view with an <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (void)setProgressView:(UIProgressView *)<em>progressView</em> withProperty:(id)<em>property</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>progressView</em></dt>
+      <dd><p>The progress view to set up</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>property</em></dt>
+      <dd><p>The <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a> to use to set up the slider</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTools.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setProperty:withSlider:" title="setProperty:withSlider:"></a>
+  <h3 class="subsubtitle method-title">setProperty:withSlider:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a> from a slider</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (void)setProperty:(id)<em>property</em> withSlider:(UISlider *)<em>slider</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>property</em></dt>
+      <dd><p>The <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a> to set with the slider</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>slider</em></dt>
+      <dd><p>The slider to use</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTools.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setSlider:withProperty:" title="setSlider:withProperty:"></a>
+  <h3 class="subsubtitle method-title">setSlider:withProperty:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set a slider with an <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (void)setSlider:(UISlider *)<em>slider</em> withProperty:(id)<em>property</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>slider</em></dt>
+      <dd><p>The slider to set up</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>property</em></dt>
+      <dd><p>The <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a> to use to set up the slider</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTools.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setSlider:withValue:minimum:maximum:" title="setSlider:withValue:minimum:maximum:"></a>
+  <h3 class="subsubtitle method-title">setSlider:withValue:minimum:maximum:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Reposition a slider&rsquo;s value and range</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (void)setSlider:(UISlider *)<em>slider</em> withValue:(float)<em>value</em> minimum:(float)<em>minimum</em> maximum:(float)<em>maximum</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>slider</em></dt>
+      <dd><p>The slider to set up</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>value</em></dt>
+      <dd><p>Current value of the slider</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>minimum</em></dt>
+      <dd><p>Lower bound of the slider</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>maximum</em></dt>
+      <dd><p>Upper bound of the slider</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTools.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setTextField:withProperty:" title="setTextField:withProperty:"></a>
+  <h3 class="subsubtitle method-title">setTextField:withProperty:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Populate a text field with the value from <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (void)setTextField:(UITextField *)<em>textfield</em> withProperty:(id)<em>property</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>textfield</em></dt>
+      <dd><p>The text field to set up</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>property</em></dt>
+      <dd><p>The <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a> to use to set up the slider</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTools.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          
+        </div>
+      </div>

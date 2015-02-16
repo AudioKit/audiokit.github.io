@@ -1,13 +1,13 @@
 ---
 layout: docs
-title: AKDeclick
+title: AKResynthesizedAudio
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
         <div id="header">
           <div class="section-header">
-            <h1 class="title title-header">AKDeclick</h1>
+            <h1 class="title title-header">AKResynthesizedAudio</h1>
           </div>
         </div>
         <div id="container">
@@ -18,7 +18,7 @@ title: AKDeclick
   <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
-  <td class="specification-value">AKDeclick.h<br />AKDeclick.m</td>
+  <td class="specification-value">AKResynthesizedAudio.h<br />AKResynthesizedAudio.m</td>
 </tr>
             </tbody></table></div>
           
@@ -28,9 +28,7 @@ title: AKDeclick
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Removes clicks from signal start and end</p>
-
-<p>Given a signal, declick will apply an envelope to ensure there is no clicking at the start or end of the sound.</p>
+            <p>Resynthesise phase vocoder data (f-signal) using a FFT overlap-add.</p>
           </div>
           
           
@@ -48,8 +46,8 @@ title: AKDeclick
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithInput:">&ndash;&nbsp;initWithInput:</a></code>
-    <span class="tooltip"><p>Instantiates the declick</p></span>
+    <code><a href="#//api/name/initWithSignal:">&ndash;&nbsp;initWithSignal:</a></code>
+    <span class="tooltip"><p>Create audio from an f-signal</p></span>
   </span>
   
   
@@ -71,18 +69,18 @@ title: AKDeclick
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithInput:" title="initWithInput:"></a>
-  <h3 class="subsubtitle method-title">initWithInput:</h3>
+  <a name="//api/name/initWithSignal:" title="initWithSignal:"></a>
+  <h3 class="subsubtitle method-title">initWithSignal:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the declick</p>
+    <p>Create audio from an f-signal</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKAudio *)<em>audioSource</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithSignal:(AKFSignal *)<em>source</em></code></div>
 
     
   
@@ -90,8 +88,8 @@ title: AKDeclick
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>audioSource</em></dt>
-      <dd><p>Audio to declick</p></dd>
+      <dt><em>source</em></dt>
+      <dd><p>Input f-signal</p></dd>
     </dl>
     
   </div>
@@ -110,7 +108,7 @@ title: AKDeclick
   
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKDeclick.h</code><br />
+    <code class="declared-in-ref">AKResynthesizedAudio.h</code><br />
   </div>
   
   

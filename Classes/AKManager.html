@@ -74,13 +74,6 @@ title: AKManager
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/standardSineWave">&nbsp;&nbsp;standardSineWave</a></code>
-    <span class="tooltip"><p>Common table required by many applications</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
     <code><a href="#//api/name/sharedManager">+&nbsp;sharedManager</a></code>
     <span class="tooltip"><p>the shared instance of AKManager</p></span>
   </span>
@@ -102,6 +95,13 @@ title: AKManager
   
 </li><li>
   <span class="tooltip">
+    <code><a href="#//api/name/resetOrchestra">&ndash;&nbsp;resetOrchestra</a></code>
+    <span class="tooltip"><p>Erase all instruments from the <a href="#//api/name/orchestra">orchestra</a></p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
     <code><a href="#//api/name/stop">&ndash;&nbsp;stop</a></code>
     <span class="tooltip"><p>Stop AudioKit from making any more sound.</p></span>
   </span>
@@ -111,6 +111,20 @@ title: AKManager
   <span class="tooltip">
     <code><a href="#//api/name/triggerEvent:">&ndash;&nbsp;triggerEvent:</a></code>
     <span class="tooltip"><p>Triggers an <a href="../Classes/AKEvent.html">AKEvent</a></p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/startBatch">&ndash;&nbsp;startBatch</a></code>
+    <span class="tooltip"><p>Allow batching of events with a start batch command</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/endBatch">&ndash;&nbsp;endBatch</a></code>
+    <span class="tooltip"><p>Send all batched events at once when a batch is ended</p></span>
   </span>
   
   
@@ -304,42 +318,6 @@ title: AKManager
     
 
   <div class="method-subsection method-declaration"><code>@property AKOrchestra *orchestra</code></div>
-
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  <div class="method-subsection declared-in-section">
-    <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKManager.h</code><br />
-  </div>
-  
-  
-</div>
-            
-            <div class="section-method">
-  <a name="//api/name/standardSineWave" title="standardSineWave"></a>
-  <h3 class="subsubtitle method-title">standardSineWave</h3>
-
-  
-  
-  <div class="method-subsection brief-description">
-    <p>Common table required by many applications</p>
-  </div>
-  
-    
-
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKWeightedSumOfSinusoids *standardSineWave</code></div>
 
     
   
@@ -611,6 +589,78 @@ title: AKManager
 </div>
             
             <div class="section-method">
+  <a name="//api/name/endBatch" title="endBatch"></a>
+  <h3 class="subsubtitle method-title">endBatch</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Send all batched events at once when a batch is ended</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)endBatch</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKManager.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/resetOrchestra" title="resetOrchestra"></a>
+  <h3 class="subsubtitle method-title">resetOrchestra</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Erase all instruments from the <a href="#//api/name/orchestra">orchestra</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)resetOrchestra</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKManager.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
   <a name="//api/name/runOrchestra" title="runOrchestra"></a>
   <h3 class="subsubtitle method-title">runOrchestra</h3>
 
@@ -671,6 +721,42 @@ title: AKManager
     </dl>
     
   </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKManager.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/startBatch" title="startBatch"></a>
+  <h3 class="subsubtitle method-title">startBatch</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Allow batching of events with a start batch command</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)startBatch</code></div>
+
+    
   
 
   

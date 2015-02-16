@@ -1,0 +1,519 @@
+---
+layout: docs
+title: AKNoise
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKNoise</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKNoise.h<br />AKNoise.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>A <a href="#//api/name/noise">noise</a> generator that can do white, pink, or brown <a href="#//api/name/noise">noise</a>.</p>
+
+<p>Implementation is a combination of white <a href="#//api/name/noise">noise</a> with IIR Filters.</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            
+
+            <ul class="task-list">
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithAmplitude:pinkBalance:beta:">&ndash;&nbsp;initWithAmplitude:pinkBalance:beta:</a></code>
+    <span class="tooltip"><p>Instantiates the <a href="#//api/name/noise">noise</a> with all values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
+    <span class="tooltip"><p>Instantiates the <a href="#//api/name/noise">noise</a> with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/noise">+&nbsp;noise</a></code>
+    <span class="tooltip"><p>Instantiates the noise with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/amplitude">&nbsp;&nbsp;amplitude</a></code>
+    <span class="tooltip"><p>Amplitude of the output. [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalAmplitude:">&ndash;&nbsp;setOptionalAmplitude:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/pinkBalance">&nbsp;&nbsp;pinkBalance</a></code>
+    <span class="tooltip"><p>Amount of pink <a href="#//api/name/noise">noise</a> to output from 0 to 1 (all pink) [Default Value: 0]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalPinkBalance:">&ndash;&nbsp;setOptionalPinkBalance:</a></code>
+    <span class="tooltip"><p>Set an optional pink balance</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/beta">&nbsp;&nbsp;beta</a></code>
+    <span class="tooltip"><p>Beta of the low pass filter, in the range -1 to 1, exclusive of the end-points. [Default Value: 0]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalBeta:">&ndash;&nbsp;setOptionalBeta:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/beta">beta</a></p></span>
+  </span>
+  
+  
+</li>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/amplitude" title="amplitude"></a>
+  <h3 class="subsubtitle method-title">amplitude</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Amplitude of the output. [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *amplitude</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKNoise.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/beta" title="beta"></a>
+  <h3 class="subsubtitle method-title">beta</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Beta of the low pass filter, in the range -1 to 1, exclusive of the end-points. [Default Value: 0]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *beta</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKNoise.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/pinkBalance" title="pinkBalance"></a>
+  <h3 class="subsubtitle method-title">pinkBalance</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Amount of pink <a href="#//api/name/noise">noise</a> to output from 0 to 1 (all pink) [Default Value: 0]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *pinkBalance</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKNoise.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/noise" title="noise"></a>
+  <h3 class="subsubtitle method-title">noise</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the noise with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)noise</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKNoise.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/init" title="init"></a>
+  <h3 class="subsubtitle method-title">init</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the <a href="#//api/name/noise">noise</a> with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKNoise.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithAmplitude:pinkBalance:beta:" title="initWithAmplitude:pinkBalance:beta:"></a>
+  <h3 class="subsubtitle method-title">initWithAmplitude:pinkBalance:beta:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the <a href="#//api/name/noise">noise</a> with all values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAmplitude:(AKParameter *)<em>amplitude</em> pinkBalance:(AKParameter *)<em>pinkBalance</em> beta:(AKParameter *)<em>beta</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>amplitude</em></dt>
+      <dd><p>Amplitude of the output. [Default Value: 1]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>pinkBalance</em></dt>
+      <dd><p>Amount of pink <a href="#//api/name/noise">noise</a> to output from 0 to 1 (all pink) [Default Value: 0]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>beta</em></dt>
+      <dd><p>Beta of the low pass filter, in the range -1 to 1, exclusive of the end-points. Updated at Control-rate. [Default Value: 0]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKNoise.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalAmplitude:" title="setOptionalAmplitude:"></a>
+  <h3 class="subsubtitle method-title">setOptionalAmplitude:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalAmplitude:(AKParameter *)<em>amplitude</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>amplitude</em></dt>
+      <dd><p>Amplitude of the output. [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKNoise.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalBeta:" title="setOptionalBeta:"></a>
+  <h3 class="subsubtitle method-title">setOptionalBeta:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional <a href="#//api/name/beta">beta</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalBeta:(AKParameter *)<em>beta</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>beta</em></dt>
+      <dd><p>Beta of the low pass filter, in the range -1 to 1, exclusive of the end-points. Updated at Control-rate. [Default Value: 0]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKNoise.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalPinkBalance:" title="setOptionalPinkBalance:"></a>
+  <h3 class="subsubtitle method-title">setOptionalPinkBalance:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional pink balance</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalPinkBalance:(AKParameter *)<em>pinkBalance</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>pinkBalance</em></dt>
+      <dd><p>Amount of pink <a href="#//api/name/noise">noise</a> to output from 0 to 1 (all pink) [Default Value: 0]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKNoise.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+          
+        </div>
+      </div>

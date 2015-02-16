@@ -1,0 +1,443 @@
+---
+layout: docs
+title: AKDecimator
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKDecimator</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKDecimator.h<br />AKDecimator.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>Sample rate / Bit depth reduction.</p>
+
+<p>This operation implements one possible algorithm for sample rate / bit depth reduction.</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            
+
+            <ul class="task-list">
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithInput:bitDepth:sampleRate:">&ndash;&nbsp;initWithInput:bitDepth:sampleRate:</a></code>
+    <span class="tooltip"><p>Instantiates the decimator with all values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithInput:">&ndash;&nbsp;initWithInput:</a></code>
+    <span class="tooltip"><p>Instantiates the decimator with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/WithInput:">+&nbsp;WithInput:</a></code>
+    <span class="tooltip"><p>Instantiates the decimator with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/bitDepth">&nbsp;&nbsp;bitDepth</a></code>
+    <span class="tooltip"><p>The bit depth of signal output. Typically in range (1-24). Non-integer values are OK. [Default Value: 24]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalBitDepth:">&ndash;&nbsp;setOptionalBitDepth:</a></code>
+    <span class="tooltip"><p>Set an optional bit depth</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/sampleRate">&nbsp;&nbsp;sampleRate</a></code>
+    <span class="tooltip"><p>The sample rate of signal output. Non-integer values are OK. [Default Value: 44100]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalSampleRate:">&ndash;&nbsp;setOptionalSampleRate:</a></code>
+    <span class="tooltip"><p>Set an optional sample rate</p></span>
+  </span>
+  
+  
+</li>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/bitDepth" title="bitDepth"></a>
+  <h3 class="subsubtitle method-title">bitDepth</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>The bit depth of signal output. Typically in range (1-24). Non-integer values are OK. [Default Value: 24]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *bitDepth</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKDecimator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/sampleRate" title="sampleRate"></a>
+  <h3 class="subsubtitle method-title">sampleRate</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>The sample rate of signal output. Non-integer values are OK. [Default Value: 44100]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *sampleRate</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKDecimator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/WithInput:" title="WithInput:"></a>
+  <h3 class="subsubtitle method-title">WithInput:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the decimator with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)WithInput:(AKParameter *)<em>input</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>Audio to be decimated!</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKDecimator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithInput:" title="initWithInput:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the decimator with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>Audio to be decimated!</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKDecimator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithInput:bitDepth:sampleRate:" title="initWithInput:bitDepth:sampleRate:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:bitDepth:sampleRate:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the decimator with all values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> bitDepth:(AKParameter *)<em>bitDepth</em> sampleRate:(AKParameter *)<em>sampleRate</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>Audio to be decimated! [Default Value: ]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>bitDepth</em></dt>
+      <dd><p>The bit depth of signal output. Typically in range (1-24). Non-integer values are OK. Updated at Control-rate. [Default Value: 24]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>sampleRate</em></dt>
+      <dd><p>The sample rate of signal output. Non-integer values are OK. Updated at Control-rate. [Default Value: 44100]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKDecimator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalBitDepth:" title="setOptionalBitDepth:"></a>
+  <h3 class="subsubtitle method-title">setOptionalBitDepth:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional bit depth</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalBitDepth:(AKParameter *)<em>bitDepth</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>bitDepth</em></dt>
+      <dd><p>The bit depth of signal output. Typically in range (1-24). Non-integer values are OK. Updated at Control-rate. [Default Value: 24]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKDecimator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalSampleRate:" title="setOptionalSampleRate:"></a>
+  <h3 class="subsubtitle method-title">setOptionalSampleRate:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional sample rate</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalSampleRate:(AKParameter *)<em>sampleRate</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>sampleRate</em></dt>
+      <dd><p>The sample rate of signal output. Non-integer values are OK. Updated at Control-rate. [Default Value: 44100]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKDecimator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+          
+        </div>
+      </div>

@@ -105,6 +105,20 @@ b) The note is created concurrently with other notes created by the <a href="#//
   
 </li><li>
   <span class="tooltip">
+    <code><a href="#//api/name/updateProperties">&ndash;&nbsp;updateProperties</a></code>
+    <span class="tooltip"><p>Refine playback of the note.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/updatePropertiesAfterDelay:">&ndash;&nbsp;updatePropertiesAfterDelay:</a></code>
+    <span class="tooltip"><p>Refine playback of the note at some point in the future.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
     <code><a href="#//api/name/play">&ndash;&nbsp;play</a></code>
     <span class="tooltip"><p>Begin playback of the note.</p></span>
   </span>
@@ -119,15 +133,15 @@ b) The note is created concurrently with other notes created by the <a href="#//
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/updateProperties">&ndash;&nbsp;updateProperties</a></code>
-    <span class="tooltip"><p>Refine playback of the note.</p></span>
+    <code><a href="#//api/name/stop">&ndash;&nbsp;stop</a></code>
+    <span class="tooltip"><p>Stop playback of the note.</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/stop">&ndash;&nbsp;stop</a></code>
-    <span class="tooltip"><p>Stop playback of the note.</p></span>
+    <code><a href="#//api/name/stopAfterDelay:">&ndash;&nbsp;stopAfterDelay:</a></code>
+    <span class="tooltip"><p>Stop playback of the note after a delay.</p></span>
   </span>
   
   
@@ -156,7 +170,7 @@ b) The note is created concurrently with other notes created by the <a href="#//
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic, strong) AKNoteProperty *duration</code></div>
+  <div class="method-subsection method-declaration"><code>@property AKNoteProperty *duration</code></div>
 
     
   
@@ -192,7 +206,7 @@ b) The note is created concurrently with other notes created by the <a href="#//
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic, strong) AKInstrument *instrument</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKInstrument *instrument</code></div>
 
     
   
@@ -228,7 +242,7 @@ b) The note is created concurrently with other notes created by the <a href="#//
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSMutableDictionary *properties</code></div>
+  <div class="method-subsection method-declaration"><code>@property NSMutableDictionary *properties</code></div>
 
     
   
@@ -617,6 +631,52 @@ b) The note is created concurrently with other notes created by the <a href="#//
 </div>
             
             <div class="section-method">
+  <a name="//api/name/stopAfterDelay:" title="stopAfterDelay:"></a>
+  <h3 class="subsubtitle method-title">stopAfterDelay:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Stop playback of the note after a delay.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)stopAfterDelay:(float)<em>delay</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>delay</em></dt>
+      <dd><p>Time to wait before stopping note playback.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKNote.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
   <a name="//api/name/updateProperties" title="updateProperties"></a>
   <h3 class="subsubtitle method-title">updateProperties</h3>
 
@@ -631,6 +691,52 @@ b) The note is created concurrently with other notes created by the <a href="#//
   <div class="method-subsection method-declaration"><code>- (void)updateProperties</code></div>
 
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKNote.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/updatePropertiesAfterDelay:" title="updatePropertiesAfterDelay:"></a>
+  <h3 class="subsubtitle method-title">updatePropertiesAfterDelay:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Refine playback of the note at some point in the future.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)updatePropertiesAfterDelay:(float)<em>time</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>time</em></dt>
+      <dd><p>Amount of time in seconds to wait before setting <a href="#//api/name/properties">properties</a></p></dd>
+    </dl>
+    
+  </div>
   
 
   

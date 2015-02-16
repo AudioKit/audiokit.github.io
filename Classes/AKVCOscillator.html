@@ -48,6 +48,55 @@ title: AKVCOscillator
             <ul class="task-list">
                 <li>
   <span class="tooltip">
+    <code><a href="#//api/name/waveformTypeForSawtooth">+&nbsp;waveformTypeForSawtooth</a></code>
+    <span class="tooltip"><p>Sawtooth waveform</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/waveformTypeForSquareWithPWM">+&nbsp;waveformTypeForSquareWithPWM</a></code>
+    <span class="tooltip"><p>Square waveform with Pulse-width modulation</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/waveformTypeForTriangleWithRamp">+&nbsp;waveformTypeForTriangleWithRamp</a></code>
+    <span class="tooltip"><p>Triangle waveform with ramp</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/waveformTypeForUnnormalizedPulse">+&nbsp;waveformTypeForUnnormalizedPulse</a></code>
+    <span class="tooltip"><p>Unnormalized pulse waveform</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/waveformTypeForIntegratedSawtooth">+&nbsp;waveformTypeForIntegratedSawtooth</a></code>
+    <span class="tooltip"><p>Integrated sawtooth waveform</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/waveformTypeForSquare">+&nbsp;waveformTypeForSquare</a></code>
+    <span class="tooltip"><p>Square waveform (without PWM)</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/waveformTypeForTriangle">+&nbsp;waveformTypeForTriangle</a></code>
+    <span class="tooltip"><p>Triangle waveform</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
     <code><a href="#//api/name/initWithWaveformType:bandwidth:pulseWidth:frequency:amplitude:">&ndash;&nbsp;initWithWaveformType:bandwidth:pulseWidth:frequency:amplitude:</a></code>
     <span class="tooltip"><p>Instantiates the vc <a href="#//api/name/oscillator">oscillator</a> with all values</p></span>
   </span>
@@ -70,7 +119,7 @@ title: AKVCOscillator
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/waveformType">&nbsp;&nbsp;waveformType</a></code>
-    <span class="tooltip"><p>Choose from various waveform types. [Default Value: AKVCOscillatorWaveformTypeSawtooth]</p></span>
+    <span class="tooltip"><p>Valid types are given by class functions starting with waveformTypeFor&hellip; [Default Value: waveformTypeForSawtooth]</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
@@ -301,12 +350,12 @@ title: AKVCOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Choose from various waveform types. [Default Value: AKVCOscillatorWaveformTypeSawtooth]</p>
+    <p>Valid types are given by class functions starting with waveformTypeFor&hellip; [Default Value: waveformTypeForSawtooth]</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKVCOscillatorWaveformType waveformType</code></div>
+  <div class="method-subsection method-declaration"><code>@property AKConstant *waveformType</code></div>
 
     
   
@@ -351,6 +400,258 @@ title: AKVCOscillator
     
 
   <div class="method-subsection method-declaration"><code>+ (instancetype)oscillator</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVCOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/waveformTypeForIntegratedSawtooth" title="waveformTypeForIntegratedSawtooth"></a>
+  <h3 class="subsubtitle method-title">waveformTypeForIntegratedSawtooth</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Integrated sawtooth waveform</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)waveformTypeForIntegratedSawtooth</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVCOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/waveformTypeForSawtooth" title="waveformTypeForSawtooth"></a>
+  <h3 class="subsubtitle method-title">waveformTypeForSawtooth</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Sawtooth waveform</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)waveformTypeForSawtooth</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVCOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/waveformTypeForSquare" title="waveformTypeForSquare"></a>
+  <h3 class="subsubtitle method-title">waveformTypeForSquare</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Square waveform (without PWM)</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)waveformTypeForSquare</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVCOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/waveformTypeForSquareWithPWM" title="waveformTypeForSquareWithPWM"></a>
+  <h3 class="subsubtitle method-title">waveformTypeForSquareWithPWM</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Square waveform with Pulse-width modulation</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)waveformTypeForSquareWithPWM</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVCOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/waveformTypeForTriangle" title="waveformTypeForTriangle"></a>
+  <h3 class="subsubtitle method-title">waveformTypeForTriangle</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Triangle waveform</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)waveformTypeForTriangle</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVCOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/waveformTypeForTriangleWithRamp" title="waveformTypeForTriangleWithRamp"></a>
+  <h3 class="subsubtitle method-title">waveformTypeForTriangleWithRamp</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Triangle waveform with ramp</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)waveformTypeForTriangleWithRamp</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKVCOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/waveformTypeForUnnormalizedPulse" title="waveformTypeForUnnormalizedPulse"></a>
+  <h3 class="subsubtitle method-title">waveformTypeForUnnormalizedPulse</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Unnormalized pulse waveform</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)waveformTypeForUnnormalizedPulse</code></div>
 
     
   
@@ -430,7 +731,7 @@ title: AKVCOscillator
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithWaveformType:(AKVCOscillatorWaveformType)<em>waveformType</em> bandwidth:(AKConstant *)<em>bandwidth</em> pulseWidth:(AKParameter *)<em>pulseWidth</em> frequency:(AKParameter *)<em>frequency</em> amplitude:(AKParameter *)<em>amplitude</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithWaveformType:(AKConstant *)<em>waveformType</em> bandwidth:(AKConstant *)<em>bandwidth</em> pulseWidth:(AKParameter *)<em>pulseWidth</em> frequency:(AKParameter *)<em>frequency</em> amplitude:(AKParameter *)<em>amplitude</em></code></div>
 
     
   
@@ -439,7 +740,7 @@ title: AKVCOscillator
     
     <dl class="argument-def parameter-def">
       <dt><em>waveformType</em></dt>
-      <dd><p>Choose from various waveform types. [Default Value: AKVCOscillatorWaveformTypeSawtooth]</p></dd>
+      <dd><p>Valid types are given by class functions starting with waveformTypeFor&hellip; [Default Value: waveformTypeForSawtooth]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
@@ -680,7 +981,7 @@ title: AKVCOscillator
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalWaveformType:(AKVCOscillatorWaveformType)<em>waveformType</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalWaveformType:(AKConstant *)<em>waveformType</em></code></div>
 
     
   
@@ -689,7 +990,7 @@ title: AKVCOscillator
     
     <dl class="argument-def parameter-def">
       <dt><em>waveformType</em></dt>
-      <dd><p>Choose from various waveform types. [Default Value: AKVCOscillatorWaveformTypeSawtooth]</p></dd>
+      <dd><p>Valid types are given by class functions starting with waveformTypeFor&hellip; [Default Value: waveformTypeForSawtooth]</p></dd>
     </dl>
     
   </div>

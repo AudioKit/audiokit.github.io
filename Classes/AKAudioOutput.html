@@ -52,6 +52,13 @@ output units in an instrument.</p>
             <ul class="task-list">
                 <li>
   <span class="tooltip">
+    <code><a href="#//api/name/initWithInput:">&ndash;&nbsp;initWithInput:</a></code>
+    <span class="tooltip"><p>Helper function to send both channels the same monoSignal</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
     <code><a href="#//api/name/initWithAudioSource:">&ndash;&nbsp;initWithAudioSource:</a></code>
     <span class="tooltip"><p>Helper function to send both channels the same monoSignal</p></span>
   </span>
@@ -100,7 +107,7 @@ output units in an instrument.</p>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKAudio *)<em>audioSource</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKParameter *)<em>audioSource</em></code></div>
 
     
   
@@ -109,6 +116,52 @@ output units in an instrument.</p>
     
     <dl class="argument-def parameter-def">
       <dt><em>audioSource</em></dt>
+      <dd><p>The audio signal to be played on both channels.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKAudioOutput.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithInput:" title="initWithInput:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Helper function to send both channels the same monoSignal</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>source</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>source</em></dt>
       <dd><p>The audio signal to be played on both channels.</p></dd>
     </dl>
     
@@ -146,7 +199,7 @@ output units in an instrument.</p>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithLeftAudio:(AKAudio *)<em>leftAudio</em> rightAudio:(AKAudio *)<em>rightAudio</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithLeftAudio:(AKParameter *)<em>leftAudio</em> rightAudio:(AKParameter *)<em>rightAudio</em></code></div>
 
     
   

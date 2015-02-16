@@ -48,14 +48,14 @@ title: AKSpectralVocoder
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithAmplitudeFSignal:excitationFrequenciesFSignal:depth:gain:">&ndash;&nbsp;initWithAmplitudeFSignal:excitationFrequenciesFSignal:depth:gain:</a></code>
+    <code><a href="#//api/name/initWithAmplitude:excitationFrequencies:depth:gain:">&ndash;&nbsp;initWithAmplitude:excitationFrequencies:depth:gain:</a></code>
     <span class="tooltip"><p>Instantiates the spectral vocoder</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/setOptionalCoefs:">&ndash;&nbsp;setOptionalCoefs:</a></code>
+    <code><a href="#//api/name/setOptionalCoefficents:">&ndash;&nbsp;setOptionalCoefficents:</a></code>
     <span class="tooltip"><p>Set an optional coefs</p></span>
   </span>
   
@@ -78,8 +78,8 @@ title: AKSpectralVocoder
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithAmplitudeFSignal:excitationFrequenciesFSignal:depth:gain:" title="initWithAmplitudeFSignal:excitationFrequenciesFSignal:depth:gain:"></a>
-  <h3 class="subsubtitle method-title">initWithAmplitudeFSignal:excitationFrequenciesFSignal:depth:gain:</h3>
+  <a name="//api/name/initWithAmplitude:excitationFrequencies:depth:gain:" title="initWithAmplitude:excitationFrequencies:depth:gain:"></a>
+  <h3 class="subsubtitle method-title">initWithAmplitude:excitationFrequencies:depth:gain:</h3>
 
   
   
@@ -89,7 +89,7 @@ title: AKSpectralVocoder
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAmplitudeFSignal:(AKFSignal *)<em>amplitudeFSignal</em> excitationFrequenciesFSignal:(AKFSignal *)<em>excitationFrequenciesFSignal</em> depth:(AKControl *)<em>depth</em> gain:(AKControl *)<em>gain</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAmplitude:(AKFSignal *)<em>amplitude</em> excitationFrequencies:(AKFSignal *)<em>excitationFrequencies</em> depth:(AKControl *)<em>depth</em> gain:(AKControl *)<em>gain</em></code></div>
 
     
   
@@ -97,12 +97,12 @@ title: AKSpectralVocoder
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>amplitudeFSignal</em></dt>
+      <dt><em>amplitude</em></dt>
       <dd><p>Input phase vocoder stream from which the amplitudes will be extracted.</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
-      <dt><em>excitationFrequenciesFSignal</em></dt>
+      <dt><em>excitationFrequencies</em></dt>
       <dd><p>Input phase vocoder stream from which the frequencies will be taken.</p></dd>
     </dl>
     
@@ -139,8 +139,8 @@ title: AKSpectralVocoder
 </div>
             
             <div class="section-method">
-  <a name="//api/name/setOptionalCoefs:" title="setOptionalCoefs:"></a>
-  <h3 class="subsubtitle method-title">setOptionalCoefs:</h3>
+  <a name="//api/name/setOptionalCoefficents:" title="setOptionalCoefficents:"></a>
+  <h3 class="subsubtitle method-title">setOptionalCoefficents:</h3>
 
   
   
@@ -150,7 +150,7 @@ title: AKSpectralVocoder
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalCoefs:(AKControl *)<em>coefs</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalCoefficents:(AKControl *)<em>coefs</em></code></div>
 
     
   

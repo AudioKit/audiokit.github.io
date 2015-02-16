@@ -1,0 +1,237 @@
+---
+layout: docs
+title: AKMix
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKMix</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKMix.h<br />AKMix.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>Calculates the weighted mean value of two input signals.</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            
+
+            <ul class="task-list">
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithInput1:input2:balance:">&ndash;&nbsp;initWithInput1:input2:balance:</a></code>
+    <span class="tooltip"><p>Create a weighted mean of two inputs using a balance point.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setMinimumBalancePoint:">&ndash;&nbsp;setMinimumBalancePoint:</a></code>
+    <span class="tooltip"><p>Set the minimum balance point.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setMaximumBalancePoint:">&ndash;&nbsp;setMaximumBalancePoint:</a></code>
+    <span class="tooltip"><p>Set the maximum balance point.</p></span>
+  </span>
+  
+  
+</li>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithInput1:input2:balance:" title="initWithInput1:input2:balance:"></a>
+  <h3 class="subsubtitle method-title">initWithInput1:input2:balance:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create a weighted mean of two inputs using a balance point.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput1:(AKParameter *)<em>input1</em> input2:(AKParameter *)<em>input2</em> balance:(AKParameter *)<em>balancePoint</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input1</em></dt>
+      <dd><p>First input</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input2</em></dt>
+      <dd><p>Second input</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>balancePoint</em></dt>
+      <dd><p>A number from 0 (all input 1) to 1 (all input 2).</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKMix.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setMaximumBalancePoint:" title="setMaximumBalancePoint:"></a>
+  <h3 class="subsubtitle method-title">setMaximumBalancePoint:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set the maximum balance point.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setMaximumBalancePoint:(AKConstant *)<em>maximumBalancePoint</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>maximumBalancePoint</em></dt>
+      <dd><p>The value for which the balance point would indicate all input 2.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKMix.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setMinimumBalancePoint:" title="setMinimumBalancePoint:"></a>
+  <h3 class="subsubtitle method-title">setMinimumBalancePoint:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set the minimum balance point.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setMinimumBalancePoint:(AKConstant *)<em>minimumBalancePoint</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>minimumBalancePoint</em></dt>
+      <dd><p>The value for which the balance point would indicate all input 1.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKMix.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+          
+        </div>
+      </div>

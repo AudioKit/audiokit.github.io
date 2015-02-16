@@ -48,6 +48,34 @@ title: AKPanner
             <ul class="task-list">
                 <li>
   <span class="tooltip">
+    <code><a href="#//api/name/panMethodForEqualPower">+&nbsp;panMethodForEqualPower</a></code>
+    <span class="tooltip"><p>Maintains equal power during panning</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/panMethodForSquareRoot">+&nbsp;panMethodForSquareRoot</a></code>
+    <span class="tooltip"><p>Square root method for determining <a href="#//api/name/pan">pan</a> output</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/panMethodForLinear">+&nbsp;panMethodForLinear</a></code>
+    <span class="tooltip"><p>Straight linear variation in the panning</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/panMethodForEqualPowerAlternate">+&nbsp;panMethodForEqualPowerAlternate</a></code>
+    <span class="tooltip"><p>Another equal power method</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
     <code><a href="#//api/name/initWithInput:pan:panMethod:">&ndash;&nbsp;initWithInput:pan:panMethod:</a></code>
     <span class="tooltip"><p>Instantiates the panner with all values</p></span>
   </span>
@@ -84,7 +112,7 @@ title: AKPanner
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/panMethod">&nbsp;&nbsp;panMethod</a></code>
-    <span class="tooltip"><p><a href="../Constants/AKPanMethod.html">AKPanMethod</a> can be EqualPower, SquareRoot, Linear, AltEqualPower [Default Value: AKPanMethodEqualPower]</p></span>
+    <span class="tooltip"><p>AKPanMethod can be EqualPower, SquareRoot, Linear, AltEqualPower [Default Value: AKPanMethodEqualPower]</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
@@ -151,12 +179,12 @@ title: AKPanner
   
   
   <div class="method-subsection brief-description">
-    <p><a href="../Constants/AKPanMethod.html">AKPanMethod</a> can be EqualPower, SquareRoot, Linear, AltEqualPower [Default Value: AKPanMethodEqualPower]</p>
+    <p>AKPanMethod can be EqualPower, SquareRoot, Linear, AltEqualPower [Default Value: AKPanMethodEqualPower]</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKPanMethod panMethod</code></div>
+  <div class="method-subsection method-declaration"><code>@property AKConstant *panMethod</code></div>
 
     
   
@@ -187,6 +215,150 @@ title: AKPanner
           <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
             <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/panMethodForEqualPower" title="panMethodForEqualPower"></a>
+  <h3 class="subsubtitle method-title">panMethodForEqualPower</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Maintains equal power during panning</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)panMethodForEqualPower</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPanner.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/panMethodForEqualPowerAlternate" title="panMethodForEqualPowerAlternate"></a>
+  <h3 class="subsubtitle method-title">panMethodForEqualPowerAlternate</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Another equal power method</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)panMethodForEqualPowerAlternate</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPanner.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/panMethodForLinear" title="panMethodForLinear"></a>
+  <h3 class="subsubtitle method-title">panMethodForLinear</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Straight linear variation in the panning</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)panMethodForLinear</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPanner.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/panMethodForSquareRoot" title="panMethodForSquareRoot"></a>
+  <h3 class="subsubtitle method-title">panMethodForSquareRoot</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Square root method for determining <a href="#//api/name/pan">pan</a> output</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)panMethodForSquareRoot</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKPanner.h</code><br />
+  </div>
+  
+  
+</div>
             
             <div class="section-method">
   <a name="//api/name/pannerWithInput:" title="pannerWithInput:"></a>
@@ -300,7 +472,7 @@ title: AKPanner
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> pan:(AKParameter *)<em>pan</em> panMethod:(AKPanMethod)<em>panMethod</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> pan:(AKParameter *)<em>pan</em> panMethod:(AKConstant *)<em>panMethod</em></code></div>
 
     
   
@@ -319,7 +491,7 @@ title: AKPanner
     
     <dl class="argument-def parameter-def">
       <dt><em>panMethod</em></dt>
-      <dd><p><a href="../Constants/AKPanMethod.html">AKPanMethod</a> can be EqualPower, SquareRoot, Linear, AltEqualPower [Default Value: AKPanMethodEqualPower]</p></dd>
+      <dd><p>AKPanMethod can be EqualPower, SquareRoot, Linear, AltEqualPower [Default Value: AKPanMethodEqualPower]</p></dd>
     </dl>
     
   </div>
@@ -402,7 +574,7 @@ title: AKPanner
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalPanMethod:(AKPanMethod)<em>panMethod</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalPanMethod:(AKConstant *)<em>panMethod</em></code></div>
 
     
   
@@ -411,7 +583,7 @@ title: AKPanner
     
     <dl class="argument-def parameter-def">
       <dt><em>panMethod</em></dt>
-      <dd><p><a href="../Constants/AKPanMethod.html">AKPanMethod</a> can be EqualPower, SquareRoot, Linear, AltEqualPower [Default Value: AKPanMethodEqualPower]</p></dd>
+      <dd><p>AKPanMethod can be EqualPower, SquareRoot, Linear, AltEqualPower [Default Value: AKPanMethodEqualPower]</p></dd>
     </dl>
     
   </div>

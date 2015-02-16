@@ -1,13 +1,13 @@
 ---
 layout: docs
-title: AKMidi
+title: AKMultipleInputMathOperation
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
         <div id="header">
           <div class="section-header">
-            <h1 class="title title-header">AKMidi</h1>
+            <h1 class="title title-header">AKMultipleInputMathOperation</h1>
           </div>
         </div>
         <div id="container">
@@ -15,10 +15,10 @@ title: AKMidi
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value">NSObject</td>
+  <td class="specification-value"><a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
-  <td class="specification-value">AKMidi.h<br />AKMidi.m</td>
+  <td class="specification-value">AKMultipleInputMathOperation.h<br />AKMultipleInputMathOperation.m</td>
 </tr>
             </tbody></table></div>
           
@@ -28,7 +28,7 @@ title: AKMidi
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>AKMidi is the object that handles the MIDI input and output from AK.</p>
+            <p>Helper function to deal with product, sum, minimum, and maximum.</p>
           </div>
           
           
@@ -46,29 +46,22 @@ title: AKMidi
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/listeners">&nbsp;&nbsp;listeners</a></code>
-    <span class="tooltip"><p>A set of all listeners &ldquo;subscribed&rdquo; to MIDI Messages.</p></span>
+    <code><a href="#//api/name/inputs">&nbsp;&nbsp;inputs</a></code>
+    <span class="tooltip"><p>Array of inputs or operands to the function</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/addListener:">&ndash;&nbsp;addListener:</a></code>
-    <span class="tooltip"><p>Add listener to a list of notified <a href="#//api/name/listeners">listeners</a></p></span>
+    <code><a href="#//api/name/initWithInputs:">&ndash;&nbsp;initWithInputs:</a></code>
+    <span class="tooltip"><p>Create a new signal as a sum of given signals.</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/openMidiIn">&ndash;&nbsp;openMidiIn</a></code>
-    <span class="tooltip"><p>Create midi client and connect to all available midi input sources.</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/closeMidiIn">&ndash;&nbsp;closeMidiIn</a></code>
-    <span class="tooltip"><p>Dispose of midi client.</p></span>
+    <code><a href="#//api/name/initWithFirstInput:secondInput:">&ndash;&nbsp;initWithFirstInput:secondInput:</a></code>
+    <span class="tooltip"><p>Create a new signal as a sum of exactly two given signals.</p></span>
   </span>
   
   
@@ -86,18 +79,18 @@ title: AKMidi
             <h2 class="subtitle subtitle-methods">Properties</h2>
             
             <div class="section-method">
-  <a name="//api/name/listeners" title="listeners"></a>
-  <h3 class="subsubtitle method-title">listeners</h3>
+  <a name="//api/name/inputs" title="inputs"></a>
+  <h3 class="subsubtitle method-title">inputs</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>A set of all listeners &ldquo;subscribed&rdquo; to MIDI Messages.</p>
+    <p>Array of inputs or operands to the function</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property NSMutableSet *listeners</code></div>
+  <div class="method-subsection method-declaration"><code>@property NSArray *inputs</code></div>
 
     
   
@@ -115,7 +108,7 @@ title: AKMidi
   
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKMidi.h</code><br />
+    <code class="declared-in-ref">AKMultipleInputMathOperation.h</code><br />
   </div>
   
   
@@ -132,18 +125,18 @@ title: AKMidi
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/addListener:" title="addListener:"></a>
-  <h3 class="subsubtitle method-title">addListener:</h3>
+  <a name="//api/name/initWithFirstInput:secondInput:" title="initWithFirstInput:secondInput:"></a>
+  <h3 class="subsubtitle method-title">initWithFirstInput:secondInput:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Add listener to a list of notified <a href="#//api/name/listeners">listeners</a></p>
+    <p>Create a new signal as a sum of exactly two given signals.</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)addListener:(id&lt;AKMidiListener&gt;)<em>listener</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFirstInput:(AKParameter *)<em>firstInput</em> secondInput:(AKParameter *)<em>secondInput</em></code></div>
 
     
   
@@ -151,8 +144,13 @@ title: AKMidi
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>listener</em></dt>
-      <dd><p>Object that implements the <a href="../Protocols/AKMidiListener.html">AKMidiListener</a> protocol</p></dd>
+      <dt><em>firstInput</em></dt>
+      <dd><p>First signal to be summed.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>secondInput</em></dt>
+      <dd><p>Second Signal to be summed.</p></dd>
     </dl>
     
   </div>
@@ -171,27 +169,42 @@ title: AKMidi
   
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKMidi.h</code><br />
+    <code class="declared-in-ref">AKMultipleInputMathOperation.h</code><br />
   </div>
   
   
 </div>
             
             <div class="section-method">
-  <a name="//api/name/closeMidiIn" title="closeMidiIn"></a>
-  <h3 class="subsubtitle method-title">closeMidiIn</h3>
+  <a name="//api/name/initWithInputs:" title="initWithInputs:"></a>
+  <h3 class="subsubtitle method-title">initWithInputs:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Dispose of midi client.</p>
+    <p>Create a new signal as a sum of given signals.</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)closeMidiIn</code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInputs:(AKParameter *)<em>firstInput</em>, <em>...</em></code></div>
 
     
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>firstInput</em></dt>
+      <dd><p>At least one input is required</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>...</em></dt>
+      <dd><p>End the list with a nil.</p></dd>
+    </dl>
+    
+  </div>
   
 
   
@@ -207,43 +220,7 @@ title: AKMidi
   
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKMidi.h</code><br />
-  </div>
-  
-  
-</div>
-            
-            <div class="section-method">
-  <a name="//api/name/openMidiIn" title="openMidiIn"></a>
-  <h3 class="subsubtitle method-title">openMidiIn</h3>
-
-  
-  
-  <div class="method-subsection brief-description">
-    <p>Create midi client and connect to all available midi input sources.</p>
-  </div>
-  
-    
-
-  <div class="method-subsection method-declaration"><code>- (void)openMidiIn</code></div>
-
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  <div class="method-subsection declared-in-section">
-    <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKMidi.h</code><br />
+    <code class="declared-in-ref">AKMultipleInputMathOperation.h</code><br />
   </div>
   
   

@@ -48,7 +48,49 @@ title: AKLowFrequencyOscillator
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithType:frequency:amplitude:">&ndash;&nbsp;initWithType:frequency:amplitude:</a></code>
+    <code><a href="#//api/name/waveformTypeForSine">+&nbsp;waveformTypeForSine</a></code>
+    <span class="tooltip"><p>Sine Waveform</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/waveformTypeForTriangle">+&nbsp;waveformTypeForTriangle</a></code>
+    <span class="tooltip"><p>Triangle waveform</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/waveformTypeForBipolarSquare">+&nbsp;waveformTypeForBipolarSquare</a></code>
+    <span class="tooltip"><p>Bipolar square waveform</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/waveformTypeForUnipolarSquare">+&nbsp;waveformTypeForUnipolarSquare</a></code>
+    <span class="tooltip"><p>Unipolar Square waveform</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/waveformTypeForSawtooth">+&nbsp;waveformTypeForSawtooth</a></code>
+    <span class="tooltip"><p>Sawtooth waveform</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/waveformTypeForDownSawtooth">+&nbsp;waveformTypeForDownSawtooth</a></code>
+    <span class="tooltip"><p>Reverse sawtooth waveform</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithWaveformType:frequency:amplitude:">&ndash;&nbsp;initWithWaveformType:frequency:amplitude:</a></code>
     <span class="tooltip"><p>Instantiates the low <a href="#//api/name/frequency">frequency</a> <a href="#//api/name/oscillator">oscillator</a> with all values</p></span>
   </span>
   
@@ -69,15 +111,15 @@ title: AKLowFrequencyOscillator
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/type">&nbsp;&nbsp;type</a></code>
+    <code><a href="#//api/name/waveformType">&nbsp;&nbsp;waveformType</a></code>
     <span class="tooltip"><p>Waveform of the <a href="#//api/name/oscillator">oscillator</a>, can be sine, triangle, square (bipolar), square (unipolar), saw-tooth, saw-tooth (down). [Default Value: AKLowFrequencyOscillatorTypeSine]</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/setOptionalType:">&ndash;&nbsp;setOptionalType:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/type">type</a></p></span>
+    <code><a href="#//api/name/setOptionalWaveformType:">&ndash;&nbsp;setOptionalWaveformType:</a></code>
+    <span class="tooltip"><p>Set an optional type</p></span>
   </span>
   
   
@@ -195,8 +237,8 @@ title: AKLowFrequencyOscillator
 </div>
             
             <div class="section-method">
-  <a name="//api/name/type" title="type"></a>
-  <h3 class="subsubtitle method-title">type</h3>
+  <a name="//api/name/waveformType" title="waveformType"></a>
+  <h3 class="subsubtitle method-title">waveformType</h3>
 
   
   
@@ -206,7 +248,7 @@ title: AKLowFrequencyOscillator
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKLowFrequencyOscillatorType type</code></div>
+  <div class="method-subsection method-declaration"><code>@property AKConstant *waveformType</code></div>
 
     
   
@@ -251,6 +293,222 @@ title: AKLowFrequencyOscillator
     
 
   <div class="method-subsection method-declaration"><code>+ (instancetype)oscillator</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLowFrequencyOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/waveformTypeForBipolarSquare" title="waveformTypeForBipolarSquare"></a>
+  <h3 class="subsubtitle method-title">waveformTypeForBipolarSquare</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Bipolar square waveform</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)waveformTypeForBipolarSquare</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLowFrequencyOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/waveformTypeForDownSawtooth" title="waveformTypeForDownSawtooth"></a>
+  <h3 class="subsubtitle method-title">waveformTypeForDownSawtooth</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Reverse sawtooth waveform</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)waveformTypeForDownSawtooth</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLowFrequencyOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/waveformTypeForSawtooth" title="waveformTypeForSawtooth"></a>
+  <h3 class="subsubtitle method-title">waveformTypeForSawtooth</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Sawtooth waveform</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)waveformTypeForSawtooth</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLowFrequencyOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/waveformTypeForSine" title="waveformTypeForSine"></a>
+  <h3 class="subsubtitle method-title">waveformTypeForSine</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Sine Waveform</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)waveformTypeForSine</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLowFrequencyOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/waveformTypeForTriangle" title="waveformTypeForTriangle"></a>
+  <h3 class="subsubtitle method-title">waveformTypeForTriangle</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Triangle waveform</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)waveformTypeForTriangle</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLowFrequencyOscillator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/waveformTypeForUnipolarSquare" title="waveformTypeForUnipolarSquare"></a>
+  <h3 class="subsubtitle method-title">waveformTypeForUnipolarSquare</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Unipolar Square waveform</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)waveformTypeForUnipolarSquare</code></div>
 
     
   
@@ -319,8 +577,8 @@ title: AKLowFrequencyOscillator
 </div>
             
             <div class="section-method">
-  <a name="//api/name/initWithType:frequency:amplitude:" title="initWithType:frequency:amplitude:"></a>
-  <h3 class="subsubtitle method-title">initWithType:frequency:amplitude:</h3>
+  <a name="//api/name/initWithWaveformType:frequency:amplitude:" title="initWithWaveformType:frequency:amplitude:"></a>
+  <h3 class="subsubtitle method-title">initWithWaveformType:frequency:amplitude:</h3>
 
   
   
@@ -330,7 +588,7 @@ title: AKLowFrequencyOscillator
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithType:(AKLowFrequencyOscillatorType)<em>type</em> frequency:(AKParameter *)<em>frequency</em> amplitude:(AKParameter *)<em>amplitude</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithWaveformType:(AKConstant *)<em>waveformType</em> frequency:(AKParameter *)<em>frequency</em> amplitude:(AKParameter *)<em>amplitude</em></code></div>
 
     
   
@@ -338,7 +596,7 @@ title: AKLowFrequencyOscillator
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>type</em></dt>
+      <dt><em>waveformType</em></dt>
       <dd><p>Waveform of the <a href="#//api/name/oscillator">oscillator</a>, can be sine, triangle, square (bipolar), square (unipolar), saw-tooth, saw-tooth (down). [Default Value: AKLowFrequencyOscillatorTypeSine]</p></dd>
     </dl>
     
@@ -467,18 +725,18 @@ title: AKLowFrequencyOscillator
 </div>
             
             <div class="section-method">
-  <a name="//api/name/setOptionalType:" title="setOptionalType:"></a>
-  <h3 class="subsubtitle method-title">setOptionalType:</h3>
+  <a name="//api/name/setOptionalWaveformType:" title="setOptionalWaveformType:"></a>
+  <h3 class="subsubtitle method-title">setOptionalWaveformType:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/type">type</a></p>
+    <p>Set an optional type</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalType:(AKLowFrequencyOscillatorType)<em>type</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalWaveformType:(AKConstant *)<em>waveformType</em></code></div>
 
     
   
@@ -486,7 +744,7 @@ title: AKLowFrequencyOscillator
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>type</em></dt>
+      <dt><em>waveformType</em></dt>
       <dd><p>Waveform of the <a href="#//api/name/oscillator">oscillator</a>, can be sine, triangle, square (bipolar), square (unipolar), saw-tooth, saw-tooth (down). [Default Value: AKLowFrequencyOscillatorTypeSine]</p></dd>
     </dl>
     

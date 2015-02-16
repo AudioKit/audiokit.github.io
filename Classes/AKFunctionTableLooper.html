@@ -48,6 +48,27 @@ title: AKFunctionTableLooper
             <ul class="task-list">
                 <li>
   <span class="tooltip">
+    <code><a href="#//api/name/loopRepeats">+&nbsp;loopRepeats</a></code>
+    <span class="tooltip"><p>Loop plays foward and repeats from the beginning forever</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/loopPlaysBackwards">+&nbsp;loopPlaysBackwards</a></code>
+    <span class="tooltip"><p>Loop plays backwards repeating from the end when it gets back to the start</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/loopPlaysForwardAndThenBackwards">+&nbsp;loopPlaysForwardAndThenBackwards</a></code>
+    <span class="tooltip"><p>Loop first plays forward and then when it reaches the end it plays backwards and then repeats</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
     <code><a href="#//api/name/initWithFunctionTable:startTime:endTime:transpositionRatio:amplitude:crossfadeDuration:loopMode:">&ndash;&nbsp;initWithFunctionTable:startTime:endTime:transpositionRatio:amplitude:crossfadeDuration:loopMode:</a></code>
     <span class="tooltip"><p>Instantiates the function table looper with all values</p></span>
   </span>
@@ -284,7 +305,7 @@ title: AKFunctionTableLooper
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKFunctionTableLooperMode loopMode</code></div>
+  <div class="method-subsection method-declaration"><code>@property AKConstant *loopMode</code></div>
 
     
   
@@ -387,6 +408,114 @@ title: AKFunctionTableLooper
           <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
             <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/loopPlaysBackwards" title="loopPlaysBackwards"></a>
+  <h3 class="subsubtitle method-title">loopPlaysBackwards</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Loop plays backwards repeating from the end when it gets back to the start</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)loopPlaysBackwards</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFunctionTableLooper.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/loopPlaysForwardAndThenBackwards" title="loopPlaysForwardAndThenBackwards"></a>
+  <h3 class="subsubtitle method-title">loopPlaysForwardAndThenBackwards</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Loop first plays forward and then when it reaches the end it plays backwards and then repeats</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)loopPlaysForwardAndThenBackwards</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFunctionTableLooper.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/loopRepeats" title="loopRepeats"></a>
+  <h3 class="subsubtitle method-title">loopRepeats</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Loop plays foward and repeats from the beginning forever</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)loopRepeats</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFunctionTableLooper.h</code><br />
+  </div>
+  
+  
+</div>
             
             <div class="section-method">
   <a name="//api/name/looperWithFunctionTable:" title="looperWithFunctionTable:"></a>
@@ -500,7 +629,7 @@ title: AKFunctionTableLooper
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFunctionTable:(AKFunctionTable *)<em>functionTable</em> startTime:(AKParameter *)<em>startTime</em> endTime:(AKParameter *)<em>endTime</em> transpositionRatio:(AKParameter *)<em>transpositionRatio</em> amplitude:(AKParameter *)<em>amplitude</em> crossfadeDuration:(AKParameter *)<em>crossfadeDuration</em> loopMode:(AKFunctionTableLooperMode)<em>loopMode</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFunctionTable:(AKFunctionTable *)<em>functionTable</em> startTime:(AKParameter *)<em>startTime</em> endTime:(AKParameter *)<em>endTime</em> transpositionRatio:(AKParameter *)<em>transpositionRatio</em> amplitude:(AKParameter *)<em>amplitude</em> crossfadeDuration:(AKParameter *)<em>crossfadeDuration</em> loopMode:(AKConstant *)<em>loopMode</em></code></div>
 
     
   
@@ -714,7 +843,7 @@ title: AKFunctionTableLooper
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalLoopMode:(AKFunctionTableLooperMode)<em>loopMode</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalLoopMode:(AKConstant *)<em>loopMode</em></code></div>
 
     
   

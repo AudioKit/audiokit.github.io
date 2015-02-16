@@ -132,13 +132,6 @@ instrument blocks.</p></span>
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/addUDO:">&ndash;&nbsp;addUDO:</a></code>
-    <span class="tooltip"><p>Adds the User-Defined Operation to the instrument (and the opcode defintion .udo file)</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
     <code><a href="#//api/name/addString:">&ndash;&nbsp;addString:</a></code>
     <span class="tooltip"><p>Adds any string to the output file, useful for testing and commenting.</p></span>
   </span>
@@ -204,8 +197,36 @@ it sends the event to the appropriate orchestra.</p></span>
   
 </li><li>
   <span class="tooltip">
+    <code><a href="#//api/name/stopNote:">&ndash;&nbsp;stopNote:</a></code>
+    <span class="tooltip"><p>Stop the given note</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/stopNote:afterDelay:">&ndash;&nbsp;stopNote:afterDelay:</a></code>
+    <span class="tooltip"><p>Stop the given note after a delay</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
     <code><a href="#//api/name/playPhrase:">&ndash;&nbsp;playPhrase:</a></code>
     <span class="tooltip"><p>Play the given note phrase</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/repeatPhrase:">&ndash;&nbsp;repeatPhrase:</a></code>
+    <span class="tooltip"><p>Repeat a note phrase</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/repeatPhrase:duration:">&ndash;&nbsp;repeatPhrase:duration:</a></code>
+    <span class="tooltip"><p>Repeat a note phrase periodically</p></span>
   </span>
   
   
@@ -242,7 +263,7 @@ once in the F-Statement section.</p>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSMutableSet *functionTables</code></div>
+  <div class="method-subsection method-declaration"><code>@property NSMutableSet *functionTables</code></div>
 
     
   
@@ -278,7 +299,7 @@ once in the F-Statement section.</p>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSMutableArray *noteProperties</code></div>
+  <div class="method-subsection method-declaration"><code>@property NSMutableArray *noteProperties</code></div>
 
     
   
@@ -314,7 +335,7 @@ once in the F-Statement section.</p>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSMutableArray *properties</code></div>
+  <div class="method-subsection method-declaration"><code>@property NSMutableArray *properties</code></div>
 
     
   
@@ -351,7 +372,7 @@ instrument blocks.</p>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSMutableSet *userDefinedOperations</code></div>
+  <div class="method-subsection method-declaration"><code>@property NSMutableSet *userDefinedOperations</code></div>
 
     
   
@@ -633,52 +654,6 @@ instrument blocks.</p>
     <dl class="argument-def parameter-def">
       <dt><em>newString</em></dt>
       <dd><p>New string to add to the instrument definition.</p></dd>
-    </dl>
-    
-  </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  <div class="method-subsection declared-in-section">
-    <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKInstrument.h</code><br />
-  </div>
-  
-  
-</div>
-            
-            <div class="section-method">
-  <a name="//api/name/addUDO:" title="addUDO:"></a>
-  <h3 class="subsubtitle method-title">addUDO:</h3>
-
-  
-  
-  <div class="method-subsection brief-description">
-    <p>Adds the User-Defined Operation to the instrument (and the opcode defintion .udo file)</p>
-  </div>
-  
-    
-
-  <div class="method-subsection method-declaration"><code>- (void)addUDO:(AKParameter *)<em>newUserDefinedOperation</em></code></div>
-
-    
-  
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
-    
-    <dl class="argument-def parameter-def">
-      <dt><em>newUserDefinedOperation</em></dt>
-      <dd><p>New UDO to add to the instrument.</p></dd>
     </dl>
     
   </div>
@@ -1166,6 +1141,103 @@ it sends the event to the appropriate orchestra.</p>
 </div>
             
             <div class="section-method">
+  <a name="//api/name/repeatPhrase:" title="repeatPhrase:"></a>
+  <h3 class="subsubtitle method-title">repeatPhrase:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Repeat a note phrase</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)repeatPhrase:(AKPhrase *)<em>phrase</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>phrase</em></dt>
+      <dd><p>The note phrase that will be played.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKInstrument.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/repeatPhrase:duration:" title="repeatPhrase:duration:"></a>
+  <h3 class="subsubtitle method-title">repeatPhrase:duration:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Repeat a note phrase periodically</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)repeatPhrase:(AKPhrase *)<em>phrase</em> duration:(float)<em>duration</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>phrase</em></dt>
+      <dd><p>The note phrase that will be played.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>duration</em></dt>
+      <dd><p>The period between playbacks</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKInstrument.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
   <a name="//api/name/resetParameter:" title="resetParameter:"></a>
   <h3 class="subsubtitle method-title">resetParameter:</h3>
 
@@ -1226,6 +1298,103 @@ it sends the event to the appropriate orchestra.</p>
   <div class="method-subsection method-declaration"><code>- (void)stop</code></div>
 
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKInstrument.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/stopNote:" title="stopNote:"></a>
+  <h3 class="subsubtitle method-title">stopNote:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Stop the given note</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)stopNote:(AKNote *)<em>note</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>note</em></dt>
+      <dd><p>The note that will be stopped.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKInstrument.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/stopNote:afterDelay:" title="stopNote:afterDelay:"></a>
+  <h3 class="subsubtitle method-title">stopNote:afterDelay:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Stop the given note after a delay</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)stopNote:(AKNote *)<em>note</em> afterDelay:(float)<em>delay</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>note</em></dt>
+      <dd><p>The note that will be stopped.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>delay</em></dt>
+      <dd><p>The amount of time to wait until stopping the note</p></dd>
+    </dl>
+    
+  </div>
   
 
   

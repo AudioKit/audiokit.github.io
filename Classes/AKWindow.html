@@ -1,0 +1,415 @@
+---
+layout: docs
+title: AKWindow
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKWindow</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKFunctionTable.html">AKFunctionTable</a> : <a href="../Classes/AKConstant.html">AKConstant</a> : <a href="../Classes/AKControl.html">AKControl</a> : <a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKWindow.h<br />AKWindow.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>Function tables for different window shapes. These windows are usually used for spectrum analysis or for grain envelopes.</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            
+
+            <ul class="task-list">
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithType:">&ndash;&nbsp;initWithType:</a></code>
+    <span class="tooltip"><p>Create a window function table</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/maximum">&nbsp;&nbsp;maximum</a></code>
+    <span class="tooltip"><p>Set an optional maximum value of the function table.</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalMaximum:">&ndash;&nbsp;setOptionalMaximum:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/maximum">maximum</a> value of the function table.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/kaiserOpenness">&nbsp;&nbsp;kaiserOpenness</a></code>
+    <span class="tooltip"><p>The openness of a Kaiser Window (Default: 1)</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalKaiserWindowOpenness:">&ndash;&nbsp;setOptionalKaiserWindowOpenness:</a></code>
+    <span class="tooltip"><p>Set the openness of a Kaiser Window</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/standardDeviation">&nbsp;&nbsp;standardDeviation</a></code>
+    <span class="tooltip"><p>Width of a Gaussian Window</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalGaussianWindowStandardDeviation:">&ndash;&nbsp;setOptionalGaussianWindowStandardDeviation:</a></code>
+    <span class="tooltip"><p>Set the width of a Gaussian Window</p></span>
+  </span>
+  
+  
+</li>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/kaiserOpenness" title="kaiserOpenness"></a>
+  <h3 class="subsubtitle method-title">kaiserOpenness</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>The openness of a Kaiser Window (Default: 1)</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) float kaiserOpenness</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindow.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/maximum" title="maximum"></a>
+  <h3 class="subsubtitle method-title">maximum</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional maximum value of the function table.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) float maximum</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindow.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/standardDeviation" title="standardDeviation"></a>
+  <h3 class="subsubtitle method-title">standardDeviation</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Width of a Gaussian Window</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) float standardDeviation</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindow.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithType:" title="initWithType:"></a>
+  <h3 class="subsubtitle method-title">initWithType:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create a window function table</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithType:(AKWindowTableType)<em>windowType</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>windowType</em></dt>
+      <dd><p>Type of window to create.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindow.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalGaussianWindowStandardDeviation:" title="setOptionalGaussianWindowStandardDeviation:"></a>
+  <h3 class="subsubtitle method-title">setOptionalGaussianWindowStandardDeviation:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set the width of a Gaussian Window</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalGaussianWindowStandardDeviation:(float)<em>standardDeviation</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>standardDeviation</em></dt>
+      <dd><p>Standard deviation sets the width of the window for Gaussian windows only.  (Default: 1)</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindow.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalKaiserWindowOpenness:" title="setOptionalKaiserWindowOpenness:"></a>
+  <h3 class="subsubtitle method-title">setOptionalKaiserWindowOpenness:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set the openness of a Kaiser Window</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalKaiserWindowOpenness:(float)<em>kaiserOpenness</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>kaiserOpenness</em></dt>
+      <dd><p>The openness specifies how &ldquo;open&rdquo; the window is, for example a value of 0 results in a rectangular window and a value of 10 in a Hamming like window. (Default: 1)</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindow.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalMaximum:" title="setOptionalMaximum:"></a>
+  <h3 class="subsubtitle method-title">setOptionalMaximum:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional <a href="#//api/name/maximum">maximum</a> value of the function table.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalMaximum:(float)<em>maximum</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>maximum</em></dt>
+      <dd><p>The peak value of the function table. (Default: 1)</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindow.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+          
+        </div>
+      </div>

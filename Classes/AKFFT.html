@@ -1,0 +1,141 @@
+---
+layout: docs
+title: AKFFT
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKFFT</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKFSignal.html">AKFSignal</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKFFT.h<br />AKFFT.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>Generate an f-Signal from a mono audio source using phase vocoder overlap-add synthesis.</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            
+
+            <ul class="task-list">
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithInput:fftSize:overlap:windowType:windowFilterSize:">&ndash;&nbsp;initWithInput:fftSize:overlap:windowType:windowFilterSize:</a></code>
+    <span class="tooltip"><p>Create a phase vocoder stream or f-signal from a mono audio source.</p></span>
+  </span>
+  
+  
+</li>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithInput:fftSize:overlap:windowType:windowFilterSize:" title="initWithInput:fftSize:overlap:windowType:windowFilterSize:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:fftSize:overlap:windowType:windowFilterSize:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create a phase vocoder stream or f-signal from a mono audio source.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>audioSource</em> fftSize:(AKConstant *)<em>fftSize</em> overlap:(AKConstant *)<em>overlap</em> windowType:(AKFFTWindowType)<em>windowType</em> windowFilterSize:(AKConstant *)<em>windowSize</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>audioSource</em></dt>
+      <dd><p>Audio to use to generate the f-signal.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>fftSize</em></dt>
+      <dd><p>The FFT size in samples. Need not be a power of two (though these are especially efficient), but must be even. Odd numbers are rounded up internally. fftSize determines the number of analysis bins in the output, as fftSize/2 + 1. For example, where fftSize = 1024, fsig will contain 513 analysis bins, ordered linearly from the fundamental to Nyquist. The fundamental of analysis (which in principle gives the lowest resolvable frequency) is determined as sample rate/fftSize. Thus, for the example just given and assuming sr = 44100, the fundamental of analysis is 43.07Hz. In practice, due to the phase-preserving nature of the phase vocoder, the frequency of any bin can deviate bilaterally, so that DC components are recorded. Given a strongly pitched signal, frequencies in adjacent bins can bunch very closely together, around partials in the source, and the lowest bins may even have negative frequencies.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>overlap</em></dt>
+      <dd><p>The distance in samples (“hop size”) between overlapping analysis frames. As a rule, this needs to be at least fftSize/4, e.g. 256 for the example above.  overlap determines the underlying analysis rate, as sample rate/overlap. ioverlap does not require to be a simple factor of fftSize; for example a value of 160 would be legal. The choice of ioverlap may be dictated by the degree of pitch modification applied to the fsig, if any. As a rule of thumb, the more extreme the pitch shift, the higher the analysis rate needs to be, and hence the smaller the value for ioverlap. A higher analysis rate can also be advantageous with broadband transient sounds, such as drums (where a small analysis window gives less smearing, but more frequency-related errors).</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>windowType</em></dt>
+      <dd><p>Most users will find the Hamming window meets all normal needs, and can be regarded as the default choice.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>windowSize</em></dt>
+      <dd><p>The size in samples of the analysis window filter (as set by windowType). This must be at least fftSize, and can usefully be larger. Though other proportions are permitted, it is recommended that iwinsize always be an integral multiple of fftSize, e.g. 2048 for the example above. Internally, the analysis window (Hamming, von Hann) is multiplied by a sinc function, so that amplitudes are zero at the boundaries between frames. The larger analysis window size has been found to be especially important for oscillator bank resynthesis (e.g. using pvsadsyn), as it has the effect of increasing the frequency resolution of the analysis, and hence the accuracy of the resynthesis. As noted above, windowSize determines the overall latency of the analysis/resynthesis system. In many cases, and especially in the absence of pitch modifications, it will be found that setting iwinsize=ifftsize works very well, and offers the lowest latency.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFFT.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+          
+        </div>
+      </div>

@@ -28,10 +28,7 @@ title: AKStruckMetalBar
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Creates a tone similar to a struck metal bar.</p>
-
-<p>Audio output is a tone similar to a struck metal bar, using a physical model developed from solving the partial differential equation. There are controls over the boundary conditions as well as the bar characteristics.
-More information regarding scanned synthesis can be found at <a href="http://dafx12.york.ac.uk/papers/dafx12">http://dafx12.york.ac.uk/papers/dafx12</a>_submission_18.pdf and <a href="http://www.billverplank.com/ScannedSynthesis.PDF">http://www.billverplank.com/ScannedSynthesis.PDF</a></p>
+            <p>Boundary conditions for ends of the struck metal bar physical model</p>
           </div>
           
           
@@ -327,7 +324,7 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKStruckMetalBarBoundaryCondition leftBoundaryCondition</code></div>
+  <div class="method-subsection method-declaration"><code>@property AKConstant *leftBoundaryCondition</code></div>
 
     
   
@@ -363,7 +360,7 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKStruckMetalBarBoundaryCondition rightBoundaryCondition</code></div>
+  <div class="method-subsection method-declaration"><code>@property AKConstant *rightBoundaryCondition</code></div>
 
     
   
@@ -631,7 +628,7 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithDecayTime:(AKConstant *)<em>decayTime</em> dimensionlessStiffness:(AKConstant *)<em>dimensionlessStiffness</em> highFrequencyLoss:(AKConstant *)<em>highFrequencyLoss</em> strikePosition:(AKConstant *)<em>strikePosition</em> strikeVelocity:(AKConstant *)<em>strikeVelocity</em> strikeWidth:(AKConstant *)<em>strikeWidth</em> leftBoundaryCondition:(AKStruckMetalBarBoundaryCondition)<em>leftBoundaryCondition</em> rightBoundaryCondition:(AKStruckMetalBarBoundaryCondition)<em>rightBoundaryCondition</em> scanSpeed:(AKParameter *)<em>scanSpeed</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithDecayTime:(AKConstant *)<em>decayTime</em> dimensionlessStiffness:(AKConstant *)<em>dimensionlessStiffness</em> highFrequencyLoss:(AKConstant *)<em>highFrequencyLoss</em> strikePosition:(AKConstant *)<em>strikePosition</em> strikeVelocity:(AKConstant *)<em>strikeVelocity</em> strikeWidth:(AKConstant *)<em>strikeWidth</em> leftBoundaryCondition:(AKConstant *)<em>leftBoundaryCondition</em> rightBoundaryCondition:(AKConstant *)<em>rightBoundaryCondition</em> scanSpeed:(AKParameter *)<em>scanSpeed</em></code></div>
 
     
   
@@ -855,7 +852,7 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalLeftBoundaryCondition:(AKStruckMetalBarBoundaryCondition)<em>leftBoundaryCondition</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalLeftBoundaryCondition:(AKConstant *)<em>leftBoundaryCondition</em></code></div>
 
     
   
@@ -901,7 +898,7 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalRightBoundaryCondition:(AKStruckMetalBarBoundaryCondition)<em>rightBoundaryCondition</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalRightBoundaryCondition:(AKConstant *)<em>rightBoundaryCondition</em></code></div>
 
     
   

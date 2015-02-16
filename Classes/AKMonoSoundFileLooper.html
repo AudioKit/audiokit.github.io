@@ -48,6 +48,13 @@ title: AKMonoSoundFileLooper
             <ul class="task-list">
                 <li>
   <span class="tooltip">
+    <code><a href="#//api/name/loopPlaysOnce">+&nbsp;loopPlaysOnce</a></code>
+    <span class="tooltip"><p>Type Helpers</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
     <code><a href="#//api/name/initWithSoundFile:frequencyRatio:amplitude:loopMode:">&ndash;&nbsp;initWithSoundFile:frequencyRatio:amplitude:loopMode:</a></code>
     <span class="tooltip"><p>Instantiates the mono sound file looper with all values</p></span>
   </span>
@@ -206,7 +213,7 @@ title: AKMonoSoundFileLooper
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKSoundFileLooperMode loopMode</code></div>
+  <div class="method-subsection method-declaration"><code>@property AKConstant *loopMode</code></div>
 
     
   
@@ -237,6 +244,42 @@ title: AKMonoSoundFileLooper
           <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
             <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/loopPlaysOnce" title="loopPlaysOnce"></a>
+  <h3 class="subsubtitle method-title">loopPlaysOnce</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Type Helpers</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)loopPlaysOnce</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKMonoSoundFileLooper.h</code><br />
+  </div>
+  
+  
+</div>
             
             <div class="section-method">
   <a name="//api/name/looperWithSoundFile:" title="looperWithSoundFile:"></a>
@@ -350,7 +393,7 @@ title: AKMonoSoundFileLooper
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithSoundFile:(AKFunctionTable *)<em>soundFile</em> frequencyRatio:(AKParameter *)<em>frequencyRatio</em> amplitude:(AKParameter *)<em>amplitude</em> loopMode:(AKSoundFileLooperMode)<em>loopMode</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithSoundFile:(AKFunctionTable *)<em>soundFile</em> frequencyRatio:(AKParameter *)<em>frequencyRatio</em> amplitude:(AKParameter *)<em>amplitude</em> loopMode:(AKConstant *)<em>loopMode</em></code></div>
 
     
   
@@ -503,7 +546,7 @@ title: AKMonoSoundFileLooper
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalLoopMode:(AKSoundFileLooperMode)<em>loopMode</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalLoopMode:(AKConstant *)<em>loopMode</em></code></div>
 
     
   

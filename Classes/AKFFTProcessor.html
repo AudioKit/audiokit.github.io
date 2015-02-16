@@ -1,0 +1,949 @@
+---
+layout: docs
+title: AKFFTProcessor
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKFFTProcessor</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKFSignal.html">AKFSignal</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKFFTProcessor.h<br />AKFFTProcessor.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>Phase vocoder analysis processing with onset detection/processing.</p>
+
+<p>This operation allows for time and frequency-independent scaling. Time is advanced internally, but controlled by a tempo scaling parameter; when an onset is detected, timescaling is momentarily stopped to avoid smearing of attacks. The quality of the effect is generally improved with phase locking switched on.
+This operation will also scale pitch, independently of frequency, using a transposition factor.</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            
+
+            <ul class="task-list">
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithFunctionTable:frequencyRatio:timeRatio:amplitude:functionTableOffset:sizeOfFFT:hopSize:dbthresh:">&ndash;&nbsp;initWithFunctionTable:frequencyRatio:timeRatio:amplitude:functionTableOffset:sizeOfFFT:hopSize:dbthresh:</a></code>
+    <span class="tooltip"><p>Instantiates the fft processor with all values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithFunctionTable:">&ndash;&nbsp;initWithFunctionTable:</a></code>
+    <span class="tooltip"><p>Instantiates the fft processor with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/WithFunctionTable:">+&nbsp;WithFunctionTable:</a></code>
+    <span class="tooltip"><p>Instantiates the fft processor with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/frequencyRatio">&nbsp;&nbsp;frequencyRatio</a></code>
+    <span class="tooltip"><p>Grain frequency scaling (1=normal pitch, &lt; 1 lower, > 1 higher; negative, backwards) [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalFrequencyRatio:">&ndash;&nbsp;setOptionalFrequencyRatio:</a></code>
+    <span class="tooltip"><p>Set an optional frequency ratio</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/timeRatio">&nbsp;&nbsp;timeRatio</a></code>
+    <span class="tooltip"><p>Time Scaling ratio, &lt; 1 stretches, > 1 contracts. [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalTimeRatio:">&ndash;&nbsp;setOptionalTimeRatio:</a></code>
+    <span class="tooltip"><p>Set an optional time ratio</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/amplitude">&nbsp;&nbsp;amplitude</a></code>
+    <span class="tooltip"><p>Amplitude of the output. [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalAmplitude:">&ndash;&nbsp;setOptionalAmplitude:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/functionTableOffset">&nbsp;&nbsp;functionTableOffset</a></code>
+    <span class="tooltip"><p>Startup read offset into table, in seconds. [Default Value: 0]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalFunctionTableOffset:">&ndash;&nbsp;setOptionalFunctionTableOffset:</a></code>
+    <span class="tooltip"><p>Set an optional function table offset</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/sizeOfFFT">&nbsp;&nbsp;sizeOfFFT</a></code>
+    <span class="tooltip"><p>FFT size- must be a factor of 2. [Default Value: 2048]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalSizeOfFFT:">&ndash;&nbsp;setOptionalSizeOfFFT:</a></code>
+    <span class="tooltip"><p>Set an optional size of fft</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/hopSize">&nbsp;&nbsp;hopSize</a></code>
+    <span class="tooltip"><p>Size of hop [Default Value: 512]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalHopSize:">&ndash;&nbsp;setOptionalHopSize:</a></code>
+    <span class="tooltip"><p>Set an optional hop size</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/dbthresh">&nbsp;&nbsp;dbthresh</a></code>
+    <span class="tooltip"><p>Threshold for onset detection, based on dB power spectrum ratio between two successive windows. A detected ratio above it will cancel timescaling momentarily, to avoid smearing (defaults to 1). By default anything more than a 1 dB inter-frame power difference will be detected as an onset. [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalDbthresh:">&ndash;&nbsp;setOptionalDbthresh:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/dbthresh">dbthresh</a></p></span>
+  </span>
+  
+  
+</li>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/amplitude" title="amplitude"></a>
+  <h3 class="subsubtitle method-title">amplitude</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Amplitude of the output. [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *amplitude</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFFTProcessor.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/dbthresh" title="dbthresh"></a>
+  <h3 class="subsubtitle method-title">dbthresh</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Threshold for onset detection, based on dB power spectrum ratio between two successive windows. A detected ratio above it will cancel timescaling momentarily, to avoid smearing (defaults to 1). By default anything more than a 1 dB inter-frame power difference will be detected as an onset. [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *dbthresh</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFFTProcessor.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/frequencyRatio" title="frequencyRatio"></a>
+  <h3 class="subsubtitle method-title">frequencyRatio</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Grain frequency scaling (1=normal pitch, &lt; 1 lower, > 1 higher; negative, backwards) [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *frequencyRatio</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFFTProcessor.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/functionTableOffset" title="functionTableOffset"></a>
+  <h3 class="subsubtitle method-title">functionTableOffset</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Startup read offset into table, in seconds. [Default Value: 0]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *functionTableOffset</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFFTProcessor.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/hopSize" title="hopSize"></a>
+  <h3 class="subsubtitle method-title">hopSize</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Size of hop [Default Value: 512]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *hopSize</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFFTProcessor.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/sizeOfFFT" title="sizeOfFFT"></a>
+  <h3 class="subsubtitle method-title">sizeOfFFT</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>FFT size- must be a factor of 2. [Default Value: 2048]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKConstant *sizeOfFFT</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFFTProcessor.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/timeRatio" title="timeRatio"></a>
+  <h3 class="subsubtitle method-title">timeRatio</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Time Scaling ratio, &lt; 1 stretches, > 1 contracts. [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property AKParameter *timeRatio</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFFTProcessor.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/WithFunctionTable:" title="WithFunctionTable:"></a>
+  <h3 class="subsubtitle method-title">WithFunctionTable:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the fft processor with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)WithFunctionTable:(AKParameter *)<em>functionTable</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>functionTable</em></dt>
+      <dd><p>Primary input is a function table, usually a mono sound file.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFFTProcessor.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithFunctionTable:" title="initWithFunctionTable:"></a>
+  <h3 class="subsubtitle method-title">initWithFunctionTable:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the fft processor with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFunctionTable:(AKParameter *)<em>functionTable</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>functionTable</em></dt>
+      <dd><p>Primary input is a function table, usually a mono sound file.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFFTProcessor.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithFunctionTable:frequencyRatio:timeRatio:amplitude:functionTableOffset:sizeOfFFT:hopSize:dbthresh:" title="initWithFunctionTable:frequencyRatio:timeRatio:amplitude:functionTableOffset:sizeOfFFT:hopSize:dbthresh:"></a>
+  <h3 class="subsubtitle method-title">initWithFunctionTable:frequencyRatio:timeRatio:amplitude:functionTableOffset:sizeOfFFT:hopSize:dbthresh:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the fft processor with all values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFunctionTable:(AKParameter *)<em>functionTable</em> frequencyRatio:(AKParameter *)<em>frequencyRatio</em> timeRatio:(AKParameter *)<em>timeRatio</em> amplitude:(AKParameter *)<em>amplitude</em> functionTableOffset:(AKConstant *)<em>functionTableOffset</em> sizeOfFFT:(AKConstant *)<em>sizeOfFFT</em> hopSize:(AKConstant *)<em>hopSize</em> dbthresh:(AKConstant *)<em>dbthresh</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>functionTable</em></dt>
+      <dd><p>Primary input is a function table, usually a mono sound file. Updated at Control-rate. [Default Value: ]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>frequencyRatio</em></dt>
+      <dd><p>Grain frequency scaling (1=normal pitch, &lt; 1 lower, > 1 higher; negative, backwards) Updated at Control-rate. [Default Value: 1]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>timeRatio</em></dt>
+      <dd><p>Time Scaling ratio, &lt; 1 stretches, > 1 contracts. Updated at Control-rate. [Default Value: 1]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>amplitude</em></dt>
+      <dd><p>Amplitude of the output. Updated at Control-rate. [Default Value: 1]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>functionTableOffset</em></dt>
+      <dd><p>Startup read offset into table, in seconds. [Default Value: 0]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>sizeOfFFT</em></dt>
+      <dd><p>FFT size- must be a factor of 2. [Default Value: 2048]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>hopSize</em></dt>
+      <dd><p>Size of hop [Default Value: 512]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>dbthresh</em></dt>
+      <dd><p>Threshold for onset detection, based on dB power spectrum ratio between two successive windows. A detected ratio above it will cancel timescaling momentarily, to avoid smearing (defaults to 1). By default anything more than a 1 dB inter-frame power difference will be detected as an onset. [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFFTProcessor.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalAmplitude:" title="setOptionalAmplitude:"></a>
+  <h3 class="subsubtitle method-title">setOptionalAmplitude:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalAmplitude:(AKParameter *)<em>amplitude</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>amplitude</em></dt>
+      <dd><p>Amplitude of the output. Updated at Control-rate. [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFFTProcessor.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalDbthresh:" title="setOptionalDbthresh:"></a>
+  <h3 class="subsubtitle method-title">setOptionalDbthresh:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional <a href="#//api/name/dbthresh">dbthresh</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalDbthresh:(AKConstant *)<em>dbthresh</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>dbthresh</em></dt>
+      <dd><p>Threshold for onset detection, based on dB power spectrum ratio between two successive windows. A detected ratio above it will cancel timescaling momentarily, to avoid smearing (defaults to 1). By default anything more than a 1 dB inter-frame power difference will be detected as an onset. [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFFTProcessor.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalFrequencyRatio:" title="setOptionalFrequencyRatio:"></a>
+  <h3 class="subsubtitle method-title">setOptionalFrequencyRatio:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional frequency ratio</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalFrequencyRatio:(AKParameter *)<em>frequencyRatio</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>frequencyRatio</em></dt>
+      <dd><p>Grain frequency scaling (1=normal pitch, &lt; 1 lower, > 1 higher; negative, backwards) Updated at Control-rate. [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFFTProcessor.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalFunctionTableOffset:" title="setOptionalFunctionTableOffset:"></a>
+  <h3 class="subsubtitle method-title">setOptionalFunctionTableOffset:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional function table offset</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalFunctionTableOffset:(AKConstant *)<em>functionTableOffset</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>functionTableOffset</em></dt>
+      <dd><p>Startup read offset into table, in seconds. [Default Value: 0]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFFTProcessor.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalHopSize:" title="setOptionalHopSize:"></a>
+  <h3 class="subsubtitle method-title">setOptionalHopSize:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional hop size</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalHopSize:(AKConstant *)<em>hopSize</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>hopSize</em></dt>
+      <dd><p>Size of hop [Default Value: 512]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFFTProcessor.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalSizeOfFFT:" title="setOptionalSizeOfFFT:"></a>
+  <h3 class="subsubtitle method-title">setOptionalSizeOfFFT:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional size of fft</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalSizeOfFFT:(AKConstant *)<em>sizeOfFFT</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>sizeOfFFT</em></dt>
+      <dd><p>FFT size- must be a factor of 2. [Default Value: 2048]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFFTProcessor.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalTimeRatio:" title="setOptionalTimeRatio:"></a>
+  <h3 class="subsubtitle method-title">setOptionalTimeRatio:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional time ratio</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalTimeRatio:(AKParameter *)<em>timeRatio</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>timeRatio</em></dt>
+      <dd><p>Time Scaling ratio, &lt; 1 stretches, > 1 contracts. Updated at Control-rate. [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFFTProcessor.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+          
+        </div>
+      </div>
