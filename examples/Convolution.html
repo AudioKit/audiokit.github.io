@@ -62,16 +62,17 @@ wellConv  = [[AKConvolution alloc] initWithInput:loop.rightOutput
 <p>and mix the results:</p>
 
 {% highlight objective-c %}
-AKMixedAudio *balance;
-balance = [[AKMixedAudio alloc] initWithSignal1:dishConv
-                                        signal2:wellConv
-                                        balance:_dishWellBalance];
+AKMix *balance;
+balance = [[AKMix alloc] initWithInput1:dishConv
+                                 input2:wellConv
+                                balance:_dishWellBalance];
 [self connect:balance];
 
-AKMixedAudio *dryWet;
-dryWet = [[AKMixedAudio alloc] initWithSignal1:loop.leftOutput
-                                       signal2:balance
-                                       balance:_dryWetBalance];
+
+AKMix *dryWet;
+dryWet = [[AKMix alloc] initWithInput1:loop.leftOutput
+                                input2:balance
+                               balance:_dryWetBalance];
 [self connect:dryWet];
 {% endhighlight %}
 

@@ -13,13 +13,14 @@ This example demonstrates a simpler harmonzier, with the input signal being the 
 let microphone: AKAudioInput = AKAudioInput ()
 connect (microphone)
 
-let fsig1 = AKFSignalFromMonoAudio(
-    audioSource: microphone,
+let microphoneFFT = AKFFT(
+    input: microphone,
     fftSize: 2048.ak,
     overlap: 256.ak,
-    windowType: kVonHannWindow,
-    windowFilterSize: 2048.ak)
-connect(fsig1)
+    windowType: AKFFTWindowType.VonHann,
+    windowFilterSize: 2048.ak
+)
+connect(microphoneFFT)
 {% endhighlight %}
 
 <p>Notice that float and integers can't be directly used, they need to be converted into AudioKit constant parameters, which is simple done by append <code>.ak</code> to the end of the number.  This analagous to the Objective-C function <code>akp()</code>.</p>

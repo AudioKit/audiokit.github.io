@@ -13,12 +13,12 @@ This example demonstrates a simple harmonzier, with the input signal being the d
 AKAudioInput *microphone = [[AKAudioInput alloc] init];
 [self connect:microphone];
 
-AKFSignalFromMonoAudio *microphoneFFT;
-microphoneFFT = [[AKFSignalFromMonoAudio alloc] initWithAudioSource:microphone
-                                                            fftSize:akpi(2048)
-                                                            overlap:akpi(256)
-                                                         windowType:AKFSignalFromMonoAudioWindowTypeVonHann
-                                                   windowFilterSize:akpi(2048)];
+AKFFT *microphoneFFT;
+microphoneFFT = [[AKFFT alloc] initWithInput:microphone
+                                     fftSize:akpi(2048)
+                                     overlap:akpi(256)
+                                  windowType:AKFFTWindowTypeVonHann
+                            windowFilterSize:akpi(2048)];
 [self connect:microphoneFFT];
 {% endhighlight %}
 
