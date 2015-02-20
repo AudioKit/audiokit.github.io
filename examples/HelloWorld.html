@@ -53,20 +53,20 @@ AKInstrument *instrument;
 Inside the "viewDidLoad" method is a good place in the lifecycle of this app to create the internals of the instrument.  Here we first allocate the memory and then create and connect an AKOscillator to that instrument.  At this point, the instrument contains an oscillator, but nothing is connect to the audio output, so we also need to create an AKAudioOutput operation that takes the oscillator's output and sends it to your speakers.
 </p>
 {% highlight objective-c %}
-    // STEP 3 : Define the instrument as a simple oscillator
-    instrument = [[AKInstrument alloc] init];
-    AKOscillator *oscillator = [AKOscillator oscillator];
-    [instrument connect:oscillator];
-    AKAudioOutput *output = [[AKAudioOutput alloc] initWithAudioSource:oscillator];
-    [instrument connect:output];
+// STEP 3 : Define the instrument as a simple oscillator
+instrument = [[AKInstrument alloc] init];
+AKOscillator *oscillator = [AKOscillator oscillator];
+[instrument connect:oscillator];
+AKAudioOutput *output = [[AKAudioOutput alloc] initWithAudioSource:oscillator];
+[instrument connect:output];
 {% endhighlight %}
 
 <p>Now that your instrument is created, it can be added to the orchestra.  This lets AudioKit know that the instrument is fully defined and ready to be played.  Since is the only instrument in our orchestra, we start the orchestra right after we add the instrument.
 </p>
 {% highlight objective-c %}
-    // STEP 4 : Add the instrument to the orchestra and start the orchestra
-    [AKOrchestra addInstrument:instrument];
-    [AKOrchestra start];
+// STEP 4 : Add the instrument to the orchestra and start the orchestra
+[AKOrchestra addInstrument:instrument];
+[AKOrchestra start];
 {% endhighlight %}
 <p>
 If you had other instruments, you would create and them here before starting the orchestra.
