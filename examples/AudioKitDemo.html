@@ -1,0 +1,39 @@
+---
+title: AudioKit Examples - AudioKitDemo
+header: Audio Kit Demo
+permalink: /examples/AudioKitDemo/
+layout: examples
+last-review-date: 2015/02/21
+---
+
+<div class="cd-iphone-5s cd-silver hide-on-tablets-and-smaller" style="margin-left: 1em; float: right">
+  <div class="cd-body">
+    <div class="cd-sound"></div>
+    <div class="cd-sleep"></div>
+    <div class="cd-camera"></div>
+    <div class="cd-ear"></div>
+    <div class="cd-home"></div>
+    <div class="cd-screen">
+      <video controls class="cd-fill">
+        <source src="https://dl.dropboxusercontent.com/u/31568349/movies/AudioKitDemo.m4v" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</div>
+
+<p>
+There are only two packaged examples that come with AudioKit.  The first example is Hello World, which is great for getting you started with AudioKit.  The second example project is the AudioKitDemo and it actually shows off quite a few features of AudioKit that fall under three main categories: synthesis, processing, and analysis.  Each category is represented as one folder in the project and one tab bar item in the app.
+</p>
+
+<h2>Synthesis</h2>
+
+<p>There are many different synthesis tools inside AudioKit, but for this example we are only highlighting two: FM Synthesis and Physical Modeling.  Depending on where you press the rectangular boxes you will hear different parameters sent to the instruments to play different sounds.  We may add more synthesis examples over time, but this is enough of a demo to get you started. </p>
+
+<h2>Processing</h2>
+
+<p>The processing part of the app plays an audio loop and allows the user to alter the direction, speed, and pitch of the playback.  Then the output is convolved with two different impulse response files which can be mixed.</p>
+
+<h2>Analysis</h2>
+
+<p>The analysis portion processes the microphone input to determine the frequency and amplitude of the incoming sound.  The frequency is then compared to a list of known frequencies to display the musical notation of the sound's pitch.</p>
