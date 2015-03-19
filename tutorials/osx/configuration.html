@@ -49,25 +49,14 @@ Because this is an Objective-C project, you'll also need to delete the Swift fol
 <img src=/images/macBuildPhases6.png style="width:100%; max-width:677px">
 </p>
 
-<p>Change the Shell to <code>/bin/bash</code> and past in this shell script:</p>
+<p>Change the Shell to <code>/bin/bash</code> and paste in this shell script:</p>
 {% highlight bash %}
-EXECFILE=${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}
-LIBPATH=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}".app/Contents/Frameworks/CsoundLib64.framework/Versions/6.0"
-NEWLIBPATH="@loader_path/../Frameworks/CsoundLib64.framework/Versions/6.0"
-
-# space separated list of libraries
-TARGETS="CsoundLib64"
-for TARGET in ${TARGETS} ; do
-LIBFILE=${LIBPATH}/${TARGET}
-TARGETID=`otool -DX "${LIBPATH}/$TARGET"`
-NEWTARGETID=${NEWLIBPATH}/${TARGET}
-install_name_tool -id "${NEWTARGETID}" "${LIBFILE}"
-install_name_tool -change "${TARGETID}" "${NEWTARGETID}" "${EXECFILE}"
+install_name_tool -change CsoundLib64.framework/Versions/6.0/CsoundLib64 @executable_path/../Frameworks/CsoundLib64.framework/Versions/6.0/CsoundLib64 $TARGET_BUILD_DIR/$EXECUTABLE_PATH
 done
 {% endhighlight %}
-<p>So that your run script phase looks like:</p>
+<!-- <p>So that your run script phase looks like:</p>
 <p>
 <img src=/images/macBuildPhases7.png style="width:100%; max-width:1119px">
-</p>
+</p> -->
 
 <p>Congratulations, your application should now be set up to include everything it needs to run AudioKit.  You should now be able to follow the AudioKit tutorials for either Objective-C or Swift.</p>
