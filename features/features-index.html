@@ -2,33 +2,51 @@
 title: AudioKit Features
 header: Features
 permalink: /features/
-layout: features
+layout: side_navigation
 ---
 
-<a name="open_source"></a>
-<h2>Open-Source Community Driven</h2>
-<p>We made AudioKit open-source because we believe that clear, powerful audio development is best developed and maintained through a large, active base of developers and users. Our core code, tests, examples, and website are all available for contributions.  If you’re interested in contributing to AudioKit, you can <a href="mailto:audiokit@audiokit.io">email us</a> directly,  <a href="https://twitter.com/AudioKitMan">follow us on Twitter</a>, or post to the <a href="https://groups.google.com/forum/#!forum/audiokit">forum</a>.
-</p>
 
-<p>
-<img src=/images/contributions.png style="width:75%; max-width:1100px">
-</p>
 
-<a name="well_named"></a>
-<h2>Well-Named Classes and Parameters</h2>
+<div class="col_one_third nobottommargin">
 
-<p>
-We value clarity and beauty in code, which is why AudioKit utilizes well-named classes and parameters. Tradional Music-N style audio languages are charactertized by succinctness at the expense of clarity. As a result, the code is often unclear and difficult to understand, especially as instruments grow more complex. The code below shows the creation and initialization of an FM oscillator in both Music-N and AudioKit; you be the judge. </p>
+    <ul class="sidenav">
+        <li class="ui-tabs-active"><a href="#open-source"><i class="icon-screen"></i>Open-Source<i class="icon-chevron-right"></i></a></li>
+        <li><a href="#englishy"><i class="icon-magic"></i>Well-Named Classes and Parameters<i class="icon-chevron-right"></i></a></li>
+        <li><a href="#sensible-defaults"><i class="icon-tint"></i>Sensible Defaults<i class="icon-chevron-right"></i></a></li>
+        <li><a href="#xcode-integration"><i class="icon-gift"></i>Tight Xcode Integration<i class="icon-chevron-right"></i></a></li>
+        <li><a href="#examples-tests"><i class="icon-adjust"></i>Many Examples and Tests<i class="icon-chevron-right"></i></a></li>
+        <li><a href="#operations"><i class="icon-adjust"></i>100+ Operations<i class="icon-chevron-right"></i></a></li>
+        <li><a href="#sequences"><i class="icon-adjust"></i>Powerful Sequencing<i class="icon-chevron-right"></i></a></li>
+        <li><a href="#utilities"><i class="icon-adjust"></i>High-level Utilities<i class="icon-chevron-right"></i></a></li>
+    </ul>
 
-<div class="hide-on-mobiles">
-<table><thead><tr><th><center>Music-N</center></th><th>AudioKit</th></tr></thead>
-<tr>
-  <td>
-{% highlight bash %}
-asig foscili 1, 440, 1, 2, 3
-{% endhighlight %}
-  </td>
-  <td>
+</div>
+
+<div class="col_two_third col_last nobottommargin">
+
+    <div id="open-source">
+        <h3>Open-Source Community Driven</h3>
+        <p>We made AudioKit open-source because we believe that clear, powerful audio development is best developed and maintained through a large, active base of developers and users. Our core code, tests, examples, and website are all available for contributions.  If you’re interested in contributing to AudioKit, you can <a href="mailto:audiokit@audiokit.io">email us</a> directly,  <a href="https://twitter.com/AudioKitMan">follow us on Twitter</a>, or post to the <a href="https://groups.google.com/forum/#!forum/audiokit">forum</a>.</p>
+        <p>
+        <img src=contributions.png style="width:100%; max-width:1100px">
+        </p>
+    </div>
+
+    <div id="englishy">
+        <h3>Well-Named Classes and Parameters</h3>
+        <p>We value clarity and beauty in code, which is why AudioKit utilizes well-named classes and parameters. Tradional Music-N style audio languages are charactertized by succinctness at the expense of clarity. As a result, the code is often unclear and difficult to understand, especially as instruments grow more complex. The code below shows the creation and initialization of an FM oscillator in both Music-N and AudioKit; you be the judge.</p>
+
+        <table class="table table-bordered"><thead><tr><th>Music-N</th></tr></thead>
+        <tr>
+          <td>
+        {% highlight bash %}
+        asig foscili 1, 440, 1, 2, 3
+        {% endhighlight %}
+          </td>
+          </tr>
+          <thead><tr><th>AudioKit</th></tr></thead>
+          <tr>
+          <td>
 {% highlight objective-c %}
 [[AKFMOscillator alloc] initWithFunctionTable:[AKManager standardSineWave]
                                 baseFrequency:akp(440)
@@ -37,51 +55,22 @@ asig foscili 1, 440, 1, 2, 3
                               modulationIndex:akp(3)
                                     amplitude:akp(1)];
 {% endhighlight %}
-  </td>
-</tr>
-</table>
-</div>
+          </td>
+        </tr>
+        </table>
+    </div>
 
-<div class="show-on-mobiles">
-<table><thead><tr><th><center>Music-N</center></th></tr></thead>
-<tr>
-  <td>
-{% highlight bash %}
-asig foscili 1, 440, 1, 2, 3
-{% endhighlight %}
-  </td>
-  </tr>
-  <thead><tr><th>AudioKit</th></tr></thead>
-  <tr>
-  <td>
-{% highlight objective-c %}
-[[AKFMOscillator alloc] initWithFunctionTable:[AKManager standardSineWave]
-                                baseFrequency:akp(440)
-                            carrierMultiplier:akp(1)
-                         modulatingMultiplier:akp(2)
-                              modulationIndex:akp(3)
-                                    amplitude:akp(1)];
-{% endhighlight %}
-  </td>
-</tr>
-</table>
-</div>
+    <div id="sensible-defaults">
+        <h3>Sensible Defaults</h3>
+        <p>Sensible defaults allow you to create an AudioKit object without having to guess what initial values are appropriate—when you create an object, the parameter values will automatically be set to values that make sense. Of course, just as before, you can specify the value of all parameters in the init function, or use the defaults and change the values using properties.</p>
 
+        <p>As an example, many physical models sound best with specific parameters that you will always want, so for a canonical sleighbell sound, you can use the simplified version on the right:</p>
+        <p>
 
-
-
-<a name="sensible_defaults"></a>
-<h2>Sensible Defaults</h2>
-<p>Sensible defaults allow you to create an AudioKit object without having to guess what initial values are appropriate—when you create an object, the parameter values will automatically be set to values that make sense. Of course, just as before, you can specify the value of all parameters in the init function, or use the defaults and change the values using properties.
-</p>
-
-<p>As an example, many physical models sound best with specific parameters that you will always want, so for a canonical sleighbell sound, you can use the simplified version on the right:</p>
-<p>
-
-<div class="hide-on-mobiles">
-<table><thead><tr><th><center>Full Initialization</center></th><th>Sensible Defaults</th></tr></thead>
-<tr>
-  <td rowspan=2>
+        <div class="hide-on-mobiles">
+        <table class="table table-bordered"><thead><tr><th>Full Initialization</th><th>Sensible Defaults</th></tr></thead>
+        <tr>
+          <td rowspan=2>
 {% highlight objective-c %}
 [[AKSleighbells alloc]initWithIntensity:akp(32)
                           dampingFactor:akp(0.2)
@@ -89,286 +78,255 @@ asig foscili 1, 440, 1, 2, 3
                  firstResonantFrequency:akp(5300)
                 secondResonantFrequency:akp(6500)];
 {% endhighlight %}
-  </td>
-  <td>
-    <b>Objective-C:</b><br>
-{% highlight objective-c %}
-[AKSleighbells sleighbells];
-{% endhighlight %}
-  </td>
-</tr>
-<tr>
-  <td>
+          </td>
+          <td>
+            <b>Objective-C:</b><br>
+        {% highlight objective-c %}
+        [AKSleighbells sleighbells];
+        {% endhighlight %}
+          </td>
+        </tr>
+        <tr>
+          <td>
 
-    <b>Swift:</b><br>
-{% highlight swift%}
-AKSleighbells();
-{% endhighlight %}
-  </td>
-</tr>
-</table>
-</div>
-
-<div class="show-on-mobiles">
-<table><thead><tr><th><center>Full Initialization</center></th></tr></thead>
-<tr>
-  <td rowspan=2>
-{% highlight objective-c %}
-[[AKSleighbells alloc]initWithIntensity:akp(32)
-                          dampingFactor:akp(0.2)
-                  mainResonantFrequency:akp(2500)
-                 firstResonantFrequency:akp(5300)
-                secondResonantFrequency:akp(6500)];
-{% endhighlight %}
-  </td>
-  </tr>
-  <thead><tr><th>Sensible Defaults</th></tr></thead>
-  <tr>
-  <td>
-    <b>Objective-C:</b><br>
-{% highlight objective-c %}
-[AKSleighbells sleighbells];
-{% endhighlight %}
-  </td>
-</tr>
-<tr>
-  <td>
-
-    <b>Swift:</b><br>
-{% highlight swift%}
-AKSleighbells();
-{% endhighlight %}
-  </td>
-</tr>
-</table>
-</div>
+            <b>Swift:</b><br>
+        {% highlight swift%}
+        AKSleighbells();
+        {% endhighlight %}
+          </td>
+        </tr>
+        </table>
+        </div>
 
 
-<a name="documentation"></a>
-<a name="xcode_integration"></a>
-<h2>Tight Xcode Integration</h2>
+    </div>
 
-<h3>Write all your code in one place</h3>
-<p>
-High-level audio programming is often done in a complete separate environment from general application programming. With AudioKit, your audio programming is done in the same language that your application is written in. You only need one program and one language for both audio and app logic implementation.
-</p>
+    <div id="xcode-integration">
+        <h3>Tight Xcode Integration</h3>
+        <h4>Write all your code in one place</h4>
+        <p>
+        High-level audio programming is often done in a complete separate environment from general application programming. With AudioKit, your audio programming is done in the same language that your application is written in. You only need one program and one language for both audio and app logic implementation.
+        </p>
 
-<h3>Easy Installation</h3>
-<p>
-First and foremost, we strive to make AudioKit very easy to install.  The examples should work out-of-the-box without any additional configuration.  When starting an iOS project from scratch, installing AudioKit is accomplished by dragging the AudioKit folder into your Xcode project and removing the parts you don't need.  For OSX applications, the process is a bit more complex, but an in-depth tutorial will walk you through it.</p>
+        <h4>Easy Installation</h4>
+        <p>
+        First and foremost, we strive to make AudioKit very easy to install.  The examples should work out-of-the-box without any additional configuration.  When starting an iOS project from scratch, installing AudioKit is accomplished by dragging the AudioKit folder into your Xcode project and removing the parts you don't need.  For OSX applications, the process is a bit more complex, but an in-depth tutorial will walk you through it.</p>
 
-<h3>Clear Documentation and Common File Templates</h3>
-<p>
-Complete <a href="/tutorials/xcode">Xcode documentation</a> is accomplished with both in-line documentation, and through a downloadable docset.  Xcode will provide on-the-fly pop-overs, code completion, and class information for all AudioKit objects, so you can easily access that information while you’re still in Xcode. In addition, we’ve made several file templates for both Objective-C and Swift.
-</p>
+        <h4>Clear Documentation and Common File Templates</h4>
+        <p>
+        Complete <a href="/tutorials/xcode">Xcode documentation</a> is accomplished with both in-line documentation, and through a downloadable docset.  Xcode will provide on-the-fly pop-overs, code completion, and class information for all AudioKit objects, so you can easily access that information while you’re still in Xcode. In addition, we’ve made several file templates for both Objective-C and Swift.
+        </p>
 
-<p>
-<table><thead><tr><th width><center>Documentation</center></th><th>Xcode Templates</th></tr></thead>
-<tr>
-  <td><center>
-<img src=/images/dashcode.png style="width: 100%">
-</center>
-  </td>
-  <td><center>
-<img src=/images/FileTemplates.png style="width: 100%">
-</center>
-  </td>
-</tr>
-</table>
-</p>
+        <p>
+        <table class="table table-bordered"><thead><tr><th width>Documentation</th><th>Xcode Templates</th></tr></thead>
+        <tr>
+          <td><center>
+        <img src=/images/dashcode.png style="width: 100%">
+        </center>
+          </td>
+          <td><center>
+        <img src=/images/FileTemplates.png style="width: 100%">
+        </center>
+          </td>
+        </tr>
+        </table>
+        </p>
+    </div>
 
+    <div id="examples-tests">
+        <h3>Many Examples and Tests</h3>
+        <p>We're passionate about our tests because they allow us to build upon our code without worrying that we'll break anything along the way!  Here's a video showing how we use tests and how you can as well:</p>
+        <div class="videoWrapper">
+          <iframe src="//player.vimeo.com/video/115951284" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="gallery-movie"></iframe>
+        </div>
 
-</p>
-<a name="tests"></a>
-<h2>Many Examples and Tests</h2>
+        <a name="examples"></a>
+        <h3>Examples</h3>
+        <p>
+        We've included two example projects into the main AudioKit repository. The first is a "Hello World" project that consists of a simple sine-wave oscillator. The second example shows how AudioKit can be utilized in an audio synthesis, processing, or analysis context.
+        </p>
 
-<h3>Tests</h3>
-<p>We're passionate about our tests because they allow us to build upon our code without worrying that we'll break anything along the way!  Here's a video showing how we use tests and how you can as well:</p>
-<div class="videoWrapper">
-  <iframe src="//player.vimeo.com/video/115951284" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="gallery-movie"></iframe>
-</div>
+        </p>
+        We've also compiled several examples in both Objective-C and Swift for iOS and OSX into an  <a href="https://github.com/audiokit/Examples">external repository</a>. We encourage the community to add their own examples to this as well.
+        </p>
 
-<a name="examples"></a>
-<h3>Examples</h3>
-<p>
-We've included two example projects into the main AudioKit repository. The first is a "Hello World" project that consists of a simple sine-wave oscillator. The second example shows how AudioKit can be utilized in an audio synthesis, processing, or analysis context. 
-</p>
+        <p>
+        Additionally, we have many <a href="/tutorials/">tutorials</a> to help you get started using AudioKit right away.
+        </p>
 
-</p>
-We've also compiled several examples in both Objective-C and Swift for iOS and OSX into an  <a href="https://github.com/audiokit/Examples">external repository</a>. We encourage the community to add their own examples to this as well. 
-</p>
+        <table class="table table-bordered">
+        <thead>
+        <th>Example</th>
+        <th>iOS (Obj-C)</th>
+        <th>iOS (Swift)</th>
+        <th>Mac (Obj-C)</th>
+        <th>Mac (Swift)</th>
+        </tr></thead>
+        </tr>
 
-<p>
-Additionally, we have many <a href="/tutorials/">tutorials</a> to help you get started using AudioKit right away.
-</p>
+        <tr>
+        <td><a href="/examples/ContinuousControl">Continuous Control</a></td>
+         <td align="center">✓</td>
+         <td align="center">&nbsp;</td>
+         <td align="center">✓</td>
+         <td align="center">&nbsp;</td>
+        </tr>
 
-<table>
-<thead>
-<th>Example</th>
-<th>iOS (Obj-C)</th>
-<th>iOS (Swift)</th>
-<th>Mac (Obj-C)</th>
-<th>Mac (Swift)</th>
-</tr></thead>
-</tr>
+        <tr>
+        <td><a href="/examples/Convolution">Convolution</a></td>
+         <td align="center">✓</td>
+         <td align="center">✓</td>
+         <td align="center">✓</td>
+         <td align="center">✓</td>
+        </tr>
 
-<tr>
-<td><a href="/examples/ContinuousControl">Continuous Control</a></td>
- <td align="center">✓</td>
- <td align="center">&nbsp;</td>
- <td align="center">✓</td>
- <td align="center">&nbsp;</td>
-</tr>
+        <tr>
+        <td><a href="/examples/swift/FMOscillator/">FM Oscillator</a></td>
+         <td align="center">&nbsp;</td>
+         <td align="center">✓</td>
+         <td align="center">&nbsp;</td>
+         <td align="center">&nbsp;</td>
+        </tr>
 
-<tr>
-<td><a href="/examples/Convolution">Convolution</a></td>
- <td align="center">✓</td>
- <td align="center">✓</td>
- <td align="center">✓</td>
- <td align="center">✓</td>
-</tr>
+        <tr>
+        <td><a href="/examples/GranularSynthesis">Granular Synthesis</a></td>
+         <td align="center">✓</td>
+         <td align="center">✓</td>
+         <td align="center">&nbsp;</td>
+         <td align="center">&nbsp;</td>
+        </tr>
 
-<tr>
-<td><a href="/examples/swift/FMOscillator/">FM Oscillator</a></td>
- <td align="center">&nbsp;</td>
- <td align="center">✓</td>
- <td align="center">&nbsp;</td>
- <td align="center">&nbsp;</td>
-</tr>
+        <tr>
+        <td><a href="/examples/Harmonizer">Harmonizer</a></td>
+         <td align="center">✓</td>
+         <td align="center">✓</td>
+         <td align="center">&nbsp;</td>
+         <td align="center">&nbsp;</td>
+        </tr>
 
-<tr>
-<td><a href="/examples/GranularSynthesis">Granular Synthesis</a></td>
- <td align="center">✓</td>
- <td align="center">✓</td>
- <td align="center">&nbsp;</td>
- <td align="center">&nbsp;</td>
-</tr>
+        <tr>
+        <td><a href="/examples/Keyboard">Keyboard</a></td>
+         <td align="center">✓</td>
+         <td align="center">✓</td>
+         <td align="center">&nbsp;</td>
+         <td align="center">&nbsp;</td>
+        </tr>
 
-<tr>
-<td><a href="/examples/Harmonizer">Harmonizer</a></td>
- <td align="center">✓</td>
- <td align="center">✓</td>
- <td align="center">&nbsp;</td>
- <td align="center">&nbsp;</td>
-</tr>
+        <tr>
+        <td><a href="/examples/PlayAudioFile">Play Audio File</a></td>
+         <td align="center">✓</td>
+         <td align="center">&nbsp;</td>
+         <td align="center">✓</td>
+         <td align="center">&nbsp;</td>
+        </tr>
 
-<tr>
-<td><a href="/examples/Keyboard">Keyboard</a></td>
- <td align="center">✓</td>
- <td align="center">✓</td>
- <td align="center">&nbsp;</td>
- <td align="center">&nbsp;</td>
-</tr>
+        <tr>
+        <td><a href="/examples/Sequences">Sequences</a></td>
+         <td align="center">✓</td>
+         <td align="center">&nbsp;</td>
+         <td align="center">✓</td>
+         <td align="center">&nbsp;</td>
+        </tr>
 
-<tr>
-<td><a href="/examples/PlayAudioFile">Play Audio File</a></td>
- <td align="center">✓</td>
- <td align="center">&nbsp;</td>
- <td align="center">✓</td>
- <td align="center">&nbsp;</td>
-</tr>
+        <tr>
+        <td><a href="/examples/SongLibraryPlayer">Song Library Player</a></td>
+         <td align="center">✓</td>
+         <td align="center">&nbsp;</td>
+         <td align="center">&nbsp;</td>
+         <td align="center">&nbsp;</td>
+        </tr>
 
-<tr>
-<td><a href="/examples/Sequences">Sequences</a></td>
- <td align="center">✓</td>
- <td align="center">&nbsp;</td>
- <td align="center">✓</td>
- <td align="center">&nbsp;</td>
-</tr>
+        <tr>
+        <td><a href="/examples/TouchRegions">Touch Regions</a></td>
+         <td align="center">✓</td>
+         <td align="center">&nbsp;</td>
+         <td align="center">&nbsp;</td>
+         <td align="center">&nbsp;</td>
+        </tr>
+        </table>
 
-<tr>
-<td><a href="/examples/SongLibraryPlayer">Song Library Player</a></td>
- <td align="center">✓</td>
- <td align="center">&nbsp;</td>
- <td align="center">&nbsp;</td>
- <td align="center">&nbsp;</td>
-</tr>
+    </div>
 
-<tr>
-<td><a href="/examples/TouchRegions">Touch Regions</a></td>
- <td align="center">✓</td>
- <td align="center">&nbsp;</td>
- <td align="center">&nbsp;</td>
- <td align="center">&nbsp;</td>
-</tr>
-</table>
+    <div id="operations">
+        <h3>Many Operations</h3>
+        <p>AudioKit has over 100 operations, including oscillators, physical models, reverbs, filters, and synthesizers.  They are well-named and have named parameters, and we're working to make each operation fully-tested with sensible defaults.  The operations are categorized into folders as follows:</p>
 
+        <table class="table table-bordered"><thead><th>Category</th><th>Description</th></tr></thead>
+        <tr>
+        <td><a href="/operations/analysis/">Analysis</td>
+         <td>Tracking classes that determine the amplitude and frequency of signals.
+        </td>
+        </tr>
 
-<a name="operations"></a>
-<h2>100+ Operations</h2>
-<p>AudioKit has over 100 operations, including oscillators, physical models, reverbs, filters, and synthesizers.  They are well-named and have named parameters, and we're working to make each operation fully-tested with sensible defaults.  The operations are categorized into folders as follows:</p>
+        <tr>
+        <td><a href="/operations/fft/">FFT</td>
+         <td>Spectral functions including cross synthesis, mixing, scaling, warping, and resynthesis.
+        </td>
+        </tr>
 
-<table><thead><th>Category</th><th>Description</th></tr></thead>
-<tr>
-<td><a href="/operations/analysis/">Analysis</td>
- <td>Tracking classes that determine the amplitude and frequency of signals.
-</td>
-</tr>
+        <tr>
+        <td><a href="/operations/math/">Mathematical Operations</td>
+         <td>Basic operations such as scaling, mixing, summing, and multiplication of signals.
+        </td>
+        </tr>
 
-<tr>
-<td><a href="/operations/fft/">FFT</td>
- <td>Spectral functions including cross synthesis, mixing, scaling, warping, and resynthesis.
-</td>
-</tr>
+        <tr>
+        <td><a href="/operations/signal-generators/">Signal Generators</td>
+         <td>Classes for physical models, oscillators, linear controls, granular synthesis textures.
+        </td>
+        </tr>
 
-<tr>
-<td><a href="/operations/math/">Mathematical Operations</td>
- <td>Basic operations such as scaling, mixing, summing, and multiplication of signals.
-</td>
-</tr>
+        <tr>
+        <td><a href="/operations/signal-io/">Signal Input and Output</td>
+         <td>Classes for handling incoming audio from devices and files as well as outputting audio to a speaker or files.
+        </td>
+        </tr>
 
-<tr>
-<td><a href="/operations/signal-generators/">Signal Generators</td>
- <td>Classes for physical models, oscillators, linear controls, granular synthesis textures.
-</td>
-</tr>
+        <tr>
+        <td><a href="/operations/signal-modifiers/">Signal Modifiers</td>
+         <td>Effects such as convolution, delay, compression, flange, vibrato, reverb, panning, and many filters.
+        </td>
+        </tr>
 
-<tr>
-<td><a href="/operations/signal-io/">Signal Input and Output</td>
- <td>Classes for handling incoming audio from devices and files as well as outputting audio to a speaker or files.
-</td>
-</tr>
+        </table>
+    </div>
 
-<tr>
-<td><a href="/operations/signal-modifiers/">Signal Modifiers</td>
- <td>Effects such as convolution, delay, compression, flange, vibrato, reverb, panning, and many filters.
-</td>
-</tr>
+    <div id="sequences">
+        <h3>Powerful Sequences and Phrases</h3>
+        <p>The sequencer in AudioKit is remarkable because it is not just limited to musical events.  Music logic and app logic can appear side-by-side in events triggered by sequences.  As a simple example, you can process the iPhone's sensor information and create audio events on the fly within a sequence.  Alternatively, you can use musical events to trigger iOS functions like drawing graphics on the screen or even posting to Twitter.</p>
+        <p>
+        When you don't need all that power, you can use the simpler syntax of phrases instead of sequences to play a series of notes on a given instrument.
+        </p>
+    </div>
 
-</table>
-
-
-<a name="sequences"></a>
-<h2>Powerful Sequences and Phrases</h2>
-
-<p>
-The sequencer in AudioKit is remarkable because it is not just limited to musical events.  Music logic and app logic can appear side-by-side in events triggered by sequences.  As a simple example, you can process the iPhone's sensor information and create audio events on the fly within a sequence.  Alternatively, you can use musical events to trigger iOS functions like drawing graphics on the screen or even posting to Twitter.
-</p>
-<p>
-When you don't need all that power, you can use the simpler syntax of phrases instead of sequences to play a series of notes on a given instrument.
-</p>
-
-<a name="utilities"></a>
-<h2>High-level Utilities</h2>
-<p>AudioKit includes several built-in, high-level utilities. Right now, these are a sampler, pitch-tracker, and a level meter. We'll be including more soon.
-</p>
-<p>
-As an example, this how easy it is to implement an multi-track sampler in AudioKit:
-</p>
+    <div id="utilities">
+        <h3>High-level Utilities</h3>
+        <p>AudioKit includes several built-in, high-level utilities. Right now, these are a sampler, pitch-tracker, and a level meter. We'll be including more soon.</p>
+        <p>
+        As an example, this how easy it is to implement an multi-track sampler in AudioKit:
+        </p>
 
 {% highlight objective-c %}
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    sampler = [[AKSampler alloc] init];
+[super viewDidLoad];
+sampler = [[AKSampler alloc] init];
 }
 
 - (IBAction)startRecording:(id)sender onTrack:(NSString *)trackName {
-    [sampler startRecordingToTrack:trackName];
+[sampler startRecordingToTrack:trackName];
 }
 - (IBAction)stopRecording:(id)sender onTrack:(NSString *)trackName {
-    [sampler stopRecordingToTrack:trackName];
+[sampler stopRecordingToTrack:trackName];
 }
 {% endhighlight %}
+    </div>
+
+</div>
+
+
+
+
+
 
 
 

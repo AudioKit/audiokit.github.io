@@ -1,6 +1,10 @@
 {% include top.html %}
 
-<body class="wrap">
+<body class="stretched">
+    <!-- Document Wrapper
+    ============================================= -->
+    <div id="wrapper" class="clearfix">
+
   {% include header.html %}
 
   {{ content }}
@@ -18,5 +22,16 @@
   ga('send', 'pageview');
 
 </script>
+
+    </div><!-- #wrapper end -->
+
+    <!-- Go To Top
+    ============================================= -->
+    <div id="gotoTop" class="icon-angle-up"></div>
+
+    <!-- Footer Scripts
+    ============================================= -->
+    <script type="text/javascript" src="/js/functions.js"></script>
+
 </body>
 </html>

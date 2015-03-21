@@ -1,0 +1,50 @@
+---
+layout: default
+section: features
+---
+
+<!-- Page Title
+============================================= -->
+<section id="page-title">
+
+    <div class="container clearfix">
+        <h1>
+          {% if page.header != '' %}
+            {{ page.header }}
+          {% else %}
+            {{ page.title }}
+          {% endif %}
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li class="active">
+              {% if page.header != '' %}
+                {{ page.header }}
+              {% else %}
+                {{ page.title }}
+              {% endif %}
+            </li>
+        </ol>
+    </div>
+
+</section><!-- #page-title end -->
+<section id="content">
+
+    <div class="content-wrap">
+
+        <div class="container clearfix">
+            <div id="side-navigation">
+                {{ content }}
+                <script>
+                  $(function() {
+                    $( "#side-navigation" ).tabs({ show: { effect: "fade", duration: 400 } });
+                  });
+                </script>
+            </div>
+        </div>
+
+    </div>
+
+</section><!-- #content end -->
+
+
