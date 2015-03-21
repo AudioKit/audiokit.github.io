@@ -7,7 +7,7 @@ prev_section: /tutorials/first-instrument/
 next_section:
 ---
 <p>
-You can either follow along step by step, or take a look at the completed example project here: <a href="https://github.com/audiokit/UserInteractionTutorial">UserInteractionTutorial Project</a>. 
+You can either follow along step by step, or take a look at the completed example project here: <a href="https://github.com/audiokit/UserInteractionTutorial">UserInteractionTutorial Project</a>.
 </p>
 
 <p>
@@ -18,23 +18,23 @@ Now that we've learned how how to make an instrument with AudioKit, we're going 
 First, if you're using Xcode6, you can go ahead and delete "LaunchScreen.xib", as we won't be needing that file. Next, add a label above your switch, and name it "On/Off". Now we're going to add some UISliders. Add some labels above your sliders as well. When you're done, your screen should look something like this:
 </p>
 
-<img src=/images/UIScreen.png style="width:100%; max-width:476px">
+<img src=/tutorials/UIScreen.png style="width:100%; max-width:476px">
 
 <p>
 Now we're going to set the value ranges for our sliders. Make sure the Xcode Utilities pane is visible.Click on the Frequency slider, and add the values shown below
 </p>
 
-<img src=/images/utilitiesPane.png style="width:100%; max-width:258px">
+<img src=/tutorials/utilitiesPane.png style="width:100%; max-width:258px">
 
 <p>
 Click on the Carrier Multiplier slider and repeat the process. Use the same values for the Modulation Index slider.
 </p>
 
-<img src=/images/multAndModSettings.png style="width:100%; max-width:259px">
+<img src=/tutorials/multAndModSettings.png style="width:100%; max-width:259px">
 
 <p>Finally, click on the Amplitude Slider, and add the settings below:</p>
 
-<img src=/images/amplitudeSettings.png style="width:100%; max-width:254px">
+<img src=/tutorials/amplitudeSettings.png style="width:100%; max-width:254px">
 
 
 <p>
@@ -87,7 +87,7 @@ Now we're going to add these properties to our instrument. Underneath the code y
 {% endhighlight %}
 
 <p>
-Finally, we're going to connect these properties to our instrument's parameters. Add the lines below underneath where we create our instance of AKFMOscillator. 
+Finally, we're going to connect these properties to our instrument's parameters. Add the lines below underneath where we create our instance of AKFMOscillator.
 </p>
 
 {% highlight objective-c %}
