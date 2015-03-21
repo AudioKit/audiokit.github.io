@@ -2,15 +2,50 @@
 title: AudioKit Gallery Projects
 header: Gallery
 permalink: /gallery/
-layout: examples
+layout: section_index
 ---
 
-  {% for movie in site.gallery %}
-    <h2><a href="{{ movie.url }}">{{ movie.title }}</a></h2>
-  <div class="videoWrapper">
-    <iframe src="//player.vimeo.com/video/{{ movie.vimeo_id }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="gallery-movie"></iframe>
-  </div>
-  {% endfor %}
+<!-- Portfolio Items
+============================================= -->
+<div id="portfolio" class="portfolio-2 clearfix">
+
+    {% for movie in site.gallery %}
+    <article class="portfolio-item pf-graphics pf-uielements">
+        <div class="portfolio-image">
+            <a href="#">
+                <img src="/gallery/{{ movie.image }}" alt="{{ movie.title }}">
+            </a>
+            <div class="portfolio-overlay">
+                <a href="http://vimeo.com/{{ movie.vimeo_id }}" class="left-icon" data-lightbox="iframe"><i class="icon-line-play"></i></a>
+                <a href="{{ movie.url }}" class="right-icon"><i class="icon-line-ellipsis"></i></a>
+            </div>
+        </div>
+        <div class="portfolio-desc">
+            <h3><a href="{{ movie.url }}">{{ movie.title }}</a></h3>
+        </div>
+    </article>
+    {% endfor %}
+
+
+</div><!-- #portfolio end -->
+
+<!-- Portfolio Script
+============================================= -->
+<script type="text/javascript">
+
+    jQuery(window).load(function(){
+
+        var $container = $('#portfolio');
+
+        $container.isotope({ transitionDuration: '0.65s' });
+
+        $(window).resize(function() {
+            $container.isotope('layout');
+        });
+
+    });
+
+</script><!-- Portfolio Script End -->
 
 
 
