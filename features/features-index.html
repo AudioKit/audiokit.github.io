@@ -10,14 +10,16 @@ layout: side_navigation
 <div class="col_one_third nobottommargin">
 
     <ul class="sidenav">
-        <li class="ui-tabs-active"><a href="#open-source"><i class="icon-screen"></i>Open-Source<i class="icon-chevron-right"></i></a></li>
-        <li><a href="#englishy"><i class="icon-magic"></i>Well-Named Classes and Parameters<i class="icon-chevron-right"></i></a></li>
+
+        <li class="ui-tabs-active"><a href="#englishy"><i class="icon-magic"></i>Well-Named Classes and Parameters<i class="icon-chevron-right"></i></a></li>
         <li><a href="#sensible-defaults"><i class="icon-tint"></i>Sensible Defaults<i class="icon-chevron-right"></i></a></li>
         <li><a href="#xcode-integration"><i class="icon-gift"></i>Tight Xcode Integration<i class="icon-chevron-right"></i></a></li>
-        <li><a href="#examples-tests"><i class="icon-adjust"></i>Many Examples and Tests<i class="icon-chevron-right"></i></a></li>
+        <li><a href="#examples"><i class="icon-adjust"></i>Many Examples<i class="icon-chevron-right"></i></a></li>
+        <li><a href="#tests"><i class="icon-adjust"></i>Thorough Test Suite<i class="icon-chevron-right"></i></a></li>
         <li><a href="#operations"><i class="icon-adjust"></i>100+ Operations<i class="icon-chevron-right"></i></a></li>
         <li><a href="#sequences"><i class="icon-adjust"></i>Powerful Sequencing<i class="icon-chevron-right"></i></a></li>
         <li><a href="#utilities"><i class="icon-adjust"></i>High-level Utilities<i class="icon-chevron-right"></i></a></li>
+        <li><a href="#open-source"><i class="icon-screen"></i>Open-Source<i class="icon-chevron-right"></i></a></li>
     </ul>
 
 </div>
@@ -110,38 +112,27 @@ layout: side_navigation
 
         <h4>Easy Installation</h4>
         <p>
-        First and foremost, we strive to make AudioKit very easy to install.  The examples should work out-of-the-box without any additional configuration.  When starting an iOS project from scratch, installing AudioKit is accomplished by dragging the AudioKit folder into your Xcode project and removing the parts you don't need.  For OSX applications, the process is a bit more complex, but an in-depth tutorial will walk you through it.</p>
+        First and foremost, we strive to make AudioKit very easy to install.  The examples should work out-of-the-box without any additional configuration.  When starting an iOS project from scratch, installing AudioKit is accomplished by dragging the AudioKit folder into your Xcode project and removing the parts you don't need.  For OSX applications, the process is a bit more complex, but <a href="/tutorials/osx/configuration/">this tutorial</a> will walk you through it.</p>
 
-        <h4>Clear Documentation and Common File Templates</h4>
+        <h4>Clear Documentation</h4>
         <p>
         Complete <a href="/tutorials/xcode">Xcode documentation</a> is accomplished with both in-line documentation, and through a downloadable docset.  Xcode will provide on-the-fly pop-overs, code completion, and class information for all AudioKit objects, so you can easily access that information while you’re still in Xcode. In addition, we’ve made several file templates for both Objective-C and Swift.
         </p>
 
-        <p>
-        <table class="table table-bordered"><thead><tr><th width>Documentation</th><th>Xcode Templates</th></tr></thead>
-        <tr>
-          <td><center>
         <img src=/features/dashcode.png style="width: 100%">
-        </center>
-          </td>
-          <td><center>
-        <img src=/features/FileTemplates.png style="width: 100%">
-        </center>
-          </td>
-        </tr>
-        </table>
+
+
+        <h4>AudioKit-specific File Templates</h4>
+        <p>
+        We’ve made AudioKit templates for creating instruments, processors, and conductor classes available in both Objective-C and Swift.
         </p>
+        
+        <img src=/features/FileTemplates.png style="width: 100%">
+
     </div>
 
-    <div id="examples-tests">
-        <h3>Many Examples and Tests</h3>
-        <p>We're passionate about our tests because they allow us to build upon our code without worrying that we'll break anything along the way!  Here's a video showing how we use tests and how you can as well:</p>
-        <div class="videoWrapper">
-          <iframe src="//player.vimeo.com/video/115951284" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="gallery-movie"></iframe>
-        </div>
-
-        <a name="examples"></a>
-        <h3>Examples</h3>
+    <div id="examples">
+        <h3>Many Examples</h3>
         <p>
         We've included two example projects into the main AudioKit repository. The first is a "Hello World" project that consists of a simple sine-wave oscillator. The second example shows how AudioKit can be utilized in an audio synthesis, processing, or analysis context.
         </p>
@@ -247,6 +238,13 @@ layout: side_navigation
 
     </div>
 
+    <div id="tests">
+        <h3>Thorough Test Suite</h3>
+        <p>We're passionate about our tests because they allow us to build upon our code without worrying that we'll break anything along the way!  Here's a video showing how we use tests and how you can as well:</p>
+
+          <iframe src="//player.vimeo.com/video/119818435" frameborder="0" width="500" height="313" webkitallowfullscreen mozallowfullscreen allowfullscreen class="gallery-movie"></iframe>
+    </div>
+
     <div id="operations">
         <h3>Many Operations</h3>
         <p>AudioKit has over 100 operations, including oscillators, physical models, reverbs, filters, and synthesizers.  They are well-named and have named parameters, and we're working to make each operation fully-tested with sensible defaults.  The operations are categorized into folders as follows:</p>
@@ -301,24 +299,33 @@ layout: side_navigation
 
     <div id="utilities">
         <h3>High-level Utilities</h3>
-        <p>AudioKit includes several built-in, high-level utilities. Right now, these are a sampler, pitch-tracker, and a level meter. We'll be including more soon.</p>
-        <p>
-        As an example, this how easy it is to implement an multi-track sampler in AudioKit:
-        </p>
+        <p>AudioKit includes several built-in, high-level utilities that function as reusable components. These utilities will allow you to quickly add high-level features with a minimal ammount of coding. </p>
 
-{% highlight objective-c %}
-- (void)viewDidLoad {
-[super viewDidLoad];
-sampler = [[AKSampler alloc] init];
-}
+        <h4>User Interface Tools</h4>
 
-- (IBAction)startRecording:(id)sender onTrack:(NSString *)trackName {
-[sampler startRecordingToTrack:trackName];
-}
-- (IBAction)stopRecording:(id)sender onTrack:(NSString *)trackName {
-[sampler stopRecordingToTrack:trackName];
-}
-{% endhighlight %}
+        <p>With AKTools, it is very easy to tie instrument properties to user interface elements such as sliders and buttons. You can also create your own custom user-interface utilities. We've provided the level-meter as an example of how to do this. </p>
+
+        <h4>Instruments</h4>
+
+
+         <p>Among these uitlities are a sampler, pitch-tracker, and a level meter.</p>
+        
+
+        <p>Additionally, there are several pre-made instruments included as well, and more will be added soon!</p>
+
+        <img src=plots.png align=right style="width:30%">
+        <h4>Plots</h4>
+
+        <p>We've also included some components that allow for easy plotting of audio waveforms. These include:</p>
+          <ul>
+           <li>Microphone input plotting</li>
+           <li>Audio output plotting</li>
+           <li>FFT plots</li>
+           <li>Instrument property plotting</li>
+           <li>Table plots</li>
+          </ul>
+
+
     </div>
 
 </div>
