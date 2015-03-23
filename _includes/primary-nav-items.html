@@ -8,11 +8,70 @@
   <li class="{% if page.url contains '/examples/' %}current{% endif %}">
     <a href="/examples/"><div>Examples</div></a>
   </li>
-  <li class="{% if page.url contains '/tutorials/' %}current{% endif %}">
-    <a href="/tutorials/"><div>Tutorials</div></a>
+  <li class="{% if page.url contains '/playgrounds/' %}current{% endif %}">
+    <a href="/playgrounds/"><div>Playgrounds</div></a>
   </li>
-  <li class="{% if page.section == 'docs' %}current{% endif %}">
+<!--   <li class="{% if page.section == 'docs' %}current{% endif %}">
     <a href="/docs/"><div>Docs</div></a>
+    <ul>
+      <li><a href="/core-classes/"><div><i class="icon-sitemap"        ></i>Core Classes</div></a></li>
+      <li><a href="/instruments/" ><div><i class="icon-microphone"     ></i>Instruments</div></a></li>
+      <li><a href="/notes/"       ><div><i class="icon-music2"         ></i>Notes</div></a></li>
+      <li><a href="/operations/"  ><div><i class="icon-line-command"   ></i>Operations</div></a></li>
+      <li><a href="/parameters/"  ><div><i class="icon-atom"           ></i>Parameters</div></a></li>
+      <li><a href="/properties/"  ><div><i class="icon-line2-equalizer"></i>Properties</div></a></li>
+      <li><a href="/platforms/"   ><div><i class="icon-phone-portrait" ></i>Platforms</div></a></li>
+      <li><a href="/sequencing/"  ><div><i class="icon-stopwatch"      ></i>Sequencing</div></a></li>
+      <li><a href="/tables/"      ><div><i class="icon-bars"           ></i>Tables</div></a></li>
+    </ul>
+  </li> -->
+
+  <li class="{% if page.section == 'docs' %}current{% endif %} mega-menu">
+    <a href="/docs/"><div>Docs</div></a>
+    <div class="mega-menu-content style-2 col-3 clearfix">
+    <ul>
+      <li class="mega-menu-title"><a href="/tutorials/"><div>Tutorials</div></a>
+        <ul>
+          <li><a href="/tutorials/"><div><i class="icon-switch"></i>Getting Started</div></a></li>
+          <li><a href="/tutorials/osx/configuration/"><div><i class="icon-windows"></i>Configuring OSX Apps</div></a></li>
+          <li><a href="/tutorials/xcode/"><div><i class="icon-line-command"></i>Xcode Tips</div></a></li>
+        </ul>
+      </li>
+      <li class="mega-menu-title"><a href="#"><div>Add-Ons</div></a>
+        <ul>
+          <li><a href="/templates/"><div><i class="icon-line-paper-stack"></i>Templates</div></a></li>
+          <li><a href="/utilities/"><div><i class="icon-truck"></i>Utilities</div></a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul>
+      <li class="mega-menu-title"><a href="/core-classes/"><div>Core Code</div></a>
+        <ul>
+          <li><a href="/instruments/" ><div><i class="icon-microphone"     ></i>Instruments</div></a></li>
+          <li><a href="/notes/"       ><div><i class="icon-music2"         ></i>Notes</div></a></li>
+          <li><a href="/operations/"  ><div><i class="icon-syringe"        ></i>Operations</div></a></li>
+          <li><a href="/parameters/"  ><div><i class="icon-measure"        ></i>Parameters</div></a></li>
+          <li><a href="/properties/"  ><div><i class="icon-params"         ></i>Properties</div></a></li>
+          <li><a href="/platforms/"   ><div><i class="icon-phone-portrait" ></i>Platforms</div></a></li>
+          <li><a href="/sequencing/"  ><div><i class="icon-stopwatch"      ></i>Sequencing</div></a></li>
+          <li><a href="/tables/"      ><div><i class="icon-bars"           ></i>Tables</div></a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul>
+      <li class="mega-menu-title"><a href="#"><div>Sample Projects</div></a>
+        <ul>
+          <li><a href="/examples/HelloWorld/"><div><i class=""></i>Hello World</div></a></li>
+          <li><a href="/examples/AudioKitDemo/"><div><i class=""></i>AudioKit Demo</div></a></li>
+        </ul>
+      </li>
+      <li class="mega-menu-title"><a href="#"><div>Examples Repository</div></a>
+        <ul>
+          <li><a href="/examples/HelloWorld/"><div><i class=""></i>Hello World</div></a></li>
+          <li><a href="/examples/AudioKitDemo/"><div><i class=""></i>AudioKit Demo</div></a></li>
+        </ul>
+      </li>
+    </ul>
   </li>
   <li class="{% if page.permalink == '/blog/' %}current{% endif %}">
     <a href="/blog/"><div>Blog</div></a>
