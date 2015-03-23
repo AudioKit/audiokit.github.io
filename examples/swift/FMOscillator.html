@@ -60,8 +60,7 @@ override init() {
         modulationIndex: modulationIndex,
         amplitude: amplitude
     )
-    connect(fmOscillator)
-    connect(AKAudioOutput(audioSource: fmOscillator))
+    setAudioOutput(fmOscillator)
 }
 {% endhighlight %}
 

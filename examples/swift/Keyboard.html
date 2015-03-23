@@ -57,7 +57,6 @@ fmOscillator.carrierMultiplier = toneColor.scaledBy(20.ak)
 fmOscillator.modulatingMultiplier = toneColor.scaledBy(12.ak)
 fmOscillator.modulationIndex = toneColor.scaledBy(15.ak)
 fmOscillator.amplitude = note.amplitude.scaledBy(0.15.ak)
-connect(fmOscillator)
 {% endhighlight %}
 
 <p>
@@ -80,7 +79,6 @@ let reverb = AKReverb(
     feedback: feedbackLevel,
     cutoffFrequency: 4000.ak
 )
-connect(reverb)
 {% endhighlight %}
 
 So, when the fx processor is instantiated in Conductor.swift, it is given the tone generator as its input:

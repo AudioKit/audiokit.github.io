@@ -20,7 +20,6 @@ let microphoneFFT = AKFFT(
     windowType: AKFFTWindowType.VonHann,
     windowFilterSize: 2048.ak
 )
-connect(microphoneFFT)
 {% endhighlight %}
 
 <p>Notice that float and integers can't be directly used, they need to be converted into AudioKit constant parameters, which is simple done by append <code>.ak</code> to the end of the number.  This analagous to the Objective-C function <code>akp()</code>.</p>
@@ -38,14 +37,12 @@ let scaledFFT = AKScaledFFT(
     amplitudeRatio: 2.ak,
     cepstrumCoefficients: nil
 )
-connect(scaledFFT)
 {% endhighlight %}
 
 <p>These signals are then mixed with an instance of AKMixedFFT: </p>
 
 {% highlight ruby %}
 let mixedFFT = AKMixedFFT(signal1: microphoneFFT, signal2: scaledFFT)
-connect(mixedFFT)
 {% endhighlight %}
 
 <p>
@@ -54,5 +51,4 @@ Finally, the audio is resynthesized from the FFT data using an instance of "AKRe
 
 {% highlight ruby %}
 let audioOutput = AKResynthesizedAudio(signal: mixedFFT)
-connect(audioOutput)
 {% endhighlight %}

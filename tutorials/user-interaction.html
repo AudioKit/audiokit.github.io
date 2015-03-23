@@ -143,12 +143,8 @@ fmOscillator.amplitude         = _amplitudeValue;
         fmOscillator.modulationIndex   = _modIndexValue;
         fmOscillator.amplitude         = _amplitudeValue;
 
-        [self connect:fmOscillator];
-
         // AUDIO OUTPUT ========================================================
-
-        AKAudioOutput *audioOutput = [[AKAudioOutput alloc] initWithAudioSource:fmOscillator];
-        [self connect:audioOutput];
+        [self setAudioOutput:fmOscillator];
 
     }
     return self;

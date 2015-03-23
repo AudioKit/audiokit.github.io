@@ -35,7 +35,6 @@ last-review-date: 2015/02/01
 {% highlight ruby %}
 let file = String(NSBundle.mainBundle().pathForResource("808loop", ofType: "wav")!)
 let loop = AKFileInput(filename: file)
-connect(loop)
 
 let dish = String(NSBundle.mainBundle().pathForResource("dish", ofType: "wav")!)
 let well = String(NSBundle.mainBundle().pathForResource("Stairwell", ofType: "wav")!)
@@ -45,20 +44,16 @@ let well = String(NSBundle.mainBundle().pathForResource("Stairwell", ofType: "wa
 
 {% highlight ruby %}
 let dishConv = AKConvolution(input: loop.leftOutput, impulseResponseFilename: dish)
-connect(dishConv)
 
 let wellConv = AKConvolution(input: loop.rightOutput, impulseResponseFilename: well)
-connect(wellConv)
 {% endhighlight %}
 
 <p>and mix the results:</p>
 
 {% highlight ruby %}
 let balance = AKMix(input1: dishConv, input2: wellConv, balance: dishWellBalance)
-connect(balance)
 
 let dryWet = AKMix(input1: loop.leftOutput, input2: balance, balance: dryWetBalance)
-connect(dryWet)
 {% endhighlight %}
 
 

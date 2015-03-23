@@ -1,37 +1,70 @@
 ---
 layout: default
+section: tutorials
 ---
 
-  <section class="docs">
-    <div class="grid">
+<section id="page-title">
 
-      <div class="unit four-fifths">
-        <article>
-          <h1 class="hide-on-mobiles">
+    <div class="container clearfix">
+        <h1>
           {% if page.header != '' %}
             {{ page.header }}
           {% else %}
             {{ page.title }}
           {% endif %}
-          </h1>
-          <h1 class="small show-on-mobiles">
-          {% if page.header != '' %}
-            {{ page.header }}
-          {% else %}
-            {{ page.title }}
-          {% endif %}
-          </h1>
-         {{ content }}
-        {% include section_nav.html %}
-        </article>
-      </div>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+             <li><a href="/tutorials/">Tutorials</a></li>
+            <li class="active">
+              {% if page.header != '' %}
+                {{ page.header }}
+              {% else %}
+                {{ page.title }}
+              {% endif %}
+            </li>
+        </ol>
+    </div>
 
-      <div class="unit one-fifth hide-on-mobiles">
-        <aside>
-          {% include sidebars/tutorials.html %}
-        </aside>
-      </div>
-      <div class="clear"></div>
+</section><!-- #page-title end -->
+<section id="content">
+
+    <div class="content-wrap">
+
+        <div class="container clearfix">
+            {{ content }}
+
+{% if page.prev_section != null || if page.next_section != null %}
+
+<div class="section-nav">
+  <div class="left align-right">
+    {% if page.prev_section != null %}
+      <a href="{{ page.prev_section }}" class="prev">
+        Back
+      </a>
+    {% else %}
+      <span class="prev disabled">Back</span>
+    {% endif %}
+  </div>
+  <div class="right align-left">
+    {% if page.next_section != null %}
+      <a href="{{ page.next_section }}" class="next">
+        Next
+      </a>
+    {% else %}
+      <span class="next disabled">Next</span>
+    {% endif %}
+  </div>
+  <div class="clear"></div>
+</div>
+
+{% endif %}
+        </div>
 
     </div>
-  </section>
+
+</section><!-- #content end -->
+
+
+
+

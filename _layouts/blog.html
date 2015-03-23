@@ -3,35 +3,39 @@ layout: default
 section: blog
 ---
 
-  <section class="about">
-    <div class="grid">
+<section id="page-title">
 
-      <div class="unit four-fifths">
-        <article>
-          <h1 class="hide-on-mobiles">
+    <div class="container clearfix">
+        <h1>
           {% if page.header != '' %}
             {{ page.header }}
           {% else %}
             {{ page.title }}
           {% endif %}
-          </h1>
-          <h1 class="small show-on-mobiles">
-          {% if page.header != '' %}
-            {{ page.header }}
-          {% else %}
-            {{ page.title }}
-          {% endif %}
-          </h1>
-          {{ content }}
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+             <li><a href="/blog/">Blog</a></li>
+            <li class="active">
+              {% if page.header != '' %}
+                {{ page.header }}
+              {% else %}
+                {{ page.title }}
+              {% endif %}
+            </li>
+        </ol>
+    </div>
 
-        </article>
-      </div>
-      <div class="unit one-fifth hide-on-mobiles">
-        <aside>
-          {% include sidebars/blog.html %}
-        </aside>
-      </div>
-      <div class="clear"></div>
+</section><!-- #page-title end -->
+<section id="content">
+
+    <div class="content-wrap">
+
+        <div class="container clearfix">
+            {{ content }}
+        </div>
 
     </div>
-  </section>
+
+</section><!-- #content end -->
+

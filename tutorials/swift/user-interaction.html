@@ -102,9 +102,7 @@ class FMSynth: AKInstrument {
         fmOscillator.modulationIndex = modulationIndex
         fmOscillator.amplitude = amplitude
 
-        connect(fmOscillator)
-
-        connect(AKAudioOutput(audioSource: fmOscillator))
+        setAudioOutput(fmOscillator)
     }
 }
 {% endhighlight %}

@@ -34,7 +34,6 @@ AKMonoSoundFileLooper *looper;
 looper = [AKMonoSoundFileLooper looperWithSoundFile:fileTable];
 looper.frequencyRatio = note.speed;
 looper.loopMode = AKSoundFileLooperModeNoLoop;
-[self connect:looper];
 {% endhighlight %}
 
 
@@ -44,7 +43,6 @@ looper.loopMode = AKSoundFileLooperModeNoLoop;
 AKReverb *reverb;
 reverb = [AKReverb reverbWithInput:looper];
 reverb.feedback.value = 0.85;
-[self connect:reverb];
 {% endhighlight %}
 
 <p>

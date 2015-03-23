@@ -11,7 +11,6 @@ This example demonstrates a simple harmonzier, with the input signal being the d
 
 {% highlight objective-c %}
 AKAudioInput *microphone = [[AKAudioInput alloc] init];
-[self connect:microphone];
 
 AKFFT *microphoneFFT;
 microphoneFFT = [[AKFFT alloc] initWithInput:microphone
@@ -19,7 +18,6 @@ microphoneFFT = [[AKFFT alloc] initWithInput:microphone
                                      overlap:akpi(256)
                                   windowType:AKFFTWindowTypeVonHann
                             windowFilterSize:akpi(2048)];
-[self connect:microphoneFFT];
 {% endhighlight %}
 
 
@@ -34,7 +32,6 @@ scaledFFT = [[AKScaledFFT alloc] initWithSignal:microphoneFFT
                             formantRetainMethod:AKScaledFFTFormantRetainMethodLifteredCepstrum
                                  amplitudeRatio:akp(2.0)
                            cepstrumCoefficients:nil];
-[self connect:scaledFFT];
 {% endhighlight %}
 
 
@@ -42,7 +39,6 @@ scaledFFT = [[AKScaledFFT alloc] initWithSignal:microphoneFFT
 
 {% highlight objective-c %}
 AKMixedFFT *mixedFFT = [[AKMixedFFT alloc] initWithSignal1:microphoneFFT signal2:scaledFFT];
-[self connect:mixedFFT];
 {% endhighlight %}
 
 <p>
@@ -51,5 +47,4 @@ Finally, the audio is resynthesized from the FFT data using an instance of "AKRe
 
 {% highlight objective-c %}
 AKResynthesizedAudio *audioOutput = [[AKResynthesizedAudio alloc] initWithSignal:mixedFFT];
-[self connect:audioOutput];
 {% endhighlight %}

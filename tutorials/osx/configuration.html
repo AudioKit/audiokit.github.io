@@ -13,7 +13,7 @@ layout: tutorials
 
 <p>There is a certain amount of configuration that is required on OSX that is not required to build iOS apps.  The first step is the same: Drag the AudioKit folder into your project.  Since this is a Mac project, delete the iOS folder and depending on whether this will be a Swift project, delete that too. Your Libraries folder should now look like the one below:
 </p>
-<img src=OSXlibraryOnly.png style="width:100%; max-width:202px">
+<img src=/tutorials/osx/OSXlibraryOnly.png style="width:100%; max-width:202px">
 <p>
 Because this is an Objective-C project, you'll also need to delete the Swift folder. If you were making a Swift-based Mac project, you would need to keep that folder in place.
 </p>
@@ -21,32 +21,32 @@ Because this is an Objective-C project, you'll also need to delete the Swift fol
 
 <p>Then on the Build Phases tab, click the "+" button on the upper left of the window</p>
 <p>
-<img src=macBuildPhases1.png style="width:100%; max-width:677px">
+<img src=/tutorials/osx/macBuildPhases1.png style="width:100%; max-width:677px">
 </p>
 
 <p>Choose the "New Copy Files Phase"</p>
 <p>
-<img src=macBuildPhases2.png style="width:100%; max-width:675px">
+<img src=/tutorials/osx/macBuildPhases2.png style="width:100%; max-width:675px">
 </p>
 
 <p>Click the "+" on the bottom left</p>
 <p>
-<img src=macBuildPhases3.png style="width:100%; max-width:678px">
+<img src=/tutorials/osx/macBuildPhases3.png style="width:100%; max-width:678px">
 </p>
 
 <p>Find the framework from the pull-down menu within Libraries/OSX/csound-OSX:</p>
 <p>
-<img src=macBuildPhases4.png style="width:100%; max-width:398px">
+<img src=/tutorials/osx/macBuildPhases4.png style="width:100%; max-width:398px">
 </p>
 
 <p>Change the Destination to "Frameworks" so that your Copy Files section now looks like this screenshot:</p>
 <p>
-<img src=macBuildPhases5.png style="width:100%; max-width:676px">
+<img src=/tutorials/osx/macBuildPhases5.png style="width:100%; max-width:676px">
 </p>
 
 <p>Next, add another build phase by clicking on the "+" in the upper left, but this time choose the "New Run Script Phase":</p>
 <p>
-<img src=macBuildPhases6.png style="width:100%; max-width:677px">
+<img src=/tutorials/osx/macBuildPhases6.png style="width:100%; max-width:677px">
 </p>
 
 <p>Change the Shell to <code>/bin/bash</code> and paste in this one-line shell script:</p>

@@ -44,18 +44,12 @@ override init() {
 let fmOscillator = AKFMOscillator()
 {% endhighlight %}
 
-<p>Next, add the line below to connect your oscillator to the audio processing graph.</p>
-
-{% highlight ruby %}
-connect(fmOscillator)
-{% endhighlight %}
-
 <p>
 Finally, add the line below to connect your oscillator to AKAudioOutput, which writes stereo audio data to an external device or stream. This line also connects AKAudioOutput to the audio processing graph.
 </p>
 
 {% highlight ruby %}
-connect(AKAudioOutput(audioSource: fmOscillator))
+setAudioOutput(fmOscillator)
 {% endhighlight %}
 
 <p>Don't forget to add a final '}' on the next two lines to close the init method and class definition.</p>
@@ -70,8 +64,7 @@ class FMSynth: AKInstrument {
         super.init()
 
         let fmOscillator = AKFMOscillator()
-        connect(fmOscillator)
-        connect(AKAudioOutput(audioSource: fmOscillator))
+        setAudioOutput(fmOscillator)
     }
 }
 {% endhighlight %}
