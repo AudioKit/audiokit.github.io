@@ -5,6 +5,9 @@ permalink: /instruments/
 layout: section_index
 ---
 
+
+
+
 <p>
 AudioKit's instruments are basically collections of operations that are collected into one class.  An instrument may be a traditional sound-generating "musical" instrument, but it could also be a sound processor, or an audio analyzer.  An instrument should either output sound to the speakers or make its output avaialable to other instruments by way of a globally acceessible auxiliary output.
 </p>
@@ -13,26 +16,93 @@ AudioKit's instruments are basically collections of operations that are collecte
 
 <p>Instruments have properties that are controllable and instruments produce notes that also have different properties that are controllable on a per-note basis.  We differentiate these two types of properties by referring to instrument properties or note properties.  For example, consider a guitar that has its own instrument properties such as its size and type of wood it is constructed from.  A note that is created by plucking the guitar, has its own set of note properties such as the pluck position and the frequency.  Depending on the property, it might be a constant for all time, a constant for each note, alterable for the instrument at any time, or alterable for a given note at any time.  </p>
 
+
+<h3>Classes</h3>
+<table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+
+<tr>
+<td class='one-third'><a href="/Classes/AKInstrument.html">AKInstrument</td>
+ <td class='two-thirds'> Manages functions that most AK instruments need to have.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKInstrumentProperty.html">AKInstrumentProperty</td>
+ <td class='two-thirds'> Instrument properties are properties of an instrument that are shared
+</td>
+</tr>
+</table>
+
 <h3>Included Instruments</h3>
 
 <p>There are numerous instruments included in AudioKit's "AudioKit/Utilities" folder.  They are not part of AudioKit's required classes, but they are very useful for quickly prototyping an app or for using as a starting point to develop your own instrument.</p>
 
-<h4>Amplifiers</h4>
+<h4> Amplifiers</h4>
 
 <p>Because you may want to chain any number of processor instruments together and change the order at any time, it's useful to end that chain with an output instrument that sends the output to a speaker.  We do not currently have traditional "amplifier" emulations, but it's on our radar for the future.</p>
 
-<h4>Analyzers</h4>
+<table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+
+<tr>
+<td class='one-third'><a href="/Classes/Amplifier.html">Amplifier</td>
+<tr>
+<td class='one-third'><a href="/Classes/StereoAmplifier.html">StereoAmplifier</td>
+</table>
+
+<h4> Analyzers</h4>
 
 <p>The included "AKAudioAnalyzer" tracks the frequency and amplitude of a given monophonic signal.  It can be used to quickly create tuners, vocal coaches, and a variety of other sonic analyzer applications.</p>
 
-<h4>Emulations</h4>
+<table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+
+<tr>
+<td class='one-third'><a href="/Classes/AKAudioAnalyzer.html">AKAudioAnalyzer</td>
+</table>
+
+<h4> Emulations</h4>
 
 <p>Instruments in the "Emualtions" folder are meant to sound like real instruments.  They are often based on physical models and can be used to recreate traditional instrument sounds or experimented with to create entirely new soundscapes.</p>
 
-<h4>Processors</h4>
+<table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+
+<tr>
+<td class='one-third'><a href="/Classes/BambooSticks.html">BambooSticks</td>
+<tr>
+<td class='one-third'><a href="/Classes/Mandolin.html">Mandolin</td>
+<tr>
+<td class='one-third'><a href="/Classes/Marimba.html">Marimba</td>
+<tr>
+<td class='one-third'><a href="/Classes/PluckedString.html">PluckedString</td>
+<tr>
+<td class='one-third'><a href="/Classes/Sleighbells.html">Sleighbells</td>
+<tr>
+<td class='one-third'><a href="/Classes/Stick.html">Stick</td>
+<tr>
+<td class='one-third'><a href="/Classes/StruckMetalBar.html">StruckMetalBar</td>
+<tr>
+<td class='one-third'><a href="/Classes/Tambourine.html">Tambourine</td>
+<tr>
+<td class='one-third'><a href="/Classes/Vibraphone.html">Vibraphone</td>
+</table>
+
+<h4> Processors</h4>
 
 <p>Processors are instruments that take other instrument's auxiliary outputs as inputs and then create a new sound to send to the output or next processor down the chain.</p>
 
-<h4>Synthesizers</h4>
+<table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+
+<tr>
+<td class='one-third'><a href="/Classes/ReverbProcessor.html">ReverbProcessor</td>
+</table>
+
+<h4> Synthesizers</h4>
 
 <p>Unlike emulations, synthesizers do not necessarily try to recreate a real life instrument.</p>
+
+
+<table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+
+<tr>
+<td class='one-third'><a href="/Classes/FMOscillatorInstrument.html">FMOscillatorInstrument</td>
+<tr>
+<td class='one-third'><a href="/Classes/VCOscillatorInstrument.html">VCOscillatorInstrument</td>
+</table>

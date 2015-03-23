@@ -46,15 +46,36 @@ title: AKInstrument
             <ul class="task-list">
                 <li>
   <span class="tooltip">
+    <code><a href="#//api/name/instrument">+&nbsp;instrument</a></code>
+    <span class="tooltip"><p>Instantiates a new instrument</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/instrumentWithNumber:">+&nbsp;instrumentWithNumber:</a></code>
+    <span class="tooltip"><p>Instantiates a new <a href="#//api/name/instrument">instrument</a> at a given <a href="#//api/name/instrument">instrument</a> number</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithNumber:">&ndash;&nbsp;initWithNumber:</a></code>
+    <span class="tooltip"><p>Instantiates a new <a href="#//api/name/instrument">instrument</a> at a given <a href="#//api/name/instrument">instrument</a> number</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
     <code><a href="#//api/name/instrumentNumber">&ndash;&nbsp;instrumentNumber</a></code>
-    <span class="tooltip"><p>Unique instrument number</p></span>
+    <span class="tooltip"><p>Unique <a href="#//api/name/instrument">instrument</a> number</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/uniqueName">&ndash;&nbsp;uniqueName</a></code>
-    <span class="tooltip"><p>A string uniquely defined by the instrument class name and a unique integer.</p></span>
+    <span class="tooltip"><p>A string uniquely defined by the <a href="#//api/name/instrument">instrument</a> class name and a unique integer.</p></span>
   </span>
   
   
@@ -68,7 +89,7 @@ title: AKInstrument
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/properties">&nbsp;&nbsp;properties</a></code>
-    <span class="tooltip"><p>Array of instrument properties available for the instrument.</p></span>
+    <span class="tooltip"><p>Array of <a href="#//api/name/instrument">instrument</a> properties available for the <a href="#//api/name/instrument">instrument</a>.</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
@@ -82,44 +103,35 @@ title: AKInstrument
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/addProperty:">&ndash;&nbsp;addProperty:</a></code>
-    <span class="tooltip"><p>After an AKProperty is created, it must be added to the instrument.</p></span>
+    <span class="tooltip"><p>Add an <a href="#//api/name/instrument">instrument</a> property explicity (normally this happens automatically)</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/createPropertyWithValue:minimum:maximum:">&ndash;&nbsp;createPropertyWithValue:minimum:maximum:</a></code>
+    <span class="tooltip"><p>Helper function to create a property with the usually values and add it to the <a href="#//api/name/instrument">instrument</a></p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/addNoteProperty:">&ndash;&nbsp;addNoteProperty:</a></code>
-    <span class="tooltip"><p>After an <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a> is created, it must be added to the instrument.</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/functionTables">&nbsp;&nbsp;functionTables</a></code>
-    <span class="tooltip"><p>All FunctionTables that are required by the instrument are stored here and declared
-once in the F-Statement section.</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/addFunctionTable:">&ndash;&nbsp;addFunctionTable:</a></code>
-    <span class="tooltip"><p>Adds the function table to the Orchestra, so it is only processed once.</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/addDynamicFunctionTable:">&ndash;&nbsp;addDynamicFunctionTable:</a></code>
-    <span class="tooltip"><p>Adds the function table to the AKInstrument dynamically, processed for each note.</p></span>
+    <span class="tooltip"><p>Add a note property to the instrumnet explicitly (normally happens automatically)</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/userDefinedOperations">&nbsp;&nbsp;userDefinedOperations</a></code>
-    <span class="tooltip"><p>All UDOs that are required by the instrument are stored here and declared before any
-instrument blocks.</p></span>
+    <span class="tooltip"><p>All UDOs that are required by the <a href="#//api/name/instrument">instrument</a> are stored here and declared before the <a href="#//api/name/instrument">instrument</a> block.</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/globalParameters">&nbsp;&nbsp;globalParameters</a></code>
+    <span class="tooltip"><p>Globally accessible parameters used for cross<a href="#//api/name/instrument">instrument</a> communication</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
@@ -132,15 +144,43 @@ instrument blocks.</p></span>
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/addString:">&ndash;&nbsp;addString:</a></code>
-    <span class="tooltip"><p>Adds any string to the output file, useful for testing and commenting.</p></span>
+    <code><a href="#//api/name/setAudioOutput:">&ndash;&nbsp;setAudioOutput:</a></code>
+    <span class="tooltip"><p>Sets a parameter to be the audio output of the AKInstrument.  Equivalent to declaring and connect <a href="../Classes/AKAudioOutput.html">AKAudioOutput</a>.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setAudioOutputWithLeftAudio:rightAudio:">&ndash;&nbsp;setAudioOutputWithLeftAudio:rightAudio:</a></code>
+    <span class="tooltip"><p>Sets a parameter to be the audio output of the AKInstrument.  Equivalent to declaring and connect <a href="../Classes/AKAudioOutput.html">AKAudioOutput</a>.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setStereoAudioOutput:">&ndash;&nbsp;setStereoAudioOutput:</a></code>
+    <span class="tooltip"><p>Sets a parameter to be the audio output of the AKInstrument.  Equivalent to declaring and connect <a href="../Classes/AKAudioOutput.html">AKAudioOutput</a>.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/appendOutput:withInput:">&ndash;&nbsp;appendOutput:withInput:</a></code>
+    <span class="tooltip"><p>Appending a value to an output, usually a globally accessibly audio stream</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/assignOutput:to:">&ndash;&nbsp;assignOutput:to:</a></code>
-    <span class="tooltip"><p>Shortcut for the <a href="../Classes/AKAssignment.html">AKAssignment</a> operation for setting a parameter equal to another.</p></span>
+    <span class="tooltip"><p>Deprecated function, please use <a href="#//api/name/appendOutput:withInput:">appendOutput:withInput:</a></p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setParameter:to:">&ndash;&nbsp;setParameter:to:</a></code>
+    <span class="tooltip"><p>Explicitly set the output of one paramter to another, useful for tracking</p></span>
   </span>
   
   
@@ -160,16 +200,8 @@ instrument blocks.</p></span>
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/joinOrchestra:">&ndash;&nbsp;joinOrchestra:</a></code>
-    <span class="tooltip"><p>Sets the orchestra as internal variable so that when the instrument is asked to <a href="#//api/name/play">play</a>,
-it sends the event to the appropriate orchestra.</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
     <code><a href="#//api/name/playForDuration:">&ndash;&nbsp;playForDuration:</a></code>
-    <span class="tooltip"><p>Play an instrument that contains no note <a href="#//api/name/properties">properties</a> ie. uses a generic
+    <span class="tooltip"><p>Play an <a href="#//api/name/instrument">instrument</a> that contains no note <a href="#//api/name/properties">properties</a> ie. uses a generic
 <a href="../Classes/AKNote.html">AKNote</a> to begin playback for a specific amount of time.</p></span>
   </span>
   
@@ -177,7 +209,21 @@ it sends the event to the appropriate orchestra.</p></span>
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/play">&ndash;&nbsp;play</a></code>
-    <span class="tooltip"><p>For instruments that do not create note instances, play the instrument with infinite duration.</p></span>
+    <span class="tooltip"><p>For instruments that do not create note instances, play the <a href="#//api/name/instrument">instrument</a> with infinite duration.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/start">&ndash;&nbsp;start</a></code>
+    <span class="tooltip"><p>Equivalent to &ldquo;play&rdquo; but reads better for instruments that do not <a href="#//api/name/play">play</a> notes, such as processors.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/restart">&ndash;&nbsp;restart</a></code>
+    <span class="tooltip"><p>Re<a href="#//api/name/start">start</a> an <a href="#//api/name/instrument">instrument</a> after a pause</p></span>
   </span>
   
   
@@ -232,8 +278,15 @@ it sends the event to the appropriate orchestra.</p></span>
   
 </li><li>
   <span class="tooltip">
+    <code><a href="#//api/name/stopPhrase">&ndash;&nbsp;stopPhrase</a></code>
+    <span class="tooltip"><p>Stop repeating the phrase</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
     <code><a href="#//api/name/stop">&ndash;&nbsp;stop</a></code>
-    <span class="tooltip"><p>Stop all notes created by the instrument</p></span>
+    <span class="tooltip"><p>Stop all notes created by the <a href="#//api/name/instrument">instrument</a></p></span>
   </span>
   
   
@@ -251,19 +304,18 @@ it sends the event to the appropriate orchestra.</p></span>
             <h2 class="subtitle subtitle-methods">Properties</h2>
             
             <div class="section-method">
-  <a name="//api/name/functionTables" title="functionTables"></a>
-  <h3 class="subsubtitle method-title">functionTables</h3>
+  <a name="//api/name/globalParameters" title="globalParameters"></a>
+  <h3 class="subsubtitle method-title">globalParameters</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>All FunctionTables that are required by the instrument are stored here and declared
-once in the F-Statement section.</p>
+    <p>Globally accessible parameters used for cross<a href="#//api/name/instrument">instrument</a> communication</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property NSMutableSet *functionTables</code></div>
+  <div class="method-subsection method-declaration"><code>@property NSMutableSet *globalParameters</code></div>
 
     
   
@@ -330,7 +382,7 @@ once in the F-Statement section.</p>
   
   
   <div class="method-subsection brief-description">
-    <p>Array of instrument properties available for the instrument.</p>
+    <p>Array of <a href="#//api/name/instrument">instrument</a> properties available for the <a href="#//api/name/instrument">instrument</a>.</p>
   </div>
   
     
@@ -366,8 +418,7 @@ once in the F-Statement section.</p>
   
   
   <div class="method-subsection brief-description">
-    <p>All UDOs that are required by the instrument are stored here and declared before any
-instrument blocks.</p>
+    <p>All UDOs that are required by the <a href="#//api/name/instrument">instrument</a> are stored here and declared before the <a href="#//api/name/instrument">instrument</a> block.</p>
   </div>
   
     
@@ -403,6 +454,88 @@ instrument blocks.</p>
           <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
             <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/instrument" title="instrument"></a>
+  <h3 class="subsubtitle method-title">instrument</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates a new instrument</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)instrument</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKInstrument.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/instrumentWithNumber:" title="instrumentWithNumber:"></a>
+  <h3 class="subsubtitle method-title">instrumentWithNumber:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates a new <a href="#//api/name/instrument">instrument</a> at a given <a href="#//api/name/instrument">instrument</a> number</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)instrumentWithNumber:(int)<em>instrumentNumber</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>instrumentNumber</em></dt>
+      <dd><p>Unique number to assign this <a href="#//api/name/instrument">instrument</a>, useful when overwriting an <a href="#//api/name/instrument">instrument</a></p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKInstrument.h</code><br />
+  </div>
+  
+  
+</div>
             
             <div class="section-method">
   <a name="//api/name/resetID" title="resetID"></a>
@@ -449,105 +582,13 @@ instrument blocks.</p>
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/addDynamicFunctionTable:" title="addDynamicFunctionTable:"></a>
-  <h3 class="subsubtitle method-title">addDynamicFunctionTable:</h3>
-
-  
-  
-  <div class="method-subsection brief-description">
-    <p>Adds the function table to the AKInstrument dynamically, processed for each note.</p>
-  </div>
-  
-    
-
-  <div class="method-subsection method-declaration"><code>- (void)addDynamicFunctionTable:(AKFunctionTable *)<em>newFunctionTable</em></code></div>
-
-    
-  
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
-    
-    <dl class="argument-def parameter-def">
-      <dt><em>newFunctionTable</em></dt>
-      <dd><p>New function table to add to the instrument.</p></dd>
-    </dl>
-    
-  </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  <div class="method-subsection declared-in-section">
-    <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKInstrument.h</code><br />
-  </div>
-  
-  
-</div>
-            
-            <div class="section-method">
-  <a name="//api/name/addFunctionTable:" title="addFunctionTable:"></a>
-  <h3 class="subsubtitle method-title">addFunctionTable:</h3>
-
-  
-  
-  <div class="method-subsection brief-description">
-    <p>Adds the function table to the Orchestra, so it is only processed once.</p>
-  </div>
-  
-    
-
-  <div class="method-subsection method-declaration"><code>- (void)addFunctionTable:(AKFunctionTable *)<em>newFunctionTable</em></code></div>
-
-    
-  
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
-    
-    <dl class="argument-def parameter-def">
-      <dt><em>newFunctionTable</em></dt>
-      <dd><p>New function table to add to the instrument.</p></dd>
-    </dl>
-    
-  </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  <div class="method-subsection declared-in-section">
-    <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKInstrument.h</code><br />
-  </div>
-  
-  
-</div>
-            
-            <div class="section-method">
   <a name="//api/name/addNoteProperty:" title="addNoteProperty:"></a>
   <h3 class="subsubtitle method-title">addNoteProperty:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>After an <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a> is created, it must be added to the instrument.</p>
+    <p>Add a note property to the instrumnet explicitly (normally happens automatically)</p>
   </div>
   
     
@@ -561,7 +602,7 @@ instrument blocks.</p>
     
     <dl class="argument-def parameter-def">
       <dt><em>newNoteProperty</em></dt>
-      <dd><p>New note property instrument needs to be aware of.</p></dd>
+      <dd><p>New note property <a href="#//api/name/instrument">instrument</a> needs to be aware of.</p></dd>
     </dl>
     
   </div>
@@ -593,7 +634,7 @@ instrument blocks.</p>
   
   
   <div class="method-subsection brief-description">
-    <p>After an AKProperty is created, it must be added to the instrument.</p>
+    <p>Add an <a href="#//api/name/instrument">instrument</a> property explicity (normally this happens automatically)</p>
   </div>
   
     
@@ -607,7 +648,7 @@ instrument blocks.</p>
     
     <dl class="argument-def parameter-def">
       <dt><em>newProperty</em></dt>
-      <dd><p>New property to add to the instrument.</p></dd>
+      <dd><p>New property to add to the <a href="#//api/name/instrument">instrument</a>.</p></dd>
     </dl>
     
   </div>
@@ -633,18 +674,18 @@ instrument blocks.</p>
 </div>
             
             <div class="section-method">
-  <a name="//api/name/addString:" title="addString:"></a>
-  <h3 class="subsubtitle method-title">addString:</h3>
+  <a name="//api/name/appendOutput:withInput:" title="appendOutput:withInput:"></a>
+  <h3 class="subsubtitle method-title">appendOutput:withInput:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Adds any string to the output file, useful for testing and commenting.</p>
+    <p>Appending a value to an output, usually a globally accessibly audio stream</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)addString:(NSString *)<em>newString</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)appendOutput:(AKParameter *)<em>output</em> withInput:(AKParameter *)<em>input</em></code></div>
 
     
   
@@ -652,8 +693,13 @@ instrument blocks.</p>
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>newString</em></dt>
-      <dd><p>New string to add to the instrument definition.</p></dd>
+      <dt><em>output</em></dt>
+      <dd><p>Parameter being set.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>Parameter being read.</p></dd>
     </dl>
     
   </div>
@@ -685,7 +731,7 @@ instrument blocks.</p>
   
   
   <div class="method-subsection brief-description">
-    <p>Shortcut for the <a href="../Classes/AKAssignment.html">AKAssignment</a> operation for setting a parameter equal to another.</p>
+    <p>Deprecated function, please use <a href="#//api/name/appendOutput:withInput:">appendOutput:withInput:</a></p>
   </div>
   
     
@@ -750,7 +796,63 @@ instrument blocks.</p>
     
     <dl class="argument-def parameter-def">
       <dt><em>newOperation</em></dt>
-      <dd><p>New operation to add to the instrument.</p></dd>
+      <dd><p>New operation to add to the <a href="#//api/name/instrument">instrument</a>.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKInstrument.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/createPropertyWithValue:minimum:maximum:" title="createPropertyWithValue:minimum:maximum:"></a>
+  <h3 class="subsubtitle method-title">createPropertyWithValue:minimum:maximum:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Helper function to create a property with the usually values and add it to the <a href="#//api/name/instrument">instrument</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (AKInstrumentProperty *)createPropertyWithValue:(float)<em>value</em> minimum:(float)<em>minimum</em> maximum:(float)<em>maximum</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>value</em></dt>
+      <dd><p>Current value of the note property</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>minimum</em></dt>
+      <dd><p>Minimum value</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>maximum</em></dt>
+      <dd><p>Maximum value</p></dd>
     </dl>
     
   </div>
@@ -832,13 +934,59 @@ instrument blocks.</p>
 </div>
             
             <div class="section-method">
+  <a name="//api/name/initWithNumber:" title="initWithNumber:"></a>
+  <h3 class="subsubtitle method-title">initWithNumber:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates a new <a href="#//api/name/instrument">instrument</a> at a given <a href="#//api/name/instrument">instrument</a> number</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithNumber:(int)<em>instrumentNumber</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>instrumentNumber</em></dt>
+      <dd><p>Unique number to assign this <a href="#//api/name/instrument">instrument</a>, useful when overwriting an <a href="#//api/name/instrument">instrument</a></p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKInstrument.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
   <a name="//api/name/instrumentNumber" title="instrumentNumber"></a>
   <h3 class="subsubtitle method-title">instrumentNumber</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Unique instrument number</p>
+    <p>Unique <a href="#//api/name/instrument">instrument</a> number</p>
   </div>
   
     
@@ -868,60 +1016,13 @@ instrument blocks.</p>
 </div>
             
             <div class="section-method">
-  <a name="//api/name/joinOrchestra:" title="joinOrchestra:"></a>
-  <h3 class="subsubtitle method-title">joinOrchestra:</h3>
-
-  
-  
-  <div class="method-subsection brief-description">
-    <p>Sets the orchestra as internal variable so that when the instrument is asked to <a href="#//api/name/play">play</a>,
-it sends the event to the appropriate orchestra.</p>
-  </div>
-  
-    
-
-  <div class="method-subsection method-declaration"><code>- (void)joinOrchestra:(AKOrchestra *)<em>orchestraToJoin</em></code></div>
-
-    
-  
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
-    
-    <dl class="argument-def parameter-def">
-      <dt><em>orchestraToJoin</em></dt>
-      <dd><p>Orchestra to which the instrument belongs.</p></dd>
-    </dl>
-    
-  </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  <div class="method-subsection declared-in-section">
-    <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKInstrument.h</code><br />
-  </div>
-  
-  
-</div>
-            
-            <div class="section-method">
   <a name="//api/name/play" title="play"></a>
   <h3 class="subsubtitle method-title">play</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>For instruments that do not create note instances, play the instrument with infinite duration.</p>
+    <p>For instruments that do not create note instances, play the <a href="#//api/name/instrument">instrument</a> with infinite duration.</p>
   </div>
   
     
@@ -957,7 +1058,7 @@ it sends the event to the appropriate orchestra.</p>
   
   
   <div class="method-subsection brief-description">
-    <p>Play an instrument that contains no note <a href="#//api/name/properties">properties</a> ie. uses a generic
+    <p>Play an <a href="#//api/name/instrument">instrument</a> that contains no note <a href="#//api/name/properties">properties</a> ie. uses a generic
 <a href="../Classes/AKNote.html">AKNote</a> to begin playback for a specific amount of time.</p>
   </div>
   
@@ -972,7 +1073,7 @@ it sends the event to the appropriate orchestra.</p>
     
     <dl class="argument-def parameter-def">
       <dt><em>playDuration</em></dt>
-      <dd><p>Length of time in seconds to <a href="#//api/name/play">play</a> the instrument.</p></dd>
+      <dd><p>Length of time in seconds to <a href="#//api/name/play">play</a> the <a href="#//api/name/instrument">instrument</a>.</p></dd>
     </dl>
     
   </div>
@@ -1284,13 +1385,274 @@ it sends the event to the appropriate orchestra.</p>
 </div>
             
             <div class="section-method">
+  <a name="//api/name/restart" title="restart"></a>
+  <h3 class="subsubtitle method-title">restart</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Re<a href="#//api/name/start">start</a> an <a href="#//api/name/instrument">instrument</a> after a pause</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)restart</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKInstrument.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setAudioOutput:" title="setAudioOutput:"></a>
+  <h3 class="subsubtitle method-title">setAudioOutput:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Sets a parameter to be the audio output of the AKInstrument.  Equivalent to declaring and connect <a href="../Classes/AKAudioOutput.html">AKAudioOutput</a>.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setAudioOutput:(AKParameter *)<em>audio</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>audio</em></dt>
+      <dd><p>Operation output that you want to be played.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKInstrument.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setAudioOutputWithLeftAudio:rightAudio:" title="setAudioOutputWithLeftAudio:rightAudio:"></a>
+  <h3 class="subsubtitle method-title">setAudioOutputWithLeftAudio:rightAudio:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Sets a parameter to be the audio output of the AKInstrument.  Equivalent to declaring and connect <a href="../Classes/AKAudioOutput.html">AKAudioOutput</a>.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setAudioOutputWithLeftAudio:(AKParameter *)<em>leftInput</em> rightAudio:(AKParameter *)<em>rightInput</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>audio</em></dt>
+      <dd><p>Operation output that you want to be played.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKInstrument.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setParameter:to:" title="setParameter:to:"></a>
+  <h3 class="subsubtitle method-title">setParameter:to:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Explicitly set the output of one paramter to another, useful for tracking</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setParameter:(AKParameter *)<em>parameter</em> to:(AKParameter *)<em>input</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>parameter</em></dt>
+      <dd><p>Output or overwritten parameter</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>Input parameter</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKInstrument.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setStereoAudioOutput:" title="setStereoAudioOutput:"></a>
+  <h3 class="subsubtitle method-title">setStereoAudioOutput:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Sets a parameter to be the audio output of the AKInstrument.  Equivalent to declaring and connect <a href="../Classes/AKAudioOutput.html">AKAudioOutput</a>.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setStereoAudioOutput:(AKStereoAudio *)<em>stereo</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>stereo</em></dt>
+      <dd><p>Stereo Operation output that you want to be played.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKInstrument.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/start" title="start"></a>
+  <h3 class="subsubtitle method-title">start</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Equivalent to &ldquo;play&rdquo; but reads better for instruments that do not <a href="#//api/name/play">play</a> notes, such as processors.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)start</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKInstrument.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
   <a name="//api/name/stop" title="stop"></a>
   <h3 class="subsubtitle method-title">stop</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Stop all notes created by the instrument</p>
+    <p>Stop all notes created by the <a href="#//api/name/instrument">instrument</a></p>
   </div>
   
     
@@ -1417,13 +1779,49 @@ it sends the event to the appropriate orchestra.</p>
 </div>
             
             <div class="section-method">
+  <a name="//api/name/stopPhrase" title="stopPhrase"></a>
+  <h3 class="subsubtitle method-title">stopPhrase</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Stop repeating the phrase</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)stopPhrase</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKInstrument.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
   <a name="//api/name/uniqueName" title="uniqueName"></a>
   <h3 class="subsubtitle method-title">uniqueName</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>A string uniquely defined by the instrument class name and a unique integer.</p>
+    <p>A string uniquely defined by the <a href="#//api/name/instrument">instrument</a> class name and a unique integer.</p>
   </div>
   
     

@@ -31,7 +31,7 @@ title: AKScaledFFT
             <p>Scale the frequency components of a pv stream, resulting in pitch shift.
 Output amplitudes can be optionally modified in order to attempt formant preservation.</p>
 
-<p>The quality of the pitch shift will be improved with the use of a Hanning window in the pvoc analysis.
+<p>The quality of the pitch shift will be improved with the use of a Hann window in the pvoc analysis.
 Liftered Cepstrum Formant preservation method is less intensive than the true envelope method,
 which might not be suited to realtime use.</p>
           </div>
@@ -50,6 +50,27 @@ which might not be suited to realtime use.</p>
 
             <ul class="task-list">
                 <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/noFormantRetainMethod">+&nbsp;noFormantRetainMethod</a></code>
+    <span class="tooltip"><p>No Formant Retain Method</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/lifteredCepstrumFormantRetainMethod">+&nbsp;lifteredCepstrumFormantRetainMethod</a></code>
+    <span class="tooltip"><p>Liftered Cepstrum Formant Retain Method</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/trueEnvelopeFormantRetainMethod">+&nbsp;trueEnvelopeFormantRetainMethod</a></code>
+    <span class="tooltip"><p>True Envelope Formant Retain Method</p></span>
+  </span>
+  
+  
+</li><li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithSignal:frequencyRatio:">&ndash;&nbsp;initWithSignal:frequencyRatio:</a></code>
     <span class="tooltip"><p>Create a frequency-scaled phase vocoder stream from another stream</p></span>
@@ -73,6 +94,120 @@ which might not be suited to realtime use.</p>
           
           
 
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/lifteredCepstrumFormantRetainMethod" title="lifteredCepstrumFormantRetainMethod"></a>
+  <h3 class="subsubtitle method-title">lifteredCepstrumFormantRetainMethod</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Liftered Cepstrum Formant Retain Method</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)lifteredCepstrumFormantRetainMethod</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKScaledFFT.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/noFormantRetainMethod" title="noFormantRetainMethod"></a>
+  <h3 class="subsubtitle method-title">noFormantRetainMethod</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>No Formant Retain Method</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)noFormantRetainMethod</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKScaledFFT.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/trueEnvelopeFormantRetainMethod" title="trueEnvelopeFormantRetainMethod"></a>
+  <h3 class="subsubtitle method-title">trueEnvelopeFormantRetainMethod</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>True Envelope Formant Retain Method</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)trueEnvelopeFormantRetainMethod</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKScaledFFT.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
           
 
           
@@ -143,7 +278,7 @@ which might not be suited to realtime use.</p>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithSignal:(AKFSignal *)<em>input</em> frequencyRatio:(AKControl *)<em>frequencyRatio</em> formantRetainMethod:(AKScaledFFTFormantRetainMethod)<em>formantRetainMethod</em> amplitudeRatio:(AKControl *)<em>amplitudeRatio</em> cepstrumCoefficients:(AKControl *)<em>numberOfCepstrumCoefficients</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithSignal:(AKFSignal *)<em>input</em> frequencyRatio:(AKControl *)<em>frequencyRatio</em> formantRetainMethod:(AKConstant *)<em>formantRetainMethod</em> amplitudeRatio:(AKControl *)<em>amplitudeRatio</em> cepstrumCoefficients:(AKControl *)<em>numberOfCepstrumCoefficients</em></code></div>
 
     
   

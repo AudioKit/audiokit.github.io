@@ -28,7 +28,10 @@ title: AKStruckMetalBar
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Boundary conditions for ends of the struck metal bar physical model</p>
+            <p>Creates a tone similar to a struck metal bar.</p>
+
+<p>Audio output is a tone similar to a struck metal bar, using a physical model developed from solving the partial differential equation. There are controls over the boundary conditions as well as the bar characteristics.
+More information regarding scanned synthesis can be found at <a href="http://dafx12.york.ac.uk/papers/dafx12">http://dafx12.york.ac.uk/papers/dafx12</a>_submission_18.pdf and <a href="http://www.billverplank.com/ScannedSynthesis.PDF">http://www.billverplank.com/ScannedSynthesis.PDF</a></p>
           </div>
           
           
@@ -152,7 +155,7 @@ title: AKStruckMetalBar
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/leftBoundaryCondition">&nbsp;&nbsp;leftBoundaryCondition</a></code>
-    <span class="tooltip"><p>Boundary condition at left end of bar. [Default Value: AKStruckMetalBarBoundaryConditionClamped]</p></span>
+    <span class="tooltip"><p>Boundary condition at left end of bar. [Default Value: [AKStruckMetalBar boundaryConditionClamped]]</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
@@ -166,7 +169,7 @@ title: AKStruckMetalBar
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/rightBoundaryCondition">&nbsp;&nbsp;rightBoundaryCondition</a></code>
-    <span class="tooltip"><p>Boundary condition at right end of bar. [Default Value: AKStruckMetalBarBoundaryConditionClamped]</p></span>
+    <span class="tooltip"><p>Boundary condition at right end of bar. [Default Value: [AKStruckMetalBar boundaryConditionClamped]]</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
@@ -216,7 +219,7 @@ title: AKStruckMetalBar
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKConstant *decayTime</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *decayTime</code></div>
 
     
   
@@ -252,7 +255,7 @@ title: AKStruckMetalBar
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKConstant *dimensionlessStiffness</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *dimensionlessStiffness</code></div>
 
     
   
@@ -288,7 +291,7 @@ title: AKStruckMetalBar
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKConstant *highFrequencyLoss</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *highFrequencyLoss</code></div>
 
     
   
@@ -319,12 +322,12 @@ title: AKStruckMetalBar
   
   
   <div class="method-subsection brief-description">
-    <p>Boundary condition at left end of bar. [Default Value: AKStruckMetalBarBoundaryConditionClamped]</p>
+    <p>Boundary condition at left end of bar. [Default Value: [AKStruckMetalBar boundaryConditionClamped]]</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKConstant *leftBoundaryCondition</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *leftBoundaryCondition</code></div>
 
     
   
@@ -355,12 +358,12 @@ title: AKStruckMetalBar
   
   
   <div class="method-subsection brief-description">
-    <p>Boundary condition at right end of bar. [Default Value: AKStruckMetalBarBoundaryConditionClamped]</p>
+    <p>Boundary condition at right end of bar. [Default Value: [AKStruckMetalBar boundaryConditionClamped]]</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKConstant *rightBoundaryCondition</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *rightBoundaryCondition</code></div>
 
     
   
@@ -396,7 +399,7 @@ title: AKStruckMetalBar
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *scanSpeed</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *scanSpeed</code></div>
 
     
   
@@ -432,7 +435,7 @@ title: AKStruckMetalBar
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKConstant *strikePosition</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *strikePosition</code></div>
 
     
   
@@ -468,7 +471,7 @@ title: AKStruckMetalBar
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKConstant *strikeVelocity</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *strikeVelocity</code></div>
 
     
   
@@ -504,7 +507,7 @@ title: AKStruckMetalBar
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKConstant *strikeWidth</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *strikeWidth</code></div>
 
     
   
@@ -667,12 +670,12 @@ title: AKStruckMetalBar
     
     <dl class="argument-def parameter-def">
       <dt><em>leftBoundaryCondition</em></dt>
-      <dd><p>Boundary condition at left end of bar. [Default Value: AKStruckMetalBarBoundaryConditionClamped]</p></dd>
+      <dd><p>Boundary condition at left end of bar. [Default Value: [AKStruckMetalBar boundaryConditionClamped]]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>rightBoundaryCondition</em></dt>
-      <dd><p>Boundary condition at right end of bar. [Default Value: AKStruckMetalBarBoundaryConditionClamped]</p></dd>
+      <dd><p>Boundary condition at right end of bar. [Default Value: [AKStruckMetalBar boundaryConditionClamped]]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
@@ -861,7 +864,7 @@ title: AKStruckMetalBar
     
     <dl class="argument-def parameter-def">
       <dt><em>leftBoundaryCondition</em></dt>
-      <dd><p>Boundary condition at left end of bar. [Default Value: AKStruckMetalBarBoundaryConditionClamped]</p></dd>
+      <dd><p>Boundary condition at left end of bar. [Default Value: Clamped]</p></dd>
     </dl>
     
   </div>
@@ -907,7 +910,7 @@ title: AKStruckMetalBar
     
     <dl class="argument-def parameter-def">
       <dt><em>rightBoundaryCondition</em></dt>
-      <dd><p>Boundary condition at right end of bar. [Default Value: AKStruckMetalBarBoundaryConditionClamped]</p></dd>
+      <dd><p>Boundary condition at right end of bar. [Default Value: [AKStruckMetalBar boundaryConditionClamped]]</p></dd>
     </dl>
     
   </div>

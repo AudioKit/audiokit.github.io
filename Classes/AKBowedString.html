@@ -48,7 +48,7 @@ title: AKBowedString
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithFrequency:amplitude:pressure:position:vibratoShapeTable:vibratoFrequency:vibratoAmplitude:minimumFrequency:">&ndash;&nbsp;initWithFrequency:amplitude:pressure:position:vibratoShapeTable:vibratoFrequency:vibratoAmplitude:minimumFrequency:</a></code>
+    <code><a href="#//api/name/initWithFrequency:amplitude:pressure:position:vibratoShape:vibratoFrequency:vibratoAmplitude:minimumFrequency:">&ndash;&nbsp;initWithFrequency:amplitude:pressure:position:vibratoShape:vibratoFrequency:vibratoAmplitude:minimumFrequency:</a></code>
     <span class="tooltip"><p>Instantiates the bowed string with all values</p></span>
   </span>
   
@@ -125,15 +125,15 @@ title: AKBowedString
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/vibratoShapeTable">&nbsp;&nbsp;vibratoShapeTable</a></code>
+    <code><a href="#//api/name/vibratoShape">&nbsp;&nbsp;vibratoShape</a></code>
     <span class="tooltip"><p>Table shape of vibrato, usually a sine table. [Default Value: sine]</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/setOptionalVibratoShapeTable:">&ndash;&nbsp;setOptionalVibratoShapeTable:</a></code>
-    <span class="tooltip"><p>Set an optional vibrato shape table</p></span>
+    <code><a href="#//api/name/setOptionalVibratoShape:">&ndash;&nbsp;setOptionalVibratoShape:</a></code>
+    <span class="tooltip"><p>Set an optional vibrato shape</p></span>
   </span>
   
   
@@ -204,7 +204,7 @@ title: AKBowedString
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *amplitude</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *amplitude</code></div>
 
     
   
@@ -240,7 +240,7 @@ title: AKBowedString
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *frequency</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *frequency</code></div>
 
     
   
@@ -276,7 +276,7 @@ title: AKBowedString
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKConstant *minimumFrequency</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *minimumFrequency</code></div>
 
     
   
@@ -312,7 +312,7 @@ title: AKBowedString
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *position</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *position</code></div>
 
     
   
@@ -348,7 +348,7 @@ title: AKBowedString
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *pressure</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *pressure</code></div>
 
     
   
@@ -384,7 +384,7 @@ title: AKBowedString
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *vibratoAmplitude</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *vibratoAmplitude</code></div>
 
     
   
@@ -420,7 +420,7 @@ title: AKBowedString
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *vibratoFrequency</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *vibratoFrequency</code></div>
 
     
   
@@ -445,8 +445,8 @@ title: AKBowedString
 </div>
             
             <div class="section-method">
-  <a name="//api/name/vibratoShapeTable" title="vibratoShapeTable"></a>
-  <h3 class="subsubtitle method-title">vibratoShapeTable</h3>
+  <a name="//api/name/vibratoShape" title="vibratoShape"></a>
+  <h3 class="subsubtitle method-title">vibratoShape</h3>
 
   
   
@@ -456,7 +456,7 @@ title: AKBowedString
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKFunctionTable *vibratoShapeTable</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKTable *vibratoShape</code></div>
 
     
   
@@ -569,8 +569,8 @@ title: AKBowedString
 </div>
             
             <div class="section-method">
-  <a name="//api/name/initWithFrequency:amplitude:pressure:position:vibratoShapeTable:vibratoFrequency:vibratoAmplitude:minimumFrequency:" title="initWithFrequency:amplitude:pressure:position:vibratoShapeTable:vibratoFrequency:vibratoAmplitude:minimumFrequency:"></a>
-  <h3 class="subsubtitle method-title">initWithFrequency:amplitude:pressure:position:vibratoShapeTable:vibratoFrequency:vibratoAmplitude:minimumFrequency:</h3>
+  <a name="//api/name/initWithFrequency:amplitude:pressure:position:vibratoShape:vibratoFrequency:vibratoAmplitude:minimumFrequency:" title="initWithFrequency:amplitude:pressure:position:vibratoShape:vibratoFrequency:vibratoAmplitude:minimumFrequency:"></a>
+  <h3 class="subsubtitle method-title">initWithFrequency:amplitude:pressure:position:vibratoShape:vibratoFrequency:vibratoAmplitude:minimumFrequency:</h3>
 
   
   
@@ -580,7 +580,7 @@ title: AKBowedString
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFrequency:(AKParameter *)<em>frequency</em> amplitude:(AKParameter *)<em>amplitude</em> pressure:(AKParameter *)<em>pressure</em> position:(AKParameter *)<em>position</em> vibratoShapeTable:(AKFunctionTable *)<em>vibratoShapeTable</em> vibratoFrequency:(AKParameter *)<em>vibratoFrequency</em> vibratoAmplitude:(AKParameter *)<em>vibratoAmplitude</em> minimumFrequency:(AKConstant *)<em>minimumFrequency</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFrequency:(AKParameter *)<em>frequency</em> amplitude:(AKParameter *)<em>amplitude</em> pressure:(AKParameter *)<em>pressure</em> position:(AKParameter *)<em>position</em> vibratoShape:(AKTable *)<em>vibratoShape</em> vibratoFrequency:(AKParameter *)<em>vibratoFrequency</em> vibratoAmplitude:(AKParameter *)<em>vibratoAmplitude</em> minimumFrequency:(AKConstant *)<em>minimumFrequency</em></code></div>
 
     
   
@@ -608,7 +608,7 @@ title: AKBowedString
     </dl>
     
     <dl class="argument-def parameter-def">
-      <dt><em>vibratoShapeTable</em></dt>
+      <dt><em>vibratoShape</em></dt>
       <dd><p>Table shape of vibrato, usually a sine table. [Default Value: sine]</p></dd>
     </dl>
     
@@ -972,18 +972,18 @@ title: AKBowedString
 </div>
             
             <div class="section-method">
-  <a name="//api/name/setOptionalVibratoShapeTable:" title="setOptionalVibratoShapeTable:"></a>
-  <h3 class="subsubtitle method-title">setOptionalVibratoShapeTable:</h3>
+  <a name="//api/name/setOptionalVibratoShape:" title="setOptionalVibratoShape:"></a>
+  <h3 class="subsubtitle method-title">setOptionalVibratoShape:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional vibrato shape table</p>
+    <p>Set an optional vibrato shape</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalVibratoShapeTable:(AKFunctionTable *)<em>vibratoShapeTable</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalVibratoShape:(AKTable *)<em>vibratoShape</em></code></div>
 
     
   
@@ -991,7 +991,7 @@ title: AKBowedString
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>vibratoShapeTable</em></dt>
+      <dt><em>vibratoShape</em></dt>
       <dd><p>Table shape of vibrato, usually a sine table. [Default Value: sine]</p></dd>
     </dl>
     

@@ -68,7 +68,7 @@ title: AKGranularSynthesizer
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/windowWaveform">&nbsp;&nbsp;windowWaveform</a></code>
-    <span class="tooltip"><p>Function table containing window waveform. [Default Value: AKWindowTypeHamming]</p></span>
+    <span class="tooltip"><p>Table containing window waveform. [Default Value: AKWindowTypeHamming]</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
@@ -216,7 +216,7 @@ title: AKGranularSynthesizer
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *density</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *density</code></div>
 
     
   
@@ -252,7 +252,7 @@ title: AKGranularSynthesizer
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *duration</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *duration</code></div>
 
     
   
@@ -288,7 +288,7 @@ title: AKGranularSynthesizer
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *frequencyVariation</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *frequencyVariation</code></div>
 
     
   
@@ -324,7 +324,7 @@ title: AKGranularSynthesizer
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *frequencyVariationDistribution</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *frequencyVariationDistribution</code></div>
 
     
   
@@ -360,7 +360,7 @@ title: AKGranularSynthesizer
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKConstant *maximumOverlappingGrains</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *maximumOverlappingGrains</code></div>
 
     
   
@@ -396,7 +396,7 @@ title: AKGranularSynthesizer
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *phase</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *phase</code></div>
 
     
   
@@ -432,7 +432,7 @@ title: AKGranularSynthesizer
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *prpow</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *prpow</code></div>
 
     
   
@@ -468,7 +468,7 @@ title: AKGranularSynthesizer
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *startPhaseVariation</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *startPhaseVariation</code></div>
 
     
   
@@ -499,12 +499,12 @@ title: AKGranularSynthesizer
   
   
   <div class="method-subsection brief-description">
-    <p>Function table containing window waveform. [Default Value: AKWindowTypeHamming]</p>
+    <p>Table containing window waveform. [Default Value: AKWindowTypeHamming]</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKWindow *windowWaveform</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKTable *windowWaveform</code></div>
 
     
   
@@ -548,7 +548,7 @@ title: AKGranularSynthesizer
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)WithGrainWaveform:(AKParameter *)<em>grainWaveform</em> frequency:(AKParameter *)<em>frequency</em></code></div>
+  <div class="method-subsection method-declaration"><code>+ (instancetype)WithGrainWaveform:(AKTable *)<em>grainWaveform</em> frequency:(AKParameter *)<em>frequency</em></code></div>
 
     
   
@@ -557,7 +557,7 @@ title: AKGranularSynthesizer
     
     <dl class="argument-def parameter-def">
       <dt><em>grainWaveform</em></dt>
-      <dd><p>Function table contain grain waveform.</p></dd>
+      <dd><p>Table contain grain waveform.</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
@@ -607,7 +607,7 @@ title: AKGranularSynthesizer
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithGrainWaveform:(AKParameter *)<em>grainWaveform</em> frequency:(AKParameter *)<em>frequency</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithGrainWaveform:(AKTable *)<em>grainWaveform</em> frequency:(AKParameter *)<em>frequency</em></code></div>
 
     
   
@@ -616,7 +616,7 @@ title: AKGranularSynthesizer
     
     <dl class="argument-def parameter-def">
       <dt><em>grainWaveform</em></dt>
-      <dd><p>Function table contain grain waveform.</p></dd>
+      <dd><p>Table contain grain waveform.</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
@@ -658,7 +658,7 @@ title: AKGranularSynthesizer
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithGrainWaveform:(AKParameter *)<em>grainWaveform</em> frequency:(AKParameter *)<em>frequency</em> windowWaveform:(AKWindow *)<em>windowWaveform</em> duration:(AKParameter *)<em>duration</em> density:(AKParameter *)<em>density</em> maximumOverlappingGrains:(AKConstant *)<em>maximumOverlappingGrains</em> frequencyVariation:(AKParameter *)<em>frequencyVariation</em> frequencyVariationDistribution:(AKParameter *)<em>frequencyVariationDistribution</em> phase:(AKParameter *)<em>phase</em> startPhaseVariation:(AKParameter *)<em>startPhaseVariation</em> prpow:(AKParameter *)<em>prpow</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithGrainWaveform:(AKTable *)<em>grainWaveform</em> frequency:(AKParameter *)<em>frequency</em> windowWaveform:(AKTable *)<em>windowWaveform</em> duration:(AKParameter *)<em>duration</em> density:(AKParameter *)<em>density</em> maximumOverlappingGrains:(AKConstant *)<em>maximumOverlappingGrains</em> frequencyVariation:(AKParameter *)<em>frequencyVariation</em> frequencyVariationDistribution:(AKParameter *)<em>frequencyVariationDistribution</em> phase:(AKParameter *)<em>phase</em> startPhaseVariation:(AKParameter *)<em>startPhaseVariation</em> prpow:(AKParameter *)<em>prpow</em></code></div>
 
     
   
@@ -667,7 +667,7 @@ title: AKGranularSynthesizer
     
     <dl class="argument-def parameter-def">
       <dt><em>grainWaveform</em></dt>
-      <dd><p>Function table contain grain waveform. Updated at Control-rate. [Default Value: ]</p></dd>
+      <dd><p>Table contain grain waveform. Updated at Control-rate. [Default Value: ]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
@@ -677,7 +677,7 @@ title: AKGranularSynthesizer
     
     <dl class="argument-def parameter-def">
       <dt><em>windowWaveform</em></dt>
-      <dd><p>Function table containing window waveform. [Default Value: AKWindowTypeHamming]</p></dd>
+      <dd><p>Table containing window waveform. [Default Value: AKWindowTypeHamming]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
@@ -1122,7 +1122,7 @@ title: AKGranularSynthesizer
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalWindowWaveform:(AKWindow *)<em>windowWaveform</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalWindowWaveform:(AKTable *)<em>windowWaveform</em></code></div>
 
     
   
@@ -1131,7 +1131,7 @@ title: AKGranularSynthesizer
     
     <dl class="argument-def parameter-def">
       <dt><em>windowWaveform</em></dt>
-      <dd><p>Function table containing window waveform. [Default Value: AKWindowTypeHamming]</p></dd>
+      <dd><p>Table containing window waveform. [Default Value: AKWindowTypeHamming]</p></dd>
     </dl>
     
   </div>

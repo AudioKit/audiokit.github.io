@@ -1,0 +1,579 @@
+---
+layout: docs
+title: AKHarmonicCosineTableGenerator
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKHarmonicCosineTableGenerator</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKTableGenerator.html">AKTableGenerator</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKHarmonicCosineTableGenerator.h<br />AKHarmonicCosineTableGenerator.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>Generates an additive set of cosine partials</p>
+
+<p>This table generates an additive set of cosine partials, in the manner of the <a href="../Classes/AKAdditiveCosines.html">AKAdditiveCosines</a> operation</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            <h3 class="subsubtitle task-title">Other Methods</h3>
+
+            <ul class="task-list">
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithNumberOfHarmonics:lowestHarmonic:partialMultiplier:">&ndash;&nbsp;initWithNumberOfHarmonics:lowestHarmonic:partialMultiplier:</a></code>
+    <span class="tooltip"><p>Instantiates the additive cosine table with all values defined</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
+    <span class="tooltip"><p>Instantiates the additive cosine table with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/numberOfHarmonics">&nbsp;&nbsp;numberOfHarmonics</a></code>
+    <span class="tooltip"><p>Number of harmonics in the partial series. [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalNumberOfHarmonics:">&ndash;&nbsp;setOptionalNumberOfHarmonics:</a></code>
+    <span class="tooltip"><p>Set an optional number of harmonics</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/lowestHarmonic">&nbsp;&nbsp;lowestHarmonic</a></code>
+    <span class="tooltip"><p>Lowest harmonic partial present. Can be positive, zero or negative. The set of partials can begin at any partial number and proceeds upwards; if this is negative, all partials below zero will reflect in zero to produce positive partials without phase change (since cosine is an even function), and will add constructively to any positive partials in the set. [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalLowestHarmonic:">&ndash;&nbsp;setOptionalLowestHarmonic:</a></code>
+    <span class="tooltip"><p>Set an optional lowest harmonic</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/partialMultiplier">&nbsp;&nbsp;partialMultiplier</a></code>
+    <span class="tooltip"><p>Multiplier in an amplitude coefficient series.  This is a power series: if the lhth partial has a strength coefficient of A the (<a href="#//api/name/lowestHarmonic">lowestHarmonic</a> + n)th partial will have a coefficient of A * r<sup>n</sup>, i.e. strength values trace an exponential curve. May be positive, zero or negative, and is not restricted to integers. [Default Value: 1]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalPartialMultiplier:">&ndash;&nbsp;setOptionalPartialMultiplier:</a></code>
+    <span class="tooltip"><p>Set an optional partial multiplier</p></span>
+  </span>
+  
+  
+</li>
+            </ul>
+            
+
+            
+            <h3 class="subsubtitle task-title">Other Methods</h3>
+
+            <ul class="task-list">
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/generationRoutineNumber">&ndash;&nbsp;generationRoutineNumber</a></code>
+    <span class="tooltip"><p>Generation Routine Number</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/parametersWithSize:">&ndash;&nbsp;parametersWithSize:</a></code>
+    <span class="tooltip"><p>Parameters for the generator</p></span>
+  </span>
+  
+  
+</li>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/lowestHarmonic" title="lowestHarmonic"></a>
+  <h3 class="subsubtitle method-title">lowestHarmonic</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Lowest harmonic partial present. Can be positive, zero or negative. The set of partials can begin at any partial number and proceeds upwards; if this is negative, all partials below zero will reflect in zero to produce positive partials without phase change (since cosine is an even function), and will add constructively to any positive partials in the set. [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property int lowestHarmonic</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKHarmonicCosineTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/numberOfHarmonics" title="numberOfHarmonics"></a>
+  <h3 class="subsubtitle method-title">numberOfHarmonics</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Number of harmonics in the partial series. [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property int numberOfHarmonics</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKHarmonicCosineTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/partialMultiplier" title="partialMultiplier"></a>
+  <h3 class="subsubtitle method-title">partialMultiplier</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Multiplier in an amplitude coefficient series.  This is a power series: if the lhth partial has a strength coefficient of A the (<a href="#//api/name/lowestHarmonic">lowestHarmonic</a> + n)th partial will have a coefficient of A * r<sup>n</sup>, i.e. strength values trace an exponential curve. May be positive, zero or negative, and is not restricted to integers. [Default Value: 1]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property float partialMultiplier</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKHarmonicCosineTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/generationRoutineNumber" title="generationRoutineNumber"></a>
+  <h3 class="subsubtitle method-title">generationRoutineNumber</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Generation Routine Number</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (int)generationRoutineNumber</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/init" title="init"></a>
+  <h3 class="subsubtitle method-title">init</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the additive cosine table with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKHarmonicCosineTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithNumberOfHarmonics:lowestHarmonic:partialMultiplier:" title="initWithNumberOfHarmonics:lowestHarmonic:partialMultiplier:"></a>
+  <h3 class="subsubtitle method-title">initWithNumberOfHarmonics:lowestHarmonic:partialMultiplier:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the additive cosine table with all values defined</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithNumberOfHarmonics:(int)<em>numberOfHarmonics</em> lowestHarmonic:(int)<em>lowestHarmonic</em> partialMultiplier:(float)<em>partialMultiplier</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>numberOfHarmonics</em></dt>
+      <dd><p>Number of harmonics in the partial series.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>lowestHarmonic</em></dt>
+      <dd><p>Lowest harmonic partial present. Can be positive, zero or negative. The set of partials can begin at any partial number and proceeds upwards; if this is negative, all partials below zero will reflect in zero to produce positive partials without phase change (since cosine is an even function), and will add constructively to any positive partials in the set.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>partialMultiplier</em></dt>
+      <dd><p>Multiplier in an amplitude coefficient series.  This is a power series: if the lhth partial has a strength coefficient of A the (<a href="#//api/name/lowestHarmonic">lowestHarmonic</a> + n)th partial will have a coefficient of A * r<sup>n</sup>, i.e. strength values trace an exponential curve. May be positive, zero or negative, and is not restricted to integers.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>size</em></dt>
+      <dd><p>Number of points in the table.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKHarmonicCosineTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/parametersWithSize:" title="parametersWithSize:"></a>
+  <h3 class="subsubtitle method-title">parametersWithSize:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Parameters for the generator</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (NSArray *)parametersWithSize:(int)<em>size</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>size</em></dt>
+      <dd><p>The final size of the table, useful for scaling</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalLowestHarmonic:" title="setOptionalLowestHarmonic:"></a>
+  <h3 class="subsubtitle method-title">setOptionalLowestHarmonic:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional lowest harmonic</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalLowestHarmonic:(int)<em>lowestHarmonic</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>lowestHarmonic</em></dt>
+      <dd><p>Lowest harmonic partial present. Can be positive, zero or negative. The set of partials can begin at any partial number and proceeds upwards; if this is negative, all partials below zero will reflect in zero to produce positive partials without phase change (since cosine is an even function), and will add constructively to any positive partials in the set. [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKHarmonicCosineTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalNumberOfHarmonics:" title="setOptionalNumberOfHarmonics:"></a>
+  <h3 class="subsubtitle method-title">setOptionalNumberOfHarmonics:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional number of harmonics</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalNumberOfHarmonics:(int)<em>numberOfHarmonics</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>numberOfHarmonics</em></dt>
+      <dd><p>Number of harmonics in the partial series. [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKHarmonicCosineTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalPartialMultiplier:" title="setOptionalPartialMultiplier:"></a>
+  <h3 class="subsubtitle method-title">setOptionalPartialMultiplier:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional partial multiplier</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalPartialMultiplier:(float)<em>partialMultiplier</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>partialMultiplier</em></dt>
+      <dd><p>Multiplier in an amplitude coefficient series.  This is a power series: if the lhth partial has a strength coefficient of A the (<a href="#//api/name/lowestHarmonic">lowestHarmonic</a> + n)th partial will have a coefficient of A * r<sup>n</sup>, i.e. strength values trace an exponential curve. May be positive, zero or negative, and is not restricted to integers. [Default Value: 1]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKHarmonicCosineTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+          
+        </div>
+      </div>

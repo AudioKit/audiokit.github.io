@@ -49,21 +49,21 @@ This operation will also scale pitch, independently of frequency, using a transp
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithFunctionTable:frequencyRatio:timeRatio:amplitude:functionTableOffset:sizeOfFFT:hopSize:dbthresh:">&ndash;&nbsp;initWithFunctionTable:frequencyRatio:timeRatio:amplitude:functionTableOffset:sizeOfFFT:hopSize:dbthresh:</a></code>
+    <code><a href="#//api/name/initWithTable:frequencyRatio:timeRatio:amplitude:tableOffset:sizeOfFFT:hopSize:dbthresh:">&ndash;&nbsp;initWithTable:frequencyRatio:timeRatio:amplitude:tableOffset:sizeOfFFT:hopSize:dbthresh:</a></code>
     <span class="tooltip"><p>Instantiates the fft processor with all values</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithFunctionTable:">&ndash;&nbsp;initWithFunctionTable:</a></code>
+    <code><a href="#//api/name/initWithTable:">&ndash;&nbsp;initWithTable:</a></code>
     <span class="tooltip"><p>Instantiates the fft processor with default values</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/WithFunctionTable:">+&nbsp;WithFunctionTable:</a></code>
+    <code><a href="#//api/name/WithTable:">+&nbsp;WithTable:</a></code>
     <span class="tooltip"><p>Instantiates the fft processor with default values</p></span>
   </span>
   
@@ -112,15 +112,15 @@ This operation will also scale pitch, independently of frequency, using a transp
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/functionTableOffset">&nbsp;&nbsp;functionTableOffset</a></code>
+    <code><a href="#//api/name/tableOffset">&nbsp;&nbsp;tableOffset</a></code>
     <span class="tooltip"><p>Startup read offset into table, in seconds. [Default Value: 0]</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/setOptionalFunctionTableOffset:">&ndash;&nbsp;setOptionalFunctionTableOffset:</a></code>
-    <span class="tooltip"><p>Set an optional function table offset</p></span>
+    <code><a href="#//api/name/setOptionalTableOffset:">&ndash;&nbsp;setOptionalTableOffset:</a></code>
+    <span class="tooltip"><p>Set an optional table offset</p></span>
   </span>
   
   
@@ -191,7 +191,7 @@ This operation will also scale pitch, independently of frequency, using a transp
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *amplitude</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *amplitude</code></div>
 
     
   
@@ -227,7 +227,7 @@ This operation will also scale pitch, independently of frequency, using a transp
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKConstant *dbthresh</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *dbthresh</code></div>
 
     
   
@@ -263,43 +263,7 @@ This operation will also scale pitch, independently of frequency, using a transp
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *frequencyRatio</code></div>
-
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  <div class="method-subsection declared-in-section">
-    <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKFFTProcessor.h</code><br />
-  </div>
-  
-  
-</div>
-            
-            <div class="section-method">
-  <a name="//api/name/functionTableOffset" title="functionTableOffset"></a>
-  <h3 class="subsubtitle method-title">functionTableOffset</h3>
-
-  
-  
-  <div class="method-subsection brief-description">
-    <p>Startup read offset into table, in seconds. [Default Value: 0]</p>
-  </div>
-  
-    
-
-  <div class="method-subsection method-declaration"><code>@property AKConstant *functionTableOffset</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *frequencyRatio</code></div>
 
     
   
@@ -335,7 +299,7 @@ This operation will also scale pitch, independently of frequency, using a transp
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKConstant *hopSize</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *hopSize</code></div>
 
     
   
@@ -371,7 +335,43 @@ This operation will also scale pitch, independently of frequency, using a transp
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKConstant *sizeOfFFT</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *sizeOfFFT</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFFTProcessor.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/tableOffset" title="tableOffset"></a>
+  <h3 class="subsubtitle method-title">tableOffset</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Startup read offset into table, in seconds. [Default Value: 0]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *tableOffset</code></div>
 
     
   
@@ -407,7 +407,7 @@ This operation will also scale pitch, independently of frequency, using a transp
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *timeRatio</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *timeRatio</code></div>
 
     
   
@@ -440,8 +440,8 @@ This operation will also scale pitch, independently of frequency, using a transp
             <h2 class="subtitle subtitle-methods">Class Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/WithFunctionTable:" title="WithFunctionTable:"></a>
-  <h3 class="subsubtitle method-title">WithFunctionTable:</h3>
+  <a name="//api/name/WithTable:" title="WithTable:"></a>
+  <h3 class="subsubtitle method-title">WithTable:</h3>
 
   
   
@@ -451,7 +451,7 @@ This operation will also scale pitch, independently of frequency, using a transp
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)WithFunctionTable:(AKParameter *)<em>functionTable</em></code></div>
+  <div class="method-subsection method-declaration"><code>+ (instancetype)WithTable:(AKParameter *)<em>table</em></code></div>
 
     
   
@@ -459,8 +459,8 @@ This operation will also scale pitch, independently of frequency, using a transp
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>functionTable</em></dt>
-      <dd><p>Primary input is a function table, usually a mono sound file.</p></dd>
+      <dt><em>table</em></dt>
+      <dd><p>Primary input is a table, usually a mono sound file.</p></dd>
     </dl>
     
   </div>
@@ -494,8 +494,8 @@ This operation will also scale pitch, independently of frequency, using a transp
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithFunctionTable:" title="initWithFunctionTable:"></a>
-  <h3 class="subsubtitle method-title">initWithFunctionTable:</h3>
+  <a name="//api/name/initWithTable:" title="initWithTable:"></a>
+  <h3 class="subsubtitle method-title">initWithTable:</h3>
 
   
   
@@ -505,7 +505,7 @@ This operation will also scale pitch, independently of frequency, using a transp
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFunctionTable:(AKParameter *)<em>functionTable</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithTable:(AKParameter *)<em>table</em></code></div>
 
     
   
@@ -513,8 +513,8 @@ This operation will also scale pitch, independently of frequency, using a transp
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>functionTable</em></dt>
-      <dd><p>Primary input is a function table, usually a mono sound file.</p></dd>
+      <dt><em>table</em></dt>
+      <dd><p>Primary input is a table, usually a mono sound file.</p></dd>
     </dl>
     
   </div>
@@ -540,8 +540,8 @@ This operation will also scale pitch, independently of frequency, using a transp
 </div>
             
             <div class="section-method">
-  <a name="//api/name/initWithFunctionTable:frequencyRatio:timeRatio:amplitude:functionTableOffset:sizeOfFFT:hopSize:dbthresh:" title="initWithFunctionTable:frequencyRatio:timeRatio:amplitude:functionTableOffset:sizeOfFFT:hopSize:dbthresh:"></a>
-  <h3 class="subsubtitle method-title">initWithFunctionTable:frequencyRatio:timeRatio:amplitude:functionTableOffset:sizeOfFFT:hopSize:dbthresh:</h3>
+  <a name="//api/name/initWithTable:frequencyRatio:timeRatio:amplitude:tableOffset:sizeOfFFT:hopSize:dbthresh:" title="initWithTable:frequencyRatio:timeRatio:amplitude:tableOffset:sizeOfFFT:hopSize:dbthresh:"></a>
+  <h3 class="subsubtitle method-title">initWithTable:frequencyRatio:timeRatio:amplitude:tableOffset:sizeOfFFT:hopSize:dbthresh:</h3>
 
   
   
@@ -551,7 +551,7 @@ This operation will also scale pitch, independently of frequency, using a transp
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFunctionTable:(AKParameter *)<em>functionTable</em> frequencyRatio:(AKParameter *)<em>frequencyRatio</em> timeRatio:(AKParameter *)<em>timeRatio</em> amplitude:(AKParameter *)<em>amplitude</em> functionTableOffset:(AKConstant *)<em>functionTableOffset</em> sizeOfFFT:(AKConstant *)<em>sizeOfFFT</em> hopSize:(AKConstant *)<em>hopSize</em> dbthresh:(AKConstant *)<em>dbthresh</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithTable:(AKParameter *)<em>table</em> frequencyRatio:(AKParameter *)<em>frequencyRatio</em> timeRatio:(AKParameter *)<em>timeRatio</em> amplitude:(AKParameter *)<em>amplitude</em> tableOffset:(AKConstant *)<em>tableOffset</em> sizeOfFFT:(AKConstant *)<em>sizeOfFFT</em> hopSize:(AKConstant *)<em>hopSize</em> dbthresh:(AKConstant *)<em>dbthresh</em></code></div>
 
     
   
@@ -559,8 +559,8 @@ This operation will also scale pitch, independently of frequency, using a transp
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>functionTable</em></dt>
-      <dd><p>Primary input is a function table, usually a mono sound file. Updated at Control-rate. [Default Value: ]</p></dd>
+      <dt><em>table</em></dt>
+      <dd><p>Primary input is a table, usually a mono sound file. Updated at Control-rate. [Default Value: ]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
@@ -579,7 +579,7 @@ This operation will also scale pitch, independently of frequency, using a transp
     </dl>
     
     <dl class="argument-def parameter-def">
-      <dt><em>functionTableOffset</em></dt>
+      <dt><em>tableOffset</em></dt>
       <dd><p>Startup read offset into table, in seconds. [Default Value: 0]</p></dd>
     </dl>
     
@@ -759,52 +759,6 @@ This operation will also scale pitch, independently of frequency, using a transp
 </div>
             
             <div class="section-method">
-  <a name="//api/name/setOptionalFunctionTableOffset:" title="setOptionalFunctionTableOffset:"></a>
-  <h3 class="subsubtitle method-title">setOptionalFunctionTableOffset:</h3>
-
-  
-  
-  <div class="method-subsection brief-description">
-    <p>Set an optional function table offset</p>
-  </div>
-  
-    
-
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalFunctionTableOffset:(AKConstant *)<em>functionTableOffset</em></code></div>
-
-    
-  
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
-    
-    <dl class="argument-def parameter-def">
-      <dt><em>functionTableOffset</em></dt>
-      <dd><p>Startup read offset into table, in seconds. [Default Value: 0]</p></dd>
-    </dl>
-    
-  </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  <div class="method-subsection declared-in-section">
-    <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKFFTProcessor.h</code><br />
-  </div>
-  
-  
-</div>
-            
-            <div class="section-method">
   <a name="//api/name/setOptionalHopSize:" title="setOptionalHopSize:"></a>
   <h3 class="subsubtitle method-title">setOptionalHopSize:</h3>
 
@@ -872,6 +826,52 @@ This operation will also scale pitch, independently of frequency, using a transp
     <dl class="argument-def parameter-def">
       <dt><em>sizeOfFFT</em></dt>
       <dd><p>FFT size- must be a factor of 2. [Default Value: 2048]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKFFTProcessor.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalTableOffset:" title="setOptionalTableOffset:"></a>
+  <h3 class="subsubtitle method-title">setOptionalTableOffset:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional table offset</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalTableOffset:(AKConstant *)<em>tableOffset</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>tableOffset</em></dt>
+      <dd><p>Startup read offset into table, in seconds. [Default Value: 0]</p></dd>
     </dl>
     
   </div>

@@ -1,0 +1,1174 @@
+---
+layout: docs
+title: AKRandomDistributionTableGenerator
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKRandomDistributionTableGenerator</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKTableGenerator.html">AKTableGenerator</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKRandomDistributionTableGenerator.h<br />AKRandomDistributionTableGenerator.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>Generates tables of different random distributions.</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            <h3 class="subsubtitle task-title">Other Methods</h3>
+
+            <ul class="task-list">
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initUniformDistribution">&ndash;&nbsp;initUniformDistribution</a></code>
+    <span class="tooltip"><p>Create random numbers with a uniform (positive numbers only) distribution</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/uniformDistribution">+&nbsp;uniformDistribution</a></code>
+    <span class="tooltip"><p>Create random numbers with a uniform (positive numbers only) distribution</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initLinearDistribution">&ndash;&nbsp;initLinearDistribution</a></code>
+    <span class="tooltip"><p>Create random numbers with a linear (positive numbers only) distribution</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/linearDistribution">+&nbsp;linearDistribution</a></code>
+    <span class="tooltip"><p>Create random numbers with a linear (positive numbers only) distribution</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initTriangularDistribution">&ndash;&nbsp;initTriangularDistribution</a></code>
+    <span class="tooltip"><p>Create random numbers with a triangular (positive and negative numbers) distribution</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/triangularDistribution">+&nbsp;triangularDistribution</a></code>
+    <span class="tooltip"><p>Create random numbers with a triangular (positive and negative numbers) distribution</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initExponentialDistribution">&ndash;&nbsp;initExponentialDistribution</a></code>
+    <span class="tooltip"><p>Create random numbers with a exponential (positive numbers only) distribution</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/exponentialDistribution">+&nbsp;exponentialDistribution</a></code>
+    <span class="tooltip"><p>Create random numbers with a exponential (positive numbers only) distribution</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initBiexponentialDistribution">&ndash;&nbsp;initBiexponentialDistribution</a></code>
+    <span class="tooltip"><p>Create random numbers with a biexponential (positive and negative numbers) distribution</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/biexponentialDistribution">+&nbsp;biexponentialDistribution</a></code>
+    <span class="tooltip"><p>Create random numbers with a biexponential (positive and negative numbers) distribution</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initGaussianDistribution">&ndash;&nbsp;initGaussianDistribution</a></code>
+    <span class="tooltip"><p>Create random numbers with a Gaussian (positive and negative numbers) distribution</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/gaussianDistribution">+&nbsp;gaussianDistribution</a></code>
+    <span class="tooltip"><p>Create random numbers with a Gaussian (positive and negative numbers) distribution</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initCauchyDistribution">&ndash;&nbsp;initCauchyDistribution</a></code>
+    <span class="tooltip"><p>Create random numbers with a Cauchy (positive and negative numbers) distribution</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/cauchyDistribution">+&nbsp;cauchyDistribution</a></code>
+    <span class="tooltip"><p>Create random numbers with a Cauchy (positive and negative numbers) distribution</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initPositiveCauchyDistribution">&ndash;&nbsp;initPositiveCauchyDistribution</a></code>
+    <span class="tooltip"><p>Create random numbers with a positive Cauchy (positive numbers only) distribution</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/positiveCauchyDistribution">+&nbsp;positiveCauchyDistribution</a></code>
+    <span class="tooltip"><p>Create random numbers with a positive Cauchy (positive numbers only) distribution</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initPoissonDistribution">&ndash;&nbsp;initPoissonDistribution</a></code>
+    <span class="tooltip"><p>Create random numbers with a Poisson (positive numbers only) distribution</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/poissonDistribution">+&nbsp;poissonDistribution</a></code>
+    <span class="tooltip"><p>Create random numbers with a Poisson (positive numbers only) distribution</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWeibullDistributionWithSigma:">&ndash;&nbsp;initWeibullDistributionWithSigma:</a></code>
+    <span class="tooltip"><p>Create a random distribution table of the Weibull type.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/weibullDistributionWithSigma:">+&nbsp;weibullDistributionWithSigma:</a></code>
+    <span class="tooltip"><p>Create a random distribution table of the Weibull type.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initBetaDistributionWithAlpha:beta:">&ndash;&nbsp;initBetaDistributionWithAlpha:beta:</a></code>
+    <span class="tooltip"><p>Create a random distribution table of the Beta (positive numbers only) type. If both alpha and beta equal one we have uniform distribution. If both alpha and beta are greater than one we have a sort of Gaussian distribution.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/betaDistributionWithAlpha:beta:">+&nbsp;betaDistributionWithAlpha:beta:</a></code>
+    <span class="tooltip"><p>Create a random distribution table of the Beta (positive numbers only) type. If both alpha and beta equal one we have uniform distribution. If both alpha and beta are greater than one we have a sort of Gaussian distribution.</p></span>
+  </span>
+  
+  
+</li>
+            </ul>
+            
+
+            
+            <h3 class="subsubtitle task-title">Other Methods</h3>
+
+            <ul class="task-list">
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/generationRoutineNumber">&ndash;&nbsp;generationRoutineNumber</a></code>
+    <span class="tooltip"><p>Generation Routine Number</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/parametersWithSize:">&ndash;&nbsp;parametersWithSize:</a></code>
+    <span class="tooltip"><p>Parameters for the generator</p></span>
+  </span>
+  
+  
+</li>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/betaDistributionWithAlpha:beta:" title="betaDistributionWithAlpha:beta:"></a>
+  <h3 class="subsubtitle method-title">betaDistributionWithAlpha:beta:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create a random distribution table of the Beta (positive numbers only) type. If both alpha and beta equal one we have uniform distribution. If both alpha and beta are greater than one we have a sort of Gaussian distribution.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)betaDistributionWithAlpha:(float)<em>alpha</em> beta:(float)<em>beta</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>alpha</em></dt>
+      <dd><p>If alpha is smaller than one, smaller values favor values near 0.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>beta</em></dt>
+      <dd><p>If beta is smaller than one, smaller values favor values near level.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKRandomDistributionTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/biexponentialDistribution" title="biexponentialDistribution"></a>
+  <h3 class="subsubtitle method-title">biexponentialDistribution</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create random numbers with a biexponential (positive and negative numbers) distribution</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)biexponentialDistribution</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKRandomDistributionTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/cauchyDistribution" title="cauchyDistribution"></a>
+  <h3 class="subsubtitle method-title">cauchyDistribution</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create random numbers with a Cauchy (positive and negative numbers) distribution</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)cauchyDistribution</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKRandomDistributionTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/exponentialDistribution" title="exponentialDistribution"></a>
+  <h3 class="subsubtitle method-title">exponentialDistribution</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create random numbers with a exponential (positive numbers only) distribution</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)exponentialDistribution</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKRandomDistributionTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/gaussianDistribution" title="gaussianDistribution"></a>
+  <h3 class="subsubtitle method-title">gaussianDistribution</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create random numbers with a Gaussian (positive and negative numbers) distribution</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)gaussianDistribution</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKRandomDistributionTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/linearDistribution" title="linearDistribution"></a>
+  <h3 class="subsubtitle method-title">linearDistribution</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create random numbers with a linear (positive numbers only) distribution</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)linearDistribution</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKRandomDistributionTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/poissonDistribution" title="poissonDistribution"></a>
+  <h3 class="subsubtitle method-title">poissonDistribution</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create random numbers with a Poisson (positive numbers only) distribution</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)poissonDistribution</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKRandomDistributionTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/positiveCauchyDistribution" title="positiveCauchyDistribution"></a>
+  <h3 class="subsubtitle method-title">positiveCauchyDistribution</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create random numbers with a positive Cauchy (positive numbers only) distribution</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)positiveCauchyDistribution</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKRandomDistributionTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/triangularDistribution" title="triangularDistribution"></a>
+  <h3 class="subsubtitle method-title">triangularDistribution</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create random numbers with a triangular (positive and negative numbers) distribution</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)triangularDistribution</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKRandomDistributionTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/uniformDistribution" title="uniformDistribution"></a>
+  <h3 class="subsubtitle method-title">uniformDistribution</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create random numbers with a uniform (positive numbers only) distribution</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)uniformDistribution</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKRandomDistributionTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/weibullDistributionWithSigma:" title="weibullDistributionWithSigma:"></a>
+  <h3 class="subsubtitle method-title">weibullDistributionWithSigma:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create a random distribution table of the Weibull type.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)weibullDistributionWithSigma:(float)<em>sigma</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>sigma</em></dt>
+      <dd><p>Value that determines the spread of the distribution.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKRandomDistributionTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/generationRoutineNumber" title="generationRoutineNumber"></a>
+  <h3 class="subsubtitle method-title">generationRoutineNumber</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Generation Routine Number</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (int)generationRoutineNumber</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initBetaDistributionWithAlpha:beta:" title="initBetaDistributionWithAlpha:beta:"></a>
+  <h3 class="subsubtitle method-title">initBetaDistributionWithAlpha:beta:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create a random distribution table of the Beta (positive numbers only) type. If both alpha and beta equal one we have uniform distribution. If both alpha and beta are greater than one we have a sort of Gaussian distribution.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initBetaDistributionWithAlpha:(float)<em>alpha</em> beta:(float)<em>beta</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>alpha</em></dt>
+      <dd><p>If alpha is smaller than one, smaller values favor values near 0.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>beta</em></dt>
+      <dd><p>If beta is smaller than one, smaller values favor values near level.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKRandomDistributionTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initBiexponentialDistribution" title="initBiexponentialDistribution"></a>
+  <h3 class="subsubtitle method-title">initBiexponentialDistribution</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create random numbers with a biexponential (positive and negative numbers) distribution</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initBiexponentialDistribution</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKRandomDistributionTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initCauchyDistribution" title="initCauchyDistribution"></a>
+  <h3 class="subsubtitle method-title">initCauchyDistribution</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create random numbers with a Cauchy (positive and negative numbers) distribution</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initCauchyDistribution</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKRandomDistributionTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initExponentialDistribution" title="initExponentialDistribution"></a>
+  <h3 class="subsubtitle method-title">initExponentialDistribution</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create random numbers with a exponential (positive numbers only) distribution</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initExponentialDistribution</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKRandomDistributionTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initGaussianDistribution" title="initGaussianDistribution"></a>
+  <h3 class="subsubtitle method-title">initGaussianDistribution</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create random numbers with a Gaussian (positive and negative numbers) distribution</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initGaussianDistribution</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKRandomDistributionTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initLinearDistribution" title="initLinearDistribution"></a>
+  <h3 class="subsubtitle method-title">initLinearDistribution</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create random numbers with a linear (positive numbers only) distribution</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initLinearDistribution</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKRandomDistributionTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initPoissonDistribution" title="initPoissonDistribution"></a>
+  <h3 class="subsubtitle method-title">initPoissonDistribution</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create random numbers with a Poisson (positive numbers only) distribution</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initPoissonDistribution</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKRandomDistributionTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initPositiveCauchyDistribution" title="initPositiveCauchyDistribution"></a>
+  <h3 class="subsubtitle method-title">initPositiveCauchyDistribution</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create random numbers with a positive Cauchy (positive numbers only) distribution</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initPositiveCauchyDistribution</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKRandomDistributionTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initTriangularDistribution" title="initTriangularDistribution"></a>
+  <h3 class="subsubtitle method-title">initTriangularDistribution</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create random numbers with a triangular (positive and negative numbers) distribution</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initTriangularDistribution</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKRandomDistributionTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initUniformDistribution" title="initUniformDistribution"></a>
+  <h3 class="subsubtitle method-title">initUniformDistribution</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create random numbers with a uniform (positive numbers only) distribution</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initUniformDistribution</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKRandomDistributionTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWeibullDistributionWithSigma:" title="initWeibullDistributionWithSigma:"></a>
+  <h3 class="subsubtitle method-title">initWeibullDistributionWithSigma:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create a random distribution table of the Weibull type.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWeibullDistributionWithSigma:(float)<em>sigma</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>sigma</em></dt>
+      <dd><p>Value that determines the spread of the distribution.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKRandomDistributionTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/parametersWithSize:" title="parametersWithSize:"></a>
+  <h3 class="subsubtitle method-title">parametersWithSize:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Parameters for the generator</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (NSArray *)parametersWithSize:(int)<em>size</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>size</em></dt>
+      <dd><p>The final size of the table, useful for scaling</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+          
+        </div>
+      </div>

@@ -28,7 +28,7 @@ title: AKTableValue
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Accesses table values by direct indexing with linear interpolation.</p>
+            <p>Accesses table values by direct indexing with cubic interpolation.</p>
           </div>
           
           
@@ -46,31 +46,66 @@ title: AKTableValue
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithFunctionTable:atIndex:">&ndash;&nbsp;initWithFunctionTable:atIndex:</a></code>
-    <span class="tooltip"><p>Initialize the opcode as an audio operation.</p></span>
+    <code><a href="#//api/name/initWithTable:atIndex:withOffset:usingWrappingIndex:">&ndash;&nbsp;initWithTable:atIndex:withOffset:usingWrappingIndex:</a></code>
+    <span class="tooltip"><p>Looks up the table value at a specific index with all options.</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/normalize">&ndash;&nbsp;normalize</a></code>
-    <span class="tooltip"><p>Normalize data to a maximum of 1.</p></span>
+    <code><a href="#//api/name/initWithTable:atFractionOfTotalWidth:withOffset:usingWrappingIndex:">&ndash;&nbsp;initWithTable:atFractionOfTotalWidth:withOffset:usingWrappingIndex:</a></code>
+    <span class="tooltip"><p>Looks up the table value at a specific index with all options.</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/wrap">&ndash;&nbsp;wrap</a></code>
-    <span class="tooltip"><p>Wrap around the functionTable data for out of range indices.</p></span>
+    <code><a href="#//api/name/initWithTable:atIndex:">&ndash;&nbsp;initWithTable:atIndex:</a></code>
+    <span class="tooltip"><p>Instantiates the table value with default values</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/offsetBy:">&ndash;&nbsp;offsetBy:</a></code>
-    <span class="tooltip"><p>Set the offset amount.</p></span>
+    <code><a href="#//api/name/valueOfTable:atIndex:">+&nbsp;valueOfTable:atIndex:</a></code>
+    <span class="tooltip"><p>Instantiates the table value with default values</p></span>
   </span>
   
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithTable:atFractionOfTotalWidth:">&ndash;&nbsp;initWithTable:atFractionOfTotalWidth:</a></code>
+    <span class="tooltip"><p>Instantiates the table value with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/valueOfTable:atFractionOfTotalWidth:">+&nbsp;valueOfTable:atFractionOfTotalWidth:</a></code>
+    <span class="tooltip"><p>Instantiates the table value with default values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/offset">&nbsp;&nbsp;offset</a></code>
+    <span class="tooltip"><p>amount by which index is to be offset. For a table with origin at center, use tablesize/2 (raw) or .5 (normalized). [Default Value: NO]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalOffset:">&ndash;&nbsp;setOptionalOffset:</a></code>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/offset">offset</a></p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/useWrappingIndex">&nbsp;&nbsp;useWrappingIndex</a></code>
+    <span class="tooltip"><p>Normally limits results to minimum and maximum of index size, but if set, wraps the index. [Default Value: NO]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
   
 </li>
             </ul>
@@ -81,7 +116,193 @@ title: AKTableValue
 
           
           
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/offset" title="offset"></a>
+  <h3 class="subsubtitle method-title">offset</h3>
 
+  
+  
+  <div class="method-subsection brief-description">
+    <p>amount by which index is to be offset. For a table with origin at center, use tablesize/2 (raw) or .5 (normalized). [Default Value: NO]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *offset</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTableValue.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/useWrappingIndex" title="useWrappingIndex"></a>
+  <h3 class="subsubtitle method-title">useWrappingIndex</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Normally limits results to minimum and maximum of index size, but if set, wraps the index. [Default Value: NO]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property BOOL useWrappingIndex</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTableValue.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/valueOfTable:atFractionOfTotalWidth:" title="valueOfTable:atFractionOfTotalWidth:"></a>
+  <h3 class="subsubtitle method-title">valueOfTable:atFractionOfTotalWidth:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the table value with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)valueOfTable:(AKTable *)<em>table</em> atFractionOfTotalWidth:(AKParameter *)<em>fractionalIndex</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>table</em></dt>
+      <dd><p>Table to be inspected.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>fractionalIndex</em></dt>
+      <dd><p>Index at which to look up the value (from 0-1).</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTableValue.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/valueOfTable:atIndex:" title="valueOfTable:atIndex:"></a>
+  <h3 class="subsubtitle method-title">valueOfTable:atIndex:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the table value with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)valueOfTable:(AKTable *)<em>table</em> atIndex:(AKParameter *)<em>index</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>table</em></dt>
+      <dd><p>Table to be inspected.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>index</em></dt>
+      <dd><p>Index at which to look up the value</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTableValue.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
           
 
           
@@ -90,18 +311,18 @@ title: AKTableValue
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithFunctionTable:atIndex:" title="initWithFunctionTable:atIndex:"></a>
-  <h3 class="subsubtitle method-title">initWithFunctionTable:atIndex:</h3>
+  <a name="//api/name/initWithTable:atFractionOfTotalWidth:" title="initWithTable:atFractionOfTotalWidth:"></a>
+  <h3 class="subsubtitle method-title">initWithTable:atFractionOfTotalWidth:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Initialize the opcode as an audio operation.</p>
+    <p>Instantiates the table value with default values</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFunctionTable:(AKConstant *)<em>functionTable</em> atIndex:(AKAudio *)<em>index</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithTable:(AKTable *)<em>table</em> atFractionOfTotalWidth:(AKParameter *)<em>fractionalIndex</em></code></div>
 
     
   
@@ -109,13 +330,125 @@ title: AKTableValue
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>functionTable</em></dt>
-      <dd><p>Function table read the data from.</p></dd>
+      <dt><em>table</em></dt>
+      <dd><p>Table to be inspected.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>fractionalIndex</em></dt>
+      <dd><p>Index at which to look up the value (from 0-1).</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTableValue.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithTable:atFractionOfTotalWidth:withOffset:usingWrappingIndex:" title="initWithTable:atFractionOfTotalWidth:withOffset:usingWrappingIndex:"></a>
+  <h3 class="subsubtitle method-title">initWithTable:atFractionOfTotalWidth:withOffset:usingWrappingIndex:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Looks up the table value at a specific index with all options.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithTable:(AKTable *)<em>table</em> atFractionOfTotalWidth:(AKParameter *)<em>fractionalIndex</em> withOffset:(AKConstant *)<em>offset</em> usingWrappingIndex:(BOOL)<em>useWrappingIndex</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>table</em></dt>
+      <dd><p>Table to be inspected.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>fractionalIndex</em></dt>
+      <dd><p>Index at which to look up the value (from 0-1).</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>offset</em></dt>
+      <dd><p>amount by which index is to be <a href="#//api/name/offset">offset</a>. For a table with origin at center, use .5. [Default Value: 0]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>useWrappingIndex</em></dt>
+      <dd><p>Normally limits results to minimum and maximum of index size, but if set to YES, wraps the index. [Default Value: NO]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTableValue.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithTable:atIndex:" title="initWithTable:atIndex:"></a>
+  <h3 class="subsubtitle method-title">initWithTable:atIndex:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the table value with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithTable:(AKTable *)<em>table</em> atIndex:(AKParameter *)<em>index</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>table</em></dt>
+      <dd><p>Table to be inspected.</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>index</em></dt>
-      <dd><p>Indexing Parameter.</p></dd>
+      <dd><p>Index at which to look up the value</p></dd>
     </dl>
     
   </div>
@@ -141,54 +474,18 @@ title: AKTableValue
 </div>
             
             <div class="section-method">
-  <a name="//api/name/normalize" title="normalize"></a>
-  <h3 class="subsubtitle method-title">normalize</h3>
+  <a name="//api/name/initWithTable:atIndex:withOffset:usingWrappingIndex:" title="initWithTable:atIndex:withOffset:usingWrappingIndex:"></a>
+  <h3 class="subsubtitle method-title">initWithTable:atIndex:withOffset:usingWrappingIndex:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Normalize data to a maximum of 1.</p>
+    <p>Looks up the table value at a specific index with all options.</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)normalize</code></div>
-
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  <div class="method-subsection declared-in-section">
-    <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKTableValue.h</code><br />
-  </div>
-  
-  
-</div>
-            
-            <div class="section-method">
-  <a name="//api/name/offsetBy:" title="offsetBy:"></a>
-  <h3 class="subsubtitle method-title">offsetBy:</h3>
-
-  
-  
-  <div class="method-subsection brief-description">
-    <p>Set the offset amount.</p>
-  </div>
-  
-    
-
-  <div class="method-subsection method-declaration"><code>- (void)offsetBy:(AKConstant *)<em>offsetAmount</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithTable:(AKTable *)<em>table</em> atIndex:(AKParameter *)<em>index</em> withOffset:(AKConstant *)<em>offset</em> usingWrappingIndex:(BOOL)<em>useWrappingIndex</em></code></div>
 
     
   
@@ -196,8 +493,23 @@ title: AKTableValue
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>offsetAmount</em></dt>
-      <dd><p>Amount by which index is to be offset. For a table with origin at center, use tablesize/2 (raw) or .5 (normalized).</p></dd>
+      <dt><em>table</em></dt>
+      <dd><p>Table to be inspected.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>index</em></dt>
+      <dd><p>Index at which to look up the value.</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>offset</em></dt>
+      <dd><p>amount by which index is to be <a href="#//api/name/offset">offset</a>. For a table with origin at center, use tablesize/2. [Default Value: 0]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>useWrappingIndex</em></dt>
+      <dd><p>Normally limits results to minimum and maximum of index size, but if set to YES, wraps the index. [Default Value: NO]</p></dd>
     </dl>
     
   </div>
@@ -223,20 +535,30 @@ title: AKTableValue
 </div>
             
             <div class="section-method">
-  <a name="//api/name/wrap" title="wrap"></a>
-  <h3 class="subsubtitle method-title">wrap</h3>
+  <a name="//api/name/setOptionalOffset:" title="setOptionalOffset:"></a>
+  <h3 class="subsubtitle method-title">setOptionalOffset:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Wrap around the functionTable data for out of range indices.</p>
+    <p>Set an optional <a href="#//api/name/offset">offset</a></p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)wrap</code></div>
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalOffset:(AKConstant *)<em>offset</em></code></div>
 
     
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>offset</em></dt>
+      <dd><p>amount by which index is to be <a href="#//api/name/offset">offset</a>. For a table with origin at center, use tablesize/2 (raw) or .5 (normalized). [Default Value: NO]</p></dd>
+    </dl>
+    
+  </div>
   
 
   

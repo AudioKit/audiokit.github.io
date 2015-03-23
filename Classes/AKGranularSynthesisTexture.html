@@ -46,21 +46,21 @@ title: AKGranularSynthesisTexture
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithGrainFunctionTable:windowFunctionTable:maximumGrainDuration:averageGrainDuration:maximumFrequencyDeviation:grainFrequency:maximumAmplitudeDeviation:grainAmplitude:grainDensity:useRandomGrainOffset:">&ndash;&nbsp;initWithGrainFunctionTable:windowFunctionTable:maximumGrainDuration:averageGrainDuration:maximumFrequencyDeviation:grainFrequency:maximumAmplitudeDeviation:grainAmplitude:grainDensity:useRandomGrainOffset:</a></code>
+    <code><a href="#//api/name/initWithGrainTable:windowTable:maximumGrainDuration:averageGrainDuration:maximumFrequencyDeviation:grainFrequency:maximumAmplitudeDeviation:grainAmplitude:grainDensity:useRandomGrainOffset:">&ndash;&nbsp;initWithGrainTable:windowTable:maximumGrainDuration:averageGrainDuration:maximumFrequencyDeviation:grainFrequency:maximumAmplitudeDeviation:grainAmplitude:grainDensity:useRandomGrainOffset:</a></code>
     <span class="tooltip"><p>Instantiates the granular synthesis texture with all values</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithGrainFunctionTable:windowFunctionTable:">&ndash;&nbsp;initWithGrainFunctionTable:windowFunctionTable:</a></code>
+    <code><a href="#//api/name/initWithGrainTable:windowTable:">&ndash;&nbsp;initWithGrainTable:windowTable:</a></code>
     <span class="tooltip"><p>Instantiates the granular synthesis texture with default values</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/textureWithGrainFunctionTable:windowFunctionTable:">+&nbsp;textureWithGrainFunctionTable:windowFunctionTable:</a></code>
+    <code><a href="#//api/name/textureWithGrainTable:windowTable:">+&nbsp;textureWithGrainTable:windowTable:</a></code>
     <span class="tooltip"><p>Instantiates the granular synthesis texture with default values</p></span>
   </span>
   
@@ -110,7 +110,7 @@ title: AKGranularSynthesisTexture
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/grainFrequency">&nbsp;&nbsp;grainFrequency</a></code>
-    <span class="tooltip"><p>To use the original frequency of the input sound, divide the original sample rate of the grain waveform by the length of the grain function table. [Default Value: 0.8]</p></span>
+    <span class="tooltip"><p>To use the original frequency of the input sound, divide the original sample rate of the grain waveform by the length of the grain table. [Default Value: 0.8]</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
@@ -202,7 +202,7 @@ title: AKGranularSynthesisTexture
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *averageGrainDuration</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *averageGrainDuration</code></div>
 
     
   
@@ -238,7 +238,7 @@ title: AKGranularSynthesisTexture
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *grainAmplitude</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *grainAmplitude</code></div>
 
     
   
@@ -274,7 +274,7 @@ title: AKGranularSynthesisTexture
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *grainDensity</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *grainDensity</code></div>
 
     
   
@@ -305,12 +305,12 @@ title: AKGranularSynthesisTexture
   
   
   <div class="method-subsection brief-description">
-    <p>To use the original frequency of the input sound, divide the original sample rate of the grain waveform by the length of the grain function table. [Default Value: 0.8]</p>
+    <p>To use the original frequency of the input sound, divide the original sample rate of the grain waveform by the length of the grain table. [Default Value: 0.8]</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *grainFrequency</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *grainFrequency</code></div>
 
     
   
@@ -346,7 +346,7 @@ title: AKGranularSynthesisTexture
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *maximumAmplitudeDeviation</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *maximumAmplitudeDeviation</code></div>
 
     
   
@@ -382,7 +382,7 @@ title: AKGranularSynthesisTexture
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *maximumFrequencyDeviation</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *maximumFrequencyDeviation</code></div>
 
     
   
@@ -418,7 +418,7 @@ title: AKGranularSynthesisTexture
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKConstant *maximumGrainDuration</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *maximumGrainDuration</code></div>
 
     
   
@@ -454,7 +454,7 @@ title: AKGranularSynthesisTexture
   
     
 
-  <div class="method-subsection method-declaration"><code>@property BOOL useRandomGrainOffset</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) BOOL useRandomGrainOffset</code></div>
 
     
   
@@ -487,8 +487,8 @@ title: AKGranularSynthesisTexture
             <h2 class="subtitle subtitle-methods">Class Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/textureWithGrainFunctionTable:windowFunctionTable:" title="textureWithGrainFunctionTable:windowFunctionTable:"></a>
-  <h3 class="subsubtitle method-title">textureWithGrainFunctionTable:windowFunctionTable:</h3>
+  <a name="//api/name/textureWithGrainTable:windowTable:" title="textureWithGrainTable:windowTable:"></a>
+  <h3 class="subsubtitle method-title">textureWithGrainTable:windowTable:</h3>
 
   
   
@@ -498,7 +498,7 @@ title: AKGranularSynthesisTexture
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)textureWithGrainFunctionTable:(AKConstant *)<em>grainFunctionTable</em> windowFunctionTable:(AKConstant *)<em>windowFunctionTable</em></code></div>
+  <div class="method-subsection method-declaration"><code>+ (instancetype)textureWithGrainTable:(AKTable *)<em>grainTable</em> windowTable:(AKTable *)<em>windowTable</em></code></div>
 
     
   
@@ -506,12 +506,12 @@ title: AKGranularSynthesisTexture
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>grainFunctionTable</em></dt>
+      <dt><em>grainTable</em></dt>
       <dd><p>The grain waveform. This can be just a sine wave or a sampled sound.</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
-      <dt><em>windowFunctionTable</em></dt>
+      <dt><em>windowTable</em></dt>
       <dd><p>The amplitude envelope used for the grains.</p></dd>
     </dl>
     
@@ -546,8 +546,8 @@ title: AKGranularSynthesisTexture
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithGrainFunctionTable:windowFunctionTable:" title="initWithGrainFunctionTable:windowFunctionTable:"></a>
-  <h3 class="subsubtitle method-title">initWithGrainFunctionTable:windowFunctionTable:</h3>
+  <a name="//api/name/initWithGrainTable:windowTable:" title="initWithGrainTable:windowTable:"></a>
+  <h3 class="subsubtitle method-title">initWithGrainTable:windowTable:</h3>
 
   
   
@@ -557,7 +557,7 @@ title: AKGranularSynthesisTexture
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithGrainFunctionTable:(AKConstant *)<em>grainFunctionTable</em> windowFunctionTable:(AKConstant *)<em>windowFunctionTable</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithGrainTable:(AKTable *)<em>grainTable</em> windowTable:(AKTable *)<em>windowTable</em></code></div>
 
     
   
@@ -565,12 +565,12 @@ title: AKGranularSynthesisTexture
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>grainFunctionTable</em></dt>
+      <dt><em>grainTable</em></dt>
       <dd><p>The grain waveform. This can be just a sine wave or a sampled sound.</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
-      <dt><em>windowFunctionTable</em></dt>
+      <dt><em>windowTable</em></dt>
       <dd><p>The amplitude envelope used for the grains.</p></dd>
     </dl>
     
@@ -597,8 +597,8 @@ title: AKGranularSynthesisTexture
 </div>
             
             <div class="section-method">
-  <a name="//api/name/initWithGrainFunctionTable:windowFunctionTable:maximumGrainDuration:averageGrainDuration:maximumFrequencyDeviation:grainFrequency:maximumAmplitudeDeviation:grainAmplitude:grainDensity:useRandomGrainOffset:" title="initWithGrainFunctionTable:windowFunctionTable:maximumGrainDuration:averageGrainDuration:maximumFrequencyDeviation:grainFrequency:maximumAmplitudeDeviation:grainAmplitude:grainDensity:useRandomGrainOffset:"></a>
-  <h3 class="subsubtitle method-title">initWithGrainFunctionTable:windowFunctionTable:maximumGrainDuration:averageGrainDuration:maximumFrequencyDeviation:grainFrequency:maximumAmplitudeDeviation:grainAmplitude:grainDensity:useRandomGrainOffset:</h3>
+  <a name="//api/name/initWithGrainTable:windowTable:maximumGrainDuration:averageGrainDuration:maximumFrequencyDeviation:grainFrequency:maximumAmplitudeDeviation:grainAmplitude:grainDensity:useRandomGrainOffset:" title="initWithGrainTable:windowTable:maximumGrainDuration:averageGrainDuration:maximumFrequencyDeviation:grainFrequency:maximumAmplitudeDeviation:grainAmplitude:grainDensity:useRandomGrainOffset:"></a>
+  <h3 class="subsubtitle method-title">initWithGrainTable:windowTable:maximumGrainDuration:averageGrainDuration:maximumFrequencyDeviation:grainFrequency:maximumAmplitudeDeviation:grainAmplitude:grainDensity:useRandomGrainOffset:</h3>
 
   
   
@@ -608,7 +608,7 @@ title: AKGranularSynthesisTexture
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithGrainFunctionTable:(AKConstant *)<em>grainFunctionTable</em> windowFunctionTable:(AKConstant *)<em>windowFunctionTable</em> maximumGrainDuration:(AKConstant *)<em>maximumGrainDuration</em> averageGrainDuration:(AKParameter *)<em>averageGrainDuration</em> maximumFrequencyDeviation:(AKParameter *)<em>maximumFrequencyDeviation</em> grainFrequency:(AKParameter *)<em>grainFrequency</em> maximumAmplitudeDeviation:(AKParameter *)<em>maximumAmplitudeDeviation</em> grainAmplitude:(AKParameter *)<em>grainAmplitude</em> grainDensity:(AKParameter *)<em>grainDensity</em> useRandomGrainOffset:(BOOL)<em>useRandomGrainOffset</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithGrainTable:(AKTable *)<em>grainTable</em> windowTable:(AKTable *)<em>windowTable</em> maximumGrainDuration:(AKConstant *)<em>maximumGrainDuration</em> averageGrainDuration:(AKParameter *)<em>averageGrainDuration</em> maximumFrequencyDeviation:(AKParameter *)<em>maximumFrequencyDeviation</em> grainFrequency:(AKParameter *)<em>grainFrequency</em> maximumAmplitudeDeviation:(AKParameter *)<em>maximumAmplitudeDeviation</em> grainAmplitude:(AKParameter *)<em>grainAmplitude</em> grainDensity:(AKParameter *)<em>grainDensity</em> useRandomGrainOffset:(BOOL)<em>useRandomGrainOffset</em></code></div>
 
     
   
@@ -616,12 +616,12 @@ title: AKGranularSynthesisTexture
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>grainFunctionTable</em></dt>
+      <dt><em>grainTable</em></dt>
       <dd><p>The grain waveform. This can be just a sine wave or a sampled sound. [Default Value: ]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
-      <dt><em>windowFunctionTable</em></dt>
+      <dt><em>windowTable</em></dt>
       <dd><p>The amplitude envelope used for the grains. [Default Value: ]</p></dd>
     </dl>
     
@@ -642,7 +642,7 @@ title: AKGranularSynthesisTexture
     
     <dl class="argument-def parameter-def">
       <dt><em>grainFrequency</em></dt>
-      <dd><p>To use the original frequency of the input sound, divide the original sample rate of the grain waveform by the length of the grain function table. [Default Value: 0.8]</p></dd>
+      <dd><p>To use the original frequency of the input sound, divide the original sample rate of the grain waveform by the length of the grain table. [Default Value: 0.8]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
@@ -846,7 +846,7 @@ title: AKGranularSynthesisTexture
     
     <dl class="argument-def parameter-def">
       <dt><em>grainFrequency</em></dt>
-      <dd><p>To use the original frequency of the input sound, divide the original sample rate of the grain waveform by the length of the grain function table. [Default Value: 0.8]</p></dd>
+      <dd><p>To use the original frequency of the input sound, divide the original sample rate of the grain waveform by the length of the grain table. [Default Value: 0.8]</p></dd>
     </dl>
     
   </div>

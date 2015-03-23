@@ -15,7 +15,7 @@ title: AKInterpolatedRandomNumberPulse
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKControl.html">AKControl</a> : <a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKInterpolatedRandomNumberPulse.h<br />AKInterpolatedRandomNumberPulse.m</td>
@@ -120,7 +120,7 @@ title: AKInterpolatedRandomNumberPulse
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *frequency</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *frequency</code></div>
 
     
   
@@ -156,7 +156,7 @@ title: AKInterpolatedRandomNumberPulse
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *upperBound</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *upperBound</code></div>
 
     
   
@@ -289,12 +289,12 @@ title: AKInterpolatedRandomNumberPulse
     
     <dl class="argument-def parameter-def">
       <dt><em>upperBound</em></dt>
-      <dd><p>Maximum maximum range limit.  Sampled values will be between 0 and this maximum Updated at Control-rate. [Default Value: 1]</p></dd>
+      <dd><p>Maximum maximum range limit.  Sampled values will be between 0 and this maximum [Default Value: 1]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>frequency</em></dt>
-      <dd><p>Frequency at which the new numbers are generated in Hz. Updated at Control-rate. [Default Value: 1]</p></dd>
+      <dd><p>Frequency at which the new numbers are generated in Hz. [Default Value: 1]</p></dd>
     </dl>
     
   </div>
@@ -340,7 +340,7 @@ title: AKInterpolatedRandomNumberPulse
     
     <dl class="argument-def parameter-def">
       <dt><em>frequency</em></dt>
-      <dd><p>Frequency at which the new numbers are generated in Hz. Updated at Control-rate. [Default Value: 1]</p></dd>
+      <dd><p>Frequency at which the new numbers are generated in Hz. [Default Value: 1]</p></dd>
     </dl>
     
   </div>
@@ -386,7 +386,7 @@ title: AKInterpolatedRandomNumberPulse
     
     <dl class="argument-def parameter-def">
       <dt><em>upperBound</em></dt>
-      <dd><p>Maximum maximum range limit.  Sampled values will be between 0 and this maximum Updated at Control-rate. [Default Value: 1]</p></dd>
+      <dd><p>Maximum maximum range limit.  Sampled values will be between 0 and this maximum [Default Value: 1]</p></dd>
     </dl>
     
   </div>

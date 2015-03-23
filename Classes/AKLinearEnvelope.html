@@ -123,13 +123,6 @@ title: AKLinearEnvelope
   </span>
   
   
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/decayOnlyOnRelease:">&ndash;&nbsp;decayOnlyOnRelease:</a></code>
-    <span class="tooltip"><p>Set decay to only occur when the note is explicitly released by a &ldquo;stop&rdquo; command</p></span>
-  </span>
-  
-  
 </li>
             </ul>
             
@@ -155,7 +148,7 @@ title: AKLinearEnvelope
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *amplitude</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *amplitude</code></div>
 
     
   
@@ -191,7 +184,7 @@ title: AKLinearEnvelope
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKConstant *decayTime</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *decayTime</code></div>
 
     
   
@@ -227,7 +220,7 @@ title: AKLinearEnvelope
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKConstant *riseTime</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *riseTime</code></div>
 
     
   
@@ -263,7 +256,7 @@ title: AKLinearEnvelope
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKConstant *totalDuration</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *totalDuration</code></div>
 
     
   
@@ -340,52 +333,6 @@ title: AKLinearEnvelope
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/decayOnlyOnRelease:" title="decayOnlyOnRelease:"></a>
-  <h3 class="subsubtitle method-title">decayOnlyOnRelease:</h3>
-
-  
-  
-  <div class="method-subsection brief-description">
-    <p>Set decay to only occur when the note is explicitly released by a &ldquo;stop&rdquo; command</p>
-  </div>
-  
-    
-
-  <div class="method-subsection method-declaration"><code>- (void)decayOnlyOnRelease:(BOOL)<em>decayOnRelease</em></code></div>
-
-    
-  
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
-    
-    <dl class="argument-def parameter-def">
-      <dt><em>decayOnRelease</em></dt>
-      <dd><p>Boolean flag to not start decay phase until a stop command is issued</p></dd>
-    </dl>
-    
-  </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  <div class="method-subsection declared-in-section">
-    <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKLinearEnvelope.h</code><br />
-  </div>
-  
-  
-</div>
-            
-            <div class="section-method">
   <a name="//api/name/init" title="init"></a>
   <h3 class="subsubtitle method-title">init</h3>
 
@@ -457,7 +404,7 @@ title: AKLinearEnvelope
     
     <dl class="argument-def parameter-def">
       <dt><em>amplitude</em></dt>
-      <dd><p>mplitude to rise to and decay from. Updated at Control-rate. [Default Value: 1]</p></dd>
+      <dd><p>Amplitude to rise to and decay from. Updated at Control-rate. [Default Value: 1]</p></dd>
     </dl>
     
   </div>
@@ -503,7 +450,7 @@ title: AKLinearEnvelope
     
     <dl class="argument-def parameter-def">
       <dt><em>amplitude</em></dt>
-      <dd><p>mplitude to rise to and decay from. Updated at Control-rate. [Default Value: 1]</p></dd>
+      <dd><p>Amplitude to rise to and decay from. Updated at Control-rate. [Default Value: 1]</p></dd>
     </dl>
     
   </div>

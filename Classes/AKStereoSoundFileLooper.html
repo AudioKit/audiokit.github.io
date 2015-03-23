@@ -155,7 +155,7 @@ title: AKStereoSoundFileLooper
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *amplitude</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *amplitude</code></div>
 
     
   
@@ -191,7 +191,7 @@ title: AKStereoSoundFileLooper
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *frequencyRatio</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *frequencyRatio</code></div>
 
     
   
@@ -227,7 +227,7 @@ title: AKStereoSoundFileLooper
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKConstant *loopMode</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *loopMode</code></div>
 
     
   
@@ -379,7 +379,7 @@ title: AKStereoSoundFileLooper
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)looperWithSoundFile:(AKFunctionTable *)<em>soundFile</em></code></div>
+  <div class="method-subsection method-declaration"><code>+ (instancetype)looperWithSoundFile:(AKTable *)<em>soundFile</em></code></div>
 
     
   
@@ -388,7 +388,7 @@ title: AKStereoSoundFileLooper
     
     <dl class="argument-def parameter-def">
       <dt><em>soundFile</em></dt>
-      <dd><p>The sound file function table.</p></dd>
+      <dd><p>The sound file table.</p></dd>
     </dl>
     
   </div>
@@ -433,7 +433,7 @@ title: AKStereoSoundFileLooper
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithSoundFile:(AKFunctionTable *)<em>soundFile</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithSoundFile:(AKTable *)<em>soundFile</em></code></div>
 
     
   
@@ -442,7 +442,7 @@ title: AKStereoSoundFileLooper
     
     <dl class="argument-def parameter-def">
       <dt><em>soundFile</em></dt>
-      <dd><p>The sound file function table.</p></dd>
+      <dd><p>The sound file table.</p></dd>
     </dl>
     
   </div>
@@ -479,7 +479,7 @@ title: AKStereoSoundFileLooper
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithSoundFile:(AKFunctionTable *)<em>soundFile</em> frequencyRatio:(AKParameter *)<em>frequencyRatio</em> amplitude:(AKParameter *)<em>amplitude</em> loopMode:(AKConstant *)<em>loopMode</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithSoundFile:(AKTable *)<em>soundFile</em> frequencyRatio:(AKParameter *)<em>frequencyRatio</em> amplitude:(AKParameter *)<em>amplitude</em> loopMode:(AKConstant *)<em>loopMode</em></code></div>
 
     
   
@@ -488,7 +488,7 @@ title: AKStereoSoundFileLooper
     
     <dl class="argument-def parameter-def">
       <dt><em>soundFile</em></dt>
-      <dd><p>The sound file function table. [Default Value: ]</p></dd>
+      <dd><p>The sound file table. [Default Value: ]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">

@@ -1,0 +1,690 @@
+---
+layout: docs
+title: AKTable
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKTable</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value">NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKTable.h<br />AKTable.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>All purpose array of float values.  Often used for waveforms and
+lookup tables at the time of note creation/initialization.</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            
+
+            <ul class="task-list">
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/size">&nbsp;&nbsp;size</a></code>
+    <span class="tooltip"><p>The <a href="#//api/name/number">number</a> of elements in the <a href="#//api/name/table">table</a>.  Often required to be a multiple of 2.</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/number">&nbsp;&nbsp;number</a></code>
+    <span class="tooltip"><p>A reference lookup number for the <a href="#//api/name/table">table</a>.</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
+    <span class="tooltip"><p>An entirely optional name, can be useful for debugging.</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
+    <span class="tooltip"><p>Creates an empty <a href="#//api/name/table">table</a> with the default <a href="#//api/name/size">size</a> (<a href="#//api/name/number">number</a> of elements).</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithSize:">&ndash;&nbsp;initWithSize:</a></code>
+    <span class="tooltip"><p>Creates an empty <a href="#//api/name/table">table</a> with the given <a href="#//api/name/number">number</a> of elements.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/table">+&nbsp;table</a></code>
+    <span class="tooltip"><p>Creates an empty table with the default <a href="#//api/name/size">size</a> (<a href="#//api/name/number">number</a> of elements).</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/operateOnTableWithFunction:">&ndash;&nbsp;operateOnTableWithFunction:</a></code>
+    <span class="tooltip"><p>Run a mathematical function on each value of the function <a href="#//api/name/table">table</a></p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/populateTableWithIndexFunction:">&ndash;&nbsp;populateTableWithIndexFunction:</a></code>
+    <span class="tooltip"><p>Populate the <a href="#//api/name/table">table</a> with given function on integer elements</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/populateTableWithFractionalWidthFunction:">&ndash;&nbsp;populateTableWithFractionalWidthFunction:</a></code>
+    <span class="tooltip"><p>Populate a <a href="#//api/name/table">table</a> based on a float value from zero to one.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/scaleBy:">&ndash;&nbsp;scaleBy:</a></code>
+    <span class="tooltip"><p>Scale <a href="#//api/name/table">table</a> by a constant scaling factor</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/normalize">&ndash;&nbsp;normalize</a></code>
+    <span class="tooltip"><p>Create a <a href="#//api/name/table">table</a> in which the maximum absolute value is 1 by scaling the whole <a href="#//api/name/table">table</a> appropriately.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/absoluteValue">&ndash;&nbsp;absoluteValue</a></code>
+    <span class="tooltip"><p>Return absolute value of the <a href="#//api/name/table">table</a></p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/length">&ndash;&nbsp;length</a></code>
+    <span class="tooltip"><p>Returns an ftlen() wrapped around the output of this <a href="#//api/name/table">table</a>.</p></span>
+  </span>
+  
+  
+</li>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/name" title="name"></a>
+  <h3 class="subsubtitle method-title">name</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>An entirely optional name, can be useful for debugging.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property NSString *name</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTable.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/number" title="number"></a>
+  <h3 class="subsubtitle method-title">number</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>A reference lookup number for the <a href="#//api/name/table">table</a>.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property (readonly) int number</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTable.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/size" title="size"></a>
+  <h3 class="subsubtitle method-title">size</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>The <a href="#//api/name/number">number</a> of elements in the <a href="#//api/name/table">table</a>.  Often required to be a multiple of 2.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property int size</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTable.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/table" title="table"></a>
+  <h3 class="subsubtitle method-title">table</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Creates an empty table with the default <a href="#//api/name/size">size</a> (<a href="#//api/name/number">number</a> of elements).</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)table</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTable.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/absoluteValue" title="absoluteValue"></a>
+  <h3 class="subsubtitle method-title">absoluteValue</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Return absolute value of the <a href="#//api/name/table">table</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)absoluteValue</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTable.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/init" title="init"></a>
+  <h3 class="subsubtitle method-title">init</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Creates an empty <a href="#//api/name/table">table</a> with the default <a href="#//api/name/size">size</a> (<a href="#//api/name/number">number</a> of elements).</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTable.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithSize:" title="initWithSize:"></a>
+  <h3 class="subsubtitle method-title">initWithSize:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Creates an empty <a href="#//api/name/table">table</a> with the given <a href="#//api/name/number">number</a> of elements.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithSize:(int)<em>size</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>size</em></dt>
+      <dd><p>Number of elements in the <a href="#//api/name/table">table</a></p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTable.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/length" title="length"></a>
+  <h3 class="subsubtitle method-title">length</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Returns an ftlen() wrapped around the output of this <a href="#//api/name/table">table</a>.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (AKConstant *)length</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTable.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/normalize" title="normalize"></a>
+  <h3 class="subsubtitle method-title">normalize</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create a <a href="#//api/name/table">table</a> in which the maximum absolute value is 1 by scaling the whole <a href="#//api/name/table">table</a> appropriately.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)normalize</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTable.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/operateOnTableWithFunction:" title="operateOnTableWithFunction:"></a>
+  <h3 class="subsubtitle method-title">operateOnTableWithFunction:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Run a mathematical function on each value of the function <a href="#//api/name/table">table</a></p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)operateOnTableWithFunction:(float ( ^ ) ( float ))<em>function</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>function</em></dt>
+      <dd><p>Function to run on each <a href="#//api/name/table">table</a> value</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTable.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/populateTableWithFractionalWidthFunction:" title="populateTableWithFractionalWidthFunction:"></a>
+  <h3 class="subsubtitle method-title">populateTableWithFractionalWidthFunction:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Populate a <a href="#//api/name/table">table</a> based on a float value from zero to one.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)populateTableWithFractionalWidthFunction:(float ( ^ ) ( float ))<em>function</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>function</em></dt>
+      <dd><p>Function to be applied to a value that varies from 0 to 1.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTable.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/populateTableWithIndexFunction:" title="populateTableWithIndexFunction:"></a>
+  <h3 class="subsubtitle method-title">populateTableWithIndexFunction:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Populate the <a href="#//api/name/table">table</a> with given function on integer elements</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)populateTableWithIndexFunction:(float ( ^ ) ( int ))<em>function</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>function</em></dt>
+      <dd><p>Function to applied to each index element</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTable.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/scaleBy:" title="scaleBy:"></a>
+  <h3 class="subsubtitle method-title">scaleBy:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Scale <a href="#//api/name/table">table</a> by a constant scaling factor</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)scaleBy:(float)<em>scalingFactor</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>scalingFactor</em></dt>
+      <dd><p>Amount by which to scale each element of the <a href="#//api/name/table">table</a></p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTable.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+          
+        </div>
+      </div>

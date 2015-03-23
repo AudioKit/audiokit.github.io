@@ -29,8 +29,6 @@ title: AKMP3FileInput
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
             <p>Reads stereo audio data from an external MP3 file.</p>
-
-<p>Implementation of <a href="http://www.csounds.com/manual/html/mp3in.html">http://www.csounds.com/manual/html/mp3in.html</a></p>
           </div>
           
           
@@ -48,6 +46,13 @@ title: AKMP3FileInput
             <ul class="task-list">
                 <li>
   <span class="tooltip">
+    <code><a href="#//api/name/initWithFilename:startTime:">&ndash;&nbsp;initWithFilename:startTime:</a></code>
+    <span class="tooltip"><p>Instantiates the mp3 file input with all values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
     <code><a href="#//api/name/initWithFilename:">&ndash;&nbsp;initWithFilename:</a></code>
     <span class="tooltip"><p>Instantiates the mp3 file input with default values</p></span>
   </span>
@@ -60,6 +65,20 @@ title: AKMP3FileInput
   </span>
   
   
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/startTime">&nbsp;&nbsp;startTime</a></code>
+    <span class="tooltip"><p>Number of seconds into the file to start playback. [Default Value: 0]</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setOptionalStartTime:">&ndash;&nbsp;setOptionalStartTime:</a></code>
+    <span class="tooltip"><p>Set an optional start time</p></span>
+  </span>
+  
+  
 </li>
             </ul>
             
@@ -68,6 +87,48 @@ title: AKMP3FileInput
           
 
           
+          
+          <div class="section section-methods">
+            <a title="Properties" name="properties"></a>
+            <h2 class="subtitle subtitle-methods">Properties</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/startTime" title="startTime"></a>
+  <h3 class="subsubtitle method-title">startTime</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Number of seconds into the file to start playback. [Default Value: 0]</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *startTime</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKMP3FileInput.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
           
 
           
@@ -151,6 +212,103 @@ title: AKMP3FileInput
     <dl class="argument-def parameter-def">
       <dt><em>filename</em></dt>
       <dd><p>Input MP3 Filename.</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKMP3FileInput.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithFilename:startTime:" title="initWithFilename:startTime:"></a>
+  <h3 class="subsubtitle method-title">initWithFilename:startTime:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the mp3 file input with all values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFilename:(NSString *)<em>filename</em> startTime:(AKConstant *)<em>startTime</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>filename</em></dt>
+      <dd><p>Input MP3 Filename. [Default Value: ]</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>startTime</em></dt>
+      <dd><p>Number of seconds into the file to start playback. [Default Value: 0]</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKMP3FileInput.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalStartTime:" title="setOptionalStartTime:"></a>
+  <h3 class="subsubtitle method-title">setOptionalStartTime:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Set an optional start time</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalStartTime:(AKConstant *)<em>startTime</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>startTime</em></dt>
+      <dd><p>Number of seconds into the file to start playback. [Default Value: 0]</p></dd>
     </dl>
     
   </div>

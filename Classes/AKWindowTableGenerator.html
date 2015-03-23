@@ -1,0 +1,1078 @@
+---
+layout: docs
+title: AKWindowTableGenerator
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKWindowTableGenerator</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKTableGenerator.html">AKTableGenerator</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKWindowTableGenerator.h<br />AKWindowTableGenerator.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>Tables for different window shapes. These windows are usually used for spectrum analysis or for grain envelopes.</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            <h3 class="subsubtitle task-title">Other Methods</h3>
+
+            <ul class="task-list">
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initHannWindow">&ndash;&nbsp;initHannWindow</a></code>
+    <span class="tooltip"><p>Create Hann Window</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/hannWindow">+&nbsp;hannWindow</a></code>
+    <span class="tooltip"><p>Create Hann Window</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initBartlettTriangleWindow">&ndash;&nbsp;initBartlettTriangleWindow</a></code>
+    <span class="tooltip"><p>Create Bartlett (triangle) Window</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/bartlettTriangleWindow">+&nbsp;bartlettTriangleWindow</a></code>
+    <span class="tooltip"><p>Create Bartlett (triangle) Window</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initBlackmanThreeTermWindow">&ndash;&nbsp;initBlackmanThreeTermWindow</a></code>
+    <span class="tooltip"><p>Create Blackman (3-term) Window</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/blackmanThreeTermWindow">+&nbsp;blackmanThreeTermWindow</a></code>
+    <span class="tooltip"><p>Create Blackman (3-term) Window</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initBlackmanHarrisFourTermWindow">&ndash;&nbsp;initBlackmanHarrisFourTermWindow</a></code>
+    <span class="tooltip"><p>Create Blackman-Harris (4-term) Window</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/blackmanHarrisFourTermWindow">+&nbsp;blackmanHarrisFourTermWindow</a></code>
+    <span class="tooltip"><p>Create Blackman-Harris (4-term) Window</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initGaussianWindow">&ndash;&nbsp;initGaussianWindow</a></code>
+    <span class="tooltip"><p>Create Gaussian Window</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/gaussianWindow">+&nbsp;gaussianWindow</a></code>
+    <span class="tooltip"><p>Create Gaussian Window</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initGaussianWindowWithStandardDeviation:">&ndash;&nbsp;initGaussianWindowWithStandardDeviation:</a></code>
+    <span class="tooltip"><p>Create Gaussian Window</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/gaussianWindowWithStandardDeviation:">+&nbsp;gaussianWindowWithStandardDeviation:</a></code>
+    <span class="tooltip"><p>Create Gaussian Window</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initKaiserWindow">&ndash;&nbsp;initKaiserWindow</a></code>
+    <span class="tooltip"><p>Create Kaiser Window</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/kaiserWindow">+&nbsp;kaiserWindow</a></code>
+    <span class="tooltip"><p>Create Kaiser Window</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initKaiserWindowWithOpenness:">&ndash;&nbsp;initKaiserWindowWithOpenness:</a></code>
+    <span class="tooltip"><p>Create Kaiser Window</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/kaiserWindowWithOpenness:">+&nbsp;kaiserWindowWithOpenness:</a></code>
+    <span class="tooltip"><p>Create Kaiser Window</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initRectangleWindow">&ndash;&nbsp;initRectangleWindow</a></code>
+    <span class="tooltip"><p>Create Rectangle Window</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/rectangleWindow">+&nbsp;rectangleWindow</a></code>
+    <span class="tooltip"><p>Create Rectangle Window</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initSyncWindow">&ndash;&nbsp;initSyncWindow</a></code>
+    <span class="tooltip"><p>Create Sync Window</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/syncWindow">+&nbsp;syncWindow</a></code>
+    <span class="tooltip"><p>Create Sync Window</p></span>
+  </span>
+  
+  
+</li>
+            </ul>
+            
+
+            
+            <h3 class="subsubtitle task-title">Other Methods</h3>
+
+            <ul class="task-list">
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/generationRoutineNumber">&ndash;&nbsp;generationRoutineNumber</a></code>
+    <span class="tooltip"><p>Generation Routine Number</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/parametersWithSize:">&ndash;&nbsp;parametersWithSize:</a></code>
+    <span class="tooltip"><p>Parameters for the generator</p></span>
+  </span>
+  
+  
+</li>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/bartlettTriangleWindow" title="bartlettTriangleWindow"></a>
+  <h3 class="subsubtitle method-title">bartlettTriangleWindow</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create Bartlett (triangle) Window</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)bartlettTriangleWindow</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindowTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/blackmanHarrisFourTermWindow" title="blackmanHarrisFourTermWindow"></a>
+  <h3 class="subsubtitle method-title">blackmanHarrisFourTermWindow</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create Blackman-Harris (4-term) Window</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)blackmanHarrisFourTermWindow</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindowTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/blackmanThreeTermWindow" title="blackmanThreeTermWindow"></a>
+  <h3 class="subsubtitle method-title">blackmanThreeTermWindow</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create Blackman (3-term) Window</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)blackmanThreeTermWindow</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindowTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/gaussianWindow" title="gaussianWindow"></a>
+  <h3 class="subsubtitle method-title">gaussianWindow</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create Gaussian Window</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)gaussianWindow</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindowTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/gaussianWindowWithStandardDeviation:" title="gaussianWindowWithStandardDeviation:"></a>
+  <h3 class="subsubtitle method-title">gaussianWindowWithStandardDeviation:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create Gaussian Window</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)gaussianWindowWithStandardDeviation:(float)<em>standardDeviation</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>standardDeviation</em></dt>
+      <dd><p>Standard deviation sets the width of the window for Gaussian windows.  (Default: 1)</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindowTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/hannWindow" title="hannWindow"></a>
+  <h3 class="subsubtitle method-title">hannWindow</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create Hann Window</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)hannWindow</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindowTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/kaiserWindow" title="kaiserWindow"></a>
+  <h3 class="subsubtitle method-title">kaiserWindow</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create Kaiser Window</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)kaiserWindow</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindowTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/kaiserWindowWithOpenness:" title="kaiserWindowWithOpenness:"></a>
+  <h3 class="subsubtitle method-title">kaiserWindowWithOpenness:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create Kaiser Window</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)kaiserWindowWithOpenness:(float)<em>openness</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>openness</em></dt>
+      <dd><p>The openness specifies how &ldquo;open&rdquo; the window is, for example a value of 0 results in a rectangular window and a value of 10 in a Hamming like window. (Default: 1)</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindowTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/rectangleWindow" title="rectangleWindow"></a>
+  <h3 class="subsubtitle method-title">rectangleWindow</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create Rectangle Window</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)rectangleWindow</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindowTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/syncWindow" title="syncWindow"></a>
+  <h3 class="subsubtitle method-title">syncWindow</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create Sync Window</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)syncWindow</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindowTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/generationRoutineNumber" title="generationRoutineNumber"></a>
+  <h3 class="subsubtitle method-title">generationRoutineNumber</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Generation Routine Number</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (int)generationRoutineNumber</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initBartlettTriangleWindow" title="initBartlettTriangleWindow"></a>
+  <h3 class="subsubtitle method-title">initBartlettTriangleWindow</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create Bartlett (triangle) Window</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initBartlettTriangleWindow</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindowTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initBlackmanHarrisFourTermWindow" title="initBlackmanHarrisFourTermWindow"></a>
+  <h3 class="subsubtitle method-title">initBlackmanHarrisFourTermWindow</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create Blackman-Harris (4-term) Window</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initBlackmanHarrisFourTermWindow</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindowTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initBlackmanThreeTermWindow" title="initBlackmanThreeTermWindow"></a>
+  <h3 class="subsubtitle method-title">initBlackmanThreeTermWindow</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create Blackman (3-term) Window</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initBlackmanThreeTermWindow</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindowTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initGaussianWindow" title="initGaussianWindow"></a>
+  <h3 class="subsubtitle method-title">initGaussianWindow</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create Gaussian Window</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initGaussianWindow</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindowTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initGaussianWindowWithStandardDeviation:" title="initGaussianWindowWithStandardDeviation:"></a>
+  <h3 class="subsubtitle method-title">initGaussianWindowWithStandardDeviation:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create Gaussian Window</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initGaussianWindowWithStandardDeviation:(float)<em>standardDeviation</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>standardDeviation</em></dt>
+      <dd><p>Standard deviation sets the width of the window for Gaussian windows.  (Default: 1)</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindowTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initHannWindow" title="initHannWindow"></a>
+  <h3 class="subsubtitle method-title">initHannWindow</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create Hann Window</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initHannWindow</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindowTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initKaiserWindow" title="initKaiserWindow"></a>
+  <h3 class="subsubtitle method-title">initKaiserWindow</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create Kaiser Window</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initKaiserWindow</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindowTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initKaiserWindowWithOpenness:" title="initKaiserWindowWithOpenness:"></a>
+  <h3 class="subsubtitle method-title">initKaiserWindowWithOpenness:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create Kaiser Window</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initKaiserWindowWithOpenness:(float)<em>openness</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>openness</em></dt>
+      <dd><p>The openness specifies how &ldquo;open&rdquo; the window is, for example a value of 0 results in a rectangular window and a value of 10 in a Hamming like window. (Default: 1)</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindowTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initRectangleWindow" title="initRectangleWindow"></a>
+  <h3 class="subsubtitle method-title">initRectangleWindow</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create Rectangle Window</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initRectangleWindow</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindowTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initSyncWindow" title="initSyncWindow"></a>
+  <h3 class="subsubtitle method-title">initSyncWindow</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Create Sync Window</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initSyncWindow</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKWindowTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/parametersWithSize:" title="parametersWithSize:"></a>
+  <h3 class="subsubtitle method-title">parametersWithSize:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Parameters for the generator</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (NSArray *)parametersWithSize:(int)<em>size</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>size</em></dt>
+      <dd><p>The final size of the table, useful for scaling</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+          
+        </div>
+      </div>

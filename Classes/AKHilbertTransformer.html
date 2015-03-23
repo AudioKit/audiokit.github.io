@@ -15,7 +15,7 @@ title: AKHilbertTransformer
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKStereoAudio.html">AKStereoAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKHilbertTransformer.h<br />AKHilbertTransformer.m</td>
@@ -51,22 +51,15 @@ Unlike an FIR-based Hilbert Transformer, the output of AKHilbertTransformer does
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithInput:">&ndash;&nbsp;initWithInput:</a></code>
+    <code><a href="#//api/name/initWithInput:frequency:">&ndash;&nbsp;initWithInput:frequency:</a></code>
     <span class="tooltip"><p>Instantiates the hilbert transformer with all values</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/filterWithInput:">+&nbsp;filterWithInput:</a></code>
+    <code><a href="#//api/name/filterWithInput:frequency:">+&nbsp;filterWithInput:frequency:</a></code>
     <span class="tooltip"><p>Instantiates the hilbert transformer with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/realPart">&ndash;&nbsp;realPart</a></code>
-    <span class="tooltip"><p>Helper functions to pull apart the stereo audio output appropriately.</p></span>
   </span>
   
   
@@ -86,8 +79,8 @@ Unlike an FIR-based Hilbert Transformer, the output of AKHilbertTransformer does
             <h2 class="subtitle subtitle-methods">Class Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/filterWithInput:" title="filterWithInput:"></a>
-  <h3 class="subsubtitle method-title">filterWithInput:</h3>
+  <a name="//api/name/filterWithInput:frequency:" title="filterWithInput:frequency:"></a>
+  <h3 class="subsubtitle method-title">filterWithInput:frequency:</h3>
 
   
   
@@ -97,7 +90,7 @@ Unlike an FIR-based Hilbert Transformer, the output of AKHilbertTransformer does
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)filterWithInput:(AKParameter *)<em>input</em></code></div>
+  <div class="method-subsection method-declaration"><code>+ (instancetype)filterWithInput:(AKParameter *)<em>input</em> frequency:(AKParameter *)<em>frequency</em></code></div>
 
     
   
@@ -107,6 +100,11 @@ Unlike an FIR-based Hilbert Transformer, the output of AKHilbertTransformer does
     <dl class="argument-def parameter-def">
       <dt><em>input</em></dt>
       <dd><p>The input audio Signal</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>frequency</em></dt>
+      <dd><p>The frequency shifter frequency.</p></dd>
     </dl>
     
   </div>
@@ -140,8 +138,8 @@ Unlike an FIR-based Hilbert Transformer, the output of AKHilbertTransformer does
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithInput:" title="initWithInput:"></a>
-  <h3 class="subsubtitle method-title">initWithInput:</h3>
+  <a name="//api/name/initWithInput:frequency:" title="initWithInput:frequency:"></a>
+  <h3 class="subsubtitle method-title">initWithInput:frequency:</h3>
 
   
   
@@ -151,7 +149,7 @@ Unlike an FIR-based Hilbert Transformer, the output of AKHilbertTransformer does
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> frequency:(AKParameter *)<em>frequency</em></code></div>
 
     
   
@@ -163,43 +161,12 @@ Unlike an FIR-based Hilbert Transformer, the output of AKHilbertTransformer does
       <dd><p>The input audio Signal [Default Value: ]</p></dd>
     </dl>
     
-  </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  <div class="method-subsection declared-in-section">
-    <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKHilbertTransformer.h</code><br />
-  </div>
-  
-  
-</div>
-            
-            <div class="section-method">
-  <a name="//api/name/realPart" title="realPart"></a>
-  <h3 class="subsubtitle method-title">realPart</h3>
-
-  
-  
-  <div class="method-subsection brief-description">
-    <p>Helper functions to pull apart the stereo audio output appropriately.</p>
-  </div>
-  
+    <dl class="argument-def parameter-def">
+      <dt><em>frequency</em></dt>
+      <dd><p>The frequency shifter frequency. Updated at Control-rate. [Default Value: ]</p></dd>
+    </dl>
     
-
-  <div class="method-subsection method-declaration"><code>- (AKParameter *)realPart</code></div>
-
-    
+  </div>
   
 
   

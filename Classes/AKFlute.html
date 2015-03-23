@@ -182,7 +182,7 @@ title: AKFlute
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/vibratoShape">&nbsp;&nbsp;vibratoShape</a></code>
-    <span class="tooltip"><p>Function table defining the shape of the vibrato. [Default Value: sine]</p></span>
+    <span class="tooltip"><p>Table defining the shape of the vibrato. [Default Value: sine]</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
@@ -246,7 +246,7 @@ title: AKFlute
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *airJetPressure</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *airJetPressure</code></div>
 
     
   
@@ -282,7 +282,7 @@ title: AKFlute
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *amplitude</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *amplitude</code></div>
 
     
   
@@ -318,7 +318,7 @@ title: AKFlute
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKConstant *attackTime</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *attackTime</code></div>
 
     
   
@@ -354,7 +354,7 @@ title: AKFlute
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKConstant *endrf</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *endrf</code></div>
 
     
   
@@ -390,7 +390,7 @@ title: AKFlute
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *frequency</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *frequency</code></div>
 
     
   
@@ -426,7 +426,7 @@ title: AKFlute
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKConstant *jetrf</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *jetrf</code></div>
 
     
   
@@ -462,7 +462,7 @@ title: AKFlute
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *noiseAmplitude</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *noiseAmplitude</code></div>
 
     
   
@@ -498,7 +498,7 @@ title: AKFlute
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKConstant *releaseTime</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *releaseTime</code></div>
 
     
   
@@ -534,7 +534,7 @@ title: AKFlute
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *vibratoAmplitude</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *vibratoAmplitude</code></div>
 
     
   
@@ -570,7 +570,7 @@ title: AKFlute
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *vibratoFrequency</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *vibratoFrequency</code></div>
 
     
   
@@ -601,12 +601,12 @@ title: AKFlute
   
   
   <div class="method-subsection brief-description">
-    <p>Function table defining the shape of the vibrato. [Default Value: sine]</p>
+    <p>Table defining the shape of the vibrato. [Default Value: sine]</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKFunctionTable *vibratoShape</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKTable *vibratoShape</code></div>
 
     
   
@@ -730,7 +730,7 @@ title: AKFlute
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFrequency:(AKParameter *)<em>frequency</em> attackTime:(AKConstant *)<em>attackTime</em> releaseTime:(AKConstant *)<em>releaseTime</em> airJetPressure:(AKParameter *)<em>airJetPressure</em> jetrf:(AKConstant *)<em>jetrf</em> endrf:(AKConstant *)<em>endrf</em> noiseAmplitude:(AKParameter *)<em>noiseAmplitude</em> amplitude:(AKParameter *)<em>amplitude</em> vibratoShape:(AKFunctionTable *)<em>vibratoShape</em> vibratoAmplitude:(AKParameter *)<em>vibratoAmplitude</em> vibratoFrequency:(AKParameter *)<em>vibratoFrequency</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFrequency:(AKParameter *)<em>frequency</em> attackTime:(AKConstant *)<em>attackTime</em> releaseTime:(AKConstant *)<em>releaseTime</em> airJetPressure:(AKParameter *)<em>airJetPressure</em> jetrf:(AKConstant *)<em>jetrf</em> endrf:(AKConstant *)<em>endrf</em> noiseAmplitude:(AKParameter *)<em>noiseAmplitude</em> amplitude:(AKParameter *)<em>amplitude</em> vibratoShape:(AKTable *)<em>vibratoShape</em> vibratoAmplitude:(AKParameter *)<em>vibratoAmplitude</em> vibratoFrequency:(AKParameter *)<em>vibratoFrequency</em></code></div>
 
     
   
@@ -779,7 +779,7 @@ title: AKFlute
     
     <dl class="argument-def parameter-def">
       <dt><em>vibratoShape</em></dt>
-      <dd><p>Function table defining the shape of the vibrato. [Default Value: sine]</p></dd>
+      <dd><p>Table defining the shape of the vibrato. [Default Value: sine]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
@@ -1286,7 +1286,7 @@ title: AKFlute
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalVibratoShape:(AKFunctionTable *)<em>vibratoShape</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)setOptionalVibratoShape:(AKTable *)<em>vibratoShape</em></code></div>
 
     
   
@@ -1295,7 +1295,7 @@ title: AKFlute
     
     <dl class="argument-def parameter-def">
       <dt><em>vibratoShape</em></dt>
-      <dd><p>Function table defining the shape of the vibrato. [Default Value: sine]</p></dd>
+      <dd><p>Table defining the shape of the vibrato. [Default Value: sine]</p></dd>
     </dl>
     
   </div>

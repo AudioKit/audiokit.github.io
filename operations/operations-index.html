@@ -1,24 +1,42 @@
 ---
-layout: docs
+layout: side_navigation
 title: AudioKit Operations
 header: Operations
 permalink: /operations/
 ---
 
+
+<div class="col_one_third nobottommargin">
+
+    <ul class="sidenav">
+        <li><a href="#overview   "      ><i></i>Overview                                          <i class="icon-chevron-right"></i></a></li>
+        <li><a href="#Analysis"      ><i class="icon-"></i>Analysis         <i class="icon-chevron-right"></i></a></li>
+        <li><a href="#FFT"         ><i class="icon-"></i>FFT          <i class="icon-chevron-right"></i></a></li>
+        <li><a href="#Math"><i class="icon-"></i>Mathematical Operations        <i class="icon-chevron-right"></i></a></li>
+        <li><a href="#SignalGenerators"><i class="icon-"></i>Signal Generators <i class="icon-chevron-right"></i></a></li>
+        <li><a href="#SignalInputandOutput"         ><i class="icon-"></i>Signal Input and Output           <i class="icon-chevron-right"></i></a></li>
+        <li><a href="#SignalModifiers"            ><i class="icon-"></i>Signal Modifiers      <i class="icon-chevron-right"></i></a></li>
+    </ul>
+
+</div>
+
+<div class="col_two_third col_last nobottommargin">
+
+<div id=overview>
 <p>
 In order to help you find a particular type of operation, they are categorized into pages on this web site as well as folders inside of AudioKit.
 </p>
 
-<table><thead><th>Category</th><th>Description</th></tr></thead>
+<table  class="table table-bordered"><thead><th>Category</th><th>Description</th></tr></thead>
 
 <tr>
-<td><a href="/operations/analysis/">Analysis</td>
+<td><a href="#Analysis">Analysis</a></td>
  <td>Tracking classes that determine the amplitude and frequency of signals.
 </td>
 </tr>
 
 <tr>
-<td><a href="/operations/fft/">FFT</td>
+<td><a href="#FFT">FFT</a></td>
  <td>Spectral functions including cross synthesis, mixing, scaling, warping, and resynthesis.
 </td>
 </tr>
@@ -48,3 +66,732 @@ In order to help you find a particular type of operation, they are categorized i
 </tr>
 
 </table>
+</div>
+
+<div id=Analysis>
+<h3> Analysis</h3>
+
+<p>Tracking classes that determine the amplitude and frequency of signals.</p>
+
+<table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+
+<tr>
+<td class='one-third'><a href="/Classes/AKTrackedAmplitude.html">AKTrackedAmplitude</td>
+ <td class='two-thirds'> One line title / summary for the operation.Determines the root-mean-square amplitude of an audio signal.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKTrackedAmplitudeFromFSignal.html">AKTrackedAmplitudeFromFSignal</td>
+ <td class='two-thirds'> Track the amplitude of an F-Signal as control-rate variables.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKTrackedFrequency.html">AKTrackedFrequency</td>
+ <td class='two-thirds'> Tracks the pitch of a signal.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKTrackedFrequencyFromFSignal.html">AKTrackedFrequencyFromFSignal</td>
+ <td class='two-thirds'> Track the frequency of an F-Signal as control-rate variables.
+</td>
+</tr>
+</table>
+</div>
+
+<div id=FFT>
+<h3> FFT</h3>
+<p>Spectral functions including cross synthesis, mixing, scaling, warping, and resynthesis.</p>
+
+<table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+
+<tr>
+<td class='one-third'><a href="/Classes/AKCrossSynthesizedFFT.html">AKCrossSynthesizedFFT</td>
+ <td class='two-thirds'> Performs cross-synthesis between two source F-Signals.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKFFT.html">AKFFT</td>
+ <td class='two-thirds'> Generate an f-Signal from a mono audio source using phase vocoder overlap-add synthesis.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKFFTProcessor.html">AKFFTProcessor</td>
+ <td class='two-thirds'> Phase vocoder analysis processing with onset detection/processing.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKMixedFFT.html">AKMixedFFT</td>
+ <td class='two-thirds'> Mix 'seamlessly' two pv signals. This opcode combines the most prominent
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKPhaseLockedVocoder.html">AKPhaseLockedVocoder</td>
+ <td class='two-thirds'> Phase-locked vocoder processing.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKResynthesizedAudio.html">AKResynthesizedAudio</td>
+ <td class='two-thirds'> Resynthesise phase vocoder data (f-signal) using a FFT overlap-add.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKScaledFFT.html">AKScaledFFT</td>
+ <td class='two-thirds'> Scale the frequency components of a pv stream, resulting in pitch shift.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKSpectralVocoder.html">AKSpectralVocoder</td>
+ <td class='two-thirds'> Combine the spectral envelope of one F-signal with the excitation (frequencies) of another.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKWarpedFFT.html">AKWarpedFFT</td>
+ <td class='two-thirds'> Warp the spectral envelope of a PVS signal by means of shifting and scaling.
+</td>
+</tr>
+</table>
+</div>
+
+<div id=Math>
+<h3> Math</h3>
+<p>Basic operations such as scaling, mixing, summing, and multiplication of signals.</p>
+
+<table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+
+<tr>
+<td class='one-third'><a href="/Classes/AKAssignment.html">AKAssignment</td>
+ <td class='two-thirds'> Simply a wrapper for the equal sign
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKDifference.html">AKDifference</td>
+ <td class='two-thirds'> Subtracts any number of a-rate signals.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKInverse.html">AKInverse</td>
+<tr>
+<td class='one-third'><a href="/Classes/AKMaximum.html">AKMaximum</td>
+ <td class='two-thirds'> Produces a signal that is the maximum of any number of input signals.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKMinimum.html">AKMinimum</td>
+ <td class='two-thirds'> Produces a signal that is the minimum of any number of input signals.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKMultipleInputMathOperation.html">AKMultipleInputMathOperation</td>
+<tr>
+<td class='one-third'><a href="/Classes/AKProduct.html">AKProduct</td>
+ <td class='two-thirds'> Multiplies any number of audio signals.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKSingleInputMathOperation.html">AKSingleInputMathOperation</td>
+<tr>
+<td class='one-third'><a href="/Classes/AKSum.html">AKSum</td>
+ <td class='two-thirds'> Sums any number of a-rate signals.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKTableValue.html">AKTableValue</td>
+ <td class='two-thirds'> Accesses table values by direct indexing with cubic interpolation.
+</td>
+</tr>
+</table>
+</div>
+
+<div id=SignalGenerators>
+
+<h3>Signal Generators</h3>
+
+<p>Classes for physical models, oscillators, linear controls, granular synthesis textures.</p>
+
+<div class="toggle toggle-bg">
+
+  <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Envelopes</div>
+  <div class="togglec">
+
+    <table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKADSREnvelope.html">AKADSREnvelope</td>
+     <td class='two-thirds'> Calculates the classical ADSR envelope using exponential segments.
+      </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKLine.html">AKLine</td>
+     <td class='two-thirds'> Creates an infinitely long line that connects a starting to an ending point over the given time duration.
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKLinearADSREnvelope.html">AKLinearADSREnvelope</td>
+     <td class='two-thirds'> Calculates the classical ADSR envelope using linear segments.
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKLinearEnvelope.html">AKLinearEnvelope</td>
+     <td class='two-thirds'> Applies a straight line rise and decay pattern to an input amp signal.
+    </td>
+    </tr>
+    </table>
+  </div>
+</div>
+
+<div class="toggle toggle-bg">
+
+  <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Granular Synthesis</div>
+  <div class="togglec">
+<table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+
+<tr>
+<td class='one-third'><a href="/Classes/AKGranularSynthesisTexture.html">AKGranularSynthesisTexture</td>
+ <td class='two-thirds'> Generates granular synthesis textures.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKGranularSynthesizer.html">AKGranularSynthesizer</td>
+ <td class='two-thirds'> Generate granular synthesis textures with user control.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKSinusoidBursts.html">AKSinusoidBursts</td>
+ <td class='two-thirds'> Produces sinusoid bursts useful for formant and granular synthesis.
+</td>
+</tr>
+</table>
+  </div>
+</div>
+
+<div class="toggle toggle-bg">
+
+  <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Loopers</div>
+  <div class="togglec">
+<table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+
+<tr>
+<td class='one-third'><a href="/Classes/AKMonoSoundFileLooper.html">AKMonoSoundFileLooper</td>
+ <td class='two-thirds'> Read sampled sound from a table using cubic interpolation.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKStereoSoundFileLooper.html">AKStereoSoundFileLooper</td>
+ <td class='two-thirds'> Read sampled sound from a table using cubic interpolation.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKTableLooper.html">AKTableLooper</td>
+ <td class='two-thirds'> Function-table-based crossfading looper.
+</td>
+</tr>
+</table>
+  </div>
+</div>
+
+<div class="toggle toggle-bg">
+
+  <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Musical Controls</div>
+  <div class="togglec">
+<table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+
+<tr>
+<td class='one-third'><a href="/Classes/AKPortamento.html">AKPortamento</td>
+ <td class='two-thirds'> Applies portamento to a step-valued control signal.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKVibrato.html">AKVibrato</td>
+ <td class='two-thirds'> Generates a natural-sounding user-controllable vibrato.
+</td>
+</tr>
+</table>
+  </div>
+</div>
+
+<div class="toggle toggle-bg">
+
+  <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Oscillators</div>
+  <div class="togglec">
+<table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+
+<tr>
+<td class='one-third'><a href="/Classes/AKFMOscillator.html">AKFMOscillator</td>
+ <td class='two-thirds'> Basic frequency modulated oscillator with linear interpolation.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKLowFrequencyOscillator.html">AKLowFrequencyOscillator</td>
+ <td class='two-thirds'> A low frequency oscillator of various shapes.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKOscillator.html">AKOscillator</td>
+ <td class='two-thirds'> A simple oscillator with linear interpolation.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKPhasor.html">AKPhasor</td>
+ <td class='two-thirds'> A normalized moving phase value.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKVCOscillator.html">AKVCOscillator</td>
+ <td class='two-thirds'> Implementation of a band-limited oscillator using pre-calculated tables.  Meant to model vintage analog synthesizers.
+</td>
+</tr>
+</table>
+  </div>
+</div>
+
+<div class="toggle toggle-bg">
+
+  <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Physical Models</div>
+  <div class="togglec">
+<table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+
+<tr>
+<td class='one-third'><a href="/Classes/AKMandolin.html">AKMandolin</td>
+ <td class='two-thirds'> An emulation of a mandolin.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKMarimba.html">AKMarimba</td>
+ <td class='two-thirds'> Physical model related to the striking of a wooden block.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKPluckedString.html">AKPluckedString</td>
+ <td class='two-thirds'> Physical model of the plucked string.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKStruckMetalBar.html">AKStruckMetalBar</td>
+ <td class='two-thirds'> Creates a tone similar to a struck metal bar.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKVibes.html">AKVibes</td>
+ <td class='two-thirds'> Physical model related to the striking of a metal block.
+</td>
+</tr>
+</table>
+
+<p> PhISEM</p>
+<table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+
+<tr>
+<td class='one-third'><a href="/Classes/AKBambooSticks.html">AKBambooSticks</td>
+ <td class='two-thirds'> Semi-physical model of a bamboo sound.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKCabasa.html">AKCabasa</td>
+ <td class='two-thirds'> Semi-physical model of a cabasa sound.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKCrunch.html">AKCrunch</td>
+ <td class='two-thirds'> Semi-physical model of a crunch sound.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKDroplet.html">AKDroplet</td>
+ <td class='two-thirds'> Semi-physical model of a water drop.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKGuiro.html">AKGuiro</td>
+ <td class='two-thirds'> Semi-physical model of a guiro sound.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKSandPaper.html">AKSandPaper</td>
+ <td class='two-thirds'> Semi-physical model of a sandpaper sound.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKSekere.html">AKSekere</td>
+ <td class='two-thirds'> Semi-physical model of a sekere sound.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKSleighbells.html">AKSleighbells</td>
+ <td class='two-thirds'> Semi-physical model of a sleighbell sound.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKStick.html">AKStick</td>
+ <td class='two-thirds'> Semi-physical model of a stick sound.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKTambourine.html">AKTambourine</td>
+ <td class='two-thirds'> Semi-physical model of a tambourine sound.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/Sekere.html">Sekere</td>
+</table>
+
+<p> Waveguide</p>
+<table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+
+<tr>
+<td class='one-third'><a href="/Classes/AKBeatenPlate.html">AKBeatenPlate</td>
+ <td class='two-thirds'> A model of beaten plate consisting of two parallel delay-lines and two first-order lowpass filters.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKBowedString.html">AKBowedString</td>
+ <td class='two-thirds'> Creates a tone similar to a bowed string.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKFlute.html">AKFlute</td>
+ <td class='two-thirds'> A physical model of a flute
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKSimpleWaveGuideModel.html">AKSimpleWaveGuideModel</td>
+ <td class='two-thirds'> A simple waveguide model consisting of one delay-line and one first-order lowpass filter.
+</td>
+</tr>
+</table>
+  </div>
+</div>
+
+<div class="toggle toggle-bg">
+
+  <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Random Generators</div>
+  <div class="togglec">
+<table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+
+<tr>
+<td class='one-third'><a href="/Classes/AKInterpolatedRandomNumberPulse.html">AKInterpolatedRandomNumberPulse</td>
+ <td class='two-thirds'> Generates a controlled random number series with interpolation between each new number.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKJitter.html">AKJitter</td>
+ <td class='two-thirds'> Generates a segmented line whose segments are randomly generated.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKNoise.html">AKNoise</td>
+ <td class='two-thirds'> A noise generator that can do white, pink, or brown noise.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKRandomNumbers.html">AKRandomNumbers</td>
+ <td class='two-thirds'> Generates a controlled pseudo-random number series between min and max values.
+</td>
+</tr>
+</table>
+  </div>
+</div>
+
+<div class="toggle toggle-bg">
+
+  <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Segment Arrays</div>
+  <div class="togglec">
+<table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+
+<tr>
+<td class='one-third'><a href="/Classes/AKSegmentArray.html">AKSegmentArray</td>
+ <td class='two-thirds'> Trace a series of linear or exponential segments between specified points.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKSegmentArrayLoop.html">AKSegmentArrayLoop</td>
+ <td class='two-thirds'> Generate control signal consisting of linear or exponential segments.
+</td>
+</tr>
+</table>
+  </div>
+</div>
+
+<div class="toggle toggle-bg">
+
+  <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Subtractive Synthesis</div>
+  <div class="togglec">
+<table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+
+<tr>
+<td class='one-third'><a href="/Classes/AKAdditiveCosines.html">AKAdditiveCosines</td>
+ <td class='two-thirds'> A set of harmonically related cosine partials.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+<div id=SignalInputandOutput>
+<h3> Signal Input and Output</h3>
+
+<p>Classes for handling incoming audio from devices and files as well as outputting audio to a speaker or files.</p>
+
+<table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+
+<tr>
+<td class='one-third'><a href="/Classes/AKAudioInput.html">AKAudioInput</td>
+ <td class='two-thirds'> Reads monophonic audio data from an external device or stream.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKAudioOutput.html">AKAudioOutput</td>
+ <td class='two-thirds'> Writes stereo audio data to an external device or stream.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKFileInput.html">AKFileInput</td>
+ <td class='two-thirds'> Reads stereo audio data from a file.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKLog.html">AKLog</td>
+ <td class='two-thirds'> Prints the given parameter to the console log
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKMP3FileInput.html">AKMP3FileInput</td>
+ <td class='two-thirds'> Reads stereo audio data from an external MP3 file.
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/Classes/AKMonoFileInput.html">AKMonoFileInput</td>
+ <td class='two-thirds'> Reads mono audio data from a file.
+</td>
+</tr>
+</table>
+</div>
+
+<div id=SignalModifiers>
+<h3> Signal Modifiers</h3>
+
+<p>Effects such as convolution, delay, compression, flange, vibrato, reverb, panning, and many filters.</p>
+
+<div class="toggle toggle-bg">
+
+  <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Convolutions</div>
+  <div class="togglec">
+    <table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKConvolution.html">AKConvolution</td>
+     <td class='two-thirds'> Convolution based on a uniformly partitioned overlap-save algorithm.
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKStereoConvolution.html">AKStereoConvolution</td>
+     <td class='two-thirds'> Convolution based on a uniformly partitioned overlap-save algorithm.
+    </td>
+    </tr>
+    </table>
+  </div>
+</div>
+
+<div class="toggle toggle-bg">
+  <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Delays</div>
+  <div class="togglec">
+    <table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKDelay.html">AKDelay</td>
+     <td class='two-thirds'> Simple audio delay
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKMultitapDelay.html">AKMultitapDelay</td>
+     <td class='two-thirds'> Multitap delay line implementation.
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKVariableDelay.html">AKVariableDelay</td>
+     <td class='two-thirds'> An interpolating variable time delay.
+    </td>
+    </tr>
+    </table>
+  </div>
+</div>
+
+<div class="toggle toggle-bg">
+  <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Effects</div>
+  <div class="togglec">
+    <table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKCompressor.html">AKCompressor</td>
+     <td class='two-thirds'> Compress, limit, expand, duck or gate an audio signal.
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKDopplerEffect.html">AKDopplerEffect</td>
+     <td class='two-thirds'> A fast and robust method for approximating sound propagation, achieving convincing Doppler shifts without having to solve equations.
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKFlanger.html">AKFlanger</td>
+     <td class='two-thirds'> Flange effect
+    </td>
+    </tr>
+    </table>
+  </div>
+</div>
+
+<div class="toggle toggle-bg">
+  <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Filters</div>
+  <div class="togglec">
+    <table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKCombFilter.html">AKCombFilter</td>
+     <td class='two-thirds'> Reverberates an input signal with a “colored” frequency response.
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKDCBlock.html">AKDCBlock</td>
+     <td class='two-thirds'> A DC blocking filter.
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKDecimator.html">AKDecimator</td>
+     <td class='two-thirds'> Sample rate / Bit depth reduction.
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKDeclick.html">AKDeclick</td>
+     <td class='two-thirds'> Declick operation to prevent clicks at the stop of the input signal
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKEqualizerFilter.html">AKEqualizerFilter</td>
+     <td class='two-thirds'> Second-order tunable equalisation filter based on Regalia and Mitra design.
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKHighPassFilter.html">AKHighPassFilter</td>
+     <td class='two-thirds'> A first-order recursive high-pass filter with variable frequency response.
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKHilbertTransformer.html">AKHilbertTransformer</td>
+     <td class='two-thirds'> An IIR implementation of a Hilbert transformer.
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKLowPassFilter.html">AKLowPassFilter</td>
+     <td class='two-thirds'> A first-order recursive low-pass filter with variable frequency response.
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKMoogLadder.html">AKMoogLadder</td>
+     <td class='two-thirds'> Moog ladder lowpass filter.
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKMoogVCF.html">AKMoogVCF</td>
+     <td class='two-thirds'> A digital emulation of the Moog diode ladder filter configuration.
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKResonantFilter.html">AKResonantFilter</td>
+     <td class='two-thirds'> A second-order resonant filter.
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKStringResonator.html">AKStringResonator</td>
+     <td class='two-thirds'> A string resonator with variable fundamental frequency.
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKThreePoleLowpassFilter.html">AKThreePoleLowpassFilter</td>
+     <td class='two-thirds'> A 3-pole sweepable resonant lowpass filter.
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKVariableFrequencyResponseBandPassFilter.html">AKVariableFrequencyResponseBandPassFilter</td>
+     <td class='two-thirds'> A second-order resonant filter.
+    </td>
+    </tr>
+    </table>
+
+    <p> Butterworth Filters</p>
+    <table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+
+    <tr>
+    <td class='one-third'><a href="/Classes/AKBandPassButterworthFilter.html">AKBandPassButterworthFilter</td>
+     <td class='two-thirds'> A band-pass Butterworth filter.
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKBandRejectButterworthFilter.html">AKBandRejectButterworthFilter</td>
+     <td class='two-thirds'> A band-reject Butterworth filter.
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKHighPassButterworthFilter.html">AKHighPassButterworthFilter</td>
+     <td class='two-thirds'> A high-pass Butterworth filter.
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKLowPassButterworthFilter.html">AKLowPassButterworthFilter</td>
+     <td class='two-thirds'> A low-pass Butterworth filter.
+    </td>
+    </tr>
+    </table>
+  </div>
+</div>
+
+<div class="toggle toggle-bg">
+  <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Reverbs</div>
+  <div class="togglec">
+    <table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKBallWithinTheBoxReverb.html">AKBallWithinTheBoxReverb</td>
+     <td class='two-thirds'> A physical model reverberator.
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKFlatFrequencyResponseReverb.html">AKFlatFrequencyResponseReverb</td>
+     <td class='two-thirds'> Reverberates an input signal with a flat frequency response.
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKParallelCombLowPassFilterReverb.html">AKParallelCombLowPassFilterReverb</td>
+     <td class='two-thirds'> A reverberator consisting of 6 parallel comb-lowpass filters.
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKReverb.html">AKReverb</td>
+     <td class='two-thirds'> 8 delay line stereo FDN reverb
+    </td>
+    </tr>
+    </table>
+  </div>
+</div>
+
+<div class="toggle toggle-bg">
+  <div class="togglet"><i class="toggle-closed icon-ok-circle"></i><i class="toggle-open icon-remove-circle"></i>Volume and Spatialization</div>
+  <div class="togglec">
+    <table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKBalance.html">AKBalance</td>
+     <td class='two-thirds'> Adjusts one audio signal according to the values of another.
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKMix.html">AKMix</td>
+     <td class='two-thirds'> Calculates the weighted mean value of two input signals.
+    </td>
+    </tr>
+    <tr>
+    <td class='one-third'><a href="/Classes/AKPanner.html">AKPanner</td>
+     <td class='two-thirds'> Distribute an audio signal across two channels with a choice of methods.
+    </td>
+    </tr>
+    </table>
+  </div>
+
+</div>
+
+</div>
+
+
+</div>

@@ -91,15 +91,15 @@ b) The note is created concurrently with other notes created by the <a href="#//
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/addProperty:withName:">&ndash;&nbsp;addProperty:withName:</a></code>
+    <code><a href="#//api/name/addProperty:">&ndash;&nbsp;addProperty:</a></code>
     <span class="tooltip"><p>Adds the property to the list of available <a href="#//api/name/properties">properties</a> of the note</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/addProperty:">&ndash;&nbsp;addProperty:</a></code>
-    <span class="tooltip"><p>Adds the property to the list of available <a href="#//api/name/properties">properties</a> of the note</p></span>
+    <code><a href="#//api/name/createPropertyWithValue:minimum:maximum:">&ndash;&nbsp;createPropertyWithValue:minimum:maximum:</a></code>
+    <span class="tooltip"><p>Helper function to create a property with the usually values and add it to the note</p></span>
   </span>
   
   
@@ -365,18 +365,18 @@ b) The note is created concurrently with other notes created by the <a href="#//
 </div>
             
             <div class="section-method">
-  <a name="//api/name/addProperty:withName:" title="addProperty:withName:"></a>
-  <h3 class="subsubtitle method-title">addProperty:withName:</h3>
+  <a name="//api/name/createPropertyWithValue:minimum:maximum:" title="createPropertyWithValue:minimum:maximum:"></a>
+  <h3 class="subsubtitle method-title">createPropertyWithValue:minimum:maximum:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Adds the property to the list of available <a href="#//api/name/properties">properties</a> of the note</p>
+    <p>Helper function to create a property with the usually values and add it to the note</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)addProperty:(AKNoteProperty *)<em>newProperty</em> withName:(NSString *)<em>name</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (AKNoteProperty *)createPropertyWithValue:(float)<em>value</em> minimum:(float)<em>minimum</em> maximum:(float)<em>maximum</em></code></div>
 
     
   
@@ -384,13 +384,18 @@ b) The note is created concurrently with other notes created by the <a href="#//
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>newProperty</em></dt>
-      <dd><p>New property to add to the note&rsquo;s set of <a href="#//api/name/properties">properties</a></p></dd>
+      <dt><em>value</em></dt>
+      <dd><p>Current value of the note property</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
-      <dt><em>name</em></dt>
-      <dd><p>Human readable name for the of the property</p></dd>
+      <dt><em>minimum</em></dt>
+      <dd><p>Minimum value</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>maximum</em></dt>
+      <dd><p>Maximum value</p></dd>
     </dl>
     
   </div>

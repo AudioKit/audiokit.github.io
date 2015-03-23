@@ -109,13 +109,6 @@ title: AKTools
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/setProgressView:withProperty:">+&nbsp;setProgressView:withProperty:</a></code>
-    <span class="tooltip"><p>Set a progress view with an <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
     <code><a href="#//api/name/setProperty:withSlider:">+&nbsp;setProperty:withSlider:</a></code>
     <span class="tooltip"><p>Set an <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a> from a slider</p></span>
   </span>
@@ -125,6 +118,13 @@ title: AKTools
   <span class="tooltip">
     <code><a href="#//api/name/setTextField:withProperty:">+&nbsp;setTextField:withProperty:</a></code>
     <span class="tooltip"><p>Populate a text field with the value from <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a></p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/setProgressView:withProperty:">+&nbsp;setProgressView:withProperty:</a></code>
+    <span class="tooltip"><p>Set a progress view with an <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a></p></span>
   </span>
   
   
@@ -395,7 +395,7 @@ title: AKTools
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (float)scaleLogValueFromSlider:(UISlider *)<em>slider</em> minimum:(float)<em>minimum</em> maximum:(float)<em>maximum</em></code></div>
+  <div class="method-subsection method-declaration"><code>+ (float)scaleLogValueFromSlider:(AKSlider *)<em>slider</em> minimum:(float)<em>minimum</em> maximum:(float)<em>maximum</em></code></div>
 
     
   
@@ -619,7 +619,7 @@ title: AKTools
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (float)scaleValueFromSlider:(UISlider *)<em>slider</em> minimum:(float)<em>minimum</em> maximum:(float)<em>maximum</em></code></div>
+  <div class="method-subsection method-declaration"><code>+ (float)scaleValueFromSlider:(AKSlider *)<em>slider</em> minimum:(float)<em>minimum</em> maximum:(float)<em>maximum</em></code></div>
 
     
   
@@ -777,7 +777,7 @@ title: AKTools
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (void)setProperty:(id)<em>property</em> withSlider:(UISlider *)<em>slider</em></code></div>
+  <div class="method-subsection method-declaration"><code>+ (void)setProperty:(id)<em>property</em> withSlider:(AKSlider *)<em>slider</em></code></div>
 
     
   
@@ -828,7 +828,7 @@ title: AKTools
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (void)setSlider:(UISlider *)<em>slider</em> withProperty:(id)<em>property</em></code></div>
+  <div class="method-subsection method-declaration"><code>+ (void)setSlider:(AKSlider *)<em>slider</em> withProperty:(id)<em>property</em></code></div>
 
     
   
@@ -879,7 +879,7 @@ title: AKTools
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (void)setSlider:(UISlider *)<em>slider</em> withValue:(float)<em>value</em> minimum:(float)<em>minimum</em> maximum:(float)<em>maximum</em></code></div>
+  <div class="method-subsection method-declaration"><code>+ (void)setSlider:(AKSlider *)<em>slider</em> withValue:(float)<em>value</em> minimum:(float)<em>minimum</em> maximum:(float)<em>maximum</em></code></div>
 
     
   
@@ -940,7 +940,7 @@ title: AKTools
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (void)setTextField:(UITextField *)<em>textfield</em> withProperty:(id)<em>property</em></code></div>
+  <div class="method-subsection method-declaration"><code>+ (void)setTextField:(AKTextField *)<em>textfield</em> withProperty:(id)<em>property</em></code></div>
 
     
   

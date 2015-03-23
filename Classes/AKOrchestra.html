@@ -46,6 +46,14 @@ title: AKOrchestra
             <ul class="task-list">
                 <li>
   <span class="tooltip">
+    <code><a href="#//api/name/userDefinedOperations">&nbsp;&nbsp;userDefinedOperations</a></code>
+    <span class="tooltip"><p>All UDOs that are required by the instrument are stored here and declared before any
+instrument blocks.</p></span>
+  </span>
+  <span class="task-item-suffix">property</span>
+  
+</li><li>
+  <span class="tooltip">
     <code><a href="#//api/name/zeroDBFullScaleValue">&nbsp;&nbsp;zeroDBFullScaleValue</a></code>
     <span class="tooltip"><p>Determines the value from which to scale all other amplitudes</p></span>
   </span>
@@ -60,20 +68,6 @@ title: AKOrchestra
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/instruments">&nbsp;&nbsp;instruments</a></code>
-    <span class="tooltip"><p>All the instruments in the orchestra, in order they need to be created.</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/functionTables">&nbsp;&nbsp;functionTables</a></code>
-    <span class="tooltip"><p>Global function tables not added by a specific instrument</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
     <code><a href="#//api/name/start">+&nbsp;start</a></code>
     <span class="tooltip"><p>Start the orchestra</p></span>
   </span>
@@ -82,7 +76,7 @@ title: AKOrchestra
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/reset">+&nbsp;reset</a></code>
-    <span class="tooltip"><p>Reset the orchestra with no <a href="#//api/name/instruments">instruments</a>.</p></span>
+    <span class="tooltip"><p>Reset the orchestra with no instruments.</p></span>
   </span>
   
   
@@ -97,6 +91,13 @@ title: AKOrchestra
   <span class="tooltip">
     <code><a href="#//api/name/addInstrument:">+&nbsp;addInstrument:</a></code>
     <span class="tooltip"><p>Add an instrument to the orchestra</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/updateInstrument:">+&nbsp;updateInstrument:</a></code>
+    <span class="tooltip"><p>Replace an instrument with the new parameters</p></span>
   </span>
   
   
@@ -121,78 +122,6 @@ title: AKOrchestra
             <h2 class="subtitle subtitle-methods">Properties</h2>
             
             <div class="section-method">
-  <a name="//api/name/functionTables" title="functionTables"></a>
-  <h3 class="subsubtitle method-title">functionTables</h3>
-
-  
-  
-  <div class="method-subsection brief-description">
-    <p>Global function tables not added by a specific instrument</p>
-  </div>
-  
-    
-
-  <div class="method-subsection method-declaration"><code>@property NSMutableSet *functionTables</code></div>
-
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  <div class="method-subsection declared-in-section">
-    <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKOrchestra.h</code><br />
-  </div>
-  
-  
-</div>
-            
-            <div class="section-method">
-  <a name="//api/name/instruments" title="instruments"></a>
-  <h3 class="subsubtitle method-title">instruments</h3>
-
-  
-  
-  <div class="method-subsection brief-description">
-    <p>All the instruments in the orchestra, in order they need to be created.</p>
-  </div>
-  
-    
-
-  <div class="method-subsection method-declaration"><code>@property NSMutableArray *instruments</code></div>
-
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  <div class="method-subsection declared-in-section">
-    <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKOrchestra.h</code><br />
-  </div>
-  
-  
-</div>
-            
-            <div class="section-method">
   <a name="//api/name/numberOfChannels" title="numberOfChannels"></a>
   <h3 class="subsubtitle method-title">numberOfChannels</h3>
 
@@ -205,6 +134,43 @@ title: AKOrchestra
     
 
   <div class="method-subsection method-declaration"><code>@property (readonly) int numberOfChannels</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKOrchestra.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/userDefinedOperations" title="userDefinedOperations"></a>
+  <h3 class="subsubtitle method-title">userDefinedOperations</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>All UDOs that are required by the instrument are stored here and declared before any
+instrument blocks.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSMutableSet *userDefinedOperations</code></div>
 
     
   
@@ -325,7 +291,7 @@ title: AKOrchestra
   
   
   <div class="method-subsection brief-description">
-    <p>Reset the orchestra with no <a href="#//api/name/instruments">instruments</a>.</p>
+    <p>Reset the orchestra with no instruments.</p>
   </div>
   
     
@@ -436,6 +402,52 @@ title: AKOrchestra
   
 </div>
             
+            <div class="section-method">
+  <a name="//api/name/updateInstrument:" title="updateInstrument:"></a>
+  <h3 class="subsubtitle method-title">updateInstrument:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Replace an instrument with the new parameters</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (void)updateInstrument:(AKInstrument *)<em>instrument</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>instrument</em></dt>
+      <dd><p>Instrument to respecify in the orchestra</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKOrchestra.h</code><br />
+  </div>
+  
+  
+</div>
+            
           </div>
           
 
@@ -456,7 +468,7 @@ title: AKOrchestra
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)addInstrument:(AKInstrument *)<em>newInstrument</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (void)addInstrument:(AKInstrument *)<em>instrument</em></code></div>
 
     
   
@@ -464,7 +476,7 @@ title: AKOrchestra
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>newInstrument</em></dt>
+      <dt><em>instrument</em></dt>
       <dd><p>Instrument that will be added to the orchestra.</p></dd>
     </dl>
     

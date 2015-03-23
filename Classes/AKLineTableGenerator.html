@@ -1,0 +1,691 @@
+---
+layout: docs
+title: AKLineTableGenerator
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div id="header">
+          <div class="section-header">
+            <h1 class="title title-header">AKLineTableGenerator</h1>
+          </div>
+        </div>
+        <div id="container">
+          
+          <div class="section section-specification"><table cellspacing="0"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKTableGenerator.html">AKTableGenerator</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKLineTableGenerator.h<br />AKLineTableGenerator.m</td>
+</tr>
+            </tbody></table></div>
+          
+
+          
+          
+          <div class="section section-overview">
+            <a title="Overview" name="overview"></a>
+            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <p>Construct functions from segments of straight lines</p>
+          </div>
+          
+          
+
+          
+          
+          <div class="section section-tasks">
+            <a title="Tasks" name="tasks"></a>
+            <h2 class="subtitle subtitle-tasks">Tasks</h2>
+            
+
+            
+            <h3 class="subsubtitle task-title">Other Methods</h3>
+
+            <ul class="task-list">
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initSquareWave">&ndash;&nbsp;initSquareWave</a></code>
+    <span class="tooltip"><p>Creates a square waveform with a default size of 4096.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/squareWave">+&nbsp;squareWave</a></code>
+    <span class="tooltip"><p>Creates a square waveform with a default size of 4096.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initTriangleWave">&ndash;&nbsp;initTriangleWave</a></code>
+    <span class="tooltip"><p>Creates a triangle waveform with a default size of 4096.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/triangleWave">+&nbsp;triangleWave</a></code>
+    <span class="tooltip"><p>Creates a triangle waveform with a default size of 4096.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initSawtoothWave">&ndash;&nbsp;initSawtoothWave</a></code>
+    <span class="tooltip"><p>Creates a sawtooth waveform with a default size of 4096.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/sawtoothWave">+&nbsp;sawtoothWave</a></code>
+    <span class="tooltip"><p>Creates a sawtooth waveform with a default size of 4096.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initReverseSawtoothWave">&ndash;&nbsp;initReverseSawtoothWave</a></code>
+    <span class="tooltip"><p>Creates a reverse sawtooth waveform with a default size of 4096.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/reverseSawtoothWave">+&nbsp;reverseSawtoothWave</a></code>
+    <span class="tooltip"><p>Creates a reverse sawtooth waveform with a default size of 4096.</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/initWithValue:">&ndash;&nbsp;initWithValue:</a></code>
+    <span class="tooltip"><p>Start the line segments at a specific value</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/addValue:atIndex:">&ndash;&nbsp;addValue:atIndex:</a></code>
+    <span class="tooltip"><p>Add a junction point</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/appendValue:afterNumberOfElements:">&ndash;&nbsp;appendValue:afterNumberOfElements:</a></code>
+    <span class="tooltip"><p>Add a junction point</p></span>
+  </span>
+  
+  
+</li>
+            </ul>
+            
+
+            
+            <h3 class="subsubtitle task-title">Other Methods</h3>
+
+            <ul class="task-list">
+                <li>
+  <span class="tooltip">
+    <code><a href="#//api/name/generationRoutineNumber">&ndash;&nbsp;generationRoutineNumber</a></code>
+    <span class="tooltip"><p>Generation Routine Number</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/parametersWithSize:">&ndash;&nbsp;parametersWithSize:</a></code>
+    <span class="tooltip"><p>Parameters for the generator</p></span>
+  </span>
+  
+  
+</li>
+            </ul>
+            
+          </div>
+          
+          
+
+          
+          
+
+          
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/reverseSawtoothWave" title="reverseSawtoothWave"></a>
+  <h3 class="subsubtitle method-title">reverseSawtoothWave</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Creates a reverse sawtooth waveform with a default size of 4096.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)reverseSawtoothWave</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLineTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/sawtoothWave" title="sawtoothWave"></a>
+  <h3 class="subsubtitle method-title">sawtoothWave</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Creates a sawtooth waveform with a default size of 4096.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)sawtoothWave</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLineTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/squareWave" title="squareWave"></a>
+  <h3 class="subsubtitle method-title">squareWave</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Creates a square waveform with a default size of 4096.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)squareWave</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLineTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/triangleWave" title="triangleWave"></a>
+  <h3 class="subsubtitle method-title">triangleWave</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Creates a triangle waveform with a default size of 4096.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)triangleWave</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLineTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+
+          
+          <div class="section section-methods">
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/addValue:atIndex:" title="addValue:atIndex:"></a>
+  <h3 class="subsubtitle method-title">addValue:atIndex:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Add a junction point</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)addValue:(float)<em>value</em> atIndex:(int)<em>index</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>value</em></dt>
+      <dd><p>The value at the given index</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>index</em></dt>
+      <dd><p>The index at which the value will be set</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLineTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/appendValue:afterNumberOfElements:" title="appendValue:afterNumberOfElements:"></a>
+  <h3 class="subsubtitle method-title">appendValue:afterNumberOfElements:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Add a junction point</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (void)appendValue:(float)<em>value</em> afterNumberOfElements:(int)<em>numberOfElements</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>value</em></dt>
+      <dd><p>The value at the given index</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>numberOfElements</em></dt>
+      <dd><p>The index at which the value will be set</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLineTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/generationRoutineNumber" title="generationRoutineNumber"></a>
+  <h3 class="subsubtitle method-title">generationRoutineNumber</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Generation Routine Number</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (int)generationRoutineNumber</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initReverseSawtoothWave" title="initReverseSawtoothWave"></a>
+  <h3 class="subsubtitle method-title">initReverseSawtoothWave</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Creates a reverse sawtooth waveform with a default size of 4096.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initReverseSawtoothWave</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLineTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initSawtoothWave" title="initSawtoothWave"></a>
+  <h3 class="subsubtitle method-title">initSawtoothWave</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Creates a sawtooth waveform with a default size of 4096.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initSawtoothWave</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLineTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initSquareWave" title="initSquareWave"></a>
+  <h3 class="subsubtitle method-title">initSquareWave</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Creates a square waveform with a default size of 4096.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initSquareWave</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLineTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initTriangleWave" title="initTriangleWave"></a>
+  <h3 class="subsubtitle method-title">initTriangleWave</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Creates a triangle waveform with a default size of 4096.</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initTriangleWave</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLineTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithValue:" title="initWithValue:"></a>
+  <h3 class="subsubtitle method-title">initWithValue:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Start the line segments at a specific value</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithValue:(float)<em>value</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>value</em></dt>
+      <dd><p>Initial value of the the first line segment</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKLineTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/parametersWithSize:" title="parametersWithSize:"></a>
+  <h3 class="subsubtitle method-title">parametersWithSize:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Parameters for the generator</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>- (NSArray *)parametersWithSize:(int)<em>size</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>size</em></dt>
+      <dd><p>The final size of the table, useful for scaling</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKTableGenerator.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
+          
+        </div>
+      </div>

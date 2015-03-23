@@ -30,7 +30,7 @@ title: AKPluckedString
             <h2 class="subtitle subtitle-overview">Overview</h2>
             <p>Physical model of the plucked string.</p>
 
-<p>A user can control the pluck point, the pickup point, the filter, and an additional audio signal used to excite the &lsquo;string&rsquo;. Based on the Karplus-Strong algorithm.</p>
+<p>A user can control the <a href="#//api/name/pluck">pluck</a> point, the pickup point, the filter, and an additional audio signal used to excite the &lsquo;string&rsquo;. Based on the Karplus-Strong algorithm.</p>
           </div>
           
           
@@ -48,21 +48,21 @@ title: AKPluckedString
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithExcitationSignal:frequency:pluckPosition:samplePosition:reflectionCoefficient:amplitude:">&ndash;&nbsp;initWithExcitationSignal:frequency:pluckPosition:samplePosition:reflectionCoefficient:amplitude:</a></code>
+    <code><a href="#//api/name/initWithFrequency:pluckPosition:samplePosition:reflectionCoefficient:amplitude:">&ndash;&nbsp;initWithFrequency:pluckPosition:samplePosition:reflectionCoefficient:amplitude:</a></code>
     <span class="tooltip"><p>Instantiates the plucked string with all values</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/initWithExcitationSignal:">&ndash;&nbsp;initWithExcitationSignal:</a></code>
+    <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
     <span class="tooltip"><p>Instantiates the plucked string with default values</p></span>
   </span>
   
   
 </li><li>
   <span class="tooltip">
-    <code><a href="#//api/name/pluckWithExcitationSignal:">+&nbsp;pluckWithExcitationSignal:</a></code>
+    <code><a href="#//api/name/pluck">+&nbsp;pluck</a></code>
     <span class="tooltip"><p>Instantiates the plucked string with default values</p></span>
   </span>
   
@@ -84,14 +84,14 @@ title: AKPluckedString
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/pluckPosition">&nbsp;&nbsp;pluckPosition</a></code>
-    <span class="tooltip"><p>The point of pluck as a fraction of the way up the string (0 to 1). A pluck point of zero means no initial pluck. [Default Value: 0.01]</p></span>
+    <span class="tooltip"><p>The point of <a href="#//api/name/pluck">pluck</a> as a fraction of the way up the string (0 to 1). A <a href="#//api/name/pluck">pluck</a> point of zero means no initial <a href="#//api/name/pluck">pluck</a>. [Default Value: 0.01]</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/setOptionalPluckPosition:">&ndash;&nbsp;setOptionalPluckPosition:</a></code>
-    <span class="tooltip"><p>Set an optional pluck position</p></span>
+    <span class="tooltip"><p>Set an optional <a href="#//api/name/pluck">pluck</a> position</p></span>
   </span>
   
   
@@ -162,7 +162,7 @@ title: AKPluckedString
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *amplitude</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *amplitude</code></div>
 
     
   
@@ -198,7 +198,7 @@ title: AKPluckedString
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKConstant *frequency</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *frequency</code></div>
 
     
   
@@ -229,12 +229,12 @@ title: AKPluckedString
   
   
   <div class="method-subsection brief-description">
-    <p>The point of pluck as a fraction of the way up the string (0 to 1). A pluck point of zero means no initial pluck. [Default Value: 0.01]</p>
+    <p>The point of <a href="#//api/name/pluck">pluck</a> as a fraction of the way up the string (0 to 1). A <a href="#//api/name/pluck">pluck</a> point of zero means no initial <a href="#//api/name/pluck">pluck</a>. [Default Value: 0.01]</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKConstant *pluckPosition</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *pluckPosition</code></div>
 
     
   
@@ -270,7 +270,7 @@ title: AKPluckedString
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *reflectionCoefficient</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *reflectionCoefficient</code></div>
 
     
   
@@ -306,7 +306,7 @@ title: AKPluckedString
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKParameter *samplePosition</code></div>
+  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *samplePosition</code></div>
 
     
   
@@ -339,8 +339,8 @@ title: AKPluckedString
             <h2 class="subtitle subtitle-methods">Class Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/pluckWithExcitationSignal:" title="pluckWithExcitationSignal:"></a>
-  <h3 class="subsubtitle method-title">pluckWithExcitationSignal:</h3>
+  <a name="//api/name/pluck" title="pluck"></a>
+  <h3 class="subsubtitle method-title">pluck</h3>
 
   
   
@@ -350,19 +350,9 @@ title: AKPluckedString
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)pluckWithExcitationSignal:(AKParameter *)<em>excitationSignal</em></code></div>
+  <div class="method-subsection method-declaration"><code>+ (instancetype)pluck</code></div>
 
     
-  
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
-    
-    <dl class="argument-def parameter-def">
-      <dt><em>excitationSignal</em></dt>
-      <dd><p>A signal which excites the string.</p></dd>
-    </dl>
-    
-  </div>
   
 
   
@@ -393,8 +383,8 @@ title: AKPluckedString
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/initWithExcitationSignal:" title="initWithExcitationSignal:"></a>
-  <h3 class="subsubtitle method-title">initWithExcitationSignal:</h3>
+  <a name="//api/name/init" title="init"></a>
+  <h3 class="subsubtitle method-title">init</h3>
 
   
   
@@ -404,19 +394,9 @@ title: AKPluckedString
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithExcitationSignal:(AKParameter *)<em>excitationSignal</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
 
     
-  
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
-    
-    <dl class="argument-def parameter-def">
-      <dt><em>excitationSignal</em></dt>
-      <dd><p>A signal which excites the string.</p></dd>
-    </dl>
-    
-  </div>
   
 
   
@@ -439,8 +419,8 @@ title: AKPluckedString
 </div>
             
             <div class="section-method">
-  <a name="//api/name/initWithExcitationSignal:frequency:pluckPosition:samplePosition:reflectionCoefficient:amplitude:" title="initWithExcitationSignal:frequency:pluckPosition:samplePosition:reflectionCoefficient:amplitude:"></a>
-  <h3 class="subsubtitle method-title">initWithExcitationSignal:frequency:pluckPosition:samplePosition:reflectionCoefficient:amplitude:</h3>
+  <a name="//api/name/initWithFrequency:pluckPosition:samplePosition:reflectionCoefficient:amplitude:" title="initWithFrequency:pluckPosition:samplePosition:reflectionCoefficient:amplitude:"></a>
+  <h3 class="subsubtitle method-title">initWithFrequency:pluckPosition:samplePosition:reflectionCoefficient:amplitude:</h3>
 
   
   
@@ -450,17 +430,12 @@ title: AKPluckedString
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithExcitationSignal:(AKParameter *)<em>excitationSignal</em> frequency:(AKConstant *)<em>frequency</em> pluckPosition:(AKConstant *)<em>pluckPosition</em> samplePosition:(AKParameter *)<em>samplePosition</em> reflectionCoefficient:(AKParameter *)<em>reflectionCoefficient</em> amplitude:(AKParameter *)<em>amplitude</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFrequency:(AKConstant *)<em>frequency</em> pluckPosition:(AKConstant *)<em>pluckPosition</em> samplePosition:(AKParameter *)<em>samplePosition</em> reflectionCoefficient:(AKParameter *)<em>reflectionCoefficient</em> amplitude:(AKParameter *)<em>amplitude</em></code></div>
 
     
   
   <div class="method-subsection arguments-section parameters">
     <h3 class="method-subtitle parameter-title">Parameters</h3>
-    
-    <dl class="argument-def parameter-def">
-      <dt><em>excitationSignal</em></dt>
-      <dd><p>A signal which excites the string. [Default Value: ]</p></dd>
-    </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>frequency</em></dt>
@@ -469,7 +444,7 @@ title: AKPluckedString
     
     <dl class="argument-def parameter-def">
       <dt><em>pluckPosition</em></dt>
-      <dd><p>The point of pluck as a fraction of the way up the string (0 to 1). A pluck point of zero means no initial pluck. [Default Value: 0.01]</p></dd>
+      <dd><p>The point of <a href="#//api/name/pluck">pluck</a> as a fraction of the way up the string (0 to 1). A <a href="#//api/name/pluck">pluck</a> point of zero means no initial <a href="#//api/name/pluck">pluck</a>. [Default Value: 0.01]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
@@ -608,7 +583,7 @@ title: AKPluckedString
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional pluck position</p>
+    <p>Set an optional <a href="#//api/name/pluck">pluck</a> position</p>
   </div>
   
     
@@ -622,7 +597,7 @@ title: AKPluckedString
     
     <dl class="argument-def parameter-def">
       <dt><em>pluckPosition</em></dt>
-      <dd><p>The point of pluck as a fraction of the way up the string (0 to 1). A pluck point of zero means no initial pluck. [Default Value: 0.01]</p></dd>
+      <dd><p>The point of <a href="#//api/name/pluck">pluck</a> as a fraction of the way up the string (0 to 1). A <a href="#//api/name/pluck">pluck</a> point of zero means no initial <a href="#//api/name/pluck">pluck</a>. [Default Value: 0.01]</p></dd>
     </dl>
     
   </div>

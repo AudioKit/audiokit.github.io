@@ -28,9 +28,7 @@ title: AKDeclick
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Removes clicks from signal start and end</p>
-
-<p>Given a signal, declick will apply an envelope to ensure there is no clicking at the start or end of the sound.</p>
+            <p>Declick operation to prevent clicks at the stop of the input signal</p>
           </div>
           
           
@@ -49,7 +47,14 @@ title: AKDeclick
                 <li>
   <span class="tooltip">
     <code><a href="#//api/name/initWithInput:">&ndash;&nbsp;initWithInput:</a></code>
-    <span class="tooltip"><p>Instantiates the declick</p></span>
+    <span class="tooltip"><p>Instantiates the declick with all values</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/WithInput:">+&nbsp;WithInput:</a></code>
+    <span class="tooltip"><p>Instantiates the declick with default values</p></span>
   </span>
   
   
@@ -64,6 +69,58 @@ title: AKDeclick
           
 
           
+          <div class="section section-methods">
+            <a title="Class Methods" name="class_methods"></a>
+            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            
+            <div class="section-method">
+  <a name="//api/name/WithInput:" title="WithInput:"></a>
+  <h3 class="subsubtitle method-title">WithInput:</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Instantiates the declick with default values</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (instancetype)WithInput:(AKParameter *)<em>input</em></code></div>
+
+    
+  
+  <div class="method-subsection arguments-section parameters">
+    <h3 class="method-subtitle parameter-title">Parameters</h3>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>input</em></dt>
+      <dd><p>Input audio signal to be declicked</p></dd>
+    </dl>
+    
+  </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKDeclick.h</code><br />
+  </div>
+  
+  
+</div>
+            
+          </div>
+          
 
           
           <div class="section section-methods">
@@ -77,12 +134,12 @@ title: AKDeclick
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the declick</p>
+    <p>Instantiates the declick with all values</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKAudio *)<em>audioSource</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em></code></div>
 
     
   
@@ -90,8 +147,8 @@ title: AKDeclick
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>audioSource</em></dt>
-      <dd><p>Audio to declick</p></dd>
+      <dt><em>input</em></dt>
+      <dd><p>Input audio signal to be declicked [Default Value: ]</p></dd>
     </dl>
     
   </div>
