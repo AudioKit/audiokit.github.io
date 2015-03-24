@@ -3,87 +3,184 @@ permalink: /
 layout: default
 title: AudioKit - Powerful audio synthesis, processing, and analysis, without the steep learning curve.
 ---
-<section class="quickstart intro">
-  <div class="grid wrap clear">
-    <div class="golden-large center-on-mobiles unit vertical-align-container">
-      <div class="vertical-align">
-        <p class="first">Powerful audio synthesis, processing, and analysis, without the steep learning curve.</p>
-        <a class="center-on-mobiles button button-transparent" href="/downloads/">Download AudioKit</a>
-      </div>
-    </div>
-    <div class="golden-small hide-on-mobiles unit">
 
-<div class="cd-iphone-6 cd-silver" style="margin-left: 1em; float: right">
-  <div class="cd-body">
-    <div class="cd-sound"></div>
-    <div class="cd-sleep"></div>
-    <div class="cd-camera"></div>
-    <div class="cd-ear"></div>
-    <div class="cd-home"></div>
-    <div class="cd-screen">
-      <video controls class="cd-fill">
-        <source src="https://dl.dropboxusercontent.com/u/31568349/movies/EffectsProcessorDemo.m4v" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</div>
+<section id="slider" class="slider-parallax swiper_wrapper clearfix">
 
-    </div>
-  </div>
-</section>
+            <div class="swiper-container swiper-parent">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide dark" style="background-image: url('images/slider/swiper/1.jpg');">
+                        <div class="container clearfix">
+                            <div class="slider-caption slider-caption-center">
+                                <h2 data-caption-animate="fadeInUp">Welcome to AudioKit</h2>
+                                <p data-caption-animate="fadeInUp" data-caption-delay="200">...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide dark">
+                        <div class="container clearfix">
+                            <div class="slider-caption slider-caption-center">
+                                <h2 data-caption-animate="fadeInUp">Beautifully Flexible</h2>
+                                <p data-caption-animate="fadeInUp" data-caption-delay="200">Looks beautiful &amp; ultra-sharp on Retina Screen Displays. Powerful Layout with Responsive functionality that can be adapted to any screen size.</p>
+                            </div>
+                        </div>
+                        <div class="video-wrap">
+                            <video poster="/images/videos/explore-poster.jpg" preload="auto" loop autoplay muted>
+                                <source src='/images/videos/explore.mp4' type='video/mp4' />
+                                <source src='/images/videos/explore.webm' type='video/webm' />
+                            </video>
+                            <div class="video-overlay" style="background-color: rgba(0,0,0,0.55);"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url('/images/slider/swiper/3.jpg'); background-position: center top;">
+                        <div class="container clearfix">
+                            <div class="slider-caption">
+                                <h2 data-caption-animate="fadeInUp">Great Performance</h2>
+                                <p data-caption-animate="fadeInUp" data-caption-delay="200">You'll be surprised to see the Final Results of your Creation &amp; would crave for more.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="slider-arrow-left"><i class="icon-angle-left"></i></div>
+                <div id="slider-arrow-right"><i class="icon-angle-right"></i></div>
+                <div id="slide-number"><div id="slide-number-current"></div><span>/</span><div id="slide-number-total"></div></div>
+            </div>
 
-<section class="features">
-  <div class="grid">
+            <script>
+                jQuery(document).ready(function($){
+                    var swiperSlider = new Swiper('.swiper-parent',{
+                        paginationClickable: false,
+                        slidesPerView: 1,
+                        grabCursor: true,
+                        onSwiperCreated: function(swiper){
+                            $('[data-caption-animate]').each(function(){
+                                var $toAnimateElement = $(this);
+                                var toAnimateDelay = $(this).attr('data-caption-delay');
+                                var toAnimateDelayTime = 0;
+                                if( toAnimateDelay ) { toAnimateDelayTime = Number( toAnimateDelay ) + 750; } else { toAnimateDelayTime = 750; }
+                                if( !$toAnimateElement.hasClass('animated') ) {
+                                    $toAnimateElement.addClass('not-animated');
+                                    var elementAnimation = $toAnimateElement.attr('data-caption-animate');
+                                    setTimeout(function() {
+                                        $toAnimateElement.removeClass('not-animated').addClass( elementAnimation + ' animated');
+                                    }, toAnimateDelayTime);
+                                }
+                            });
+                        },
+                        onSlideChangeStart: function(swiper){
+                            $('#slide-number-current').html(swiper.activeIndex + 1);
+                            $('[data-caption-animate]').each(function(){
+                                var $toAnimateElement = $(this);
+                                var elementAnimation = $toAnimateElement.attr('data-caption-animate');
+                                $toAnimateElement.removeClass('animated').removeClass(elementAnimation).addClass('not-animated');
+                            });
+                        },
+                        onSlideChangeEnd: function(swiper){
+                            $('#slider .swiper-slide').each(function(){
+                                if($(this).find('video').length > 0) { $(this).find('video').get(0).pause(); }
+                            });
+                            $('#slider .swiper-slide:not(".swiper-slide-active")').each(function(){
+                                if($(this).find('video').length > 0) {
+                                    if($(this).find('video').get(0).currentTime != 0 ) $(this).find('video').get(0).currentTime = 0;
+                                }
+                            });
+                            if( $('#slider .swiper-slide.swiper-slide-active').find('video').length > 0 ) { $('#slider .swiper-slide.swiper-slide-active').find('video').get(0).play(); }
 
-    <div class="unit one-third">
-      <a href="/features/#operations"><img class="homepage" src="/homepage/synthesizers-fx.png">
-      <h2>100+ Synthesizers and FX</h2></a>
-      <p>
-        Physical Models, Spectral Effects, Granular Synthesis, Effects Processing, Filters, Reverbs, and more.
-      </p>
-    </div>
-    <div class="unit one-third">
-      <a href="/features/#utilities"><img class="homepage" src="/homepage/sampler.png">
-      <h2>Built-in Sampler</h2></a>
-      <p>
-        Record audio streams, including from the microphone, into tracks you can name, recall, and process on-the-fly.
-      </p>
-    </div>
-    <div class="unit one-third">
-      <a href="/features/#sequences"><img class="homepage" src="/homepage/sequencing.png">
-      <h2>Powerful Sequencing</h2></a>
-      <p>
-        Sequences are not limited to the usual notes-on-a-score, but can contain blocks of any code that can be triggered at any time.
-      </p>
-    </div>
-    <div class="clear"></div>
-  </div>
-</section>
+                            $('#slider .swiper-slide.swiper-slide-active [data-caption-animate]').each(function(){
+                                var $toAnimateElement = $(this);
+                                var toAnimateDelay = $(this).attr('data-caption-delay');
+                                var toAnimateDelayTime = 0;
+                                if( toAnimateDelay ) { toAnimateDelayTime = Number( toAnimateDelay ) + 300; } else { toAnimateDelayTime = 300; }
+                                if( !$toAnimateElement.hasClass('animated') ) {
+                                    $toAnimateElement.addClass('not-animated');
+                                    var elementAnimation = $toAnimateElement.attr('data-caption-animate');
+                                    setTimeout(function() {
+                                        $toAnimateElement.removeClass('not-animated').addClass( elementAnimation + ' animated');
+                                    }, toAnimateDelayTime);
+                                }
+                            });
+                        }
+                    });
 
-<section class="features">
-  <div class="grid">
-    <div class="unit one-third">
-     <a href="/features/#examples"><img class="homepage" src="/homepage/examples.png">
-      <h2>Full-featured Examples</h2></a>
-      <p>
-        The list of examples is growing, but already contains projects demonstrating audio techniques such as FM Synthesis, Granular Synthesis, Convolution, Effects Processing, and Pitch-Shifting, and more.
-      </p>
+                    $('#slider-arrow-left').on('click', function(e){
+                        e.preventDefault();
+                        swiperSlider.swipePrev();
+                    });
+
+                    $('#slider-arrow-right').on('click', function(e){
+                        e.preventDefault();
+                        swiperSlider.swipeNext();
+                    });
+
+                    $('#slide-number-current').html(swiperSlider.activeIndex + 1);
+                    $('#slide-number-total').html(swiperSlider.slides.length);
+                });
+            </script>
+
+        </section>
+
+<section id="content">
+
+    <div class="content-wrap">
+
+              <div class="promo promo-light promo-full bottommargin-lg header-stick notopborder">
+                    <div class="container clearfix">
+                        <h3>Build audio into your apps today!</h3>
+                        <span>Powerful audio synthesis, processing, and analysis, without the steep learning curve.  <br>
+                        We are here to help you get started through forum support, direct email, or even screensharing.</span>
+                        <a href="#" class="button button-green button-xlarge button-rounded">Download AudioKit</a>
+                    </div>
+                </div>
+
+        <div class="container clearfix">
+
+            <div class="col_one_third">
+                <a href="/features/#operations">
+                  <img class="homepage" src="/homepage/synthesizers-fx.png">
+                  <h3>100+ Synthesizers and FX</h3>
+                  <p>Physical Models, Spectral Effects, Granular Synthesis, Effects Processing, Filters, Reverbs, and more.</p>
+                </a>
+            </div>
+
+            <div class="col_one_third">
+                <a href="/features/#utilities">
+                  <img class="homepage" src="/homepage/sampler.png">
+                  <h3>Built-in Sampler</h3>
+                  <p>Record audio streams, including from the microphone, into tracks you can name, recall, and process on-the-fly.</p>
+                </a>
+            </div>
+
+            <div class="col_one_third col_last">
+            <a href="/features/#sequences"><img src="/homepage/sequencing.png">
+                    <h3>Powerful Sequencing</h3>
+                    <p>Sequences are not limited to the usual notes-on-a-score, but can contain blocks of any code that can be triggered at any time.</p>
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="col_one_third">
+                <a href="/features/#examples">
+                  <img class="homepage" src="/homepage/examples.png">
+                  <h3>Full-featured Examples</h3>
+                  <p>The list of examples is growing, but already contains projects demonstrating audio techniques such as FM Synthesis, Granular Synthesis, Convolution, Effects Processing, and Pitch-Shifting, and more.</p>
+                </a>
+            </div>
+
+            <div class="col_one_third">
+                <a href="/features/#well_named">
+                  <img class="homepage" src="/homepage/apple-style-code.png">
+                  <h3>Simple, Human-readable Code</h3>
+                  <p>Coding with audio with audio metaphors - <em>Conductors</em> control <em>Orchestras</em>, which contain <em>Instruments</em> that produce <em>Notes</em>. Clear methods with Apple-style naming conventions, Xcode completion, documentation and tool-tips.</p>
+                </a>
+            </div>
+
+            <div class="col_one_third col_last">
+            <a href="/features/#xcode-integration"><img src="/homepage/unified-audio-app.png">
+                    <h3>Write your audio-code along side your app logic</h3>
+                    <p>The same code that controls your data and user interface controls your sound in Objective-C or Swift.</p>
+            </div>
+
+
+            <div class="clear"></div>
+        </div>
     </div>
-    <div class="unit one-third">
-      <a href="/features/#well_named"><img class="homepage" src="/homepage/apple-style-code.png">
-      <h2>Simple, Human-readable Code</h2></a>
-      <p>
-        Coding with audio with audio metaphors - <em>Conductors</em> control <em>Orchestras</em>, which contain <em>Instruments</em> that produce <em>Notes</em>. Clear methods with Apple-style naming conventions, Xcode completion, documentation and tool-tips.
-      </p>
-    </div>
-    <div class="unit one-third">
-       <a href="/features/#xcode_integration"><img class="homepage" src="/homepage/unified-audio-app.png">
-      <h2>Write your audio-code along side your app logic</h2></a>
-      <p>
-        The same code that controls your data and user interface controls your sound in Objective-C or Swift.
-      </p>
-    </div>
-    <div class="clear"></div>
-  </div>
 </section>

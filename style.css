@@ -3064,7 +3064,7 @@ body.side-push-panel.side-panel-open:not(.device-xxs):not(.device-xs):not(.devic
 	letter-spacing: 1px;
 	color: #333;
 	font-size: 28px;
-	text-transform: uppercase;
+/*	text-transform: uppercase;*/
 }
 
 #page-title span {
