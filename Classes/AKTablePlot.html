@@ -1,13 +1,13 @@
 ---
 layout: docs
-title: AKTableGenerator
+title: AKTablePlot
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
         <div id="header">
           <div class="section-header">
-            <h1 class="title title-header">AKTableGenerator</h1>
+            <h1 class="title title-header">AKTablePlot</h1>
           </div>
         </div>
         <div id="container">
@@ -15,10 +15,10 @@ title: AKTableGenerator
           <div class="section section-specification"><table cellspacing="0"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value">NSObject</td>
+  <td class="specification-value">UIView</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
-  <td class="specification-value">AKTableGenerator.h<br />AKTableGenerator.m</td>
+  <td class="specification-value">AKTablePlot.h<br />AKTablePlot.m</td>
 </tr>
             </tbody></table></div>
           
@@ -28,7 +28,7 @@ title: AKTableGenerator
           <div class="section section-overview">
             <a title="Overview" name="overview"></a>
             <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>A base-class for all the table generators in AudioKit</p>
+            <p>Plots the values of the given table</p>
           </div>
           
           
@@ -46,15 +46,8 @@ title: AKTableGenerator
             <ul class="task-list">
                 <li>
   <span class="tooltip">
-    <code><a href="#//api/name/generationRoutineNumber">&ndash;&nbsp;generationRoutineNumber</a></code>
-    <span class="tooltip"><p>Generation Routine Number</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/parametersWithSize:">&ndash;&nbsp;parametersWithSize:</a></code>
-    <span class="tooltip"><p>Parameters for the generator</p></span>
+    <code><a href="#//api/name/initWithFrame:table:">&ndash;&nbsp;initWithFrame:table:</a></code>
+    <span class="tooltip"><p>Creates the <a href="#//api/name/table">table</a> plot</p></span>
   </span>
   
   
@@ -76,54 +69,18 @@ title: AKTableGenerator
             <h2 class="subtitle subtitle-methods">Instance Methods</h2>
             
             <div class="section-method">
-  <a name="//api/name/generationRoutineNumber" title="generationRoutineNumber"></a>
-  <h3 class="subsubtitle method-title">generationRoutineNumber</h3>
+  <a name="//api/name/initWithFrame:table:" title="initWithFrame:table:"></a>
+  <h3 class="subsubtitle method-title">initWithFrame:table:</h3>
 
   
   
   <div class="method-subsection brief-description">
-    <p>Generation Routine Number</p>
+    <p>Creates the <a href="#//api/name/table">table</a> plot</p>
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (int)generationRoutineNumber</code></div>
-
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  <div class="method-subsection declared-in-section">
-    <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKTableGenerator.h</code><br />
-  </div>
-  
-  
-</div>
-            
-            <div class="section-method">
-  <a name="//api/name/parametersWithSize:" title="parametersWithSize:"></a>
-  <h3 class="subsubtitle method-title">parametersWithSize:</h3>
-
-  
-  
-  <div class="method-subsection brief-description">
-    <p>Parameters for the generator</p>
-  </div>
-  
-    
-
-  <div class="method-subsection method-declaration"><code>- (NSArray *)parametersWithSize:(int)<em>size</em></code></div>
+  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFrame:(CGRect)<em>frame</em> table:(AKTable *)<em>table</em></code></div>
 
     
   
@@ -131,8 +88,13 @@ title: AKTableGenerator
     <h3 class="method-subtitle parameter-title">Parameters</h3>
     
     <dl class="argument-def parameter-def">
-      <dt><em>size</em></dt>
-      <dd><p>The final size of the table, useful for scaling</p></dd>
+      <dt><em>frame</em></dt>
+      <dd><p>Bounding frame for the plot</p></dd>
+    </dl>
+    
+    <dl class="argument-def parameter-def">
+      <dt><em>table</em></dt>
+      <dd><p>Table to plot</p></dd>
     </dl>
     
   </div>
@@ -151,7 +113,7 @@ title: AKTableGenerator
   
   <div class="method-subsection declared-in-section">
     <h4 class="method-subtitle">Declared In</h4>
-    <code class="declared-in-ref">AKTableGenerator.h</code><br />
+    <code class="declared-in-ref">AKTablePlot.h</code><br />
   </div>
   
   

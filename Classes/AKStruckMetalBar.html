@@ -49,6 +49,27 @@ More information regarding scanned synthesis can be found at <a href="http://daf
             <ul class="task-list">
                 <li>
   <span class="tooltip">
+    <code><a href="#//api/name/boundaryConditionClamped">+&nbsp;boundaryConditionClamped</a></code>
+    <span class="tooltip"><p>Clamped boundary condition</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/boundaryConditionPivoting">+&nbsp;boundaryConditionPivoting</a></code>
+    <span class="tooltip"><p>Pivoting boundary condition</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
+    <code><a href="#//api/name/boundaryConditionFree">+&nbsp;boundaryConditionFree</a></code>
+    <span class="tooltip"><p>Free boundary condition (only to be used when other side is clamped)</p></span>
+  </span>
+  
+  
+</li><li>
+  <span class="tooltip">
     <code><a href="#//api/name/initWithDecayTime:dimensionlessStiffness:highFrequencyLoss:strikePosition:strikeVelocity:strikeWidth:leftBoundaryCondition:rightBoundaryCondition:scanSpeed:">&ndash;&nbsp;initWithDecayTime:dimensionlessStiffness:highFrequencyLoss:strikePosition:strikeVelocity:strikeWidth:leftBoundaryCondition:rightBoundaryCondition:scanSpeed:</a></code>
     <span class="tooltip"><p>Instantiates the struck metal bar with all values</p></span>
   </span>
@@ -155,7 +176,7 @@ More information regarding scanned synthesis can be found at <a href="http://daf
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/leftBoundaryCondition">&nbsp;&nbsp;leftBoundaryCondition</a></code>
-    <span class="tooltip"><p>Boundary condition at left end of bar. [Default Value: [AKStruckMetalBar boundaryConditionClamped]]</p></span>
+    <span class="tooltip"><p>Boundary condition at left end of bar. [Default Value: <a href="#//api/name/boundaryConditionClamped">[AKStruckMetalBar boundaryConditionClamped]</a>]</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
@@ -169,7 +190,7 @@ More information regarding scanned synthesis can be found at <a href="http://daf
 </li><li>
   <span class="tooltip">
     <code><a href="#//api/name/rightBoundaryCondition">&nbsp;&nbsp;rightBoundaryCondition</a></code>
-    <span class="tooltip"><p>Boundary condition at right end of bar. [Default Value: [AKStruckMetalBar boundaryConditionClamped]]</p></span>
+    <span class="tooltip"><p>Boundary condition at right end of bar. [Default Value: <a href="#//api/name/boundaryConditionClamped">[AKStruckMetalBar boundaryConditionClamped]</a>]</p></span>
   </span>
   <span class="task-item-suffix">property</span>
   
@@ -322,7 +343,7 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
   
   <div class="method-subsection brief-description">
-    <p>Boundary condition at left end of bar. [Default Value: [AKStruckMetalBar boundaryConditionClamped]]</p>
+    <p>Boundary condition at left end of bar. [Default Value: <a href="#//api/name/boundaryConditionClamped">[AKStruckMetalBar boundaryConditionClamped]</a>]</p>
   </div>
   
     
@@ -358,7 +379,7 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
   
   <div class="method-subsection brief-description">
-    <p>Boundary condition at right end of bar. [Default Value: [AKStruckMetalBar boundaryConditionClamped]]</p>
+    <p>Boundary condition at right end of bar. [Default Value: <a href="#//api/name/boundaryConditionClamped">[AKStruckMetalBar boundaryConditionClamped]</a>]</p>
   </div>
   
     
@@ -540,6 +561,114 @@ More information regarding scanned synthesis can be found at <a href="http://daf
             <h2 class="subtitle subtitle-methods">Class Methods</h2>
             
             <div class="section-method">
+  <a name="//api/name/boundaryConditionClamped" title="boundaryConditionClamped"></a>
+  <h3 class="subsubtitle method-title">boundaryConditionClamped</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Clamped boundary condition</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)boundaryConditionClamped</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKStruckMetalBar.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/boundaryConditionFree" title="boundaryConditionFree"></a>
+  <h3 class="subsubtitle method-title">boundaryConditionFree</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Free boundary condition (only to be used when other side is clamped)</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)boundaryConditionFree</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKStruckMetalBar.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/boundaryConditionPivoting" title="boundaryConditionPivoting"></a>
+  <h3 class="subsubtitle method-title">boundaryConditionPivoting</h3>
+
+  
+  
+  <div class="method-subsection brief-description">
+    <p>Pivoting boundary condition</p>
+  </div>
+  
+    
+
+  <div class="method-subsection method-declaration"><code>+ (AKConstant *)boundaryConditionPivoting</code></div>
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">AKStruckMetalBar.h</code><br />
+  </div>
+  
+  
+</div>
+            
+            <div class="section-method">
   <a name="//api/name/strike" title="strike"></a>
   <h3 class="subsubtitle method-title">strike</h3>
 
@@ -670,12 +799,12 @@ More information regarding scanned synthesis can be found at <a href="http://daf
     
     <dl class="argument-def parameter-def">
       <dt><em>leftBoundaryCondition</em></dt>
-      <dd><p>Boundary condition at left end of bar. [Default Value: [AKStruckMetalBar boundaryConditionClamped]]</p></dd>
+      <dd><p>Boundary condition at left end of bar. [Default Value: <a href="#//api/name/boundaryConditionClamped">[AKStruckMetalBar boundaryConditionClamped]</a>]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
       <dt><em>rightBoundaryCondition</em></dt>
-      <dd><p>Boundary condition at right end of bar. [Default Value: [AKStruckMetalBar boundaryConditionClamped]]</p></dd>
+      <dd><p>Boundary condition at right end of bar. [Default Value: <a href="#//api/name/boundaryConditionClamped">[AKStruckMetalBar boundaryConditionClamped]</a>]</p></dd>
     </dl>
     
     <dl class="argument-def parameter-def">
@@ -910,7 +1039,7 @@ More information regarding scanned synthesis can be found at <a href="http://daf
     
     <dl class="argument-def parameter-def">
       <dt><em>rightBoundaryCondition</em></dt>
-      <dd><p>Boundary condition at right end of bar. [Default Value: [AKStruckMetalBar boundaryConditionClamped]]</p></dd>
+      <dd><p>Boundary condition at right end of bar. [Default Value: <a href="#//api/name/boundaryConditionClamped">[AKStruckMetalBar boundaryConditionClamped]</a>]</p></dd>
     </dl>
     
   </div>
