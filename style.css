@@ -86,7 +86,7 @@ h6 {
 	color: #444;
 	font-weight: 600;
 	line-height: 1.5;
-	margin: 0 0 30px 0;
+	margin: 30px 0 5px 0;
 	font-family: 'Raleway', sans-serif;
 }
 
@@ -127,7 +127,7 @@ blockquote,
 address,
 table,
 fieldset,
-form { margin-bottom: 20px; }
+form { margin-bottom: 10px; }
 
 small { font-family: 'Lato', sans-serif; }
 
