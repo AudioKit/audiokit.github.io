@@ -5,9 +5,11 @@ permalink: /gallery/
 layout: section_index
 ---
 
+<h3>Videos</h3>
+
 <!-- Portfolio Items
 ============================================= -->
-<div id="portfolio" class="portfolio-2 clearfix">
+<div id="portfolio1" class="portfolio-4 clearfix">
 
     {% for movie in site.gallery %}
     <article class="portfolio-item pf-graphics pf-uielements">
@@ -28,6 +30,10 @@ layout: section_index
 
 
 </div><!-- #portfolio end -->
+
+<h3>Example Projects</h3>
+
+{% include examples.html %}
 
 <!-- Portfolio Script
 ============================================= -->

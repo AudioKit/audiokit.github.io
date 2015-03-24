@@ -1,15 +1,18 @@
 <ul>
   <li class="{% if page.url contains '/features/' %}current{% endif %}">
-    <a href="/features/"><div>Features</div></a>
+    <a href="/features/"><div>Features</div><span>A lot to <i class="icon-heart3"></i></span></a>
+  </li>
+  <li class="{% if page.url contains '/playgrounds/' %}current{% endif %} mega-menu">
+    <a href="/playgrounds/"><div>Playgrounds</div><span><i class="icon-bolt2"></i> Live Coding!</span></a>
   </li>
   <li class="{% if page.url contains '/gallery/' %}current{% endif %}">
-    <a href="/gallery/"><div>Gallery</div></a>
+    <a href="/gallery/"><div>Gallery</div><span>Examples & <i class="icon-film"></i></span></a>
   </li>
-  <li class="{% if page.url contains '/examples/' %}current{% endif %}">
-    <a href="/examples/"><div>Examples</div></a>
-  </li>
-  <li class="{% if page.url contains '/playgrounds/' %}current{% endif %}">
-    <a href="/playgrounds/"><div>Playgrounds</div></a>
+<!--   <li class="{% if page.url contains '/examples/' %}current{% endif %}">
+    <a href="/examples/"><div>Examples</div><span>Code <i class="icon-line-command"></i>C</a>
+  </li> -->
+  <li class="{% if page.permalink == '/blog/' %}current{% endif %}">
+    <a href="/blog/"><div>Blog</div><span><i class="icon-news"></i>&<i class="icon-twitter2"></i></span></a>
   </li>
 <!--   <li class="{% if page.section == 'docs' %}current{% endif %}">
     <a href="/docs/"><div>Docs</div></a>
@@ -27,7 +30,7 @@
   </li> -->
 
   <li class="{% if page.section == 'docs' %}current{% endif %} mega-menu">
-    <a href="/docs/"><div>Docs</div></a>
+    <a href="/docs/"><div>Docs</div><span><i class="icon-code"></i></span></a>
     <div class="mega-menu-content style-2 col-4 clearfix">
     <ul>
       <li class="mega-menu-title"><a href="/tutorials/"><div>Tutorials</div></a>
@@ -46,13 +49,13 @@
     </ul>
 
     <ul>
-      <li class="mega-menu-title"><a href="#"><div>Sample Projects</div></a>
+      <li class="mega-menu-title"><a href="/examples/"><div>Sample Projects</div></a>
         <ul>
           <li><a href="/examples/HelloWorld/"><div>Hello World</div></a></li>
           <li><a href="/examples/AudioKitDemo/"><div>AudioKit Demo</div></a></li>
         </ul>
       </li>
-      <li class="mega-menu-title"><a href="#"><div>Swift Examples</div></a>
+      <li class="mega-menu-title"><a href="/examples/"><div>Swift Examples</div></a>
         <ul>
           <li><a href="/examples/swift/Convolution/"         ><div>Convolution</div></a></li>
           <li><a href="/examples/swift/FMOscillator/"        ><div>FM Oscillator</div></a></li>
@@ -63,7 +66,7 @@
       </li>
     </ul>
     <ul>
-      <li class="mega-menu-title"><a href="#"><div>Obj-C Examples</div></a>
+      <li class="mega-menu-title"><a href="/examples/"><div>Obj-C Examples</div></a>
         <ul>
           <li><a href="/examples/ContinuousControl/"   ><div>Continuous Control</div></a></li>
           <li><a href="/examples/Convolution/"         ><div>Convolution</div></a></li>
@@ -92,10 +95,7 @@
       </li>
     </ul>
   </li>
-  <li class="{% if page.permalink == '/blog/' %}current{% endif %}">
-    <a href="/blog/"><div>Blog</div></a>
-  </li>
   <li class="{% if page.url contains '/downloads/' %}current{% endif %}">
-    <a href="/downloads/"><div>Downloads</div></a>
+    <a href="/downloads/"><div>Downloads</div><span><i class="icon-code-fork"></i>us on <i class="icon-github-circled"></i></span></a>
   </li>
 </ul>
