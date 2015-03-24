@@ -3,6 +3,8 @@ layout: default
 section: blog
 ---
 
+<!-- Page Title
+============================================= -->
 <section id="page-title">
 
     <div class="container clearfix">
@@ -15,7 +17,6 @@ section: blog
         </h1>
         <ol class="breadcrumb">
             <li><a href="#">Home</a></li>
-             <li><a href="/blog/">Blog</a></li>
             <li class="active">
               {% if page.header != '' %}
                 {{ page.header }}
@@ -32,10 +33,22 @@ section: blog
     <div class="content-wrap">
 
         <div class="container clearfix">
-            {{ content }}
+            <!-- Post Content
+            ============================================= -->
+            <div class="postcontent nobottommargin clearfix">
+
+                <!-- Posts
+                ============================================= -->
+                <div id="posts">
+                  {{ content }}
+                </div>
+            </div>
+            {% include sidebars/blog.html %}
         </div>
 
     </div>
 
 </section><!-- #content end -->
+
+
 
