@@ -1,25 +1,16 @@
 {% if page.prev_section != null || if page.next_section != null %}
 
-<div class="section-nav">
-  <div class="left align-right">
     {% if page.prev_section != null %}
-      <a href="{{ page.prev_section }}" class="prev">
+      <a href="{{ page.prev_section }}" class="button button-3d button-xlarge button-rounded button-red">
         Back
       </a>
     {% else %}
-      <span class="prev disabled">Back</span>
     {% endif %}
-  </div>
-  <div class="right align-left">
     {% if page.next_section != null %}
-      <a href="{{ page.next_section }}" class="next">
+      <a href="{{ page.next_section }}" class="button button-3d button-xlarge button-rounded button-green">
         Next
       </a>
     {% else %}
-      <span class="next disabled">Next</span>
     {% endif %}
-  </div>
-  <div class="clear"></div>
-</div>
 
 {% endif %}
