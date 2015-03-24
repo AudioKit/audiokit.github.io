@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKJitter
 title: AKJitter
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKJitter</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKControl.html">AKControl</a> : <a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,108 +16,24 @@ title: AKJitter
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKJitter.h<br />AKJitter.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Generates a segmented line whose segments are randomly generated.</p>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Generates a segmented line whose segments are randomly generated.
 
-<p>This operation generates a segmented line whose segments are randomly generated inside the interval <a href="#//api/name/amplitude">amplitude</a> to <a href="#//api/name/amplitude">amplitude</a>. Duration of each segment is a random value generated according to minimum and maximum frequency values.
-This can be used to make more natural and “analog-sounding” some static, dull sound. For best results, it is suggested to keep its <a href="#//api/name/amplitude">amplitude</a> moderate.</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithAmplitude:minimumFrequency:maximumFrequency:">&ndash;&nbsp;initWithAmplitude:minimumFrequency:maximumFrequency:</a></code>
-    <span class="tooltip"><p>Instantiates the <a href="#//api/name/jitter">jitter</a> with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
-    <span class="tooltip"><p>Instantiates the <a href="#//api/name/jitter">jitter</a> with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/jitter">+&nbsp;jitter</a></code>
-    <span class="tooltip"><p>Instantiates the jitter with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/amplitude">&nbsp;&nbsp;amplitude</a></code>
-    <span class="tooltip"><p>Amplitude of <a href="#//api/name/jitter">jitter</a> deviation [Default Value: 1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalAmplitude:">&ndash;&nbsp;setOptionalAmplitude:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/minimumFrequency">&nbsp;&nbsp;minimumFrequency</a></code>
-    <span class="tooltip"><p>Minimum speed of random frequency variations (expressed in Hz) [Default Value: 0]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalMinimumFrequency:">&ndash;&nbsp;setOptionalMinimumFrequency:</a></code>
-    <span class="tooltip"><p>Set an optional minimum frequency</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/maximumFrequency">&nbsp;&nbsp;maximumFrequency</a></code>
-    <span class="tooltip"><p>Maximum speed of random frequency variations (expressed in Hz) [Default Value: 60]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalMaximumFrequency:">&ndash;&nbsp;setOptionalMaximumFrequency:</a></code>
-    <span class="tooltip"><p>Set an optional maximum frequency</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
+This operation generates a segmented line whose segments are randomly generated inside the interval amplitude to amplitude. Duration of each segment is a random value generated according to minimum and maximum frequency values.
+This can be used to make more natural and “analog-sounding” some static, dull sound. For best results, it is suggested to keep its amplitude moderate.</p>
           
           
 
           
           
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/amplitude" title="amplitude"></a>
@@ -130,12 +42,12 @@ This can be used to make more natural and “analog-sounding” some static, dul
   
   
   <div class="method-subsection brief-description">
-    <p>Amplitude of <a href="#//api/name/jitter">jitter</a> deviation [Default Value: 1]</p>
+    Amplitude of jitter deviation [Default Value: 1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *amplitude</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *amplitude{% endhighlight %}
 
     
   
@@ -166,12 +78,12 @@ This can be used to make more natural and “analog-sounding” some static, dul
   
   
   <div class="method-subsection brief-description">
-    <p>Maximum speed of random frequency variations (expressed in Hz) [Default Value: 60]</p>
+    Maximum speed of random frequency variations (expressed in Hz) [Default Value: 60]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *maximumFrequency</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *maximumFrequency{% endhighlight %}
 
     
   
@@ -202,12 +114,12 @@ This can be used to make more natural and “analog-sounding” some static, dul
   
   
   <div class="method-subsection brief-description">
-    <p>Minimum speed of random frequency variations (expressed in Hz) [Default Value: 0]</p>
+    Minimum speed of random frequency variations (expressed in Hz) [Default Value: 0]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *minimumFrequency</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *minimumFrequency{% endhighlight %}
 
     
   
@@ -231,13 +143,11 @@ This can be used to make more natural and “analog-sounding” some static, dul
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/jitter" title="jitter"></a>
@@ -246,12 +156,12 @@ This can be used to make more natural and “analog-sounding” some static, dul
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the jitter with default values</p>
+    Instantiates the jitter with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)jitter</code></div>
+ {% highlight objective-c %}+ (instancetype)jitter{% endhighlight %}
 
     
   
@@ -275,13 +185,11 @@ This can be used to make more natural and “analog-sounding” some static, dul
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/init" title="init"></a>
@@ -290,12 +198,12 @@ This can be used to make more natural and “analog-sounding” some static, dul
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the <a href="#//api/name/jitter">jitter</a> with default values</p>
+    Instantiates the jitter with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
+ {% highlight objective-c %}- (instancetype)init{% endhighlight %}
 
     
   
@@ -326,34 +234,27 @@ This can be used to make more natural and “analog-sounding” some static, dul
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the <a href="#//api/name/jitter">jitter</a> with all values</p>
+    Instantiates the jitter with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAmplitude:(AKParameter *)<em>amplitude</em> minimumFrequency:(AKParameter *)<em>minimumFrequency</em> maximumFrequency:(AKParameter *)<em>maximumFrequency</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithAmplitude:(AKParameter *)amplitude minimumFrequency:(AKParameter *)minimumFrequency maximumFrequency:(AKParameter *)maximumFrequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>Amplitude of <a href="#//api/name/jitter">jitter</a> deviation Updated at Control-rate. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude of jitter deviation Updated at Control-rate. [Default Value: 1]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>minimumFrequency</em></dt>
-      <dd><p>Minimum speed of random frequency variations (expressed in Hz) Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>minimumFrequency</strong>:
+      Minimum speed of random frequency variations (expressed in Hz) Updated at Control-rate. [Default Value: 0]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>maximumFrequency</em></dt>
-      <dd><p>Maximum speed of random frequency variations (expressed in Hz) Updated at Control-rate. [Default Value: 60]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>maximumFrequency</strong>:
+      Maximum speed of random frequency variations (expressed in Hz) Updated at Control-rate. [Default Value: 60]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -382,24 +283,21 @@ This can be used to make more natural and “analog-sounding” some static, dul
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p>
+    Set an optional amplitude
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalAmplitude:(AKParameter *)<em>amplitude</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalAmplitude:(AKParameter *)amplitude{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>Amplitude of <a href="#//api/name/jitter">jitter</a> deviation Updated at Control-rate. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude of jitter deviation Updated at Control-rate. [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -428,24 +326,21 @@ This can be used to make more natural and “analog-sounding” some static, dul
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional maximum frequency</p>
+    Set an optional maximum frequency
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalMaximumFrequency:(AKParameter *)<em>maximumFrequency</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalMaximumFrequency:(AKParameter *)maximumFrequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>maximumFrequency</em></dt>
-      <dd><p>Maximum speed of random frequency variations (expressed in Hz) Updated at Control-rate. [Default Value: 60]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>maximumFrequency</strong>:
+      Maximum speed of random frequency variations (expressed in Hz) Updated at Control-rate. [Default Value: 60]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -474,24 +369,21 @@ This can be used to make more natural and “analog-sounding” some static, dul
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional minimum frequency</p>
+    Set an optional minimum frequency
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalMinimumFrequency:(AKParameter *)<em>minimumFrequency</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalMinimumFrequency:(AKParameter *)minimumFrequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>minimumFrequency</em></dt>
-      <dd><p>Minimum speed of random frequency variations (expressed in Hz) Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>minimumFrequency</strong>:
+      Minimum speed of random frequency variations (expressed in Hz) Updated at Control-rate. [Default Value: 0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -513,7 +405,6 @@ This can be used to make more natural and “analog-sounding” some static, dul
   
 </div>
             
-          </div>
           
           
         </div>

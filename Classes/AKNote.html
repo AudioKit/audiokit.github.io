@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKNote
 title: AKNote
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKNote</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value">NSObject</td>
@@ -20,143 +16,24 @@ title: AKNote
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKNote.h<br />AKNote.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>AKNote is a representation of a sound object that is created by an
-<a href="../Classes/AKInstrument.html">AKInstrument</a> and has at least one of the two following qualities:
-a) The note has a <a href="#//api/name/duration">duration</a>, it starts and some finite time later, it ends.
-b) The note is created concurrently with other notes created by the <a href="#//api/name/instrument">instrument</a></p>
-          </div>
+AKInstrument and has at least one of the two following qualities:
+a) The note has a duration, it starts and some finite time later, it ends.
+b) The note is created concurrently with other notes created by the instrument</p>
           
           
 
           
           
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/resetID">+&nbsp;resetID</a></code>
-    <span class="tooltip"><p>Allows the unique identifying integer to be reset so that the numbers don&rsquo;t increment indefinitely.</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithInstrument:forDuration:">&ndash;&nbsp;initWithInstrument:forDuration:</a></code>
-    <span class="tooltip"><p>Creates the note associated with the given <a href="#//api/name/instrument">instrument</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithInstrument:">&ndash;&nbsp;initWithInstrument:</a></code>
-    <span class="tooltip"><p>Creates the note associated with the given <a href="#//api/name/instrument">instrument</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/instrument">&nbsp;&nbsp;instrument</a></code>
-    <span class="tooltip"><p>Instrument this note belongs to</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/duration">&nbsp;&nbsp;duration</a></code>
-    <span class="tooltip"><p>Duration of this note (for finite notes with length defined)</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/properties">&nbsp;&nbsp;properties</a></code>
-    <span class="tooltip"><p>Set of properties of the note</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/addProperty:">&ndash;&nbsp;addProperty:</a></code>
-    <span class="tooltip"><p>Adds the property to the list of available <a href="#//api/name/properties">properties</a> of the note</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/createPropertyWithValue:minimum:maximum:">&ndash;&nbsp;createPropertyWithValue:minimum:maximum:</a></code>
-    <span class="tooltip"><p>Helper function to create a property with the usually values and add it to the note</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/updateProperties">&ndash;&nbsp;updateProperties</a></code>
-    <span class="tooltip"><p>Refine playback of the note.</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/updatePropertiesAfterDelay:">&ndash;&nbsp;updatePropertiesAfterDelay:</a></code>
-    <span class="tooltip"><p>Refine playback of the note at some point in the future.</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/play">&ndash;&nbsp;play</a></code>
-    <span class="tooltip"><p>Begin playback of the note.</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/playAfterDelay:">&ndash;&nbsp;playAfterDelay:</a></code>
-    <span class="tooltip"><p>Begin playback of the note after a delay.</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/stop">&ndash;&nbsp;stop</a></code>
-    <span class="tooltip"><p>Stop playback of the note.</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/stopAfterDelay:">&ndash;&nbsp;stopAfterDelay:</a></code>
-    <span class="tooltip"><p>Stop playback of the note after a delay.</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/duration" title="duration"></a>
@@ -165,12 +42,12 @@ b) The note is created concurrently with other notes created by the <a href="#//
   
   
   <div class="method-subsection brief-description">
-    <p>Duration of this note (for finite notes with length defined)</p>
+    Duration of this note (for finite notes with length defined)
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKNoteProperty *duration</code></div>
+ {% highlight objective-c %}@property AKNoteProperty *duration{% endhighlight %}
 
     
   
@@ -201,12 +78,12 @@ b) The note is created concurrently with other notes created by the <a href="#//
   
   
   <div class="method-subsection brief-description">
-    <p>Instrument this note belongs to</p>
+    Instrument this note belongs to
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKInstrument *instrument</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKInstrument *instrument{% endhighlight %}
 
     
   
@@ -237,12 +114,12 @@ b) The note is created concurrently with other notes created by the <a href="#//
   
   
   <div class="method-subsection brief-description">
-    <p>Set of properties of the note</p>
+    Set of properties of the note
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property NSMutableDictionary *properties</code></div>
+ {% highlight objective-c %}@property NSMutableDictionary *properties{% endhighlight %}
 
     
   
@@ -266,13 +143,11 @@ b) The note is created concurrently with other notes created by the <a href="#//
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/resetID" title="resetID"></a>
@@ -281,12 +156,12 @@ b) The note is created concurrently with other notes created by the <a href="#//
   
   
   <div class="method-subsection brief-description">
-    <p>Allows the unique identifying integer to be reset so that the numbers don&rsquo;t increment indefinitely.</p>
+    Allows the unique identifying integer to be reset so that the numbers don't increment indefinitely.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (void)resetID</code></div>
+ {% highlight objective-c %}+ (void)resetID{% endhighlight %}
 
     
   
@@ -310,13 +185,11 @@ b) The note is created concurrently with other notes created by the <a href="#//
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/addProperty:" title="addProperty:"></a>
@@ -325,24 +198,21 @@ b) The note is created concurrently with other notes created by the <a href="#//
   
   
   <div class="method-subsection brief-description">
-    <p>Adds the property to the list of available <a href="#//api/name/properties">properties</a> of the note</p>
+    Adds the property to the list of available properties of the note
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)addProperty:(AKNoteProperty *)<em>newProperty</em></code></div>
+ {% highlight objective-c %}- (void)addProperty:(AKNoteProperty *)newProperty{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>newProperty</em></dt>
-      <dd><p>New property to add to the note&rsquo;s set of <a href="#//api/name/properties">properties</a></p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>newProperty</strong>:
+      New property to add to the note's set of properties</li>
     
-  </div>
+    </ul>
   
 
   
@@ -371,34 +241,27 @@ b) The note is created concurrently with other notes created by the <a href="#//
   
   
   <div class="method-subsection brief-description">
-    <p>Helper function to create a property with the usually values and add it to the note</p>
+    Helper function to create a property with the usually values and add it to the note
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (AKNoteProperty *)createPropertyWithValue:(float)<em>value</em> minimum:(float)<em>minimum</em> maximum:(float)<em>maximum</em></code></div>
+ {% highlight objective-c %}- (AKNoteProperty *)createPropertyWithValue:(float)value minimum:(float)minimum maximum:(float)maximum{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>value</em></dt>
-      <dd><p>Current value of the note property</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>value</strong>:
+      Current value of the note property</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>minimum</em></dt>
-      <dd><p>Minimum value</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>minimum</strong>:
+      Minimum value</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>maximum</em></dt>
-      <dd><p>Maximum value</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>maximum</strong>:
+      Maximum value</li>
     
-  </div>
+    </ul>
   
 
   
@@ -427,24 +290,21 @@ b) The note is created concurrently with other notes created by the <a href="#//
   
   
   <div class="method-subsection brief-description">
-    <p>Creates the note associated with the given <a href="#//api/name/instrument">instrument</a></p>
+    Creates the note associated with the given instrument
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInstrument:(AKInstrument *)<em>anInstrument</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithInstrument:(AKInstrument *)anInstrument{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>anInstrument</em></dt>
-      <dd><p>This note&rsquo;s <a href="#//api/name/instrument">instrument</a>.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>anInstrument</strong>:
+      This note's instrument.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -473,29 +333,24 @@ b) The note is created concurrently with other notes created by the <a href="#//
   
   
   <div class="method-subsection brief-description">
-    <p>Creates the note associated with the given <a href="#//api/name/instrument">instrument</a></p>
+    Creates the note associated with the given instrument
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInstrument:(AKInstrument *)<em>anInstrument</em> forDuration:(float)<em>noteDuration</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithInstrument:(AKInstrument *)anInstrument forDuration:(float)noteDuration{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>anInstrument</em></dt>
-      <dd><p>This note&rsquo;s <a href="#//api/name/instrument">instrument</a>.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>anInstrument</strong>:
+      This note's instrument.</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>noteDuration</em></dt>
-      <dd><p>Length of time to <a href="#//api/name/play">play</a> the note in seconds</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>noteDuration</strong>:
+      Length of time to play the note in seconds</li>
     
-  </div>
+    </ul>
   
 
   
@@ -524,12 +379,12 @@ b) The note is created concurrently with other notes created by the <a href="#//
   
   
   <div class="method-subsection brief-description">
-    <p>Begin playback of the note.</p>
+    Begin playback of the note.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)play</code></div>
+ {% highlight objective-c %}- (void)play{% endhighlight %}
 
     
   
@@ -560,24 +415,21 @@ b) The note is created concurrently with other notes created by the <a href="#//
   
   
   <div class="method-subsection brief-description">
-    <p>Begin playback of the note after a delay.</p>
+    Begin playback of the note after a delay.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)playAfterDelay:(float)<em>delay</em></code></div>
+ {% highlight objective-c %}- (void)playAfterDelay:(float)delay{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>delay</em></dt>
-      <dd><p>Time to wait before beginning note playback.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>delay</strong>:
+      Time to wait before beginning note playback.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -606,12 +458,12 @@ b) The note is created concurrently with other notes created by the <a href="#//
   
   
   <div class="method-subsection brief-description">
-    <p>Stop playback of the note.</p>
+    Stop playback of the note.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)stop</code></div>
+ {% highlight objective-c %}- (void)stop{% endhighlight %}
 
     
   
@@ -642,24 +494,21 @@ b) The note is created concurrently with other notes created by the <a href="#//
   
   
   <div class="method-subsection brief-description">
-    <p>Stop playback of the note after a delay.</p>
+    Stop playback of the note after a delay.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)stopAfterDelay:(float)<em>delay</em></code></div>
+ {% highlight objective-c %}- (void)stopAfterDelay:(float)delay{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>delay</em></dt>
-      <dd><p>Time to wait before stopping note playback.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>delay</strong>:
+      Time to wait before stopping note playback.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -688,12 +537,12 @@ b) The note is created concurrently with other notes created by the <a href="#//
   
   
   <div class="method-subsection brief-description">
-    <p>Refine playback of the note.</p>
+    Refine playback of the note.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)updateProperties</code></div>
+ {% highlight objective-c %}- (void)updateProperties{% endhighlight %}
 
     
   
@@ -724,24 +573,21 @@ b) The note is created concurrently with other notes created by the <a href="#//
   
   
   <div class="method-subsection brief-description">
-    <p>Refine playback of the note at some point in the future.</p>
+    Refine playback of the note at some point in the future.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)updatePropertiesAfterDelay:(float)<em>time</em></code></div>
+ {% highlight objective-c %}- (void)updatePropertiesAfterDelay:(float)time{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>time</em></dt>
-      <dd><p>Amount of time in seconds to wait before setting <a href="#//api/name/properties">properties</a></p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>time</strong>:
+      Amount of time in seconds to wait before setting properties</li>
     
-  </div>
+    </ul>
   
 
   
@@ -763,7 +609,6 @@ b) The note is created concurrently with other notes created by the <a href="#//
   
 </div>
             
-          </div>
           
           
         </div>

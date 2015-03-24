@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKPhrase
 title: AKPhrase
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKPhrase</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value">NSObject</td>
@@ -20,112 +16,21 @@ title: AKPhrase
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKPhrase.h<br />AKPhrase.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>A collection of notes and start times that can be played by an instrument.</p>
-          </div>
           
           
 
           
           
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/count">&nbsp;&nbsp;count</a></code>
-    <span class="tooltip"><p>Number of notes in the <a href="#//api/name/phrase">phrase</a></p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/duration">&nbsp;&nbsp;duration</a></code>
-    <span class="tooltip"><p>Length of the <a href="#//api/name/phrase">phrase</a> in seconds</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/phrase">+&nbsp;phrase</a></code>
-    <span class="tooltip"><p>Class-level initializer for empty phrase</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/reset">&ndash;&nbsp;reset</a></code>
-    <span class="tooltip"><p>Remove all notes</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/addNote:">&ndash;&nbsp;addNote:</a></code>
-    <span class="tooltip"><p>Add a note to the beginning of the <a href="#//api/name/phrase">phrase</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/addNote:atTime:">&ndash;&nbsp;addNote:atTime:</a></code>
-    <span class="tooltip"><p>Add a note to the <a href="#//api/name/phrase">phrase</a> at a specific time</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/startNote:atTime:">&ndash;&nbsp;startNote:atTime:</a></code>
-    <span class="tooltip"><p>Add a note to the <a href="#//api/name/phrase">phrase</a> at a specific time</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/stopNote:atTime:">&ndash;&nbsp;stopNote:atTime:</a></code>
-    <span class="tooltip"><p>Stop a note in the <a href="#//api/name/phrase">phrase</a> at a specific time</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/updateNoteProperty:withValue:atTime:">&ndash;&nbsp;updateNoteProperty:withValue:atTime:</a></code>
-    <span class="tooltip"><p>Update a note property with a specific value at a specific time</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/playUsingInstrument:">&ndash;&nbsp;playUsingInstrument:</a></code>
-    <span class="tooltip"><p>Play the <a href="#//api/name/phrase">phrase</a></p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/count" title="count"></a>
@@ -134,12 +39,12 @@ title: AKPhrase
   
   
   <div class="method-subsection brief-description">
-    <p>Number of notes in the <a href="#//api/name/phrase">phrase</a></p>
+    Number of notes in the phrase
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (readonly) int count</code></div>
+ {% highlight objective-c %}@property (readonly) int count{% endhighlight %}
 
     
   
@@ -170,12 +75,12 @@ title: AKPhrase
   
   
   <div class="method-subsection brief-description">
-    <p>Length of the <a href="#//api/name/phrase">phrase</a> in seconds</p>
+    Length of the phrase in seconds
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (readonly) float duration</code></div>
+ {% highlight objective-c %}@property (readonly) float duration{% endhighlight %}
 
     
   
@@ -199,13 +104,11 @@ title: AKPhrase
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/phrase" title="phrase"></a>
@@ -214,12 +117,12 @@ title: AKPhrase
   
   
   <div class="method-subsection brief-description">
-    <p>Class-level initializer for empty phrase</p>
+    Class-level initializer for empty phrase
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (AKPhrase *)phrase</code></div>
+ {% highlight objective-c %}+ (AKPhrase *)phrase{% endhighlight %}
 
     
   
@@ -243,13 +146,11 @@ title: AKPhrase
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/addNote:" title="addNote:"></a>
@@ -258,24 +159,21 @@ title: AKPhrase
   
   
   <div class="method-subsection brief-description">
-    <p>Add a note to the beginning of the <a href="#//api/name/phrase">phrase</a></p>
+    Add a note to the beginning of the phrase
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)addNote:(AKNote *)<em>note</em></code></div>
+ {% highlight objective-c %}- (void)addNote:(AKNote *)note{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>note</em></dt>
-      <dd><p>Note to be added at time zero</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>note</strong>:
+      Note to be added at time zero</li>
     
-  </div>
+    </ul>
   
 
   
@@ -304,29 +202,24 @@ title: AKPhrase
   
   
   <div class="method-subsection brief-description">
-    <p>Add a note to the <a href="#//api/name/phrase">phrase</a> at a specific time</p>
+    Add a note to the phrase at a specific time
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)addNote:(AKNote *)<em>note</em> atTime:(float)<em>time</em></code></div>
+ {% highlight objective-c %}- (void)addNote:(AKNote *)note atTime:(float)time{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>note</em></dt>
-      <dd><p>Note to be added</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>note</strong>:
+      Note to be added</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>time</em></dt>
-      <dd><p>Time the note will be played</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>time</strong>:
+      Time the note will be played</li>
     
-  </div>
+    </ul>
   
 
   
@@ -355,24 +248,21 @@ title: AKPhrase
   
   
   <div class="method-subsection brief-description">
-    <p>Play the <a href="#//api/name/phrase">phrase</a></p>
+    Play the phrase
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)playUsingInstrument:(AKInstrument *)<em>instrument</em></code></div>
+ {% highlight objective-c %}- (void)playUsingInstrument:(AKInstrument *)instrument{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>instrument</em></dt>
-      <dd><p>Instrument that will play the notes in the <a href="#//api/name/phrase">phrase</a></p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>instrument</strong>:
+      Instrument that will play the notes in the phrase</li>
     
-  </div>
+    </ul>
   
 
   
@@ -401,12 +291,12 @@ title: AKPhrase
   
   
   <div class="method-subsection brief-description">
-    <p>Remove all notes</p>
+    Remove all notes
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)reset</code></div>
+ {% highlight objective-c %}- (void)reset{% endhighlight %}
 
     
   
@@ -437,29 +327,24 @@ title: AKPhrase
   
   
   <div class="method-subsection brief-description">
-    <p>Add a note to the <a href="#//api/name/phrase">phrase</a> at a specific time</p>
+    Add a note to the phrase at a specific time
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)startNote:(AKNote *)<em>note</em> atTime:(float)<em>time</em></code></div>
+ {% highlight objective-c %}- (void)startNote:(AKNote *)note atTime:(float)time{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>note</em></dt>
-      <dd><p>Note to be added</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>note</strong>:
+      Note to be added</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>time</em></dt>
-      <dd><p>Time the note will be played</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>time</strong>:
+      Time the note will be played</li>
     
-  </div>
+    </ul>
   
 
   
@@ -488,29 +373,24 @@ title: AKPhrase
   
   
   <div class="method-subsection brief-description">
-    <p>Stop a note in the <a href="#//api/name/phrase">phrase</a> at a specific time</p>
+    Stop a note in the phrase at a specific time
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)stopNote:(AKNote *)<em>note</em> atTime:(float)<em>time</em></code></div>
+ {% highlight objective-c %}- (void)stopNote:(AKNote *)note atTime:(float)time{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>note</em></dt>
-      <dd><p>Note to be stopped</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>note</strong>:
+      Note to be stopped</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>time</em></dt>
-      <dd><p>Time the note will be stopped</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>time</strong>:
+      Time the note will be stopped</li>
     
-  </div>
+    </ul>
   
 
   
@@ -539,34 +419,27 @@ title: AKPhrase
   
   
   <div class="method-subsection brief-description">
-    <p>Update a note property with a specific value at a specific time</p>
+    Update a note property with a specific value at a specific time
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)updateNoteProperty:(AKNoteProperty *)<em>noteProperty</em> withValue:(float)<em>value</em> atTime:(float)<em>time</em></code></div>
+ {% highlight objective-c %}- (void)updateNoteProperty:(AKNoteProperty *)noteProperty withValue:(float)value atTime:(float)time{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>noteProperty</em></dt>
-      <dd><p>Note property to change the value of</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>noteProperty</strong>:
+      Note property to change the value of</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>value</em></dt>
-      <dd><p>Value of the note property</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>value</strong>:
+      Value of the note property</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>time</em></dt>
-      <dd><p>Time the note will be stopped</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>time</strong>:
+      Time the note will be stopped</li>
     
-  </div>
+    </ul>
   
 
   
@@ -588,7 +461,6 @@ title: AKPhrase
   
 </div>
             
-          </div>
           
           
         </div>

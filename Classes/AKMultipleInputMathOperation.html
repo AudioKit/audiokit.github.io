@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKMultipleInputMathOperation
 title: AKMultipleInputMathOperation
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKMultipleInputMathOperation</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,63 +16,21 @@ title: AKMultipleInputMathOperation
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKMultipleInputMathOperation.h<br />AKMultipleInputMathOperation.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>Helper function to deal with product, sum, minimum, and maximum.</p>
-          </div>
           
           
 
           
           
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/inputs">&nbsp;&nbsp;inputs</a></code>
-    <span class="tooltip"><p>Array of inputs or operands to the function</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithInputs:">&ndash;&nbsp;initWithInputs:</a></code>
-    <span class="tooltip"><p>Create a new signal as a sum of given signals.</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithFirstInput:secondInput:">&ndash;&nbsp;initWithFirstInput:secondInput:</a></code>
-    <span class="tooltip"><p>Create a new signal as a sum of exactly two given signals.</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/inputs" title="inputs"></a>
@@ -85,12 +39,12 @@ title: AKMultipleInputMathOperation
   
   
   <div class="method-subsection brief-description">
-    <p>Array of inputs or operands to the function</p>
+    Array of inputs or operands to the function
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property NSArray *inputs</code></div>
+ {% highlight objective-c %}@property NSArray *inputs{% endhighlight %}
 
     
   
@@ -114,15 +68,13 @@ title: AKMultipleInputMathOperation
   
 </div>
             
-          </div>
           
 
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/initWithFirstInput:secondInput:" title="initWithFirstInput:secondInput:"></a>
@@ -131,29 +83,24 @@ title: AKMultipleInputMathOperation
   
   
   <div class="method-subsection brief-description">
-    <p>Create a new signal as a sum of exactly two given signals.</p>
+    Create a new signal as a sum of exactly two given signals.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFirstInput:(AKParameter *)<em>firstInput</em> secondInput:(AKParameter *)<em>secondInput</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithFirstInput:(AKParameter *)firstInput secondInput:(AKParameter *)secondInput{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>firstInput</em></dt>
-      <dd><p>First signal to be summed.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>firstInput</strong>:
+      First signal to be summed.</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>secondInput</em></dt>
-      <dd><p>Second Signal to be summed.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>secondInput</strong>:
+      Second Signal to be summed.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -182,29 +129,24 @@ title: AKMultipleInputMathOperation
   
   
   <div class="method-subsection brief-description">
-    <p>Create a new signal as a sum of given signals.</p>
+    Create a new signal as a sum of given signals.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInputs:(AKParameter *)<em>firstInput</em>, <em>...</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithInputs:(AKParameter *)firstInput, ...{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>firstInput</em></dt>
-      <dd><p>At least one input is required</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>firstInput</strong>:
+      At least one input is required</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>...</em></dt>
-      <dd><p>End the list with a nil.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>...</strong>:
+      End the list with a nil.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -226,7 +168,6 @@ title: AKMultipleInputMathOperation
   
 </div>
             
-          </div>
           
           
         </div>

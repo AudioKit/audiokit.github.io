@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKVCOscillator
 title: AKVCOscillator
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKVCOscillator</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,184 +16,23 @@ title: AKVCOscillator
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKVCOscillator.h<br />AKVCOscillator.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Implementation of a band-limited <a href="#//api/name/oscillator">oscillator</a> using pre-calculated tables.  Meant to model vintage analog synthesizers.</p>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Implementation of a band-limited oscillator using pre-calculated tables.  Meant to model vintage analog synthesizers.
 
-<p>Different modes require different inputs so this could be a reason to break this up into separate classes, or use more custom initializers.</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/waveformTypeForSawtooth">+&nbsp;waveformTypeForSawtooth</a></code>
-    <span class="tooltip"><p>Sawtooth waveform</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/waveformTypeForSquareWithPWM">+&nbsp;waveformTypeForSquareWithPWM</a></code>
-    <span class="tooltip"><p>Square waveform with Pulse-width modulation</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/waveformTypeForTriangleWithRamp">+&nbsp;waveformTypeForTriangleWithRamp</a></code>
-    <span class="tooltip"><p>Triangle waveform with ramp</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/waveformTypeForUnnormalizedPulse">+&nbsp;waveformTypeForUnnormalizedPulse</a></code>
-    <span class="tooltip"><p>Unnormalized pulse waveform</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/waveformTypeForIntegratedSawtooth">+&nbsp;waveformTypeForIntegratedSawtooth</a></code>
-    <span class="tooltip"><p>Integrated sawtooth waveform</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/waveformTypeForSquare">+&nbsp;waveformTypeForSquare</a></code>
-    <span class="tooltip"><p>Square waveform (without PWM)</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/waveformTypeForTriangle">+&nbsp;waveformTypeForTriangle</a></code>
-    <span class="tooltip"><p>Triangle waveform</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithWaveformType:bandwidth:pulseWidth:frequency:amplitude:">&ndash;&nbsp;initWithWaveformType:bandwidth:pulseWidth:frequency:amplitude:</a></code>
-    <span class="tooltip"><p>Instantiates the vc <a href="#//api/name/oscillator">oscillator</a> with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
-    <span class="tooltip"><p>Instantiates the vc <a href="#//api/name/oscillator">oscillator</a> with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/oscillator">+&nbsp;oscillator</a></code>
-    <span class="tooltip"><p>Instantiates the vc oscillator with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/waveformType">&nbsp;&nbsp;waveformType</a></code>
-    <span class="tooltip"><p>Valid types are given by class functions starting with waveformTypeFor&hellip; [Default Value: waveformTypeForSawtooth]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalWaveformType:">&ndash;&nbsp;setOptionalWaveformType:</a></code>
-    <span class="tooltip"><p>Set an optional waveform type</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/bandwidth">&nbsp;&nbsp;bandwidth</a></code>
-    <span class="tooltip"><p>Bandwidth of the generated waveform, as percentage (0 to 1) of the sample rate. The expected range is 0 to 0.5 [Default Value: 0.5]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalBandwidth:">&ndash;&nbsp;setOptionalBandwidth:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/bandwidth">bandwidth</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/pulseWidth">&nbsp;&nbsp;pulseWidth</a></code>
-    <span class="tooltip"><p>The pulse width of the square wave or the ramp characteristics of the triangle wave. It is required only by these waveforms and ignored in all other cases. The expected range is 0 to 1, any other value is wrapped to the allowed range. [Default Value: 0]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalPulseWidth:">&ndash;&nbsp;setOptionalPulseWidth:</a></code>
-    <span class="tooltip"><p>Set an optional pulse width</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/frequency">&nbsp;&nbsp;frequency</a></code>
-    <span class="tooltip"><p>Frequency in Hz [Default Value: 440]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalFrequency:">&ndash;&nbsp;setOptionalFrequency:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/frequency">frequency</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/amplitude">&nbsp;&nbsp;amplitude</a></code>
-    <span class="tooltip"><p>Amplitude scale. In the case of a imode waveform value of a pulse waveform, the actual output level can be a lot higher than this value. [Default Value: 1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalAmplitude:">&ndash;&nbsp;setOptionalAmplitude:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
+Different modes require different inputs so this could be a reason to break this up into separate classes, or use more custom initializers.</p>
           
           
 
           
           
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/amplitude" title="amplitude"></a>
@@ -206,12 +41,12 @@ title: AKVCOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Amplitude scale. In the case of a imode waveform value of a pulse waveform, the actual output level can be a lot higher than this value. [Default Value: 1]</p>
+    Amplitude scale. In the case of a imode waveform value of a pulse waveform, the actual output level can be a lot higher than this value. [Default Value: 1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *amplitude</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *amplitude{% endhighlight %}
 
     
   
@@ -242,12 +77,12 @@ title: AKVCOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Bandwidth of the generated waveform, as percentage (0 to 1) of the sample rate. The expected range is 0 to 0.5 [Default Value: 0.5]</p>
+    Bandwidth of the generated waveform, as percentage (0 to 1) of the sample rate. The expected range is 0 to 0.5 [Default Value: 0.5]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *bandwidth</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *bandwidth{% endhighlight %}
 
     
   
@@ -278,12 +113,12 @@ title: AKVCOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Frequency in Hz [Default Value: 440]</p>
+    Frequency in Hz [Default Value: 440]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *frequency</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *frequency{% endhighlight %}
 
     
   
@@ -314,12 +149,12 @@ title: AKVCOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>The pulse width of the square wave or the ramp characteristics of the triangle wave. It is required only by these waveforms and ignored in all other cases. The expected range is 0 to 1, any other value is wrapped to the allowed range. [Default Value: 0]</p>
+    The pulse width of the square wave or the ramp characteristics of the triangle wave. It is required only by these waveforms and ignored in all other cases. The expected range is 0 to 1, any other value is wrapped to the allowed range. [Default Value: 0]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *pulseWidth</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *pulseWidth{% endhighlight %}
 
     
   
@@ -350,12 +185,12 @@ title: AKVCOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Valid types are given by class functions starting with waveformTypeFor&hellip; [Default Value: waveformTypeForSawtooth]</p>
+    Valid types are given by class functions starting with waveformTypeFor... [Default Value: waveformTypeForSawtooth]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *waveformType</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *waveformType{% endhighlight %}
 
     
   
@@ -379,13 +214,11 @@ title: AKVCOscillator
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/oscillator" title="oscillator"></a>
@@ -394,12 +227,12 @@ title: AKVCOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the vc oscillator with default values</p>
+    Instantiates the vc oscillator with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)oscillator</code></div>
+ {% highlight objective-c %}+ (instancetype)oscillator{% endhighlight %}
 
     
   
@@ -430,12 +263,12 @@ title: AKVCOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Integrated sawtooth waveform</p>
+    Integrated sawtooth waveform
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (AKConstant *)waveformTypeForIntegratedSawtooth</code></div>
+ {% highlight objective-c %}+ (AKConstant *)waveformTypeForIntegratedSawtooth{% endhighlight %}
 
     
   
@@ -466,12 +299,12 @@ title: AKVCOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Sawtooth waveform</p>
+    Sawtooth waveform
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (AKConstant *)waveformTypeForSawtooth</code></div>
+ {% highlight objective-c %}+ (AKConstant *)waveformTypeForSawtooth{% endhighlight %}
 
     
   
@@ -502,12 +335,12 @@ title: AKVCOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Square waveform (without PWM)</p>
+    Square waveform (without PWM)
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (AKConstant *)waveformTypeForSquare</code></div>
+ {% highlight objective-c %}+ (AKConstant *)waveformTypeForSquare{% endhighlight %}
 
     
   
@@ -538,12 +371,12 @@ title: AKVCOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Square waveform with Pulse-width modulation</p>
+    Square waveform with Pulse-width modulation
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (AKConstant *)waveformTypeForSquareWithPWM</code></div>
+ {% highlight objective-c %}+ (AKConstant *)waveformTypeForSquareWithPWM{% endhighlight %}
 
     
   
@@ -574,12 +407,12 @@ title: AKVCOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Triangle waveform</p>
+    Triangle waveform
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (AKConstant *)waveformTypeForTriangle</code></div>
+ {% highlight objective-c %}+ (AKConstant *)waveformTypeForTriangle{% endhighlight %}
 
     
   
@@ -610,12 +443,12 @@ title: AKVCOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Triangle waveform with ramp</p>
+    Triangle waveform with ramp
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (AKConstant *)waveformTypeForTriangleWithRamp</code></div>
+ {% highlight objective-c %}+ (AKConstant *)waveformTypeForTriangleWithRamp{% endhighlight %}
 
     
   
@@ -646,12 +479,12 @@ title: AKVCOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Unnormalized pulse waveform</p>
+    Unnormalized pulse waveform
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (AKConstant *)waveformTypeForUnnormalizedPulse</code></div>
+ {% highlight objective-c %}+ (AKConstant *)waveformTypeForUnnormalizedPulse{% endhighlight %}
 
     
   
@@ -675,13 +508,11 @@ title: AKVCOscillator
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/init" title="init"></a>
@@ -690,12 +521,12 @@ title: AKVCOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the vc <a href="#//api/name/oscillator">oscillator</a> with default values</p>
+    Instantiates the vc oscillator with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
+ {% highlight objective-c %}- (instancetype)init{% endhighlight %}
 
     
   
@@ -726,44 +557,33 @@ title: AKVCOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the vc <a href="#//api/name/oscillator">oscillator</a> with all values</p>
+    Instantiates the vc oscillator with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithWaveformType:(AKConstant *)<em>waveformType</em> bandwidth:(AKConstant *)<em>bandwidth</em> pulseWidth:(AKParameter *)<em>pulseWidth</em> frequency:(AKParameter *)<em>frequency</em> amplitude:(AKParameter *)<em>amplitude</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithWaveformType:(AKConstant *)waveformType bandwidth:(AKConstant *)bandwidth pulseWidth:(AKParameter *)pulseWidth frequency:(AKParameter *)frequency amplitude:(AKParameter *)amplitude{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>waveformType</em></dt>
-      <dd><p>Valid types are given by class functions starting with waveformTypeFor&hellip; [Default Value: waveformTypeForSawtooth]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>waveformType</strong>:
+      Valid types are given by class functions starting with waveformTypeFor... [Default Value: waveformTypeForSawtooth]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>bandwidth</em></dt>
-      <dd><p>Bandwidth of the generated waveform, as percentage (0 to 1) of the sample rate. The expected range is 0 to 0.5 [Default Value: 0.5]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>bandwidth</strong>:
+      Bandwidth of the generated waveform, as percentage (0 to 1) of the sample rate. The expected range is 0 to 0.5 [Default Value: 0.5]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>pulseWidth</em></dt>
-      <dd><p>The pulse width of the square wave or the ramp characteristics of the triangle wave. It is required only by these waveforms and ignored in all other cases. The expected range is 0 to 1, any other value is wrapped to the allowed range. Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>pulseWidth</strong>:
+      The pulse width of the square wave or the ramp characteristics of the triangle wave. It is required only by these waveforms and ignored in all other cases. The expected range is 0 to 1, any other value is wrapped to the allowed range. Updated at Control-rate. [Default Value: 0]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>frequency</em></dt>
-      <dd><p>Frequency in Hz Updated at Control-rate. [Default Value: 440]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>frequency</strong>:
+      Frequency in Hz Updated at Control-rate. [Default Value: 440]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>Amplitude scale. In the case of a imode waveform value of a pulse waveform, the actual output level can be a lot higher than this value. Updated at Control-rate. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude scale. In the case of a imode waveform value of a pulse waveform, the actual output level can be a lot higher than this value. Updated at Control-rate. [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -792,24 +612,21 @@ title: AKVCOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p>
+    Set an optional amplitude
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalAmplitude:(AKParameter *)<em>amplitude</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalAmplitude:(AKParameter *)amplitude{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>Amplitude scale. In the case of a imode waveform value of a pulse waveform, the actual output level can be a lot higher than this value. Updated at Control-rate. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude scale. In the case of a imode waveform value of a pulse waveform, the actual output level can be a lot higher than this value. Updated at Control-rate. [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -838,24 +655,21 @@ title: AKVCOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/bandwidth">bandwidth</a></p>
+    Set an optional bandwidth
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalBandwidth:(AKConstant *)<em>bandwidth</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalBandwidth:(AKConstant *)bandwidth{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>bandwidth</em></dt>
-      <dd><p>Bandwidth of the generated waveform, as percentage (0 to 1) of the sample rate. The expected range is 0 to 0.5 [Default Value: 0.5]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>bandwidth</strong>:
+      Bandwidth of the generated waveform, as percentage (0 to 1) of the sample rate. The expected range is 0 to 0.5 [Default Value: 0.5]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -884,24 +698,21 @@ title: AKVCOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/frequency">frequency</a></p>
+    Set an optional frequency
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalFrequency:(AKParameter *)<em>frequency</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalFrequency:(AKParameter *)frequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>frequency</em></dt>
-      <dd><p>Frequency in Hz Updated at Control-rate. [Default Value: 440]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>frequency</strong>:
+      Frequency in Hz Updated at Control-rate. [Default Value: 440]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -930,24 +741,21 @@ title: AKVCOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional pulse width</p>
+    Set an optional pulse width
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalPulseWidth:(AKParameter *)<em>pulseWidth</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalPulseWidth:(AKParameter *)pulseWidth{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>pulseWidth</em></dt>
-      <dd><p>The pulse width of the square wave or the ramp characteristics of the triangle wave. It is required only by these waveforms and ignored in all other cases. The expected range is 0 to 1, any other value is wrapped to the allowed range. Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>pulseWidth</strong>:
+      The pulse width of the square wave or the ramp characteristics of the triangle wave. It is required only by these waveforms and ignored in all other cases. The expected range is 0 to 1, any other value is wrapped to the allowed range. Updated at Control-rate. [Default Value: 0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -976,24 +784,21 @@ title: AKVCOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional waveform type</p>
+    Set an optional waveform type
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalWaveformType:(AKConstant *)<em>waveformType</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalWaveformType:(AKConstant *)waveformType{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>waveformType</em></dt>
-      <dd><p>Valid types are given by class functions starting with waveformTypeFor&hellip; [Default Value: waveformTypeForSawtooth]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>waveformType</strong>:
+      Valid types are given by class functions starting with waveformTypeFor... [Default Value: waveformTypeForSawtooth]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -1015,7 +820,6 @@ title: AKVCOscillator
   
 </div>
             
-          </div>
           
           
         </div>

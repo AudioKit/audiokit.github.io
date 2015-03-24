@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKManager
 title: AKManager
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKManager</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value">NSObject</td>
@@ -20,203 +16,21 @@ title: AKManager
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKManager.h<br />AKManager.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>The AKManager is a singleton class available to all controllers that need access to audio.</p>
-          </div>
           
           
 
           
           
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/isRunning">&nbsp;&nbsp;isRunning</a></code>
-    <span class="tooltip"><p>Determines whether or not AudioKit is available to send events to.</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/isLogging">&nbsp;&nbsp;isLogging</a></code>
-    <span class="tooltip"><p>Determines whether or not to log</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/orchestra">&nbsp;&nbsp;orchestra</a></code>
-    <span class="tooltip"><p>The default orchestra</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/midi">&nbsp;&nbsp;midi</a></code>
-    <span class="tooltip"><p>Common midi property shared across the application</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/sharedManager">+&nbsp;sharedManager</a></code>
-    <span class="tooltip"><p>the shared instance of AKManager</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/runOrchestra">&ndash;&nbsp;runOrchestra</a></code>
-    <span class="tooltip"><p>Run AudioKit using an <a href="../Classes/AKOrchestra.html">AKOrchestra</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/runOrchestraForDuration:">&ndash;&nbsp;runOrchestraForDuration:</a></code>
-    <span class="tooltip"><p>Run AudioKit using an <a href="../Classes/AKOrchestra.html">AKOrchestra</a> for a specific amount of time</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/resetOrchestra">&ndash;&nbsp;resetOrchestra</a></code>
-    <span class="tooltip"><p>Erase all instruments from the <a href="#//api/name/orchestra">orchestra</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/stop">&ndash;&nbsp;stop</a></code>
-    <span class="tooltip"><p>Stop AudioKit from making any more sound.</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/triggerEvent:">&ndash;&nbsp;triggerEvent:</a></code>
-    <span class="tooltip"><p>Triggers an <a href="../Classes/AKEvent.html">AKEvent</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/startBatch">&ndash;&nbsp;startBatch</a></code>
-    <span class="tooltip"><p>Allow batching of events with a start batch command</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/endBatch">&ndash;&nbsp;endBatch</a></code>
-    <span class="tooltip"><p>Send all batched events at once when a batch is ended</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/stopInstrument:">&ndash;&nbsp;stopInstrument:</a></code>
-    <span class="tooltip"><p>Stop all notes of an instrument</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/stopNote:">&ndash;&nbsp;stopNote:</a></code>
-    <span class="tooltip"><p>Stop playback of a given note</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/updateNote:">&ndash;&nbsp;updateNote:</a></code>
-    <span class="tooltip"><p>Update playback of a given note</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/stringFromFile:">+&nbsp;stringFromFile:</a></code>
-    <span class="tooltip"><p>Helper function to get the string out of a file.</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/enableAudioInput">&ndash;&nbsp;enableAudioInput</a></code>
-    <span class="tooltip"><p>Enable Audio Input</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/disableAudioInput">&ndash;&nbsp;disableAudioInput</a></code>
-    <span class="tooltip"><p>Disable AudioInput</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/stopRecording">&ndash;&nbsp;stopRecording</a></code>
-    <span class="tooltip"><p>/ Stop recording</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/startRecordingToURL:">&ndash;&nbsp;startRecordingToURL:</a></code>
-    <span class="tooltip"><p>Start recording to a given URL</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/enableMidi">&ndash;&nbsp;enableMidi</a></code>
-    <span class="tooltip"><p>Enable MIDI</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/disableMidi">&ndash;&nbsp;disableMidi</a></code>
-    <span class="tooltip"><p>Disable MIDI</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/addBinding:">+&nbsp;addBinding:</a></code>
-    <span class="tooltip"><p>Utilities</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/isLogging" title="isLogging"></a>
@@ -225,12 +39,12 @@ title: AKManager
   
   
   <div class="method-subsection brief-description">
-    <p>Determines whether or not to log</p>
+    Determines whether or not to log
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property BOOL isLogging</code></div>
+ {% highlight objective-c %}@property BOOL isLogging{% endhighlight %}
 
     
   
@@ -261,12 +75,12 @@ title: AKManager
   
   
   <div class="method-subsection brief-description">
-    <p>Determines whether or not AudioKit is available to send events to.</p>
+    Determines whether or not AudioKit is available to send events to.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (readonly) BOOL isRunning</code></div>
+ {% highlight objective-c %}@property (readonly) BOOL isRunning{% endhighlight %}
 
     
   
@@ -297,12 +111,12 @@ title: AKManager
   
   
   <div class="method-subsection brief-description">
-    <p>Common midi property shared across the application</p>
+    Common midi property shared across the application
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (readonly) AKMidi *midi</code></div>
+ {% highlight objective-c %}@property (readonly) AKMidi *midi{% endhighlight %}
 
     
   
@@ -333,12 +147,12 @@ title: AKManager
   
   
   <div class="method-subsection brief-description">
-    <p>The default orchestra</p>
+    The default orchestra
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKOrchestra *orchestra</code></div>
+ {% highlight objective-c %}@property AKOrchestra *orchestra{% endhighlight %}
 
     
   
@@ -362,13 +176,11 @@ title: AKManager
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/addBinding:" title="addBinding:"></a>
@@ -377,24 +189,21 @@ title: AKManager
   
   
   <div class="method-subsection brief-description">
-    <p>Utilities</p>
+    Utilities
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (void)addBinding:(id)<em>binding</em></code></div>
+ {% highlight objective-c %}+ (void)addBinding:(id)binding{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>binding</em></dt>
-      <dd><p>The object that will be added to Csound&rsquo;s binding list</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>binding</strong>:
+      The object that will be added to Csound's binding list</li>
     
-  </div>
+    </ul>
   
 
   
@@ -423,12 +232,12 @@ title: AKManager
   
   
   <div class="method-subsection brief-description">
-    <p>the shared instance of AKManager</p>
+    the shared instance of AKManager
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (AKManager *)sharedManager</code></div>
+ {% highlight objective-c %}+ (AKManager *)sharedManager{% endhighlight %}
 
     
   
@@ -436,7 +245,7 @@ title: AKManager
   
   <div class="method-subsection return">
     <h4 class="method-subtitle parameter-title">Return Value</h4>
-    <p>the shared instance of AKManager</p>
+    the shared instance of AKManager
   </div>
   
 
@@ -464,24 +273,21 @@ title: AKManager
   
   
   <div class="method-subsection brief-description">
-    <p>Helper function to get the string out of a file.</p>
+    Helper function to get the string out of a file.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (NSString *)stringFromFile:(NSString *)<em>filename</em></code></div>
+ {% highlight objective-c %}+ (NSString *)stringFromFile:(NSString *)filename{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>filename</em></dt>
-      <dd><p>Full path of file on disk</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>filename</strong>:
+      Full path of file on disk</li>
     
-  </div>
+    </ul>
   
 
   
@@ -503,13 +309,11 @@ title: AKManager
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/disableAudioInput" title="disableAudioInput"></a>
@@ -518,12 +322,12 @@ title: AKManager
   
   
   <div class="method-subsection brief-description">
-    <p>Disable AudioInput</p>
+    Disable AudioInput
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)disableAudioInput</code></div>
+ {% highlight objective-c %}- (void)disableAudioInput{% endhighlight %}
 
     
   
@@ -554,12 +358,12 @@ title: AKManager
   
   
   <div class="method-subsection brief-description">
-    <p>Disable MIDI</p>
+    Disable MIDI
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)disableMidi</code></div>
+ {% highlight objective-c %}- (void)disableMidi{% endhighlight %}
 
     
   
@@ -590,12 +394,12 @@ title: AKManager
   
   
   <div class="method-subsection brief-description">
-    <p>Enable Audio Input</p>
+    Enable Audio Input
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)enableAudioInput</code></div>
+ {% highlight objective-c %}- (void)enableAudioInput{% endhighlight %}
 
     
   
@@ -626,12 +430,12 @@ title: AKManager
   
   
   <div class="method-subsection brief-description">
-    <p>Enable MIDI</p>
+    Enable MIDI
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)enableMidi</code></div>
+ {% highlight objective-c %}- (void)enableMidi{% endhighlight %}
 
     
   
@@ -662,12 +466,12 @@ title: AKManager
   
   
   <div class="method-subsection brief-description">
-    <p>Send all batched events at once when a batch is ended</p>
+    Send all batched events at once when a batch is ended
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)endBatch</code></div>
+ {% highlight objective-c %}- (void)endBatch{% endhighlight %}
 
     
   
@@ -698,12 +502,12 @@ title: AKManager
   
   
   <div class="method-subsection brief-description">
-    <p>Erase all instruments from the <a href="#//api/name/orchestra">orchestra</a></p>
+    Erase all instruments from the orchestra
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)resetOrchestra</code></div>
+ {% highlight objective-c %}- (void)resetOrchestra{% endhighlight %}
 
     
   
@@ -734,12 +538,12 @@ title: AKManager
   
   
   <div class="method-subsection brief-description">
-    <p>Run AudioKit using an <a href="../Classes/AKOrchestra.html">AKOrchestra</a></p>
+    Run AudioKit using an AKOrchestra
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)runOrchestra</code></div>
+ {% highlight objective-c %}- (void)runOrchestra{% endhighlight %}
 
     
   
@@ -770,24 +574,21 @@ title: AKManager
   
   
   <div class="method-subsection brief-description">
-    <p>Run AudioKit using an <a href="../Classes/AKOrchestra.html">AKOrchestra</a> for a specific amount of time</p>
+    Run AudioKit using an AKOrchestra for a specific amount of time
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)runOrchestraForDuration:(int)<em>duration</em></code></div>
+ {% highlight objective-c %}- (void)runOrchestraForDuration:(int)duration{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>duration</em></dt>
-      <dd><p>Time for the <a href="#//api/name/orchestra">orchestra</a> to play in seconds</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>duration</strong>:
+      Time for the orchestra to play in seconds</li>
     
-  </div>
+    </ul>
   
 
   
@@ -816,12 +617,12 @@ title: AKManager
   
   
   <div class="method-subsection brief-description">
-    <p>Allow batching of events with a start batch command</p>
+    Allow batching of events with a start batch command
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)startBatch</code></div>
+ {% highlight objective-c %}- (void)startBatch{% endhighlight %}
 
     
   
@@ -852,24 +653,21 @@ title: AKManager
   
   
   <div class="method-subsection brief-description">
-    <p>Start recording to a given URL</p>
+    Start recording to a given URL
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)startRecordingToURL:(NSURL *)<em>url</em></code></div>
+ {% highlight objective-c %}- (void)startRecordingToURL:(NSURL *)url{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>url</em></dt>
-      <dd><p>URL to save the recording at</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>url</strong>:
+      URL to save the recording at</li>
     
-  </div>
+    </ul>
   
 
   
@@ -898,12 +696,12 @@ title: AKManager
   
   
   <div class="method-subsection brief-description">
-    <p>Stop AudioKit from making any more sound.</p>
+    Stop AudioKit from making any more sound.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)stop</code></div>
+ {% highlight objective-c %}- (void)stop{% endhighlight %}
 
     
   
@@ -934,24 +732,21 @@ title: AKManager
   
   
   <div class="method-subsection brief-description">
-    <p>Stop all notes of an instrument</p>
+    Stop all notes of an instrument
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)stopInstrument:(AKInstrument *)<em>instrument</em></code></div>
+ {% highlight objective-c %}- (void)stopInstrument:(AKInstrument *)instrument{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>instrument</em></dt>
-      <dd><p>The instrument that needs to be turned off.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>instrument</strong>:
+      The instrument that needs to be turned off.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -980,24 +775,21 @@ title: AKManager
   
   
   <div class="method-subsection brief-description">
-    <p>Stop playback of a given note</p>
+    Stop playback of a given note
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)stopNote:(AKNote *)<em>note</em></code></div>
+ {% highlight objective-c %}- (void)stopNote:(AKNote *)note{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>note</em></dt>
-      <dd><p>Note to <a href="#//api/name/stop">stop</a></p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>note</strong>:
+      Note to stop</li>
     
-  </div>
+    </ul>
   
 
   
@@ -1026,12 +818,12 @@ title: AKManager
   
   
   <div class="method-subsection brief-description">
-    <p>/ Stop recording</p>
+    / Stop recording
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)stopRecording</code></div>
+ {% highlight objective-c %}- (void)stopRecording{% endhighlight %}
 
     
   
@@ -1062,24 +854,21 @@ title: AKManager
   
   
   <div class="method-subsection brief-description">
-    <p>Triggers an <a href="../Classes/AKEvent.html">AKEvent</a></p>
+    Triggers an AKEvent
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)triggerEvent:(AKEvent *)<em>event</em></code></div>
+ {% highlight objective-c %}- (void)triggerEvent:(AKEvent *)event{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>event</em></dt>
-      <dd><p><a href="../Classes/AKEvent.html">AKEvent</a> to be triggered</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>event</strong>:
+      AKEvent to be triggered</li>
     
-  </div>
+    </ul>
   
 
   
@@ -1108,24 +897,21 @@ title: AKManager
   
   
   <div class="method-subsection brief-description">
-    <p>Update playback of a given note</p>
+    Update playback of a given note
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)updateNote:(AKNote *)<em>note</em></code></div>
+ {% highlight objective-c %}- (void)updateNote:(AKNote *)note{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>note</em></dt>
-      <dd><p>Note to update</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>note</strong>:
+      Note to update</li>
     
-  </div>
+    </ul>
   
 
   
@@ -1147,7 +933,6 @@ title: AKManager
   
 </div>
             
-          </div>
           
           
         </div>

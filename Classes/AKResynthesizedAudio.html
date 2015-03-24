@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKResynthesizedAudio
 title: AKResynthesizedAudio
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKResynthesizedAudio</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,41 +16,14 @@ title: AKResynthesizedAudio
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKResynthesizedAudio.h<br />AKResynthesizedAudio.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>Resynthesise phase vocoder data (f-signal) using a FFT overlap-add.</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithSignal:">&ndash;&nbsp;initWithSignal:</a></code>
-    <span class="tooltip"><p>Create audio from an f-signal</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
           
           
 
@@ -64,9 +33,8 @@ title: AKResynthesizedAudio
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/initWithSignal:" title="initWithSignal:"></a>
@@ -75,24 +43,21 @@ title: AKResynthesizedAudio
   
   
   <div class="method-subsection brief-description">
-    <p>Create audio from an f-signal</p>
+    Create audio from an f-signal
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithSignal:(AKFSignal *)<em>source</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithSignal:(AKFSignal *)source{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>source</em></dt>
-      <dd><p>Input f-signal</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>source</strong>:
+      Input f-signal</li>
     
-  </div>
+    </ul>
   
 
   
@@ -114,7 +79,6 @@ title: AKResynthesizedAudio
   
 </div>
             
-          </div>
           
           
         </div>

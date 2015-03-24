@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKEqualizerFilter
 title: AKEqualizerFilter
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKEqualizerFilter</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,108 +16,24 @@ title: AKEqualizerFilter
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKEqualizerFilter.h<br />AKEqualizerFilter.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Second-order tunable equalisation filter based on Regalia and Mitra design.</p>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Second-order tunable equalisation filter based on Regalia and Mitra design.
 
-<p>Provides a peak/notch filter for building parametric/graphic equalisers.
-The amplitude response for this filter will be flat (=1) for gain=1. With <a href="#//api/name/gain">gain</a> bigger than 1, there will be a peak at the center frequency, whose width is given by the <a href="#//api/name/bandwidth">bandwidth</a> parameter, but outside this band, the response will tend towards 1. Conversely, if <a href="#//api/name/gain">gain</a> is smaller than 1, a notch will be created around the CF.</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithInput:centerFrequency:bandwidth:gain:">&ndash;&nbsp;initWithInput:centerFrequency:bandwidth:gain:</a></code>
-    <span class="tooltip"><p>Instantiates the equalizer filter with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithInput:">&ndash;&nbsp;initWithInput:</a></code>
-    <span class="tooltip"><p>Instantiates the equalizer filter with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/filterWithInput:">+&nbsp;filterWithInput:</a></code>
-    <span class="tooltip"><p>Instantiates the equalizer filter with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/centerFrequency">&nbsp;&nbsp;centerFrequency</a></code>
-    <span class="tooltip"><p>Filter center frequency in Hz. [Default Value: 1000]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalCenterFrequency:">&ndash;&nbsp;setOptionalCenterFrequency:</a></code>
-    <span class="tooltip"><p>Set an optional center frequency</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/bandwidth">&nbsp;&nbsp;bandwidth</a></code>
-    <span class="tooltip"><p>Peak/notch bandwidth in Hz. [Default Value: 100]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalBandwidth:">&ndash;&nbsp;setOptionalBandwidth:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/bandwidth">bandwidth</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/gain">&nbsp;&nbsp;gain</a></code>
-    <span class="tooltip"><p>Peak/notch gain. [Default Value: 10]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalGain:">&ndash;&nbsp;setOptionalGain:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/gain">gain</a></p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
+Provides a peak/notch filter for building parametric/graphic equalisers.
+The amplitude response for this filter will be flat (=1) for gain=1. With gain bigger than 1, there will be a peak at the center frequency, whose width is given by the bandwidth parameter, but outside this band, the response will tend towards 1. Conversely, if gain is smaller than 1, a notch will be created around the CF.</p>
           
           
 
           
           
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/bandwidth" title="bandwidth"></a>
@@ -130,12 +42,12 @@ The amplitude response for this filter will be flat (=1) for gain=1. With <a hre
   
   
   <div class="method-subsection brief-description">
-    <p>Peak/notch bandwidth in Hz. [Default Value: 100]</p>
+    Peak/notch bandwidth in Hz. [Default Value: 100]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *bandwidth</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *bandwidth{% endhighlight %}
 
     
   
@@ -166,12 +78,12 @@ The amplitude response for this filter will be flat (=1) for gain=1. With <a hre
   
   
   <div class="method-subsection brief-description">
-    <p>Filter center frequency in Hz. [Default Value: 1000]</p>
+    Filter center frequency in Hz. [Default Value: 1000]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *centerFrequency</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *centerFrequency{% endhighlight %}
 
     
   
@@ -202,12 +114,12 @@ The amplitude response for this filter will be flat (=1) for gain=1. With <a hre
   
   
   <div class="method-subsection brief-description">
-    <p>Peak/notch gain. [Default Value: 10]</p>
+    Peak/notch gain. [Default Value: 10]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *gain</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *gain{% endhighlight %}
 
     
   
@@ -231,13 +143,11 @@ The amplitude response for this filter will be flat (=1) for gain=1. With <a hre
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/filterWithInput:" title="filterWithInput:"></a>
@@ -246,24 +156,21 @@ The amplitude response for this filter will be flat (=1) for gain=1. With <a hre
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the equalizer filter with default values</p>
+    Instantiates the equalizer filter with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)filterWithInput:(AKParameter *)<em>input</em></code></div>
+ {% highlight objective-c %}+ (instancetype)filterWithInput:(AKParameter *)input{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>Input signal.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input signal.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -285,13 +192,11 @@ The amplitude response for this filter will be flat (=1) for gain=1. With <a hre
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/initWithInput:" title="initWithInput:"></a>
@@ -300,24 +205,21 @@ The amplitude response for this filter will be flat (=1) for gain=1. With <a hre
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the equalizer filter with default values</p>
+    Instantiates the equalizer filter with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>Input signal.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input signal.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -346,39 +248,30 @@ The amplitude response for this filter will be flat (=1) for gain=1. With <a hre
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the equalizer filter with all values</p>
+    Instantiates the equalizer filter with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> centerFrequency:(AKParameter *)<em>centerFrequency</em> bandwidth:(AKParameter *)<em>bandwidth</em> gain:(AKParameter *)<em>gain</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input centerFrequency:(AKParameter *)centerFrequency bandwidth:(AKParameter *)bandwidth gain:(AKParameter *)gain{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>Input signal. [Default Value: ]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input signal. [Default Value: ]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>centerFrequency</em></dt>
-      <dd><p>Filter center frequency in Hz. Updated at Control-rate. [Default Value: 1000]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>centerFrequency</strong>:
+      Filter center frequency in Hz. Updated at Control-rate. [Default Value: 1000]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>bandwidth</em></dt>
-      <dd><p>Peak/notch <a href="#//api/name/bandwidth">bandwidth</a> in Hz. Updated at Control-rate. [Default Value: 100]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>bandwidth</strong>:
+      Peak/notch bandwidth in Hz. Updated at Control-rate. [Default Value: 100]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>gain</em></dt>
-      <dd><p>Peak/notch <a href="#//api/name/gain">gain</a>. Updated at Control-rate. [Default Value: 10]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>gain</strong>:
+      Peak/notch gain. Updated at Control-rate. [Default Value: 10]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -407,24 +300,21 @@ The amplitude response for this filter will be flat (=1) for gain=1. With <a hre
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/bandwidth">bandwidth</a></p>
+    Set an optional bandwidth
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalBandwidth:(AKParameter *)<em>bandwidth</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalBandwidth:(AKParameter *)bandwidth{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>bandwidth</em></dt>
-      <dd><p>Peak/notch <a href="#//api/name/bandwidth">bandwidth</a> in Hz. Updated at Control-rate. [Default Value: 100]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>bandwidth</strong>:
+      Peak/notch bandwidth in Hz. Updated at Control-rate. [Default Value: 100]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -453,24 +343,21 @@ The amplitude response for this filter will be flat (=1) for gain=1. With <a hre
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional center frequency</p>
+    Set an optional center frequency
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalCenterFrequency:(AKParameter *)<em>centerFrequency</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalCenterFrequency:(AKParameter *)centerFrequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>centerFrequency</em></dt>
-      <dd><p>Filter center frequency in Hz. Updated at Control-rate. [Default Value: 1000]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>centerFrequency</strong>:
+      Filter center frequency in Hz. Updated at Control-rate. [Default Value: 1000]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -499,24 +386,21 @@ The amplitude response for this filter will be flat (=1) for gain=1. With <a hre
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/gain">gain</a></p>
+    Set an optional gain
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalGain:(AKParameter *)<em>gain</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalGain:(AKParameter *)gain{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>gain</em></dt>
-      <dd><p>Peak/notch <a href="#//api/name/gain">gain</a>. Updated at Control-rate. [Default Value: 10]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>gain</strong>:
+      Peak/notch gain. Updated at Control-rate. [Default Value: 10]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -538,7 +422,6 @@ The amplitude response for this filter will be flat (=1) for gain=1. With <a hre
   
 </div>
             
-          </div>
           
           
         </div>

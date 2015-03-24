@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKEvent
 title: AKEvent
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKEvent</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value">NSObject</td>
@@ -20,57 +16,16 @@ title: AKEvent
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKEvent.h<br />AKEvent.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Analogous to a MIDI event, an AK Event can be based on a <a href="../Classes/AKNote.html">AKNote</a> such as
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Analogous to a MIDI event, an AK Event can be based on a AKNote such as
 a note on, note off, note property change, or it can be a block containing
 intrument property changes.  The block can</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithBlock:">&ndash;&nbsp;initWithBlock:</a></code>
-    <span class="tooltip"><p>Create an event from the code block given</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/runBlock">&ndash;&nbsp;runBlock</a></code>
-    <span class="tooltip"><p>Execute the block of code stored in the event.</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/trigger">&ndash;&nbsp;trigger</a></code>
-    <span class="tooltip"><p>Helper method to start the event.</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
           
           
 
@@ -80,9 +35,8 @@ intrument property changes.  The block can</p>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/initWithBlock:" title="initWithBlock:"></a>
@@ -91,24 +45,21 @@ intrument property changes.  The block can</p>
   
   
   <div class="method-subsection brief-description">
-    <p>Create an event from the code block given</p>
+    Create an event from the code block given
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithBlock:(void ( ^ ) ( ))<em>aBlock</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithBlock:(void ( ^ ) ( ))aBlock{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>aBlock</em></dt>
-      <dd><p>Code to run when the event is started</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>aBlock</strong>:
+      Code to run when the event is started</li>
     
-  </div>
+    </ul>
   
 
   
@@ -137,12 +88,12 @@ intrument property changes.  The block can</p>
   
   
   <div class="method-subsection brief-description">
-    <p>Execute the block of code stored in the event.</p>
+    Execute the block of code stored in the event.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)runBlock</code></div>
+ {% highlight objective-c %}- (void)runBlock{% endhighlight %}
 
     
   
@@ -173,12 +124,12 @@ intrument property changes.  The block can</p>
   
   
   <div class="method-subsection brief-description">
-    <p>Helper method to start the event.</p>
+    Helper method to start the event.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)trigger</code></div>
+ {% highlight objective-c %}- (void)trigger{% endhighlight %}
 
     
   
@@ -202,7 +153,6 @@ intrument property changes.  The block can</p>
   
 </div>
             
-          </div>
           
           
         </div>

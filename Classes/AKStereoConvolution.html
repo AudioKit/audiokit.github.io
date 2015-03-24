@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKStereoConvolution
 title: AKStereoConvolution
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKStereoConvolution</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKStereoAudio.html">AKStereoAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,48 +16,14 @@ title: AKStereoConvolution
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKStereoConvolution.h<br />AKStereoConvolution.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>Convolution based on a uniformly partitioned overlap-save algorithm.</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithInput:impulseResponseFilename:">&ndash;&nbsp;initWithInput:impulseResponseFilename:</a></code>
-    <span class="tooltip"><p>Instantiates the stereo convolution with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/convolutionWithInput:impulseResponseFilename:">+&nbsp;convolutionWithInput:impulseResponseFilename:</a></code>
-    <span class="tooltip"><p>Instantiates the stereo convolution with default values</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
           
           
 
@@ -69,9 +31,8 @@ title: AKStereoConvolution
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/convolutionWithInput:impulseResponseFilename:" title="convolutionWithInput:impulseResponseFilename:"></a>
@@ -80,29 +41,24 @@ title: AKStereoConvolution
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the stereo convolution with default values</p>
+    Instantiates the stereo convolution with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)convolutionWithInput:(AKParameter *)<em>input</em> impulseResponseFilename:(NSString *)<em>impulseResponseFilename</em></code></div>
+ {% highlight objective-c %}+ (instancetype)convolutionWithInput:(AKParameter *)input impulseResponseFilename:(NSString *)impulseResponseFilename{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>Input to the convolution, usually audio.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input to the convolution, usually audio.</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>impulseResponseFilename</em></dt>
-      <dd><p>File contain the impulse response audio.  Usually a very short impulse sound.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>impulseResponseFilename</strong>:
+      File contain the impulse response audio.  Usually a very short impulse sound.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -124,13 +80,11 @@ title: AKStereoConvolution
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/initWithInput:impulseResponseFilename:" title="initWithInput:impulseResponseFilename:"></a>
@@ -139,29 +93,24 @@ title: AKStereoConvolution
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the stereo convolution with all values</p>
+    Instantiates the stereo convolution with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> impulseResponseFilename:(NSString *)<em>impulseResponseFilename</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input impulseResponseFilename:(NSString *)impulseResponseFilename{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>Input to the convolution, usually audio. [Default Value: ]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input to the convolution, usually audio. [Default Value: ]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>impulseResponseFilename</em></dt>
-      <dd><p>File contain the impulse response audio.  Usually a very short impulse sound. [Default Value: ]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>impulseResponseFilename</strong>:
+      File contain the impulse response audio.  Usually a very short impulse sound. [Default Value: ]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -183,7 +132,6 @@ title: AKStereoConvolution
   
 </div>
             
-          </div>
           
           
         </div>

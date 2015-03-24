@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKPhasor
 title: AKPhasor
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKPhasor</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,95 +16,25 @@ title: AKPhasor
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKPhasor.h<br />AKPhasor.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>A normalized moving <a href="#//api/name/phase">phase</a> value.</p>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>A normalized moving phase value.
 
-<p>An internal <a href="#//api/name/phase">phase</a> is successively accumulated in accordance with the <a href="#//api/name/frequency">frequency</a> to produce a moving <a href="#//api/name/phase">phase</a> value, normalized to lie in the range 0 &lt;= <a href="#//api/name/phase">phase</a> &lt; 1.
-When used as the index to a table unit, this <a href="#//api/name/phase">phase</a> (multiplied by the desired table length) will cause it to behave like an oscillator.
-Note that <a href="#//api/name/phasor">phasor</a> is a special kind of integrator, accumulating <a href="#//api/name/phase">phase</a> increments that represent <a href="#//api/name/frequency">frequency</a> settings.</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithFrequency:phase:">&ndash;&nbsp;initWithFrequency:phase:</a></code>
-    <span class="tooltip"><p>Instantiates the <a href="#//api/name/phasor">phasor</a> with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
-    <span class="tooltip"><p>Instantiates the <a href="#//api/name/phasor">phasor</a> with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/phasor">+&nbsp;phasor</a></code>
-    <span class="tooltip"><p>Instantiates the phasor with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/frequency">&nbsp;&nbsp;frequency</a></code>
-    <span class="tooltip"><p>Frequency in cycles per second. [Default Value: 440]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalFrequency:">&ndash;&nbsp;setOptionalFrequency:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/frequency">frequency</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/phase">&nbsp;&nbsp;phase</a></code>
-    <span class="tooltip"><p>Initial phase, expressed as a fraction of a cycle (0 to 1). [Default Value: 0]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalPhase:">&ndash;&nbsp;setOptionalPhase:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/phase">phase</a></p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
+An internal phase is successively accumulated in accordance with the frequency to produce a moving phase value, normalized to lie in the range 0 <= phase < 1.
+When used as the index to a table unit, this phase (multiplied by the desired table length) will cause it to behave like an oscillator.
+Note that phasor is a special kind of integrator, accumulating phase increments that represent frequency settings.</p>
           
           
 
           
           
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/frequency" title="frequency"></a>
@@ -117,12 +43,12 @@ Note that <a href="#//api/name/phasor">phasor</a> is a special kind of integrato
   
   
   <div class="method-subsection brief-description">
-    <p>Frequency in cycles per second. [Default Value: 440]</p>
+    Frequency in cycles per second. [Default Value: 440]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *frequency</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *frequency{% endhighlight %}
 
     
   
@@ -153,12 +79,12 @@ Note that <a href="#//api/name/phasor">phasor</a> is a special kind of integrato
   
   
   <div class="method-subsection brief-description">
-    <p>Initial phase, expressed as a fraction of a cycle (0 to 1). [Default Value: 0]</p>
+    Initial phase, expressed as a fraction of a cycle (0 to 1). [Default Value: 0]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *phase</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *phase{% endhighlight %}
 
     
   
@@ -182,13 +108,11 @@ Note that <a href="#//api/name/phasor">phasor</a> is a special kind of integrato
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/phasor" title="phasor"></a>
@@ -197,12 +121,12 @@ Note that <a href="#//api/name/phasor">phasor</a> is a special kind of integrato
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the phasor with default values</p>
+    Instantiates the phasor with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)phasor</code></div>
+ {% highlight objective-c %}+ (instancetype)phasor{% endhighlight %}
 
     
   
@@ -226,13 +150,11 @@ Note that <a href="#//api/name/phasor">phasor</a> is a special kind of integrato
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/init" title="init"></a>
@@ -241,12 +163,12 @@ Note that <a href="#//api/name/phasor">phasor</a> is a special kind of integrato
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the <a href="#//api/name/phasor">phasor</a> with default values</p>
+    Instantiates the phasor with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
+ {% highlight objective-c %}- (instancetype)init{% endhighlight %}
 
     
   
@@ -277,29 +199,24 @@ Note that <a href="#//api/name/phasor">phasor</a> is a special kind of integrato
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the <a href="#//api/name/phasor">phasor</a> with all values</p>
+    Instantiates the phasor with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFrequency:(AKParameter *)<em>frequency</em> phase:(AKConstant *)<em>phase</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithFrequency:(AKParameter *)frequency phase:(AKConstant *)phase{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>frequency</em></dt>
-      <dd><p>Frequency in cycles per second. [Default Value: 440]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>frequency</strong>:
+      Frequency in cycles per second. [Default Value: 440]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>phase</em></dt>
-      <dd><p>Initial <a href="#//api/name/phase">phase</a>, expressed as a fraction of a cycle (0 to 1). [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>phase</strong>:
+      Initial phase, expressed as a fraction of a cycle (0 to 1). [Default Value: 0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -328,24 +245,21 @@ Note that <a href="#//api/name/phasor">phasor</a> is a special kind of integrato
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/frequency">frequency</a></p>
+    Set an optional frequency
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalFrequency:(AKParameter *)<em>frequency</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalFrequency:(AKParameter *)frequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>frequency</em></dt>
-      <dd><p>Frequency in cycles per second. [Default Value: 440]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>frequency</strong>:
+      Frequency in cycles per second. [Default Value: 440]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -374,24 +288,21 @@ Note that <a href="#//api/name/phasor">phasor</a> is a special kind of integrato
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/phase">phase</a></p>
+    Set an optional phase
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalPhase:(AKConstant *)<em>phase</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalPhase:(AKConstant *)phase{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>phase</em></dt>
-      <dd><p>Initial <a href="#//api/name/phase">phase</a>, expressed as a fraction of a cycle (0 to 1). [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>phase</strong>:
+      Initial phase, expressed as a fraction of a cycle (0 to 1). [Default Value: 0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -413,7 +324,6 @@ Note that <a href="#//api/name/phasor">phasor</a> is a special kind of integrato
   
 </div>
             
-          </div>
           
           
         </div>

@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKDCBlock
 title: AKDCBlock
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKDCBlock</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,79 +16,23 @@ title: AKDCBlock
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKDCBlock.h<br />AKDCBlock.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>A DC blocking filter.</p>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>A DC blocking filter.
 
-<p>{&ldquo;Implements the DC blocking filter&rdquo;=>&ldquo;Y[i] = X[i] - X[i-1] + (i<a href="#//api/name/gain">gain</a> * Y[i-1])  Based on work by Perry Cook.&rdquo;}</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithInput:gain:">&ndash;&nbsp;initWithInput:gain:</a></code>
-    <span class="tooltip"><p>Instantiates the dc block with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithInput:">&ndash;&nbsp;initWithInput:</a></code>
-    <span class="tooltip"><p>Instantiates the dc block with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/filterWithInput:">+&nbsp;filterWithInput:</a></code>
-    <span class="tooltip"><p>Instantiates the dc block with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/gain">&nbsp;&nbsp;gain</a></code>
-    <span class="tooltip"><p>The gain of the filter, which defaults to 0.99. [Default Value: 0.99]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalGain:">&ndash;&nbsp;setOptionalGain:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/gain">gain</a></p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
+{"Implements the DC blocking filter"=>"Y[i] = X[i] - X[i-1] + (igain * Y[i-1])  Based on work by Perry Cook."}</p>
           
           
 
           
           
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/gain" title="gain"></a>
@@ -101,12 +41,12 @@ title: AKDCBlock
   
   
   <div class="method-subsection brief-description">
-    <p>The gain of the filter, which defaults to 0.99. [Default Value: 0.99]</p>
+    The gain of the filter, which defaults to 0.99. [Default Value: 0.99]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *gain</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *gain{% endhighlight %}
 
     
   
@@ -130,13 +70,11 @@ title: AKDCBlock
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/filterWithInput:" title="filterWithInput:"></a>
@@ -145,24 +83,21 @@ title: AKDCBlock
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the dc block with default values</p>
+    Instantiates the dc block with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)filterWithInput:(AKParameter *)<em>input</em></code></div>
+ {% highlight objective-c %}+ (instancetype)filterWithInput:(AKParameter *)input{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>Input audio signal.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input audio signal.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -184,13 +119,11 @@ title: AKDCBlock
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/initWithInput:" title="initWithInput:"></a>
@@ -199,24 +132,21 @@ title: AKDCBlock
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the dc block with default values</p>
+    Instantiates the dc block with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>Input audio signal.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input audio signal.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -245,29 +175,24 @@ title: AKDCBlock
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the dc block with all values</p>
+    Instantiates the dc block with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> gain:(AKConstant *)<em>gain</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input gain:(AKConstant *)gain{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>Input audio signal. [Default Value: ]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input audio signal. [Default Value: ]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>gain</em></dt>
-      <dd><p>The <a href="#//api/name/gain">gain</a> of the filter, which defaults to 0.99. [Default Value: 0.99]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>gain</strong>:
+      The gain of the filter, which defaults to 0.99. [Default Value: 0.99]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -296,24 +221,21 @@ title: AKDCBlock
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/gain">gain</a></p>
+    Set an optional gain
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalGain:(AKConstant *)<em>gain</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalGain:(AKConstant *)gain{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>gain</em></dt>
-      <dd><p>The <a href="#//api/name/gain">gain</a> of the filter, which defaults to 0.99. [Default Value: 0.99]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>gain</strong>:
+      The gain of the filter, which defaults to 0.99. [Default Value: 0.99]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -335,7 +257,6 @@ title: AKDCBlock
   
 </div>
             
-          </div>
           
           
         </div>

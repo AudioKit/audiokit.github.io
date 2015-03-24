@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKStereoAudio
 title: AKStereoAudio
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKStereoAudio</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,98 +16,21 @@ title: AKStereoAudio
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKStereoAudio.h<br />AKStereoAudio.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>Stereo Audio Pair</p>
-          </div>
           
           
 
           
           
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/leftOutput">&nbsp;&nbsp;leftOutput</a></code>
-    <span class="tooltip"><p>The output to the left channel.</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/rightOutput">&nbsp;&nbsp;rightOutput</a></code>
-    <span class="tooltip"><p>The output to the right channel.</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithLeftAudio:rightAudio:">&ndash;&nbsp;initWithLeftAudio:rightAudio:</a></code>
-    <span class="tooltip"><p>Create an audio pair from left and right inputs</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/resetID">+&nbsp;resetID</a></code>
-    <span class="tooltip"><p>Allows the unique identifying integer to be reset so that the numbers don&rsquo;t increment indefinitely.</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/stereoFromMono:">+&nbsp;stereoFromMono:</a></code>
-    <span class="tooltip"><p>Quick and dirty way to get a stereo signal from a mono.</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/globalParameter">+&nbsp;globalParameter</a></code>
-    <span class="tooltip"><p>Create a parameter available to all instruments in the orchestra.</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/globalParameterWithString:">+&nbsp;globalParameterWithString:</a></code>
-    <span class="tooltip"><p>Create a parameter available to all instruments in the orchestra.</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/scaledBy:">&ndash;&nbsp;scaledBy:</a></code>
-    <span class="tooltip"><p>Scale both sides of an audio pair equally.</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/leftOutput" title="leftOutput"></a>
@@ -120,12 +39,12 @@ title: AKStereoAudio
   
   
   <div class="method-subsection brief-description">
-    <p>The output to the left channel.</p>
+    The output to the left channel.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *leftOutput</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *leftOutput{% endhighlight %}
 
     
   
@@ -156,12 +75,12 @@ title: AKStereoAudio
   
   
   <div class="method-subsection brief-description">
-    <p>The output to the right channel.</p>
+    The output to the right channel.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *rightOutput</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *rightOutput{% endhighlight %}
 
     
   
@@ -185,13 +104,11 @@ title: AKStereoAudio
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/globalParameter" title="globalParameter"></a>
@@ -200,12 +117,12 @@ title: AKStereoAudio
   
   
   <div class="method-subsection brief-description">
-    <p>Create a parameter available to all instruments in the orchestra.</p>
+    Create a parameter available to all instruments in the orchestra.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)globalParameter</code></div>
+ {% highlight objective-c %}+ (instancetype)globalParameter{% endhighlight %}
 
     
   
@@ -236,24 +153,21 @@ title: AKStereoAudio
   
   
   <div class="method-subsection brief-description">
-    <p>Create a parameter available to all instruments in the orchestra.</p>
+    Create a parameter available to all instruments in the orchestra.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)globalParameterWithString:(NSString *)<em>name</em></code></div>
+ {% highlight objective-c %}+ (instancetype)globalParameterWithString:(NSString *)name{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>name</em></dt>
-      <dd><p>The name of the parameter as it should appear in the output File.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>name</strong>:
+      The name of the parameter as it should appear in the output File.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -282,12 +196,12 @@ title: AKStereoAudio
   
   
   <div class="method-subsection brief-description">
-    <p>Allows the unique identifying integer to be reset so that the numbers don&rsquo;t increment indefinitely.</p>
+    Allows the unique identifying integer to be reset so that the numbers don't increment indefinitely.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (void)resetID</code></div>
+ {% highlight objective-c %}+ (void)resetID{% endhighlight %}
 
     
   
@@ -318,24 +232,21 @@ title: AKStereoAudio
   
   
   <div class="method-subsection brief-description">
-    <p>Quick and dirty way to get a stereo signal from a mono.</p>
+    Quick and dirty way to get a stereo signal from a mono.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)stereoFromMono:(AKParameter *)<em>mono</em></code></div>
+ {% highlight objective-c %}+ (instancetype)stereoFromMono:(AKParameter *)mono{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>mono</em></dt>
-      <dd><p>Regular mono audio source.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>mono</strong>:
+      Regular mono audio source.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -357,13 +268,11 @@ title: AKStereoAudio
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/initWithLeftAudio:rightAudio:" title="initWithLeftAudio:rightAudio:"></a>
@@ -372,29 +281,24 @@ title: AKStereoAudio
   
   
   <div class="method-subsection brief-description">
-    <p>Create an audio pair from left and right inputs</p>
+    Create an audio pair from left and right inputs
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithLeftAudio:(AKParameter *)<em>leftAudio</em> rightAudio:(AKParameter *)<em>rightAudio</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithLeftAudio:(AKParameter *)leftAudio rightAudio:(AKParameter *)rightAudio{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>leftAudio</em></dt>
-      <dd><p>Left channel input</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>leftAudio</strong>:
+      Left channel input</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>rightAudio</em></dt>
-      <dd><p>Rigt channel input</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>rightAudio</strong>:
+      Rigt channel input</li>
     
-  </div>
+    </ul>
   
 
   
@@ -423,24 +327,21 @@ title: AKStereoAudio
   
   
   <div class="method-subsection brief-description">
-    <p>Scale both sides of an audio pair equally.</p>
+    Scale both sides of an audio pair equally.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)scaledBy:(AKParameter *)<em>scalingFactor</em></code></div>
+ {% highlight objective-c %}- (instancetype)scaledBy:(AKParameter *)scalingFactor{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>scalingFactor</em></dt>
-      <dd><p>Amount by which to scale the audio.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>scalingFactor</strong>:
+      Amount by which to scale the audio.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -462,7 +363,6 @@ title: AKStereoAudio
   
 </div>
             
-          </div>
           
           
         </div>

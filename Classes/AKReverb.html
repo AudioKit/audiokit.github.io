@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKReverb
 title: AKReverb
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKReverb</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKStereoAudio.html">AKStereoAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,114 +16,23 @@ title: AKReverb
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKReverb.h<br />AKReverb.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>8 delay line stereo FDN reverb</p>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>8 delay line stereo FDN reverb
 
-<p>8 delay line stereo FDN reverb, with <a href="#//api/name/feedback">feedback</a> matrix based upon physical modeling scattering junction of 8 lossless waveguides of equal characteristic impedance.</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithInput:feedback:cutoffFrequency:">&ndash;&nbsp;initWithInput:feedback:cutoffFrequency:</a></code>
-    <span class="tooltip"><p>Instantiates the reverb with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithInput:">&ndash;&nbsp;initWithInput:</a></code>
-    <span class="tooltip"><p>Instantiates the reverb with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/reverbWithInput:">+&nbsp;reverbWithInput:</a></code>
-    <span class="tooltip"><p>Instantiates the reverb with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithStereoInput:feedback:cutoffFrequency:">&ndash;&nbsp;initWithStereoInput:feedback:cutoffFrequency:</a></code>
-    <span class="tooltip"><p>Instantiates the reverb with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithStereoInput:">&ndash;&nbsp;initWithStereoInput:</a></code>
-    <span class="tooltip"><p>Instantiates the reverb with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/reverbWithStereoInput:">+&nbsp;reverbWithStereoInput:</a></code>
-    <span class="tooltip"><p>Instantiates the reverb with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/feedback">&nbsp;&nbsp;feedback</a></code>
-    <span class="tooltip"><p>Feedback level in the range 0 to 1. 0.6 gives a good small &lsquo;live&rsquo; room sound, 0.8 a small hall, and 0.9 a large hall. A setting of exactly 1 means infinite length, while higher values will make the opcode unstable. [Default Value: 0.6]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalFeedback:">&ndash;&nbsp;setOptionalFeedback:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/feedback">feedback</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/cutoffFrequency">&nbsp;&nbsp;cutoffFrequency</a></code>
-    <span class="tooltip"><p>comment [Default Value: 4000]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalCutoffFrequency:">&ndash;&nbsp;setOptionalCutoffFrequency:</a></code>
-    <span class="tooltip"><p>Set an optional cutoff frequency</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
+8 delay line stereo FDN reverb, with feedback matrix based upon physical modeling scattering junction of 8 lossless waveguides of equal characteristic impedance.</p>
           
           
 
           
           
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/cutoffFrequency" title="cutoffFrequency"></a>
@@ -136,12 +41,12 @@ title: AKReverb
   
   
   <div class="method-subsection brief-description">
-    <p>comment [Default Value: 4000]</p>
+    comment [Default Value: 4000]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *cutoffFrequency</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *cutoffFrequency{% endhighlight %}
 
     
   
@@ -172,12 +77,12 @@ title: AKReverb
   
   
   <div class="method-subsection brief-description">
-    <p>Feedback level in the range 0 to 1. 0.6 gives a good small &lsquo;live&rsquo; room sound, 0.8 a small hall, and 0.9 a large hall. A setting of exactly 1 means infinite length, while higher values will make the opcode unstable. [Default Value: 0.6]</p>
+    Feedback level in the range 0 to 1. 0.6 gives a good small 'live' room sound, 0.8 a small hall, and 0.9 a large hall. A setting of exactly 1 means infinite length, while higher values will make the opcode unstable. [Default Value: 0.6]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *feedback</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *feedback{% endhighlight %}
 
     
   
@@ -201,13 +106,11 @@ title: AKReverb
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/reverbWithInput:" title="reverbWithInput:"></a>
@@ -216,24 +119,21 @@ title: AKReverb
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the reverb with default values</p>
+    Instantiates the reverb with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)reverbWithInput:(AKParameter *)<em>input</em></code></div>
+ {% highlight objective-c %}+ (instancetype)reverbWithInput:(AKParameter *)input{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>Input for the left channel</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input for the left channel</li>
     
-  </div>
+    </ul>
   
 
   
@@ -262,24 +162,21 @@ title: AKReverb
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the reverb with default values</p>
+    Instantiates the reverb with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)reverbWithStereoInput:(AKStereoAudio *)<em>input</em></code></div>
+ {% highlight objective-c %}+ (instancetype)reverbWithStereoInput:(AKStereoAudio *)input{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>Input to the reverberator.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input to the reverberator.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -301,13 +198,11 @@ title: AKReverb
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/initWithInput:" title="initWithInput:"></a>
@@ -316,24 +211,21 @@ title: AKReverb
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the reverb with default values</p>
+    Instantiates the reverb with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>Audio input</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Audio input</li>
     
-  </div>
+    </ul>
   
 
   
@@ -362,34 +254,27 @@ title: AKReverb
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the reverb with all values</p>
+    Instantiates the reverb with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> feedback:(AKParameter *)<em>feedback</em> cutoffFrequency:(AKParameter *)<em>cutoffFrequency</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input feedback:(AKParameter *)feedback cutoffFrequency:(AKParameter *)cutoffFrequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>Audio input</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Audio input</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>feedback</em></dt>
-      <dd><p>Feedback level in the range 0 to 1. 0.6 gives a good small &lsquo;live&rsquo; room sound, 0.8 a small hall, and 0.9 a large hall. A setting of exactly 1 means infinite length, while higher values will make the opcode unstable. Updated at Control-rate. [Default Value: 0.6]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>feedback</strong>:
+      Feedback level in the range 0 to 1. 0.6 gives a good small 'live' room sound, 0.8 a small hall, and 0.9 a large hall. A setting of exactly 1 means infinite length, while higher values will make the opcode unstable. Updated at Control-rate. [Default Value: 0.6]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>cutoffFrequency</em></dt>
-      <dd><p>comment Updated at Control-rate. [Default Value: 4000]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>cutoffFrequency</strong>:
+      comment Updated at Control-rate. [Default Value: 4000]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -418,24 +303,21 @@ title: AKReverb
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the reverb with default values</p>
+    Instantiates the reverb with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithStereoInput:(AKStereoAudio *)<em>input</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithStereoInput:(AKStereoAudio *)input{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>Input to the reverberator.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input to the reverberator.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -464,34 +346,27 @@ title: AKReverb
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the reverb with all values</p>
+    Instantiates the reverb with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithStereoInput:(AKStereoAudio *)<em>input</em> feedback:(AKParameter *)<em>feedback</em> cutoffFrequency:(AKParameter *)<em>cutoffFrequency</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithStereoInput:(AKStereoAudio *)input feedback:(AKParameter *)feedback cutoffFrequency:(AKParameter *)cutoffFrequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>Stereo input to the reverberator.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Stereo input to the reverberator.</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>feedback</em></dt>
-      <dd><p>Feedback level in the range 0 to 1. 0.6 gives a good small &lsquo;live&rsquo; room sound, 0.8 a small hall, and 0.9 a large hall. A setting of exactly 1 means infinite length, while higher values will make the opcode unstable. Updated at Control-rate. [Default Value: 0.6]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>feedback</strong>:
+      Feedback level in the range 0 to 1. 0.6 gives a good small 'live' room sound, 0.8 a small hall, and 0.9 a large hall. A setting of exactly 1 means infinite length, while higher values will make the opcode unstable. Updated at Control-rate. [Default Value: 0.6]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>cutoffFrequency</em></dt>
-      <dd><p>comment Updated at Control-rate. [Default Value: 4000]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>cutoffFrequency</strong>:
+      comment Updated at Control-rate. [Default Value: 4000]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -520,24 +395,21 @@ title: AKReverb
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional cutoff frequency</p>
+    Set an optional cutoff frequency
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalCutoffFrequency:(AKParameter *)<em>cutoffFrequency</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalCutoffFrequency:(AKParameter *)cutoffFrequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>cutoffFrequency</em></dt>
-      <dd><p>comment Updated at Control-rate. [Default Value: 4000]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>cutoffFrequency</strong>:
+      comment Updated at Control-rate. [Default Value: 4000]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -566,24 +438,21 @@ title: AKReverb
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/feedback">feedback</a></p>
+    Set an optional feedback
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalFeedback:(AKParameter *)<em>feedback</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalFeedback:(AKParameter *)feedback{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>feedback</em></dt>
-      <dd><p>Feedback level in the range 0 to 1. 0.6 gives a good small &lsquo;live&rsquo; room sound, 0.8 a small hall, and 0.9 a large hall. A setting of exactly 1 means infinite length, while higher values will make the opcode unstable. Updated at Control-rate. [Default Value: 0.6]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>feedback</strong>:
+      Feedback level in the range 0 to 1. 0.6 gives a good small 'live' room sound, 0.8 a small hall, and 0.9 a large hall. A setting of exactly 1 means infinite length, while higher values will make the opcode unstable. Updated at Control-rate. [Default Value: 0.6]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -605,7 +474,6 @@ title: AKReverb
   
 </div>
             
-          </div>
           
           
         </div>

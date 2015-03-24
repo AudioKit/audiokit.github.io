@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKCompressor
 title: AKCompressor
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKCompressor</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,165 +16,25 @@ title: AKCompressor
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKCompressor.h<br />AKCompressor.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Compress, limit, expand, duck or gate an audio signal.</p>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Compress, limit, expand, duck or gate an audio signal.
 
-<p>This unit functions as an audio compressor, limiter, expander, or noise gate, using either soft-knee or hard-knee mapping, and with dynamically variable performance characteristics. It takes two audio input signals, affectedAudioSource and controllingAudioSource, the first of which is modified by a running analysis of the second. Both signals can be the same, or the first can be modified by a different controlling signal.
-This operation first examines the controllingAudioSource by performing envelope detection. This is directed by two control values <a href="#//api/name/attackTime">attackTime</a> and <a href="#//api/name/releaseTime">releaseTime</a>, defining the attack and release time constants (in seconds) of the detector. The detector rides the peaks (not the RMS) of the control signal. Typical values are .01 and .1, the latter usually being similar to <a href="#//api/name/lookAheadTime">lookAheadTime</a>.
+This unit functions as an audio compressor, limiter, expander, or noise gate, using either soft-knee or hard-knee mapping, and with dynamically variable performance characteristics. It takes two audio input signals, affectedAudioSource and controllingAudioSource, the first of which is modified by a running analysis of the second. Both signals can be the same, or the first can be modified by a different controlling signal.
+This operation first examines the controllingAudioSource by performing envelope detection. This is directed by two control values attackTime and releaseTime, defining the attack and release time constants (in seconds) of the detector. The detector rides the peaks (not the RMS) of the control signal. Typical values are .01 and .1, the latter usually being similar to lookAheadTime.
 The running envelope is next converted to decibels, then passed through a mapping function to determine what compresser action (if any) should be taken. The mapping function is defined by four decibel control values. These are given as positive values, where 0 db corresponds to an amplitude of 1, and 90 db corresponds to an amplitude of 32768.</p>
-          </div>
           
           
 
           
           
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithInput:controllingInput:threshold:lowKnee:highKnee:compressionRatio:attackTime:releaseTime:lookAheadTime:">&ndash;&nbsp;initWithInput:controllingInput:threshold:lowKnee:highKnee:compressionRatio:attackTime:releaseTime:lookAheadTime:</a></code>
-    <span class="tooltip"><p>Instantiates the compressor with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithInput:controllingInput:">&ndash;&nbsp;initWithInput:controllingInput:</a></code>
-    <span class="tooltip"><p>Instantiates the compressor with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/compressorWithInput:controllingInput:">+&nbsp;compressorWithInput:controllingInput:</a></code>
-    <span class="tooltip"><p>Instantiates the compressor with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/threshold">&nbsp;&nbsp;threshold</a></code>
-    <span class="tooltip"><p>Sets the lowest decibel level that will be allowed through. Normally 0 or less, but if higher the threshold will begin removing low-level signal energy such as background noise. [Default Value: 0]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalThreshold:">&ndash;&nbsp;setOptionalThreshold:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/threshold">threshold</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/lowKnee">&nbsp;&nbsp;lowKnee</a></code>
-    <span class="tooltip"><p>Decibel break-point denoting where compression or expansion will begin. These set the boundaries of a soft-knee curve joining the low-amplitude 1:1 line and the higher-amplitude compression ratio line. Typical values are 48 and 60 db. If the two breakpoints are equal, a hard-knee (angled) map will result. [Default Value: 48]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalLowKnee:">&ndash;&nbsp;setOptionalLowKnee:</a></code>
-    <span class="tooltip"><p>Set an optional low knee</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/highKnee">&nbsp;&nbsp;highKnee</a></code>
-    <span class="tooltip"><p>Decibel break-points denoting where compression or expansion will begin. These set the boundaries of a soft-knee curve joining the low-amplitude 1:1 line and the higher-amplitude compression ratio line. Typical values are 48 and 60 db. If the two breakpoints are equal, a hard-knee (angled) map will result. [Default Value: 60]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalHighKnee:">&ndash;&nbsp;setOptionalHighKnee:</a></code>
-    <span class="tooltip"><p>Set an optional high knee</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/compressionRatio">&nbsp;&nbsp;compressionRatio</a></code>
-    <span class="tooltip"><p>Ratio of compression when the signal level is above the knee. The value 2 will advance the output just one decibel for every input gain of two; 3 will advance just one in three; 20 just one in twenty, etc. Inverse ratios will cause signal expansion: .5 gives two for one, .25 four for one, etc. The value 1 will result in no change. [Default Value: 1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalCompressionRatio:">&ndash;&nbsp;setOptionalCompressionRatio:</a></code>
-    <span class="tooltip"><p>Set an optional compression ratio</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/attackTime">&nbsp;&nbsp;attackTime</a></code>
-    <span class="tooltip"><p>Attack time in seconds. [Default Value: 0.1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalAttackTime:">&ndash;&nbsp;setOptionalAttackTime:</a></code>
-    <span class="tooltip"><p>Set an optional attack time</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/releaseTime">&nbsp;&nbsp;releaseTime</a></code>
-    <span class="tooltip"><p>Release time in seconds. [Default Value: 1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalReleaseTime:">&ndash;&nbsp;setOptionalReleaseTime:</a></code>
-    <span class="tooltip"><p>Set an optional release time</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/lookAheadTime">&nbsp;&nbsp;lookAheadTime</a></code>
-    <span class="tooltip"><p>Look-ahead time in seconds, by which an internal envelope release can sense what is coming. This induces a delay between input and output, but a small amount of lookahead improves the performance of the envelope detector. Typical value is .05 seconds, sufficient to sense the peaks of the lowest frequency in the controllingAudioSource. [Default Value: 0.05]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalLookAheadTime:">&ndash;&nbsp;setOptionalLookAheadTime:</a></code>
-    <span class="tooltip"><p>Set an optional look ahead time</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/attackTime" title="attackTime"></a>
@@ -187,12 +43,12 @@ The running envelope is next converted to decibels, then passed through a mappin
   
   
   <div class="method-subsection brief-description">
-    <p>Attack time in seconds. [Default Value: 0.1]</p>
+    Attack time in seconds. [Default Value: 0.1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *attackTime</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *attackTime{% endhighlight %}
 
     
   
@@ -223,12 +79,12 @@ The running envelope is next converted to decibels, then passed through a mappin
   
   
   <div class="method-subsection brief-description">
-    <p>Ratio of compression when the signal level is above the knee. The value 2 will advance the output just one decibel for every input gain of two; 3 will advance just one in three; 20 just one in twenty, etc. Inverse ratios will cause signal expansion: .5 gives two for one, .25 four for one, etc. The value 1 will result in no change. [Default Value: 1]</p>
+    Ratio of compression when the signal level is above the knee. The value 2 will advance the output just one decibel for every input gain of two; 3 will advance just one in three; 20 just one in twenty, etc. Inverse ratios will cause signal expansion: .5 gives two for one, .25 four for one, etc. The value 1 will result in no change. [Default Value: 1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *compressionRatio</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *compressionRatio{% endhighlight %}
 
     
   
@@ -259,12 +115,12 @@ The running envelope is next converted to decibels, then passed through a mappin
   
   
   <div class="method-subsection brief-description">
-    <p>Decibel break-points denoting where compression or expansion will begin. These set the boundaries of a soft-knee curve joining the low-amplitude 1:1 line and the higher-amplitude compression ratio line. Typical values are 48 and 60 db. If the two breakpoints are equal, a hard-knee (angled) map will result. [Default Value: 60]</p>
+    Decibel break-points denoting where compression or expansion will begin. These set the boundaries of a soft-knee curve joining the low-amplitude 1:1 line and the higher-amplitude compression ratio line. Typical values are 48 and 60 db. If the two breakpoints are equal, a hard-knee (angled) map will result. [Default Value: 60]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *highKnee</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *highKnee{% endhighlight %}
 
     
   
@@ -295,12 +151,12 @@ The running envelope is next converted to decibels, then passed through a mappin
   
   
   <div class="method-subsection brief-description">
-    <p>Look-ahead time in seconds, by which an internal envelope release can sense what is coming. This induces a delay between input and output, but a small amount of lookahead improves the performance of the envelope detector. Typical value is .05 seconds, sufficient to sense the peaks of the lowest frequency in the controllingAudioSource. [Default Value: 0.05]</p>
+    Look-ahead time in seconds, by which an internal envelope release can sense what is coming. This induces a delay between input and output, but a small amount of lookahead improves the performance of the envelope detector. Typical value is .05 seconds, sufficient to sense the peaks of the lowest frequency in the controllingAudioSource. [Default Value: 0.05]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *lookAheadTime</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *lookAheadTime{% endhighlight %}
 
     
   
@@ -331,12 +187,12 @@ The running envelope is next converted to decibels, then passed through a mappin
   
   
   <div class="method-subsection brief-description">
-    <p>Decibel break-point denoting where compression or expansion will begin. These set the boundaries of a soft-knee curve joining the low-amplitude 1:1 line and the higher-amplitude compression ratio line. Typical values are 48 and 60 db. If the two breakpoints are equal, a hard-knee (angled) map will result. [Default Value: 48]</p>
+    Decibel break-point denoting where compression or expansion will begin. These set the boundaries of a soft-knee curve joining the low-amplitude 1:1 line and the higher-amplitude compression ratio line. Typical values are 48 and 60 db. If the two breakpoints are equal, a hard-knee (angled) map will result. [Default Value: 48]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *lowKnee</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *lowKnee{% endhighlight %}
 
     
   
@@ -367,12 +223,12 @@ The running envelope is next converted to decibels, then passed through a mappin
   
   
   <div class="method-subsection brief-description">
-    <p>Release time in seconds. [Default Value: 1]</p>
+    Release time in seconds. [Default Value: 1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *releaseTime</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *releaseTime{% endhighlight %}
 
     
   
@@ -403,12 +259,12 @@ The running envelope is next converted to decibels, then passed through a mappin
   
   
   <div class="method-subsection brief-description">
-    <p>Sets the lowest decibel level that will be allowed through. Normally 0 or less, but if higher the threshold will begin removing low-level signal energy such as background noise. [Default Value: 0]</p>
+    Sets the lowest decibel level that will be allowed through. Normally 0 or less, but if higher the threshold will begin removing low-level signal energy such as background noise. [Default Value: 0]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *threshold</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *threshold{% endhighlight %}
 
     
   
@@ -432,13 +288,11 @@ The running envelope is next converted to decibels, then passed through a mappin
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/compressorWithInput:controllingInput:" title="compressorWithInput:controllingInput:"></a>
@@ -447,29 +301,24 @@ The running envelope is next converted to decibels, then passed through a mappin
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the compressor with default values</p>
+    Instantiates the compressor with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)compressorWithInput:(AKParameter *)<em>input</em> controllingInput:(AKParameter *)<em>controllingInput</em></code></div>
+ {% highlight objective-c %}+ (instancetype)compressorWithInput:(AKParameter *)input controllingInput:(AKParameter *)controllingInput{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>The input signal that will be compressed.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      The input signal that will be compressed.</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>controllingInput</em></dt>
-      <dd><p>The signal that defines the compression.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>controllingInput</strong>:
+      The signal that defines the compression.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -491,13 +340,11 @@ The running envelope is next converted to decibels, then passed through a mappin
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/initWithInput:controllingInput:" title="initWithInput:controllingInput:"></a>
@@ -506,29 +353,24 @@ The running envelope is next converted to decibels, then passed through a mappin
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the compressor with default values</p>
+    Instantiates the compressor with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> controllingInput:(AKParameter *)<em>controllingInput</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input controllingInput:(AKParameter *)controllingInput{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>The input signal that will be compressed.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      The input signal that will be compressed.</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>controllingInput</em></dt>
-      <dd><p>The signal that defines the compression.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>controllingInput</strong>:
+      The signal that defines the compression.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -557,64 +399,45 @@ The running envelope is next converted to decibels, then passed through a mappin
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the compressor with all values</p>
+    Instantiates the compressor with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> controllingInput:(AKParameter *)<em>controllingInput</em> threshold:(AKParameter *)<em>threshold</em> lowKnee:(AKParameter *)<em>lowKnee</em> highKnee:(AKParameter *)<em>highKnee</em> compressionRatio:(AKParameter *)<em>compressionRatio</em> attackTime:(AKParameter *)<em>attackTime</em> releaseTime:(AKParameter *)<em>releaseTime</em> lookAheadTime:(AKConstant *)<em>lookAheadTime</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input controllingInput:(AKParameter *)controllingInput threshold:(AKParameter *)threshold lowKnee:(AKParameter *)lowKnee highKnee:(AKParameter *)highKnee compressionRatio:(AKParameter *)compressionRatio attackTime:(AKParameter *)attackTime releaseTime:(AKParameter *)releaseTime lookAheadTime:(AKConstant *)lookAheadTime{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>The input signal that will be compressed. [Default Value: ]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      The input signal that will be compressed. [Default Value: ]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>controllingInput</em></dt>
-      <dd><p>The signal that defines the compression. [Default Value: ]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>controllingInput</strong>:
+      The signal that defines the compression. [Default Value: ]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>threshold</em></dt>
-      <dd><p>Sets the lowest decibel level that will be allowed through. Normally 0 or less, but if higher the <a href="#//api/name/threshold">threshold</a> will begin removing low-level signal energy such as background noise. Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>threshold</strong>:
+      Sets the lowest decibel level that will be allowed through. Normally 0 or less, but if higher the threshold will begin removing low-level signal energy such as background noise. Updated at Control-rate. [Default Value: 0]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>lowKnee</em></dt>
-      <dd><p>Decibel break-point denoting where compression or expansion will begin. These set the boundaries of a soft-knee curve joining the low-amplitude 1:1 line and the higher-amplitude compression ratio line. Typical values are 48 and 60 db. If the two breakpoints are equal, a hard-knee (angled) map will result. Updated at Control-rate. [Default Value: 48]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>lowKnee</strong>:
+      Decibel break-point denoting where compression or expansion will begin. These set the boundaries of a soft-knee curve joining the low-amplitude 1:1 line and the higher-amplitude compression ratio line. Typical values are 48 and 60 db. If the two breakpoints are equal, a hard-knee (angled) map will result. Updated at Control-rate. [Default Value: 48]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>highKnee</em></dt>
-      <dd><p>Decibel break-points denoting where compression or expansion will begin. These set the boundaries of a soft-knee curve joining the low-amplitude 1:1 line and the higher-amplitude compression ratio line. Typical values are 48 and 60 db. If the two breakpoints are equal, a hard-knee (angled) map will result. Updated at Control-rate. [Default Value: 60]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>highKnee</strong>:
+      Decibel break-points denoting where compression or expansion will begin. These set the boundaries of a soft-knee curve joining the low-amplitude 1:1 line and the higher-amplitude compression ratio line. Typical values are 48 and 60 db. If the two breakpoints are equal, a hard-knee (angled) map will result. Updated at Control-rate. [Default Value: 60]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>compressionRatio</em></dt>
-      <dd><p>Ratio of compression when the signal level is above the knee. The value 2 will advance the output just one decibel for every input gain of two; 3 will advance just one in three; 20 just one in twenty, etc. Inverse ratios will cause signal expansion: .5 gives two for one, .25 four for one, etc. The value 1 will result in no change. Updated at Control-rate. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>compressionRatio</strong>:
+      Ratio of compression when the signal level is above the knee. The value 2 will advance the output just one decibel for every input gain of two; 3 will advance just one in three; 20 just one in twenty, etc. Inverse ratios will cause signal expansion: .5 gives two for one, .25 four for one, etc. The value 1 will result in no change. Updated at Control-rate. [Default Value: 1]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>attackTime</em></dt>
-      <dd><p>Attack time in seconds. Updated at Control-rate. [Default Value: 0.1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>attackTime</strong>:
+      Attack time in seconds. Updated at Control-rate. [Default Value: 0.1]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>releaseTime</em></dt>
-      <dd><p>Release time in seconds. Updated at Control-rate. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>releaseTime</strong>:
+      Release time in seconds. Updated at Control-rate. [Default Value: 1]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>lookAheadTime</em></dt>
-      <dd><p>Look-ahead time in seconds, by which an internal envelope release can sense what is coming. This induces a delay between input and output, but a small amount of lookahead improves the performance of the envelope detector. Typical value is .05 seconds, sufficient to sense the peaks of the lowest frequency in the controllingAudioSource. [Default Value: 0.05]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>lookAheadTime</strong>:
+      Look-ahead time in seconds, by which an internal envelope release can sense what is coming. This induces a delay between input and output, but a small amount of lookahead improves the performance of the envelope detector. Typical value is .05 seconds, sufficient to sense the peaks of the lowest frequency in the controllingAudioSource. [Default Value: 0.05]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -643,24 +466,21 @@ The running envelope is next converted to decibels, then passed through a mappin
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional attack time</p>
+    Set an optional attack time
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalAttackTime:(AKParameter *)<em>attackTime</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalAttackTime:(AKParameter *)attackTime{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>attackTime</em></dt>
-      <dd><p>Attack time in seconds. Updated at Control-rate. [Default Value: 0.1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>attackTime</strong>:
+      Attack time in seconds. Updated at Control-rate. [Default Value: 0.1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -689,24 +509,21 @@ The running envelope is next converted to decibels, then passed through a mappin
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional compression ratio</p>
+    Set an optional compression ratio
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalCompressionRatio:(AKParameter *)<em>compressionRatio</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalCompressionRatio:(AKParameter *)compressionRatio{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>compressionRatio</em></dt>
-      <dd><p>Ratio of compression when the signal level is above the knee. The value 2 will advance the output just one decibel for every input gain of two; 3 will advance just one in three; 20 just one in twenty, etc. Inverse ratios will cause signal expansion: .5 gives two for one, .25 four for one, etc. The value 1 will result in no change. Updated at Control-rate. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>compressionRatio</strong>:
+      Ratio of compression when the signal level is above the knee. The value 2 will advance the output just one decibel for every input gain of two; 3 will advance just one in three; 20 just one in twenty, etc. Inverse ratios will cause signal expansion: .5 gives two for one, .25 four for one, etc. The value 1 will result in no change. Updated at Control-rate. [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -735,24 +552,21 @@ The running envelope is next converted to decibels, then passed through a mappin
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional high knee</p>
+    Set an optional high knee
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalHighKnee:(AKParameter *)<em>highKnee</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalHighKnee:(AKParameter *)highKnee{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>highKnee</em></dt>
-      <dd><p>Decibel break-points denoting where compression or expansion will begin. These set the boundaries of a soft-knee curve joining the low-amplitude 1:1 line and the higher-amplitude compression ratio line. Typical values are 48 and 60 db. If the two breakpoints are equal, a hard-knee (angled) map will result. Updated at Control-rate. [Default Value: 60]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>highKnee</strong>:
+      Decibel break-points denoting where compression or expansion will begin. These set the boundaries of a soft-knee curve joining the low-amplitude 1:1 line and the higher-amplitude compression ratio line. Typical values are 48 and 60 db. If the two breakpoints are equal, a hard-knee (angled) map will result. Updated at Control-rate. [Default Value: 60]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -781,24 +595,21 @@ The running envelope is next converted to decibels, then passed through a mappin
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional look ahead time</p>
+    Set an optional look ahead time
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalLookAheadTime:(AKConstant *)<em>lookAheadTime</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalLookAheadTime:(AKConstant *)lookAheadTime{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>lookAheadTime</em></dt>
-      <dd><p>Look-ahead time in seconds, by which an internal envelope release can sense what is coming. This induces a delay between input and output, but a small amount of lookahead improves the performance of the envelope detector. Typical value is .05 seconds, sufficient to sense the peaks of the lowest frequency in the controllingAudioSource. [Default Value: 0.05]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>lookAheadTime</strong>:
+      Look-ahead time in seconds, by which an internal envelope release can sense what is coming. This induces a delay between input and output, but a small amount of lookahead improves the performance of the envelope detector. Typical value is .05 seconds, sufficient to sense the peaks of the lowest frequency in the controllingAudioSource. [Default Value: 0.05]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -827,24 +638,21 @@ The running envelope is next converted to decibels, then passed through a mappin
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional low knee</p>
+    Set an optional low knee
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalLowKnee:(AKParameter *)<em>lowKnee</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalLowKnee:(AKParameter *)lowKnee{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>lowKnee</em></dt>
-      <dd><p>Decibel break-point denoting where compression or expansion will begin. These set the boundaries of a soft-knee curve joining the low-amplitude 1:1 line and the higher-amplitude compression ratio line. Typical values are 48 and 60 db. If the two breakpoints are equal, a hard-knee (angled) map will result. Updated at Control-rate. [Default Value: 48]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>lowKnee</strong>:
+      Decibel break-point denoting where compression or expansion will begin. These set the boundaries of a soft-knee curve joining the low-amplitude 1:1 line and the higher-amplitude compression ratio line. Typical values are 48 and 60 db. If the two breakpoints are equal, a hard-knee (angled) map will result. Updated at Control-rate. [Default Value: 48]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -873,24 +681,21 @@ The running envelope is next converted to decibels, then passed through a mappin
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional release time</p>
+    Set an optional release time
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalReleaseTime:(AKParameter *)<em>releaseTime</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalReleaseTime:(AKParameter *)releaseTime{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>releaseTime</em></dt>
-      <dd><p>Release time in seconds. Updated at Control-rate. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>releaseTime</strong>:
+      Release time in seconds. Updated at Control-rate. [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -919,24 +724,21 @@ The running envelope is next converted to decibels, then passed through a mappin
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/threshold">threshold</a></p>
+    Set an optional threshold
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalThreshold:(AKParameter *)<em>threshold</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalThreshold:(AKParameter *)threshold{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>threshold</em></dt>
-      <dd><p>Sets the lowest decibel level that will be allowed through. Normally 0 or less, but if higher the <a href="#//api/name/threshold">threshold</a> will begin removing low-level signal energy such as background noise. Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>threshold</strong>:
+      Sets the lowest decibel level that will be allowed through. Normally 0 or less, but if higher the threshold will begin removing low-level signal energy such as background noise. Updated at Control-rate. [Default Value: 0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -958,7 +760,6 @@ The running envelope is next converted to decibels, then passed through a mappin
   
 </div>
             
-          </div>
           
           
         </div>

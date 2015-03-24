@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKDroplet
 title: AKDroplet
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKDroplet</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,163 +16,23 @@ title: AKDroplet
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKDroplet.h<br />AKDroplet.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Semi-physical model of a water drop.</p>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Semi-physical model of a water drop.
 
-<p>This is one of the PhISEM percussion opcodes. PhISEM (Physically Informed Stochastic Event Modeling) is an algorithmic approach for simulating collisions of multiple independent sound producing objects.</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithIntensity:dampingFactor:energyReturn:mainResonantFrequency:firstResonantFrequency:secondResonantFrequency:amplitude:">&ndash;&nbsp;initWithIntensity:dampingFactor:energyReturn:mainResonantFrequency:firstResonantFrequency:secondResonantFrequency:amplitude:</a></code>
-    <span class="tooltip"><p>Instantiates the <a href="#//api/name/droplet">droplet</a> with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
-    <span class="tooltip"><p>Instantiates the <a href="#//api/name/droplet">droplet</a> with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/droplet">+&nbsp;droplet</a></code>
-    <span class="tooltip"><p>Instantiates the droplet with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/intensity">&nbsp;&nbsp;intensity</a></code>
-    <span class="tooltip"><p>The intensity of the dripping sound. [Default Value: 10]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalIntensity:">&ndash;&nbsp;setOptionalIntensity:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/intensity">intensity</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/dampingFactor">&nbsp;&nbsp;dampingFactor</a></code>
-    <span class="tooltip"><p>Damping factor where 0 is no damping and 1 is fully damped. [Default Value: 0.1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalDampingFactor:">&ndash;&nbsp;setOptionalDampingFactor:</a></code>
-    <span class="tooltip"><p>Set an optional damping factor</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/energyReturn">&nbsp;&nbsp;energyReturn</a></code>
-    <span class="tooltip"><p>Amount of energy to add back into the system. The value should be in range 0 to 1. [Default Value: 0.5]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalEnergyReturn:">&ndash;&nbsp;setOptionalEnergyReturn:</a></code>
-    <span class="tooltip"><p>Set an optional energy return</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/mainResonantFrequency">&nbsp;&nbsp;mainResonantFrequency</a></code>
-    <span class="tooltip"><p>The main resonant frequency. [Default Value: 450]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalMainResonantFrequency:">&ndash;&nbsp;setOptionalMainResonantFrequency:</a></code>
-    <span class="tooltip"><p>Set an optional main resonant frequency</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/firstResonantFrequency">&nbsp;&nbsp;firstResonantFrequency</a></code>
-    <span class="tooltip"><p>The first resonant frequency. [Default Value: 600]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalFirstResonantFrequency:">&ndash;&nbsp;setOptionalFirstResonantFrequency:</a></code>
-    <span class="tooltip"><p>Set an optional first resonant frequency</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/secondResonantFrequency">&nbsp;&nbsp;secondResonantFrequency</a></code>
-    <span class="tooltip"><p>The second resonant frequency. [Default Value: 750]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalSecondResonantFrequency:">&ndash;&nbsp;setOptionalSecondResonantFrequency:</a></code>
-    <span class="tooltip"><p>Set an optional second resonant frequency</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/amplitude">&nbsp;&nbsp;amplitude</a></code>
-    <span class="tooltip"><p>Amplitude of output. Since these instruments are stochastic this is only an approximation. [Default Value: 1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalAmplitude:">&ndash;&nbsp;setOptionalAmplitude:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
+This is one of the PhISEM percussion opcodes. PhISEM (Physically Informed Stochastic Event Modeling) is an algorithmic approach for simulating collisions of multiple independent sound producing objects.</p>
           
           
 
           
           
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/amplitude" title="amplitude"></a>
@@ -185,12 +41,12 @@ title: AKDroplet
   
   
   <div class="method-subsection brief-description">
-    <p>Amplitude of output. Since these instruments are stochastic this is only an approximation. [Default Value: 1]</p>
+    Amplitude of output. Since these instruments are stochastic this is only an approximation. [Default Value: 1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *amplitude</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *amplitude{% endhighlight %}
 
     
   
@@ -221,12 +77,12 @@ title: AKDroplet
   
   
   <div class="method-subsection brief-description">
-    <p>Damping factor where 0 is no damping and 1 is fully damped. [Default Value: 0.1]</p>
+    Damping factor where 0 is no damping and 1 is fully damped. [Default Value: 0.1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *dampingFactor</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *dampingFactor{% endhighlight %}
 
     
   
@@ -257,12 +113,12 @@ title: AKDroplet
   
   
   <div class="method-subsection brief-description">
-    <p>Amount of energy to add back into the system. The value should be in range 0 to 1. [Default Value: 0.5]</p>
+    Amount of energy to add back into the system. The value should be in range 0 to 1. [Default Value: 0.5]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *energyReturn</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *energyReturn{% endhighlight %}
 
     
   
@@ -293,12 +149,12 @@ title: AKDroplet
   
   
   <div class="method-subsection brief-description">
-    <p>The first resonant frequency. [Default Value: 600]</p>
+    The first resonant frequency. [Default Value: 600]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *firstResonantFrequency</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *firstResonantFrequency{% endhighlight %}
 
     
   
@@ -329,12 +185,12 @@ title: AKDroplet
   
   
   <div class="method-subsection brief-description">
-    <p>The intensity of the dripping sound. [Default Value: 10]</p>
+    The intensity of the dripping sound. [Default Value: 10]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *intensity</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *intensity{% endhighlight %}
 
     
   
@@ -365,12 +221,12 @@ title: AKDroplet
   
   
   <div class="method-subsection brief-description">
-    <p>The main resonant frequency. [Default Value: 450]</p>
+    The main resonant frequency. [Default Value: 450]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *mainResonantFrequency</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *mainResonantFrequency{% endhighlight %}
 
     
   
@@ -401,12 +257,12 @@ title: AKDroplet
   
   
   <div class="method-subsection brief-description">
-    <p>The second resonant frequency. [Default Value: 750]</p>
+    The second resonant frequency. [Default Value: 750]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *secondResonantFrequency</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *secondResonantFrequency{% endhighlight %}
 
     
   
@@ -430,13 +286,11 @@ title: AKDroplet
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/droplet" title="droplet"></a>
@@ -445,12 +299,12 @@ title: AKDroplet
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the droplet with default values</p>
+    Instantiates the droplet with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)droplet</code></div>
+ {% highlight objective-c %}+ (instancetype)droplet{% endhighlight %}
 
     
   
@@ -474,13 +328,11 @@ title: AKDroplet
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/init" title="init"></a>
@@ -489,12 +341,12 @@ title: AKDroplet
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the <a href="#//api/name/droplet">droplet</a> with default values</p>
+    Instantiates the droplet with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
+ {% highlight objective-c %}- (instancetype)init{% endhighlight %}
 
     
   
@@ -525,54 +377,39 @@ title: AKDroplet
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the <a href="#//api/name/droplet">droplet</a> with all values</p>
+    Instantiates the droplet with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithIntensity:(AKConstant *)<em>intensity</em> dampingFactor:(AKConstant *)<em>dampingFactor</em> energyReturn:(AKConstant *)<em>energyReturn</em> mainResonantFrequency:(AKConstant *)<em>mainResonantFrequency</em> firstResonantFrequency:(AKConstant *)<em>firstResonantFrequency</em> secondResonantFrequency:(AKConstant *)<em>secondResonantFrequency</em> amplitude:(AKParameter *)<em>amplitude</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithIntensity:(AKConstant *)intensity dampingFactor:(AKConstant *)dampingFactor energyReturn:(AKConstant *)energyReturn mainResonantFrequency:(AKConstant *)mainResonantFrequency firstResonantFrequency:(AKConstant *)firstResonantFrequency secondResonantFrequency:(AKConstant *)secondResonantFrequency amplitude:(AKParameter *)amplitude{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>intensity</em></dt>
-      <dd><p>The <a href="#//api/name/intensity">intensity</a> of the dripping sound. [Default Value: 10]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>intensity</strong>:
+      The intensity of the dripping sound. [Default Value: 10]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>dampingFactor</em></dt>
-      <dd><p>Damping factor where 0 is no damping and 1 is fully damped. [Default Value: 0.1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>dampingFactor</strong>:
+      Damping factor where 0 is no damping and 1 is fully damped. [Default Value: 0.1]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>energyReturn</em></dt>
-      <dd><p>Amount of energy to add back into the system. The value should be in range 0 to 1. [Default Value: 0.5]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>energyReturn</strong>:
+      Amount of energy to add back into the system. The value should be in range 0 to 1. [Default Value: 0.5]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>mainResonantFrequency</em></dt>
-      <dd><p>The main resonant frequency. [Default Value: 450]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>mainResonantFrequency</strong>:
+      The main resonant frequency. [Default Value: 450]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>firstResonantFrequency</em></dt>
-      <dd><p>The first resonant frequency. [Default Value: 600]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>firstResonantFrequency</strong>:
+      The first resonant frequency. [Default Value: 600]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>secondResonantFrequency</em></dt>
-      <dd><p>The second resonant frequency. [Default Value: 750]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>secondResonantFrequency</strong>:
+      The second resonant frequency. [Default Value: 750]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>Amplitude of output. Since these instruments are stochastic this is only an approximation. Updated at Control-rate. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude of output. Since these instruments are stochastic this is only an approximation. Updated at Control-rate. [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -601,24 +438,21 @@ title: AKDroplet
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p>
+    Set an optional amplitude
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalAmplitude:(AKParameter *)<em>amplitude</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalAmplitude:(AKParameter *)amplitude{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>Amplitude of output. Since these instruments are stochastic this is only an approximation. Updated at Control-rate. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude of output. Since these instruments are stochastic this is only an approximation. Updated at Control-rate. [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -647,24 +481,21 @@ title: AKDroplet
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional damping factor</p>
+    Set an optional damping factor
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalDampingFactor:(AKConstant *)<em>dampingFactor</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalDampingFactor:(AKConstant *)dampingFactor{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>dampingFactor</em></dt>
-      <dd><p>Damping factor where 0 is no damping and 1 is fully damped. [Default Value: 0.1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>dampingFactor</strong>:
+      Damping factor where 0 is no damping and 1 is fully damped. [Default Value: 0.1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -693,24 +524,21 @@ title: AKDroplet
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional energy return</p>
+    Set an optional energy return
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalEnergyReturn:(AKConstant *)<em>energyReturn</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalEnergyReturn:(AKConstant *)energyReturn{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>energyReturn</em></dt>
-      <dd><p>Amount of energy to add back into the system. The value should be in range 0 to 1. [Default Value: 0.5]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>energyReturn</strong>:
+      Amount of energy to add back into the system. The value should be in range 0 to 1. [Default Value: 0.5]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -739,24 +567,21 @@ title: AKDroplet
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional first resonant frequency</p>
+    Set an optional first resonant frequency
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalFirstResonantFrequency:(AKConstant *)<em>firstResonantFrequency</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalFirstResonantFrequency:(AKConstant *)firstResonantFrequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>firstResonantFrequency</em></dt>
-      <dd><p>The first resonant frequency. [Default Value: 600]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>firstResonantFrequency</strong>:
+      The first resonant frequency. [Default Value: 600]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -785,24 +610,21 @@ title: AKDroplet
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/intensity">intensity</a></p>
+    Set an optional intensity
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalIntensity:(AKConstant *)<em>intensity</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalIntensity:(AKConstant *)intensity{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>intensity</em></dt>
-      <dd><p>The <a href="#//api/name/intensity">intensity</a> of the dripping sound. [Default Value: 10]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>intensity</strong>:
+      The intensity of the dripping sound. [Default Value: 10]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -831,24 +653,21 @@ title: AKDroplet
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional main resonant frequency</p>
+    Set an optional main resonant frequency
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalMainResonantFrequency:(AKConstant *)<em>mainResonantFrequency</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalMainResonantFrequency:(AKConstant *)mainResonantFrequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>mainResonantFrequency</em></dt>
-      <dd><p>The main resonant frequency. [Default Value: 450]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>mainResonantFrequency</strong>:
+      The main resonant frequency. [Default Value: 450]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -877,24 +696,21 @@ title: AKDroplet
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional second resonant frequency</p>
+    Set an optional second resonant frequency
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalSecondResonantFrequency:(AKConstant *)<em>secondResonantFrequency</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalSecondResonantFrequency:(AKConstant *)secondResonantFrequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>secondResonantFrequency</em></dt>
-      <dd><p>The second resonant frequency. [Default Value: 750]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>secondResonantFrequency</strong>:
+      The second resonant frequency. [Default Value: 750]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -916,7 +732,6 @@ title: AKDroplet
   
 </div>
             
-          </div>
           
           
         </div>

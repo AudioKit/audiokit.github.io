@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKExponentialTableGenerator
 title: AKExponentialTableGenerator
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKExponentialTableGenerator</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKTableGenerator.html">AKTableGenerator</a> : NSObject</td>
@@ -20,77 +16,14 @@ title: AKExponentialTableGenerator
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKExponentialTableGenerator.h<br />AKExponentialTableGenerator.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>A table generator that creates a series of exponential curve segments</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            <h3 class="subsubtitle task-title">Other Methods</h3>
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithValue:">&ndash;&nbsp;initWithValue:</a></code>
-    <span class="tooltip"><p>Start the exponential curves at a specific value</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/addValue:atIndex:">&ndash;&nbsp;addValue:atIndex:</a></code>
-    <span class="tooltip"><p>Add a junction point</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/appendValue:afterNumberOfElements:">&ndash;&nbsp;appendValue:afterNumberOfElements:</a></code>
-    <span class="tooltip"><p>Add a junction point</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-
-            
-            <h3 class="subsubtitle task-title">Other Methods</h3>
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/generationRoutineNumber">&ndash;&nbsp;generationRoutineNumber</a></code>
-    <span class="tooltip"><p>Generation Routine Number</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/parametersWithSize:">&ndash;&nbsp;parametersWithSize:</a></code>
-    <span class="tooltip"><p>Parameters for the generator</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
           
           
 
@@ -100,9 +33,8 @@ title: AKExponentialTableGenerator
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/addValue:atIndex:" title="addValue:atIndex:"></a>
@@ -111,29 +43,24 @@ title: AKExponentialTableGenerator
   
   
   <div class="method-subsection brief-description">
-    <p>Add a junction point</p>
+    Add a junction point
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)addValue:(float)<em>value</em> atIndex:(int)<em>index</em></code></div>
+ {% highlight objective-c %}- (void)addValue:(float)value atIndex:(int)index{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>value</em></dt>
-      <dd><p>The value at the given index</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>value</strong>:
+      The value at the given index</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>index</em></dt>
-      <dd><p>The index at which the value will be set</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>index</strong>:
+      The index at which the value will be set</li>
     
-  </div>
+    </ul>
   
 
   
@@ -162,29 +89,24 @@ title: AKExponentialTableGenerator
   
   
   <div class="method-subsection brief-description">
-    <p>Add a junction point</p>
+    Add a junction point
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)appendValue:(float)<em>value</em> afterNumberOfElements:(int)<em>numberOfElements</em></code></div>
+ {% highlight objective-c %}- (void)appendValue:(float)value afterNumberOfElements:(int)numberOfElements{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>value</em></dt>
-      <dd><p>The value at the given index</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>value</strong>:
+      The value at the given index</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>numberOfElements</em></dt>
-      <dd><p>The index at which the value will be set</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>numberOfElements</strong>:
+      The index at which the value will be set</li>
     
-  </div>
+    </ul>
   
 
   
@@ -213,12 +135,12 @@ title: AKExponentialTableGenerator
   
   
   <div class="method-subsection brief-description">
-    <p>Generation Routine Number</p>
+    Generation Routine Number
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (int)generationRoutineNumber</code></div>
+ {% highlight objective-c %}- (int)generationRoutineNumber{% endhighlight %}
 
     
   
@@ -249,24 +171,21 @@ title: AKExponentialTableGenerator
   
   
   <div class="method-subsection brief-description">
-    <p>Start the exponential curves at a specific value</p>
+    Start the exponential curves at a specific value
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithValue:(float)<em>value</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithValue:(float)value{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>value</em></dt>
-      <dd><p>Initial value of the the first line segment</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>value</strong>:
+      Initial value of the the first line segment</li>
     
-  </div>
+    </ul>
   
 
   
@@ -295,24 +214,21 @@ title: AKExponentialTableGenerator
   
   
   <div class="method-subsection brief-description">
-    <p>Parameters for the generator</p>
+    Parameters for the generator
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (NSArray *)parametersWithSize:(int)<em>size</em></code></div>
+ {% highlight objective-c %}- (NSArray *)parametersWithSize:(int)size{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>size</em></dt>
-      <dd><p>The final size of the table, useful for scaling</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>size</strong>:
+      The final size of the table, useful for scaling</li>
     
-  </div>
+    </ul>
   
 
   
@@ -334,7 +250,6 @@ title: AKExponentialTableGenerator
   
 </div>
             
-          </div>
           
           
         </div>

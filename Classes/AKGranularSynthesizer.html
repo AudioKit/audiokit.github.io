@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKGranularSynthesizer
 title: AKGranularSynthesizer
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKGranularSynthesizer</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,189 +16,21 @@ title: AKGranularSynthesizer
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKGranularSynthesizer.h<br />AKGranularSynthesizer.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>Generate granular synthesis textures with user control.</p>
-          </div>
           
           
 
           
           
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithGrainWaveform:frequency:windowWaveform:duration:density:maximumOverlappingGrains:frequencyVariation:frequencyVariationDistribution:phase:startPhaseVariation:prpow:">&ndash;&nbsp;initWithGrainWaveform:frequency:windowWaveform:duration:density:maximumOverlappingGrains:frequencyVariation:frequencyVariationDistribution:phase:startPhaseVariation:prpow:</a></code>
-    <span class="tooltip"><p>Instantiates the granular synthesizer with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithGrainWaveform:frequency:">&ndash;&nbsp;initWithGrainWaveform:frequency:</a></code>
-    <span class="tooltip"><p>Instantiates the granular synthesizer with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/WithGrainWaveform:frequency:">+&nbsp;WithGrainWaveform:frequency:</a></code>
-    <span class="tooltip"><p>Instantiates the granular synthesizer with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/windowWaveform">&nbsp;&nbsp;windowWaveform</a></code>
-    <span class="tooltip"><p>Table containing window waveform. [Default Value: AKWindowTypeHamming]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalWindowWaveform:">&ndash;&nbsp;setOptionalWindowWaveform:</a></code>
-    <span class="tooltip"><p>Set an optional window waveform</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/duration">&nbsp;&nbsp;duration</a></code>
-    <span class="tooltip"><p>Grain duration in seconds. It also controls the duration of already active grains (actually the speed at which the window function is read). [Default Value: 0.2]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalDuration:">&ndash;&nbsp;setOptionalDuration:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/duration">duration</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/density">&nbsp;&nbsp;density</a></code>
-    <span class="tooltip"><p>Number of grains per second. [Default Value: 200]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalDensity:">&ndash;&nbsp;setOptionalDensity:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/density">density</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/maximumOverlappingGrains">&nbsp;&nbsp;maximumOverlappingGrains</a></code>
-    <span class="tooltip"><p>The maximum number of overlapping grains. [Default Value: 200]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalMaximumOverlappingGrains:">&ndash;&nbsp;setOptionalMaximumOverlappingGrains:</a></code>
-    <span class="tooltip"><p>Set an optional maximum overlapping grains</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/frequencyVariation">&nbsp;&nbsp;frequencyVariation</a></code>
-    <span class="tooltip"><p>Random bipolar variation in grain frequency in Hz. [Default Value: 0]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalFrequencyVariation:">&ndash;&nbsp;setOptionalFrequencyVariation:</a></code>
-    <span class="tooltip"><p>Set an optional frequency variation</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/frequencyVariationDistribution">&nbsp;&nbsp;frequencyVariationDistribution</a></code>
-    <span class="tooltip"><p>This value controls the distribution of grain frequency variation. If this is positive, the random distribution (x is in the range -1 to 1) isabs(x) ^ ((1 / parameter) - 1)  For negative parameter values, it is (1 - abs(x)) ^ ((-1 / parameter) - 1) Setting this parameter to -1, 0, or 1 will result in uniform distribution (this is also faster to calculate).  [Default Value: 0]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalFrequencyVariationDistribution:">&ndash;&nbsp;setOptionalFrequencyVariationDistribution:</a></code>
-    <span class="tooltip"><p>Set an optional frequency variation distribution</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/phase">&nbsp;&nbsp;phase</a></code>
-    <span class="tooltip"><p>Grain phase. This is the location in the grain waveform table, expressed as a fraction (between 0 to 1) of the table length. [Default Value: 0.5]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalPhase:">&ndash;&nbsp;setOptionalPhase:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/phase">phase</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/startPhaseVariation">&nbsp;&nbsp;startPhaseVariation</a></code>
-    <span class="tooltip"><p>Random variation (bipolar) in start <a href="#//api/name/phase">phase</a> [Default Value: 0.5]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalStartPhaseVariation:">&ndash;&nbsp;setOptionalStartPhaseVariation:</a></code>
-    <span class="tooltip"><p>Set an optional start <a href="#//api/name/phase">phase</a> variation</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/prpow">&nbsp;&nbsp;prpow</a></code>
-    <span class="tooltip"><p>Distribution of random <a href="#//api/name/phase">phase</a> variation. [Default Value: 0]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalPrpow:">&ndash;&nbsp;setOptionalPrpow:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/prpow">prpow</a></p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/density" title="density"></a>
@@ -211,12 +39,12 @@ title: AKGranularSynthesizer
   
   
   <div class="method-subsection brief-description">
-    <p>Number of grains per second. [Default Value: 200]</p>
+    Number of grains per second. [Default Value: 200]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *density</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *density{% endhighlight %}
 
     
   
@@ -247,12 +75,12 @@ title: AKGranularSynthesizer
   
   
   <div class="method-subsection brief-description">
-    <p>Grain duration in seconds. It also controls the duration of already active grains (actually the speed at which the window function is read). [Default Value: 0.2]</p>
+    Grain duration in seconds. It also controls the duration of already active grains (actually the speed at which the window function is read). [Default Value: 0.2]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *duration</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *duration{% endhighlight %}
 
     
   
@@ -283,12 +111,12 @@ title: AKGranularSynthesizer
   
   
   <div class="method-subsection brief-description">
-    <p>Random bipolar variation in grain frequency in Hz. [Default Value: 0]</p>
+    Random bipolar variation in grain frequency in Hz. [Default Value: 0]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *frequencyVariation</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *frequencyVariation{% endhighlight %}
 
     
   
@@ -319,12 +147,12 @@ title: AKGranularSynthesizer
   
   
   <div class="method-subsection brief-description">
-    <p>This value controls the distribution of grain frequency variation. If this is positive, the random distribution (x is in the range -1 to 1) isabs(x) ^ ((1 / parameter) - 1)  For negative parameter values, it is (1 - abs(x)) ^ ((-1 / parameter) - 1) Setting this parameter to -1, 0, or 1 will result in uniform distribution (this is also faster to calculate).  [Default Value: 0]</p>
+    This value controls the distribution of grain frequency variation. If this is positive, the random distribution (x is in the range -1 to 1) isabs(x) ^ ((1 / parameter) - 1)  For negative parameter values, it is (1 - abs(x)) ^ ((-1 / parameter) - 1) Setting this parameter to -1, 0, or 1 will result in uniform distribution (this is also faster to calculate).  [Default Value: 0]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *frequencyVariationDistribution</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *frequencyVariationDistribution{% endhighlight %}
 
     
   
@@ -355,12 +183,12 @@ title: AKGranularSynthesizer
   
   
   <div class="method-subsection brief-description">
-    <p>The maximum number of overlapping grains. [Default Value: 200]</p>
+    The maximum number of overlapping grains. [Default Value: 200]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *maximumOverlappingGrains</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *maximumOverlappingGrains{% endhighlight %}
 
     
   
@@ -391,12 +219,12 @@ title: AKGranularSynthesizer
   
   
   <div class="method-subsection brief-description">
-    <p>Grain phase. This is the location in the grain waveform table, expressed as a fraction (between 0 to 1) of the table length. [Default Value: 0.5]</p>
+    Grain phase. This is the location in the grain waveform table, expressed as a fraction (between 0 to 1) of the table length. [Default Value: 0.5]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *phase</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *phase{% endhighlight %}
 
     
   
@@ -427,12 +255,12 @@ title: AKGranularSynthesizer
   
   
   <div class="method-subsection brief-description">
-    <p>Distribution of random <a href="#//api/name/phase">phase</a> variation. [Default Value: 0]</p>
+    Distribution of random phase variation. [Default Value: 0]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *prpow</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *prpow{% endhighlight %}
 
     
   
@@ -463,12 +291,12 @@ title: AKGranularSynthesizer
   
   
   <div class="method-subsection brief-description">
-    <p>Random variation (bipolar) in start <a href="#//api/name/phase">phase</a> [Default Value: 0.5]</p>
+    Random variation (bipolar) in start phase [Default Value: 0.5]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *startPhaseVariation</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *startPhaseVariation{% endhighlight %}
 
     
   
@@ -499,12 +327,12 @@ title: AKGranularSynthesizer
   
   
   <div class="method-subsection brief-description">
-    <p>Table containing window waveform. [Default Value: AKWindowTypeHamming]</p>
+    Table containing window waveform. [Default Value: AKWindowTypeHamming]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKTable *windowWaveform</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKTable *windowWaveform{% endhighlight %}
 
     
   
@@ -528,13 +356,11 @@ title: AKGranularSynthesizer
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/WithGrainWaveform:frequency:" title="WithGrainWaveform:frequency:"></a>
@@ -543,29 +369,24 @@ title: AKGranularSynthesizer
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the granular synthesizer with default values</p>
+    Instantiates the granular synthesizer with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)WithGrainWaveform:(AKTable *)<em>grainWaveform</em> frequency:(AKParameter *)<em>frequency</em></code></div>
+ {% highlight objective-c %}+ (instancetype)WithGrainWaveform:(AKTable *)grainWaveform frequency:(AKParameter *)frequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>grainWaveform</em></dt>
-      <dd><p>Table contain grain waveform.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>grainWaveform</strong>:
+      Table contain grain waveform.</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>frequency</em></dt>
-      <dd><p>Grain frequency in Hz</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>frequency</strong>:
+      Grain frequency in Hz</li>
     
-  </div>
+    </ul>
   
 
   
@@ -587,13 +408,11 @@ title: AKGranularSynthesizer
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/initWithGrainWaveform:frequency:" title="initWithGrainWaveform:frequency:"></a>
@@ -602,29 +421,24 @@ title: AKGranularSynthesizer
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the granular synthesizer with default values</p>
+    Instantiates the granular synthesizer with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithGrainWaveform:(AKTable *)<em>grainWaveform</em> frequency:(AKParameter *)<em>frequency</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithGrainWaveform:(AKTable *)grainWaveform frequency:(AKParameter *)frequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>grainWaveform</em></dt>
-      <dd><p>Table contain grain waveform.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>grainWaveform</strong>:
+      Table contain grain waveform.</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>frequency</em></dt>
-      <dd><p>Grain frequency in Hz</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>frequency</strong>:
+      Grain frequency in Hz</li>
     
-  </div>
+    </ul>
   
 
   
@@ -653,74 +467,51 @@ title: AKGranularSynthesizer
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the granular synthesizer with all values</p>
+    Instantiates the granular synthesizer with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithGrainWaveform:(AKTable *)<em>grainWaveform</em> frequency:(AKParameter *)<em>frequency</em> windowWaveform:(AKTable *)<em>windowWaveform</em> duration:(AKParameter *)<em>duration</em> density:(AKParameter *)<em>density</em> maximumOverlappingGrains:(AKConstant *)<em>maximumOverlappingGrains</em> frequencyVariation:(AKParameter *)<em>frequencyVariation</em> frequencyVariationDistribution:(AKParameter *)<em>frequencyVariationDistribution</em> phase:(AKParameter *)<em>phase</em> startPhaseVariation:(AKParameter *)<em>startPhaseVariation</em> prpow:(AKParameter *)<em>prpow</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithGrainWaveform:(AKTable *)grainWaveform frequency:(AKParameter *)frequency windowWaveform:(AKTable *)windowWaveform duration:(AKParameter *)duration density:(AKParameter *)density maximumOverlappingGrains:(AKConstant *)maximumOverlappingGrains frequencyVariation:(AKParameter *)frequencyVariation frequencyVariationDistribution:(AKParameter *)frequencyVariationDistribution phase:(AKParameter *)phase startPhaseVariation:(AKParameter *)startPhaseVariation prpow:(AKParameter *)prpow{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>grainWaveform</em></dt>
-      <dd><p>Table contain grain waveform. Updated at Control-rate. [Default Value: ]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>grainWaveform</strong>:
+      Table contain grain waveform. Updated at Control-rate. [Default Value: ]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>frequency</em></dt>
-      <dd><p>Grain frequency in Hz Updated at Control-rate. [Default Value: ]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>frequency</strong>:
+      Grain frequency in Hz Updated at Control-rate. [Default Value: ]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>windowWaveform</em></dt>
-      <dd><p>Table containing window waveform. [Default Value: AKWindowTypeHamming]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>windowWaveform</strong>:
+      Table containing window waveform. [Default Value: AKWindowTypeHamming]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>duration</em></dt>
-      <dd><p>Grain <a href="#//api/name/duration">duration</a> in seconds. It also controls the <a href="#//api/name/duration">duration</a> of already active grains (actually the speed at which the window function is read). Updated at Control-rate. [Default Value: 0.2]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>duration</strong>:
+      Grain duration in seconds. It also controls the duration of already active grains (actually the speed at which the window function is read). Updated at Control-rate. [Default Value: 0.2]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>density</em></dt>
-      <dd><p>Number of grains per second. Updated at Control-rate. [Default Value: 200]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>density</strong>:
+      Number of grains per second. Updated at Control-rate. [Default Value: 200]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>maximumOverlappingGrains</em></dt>
-      <dd><p>The maximum number of overlapping grains. [Default Value: 200]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>maximumOverlappingGrains</strong>:
+      The maximum number of overlapping grains. [Default Value: 200]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>frequencyVariation</em></dt>
-      <dd><p>Random bipolar variation in grain frequency in Hz. Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>frequencyVariation</strong>:
+      Random bipolar variation in grain frequency in Hz. Updated at Control-rate. [Default Value: 0]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>frequencyVariationDistribution</em></dt>
-      <dd><p>This value controls the distribution of grain frequency variation. If this is positive, the random distribution (x is in the range -1 to 1) isabs(x) ^ ((1 / parameter) - 1)  For negative parameter values, it is (1 - abs(x)) ^ ((-1 / parameter) - 1) Setting this parameter to -1, 0, or 1 will result in uniform distribution (this is also faster to calculate).  Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>frequencyVariationDistribution</strong>:
+      This value controls the distribution of grain frequency variation. If this is positive, the random distribution (x is in the range -1 to 1) isabs(x) ^ ((1 / parameter) - 1)  For negative parameter values, it is (1 - abs(x)) ^ ((-1 / parameter) - 1) Setting this parameter to -1, 0, or 1 will result in uniform distribution (this is also faster to calculate).  Updated at Control-rate. [Default Value: 0]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>phase</em></dt>
-      <dd><p>Grain <a href="#//api/name/phase">phase</a>. This is the location in the grain waveform table, expressed as a fraction (between 0 to 1) of the table length. Updated at Control-rate. [Default Value: 0.5]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>phase</strong>:
+      Grain phase. This is the location in the grain waveform table, expressed as a fraction (between 0 to 1) of the table length. Updated at Control-rate. [Default Value: 0.5]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>startPhaseVariation</em></dt>
-      <dd><p>Random variation (bipolar) in start <a href="#//api/name/phase">phase</a> Updated at Control-rate. [Default Value: 0.5]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>startPhaseVariation</strong>:
+      Random variation (bipolar) in start phase Updated at Control-rate. [Default Value: 0.5]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>prpow</em></dt>
-      <dd><p>Distribution of random <a href="#//api/name/phase">phase</a> variation. Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>prpow</strong>:
+      Distribution of random phase variation. Updated at Control-rate. [Default Value: 0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -749,24 +540,21 @@ title: AKGranularSynthesizer
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/density">density</a></p>
+    Set an optional density
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalDensity:(AKParameter *)<em>density</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalDensity:(AKParameter *)density{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>density</em></dt>
-      <dd><p>Number of grains per second. Updated at Control-rate. [Default Value: 200]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>density</strong>:
+      Number of grains per second. Updated at Control-rate. [Default Value: 200]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -795,24 +583,21 @@ title: AKGranularSynthesizer
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/duration">duration</a></p>
+    Set an optional duration
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalDuration:(AKParameter *)<em>duration</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalDuration:(AKParameter *)duration{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>duration</em></dt>
-      <dd><p>Grain <a href="#//api/name/duration">duration</a> in seconds. It also controls the <a href="#//api/name/duration">duration</a> of already active grains (actually the speed at which the window function is read). Updated at Control-rate. [Default Value: 0.2]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>duration</strong>:
+      Grain duration in seconds. It also controls the duration of already active grains (actually the speed at which the window function is read). Updated at Control-rate. [Default Value: 0.2]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -841,24 +626,21 @@ title: AKGranularSynthesizer
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional frequency variation</p>
+    Set an optional frequency variation
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalFrequencyVariation:(AKParameter *)<em>frequencyVariation</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalFrequencyVariation:(AKParameter *)frequencyVariation{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>frequencyVariation</em></dt>
-      <dd><p>Random bipolar variation in grain frequency in Hz. Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>frequencyVariation</strong>:
+      Random bipolar variation in grain frequency in Hz. Updated at Control-rate. [Default Value: 0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -887,24 +669,21 @@ title: AKGranularSynthesizer
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional frequency variation distribution</p>
+    Set an optional frequency variation distribution
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalFrequencyVariationDistribution:(AKParameter *)<em>frequencyVariationDistribution</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalFrequencyVariationDistribution:(AKParameter *)frequencyVariationDistribution{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>frequencyVariationDistribution</em></dt>
-      <dd><p>This value controls the distribution of grain frequency variation. If this is positive, the random distribution (x is in the range -1 to 1) isabs(x) ^ ((1 / parameter) - 1)  For negative parameter values, it is (1 - abs(x)) ^ ((-1 / parameter) - 1) Setting this parameter to -1, 0, or 1 will result in uniform distribution (this is also faster to calculate).  Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>frequencyVariationDistribution</strong>:
+      This value controls the distribution of grain frequency variation. If this is positive, the random distribution (x is in the range -1 to 1) isabs(x) ^ ((1 / parameter) - 1)  For negative parameter values, it is (1 - abs(x)) ^ ((-1 / parameter) - 1) Setting this parameter to -1, 0, or 1 will result in uniform distribution (this is also faster to calculate).  Updated at Control-rate. [Default Value: 0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -933,24 +712,21 @@ title: AKGranularSynthesizer
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional maximum overlapping grains</p>
+    Set an optional maximum overlapping grains
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalMaximumOverlappingGrains:(AKConstant *)<em>maximumOverlappingGrains</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalMaximumOverlappingGrains:(AKConstant *)maximumOverlappingGrains{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>maximumOverlappingGrains</em></dt>
-      <dd><p>The maximum number of overlapping grains. [Default Value: 200]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>maximumOverlappingGrains</strong>:
+      The maximum number of overlapping grains. [Default Value: 200]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -979,24 +755,21 @@ title: AKGranularSynthesizer
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/phase">phase</a></p>
+    Set an optional phase
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalPhase:(AKParameter *)<em>phase</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalPhase:(AKParameter *)phase{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>phase</em></dt>
-      <dd><p>Grain <a href="#//api/name/phase">phase</a>. This is the location in the grain waveform table, expressed as a fraction (between 0 to 1) of the table length. Updated at Control-rate. [Default Value: 0.5]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>phase</strong>:
+      Grain phase. This is the location in the grain waveform table, expressed as a fraction (between 0 to 1) of the table length. Updated at Control-rate. [Default Value: 0.5]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -1025,24 +798,21 @@ title: AKGranularSynthesizer
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/prpow">prpow</a></p>
+    Set an optional prpow
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalPrpow:(AKParameter *)<em>prpow</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalPrpow:(AKParameter *)prpow{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>prpow</em></dt>
-      <dd><p>Distribution of random <a href="#//api/name/phase">phase</a> variation. Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>prpow</strong>:
+      Distribution of random phase variation. Updated at Control-rate. [Default Value: 0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -1071,24 +841,21 @@ title: AKGranularSynthesizer
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional start <a href="#//api/name/phase">phase</a> variation</p>
+    Set an optional start phase variation
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalStartPhaseVariation:(AKParameter *)<em>startPhaseVariation</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalStartPhaseVariation:(AKParameter *)startPhaseVariation{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>startPhaseVariation</em></dt>
-      <dd><p>Random variation (bipolar) in start <a href="#//api/name/phase">phase</a> Updated at Control-rate. [Default Value: 0.5]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>startPhaseVariation</strong>:
+      Random variation (bipolar) in start phase Updated at Control-rate. [Default Value: 0.5]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -1117,24 +884,21 @@ title: AKGranularSynthesizer
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional window waveform</p>
+    Set an optional window waveform
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalWindowWaveform:(AKTable *)<em>windowWaveform</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalWindowWaveform:(AKTable *)windowWaveform{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>windowWaveform</em></dt>
-      <dd><p>Table containing window waveform. [Default Value: AKWindowTypeHamming]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>windowWaveform</strong>:
+      Table containing window waveform. [Default Value: AKWindowTypeHamming]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -1156,7 +920,6 @@ title: AKGranularSynthesizer
   
 </div>
             
-          </div>
           
           
         </div>

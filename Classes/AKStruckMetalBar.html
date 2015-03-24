@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKStruckMetalBar
 title: AKStruckMetalBar
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKStruckMetalBar</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,213 +16,24 @@ title: AKStruckMetalBar
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKStruckMetalBar.h<br />AKStruckMetalBar.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Creates a tone similar to a struck metal bar.</p>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Creates a tone similar to a struck metal bar.
 
-<p>Audio output is a tone similar to a struck metal bar, using a physical model developed from solving the partial differential equation. There are controls over the boundary conditions as well as the bar characteristics.
-More information regarding scanned synthesis can be found at <a href="http://dafx12.york.ac.uk/papers/dafx12">http://dafx12.york.ac.uk/papers/dafx12</a>_submission_18.pdf and <a href="http://www.billverplank.com/ScannedSynthesis.PDF">http://www.billverplank.com/ScannedSynthesis.PDF</a></p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/boundaryConditionClamped">+&nbsp;boundaryConditionClamped</a></code>
-    <span class="tooltip"><p>Clamped boundary condition</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/boundaryConditionPivoting">+&nbsp;boundaryConditionPivoting</a></code>
-    <span class="tooltip"><p>Pivoting boundary condition</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/boundaryConditionFree">+&nbsp;boundaryConditionFree</a></code>
-    <span class="tooltip"><p>Free boundary condition (only to be used when other side is clamped)</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithDecayTime:dimensionlessStiffness:highFrequencyLoss:strikePosition:strikeVelocity:strikeWidth:leftBoundaryCondition:rightBoundaryCondition:scanSpeed:">&ndash;&nbsp;initWithDecayTime:dimensionlessStiffness:highFrequencyLoss:strikePosition:strikeVelocity:strikeWidth:leftBoundaryCondition:rightBoundaryCondition:scanSpeed:</a></code>
-    <span class="tooltip"><p>Instantiates the struck metal bar with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
-    <span class="tooltip"><p>Instantiates the struck metal bar with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/strike">+&nbsp;strike</a></code>
-    <span class="tooltip"><p>Instantiates the struck metal bar with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/decayTime">&nbsp;&nbsp;decayTime</a></code>
-    <span class="tooltip"><p>30 db decay time in seconds. [Default Value: 2.0]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalDecayTime:">&ndash;&nbsp;setOptionalDecayTime:</a></code>
-    <span class="tooltip"><p>Set an optional decay time</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/dimensionlessStiffness">&nbsp;&nbsp;dimensionlessStiffness</a></code>
-    <span class="tooltip"><p>Dimensionless stiffness parameter. If this parameter is negative then the initialization is skipped and the previous state of the bar is continued. [Default Value: 100]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalDimensionlessStiffness:">&ndash;&nbsp;setOptionalDimensionlessStiffness:</a></code>
-    <span class="tooltip"><p>Set an optional dimensionless stiffness</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/highFrequencyLoss">&nbsp;&nbsp;highFrequencyLoss</a></code>
-    <span class="tooltip"><p>High-frequency loss parameter (keep this small). [Default Value: 0.001]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalHighFrequencyLoss:">&ndash;&nbsp;setOptionalHighFrequencyLoss:</a></code>
-    <span class="tooltip"><p>Set an optional high frequency loss</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/strikePosition">&nbsp;&nbsp;strikePosition</a></code>
-    <span class="tooltip"><p>Position along the bar that the <a href="#//api/name/strike">strike</a> occurs. [Default Value: 0.2]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalStrikePosition:">&ndash;&nbsp;setOptionalStrikePosition:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/strike">strike</a> position</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/strikeVelocity">&nbsp;&nbsp;strikeVelocity</a></code>
-    <span class="tooltip"><p>Normalized <a href="#//api/name/strike">strike</a> velocity. [Default Value: 800]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalStrikeVelocity:">&ndash;&nbsp;setOptionalStrikeVelocity:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/strike">strike</a> velocity</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/strikeWidth">&nbsp;&nbsp;strikeWidth</a></code>
-    <span class="tooltip"><p>Spatial width of <a href="#//api/name/strike">strike</a>. [Default Value: 0.2]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalStrikeWidth:">&ndash;&nbsp;setOptionalStrikeWidth:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/strike">strike</a> width</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/leftBoundaryCondition">&nbsp;&nbsp;leftBoundaryCondition</a></code>
-    <span class="tooltip"><p>Boundary condition at left end of bar. [Default Value: <a href="#//api/name/boundaryConditionClamped">[AKStruckMetalBar boundaryConditionClamped]</a>]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalLeftBoundaryCondition:">&ndash;&nbsp;setOptionalLeftBoundaryCondition:</a></code>
-    <span class="tooltip"><p>Set an optional left boundary condition</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/rightBoundaryCondition">&nbsp;&nbsp;rightBoundaryCondition</a></code>
-    <span class="tooltip"><p>Boundary condition at right end of bar. [Default Value: <a href="#//api/name/boundaryConditionClamped">[AKStruckMetalBar boundaryConditionClamped]</a>]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalRightBoundaryCondition:">&ndash;&nbsp;setOptionalRightBoundaryCondition:</a></code>
-    <span class="tooltip"><p>Set an optional right boundary condition</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/scanSpeed">&nbsp;&nbsp;scanSpeed</a></code>
-    <span class="tooltip"><p>Speed of scanning the output location. [Default Value: 0.23]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalScanSpeed:">&ndash;&nbsp;setOptionalScanSpeed:</a></code>
-    <span class="tooltip"><p>Set an optional scan speed</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
+Audio output is a tone similar to a struck metal bar, using a physical model developed from solving the partial differential equation. There are controls over the boundary conditions as well as the bar characteristics.
+More information regarding scanned synthesis can be found at http://dafx12.york.ac.uk/papers/dafx12submission18.pdf and http://www.billverplank.com/ScannedSynthesis.PDF</p>
           
           
 
           
           
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/decayTime" title="decayTime"></a>
@@ -235,12 +42,12 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
   
   <div class="method-subsection brief-description">
-    <p>30 db decay time in seconds. [Default Value: 2.0]</p>
+    30 db decay time in seconds. [Default Value: 2.0]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *decayTime</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *decayTime{% endhighlight %}
 
     
   
@@ -271,12 +78,12 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
   
   <div class="method-subsection brief-description">
-    <p>Dimensionless stiffness parameter. If this parameter is negative then the initialization is skipped and the previous state of the bar is continued. [Default Value: 100]</p>
+    Dimensionless stiffness parameter. If this parameter is negative then the initialization is skipped and the previous state of the bar is continued. [Default Value: 100]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *dimensionlessStiffness</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *dimensionlessStiffness{% endhighlight %}
 
     
   
@@ -307,12 +114,12 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
   
   <div class="method-subsection brief-description">
-    <p>High-frequency loss parameter (keep this small). [Default Value: 0.001]</p>
+    High-frequency loss parameter (keep this small). [Default Value: 0.001]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *highFrequencyLoss</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *highFrequencyLoss{% endhighlight %}
 
     
   
@@ -343,12 +150,12 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
   
   <div class="method-subsection brief-description">
-    <p>Boundary condition at left end of bar. [Default Value: <a href="#//api/name/boundaryConditionClamped">[AKStruckMetalBar boundaryConditionClamped]</a>]</p>
+    Boundary condition at left end of bar. [Default Value: [AKStruckMetalBar boundaryConditionClamped]]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *leftBoundaryCondition</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *leftBoundaryCondition{% endhighlight %}
 
     
   
@@ -379,12 +186,12 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
   
   <div class="method-subsection brief-description">
-    <p>Boundary condition at right end of bar. [Default Value: <a href="#//api/name/boundaryConditionClamped">[AKStruckMetalBar boundaryConditionClamped]</a>]</p>
+    Boundary condition at right end of bar. [Default Value: [AKStruckMetalBar boundaryConditionClamped]]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *rightBoundaryCondition</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *rightBoundaryCondition{% endhighlight %}
 
     
   
@@ -415,12 +222,12 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
   
   <div class="method-subsection brief-description">
-    <p>Speed of scanning the output location. [Default Value: 0.23]</p>
+    Speed of scanning the output location. [Default Value: 0.23]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *scanSpeed</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *scanSpeed{% endhighlight %}
 
     
   
@@ -451,12 +258,12 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
   
   <div class="method-subsection brief-description">
-    <p>Position along the bar that the <a href="#//api/name/strike">strike</a> occurs. [Default Value: 0.2]</p>
+    Position along the bar that the strike occurs. [Default Value: 0.2]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *strikePosition</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *strikePosition{% endhighlight %}
 
     
   
@@ -487,12 +294,12 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
   
   <div class="method-subsection brief-description">
-    <p>Normalized <a href="#//api/name/strike">strike</a> velocity. [Default Value: 800]</p>
+    Normalized strike velocity. [Default Value: 800]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *strikeVelocity</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *strikeVelocity{% endhighlight %}
 
     
   
@@ -523,12 +330,12 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
   
   <div class="method-subsection brief-description">
-    <p>Spatial width of <a href="#//api/name/strike">strike</a>. [Default Value: 0.2]</p>
+    Spatial width of strike. [Default Value: 0.2]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *strikeWidth</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *strikeWidth{% endhighlight %}
 
     
   
@@ -552,13 +359,11 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/boundaryConditionClamped" title="boundaryConditionClamped"></a>
@@ -567,12 +372,12 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
   
   <div class="method-subsection brief-description">
-    <p>Clamped boundary condition</p>
+    Clamped boundary condition
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (AKConstant *)boundaryConditionClamped</code></div>
+ {% highlight objective-c %}+ (AKConstant *)boundaryConditionClamped{% endhighlight %}
 
     
   
@@ -603,12 +408,12 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
   
   <div class="method-subsection brief-description">
-    <p>Free boundary condition (only to be used when other side is clamped)</p>
+    Free boundary condition (only to be used when other side is clamped)
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (AKConstant *)boundaryConditionFree</code></div>
+ {% highlight objective-c %}+ (AKConstant *)boundaryConditionFree{% endhighlight %}
 
     
   
@@ -639,12 +444,12 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
   
   <div class="method-subsection brief-description">
-    <p>Pivoting boundary condition</p>
+    Pivoting boundary condition
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (AKConstant *)boundaryConditionPivoting</code></div>
+ {% highlight objective-c %}+ (AKConstant *)boundaryConditionPivoting{% endhighlight %}
 
     
   
@@ -675,12 +480,12 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the struck metal bar with default values</p>
+    Instantiates the struck metal bar with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)strike</code></div>
+ {% highlight objective-c %}+ (instancetype)strike{% endhighlight %}
 
     
   
@@ -704,13 +509,11 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/init" title="init"></a>
@@ -719,12 +522,12 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the struck metal bar with default values</p>
+    Instantiates the struck metal bar with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
+ {% highlight objective-c %}- (instancetype)init{% endhighlight %}
 
     
   
@@ -755,64 +558,45 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the struck metal bar with all values</p>
+    Instantiates the struck metal bar with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithDecayTime:(AKConstant *)<em>decayTime</em> dimensionlessStiffness:(AKConstant *)<em>dimensionlessStiffness</em> highFrequencyLoss:(AKConstant *)<em>highFrequencyLoss</em> strikePosition:(AKConstant *)<em>strikePosition</em> strikeVelocity:(AKConstant *)<em>strikeVelocity</em> strikeWidth:(AKConstant *)<em>strikeWidth</em> leftBoundaryCondition:(AKConstant *)<em>leftBoundaryCondition</em> rightBoundaryCondition:(AKConstant *)<em>rightBoundaryCondition</em> scanSpeed:(AKParameter *)<em>scanSpeed</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithDecayTime:(AKConstant *)decayTime dimensionlessStiffness:(AKConstant *)dimensionlessStiffness highFrequencyLoss:(AKConstant *)highFrequencyLoss strikePosition:(AKConstant *)strikePosition strikeVelocity:(AKConstant *)strikeVelocity strikeWidth:(AKConstant *)strikeWidth leftBoundaryCondition:(AKConstant *)leftBoundaryCondition rightBoundaryCondition:(AKConstant *)rightBoundaryCondition scanSpeed:(AKParameter *)scanSpeed{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>decayTime</em></dt>
-      <dd><p>30 db decay time in seconds. [Default Value: 2.0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>decayTime</strong>:
+      30 db decay time in seconds. [Default Value: 2.0]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>dimensionlessStiffness</em></dt>
-      <dd><p>Dimensionless stiffness parameter. If this parameter is negative then the initialization is skipped and the previous state of the bar is continued. [Default Value: 100]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>dimensionlessStiffness</strong>:
+      Dimensionless stiffness parameter. If this parameter is negative then the initialization is skipped and the previous state of the bar is continued. [Default Value: 100]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>highFrequencyLoss</em></dt>
-      <dd><p>High-frequency loss parameter (keep this small). [Default Value: 0.001]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>highFrequencyLoss</strong>:
+      High-frequency loss parameter (keep this small). [Default Value: 0.001]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>strikePosition</em></dt>
-      <dd><p>Position along the bar that the <a href="#//api/name/strike">strike</a> occurs. [Default Value: 0.2]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>strikePosition</strong>:
+      Position along the bar that the strike occurs. [Default Value: 0.2]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>strikeVelocity</em></dt>
-      <dd><p>Normalized <a href="#//api/name/strike">strike</a> velocity. [Default Value: 800]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>strikeVelocity</strong>:
+      Normalized strike velocity. [Default Value: 800]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>strikeWidth</em></dt>
-      <dd><p>Spatial width of <a href="#//api/name/strike">strike</a>. [Default Value: 0.2]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>strikeWidth</strong>:
+      Spatial width of strike. [Default Value: 0.2]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>leftBoundaryCondition</em></dt>
-      <dd><p>Boundary condition at left end of bar. [Default Value: <a href="#//api/name/boundaryConditionClamped">[AKStruckMetalBar boundaryConditionClamped]</a>]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>leftBoundaryCondition</strong>:
+      Boundary condition at left end of bar. [Default Value: [AKStruckMetalBar boundaryConditionClamped]]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>rightBoundaryCondition</em></dt>
-      <dd><p>Boundary condition at right end of bar. [Default Value: <a href="#//api/name/boundaryConditionClamped">[AKStruckMetalBar boundaryConditionClamped]</a>]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>rightBoundaryCondition</strong>:
+      Boundary condition at right end of bar. [Default Value: [AKStruckMetalBar boundaryConditionClamped]]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>scanSpeed</em></dt>
-      <dd><p>Speed of scanning the output location. Updated at Control-rate. [Default Value: 0.23]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>scanSpeed</strong>:
+      Speed of scanning the output location. Updated at Control-rate. [Default Value: 0.23]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -841,24 +625,21 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional decay time</p>
+    Set an optional decay time
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalDecayTime:(AKConstant *)<em>decayTime</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalDecayTime:(AKConstant *)decayTime{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>decayTime</em></dt>
-      <dd><p>30 db decay time in seconds. [Default Value: 2.0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>decayTime</strong>:
+      30 db decay time in seconds. [Default Value: 2.0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -887,24 +668,21 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional dimensionless stiffness</p>
+    Set an optional dimensionless stiffness
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalDimensionlessStiffness:(AKConstant *)<em>dimensionlessStiffness</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalDimensionlessStiffness:(AKConstant *)dimensionlessStiffness{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>dimensionlessStiffness</em></dt>
-      <dd><p>Dimensionless stiffness parameter. If this parameter is negative then the initialization is skipped and the previous state of the bar is continued. [Default Value: 100]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>dimensionlessStiffness</strong>:
+      Dimensionless stiffness parameter. If this parameter is negative then the initialization is skipped and the previous state of the bar is continued. [Default Value: 100]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -933,24 +711,21 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional high frequency loss</p>
+    Set an optional high frequency loss
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalHighFrequencyLoss:(AKConstant *)<em>highFrequencyLoss</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalHighFrequencyLoss:(AKConstant *)highFrequencyLoss{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>highFrequencyLoss</em></dt>
-      <dd><p>High-frequency loss parameter (keep this small). [Default Value: 0.001]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>highFrequencyLoss</strong>:
+      High-frequency loss parameter (keep this small). [Default Value: 0.001]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -979,24 +754,21 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional left boundary condition</p>
+    Set an optional left boundary condition
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalLeftBoundaryCondition:(AKConstant *)<em>leftBoundaryCondition</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalLeftBoundaryCondition:(AKConstant *)leftBoundaryCondition{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>leftBoundaryCondition</em></dt>
-      <dd><p>Boundary condition at left end of bar. [Default Value: Clamped]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>leftBoundaryCondition</strong>:
+      Boundary condition at left end of bar. [Default Value: Clamped]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -1025,24 +797,21 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional right boundary condition</p>
+    Set an optional right boundary condition
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalRightBoundaryCondition:(AKConstant *)<em>rightBoundaryCondition</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalRightBoundaryCondition:(AKConstant *)rightBoundaryCondition{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>rightBoundaryCondition</em></dt>
-      <dd><p>Boundary condition at right end of bar. [Default Value: <a href="#//api/name/boundaryConditionClamped">[AKStruckMetalBar boundaryConditionClamped]</a>]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>rightBoundaryCondition</strong>:
+      Boundary condition at right end of bar. [Default Value: [AKStruckMetalBar boundaryConditionClamped]]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -1071,24 +840,21 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional scan speed</p>
+    Set an optional scan speed
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalScanSpeed:(AKParameter *)<em>scanSpeed</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalScanSpeed:(AKParameter *)scanSpeed{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>scanSpeed</em></dt>
-      <dd><p>Speed of scanning the output location. Updated at Control-rate. [Default Value: 0.23]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>scanSpeed</strong>:
+      Speed of scanning the output location. Updated at Control-rate. [Default Value: 0.23]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -1117,24 +883,21 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/strike">strike</a> position</p>
+    Set an optional strike position
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalStrikePosition:(AKConstant *)<em>strikePosition</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalStrikePosition:(AKConstant *)strikePosition{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>strikePosition</em></dt>
-      <dd><p>Position along the bar that the <a href="#//api/name/strike">strike</a> occurs. [Default Value: 0.2]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>strikePosition</strong>:
+      Position along the bar that the strike occurs. [Default Value: 0.2]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -1163,24 +926,21 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/strike">strike</a> velocity</p>
+    Set an optional strike velocity
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalStrikeVelocity:(AKConstant *)<em>strikeVelocity</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalStrikeVelocity:(AKConstant *)strikeVelocity{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>strikeVelocity</em></dt>
-      <dd><p>Normalized <a href="#//api/name/strike">strike</a> velocity. [Default Value: 800]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>strikeVelocity</strong>:
+      Normalized strike velocity. [Default Value: 800]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -1209,24 +969,21 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/strike">strike</a> width</p>
+    Set an optional strike width
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalStrikeWidth:(AKConstant *)<em>strikeWidth</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalStrikeWidth:(AKConstant *)strikeWidth{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>strikeWidth</em></dt>
-      <dd><p>Spatial width of <a href="#//api/name/strike">strike</a>. [Default Value: 0.2]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>strikeWidth</strong>:
+      Spatial width of strike. [Default Value: 0.2]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -1248,7 +1005,6 @@ More information regarding scanned synthesis can be found at <a href="http://daf
   
 </div>
             
-          </div>
           
           
         </div>

@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKSequence
 title: AKSequence
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKSequence</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value">NSObject</td>
@@ -20,112 +16,21 @@ title: AKSequence
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKSequence.h<br />AKSequence.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>A <a href="#//api/name/sequence">sequence</a> is a chain of <a href="#//api/name/events">events</a>.</p>
-          </div>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>A sequence is a chain of events.</p>
           
           
 
           
           
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/events">&nbsp;&nbsp;events</a></code>
-    <span class="tooltip"><p>The array of events contained in the <a href="#//api/name/sequence">sequence</a>.</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/times">&nbsp;&nbsp;times</a></code>
-    <span class="tooltip"><p>The start times for all the <a href="#//api/name/events">events</a> in the <a href="#//api/name/sequence">sequence</a>.</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/sequence">+&nbsp;sequence</a></code>
-    <span class="tooltip"><p>Class-level initializer for empty sequence</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/play">&ndash;&nbsp;play</a></code>
-    <span class="tooltip"><p>Trigger playback of the <a href="#//api/name/sequence">sequence</a>.</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/pause">&ndash;&nbsp;pause</a></code>
-    <span class="tooltip"><p>Pause playback of the <a href="#//api/name/sequence">sequence</a>.</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/stop">&ndash;&nbsp;stop</a></code>
-    <span class="tooltip"><p>Stop playback of the <a href="#//api/name/sequence">sequence</a>, stopping all the notes in the <a href="#//api/name/sequence">sequence</a>.</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/reset">&ndash;&nbsp;reset</a></code>
-    <span class="tooltip"><p>Removes all <a href="#//api/name/events">events</a> from the <a href="#//api/name/sequence">sequence</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/addEvent:">&ndash;&nbsp;addEvent:</a></code>
-    <span class="tooltip"><p>Add event In next available spot</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/addEvent:atTime:">&ndash;&nbsp;addEvent:atTime:</a></code>
-    <span class="tooltip"><p>Add event at a specific time</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/addEvent:afterDuration:">&ndash;&nbsp;addEvent:afterDuration:</a></code>
-    <span class="tooltip"><p>Add event a specific time after the last event started</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/events" title="events"></a>
@@ -134,12 +39,12 @@ title: AKSequence
   
   
   <div class="method-subsection brief-description">
-    <p>The array of events contained in the <a href="#//api/name/sequence">sequence</a>.</p>
+    The array of events contained in the sequence.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property NSMutableArray *events</code></div>
+ {% highlight objective-c %}@property NSMutableArray *events{% endhighlight %}
 
     
   
@@ -170,12 +75,12 @@ title: AKSequence
   
   
   <div class="method-subsection brief-description">
-    <p>The start times for all the <a href="#//api/name/events">events</a> in the <a href="#//api/name/sequence">sequence</a>.</p>
+    The start times for all the events in the sequence.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property NSMutableArray *times</code></div>
+ {% highlight objective-c %}@property NSMutableArray *times{% endhighlight %}
 
     
   
@@ -199,13 +104,11 @@ title: AKSequence
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/sequence" title="sequence"></a>
@@ -214,12 +117,12 @@ title: AKSequence
   
   
   <div class="method-subsection brief-description">
-    <p>Class-level initializer for empty sequence</p>
+    Class-level initializer for empty sequence
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (AKSequence *)sequence</code></div>
+ {% highlight objective-c %}+ (AKSequence *)sequence{% endhighlight %}
 
     
   
@@ -243,13 +146,11 @@ title: AKSequence
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/addEvent:" title="addEvent:"></a>
@@ -258,24 +159,21 @@ title: AKSequence
   
   
   <div class="method-subsection brief-description">
-    <p>Add event In next available spot</p>
+    Add event In next available spot
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)addEvent:(AKEvent *)<em>event</em></code></div>
+ {% highlight objective-c %}- (void)addEvent:(AKEvent *)event{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>event</em></dt>
-      <dd><p>Event to be added either at the beginning, or at the same time as the last event</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>event</strong>:
+      Event to be added either at the beginning, or at the same time as the last event</li>
     
-  </div>
+    </ul>
   
 
   
@@ -304,29 +202,24 @@ title: AKSequence
   
   
   <div class="method-subsection brief-description">
-    <p>Add event a specific time after the last event started</p>
+    Add event a specific time after the last event started
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)addEvent:(AKEvent *)<em>event</em> afterDuration:(float)<em>timeSinceLastEventStarted</em></code></div>
+ {% highlight objective-c %}- (void)addEvent:(AKEvent *)event afterDuration:(float)timeSinceLastEventStarted{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>event</em></dt>
-      <dd><p>Event to be added at the specified time.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>event</strong>:
+      Event to be added at the specified time.</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>timeSinceLastEventStarted</em></dt>
-      <dd><p>Amount of time after the last event, when the event will be triggered.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>timeSinceLastEventStarted</strong>:
+      Amount of time after the last event, when the event will be triggered.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -355,29 +248,24 @@ title: AKSequence
   
   
   <div class="method-subsection brief-description">
-    <p>Add event at a specific time</p>
+    Add event at a specific time
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)addEvent:(AKEvent *)<em>event</em> atTime:(float)<em>timeSinceStart</em></code></div>
+ {% highlight objective-c %}- (void)addEvent:(AKEvent *)event atTime:(float)timeSinceStart{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>event</em></dt>
-      <dd><p>Event to be added at the specified time.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>event</strong>:
+      Event to be added at the specified time.</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>timeSinceStart</em></dt>
-      <dd><p>Exact time at which the event will be trigger relative to the start of the <a href="#//api/name/sequence">sequence</a>.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>timeSinceStart</strong>:
+      Exact time at which the event will be trigger relative to the start of the sequence.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -406,12 +294,12 @@ title: AKSequence
   
   
   <div class="method-subsection brief-description">
-    <p>Pause playback of the <a href="#//api/name/sequence">sequence</a>.</p>
+    Pause playback of the sequence.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)pause</code></div>
+ {% highlight objective-c %}- (void)pause{% endhighlight %}
 
     
   
@@ -442,12 +330,12 @@ title: AKSequence
   
   
   <div class="method-subsection brief-description">
-    <p>Trigger playback of the <a href="#//api/name/sequence">sequence</a>.</p>
+    Trigger playback of the sequence.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)play</code></div>
+ {% highlight objective-c %}- (void)play{% endhighlight %}
 
     
   
@@ -478,12 +366,12 @@ title: AKSequence
   
   
   <div class="method-subsection brief-description">
-    <p>Removes all <a href="#//api/name/events">events</a> from the <a href="#//api/name/sequence">sequence</a></p>
+    Removes all events from the sequence
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)reset</code></div>
+ {% highlight objective-c %}- (void)reset{% endhighlight %}
 
     
   
@@ -514,12 +402,12 @@ title: AKSequence
   
   
   <div class="method-subsection brief-description">
-    <p>Stop playback of the <a href="#//api/name/sequence">sequence</a>, stopping all the notes in the <a href="#//api/name/sequence">sequence</a>.</p>
+    Stop playback of the sequence, stopping all the notes in the sequence.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)stop</code></div>
+ {% highlight objective-c %}- (void)stop{% endhighlight %}
 
     
   
@@ -543,7 +431,6 @@ title: AKSequence
   
 </div>
             
-          </div>
           
           
         </div>

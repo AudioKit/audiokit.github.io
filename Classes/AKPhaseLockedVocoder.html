@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKPhaseLockedVocoder
 title: AKPhaseLockedVocoder
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKPhaseLockedVocoder</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,57 +16,16 @@ title: AKPhaseLockedVocoder
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKPhaseLockedVocoder.h<br />AKPhaseLockedVocoder.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Phase-locked vocoder processing.</p>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Phase-locked vocoder processing.
 
-<p>More detailed description from <a href="http://www.csounds.com/manual/html/mincer.html">http://www.csounds.com/manual/html/mincer.html</a></p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithTable:time:scaledPitch:amplitude:">&ndash;&nbsp;initWithTable:time:scaledPitch:amplitude:</a></code>
-    <span class="tooltip"><p>Instantiates the phase locked vocoder</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalSizeOfFFT:">&ndash;&nbsp;setOptionalSizeOfFFT:</a></code>
-    <span class="tooltip"><p>Set an optional size of fft</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalDecimation:">&ndash;&nbsp;setOptionalDecimation:</a></code>
-    <span class="tooltip"><p>Set an optional decimation</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
+More detailed description from http://www.csounds.com/manual/html/mincer.html</p>
           
           
 
@@ -80,9 +35,8 @@ title: AKPhaseLockedVocoder
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/initWithTable:time:scaledPitch:amplitude:" title="initWithTable:time:scaledPitch:amplitude:"></a>
@@ -91,39 +45,30 @@ title: AKPhaseLockedVocoder
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the phase locked vocoder</p>
+    Instantiates the phase locked vocoder
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithTable:(AKControl *)<em>table</em> time:(AKAudio *)<em>time</em> scaledPitch:(AKControl *)<em>scaledPitch</em> amplitude:(AKControl *)<em>amplitude</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithTable:(AKControl *)table time:(AKAudio *)time scaledPitch:(AKControl *)scaledPitch amplitude:(AKControl *)amplitude{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>table</em></dt>
-      <dd><p>Source signal table. Only mono audio files work.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>table</strong>:
+      Source signal table. Only mono audio files work.</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>time</em></dt>
-      <dd><p>Time position of current audio sample in secs. Table reading wraps around the ends of the table.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>time</strong>:
+      Time position of current audio sample in secs. Table reading wraps around the ends of the table.</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>scaledPitch</em></dt>
-      <dd><p>Grain pitch scaling (1=normal pitch, &lt; 1 lower, > 1 higher; negative, backwards)</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>scaledPitch</strong>:
+      Grain pitch scaling (1=normal pitch, < 1 lower, > 1 higher; negative, backwards)</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>Amplitude scaling</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude scaling</li>
     
-  </div>
+    </ul>
   
 
   
@@ -152,24 +97,21 @@ title: AKPhaseLockedVocoder
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional decimation</p>
+    Set an optional decimation
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalDecimation:(AKConstant *)<em>decimation</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalDecimation:(AKConstant *)decimation{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>decimation</em></dt>
-      <dd><p>Defaults to 4 (meaning hopsize = fftsize/4)</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>decimation</strong>:
+      Defaults to 4 (meaning hopsize = fftsize/4)</li>
     
-  </div>
+    </ul>
   
 
   
@@ -198,24 +140,21 @@ title: AKPhaseLockedVocoder
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional size of fft</p>
+    Set an optional size of fft
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalSizeOfFFT:(AKConstant *)<em>sizeOfFFT</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalSizeOfFFT:(AKConstant *)sizeOfFFT{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>sizeOfFFT</em></dt>
-      <dd><p>FFT size (power-of-two), defaults to 2048.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>sizeOfFFT</strong>:
+      FFT size (power-of-two), defaults to 2048.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -237,7 +176,6 @@ title: AKPhaseLockedVocoder
   
 </div>
             
-          </div>
           
           
         </div>

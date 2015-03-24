@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKMarimba
 title: AKMarimba
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKMarimba</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,191 +16,23 @@ title: AKMarimba
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKMarimba.h<br />AKMarimba.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Physical model related to the striking of a wooden block.</p>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Physical model related to the striking of a wooden block.
 
-<p>Audio output is a tone related to the striking of a wooden block as found in a <a href="#//api/name/marimba">marimba</a>. The method is a physical model developed from Perry Cook but re-coded for Csound.</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithFrequency:amplitude:stickHardness:strikePosition:vibratoShape:vibratoFrequency:vibratoAmplitude:doubleStrikePercentage:tripleStrikePercentage:">&ndash;&nbsp;initWithFrequency:amplitude:stickHardness:strikePosition:vibratoShape:vibratoFrequency:vibratoAmplitude:doubleStrikePercentage:tripleStrikePercentage:</a></code>
-    <span class="tooltip"><p>Instantiates the <a href="#//api/name/marimba">marimba</a> with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
-    <span class="tooltip"><p>Instantiates the <a href="#//api/name/marimba">marimba</a> with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/marimba">+&nbsp;marimba</a></code>
-    <span class="tooltip"><p>Instantiates the marimba with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/frequency">&nbsp;&nbsp;frequency</a></code>
-    <span class="tooltip"><p>Frequency of note played. [Default Value: 220]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalFrequency:">&ndash;&nbsp;setOptionalFrequency:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/frequency">frequency</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/amplitude">&nbsp;&nbsp;amplitude</a></code>
-    <span class="tooltip"><p>Amplitude of note. [Default Value: 1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalAmplitude:">&ndash;&nbsp;setOptionalAmplitude:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/stickHardness">&nbsp;&nbsp;stickHardness</a></code>
-    <span class="tooltip"><p>The hardness of the stick used in the strike. A range of 0 to 1 is used. [Default Value: 0]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalStickHardness:">&ndash;&nbsp;setOptionalStickHardness:</a></code>
-    <span class="tooltip"><p>Set an optional stick hardness</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/strikePosition">&nbsp;&nbsp;strikePosition</a></code>
-    <span class="tooltip"><p>Where the block is hit, in the range 0 to 1. [Default Value: 0.5]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalStrikePosition:">&ndash;&nbsp;setOptionalStrikePosition:</a></code>
-    <span class="tooltip"><p>Set an optional strike position</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/vibratoShape">&nbsp;&nbsp;vibratoShape</a></code>
-    <span class="tooltip"><p>Shape of vibrato, usually a sine table, created by a function [Default Value: sine]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalVibratoShape:">&ndash;&nbsp;setOptionalVibratoShape:</a></code>
-    <span class="tooltip"><p>Set an optional vibrato shape</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/vibratoFrequency">&nbsp;&nbsp;vibratoFrequency</a></code>
-    <span class="tooltip"><p>Frequency of vibrato in Hertz. Suggested range is 0 to 12 [Default Value: 0]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalVibratoFrequency:">&ndash;&nbsp;setOptionalVibratoFrequency:</a></code>
-    <span class="tooltip"><p>Set an optional vibrato <a href="#//api/name/frequency">frequency</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/vibratoAmplitude">&nbsp;&nbsp;vibratoAmplitude</a></code>
-    <span class="tooltip"><p>Amplitude of the vibrato [Default Value: 0]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalVibratoAmplitude:">&ndash;&nbsp;setOptionalVibratoAmplitude:</a></code>
-    <span class="tooltip"><p>Set an optional vibrato <a href="#//api/name/amplitude">amplitude</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/doubleStrikePercentage">&nbsp;&nbsp;doubleStrikePercentage</a></code>
-    <span class="tooltip"><p>Percentage of double strikes. Default is 40%. [Default Value: 40]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalDoubleStrikePercentage:">&ndash;&nbsp;setOptionalDoubleStrikePercentage:</a></code>
-    <span class="tooltip"><p>Set an optional double strike percentage</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/tripleStrikePercentage">&nbsp;&nbsp;tripleStrikePercentage</a></code>
-    <span class="tooltip"><p>Percentage of triple strikes. Default is 20%. [Default Value: 20]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalTripleStrikePercentage:">&ndash;&nbsp;setOptionalTripleStrikePercentage:</a></code>
-    <span class="tooltip"><p>Set an optional triple strike percentage</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
+Audio output is a tone related to the striking of a wooden block as found in a marimba. The method is a physical model developed from Perry Cook but re-coded for Csound.</p>
           
           
 
           
           
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/amplitude" title="amplitude"></a>
@@ -213,12 +41,12 @@ title: AKMarimba
   
   
   <div class="method-subsection brief-description">
-    <p>Amplitude of note. [Default Value: 1]</p>
+    Amplitude of note. [Default Value: 1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *amplitude</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *amplitude{% endhighlight %}
 
     
   
@@ -249,12 +77,12 @@ title: AKMarimba
   
   
   <div class="method-subsection brief-description">
-    <p>Percentage of double strikes. Default is 40%. [Default Value: 40]</p>
+    Percentage of double strikes. Default is 40%. [Default Value: 40]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *doubleStrikePercentage</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *doubleStrikePercentage{% endhighlight %}
 
     
   
@@ -285,12 +113,12 @@ title: AKMarimba
   
   
   <div class="method-subsection brief-description">
-    <p>Frequency of note played. [Default Value: 220]</p>
+    Frequency of note played. [Default Value: 220]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *frequency</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *frequency{% endhighlight %}
 
     
   
@@ -321,12 +149,12 @@ title: AKMarimba
   
   
   <div class="method-subsection brief-description">
-    <p>The hardness of the stick used in the strike. A range of 0 to 1 is used. [Default Value: 0]</p>
+    The hardness of the stick used in the strike. A range of 0 to 1 is used. [Default Value: 0]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *stickHardness</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *stickHardness{% endhighlight %}
 
     
   
@@ -357,12 +185,12 @@ title: AKMarimba
   
   
   <div class="method-subsection brief-description">
-    <p>Where the block is hit, in the range 0 to 1. [Default Value: 0.5]</p>
+    Where the block is hit, in the range 0 to 1. [Default Value: 0.5]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *strikePosition</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *strikePosition{% endhighlight %}
 
     
   
@@ -393,12 +221,12 @@ title: AKMarimba
   
   
   <div class="method-subsection brief-description">
-    <p>Percentage of triple strikes. Default is 20%. [Default Value: 20]</p>
+    Percentage of triple strikes. Default is 20%. [Default Value: 20]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *tripleStrikePercentage</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *tripleStrikePercentage{% endhighlight %}
 
     
   
@@ -429,12 +257,12 @@ title: AKMarimba
   
   
   <div class="method-subsection brief-description">
-    <p>Amplitude of the vibrato [Default Value: 0]</p>
+    Amplitude of the vibrato [Default Value: 0]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *vibratoAmplitude</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *vibratoAmplitude{% endhighlight %}
 
     
   
@@ -465,12 +293,12 @@ title: AKMarimba
   
   
   <div class="method-subsection brief-description">
-    <p>Frequency of vibrato in Hertz. Suggested range is 0 to 12 [Default Value: 0]</p>
+    Frequency of vibrato in Hertz. Suggested range is 0 to 12 [Default Value: 0]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *vibratoFrequency</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *vibratoFrequency{% endhighlight %}
 
     
   
@@ -501,12 +329,12 @@ title: AKMarimba
   
   
   <div class="method-subsection brief-description">
-    <p>Shape of vibrato, usually a sine table, created by a function [Default Value: sine]</p>
+    Shape of vibrato, usually a sine table, created by a function [Default Value: sine]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKTable *vibratoShape</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKTable *vibratoShape{% endhighlight %}
 
     
   
@@ -530,13 +358,11 @@ title: AKMarimba
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/marimba" title="marimba"></a>
@@ -545,12 +371,12 @@ title: AKMarimba
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the marimba with default values</p>
+    Instantiates the marimba with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)marimba</code></div>
+ {% highlight objective-c %}+ (instancetype)marimba{% endhighlight %}
 
     
   
@@ -574,13 +400,11 @@ title: AKMarimba
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/init" title="init"></a>
@@ -589,12 +413,12 @@ title: AKMarimba
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the <a href="#//api/name/marimba">marimba</a> with default values</p>
+    Instantiates the marimba with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
+ {% highlight objective-c %}- (instancetype)init{% endhighlight %}
 
     
   
@@ -625,64 +449,45 @@ title: AKMarimba
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the <a href="#//api/name/marimba">marimba</a> with all values</p>
+    Instantiates the marimba with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFrequency:(AKParameter *)<em>frequency</em> amplitude:(AKConstant *)<em>amplitude</em> stickHardness:(AKConstant *)<em>stickHardness</em> strikePosition:(AKConstant *)<em>strikePosition</em> vibratoShape:(AKTable *)<em>vibratoShape</em> vibratoFrequency:(AKParameter *)<em>vibratoFrequency</em> vibratoAmplitude:(AKParameter *)<em>vibratoAmplitude</em> doubleStrikePercentage:(AKConstant *)<em>doubleStrikePercentage</em> tripleStrikePercentage:(AKConstant *)<em>tripleStrikePercentage</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithFrequency:(AKParameter *)frequency amplitude:(AKConstant *)amplitude stickHardness:(AKConstant *)stickHardness strikePosition:(AKConstant *)strikePosition vibratoShape:(AKTable *)vibratoShape vibratoFrequency:(AKParameter *)vibratoFrequency vibratoAmplitude:(AKParameter *)vibratoAmplitude doubleStrikePercentage:(AKConstant *)doubleStrikePercentage tripleStrikePercentage:(AKConstant *)tripleStrikePercentage{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>frequency</em></dt>
-      <dd><p>Frequency of note played. Updated at Control-rate. [Default Value: 220]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>frequency</strong>:
+      Frequency of note played. Updated at Control-rate. [Default Value: 220]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>Amplitude of note. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude of note. [Default Value: 1]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>stickHardness</em></dt>
-      <dd><p>The hardness of the stick used in the strike. A range of 0 to 1 is used. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>stickHardness</strong>:
+      The hardness of the stick used in the strike. A range of 0 to 1 is used. [Default Value: 0]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>strikePosition</em></dt>
-      <dd><p>Where the block is hit, in the range 0 to 1. [Default Value: 0.5]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>strikePosition</strong>:
+      Where the block is hit, in the range 0 to 1. [Default Value: 0.5]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>vibratoShape</em></dt>
-      <dd><p>Shape of vibrato, usually a sine table, created by a function [Default Value: sine]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>vibratoShape</strong>:
+      Shape of vibrato, usually a sine table, created by a function [Default Value: sine]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>vibratoFrequency</em></dt>
-      <dd><p>Frequency of vibrato in Hertz. Suggested range is 0 to 12 Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>vibratoFrequency</strong>:
+      Frequency of vibrato in Hertz. Suggested range is 0 to 12 Updated at Control-rate. [Default Value: 0]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>vibratoAmplitude</em></dt>
-      <dd><p>Amplitude of the vibrato Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>vibratoAmplitude</strong>:
+      Amplitude of the vibrato Updated at Control-rate. [Default Value: 0]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>doubleStrikePercentage</em></dt>
-      <dd><p>Percentage of double strikes. Default is 40%. [Default Value: 40]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>doubleStrikePercentage</strong>:
+      Percentage of double strikes. Default is 40%. [Default Value: 40]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>tripleStrikePercentage</em></dt>
-      <dd><p>Percentage of triple strikes. Default is 20%. [Default Value: 20]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>tripleStrikePercentage</strong>:
+      Percentage of triple strikes. Default is 20%. [Default Value: 20]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -711,24 +516,21 @@ title: AKMarimba
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p>
+    Set an optional amplitude
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalAmplitude:(AKConstant *)<em>amplitude</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalAmplitude:(AKConstant *)amplitude{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>Amplitude of note. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude of note. [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -757,24 +559,21 @@ title: AKMarimba
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional double strike percentage</p>
+    Set an optional double strike percentage
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalDoubleStrikePercentage:(AKConstant *)<em>doubleStrikePercentage</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalDoubleStrikePercentage:(AKConstant *)doubleStrikePercentage{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>doubleStrikePercentage</em></dt>
-      <dd><p>Percentage of double strikes. Default is 40%. [Default Value: 40]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>doubleStrikePercentage</strong>:
+      Percentage of double strikes. Default is 40%. [Default Value: 40]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -803,24 +602,21 @@ title: AKMarimba
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/frequency">frequency</a></p>
+    Set an optional frequency
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalFrequency:(AKParameter *)<em>frequency</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalFrequency:(AKParameter *)frequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>frequency</em></dt>
-      <dd><p>Frequency of note played. Updated at Control-rate. [Default Value: 220]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>frequency</strong>:
+      Frequency of note played. Updated at Control-rate. [Default Value: 220]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -849,24 +645,21 @@ title: AKMarimba
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional stick hardness</p>
+    Set an optional stick hardness
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalStickHardness:(AKConstant *)<em>stickHardness</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalStickHardness:(AKConstant *)stickHardness{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>stickHardness</em></dt>
-      <dd><p>The hardness of the stick used in the strike. A range of 0 to 1 is used. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>stickHardness</strong>:
+      The hardness of the stick used in the strike. A range of 0 to 1 is used. [Default Value: 0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -895,24 +688,21 @@ title: AKMarimba
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional strike position</p>
+    Set an optional strike position
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalStrikePosition:(AKConstant *)<em>strikePosition</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalStrikePosition:(AKConstant *)strikePosition{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>strikePosition</em></dt>
-      <dd><p>Where the block is hit, in the range 0 to 1. [Default Value: 0.5]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>strikePosition</strong>:
+      Where the block is hit, in the range 0 to 1. [Default Value: 0.5]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -941,24 +731,21 @@ title: AKMarimba
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional triple strike percentage</p>
+    Set an optional triple strike percentage
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalTripleStrikePercentage:(AKConstant *)<em>tripleStrikePercentage</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalTripleStrikePercentage:(AKConstant *)tripleStrikePercentage{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>tripleStrikePercentage</em></dt>
-      <dd><p>Percentage of triple strikes. Default is 20%. [Default Value: 20]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>tripleStrikePercentage</strong>:
+      Percentage of triple strikes. Default is 20%. [Default Value: 20]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -987,24 +774,21 @@ title: AKMarimba
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional vibrato <a href="#//api/name/amplitude">amplitude</a></p>
+    Set an optional vibrato amplitude
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalVibratoAmplitude:(AKParameter *)<em>vibratoAmplitude</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalVibratoAmplitude:(AKParameter *)vibratoAmplitude{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>vibratoAmplitude</em></dt>
-      <dd><p>Amplitude of the vibrato Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>vibratoAmplitude</strong>:
+      Amplitude of the vibrato Updated at Control-rate. [Default Value: 0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -1033,24 +817,21 @@ title: AKMarimba
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional vibrato <a href="#//api/name/frequency">frequency</a></p>
+    Set an optional vibrato frequency
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalVibratoFrequency:(AKParameter *)<em>vibratoFrequency</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalVibratoFrequency:(AKParameter *)vibratoFrequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>vibratoFrequency</em></dt>
-      <dd><p>Frequency of vibrato in Hertz. Suggested range is 0 to 12 Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>vibratoFrequency</strong>:
+      Frequency of vibrato in Hertz. Suggested range is 0 to 12 Updated at Control-rate. [Default Value: 0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -1079,24 +860,21 @@ title: AKMarimba
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional vibrato shape</p>
+    Set an optional vibrato shape
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalVibratoShape:(AKTable *)<em>vibratoShape</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalVibratoShape:(AKTable *)vibratoShape{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>vibratoShape</em></dt>
-      <dd><p>Shape of vibrato, usually a sine table, created by a function [Default Value: sine]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>vibratoShape</strong>:
+      Shape of vibrato, usually a sine table, created by a function [Default Value: sine]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -1118,7 +896,6 @@ title: AKMarimba
   
 </div>
             
-          </div>
           
           
         </div>

@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKMidi
 title: AKMidi
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKMidi</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value">NSObject</td>
@@ -20,70 +16,21 @@ title: AKMidi
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKMidi.h<br />AKMidi.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>AKMidi is the object that handles the MIDI input and output from AK.</p>
-          </div>
           
           
 
           
           
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/listeners">&nbsp;&nbsp;listeners</a></code>
-    <span class="tooltip"><p>A set of all listeners &ldquo;subscribed&rdquo; to MIDI Messages.</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/addListener:">&ndash;&nbsp;addListener:</a></code>
-    <span class="tooltip"><p>Add listener to a list of notified <a href="#//api/name/listeners">listeners</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/openMidiIn">&ndash;&nbsp;openMidiIn</a></code>
-    <span class="tooltip"><p>Create midi client and connect to all available midi input sources.</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/closeMidiIn">&ndash;&nbsp;closeMidiIn</a></code>
-    <span class="tooltip"><p>Dispose of midi client.</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/listeners" title="listeners"></a>
@@ -92,12 +39,12 @@ title: AKMidi
   
   
   <div class="method-subsection brief-description">
-    <p>A set of all listeners &ldquo;subscribed&rdquo; to MIDI Messages.</p>
+    A set of all listeners "subscribed" to MIDI Messages.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property NSMutableSet *listeners</code></div>
+ {% highlight objective-c %}@property NSMutableSet *listeners{% endhighlight %}
 
     
   
@@ -121,15 +68,13 @@ title: AKMidi
   
 </div>
             
-          </div>
           
 
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/addListener:" title="addListener:"></a>
@@ -138,24 +83,21 @@ title: AKMidi
   
   
   <div class="method-subsection brief-description">
-    <p>Add listener to a list of notified <a href="#//api/name/listeners">listeners</a></p>
+    Add listener to a list of notified listeners
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)addListener:(id&lt;AKMidiListener&gt;)<em>listener</em></code></div>
+ {% highlight objective-c %}- (void)addListener:(id&lt;AKMidiListener&gt;)listener{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>listener</em></dt>
-      <dd><p>Object that implements the <a href="../Protocols/AKMidiListener.html">AKMidiListener</a> protocol</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>listener</strong>:
+      Object that implements the AKMidiListener protocol</li>
     
-  </div>
+    </ul>
   
 
   
@@ -184,12 +126,12 @@ title: AKMidi
   
   
   <div class="method-subsection brief-description">
-    <p>Dispose of midi client.</p>
+    Dispose of midi client.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)closeMidiIn</code></div>
+ {% highlight objective-c %}- (void)closeMidiIn{% endhighlight %}
 
     
   
@@ -220,12 +162,12 @@ title: AKMidi
   
   
   <div class="method-subsection brief-description">
-    <p>Create midi client and connect to all available midi input sources.</p>
+    Create midi client and connect to all available midi input sources.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)openMidiIn</code></div>
+ {% highlight objective-c %}- (void)openMidiIn{% endhighlight %}
 
     
   
@@ -249,7 +191,6 @@ title: AKMidi
   
 </div>
             
-          </div>
           
           
         </div>

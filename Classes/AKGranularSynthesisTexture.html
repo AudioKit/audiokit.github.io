@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKGranularSynthesisTexture
 title: AKGranularSynthesisTexture
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKGranularSynthesisTexture</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,175 +16,21 @@ title: AKGranularSynthesisTexture
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKGranularSynthesisTexture.h<br />AKGranularSynthesisTexture.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>Generates granular synthesis textures.</p>
-          </div>
           
           
 
           
           
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithGrainTable:windowTable:maximumGrainDuration:averageGrainDuration:maximumFrequencyDeviation:grainFrequency:maximumAmplitudeDeviation:grainAmplitude:grainDensity:useRandomGrainOffset:">&ndash;&nbsp;initWithGrainTable:windowTable:maximumGrainDuration:averageGrainDuration:maximumFrequencyDeviation:grainFrequency:maximumAmplitudeDeviation:grainAmplitude:grainDensity:useRandomGrainOffset:</a></code>
-    <span class="tooltip"><p>Instantiates the granular synthesis texture with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithGrainTable:windowTable:">&ndash;&nbsp;initWithGrainTable:windowTable:</a></code>
-    <span class="tooltip"><p>Instantiates the granular synthesis texture with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/textureWithGrainTable:windowTable:">+&nbsp;textureWithGrainTable:windowTable:</a></code>
-    <span class="tooltip"><p>Instantiates the granular synthesis texture with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/maximumGrainDuration">&nbsp;&nbsp;maximumGrainDuration</a></code>
-    <span class="tooltip"><p>Maximum grain duration in seconds. [Default Value: 0.5]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalMaximumGrainDuration:">&ndash;&nbsp;setOptionalMaximumGrainDuration:</a></code>
-    <span class="tooltip"><p>Set an optional maximum grain duration</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/averageGrainDuration">&nbsp;&nbsp;averageGrainDuration</a></code>
-    <span class="tooltip"><p>Average grain duration in seconds. [Default Value: 0.4]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalAverageGrainDuration:">&ndash;&nbsp;setOptionalAverageGrainDuration:</a></code>
-    <span class="tooltip"><p>Set an optional average grain duration</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/maximumFrequencyDeviation">&nbsp;&nbsp;maximumFrequencyDeviation</a></code>
-    <span class="tooltip"><p>Maximum pitch deviation from <a href="#//api/name/grainFrequency">grainFrequency</a> in Hz. [Default Value: 0.5]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalMaximumFrequencyDeviation:">&ndash;&nbsp;setOptionalMaximumFrequencyDeviation:</a></code>
-    <span class="tooltip"><p>Set an optional maximum frequency deviation</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/grainFrequency">&nbsp;&nbsp;grainFrequency</a></code>
-    <span class="tooltip"><p>To use the original frequency of the input sound, divide the original sample rate of the grain waveform by the length of the grain table. [Default Value: 0.8]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalGrainFrequency:">&ndash;&nbsp;setOptionalGrainFrequency:</a></code>
-    <span class="tooltip"><p>Set an optional grain frequency</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/maximumAmplitudeDeviation">&nbsp;&nbsp;maximumAmplitudeDeviation</a></code>
-    <span class="tooltip"><p>Maximum amplitude deviation from <code>amplitude</code>. If it is set to zero then there is no random amplitude for each grain. [Default Value: 0.1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalMaximumAmplitudeDeviation:">&ndash;&nbsp;setOptionalMaximumAmplitudeDeviation:</a></code>
-    <span class="tooltip"><p>Set an optional maximum amplitude deviation</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/grainAmplitude">&nbsp;&nbsp;grainAmplitude</a></code>
-    <span class="tooltip"><p>Amplitude of each grain. [Default Value: 0.01]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalGrainAmplitude:">&ndash;&nbsp;setOptionalGrainAmplitude:</a></code>
-    <span class="tooltip"><p>Set an optional grain amplitude</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/grainDensity">&nbsp;&nbsp;grainDensity</a></code>
-    <span class="tooltip"><p>Density of grains measured in grains per second. If this is constant then the output is synchronous granular synthesis. If grainDensity has a random element (like added noise), then the result is more like asynchronous granular synthesis. [Default Value: 500]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalGrainDensity:">&ndash;&nbsp;setOptionalGrainDensity:</a></code>
-    <span class="tooltip"><p>Set an optional grain density</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/useRandomGrainOffset">&nbsp;&nbsp;useRandomGrainOffset</a></code>
-    <span class="tooltip"><p>Whether or not to set the grains to start at the initial position or a random position [Default Value: true]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalUseRandomGrainOffset:">&ndash;&nbsp;setOptionalUseRandomGrainOffset:</a></code>
-    <span class="tooltip"><p>Set an optional use random grain offset</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/averageGrainDuration" title="averageGrainDuration"></a>
@@ -197,12 +39,12 @@ title: AKGranularSynthesisTexture
   
   
   <div class="method-subsection brief-description">
-    <p>Average grain duration in seconds. [Default Value: 0.4]</p>
+    Average grain duration in seconds. [Default Value: 0.4]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *averageGrainDuration</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *averageGrainDuration{% endhighlight %}
 
     
   
@@ -233,12 +75,12 @@ title: AKGranularSynthesisTexture
   
   
   <div class="method-subsection brief-description">
-    <p>Amplitude of each grain. [Default Value: 0.01]</p>
+    Amplitude of each grain. [Default Value: 0.01]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *grainAmplitude</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *grainAmplitude{% endhighlight %}
 
     
   
@@ -269,12 +111,12 @@ title: AKGranularSynthesisTexture
   
   
   <div class="method-subsection brief-description">
-    <p>Density of grains measured in grains per second. If this is constant then the output is synchronous granular synthesis. If grainDensity has a random element (like added noise), then the result is more like asynchronous granular synthesis. [Default Value: 500]</p>
+    Density of grains measured in grains per second. If this is constant then the output is synchronous granular synthesis. If grainDensity has a random element (like added noise), then the result is more like asynchronous granular synthesis. [Default Value: 500]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *grainDensity</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *grainDensity{% endhighlight %}
 
     
   
@@ -305,12 +147,12 @@ title: AKGranularSynthesisTexture
   
   
   <div class="method-subsection brief-description">
-    <p>To use the original frequency of the input sound, divide the original sample rate of the grain waveform by the length of the grain table. [Default Value: 0.8]</p>
+    To use the original frequency of the input sound, divide the original sample rate of the grain waveform by the length of the grain table. [Default Value: 0.8]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *grainFrequency</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *grainFrequency{% endhighlight %}
 
     
   
@@ -341,12 +183,12 @@ title: AKGranularSynthesisTexture
   
   
   <div class="method-subsection brief-description">
-    <p>Maximum amplitude deviation from <code>amplitude</code>. If it is set to zero then there is no random amplitude for each grain. [Default Value: 0.1]</p>
+    Maximum amplitude deviation from amplitude. If it is set to zero then there is no random amplitude for each grain. [Default Value: 0.1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *maximumAmplitudeDeviation</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *maximumAmplitudeDeviation{% endhighlight %}
 
     
   
@@ -377,12 +219,12 @@ title: AKGranularSynthesisTexture
   
   
   <div class="method-subsection brief-description">
-    <p>Maximum pitch deviation from <a href="#//api/name/grainFrequency">grainFrequency</a> in Hz. [Default Value: 0.5]</p>
+    Maximum pitch deviation from grainFrequency in Hz. [Default Value: 0.5]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *maximumFrequencyDeviation</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *maximumFrequencyDeviation{% endhighlight %}
 
     
   
@@ -413,12 +255,12 @@ title: AKGranularSynthesisTexture
   
   
   <div class="method-subsection brief-description">
-    <p>Maximum grain duration in seconds. [Default Value: 0.5]</p>
+    Maximum grain duration in seconds. [Default Value: 0.5]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *maximumGrainDuration</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *maximumGrainDuration{% endhighlight %}
 
     
   
@@ -449,12 +291,12 @@ title: AKGranularSynthesisTexture
   
   
   <div class="method-subsection brief-description">
-    <p>Whether or not to set the grains to start at the initial position or a random position [Default Value: true]</p>
+    Whether or not to set the grains to start at the initial position or a random position [Default Value: true]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) BOOL useRandomGrainOffset</code></div>
+ {% highlight objective-c %}@property (nonatomic) BOOL useRandomGrainOffset{% endhighlight %}
 
     
   
@@ -478,13 +320,11 @@ title: AKGranularSynthesisTexture
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/textureWithGrainTable:windowTable:" title="textureWithGrainTable:windowTable:"></a>
@@ -493,29 +333,24 @@ title: AKGranularSynthesisTexture
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the granular synthesis texture with default values</p>
+    Instantiates the granular synthesis texture with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)textureWithGrainTable:(AKTable *)<em>grainTable</em> windowTable:(AKTable *)<em>windowTable</em></code></div>
+ {% highlight objective-c %}+ (instancetype)textureWithGrainTable:(AKTable *)grainTable windowTable:(AKTable *)windowTable{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>grainTable</em></dt>
-      <dd><p>The grain waveform. This can be just a sine wave or a sampled sound.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>grainTable</strong>:
+      The grain waveform. This can be just a sine wave or a sampled sound.</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>windowTable</em></dt>
-      <dd><p>The amplitude envelope used for the grains.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>windowTable</strong>:
+      The amplitude envelope used for the grains.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -537,13 +372,11 @@ title: AKGranularSynthesisTexture
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/initWithGrainTable:windowTable:" title="initWithGrainTable:windowTable:"></a>
@@ -552,29 +385,24 @@ title: AKGranularSynthesisTexture
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the granular synthesis texture with default values</p>
+    Instantiates the granular synthesis texture with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithGrainTable:(AKTable *)<em>grainTable</em> windowTable:(AKTable *)<em>windowTable</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithGrainTable:(AKTable *)grainTable windowTable:(AKTable *)windowTable{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>grainTable</em></dt>
-      <dd><p>The grain waveform. This can be just a sine wave or a sampled sound.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>grainTable</strong>:
+      The grain waveform. This can be just a sine wave or a sampled sound.</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>windowTable</em></dt>
-      <dd><p>The amplitude envelope used for the grains.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>windowTable</strong>:
+      The amplitude envelope used for the grains.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -603,69 +431,48 @@ title: AKGranularSynthesisTexture
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the granular synthesis texture with all values</p>
+    Instantiates the granular synthesis texture with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithGrainTable:(AKTable *)<em>grainTable</em> windowTable:(AKTable *)<em>windowTable</em> maximumGrainDuration:(AKConstant *)<em>maximumGrainDuration</em> averageGrainDuration:(AKParameter *)<em>averageGrainDuration</em> maximumFrequencyDeviation:(AKParameter *)<em>maximumFrequencyDeviation</em> grainFrequency:(AKParameter *)<em>grainFrequency</em> maximumAmplitudeDeviation:(AKParameter *)<em>maximumAmplitudeDeviation</em> grainAmplitude:(AKParameter *)<em>grainAmplitude</em> grainDensity:(AKParameter *)<em>grainDensity</em> useRandomGrainOffset:(BOOL)<em>useRandomGrainOffset</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithGrainTable:(AKTable *)grainTable windowTable:(AKTable *)windowTable maximumGrainDuration:(AKConstant *)maximumGrainDuration averageGrainDuration:(AKParameter *)averageGrainDuration maximumFrequencyDeviation:(AKParameter *)maximumFrequencyDeviation grainFrequency:(AKParameter *)grainFrequency maximumAmplitudeDeviation:(AKParameter *)maximumAmplitudeDeviation grainAmplitude:(AKParameter *)grainAmplitude grainDensity:(AKParameter *)grainDensity useRandomGrainOffset:(BOOL)useRandomGrainOffset{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>grainTable</em></dt>
-      <dd><p>The grain waveform. This can be just a sine wave or a sampled sound. [Default Value: ]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>grainTable</strong>:
+      The grain waveform. This can be just a sine wave or a sampled sound. [Default Value: ]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>windowTable</em></dt>
-      <dd><p>The amplitude envelope used for the grains. [Default Value: ]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>windowTable</strong>:
+      The amplitude envelope used for the grains. [Default Value: ]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>maximumGrainDuration</em></dt>
-      <dd><p>Maximum grain duration in seconds. [Default Value: 0.5]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>maximumGrainDuration</strong>:
+      Maximum grain duration in seconds. [Default Value: 0.5]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>averageGrainDuration</em></dt>
-      <dd><p>Average grain duration in seconds. Updated at Control-rate. [Default Value: 0.4]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>averageGrainDuration</strong>:
+      Average grain duration in seconds. Updated at Control-rate. [Default Value: 0.4]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>maximumFrequencyDeviation</em></dt>
-      <dd><p>Maximum pitch deviation from <a href="#//api/name/grainFrequency">grainFrequency</a> in Hz. Updated at Control-rate. [Default Value: 0.5]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>maximumFrequencyDeviation</strong>:
+      Maximum pitch deviation from grainFrequency in Hz. Updated at Control-rate. [Default Value: 0.5]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>grainFrequency</em></dt>
-      <dd><p>To use the original frequency of the input sound, divide the original sample rate of the grain waveform by the length of the grain table. [Default Value: 0.8]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>grainFrequency</strong>:
+      To use the original frequency of the input sound, divide the original sample rate of the grain waveform by the length of the grain table. [Default Value: 0.8]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>maximumAmplitudeDeviation</em></dt>
-      <dd><p>Maximum amplitude deviation from <code>amplitude</code>. If it is set to zero then there is no random amplitude for each grain. Updated at Control-rate. [Default Value: 0.1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>maximumAmplitudeDeviation</strong>:
+      Maximum amplitude deviation from amplitude. If it is set to zero then there is no random amplitude for each grain. Updated at Control-rate. [Default Value: 0.1]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>grainAmplitude</em></dt>
-      <dd><p>Amplitude of each grain. [Default Value: 0.01]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>grainAmplitude</strong>:
+      Amplitude of each grain. [Default Value: 0.01]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>grainDensity</em></dt>
-      <dd><p>Density of grains measured in grains per second. If this is constant then the output is synchronous granular synthesis. If <a href="#//api/name/grainDensity">grainDensity</a> has a random element (like added noise), then the result is more like asynchronous granular synthesis. [Default Value: 500]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>grainDensity</strong>:
+      Density of grains measured in grains per second. If this is constant then the output is synchronous granular synthesis. If grainDensity has a random element (like added noise), then the result is more like asynchronous granular synthesis. [Default Value: 500]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>useRandomGrainOffset</em></dt>
-      <dd><p>Whether or not to set the grains to start at the initial position or a random position [Default Value: true]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>useRandomGrainOffset</strong>:
+      Whether or not to set the grains to start at the initial position or a random position [Default Value: true]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -694,24 +501,21 @@ title: AKGranularSynthesisTexture
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional average grain duration</p>
+    Set an optional average grain duration
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalAverageGrainDuration:(AKParameter *)<em>averageGrainDuration</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalAverageGrainDuration:(AKParameter *)averageGrainDuration{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>averageGrainDuration</em></dt>
-      <dd><p>Average grain duration in seconds. Updated at Control-rate. [Default Value: 0.4]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>averageGrainDuration</strong>:
+      Average grain duration in seconds. Updated at Control-rate. [Default Value: 0.4]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -740,24 +544,21 @@ title: AKGranularSynthesisTexture
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional grain amplitude</p>
+    Set an optional grain amplitude
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalGrainAmplitude:(AKParameter *)<em>grainAmplitude</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalGrainAmplitude:(AKParameter *)grainAmplitude{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>grainAmplitude</em></dt>
-      <dd><p>Amplitude of each grain. [Default Value: 0.01]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>grainAmplitude</strong>:
+      Amplitude of each grain. [Default Value: 0.01]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -786,24 +587,21 @@ title: AKGranularSynthesisTexture
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional grain density</p>
+    Set an optional grain density
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalGrainDensity:(AKParameter *)<em>grainDensity</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalGrainDensity:(AKParameter *)grainDensity{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>grainDensity</em></dt>
-      <dd><p>Density of grains measured in grains per second. If this is constant then the output is synchronous granular synthesis. If <a href="#//api/name/grainDensity">grainDensity</a> has a random element (like added noise), then the result is more like asynchronous granular synthesis. [Default Value: 500]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>grainDensity</strong>:
+      Density of grains measured in grains per second. If this is constant then the output is synchronous granular synthesis. If grainDensity has a random element (like added noise), then the result is more like asynchronous granular synthesis. [Default Value: 500]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -832,24 +630,21 @@ title: AKGranularSynthesisTexture
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional grain frequency</p>
+    Set an optional grain frequency
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalGrainFrequency:(AKParameter *)<em>grainFrequency</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalGrainFrequency:(AKParameter *)grainFrequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>grainFrequency</em></dt>
-      <dd><p>To use the original frequency of the input sound, divide the original sample rate of the grain waveform by the length of the grain table. [Default Value: 0.8]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>grainFrequency</strong>:
+      To use the original frequency of the input sound, divide the original sample rate of the grain waveform by the length of the grain table. [Default Value: 0.8]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -878,24 +673,21 @@ title: AKGranularSynthesisTexture
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional maximum amplitude deviation</p>
+    Set an optional maximum amplitude deviation
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalMaximumAmplitudeDeviation:(AKParameter *)<em>maximumAmplitudeDeviation</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalMaximumAmplitudeDeviation:(AKParameter *)maximumAmplitudeDeviation{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>maximumAmplitudeDeviation</em></dt>
-      <dd><p>Maximum amplitude deviation from <code>amplitude</code>. If it is set to zero then there is no random amplitude for each grain. Updated at Control-rate. [Default Value: 0.1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>maximumAmplitudeDeviation</strong>:
+      Maximum amplitude deviation from amplitude. If it is set to zero then there is no random amplitude for each grain. Updated at Control-rate. [Default Value: 0.1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -924,24 +716,21 @@ title: AKGranularSynthesisTexture
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional maximum frequency deviation</p>
+    Set an optional maximum frequency deviation
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalMaximumFrequencyDeviation:(AKParameter *)<em>maximumFrequencyDeviation</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalMaximumFrequencyDeviation:(AKParameter *)maximumFrequencyDeviation{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>maximumFrequencyDeviation</em></dt>
-      <dd><p>Maximum pitch deviation from <a href="#//api/name/grainFrequency">grainFrequency</a> in Hz. Updated at Control-rate. [Default Value: 0.5]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>maximumFrequencyDeviation</strong>:
+      Maximum pitch deviation from grainFrequency in Hz. Updated at Control-rate. [Default Value: 0.5]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -970,24 +759,21 @@ title: AKGranularSynthesisTexture
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional maximum grain duration</p>
+    Set an optional maximum grain duration
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalMaximumGrainDuration:(AKConstant *)<em>maximumGrainDuration</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalMaximumGrainDuration:(AKConstant *)maximumGrainDuration{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>maximumGrainDuration</em></dt>
-      <dd><p>Maximum grain duration in seconds. [Default Value: 0.5]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>maximumGrainDuration</strong>:
+      Maximum grain duration in seconds. [Default Value: 0.5]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -1016,24 +802,21 @@ title: AKGranularSynthesisTexture
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional use random grain offset</p>
+    Set an optional use random grain offset
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalUseRandomGrainOffset:(BOOL)<em>useRandomGrainOffset</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalUseRandomGrainOffset:(BOOL)useRandomGrainOffset{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>useRandomGrainOffset</em></dt>
-      <dd><p>Whether or not to set the grains to start at the initial position or a random position [Default Value: true]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>useRandomGrainOffset</strong>:
+      Whether or not to set the grains to start at the initial position or a random position [Default Value: true]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -1055,7 +838,6 @@ title: AKGranularSynthesisTexture
   
 </div>
             
-          </div>
           
           
         </div>

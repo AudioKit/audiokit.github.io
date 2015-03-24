@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKMandolin
 title: AKMandolin
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKMandolin</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,149 +16,23 @@ title: AKMandolin
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKMandolin.h<br />AKMandolin.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>An emulation of a <a href="#//api/name/mandolin">mandolin</a>.</p>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>An emulation of a mandolin.
 
-<p>A <a href="#//api/name/mandolin">mandolin</a> emulation with <a href="#//api/name/amplitude">amplitude</a>, <a href="#//api/name/frequency">frequency</a>, tuning, gain and <a href="#//api/name/mandolin">mandolin</a> size parameters.</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithBodySize:frequency:amplitude:pairedStringDetuning:pluckPosition:loopGain:">&ndash;&nbsp;initWithBodySize:frequency:amplitude:pairedStringDetuning:pluckPosition:loopGain:</a></code>
-    <span class="tooltip"><p>Instantiates the <a href="#//api/name/mandolin">mandolin</a> with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
-    <span class="tooltip"><p>Instantiates the <a href="#//api/name/mandolin">mandolin</a> with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/mandolin">+&nbsp;mandolin</a></code>
-    <span class="tooltip"><p>Instantiates the mandolin with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/bodySize">&nbsp;&nbsp;bodySize</a></code>
-    <span class="tooltip"><p>The size of the body of the <a href="#//api/name/mandolin">mandolin</a>. Range 0 (small) to 1 (large). [Default Value: 0.5]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalBodySize:">&ndash;&nbsp;setOptionalBodySize:</a></code>
-    <span class="tooltip"><p>Set an optional body size</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/frequency">&nbsp;&nbsp;frequency</a></code>
-    <span class="tooltip"><p>Frequency of note played. [Default Value: 220]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalFrequency:">&ndash;&nbsp;setOptionalFrequency:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/frequency">frequency</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/amplitude">&nbsp;&nbsp;amplitude</a></code>
-    <span class="tooltip"><p>Amplitude of note. [Default Value: 1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalAmplitude:">&ndash;&nbsp;setOptionalAmplitude:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/pairedStringDetuning">&nbsp;&nbsp;pairedStringDetuning</a></code>
-    <span class="tooltip"><p>The proportional detuning between the two strings. Suggested range 0.9 to 1. [Default Value: 1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalPairedStringDetuning:">&ndash;&nbsp;setOptionalPairedStringDetuning:</a></code>
-    <span class="tooltip"><p>Set an optional paired string detuning</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/pluckPosition">&nbsp;&nbsp;pluckPosition</a></code>
-    <span class="tooltip"><p>The pluck position, in range 0 to 1. [Default Value: 0.4]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalPluckPosition:">&ndash;&nbsp;setOptionalPluckPosition:</a></code>
-    <span class="tooltip"><p>Set an optional pluck position</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/loopGain">&nbsp;&nbsp;loopGain</a></code>
-    <span class="tooltip"><p>The loop gain of the model, in the range 0.97 to 1. [Default Value: 0.99]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalLoopGain:">&ndash;&nbsp;setOptionalLoopGain:</a></code>
-    <span class="tooltip"><p>Set an optional loop gain</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
+A mandolin emulation with amplitude, frequency, tuning, gain and mandolin size parameters.</p>
           
           
 
           
           
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/amplitude" title="amplitude"></a>
@@ -171,12 +41,12 @@ title: AKMandolin
   
   
   <div class="method-subsection brief-description">
-    <p>Amplitude of note. [Default Value: 1]</p>
+    Amplitude of note. [Default Value: 1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *amplitude</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *amplitude{% endhighlight %}
 
     
   
@@ -207,12 +77,12 @@ title: AKMandolin
   
   
   <div class="method-subsection brief-description">
-    <p>The size of the body of the <a href="#//api/name/mandolin">mandolin</a>. Range 0 (small) to 1 (large). [Default Value: 0.5]</p>
+    The size of the body of the mandolin. Range 0 (small) to 1 (large). [Default Value: 0.5]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *bodySize</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *bodySize{% endhighlight %}
 
     
   
@@ -243,12 +113,12 @@ title: AKMandolin
   
   
   <div class="method-subsection brief-description">
-    <p>Frequency of note played. [Default Value: 220]</p>
+    Frequency of note played. [Default Value: 220]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *frequency</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *frequency{% endhighlight %}
 
     
   
@@ -279,12 +149,12 @@ title: AKMandolin
   
   
   <div class="method-subsection brief-description">
-    <p>The loop gain of the model, in the range 0.97 to 1. [Default Value: 0.99]</p>
+    The loop gain of the model, in the range 0.97 to 1. [Default Value: 0.99]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *loopGain</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *loopGain{% endhighlight %}
 
     
   
@@ -315,12 +185,12 @@ title: AKMandolin
   
   
   <div class="method-subsection brief-description">
-    <p>The proportional detuning between the two strings. Suggested range 0.9 to 1. [Default Value: 1]</p>
+    The proportional detuning between the two strings. Suggested range 0.9 to 1. [Default Value: 1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *pairedStringDetuning</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *pairedStringDetuning{% endhighlight %}
 
     
   
@@ -351,12 +221,12 @@ title: AKMandolin
   
   
   <div class="method-subsection brief-description">
-    <p>The pluck position, in range 0 to 1. [Default Value: 0.4]</p>
+    The pluck position, in range 0 to 1. [Default Value: 0.4]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *pluckPosition</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *pluckPosition{% endhighlight %}
 
     
   
@@ -380,13 +250,11 @@ title: AKMandolin
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/mandolin" title="mandolin"></a>
@@ -395,12 +263,12 @@ title: AKMandolin
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the mandolin with default values</p>
+    Instantiates the mandolin with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)mandolin</code></div>
+ {% highlight objective-c %}+ (instancetype)mandolin{% endhighlight %}
 
     
   
@@ -424,13 +292,11 @@ title: AKMandolin
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/init" title="init"></a>
@@ -439,12 +305,12 @@ title: AKMandolin
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the <a href="#//api/name/mandolin">mandolin</a> with default values</p>
+    Instantiates the mandolin with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
+ {% highlight objective-c %}- (instancetype)init{% endhighlight %}
 
     
   
@@ -475,49 +341,36 @@ title: AKMandolin
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the <a href="#//api/name/mandolin">mandolin</a> with all values</p>
+    Instantiates the mandolin with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithBodySize:(AKParameter *)<em>bodySize</em> frequency:(AKParameter *)<em>frequency</em> amplitude:(AKParameter *)<em>amplitude</em> pairedStringDetuning:(AKParameter *)<em>pairedStringDetuning</em> pluckPosition:(AKConstant *)<em>pluckPosition</em> loopGain:(AKParameter *)<em>loopGain</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithBodySize:(AKParameter *)bodySize frequency:(AKParameter *)frequency amplitude:(AKParameter *)amplitude pairedStringDetuning:(AKParameter *)pairedStringDetuning pluckPosition:(AKConstant *)pluckPosition loopGain:(AKParameter *)loopGain{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>bodySize</em></dt>
-      <dd><p>The size of the body of the <a href="#//api/name/mandolin">mandolin</a>. Range 0 (small) to 1 (large). Updated at Control-rate. [Default Value: 0.5]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>bodySize</strong>:
+      The size of the body of the mandolin. Range 0 (small) to 1 (large). Updated at Control-rate. [Default Value: 0.5]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>frequency</em></dt>
-      <dd><p>Frequency of note played. Updated at Control-rate. [Default Value: 220]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>frequency</strong>:
+      Frequency of note played. Updated at Control-rate. [Default Value: 220]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>Amplitude of note. Updated at Control-rate. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude of note. Updated at Control-rate. [Default Value: 1]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>pairedStringDetuning</em></dt>
-      <dd><p>The proportional detuning between the two strings. Suggested range 0.9 to 1. Updated at Control-rate. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>pairedStringDetuning</strong>:
+      The proportional detuning between the two strings. Suggested range 0.9 to 1. Updated at Control-rate. [Default Value: 1]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>pluckPosition</em></dt>
-      <dd><p>The pluck position, in range 0 to 1. [Default Value: 0.4]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>pluckPosition</strong>:
+      The pluck position, in range 0 to 1. [Default Value: 0.4]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>loopGain</em></dt>
-      <dd><p>The loop gain of the model, in the range 0.97 to 1. Updated at Control-rate. [Default Value: 0.99]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>loopGain</strong>:
+      The loop gain of the model, in the range 0.97 to 1. Updated at Control-rate. [Default Value: 0.99]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -546,24 +399,21 @@ title: AKMandolin
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p>
+    Set an optional amplitude
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalAmplitude:(AKParameter *)<em>amplitude</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalAmplitude:(AKParameter *)amplitude{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>Amplitude of note. Updated at Control-rate. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude of note. Updated at Control-rate. [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -592,24 +442,21 @@ title: AKMandolin
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional body size</p>
+    Set an optional body size
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalBodySize:(AKParameter *)<em>bodySize</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalBodySize:(AKParameter *)bodySize{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>bodySize</em></dt>
-      <dd><p>The size of the body of the <a href="#//api/name/mandolin">mandolin</a>. Range 0 (small) to 1 (large). Updated at Control-rate. [Default Value: 0.5]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>bodySize</strong>:
+      The size of the body of the mandolin. Range 0 (small) to 1 (large). Updated at Control-rate. [Default Value: 0.5]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -638,24 +485,21 @@ title: AKMandolin
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/frequency">frequency</a></p>
+    Set an optional frequency
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalFrequency:(AKParameter *)<em>frequency</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalFrequency:(AKParameter *)frequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>frequency</em></dt>
-      <dd><p>Frequency of note played. Updated at Control-rate. [Default Value: 220]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>frequency</strong>:
+      Frequency of note played. Updated at Control-rate. [Default Value: 220]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -684,24 +528,21 @@ title: AKMandolin
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional loop gain</p>
+    Set an optional loop gain
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalLoopGain:(AKParameter *)<em>loopGain</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalLoopGain:(AKParameter *)loopGain{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>loopGain</em></dt>
-      <dd><p>The loop gain of the model, in the range 0.97 to 1. Updated at Control-rate. [Default Value: 0.99]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>loopGain</strong>:
+      The loop gain of the model, in the range 0.97 to 1. Updated at Control-rate. [Default Value: 0.99]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -730,24 +571,21 @@ title: AKMandolin
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional paired string detuning</p>
+    Set an optional paired string detuning
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalPairedStringDetuning:(AKParameter *)<em>pairedStringDetuning</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalPairedStringDetuning:(AKParameter *)pairedStringDetuning{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>pairedStringDetuning</em></dt>
-      <dd><p>The proportional detuning between the two strings. Suggested range 0.9 to 1. Updated at Control-rate. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>pairedStringDetuning</strong>:
+      The proportional detuning between the two strings. Suggested range 0.9 to 1. Updated at Control-rate. [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -776,24 +614,21 @@ title: AKMandolin
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional pluck position</p>
+    Set an optional pluck position
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalPluckPosition:(AKConstant *)<em>pluckPosition</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalPluckPosition:(AKConstant *)pluckPosition{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>pluckPosition</em></dt>
-      <dd><p>The pluck position, in range 0 to 1. [Default Value: 0.4]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>pluckPosition</strong>:
+      The pluck position, in range 0 to 1. [Default Value: 0.4]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -815,7 +650,6 @@ title: AKMandolin
   
 </div>
             
-          </div>
           
           
         </div>

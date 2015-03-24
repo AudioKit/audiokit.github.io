@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKSpectralVocoder
 title: AKSpectralVocoder
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKSpectralVocoder</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKFSignal.html">AKFSignal</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,50 +16,16 @@ title: AKSpectralVocoder
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKSpectralVocoder.h<br />AKSpectralVocoder.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Combine the spectral envelope of one F-signal with the excitation (frequencies) of another.</p>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Combine the spectral envelope of one F-signal with the excitation (frequencies) of another.
 
-<p>This operation provides support for cross-synthesis of amplitudes and frequencies. It takes the amplitudes of one input F-signal and combines with frequencies from another. It is a spectral version of the well-known channel vocoder.</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithAmplitude:excitationFrequencies:depth:gain:">&ndash;&nbsp;initWithAmplitude:excitationFrequencies:depth:gain:</a></code>
-    <span class="tooltip"><p>Instantiates the spectral vocoder</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalCoefficents:">&ndash;&nbsp;setOptionalCoefficents:</a></code>
-    <span class="tooltip"><p>Set an optional coefs</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
+This operation provides support for cross-synthesis of amplitudes and frequencies. It takes the amplitudes of one input F-signal and combines with frequencies from another. It is a spectral version of the well-known channel vocoder.</p>
           
           
 
@@ -73,9 +35,8 @@ title: AKSpectralVocoder
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/initWithAmplitude:excitationFrequencies:depth:gain:" title="initWithAmplitude:excitationFrequencies:depth:gain:"></a>
@@ -84,39 +45,30 @@ title: AKSpectralVocoder
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the spectral vocoder</p>
+    Instantiates the spectral vocoder
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAmplitude:(AKFSignal *)<em>amplitude</em> excitationFrequencies:(AKFSignal *)<em>excitationFrequencies</em> depth:(AKControl *)<em>depth</em> gain:(AKControl *)<em>gain</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithAmplitude:(AKFSignal *)amplitude excitationFrequencies:(AKFSignal *)excitationFrequencies depth:(AKControl *)depth gain:(AKControl *)gain{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>Input phase vocoder stream from which the amplitudes will be extracted.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Input phase vocoder stream from which the amplitudes will be extracted.</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>excitationFrequencies</em></dt>
-      <dd><p>Input phase vocoder stream from which the frequencies will be taken.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>excitationFrequencies</strong>:
+      Input phase vocoder stream from which the frequencies will be taken.</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>depth</em></dt>
-      <dd><p>Depth of effect, affecting how much of the frequencies will be taken from the second fsig: 0, the output is amplitudeFSignal, 1 the output is the amplitudeFSignal amplitudes and excitationFrequenciesFSignal frequencies.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>depth</strong>:
+      Depth of effect, affecting how much of the frequencies will be taken from the second fsig: 0, the output is amplitudeFSignal, 1 the output is the amplitudeFSignal amplitudes and excitationFrequenciesFSignal frequencies.</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>gain</em></dt>
-      <dd><p>Boost or attenuation applied to the output</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>gain</strong>:
+      Boost or attenuation applied to the output</li>
     
-  </div>
+    </ul>
   
 
   
@@ -145,24 +97,21 @@ title: AKSpectralVocoder
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional coefs</p>
+    Set an optional coefs
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalCoefficents:(AKControl *)<em>coefs</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalCoefficents:(AKControl *)coefs{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>coefs</em></dt>
-      <dd><p>Number of cepstrum coefs used in spectral envelope estimation (defaults to 80).</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>coefs</strong>:
+      Number of cepstrum coefs used in spectral envelope estimation (defaults to 80).</li>
     
-  </div>
+    </ul>
   
 
   
@@ -184,7 +133,6 @@ title: AKSpectralVocoder
   
 </div>
             
-          </div>
           
           
         </div>

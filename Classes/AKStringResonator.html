@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKStringResonator
 title: AKStringResonator
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKStringResonator</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,93 +16,23 @@ title: AKStringResonator
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKStringResonator.h<br />AKStringResonator.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>A string resonator with variable fundamental frequency.</p>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>A string resonator with variable fundamental frequency.
 
-<p>AKStringResonator passes the input asig through a network composed of comb, low-pass and all-pass filters, similar to the one used in some versions of the Karplus-Strong algorithm, creating a string resonator effect. The fundamental frequency of the “string” is controlled by the <a href="#//api/name/fundamentalFrequency">fundamentalFrequency</a>.  This operation can be used to simulate sympathetic resonances to an input signal.</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithInput:fundamentalFrequency:fdbgain:">&ndash;&nbsp;initWithInput:fundamentalFrequency:fdbgain:</a></code>
-    <span class="tooltip"><p>Instantiates the string resonator with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithInput:">&ndash;&nbsp;initWithInput:</a></code>
-    <span class="tooltip"><p>Instantiates the string resonator with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/WithInput:">+&nbsp;WithInput:</a></code>
-    <span class="tooltip"><p>Instantiates the string resonator with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/fundamentalFrequency">&nbsp;&nbsp;fundamentalFrequency</a></code>
-    <span class="tooltip"><p>The fundamental frequency of the string. [Default Value: 100]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalFundamentalFrequency:">&ndash;&nbsp;setOptionalFundamentalFrequency:</a></code>
-    <span class="tooltip"><p>Set an optional fundamental frequency</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/fdbgain">&nbsp;&nbsp;fdbgain</a></code>
-    <span class="tooltip"><p>feedback gain, between 0 and 1, of the internal delay line. A value close to 1 creates a slower decay and a more pronounced resonance. Small values may leave the input signal unaffected. Depending on the filter frequency, typical values are > .9. [Default Value: 0.95]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalFdbgain:">&ndash;&nbsp;setOptionalFdbgain:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/fdbgain">fdbgain</a></p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
+AKStringResonator passes the input asig through a network composed of comb, low-pass and all-pass filters, similar to the one used in some versions of the Karplus-Strong algorithm, creating a string resonator effect. The fundamental frequency of the “string” is controlled by the fundamentalFrequency.  This operation can be used to simulate sympathetic resonances to an input signal.</p>
           
           
 
           
           
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/fdbgain" title="fdbgain"></a>
@@ -115,12 +41,12 @@ title: AKStringResonator
   
   
   <div class="method-subsection brief-description">
-    <p>feedback gain, between 0 and 1, of the internal delay line. A value close to 1 creates a slower decay and a more pronounced resonance. Small values may leave the input signal unaffected. Depending on the filter frequency, typical values are > .9. [Default Value: 0.95]</p>
+    feedback gain, between 0 and 1, of the internal delay line. A value close to 1 creates a slower decay and a more pronounced resonance. Small values may leave the input signal unaffected. Depending on the filter frequency, typical values are > .9. [Default Value: 0.95]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *fdbgain</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *fdbgain{% endhighlight %}
 
     
   
@@ -151,12 +77,12 @@ title: AKStringResonator
   
   
   <div class="method-subsection brief-description">
-    <p>The fundamental frequency of the string. [Default Value: 100]</p>
+    The fundamental frequency of the string. [Default Value: 100]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *fundamentalFrequency</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *fundamentalFrequency{% endhighlight %}
 
     
   
@@ -180,13 +106,11 @@ title: AKStringResonator
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/WithInput:" title="WithInput:"></a>
@@ -195,24 +119,21 @@ title: AKStringResonator
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the string resonator with default values</p>
+    Instantiates the string resonator with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)WithInput:(AKParameter *)<em>input</em></code></div>
+ {% highlight objective-c %}+ (instancetype)WithInput:(AKParameter *)input{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>The input audio signal.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      The input audio signal.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -234,13 +155,11 @@ title: AKStringResonator
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/initWithInput:" title="initWithInput:"></a>
@@ -249,24 +168,21 @@ title: AKStringResonator
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the string resonator with default values</p>
+    Instantiates the string resonator with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>The input audio signal.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      The input audio signal.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -295,34 +211,27 @@ title: AKStringResonator
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the string resonator with all values</p>
+    Instantiates the string resonator with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> fundamentalFrequency:(AKParameter *)<em>fundamentalFrequency</em> fdbgain:(AKConstant *)<em>fdbgain</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input fundamentalFrequency:(AKParameter *)fundamentalFrequency fdbgain:(AKConstant *)fdbgain{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>The input audio signal. [Default Value: ]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      The input audio signal. [Default Value: ]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>fundamentalFrequency</em></dt>
-      <dd><p>The fundamental frequency of the string. Updated at Control-rate. [Default Value: 100]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>fundamentalFrequency</strong>:
+      The fundamental frequency of the string. Updated at Control-rate. [Default Value: 100]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>fdbgain</em></dt>
-      <dd><p>feedback gain, between 0 and 1, of the internal delay line. A value close to 1 creates a slower decay and a more pronounced resonance. Small values may leave the input signal unaffected. Depending on the filter frequency, typical values are > .9. [Default Value: 0.95]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>fdbgain</strong>:
+      feedback gain, between 0 and 1, of the internal delay line. A value close to 1 creates a slower decay and a more pronounced resonance. Small values may leave the input signal unaffected. Depending on the filter frequency, typical values are > .9. [Default Value: 0.95]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -351,24 +260,21 @@ title: AKStringResonator
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/fdbgain">fdbgain</a></p>
+    Set an optional fdbgain
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalFdbgain:(AKConstant *)<em>fdbgain</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalFdbgain:(AKConstant *)fdbgain{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>fdbgain</em></dt>
-      <dd><p>feedback gain, between 0 and 1, of the internal delay line. A value close to 1 creates a slower decay and a more pronounced resonance. Small values may leave the input signal unaffected. Depending on the filter frequency, typical values are > .9. [Default Value: 0.95]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>fdbgain</strong>:
+      feedback gain, between 0 and 1, of the internal delay line. A value close to 1 creates a slower decay and a more pronounced resonance. Small values may leave the input signal unaffected. Depending on the filter frequency, typical values are > .9. [Default Value: 0.95]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -397,24 +303,21 @@ title: AKStringResonator
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional fundamental frequency</p>
+    Set an optional fundamental frequency
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalFundamentalFrequency:(AKParameter *)<em>fundamentalFrequency</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalFundamentalFrequency:(AKParameter *)fundamentalFrequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>fundamentalFrequency</em></dt>
-      <dd><p>The fundamental frequency of the string. Updated at Control-rate. [Default Value: 100]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>fundamentalFrequency</strong>:
+      The fundamental frequency of the string. Updated at Control-rate. [Default Value: 100]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -436,7 +339,6 @@ title: AKStringResonator
   
 </div>
             
-          </div>
           
           
         </div>

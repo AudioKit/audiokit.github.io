@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKScaledFFT
 title: AKScaledFFT
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKScaledFFT</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKFSignal.html">AKFSignal</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,74 +16,19 @@ title: AKScaledFFT
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKScaledFFT.h<br />AKScaledFFT.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>Scale the frequency components of a pv stream, resulting in pitch shift.
-Output amplitudes can be optionally modified in order to attempt formant preservation.</p>
+Output amplitudes can be optionally modified in order to attempt formant preservation.
 
-<p>The quality of the pitch shift will be improved with the use of a Hann window in the pvoc analysis.
+The quality of the pitch shift will be improved with the use of a Hann window in the pvoc analysis.
 Liftered Cepstrum Formant preservation method is less intensive than the true envelope method,
 which might not be suited to realtime use.</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/noFormantRetainMethod">+&nbsp;noFormantRetainMethod</a></code>
-    <span class="tooltip"><p>No Formant Retain Method</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/lifteredCepstrumFormantRetainMethod">+&nbsp;lifteredCepstrumFormantRetainMethod</a></code>
-    <span class="tooltip"><p>Liftered Cepstrum Formant Retain Method</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/trueEnvelopeFormantRetainMethod">+&nbsp;trueEnvelopeFormantRetainMethod</a></code>
-    <span class="tooltip"><p>True Envelope Formant Retain Method</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithSignal:frequencyRatio:">&ndash;&nbsp;initWithSignal:frequencyRatio:</a></code>
-    <span class="tooltip"><p>Create a frequency-scaled phase vocoder stream from another stream</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithSignal:frequencyRatio:formantRetainMethod:amplitudeRatio:cepstrumCoefficients:">&ndash;&nbsp;initWithSignal:frequencyRatio:formantRetainMethod:amplitudeRatio:cepstrumCoefficients:</a></code>
-    <span class="tooltip"><p>Create a frequency-scaled phase vocoder stream from another stream</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
           
           
 
@@ -95,9 +36,8 @@ which might not be suited to realtime use.</p>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/lifteredCepstrumFormantRetainMethod" title="lifteredCepstrumFormantRetainMethod"></a>
@@ -106,12 +46,12 @@ which might not be suited to realtime use.</p>
   
   
   <div class="method-subsection brief-description">
-    <p>Liftered Cepstrum Formant Retain Method</p>
+    Liftered Cepstrum Formant Retain Method
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (AKConstant *)lifteredCepstrumFormantRetainMethod</code></div>
+ {% highlight objective-c %}+ (AKConstant *)lifteredCepstrumFormantRetainMethod{% endhighlight %}
 
     
   
@@ -142,12 +82,12 @@ which might not be suited to realtime use.</p>
   
   
   <div class="method-subsection brief-description">
-    <p>No Formant Retain Method</p>
+    No Formant Retain Method
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (AKConstant *)noFormantRetainMethod</code></div>
+ {% highlight objective-c %}+ (AKConstant *)noFormantRetainMethod{% endhighlight %}
 
     
   
@@ -178,12 +118,12 @@ which might not be suited to realtime use.</p>
   
   
   <div class="method-subsection brief-description">
-    <p>True Envelope Formant Retain Method</p>
+    True Envelope Formant Retain Method
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (AKConstant *)trueEnvelopeFormantRetainMethod</code></div>
+ {% highlight objective-c %}+ (AKConstant *)trueEnvelopeFormantRetainMethod{% endhighlight %}
 
     
   
@@ -207,13 +147,11 @@ which might not be suited to realtime use.</p>
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/initWithSignal:frequencyRatio:" title="initWithSignal:frequencyRatio:"></a>
@@ -222,29 +160,24 @@ which might not be suited to realtime use.</p>
   
   
   <div class="method-subsection brief-description">
-    <p>Create a frequency-scaled phase vocoder stream from another stream</p>
+    Create a frequency-scaled phase vocoder stream from another stream
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithSignal:(AKFSignal *)<em>input</em> frequencyRatio:(AKControl *)<em>frequencyRatio</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithSignal:(AKFSignal *)input frequencyRatio:(AKControl *)frequencyRatio{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>Source f-signal</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Source f-signal</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>frequencyRatio</em></dt>
-      <dd><p>Scaling ratio.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>frequencyRatio</strong>:
+      Scaling ratio.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -273,44 +206,33 @@ which might not be suited to realtime use.</p>
   
   
   <div class="method-subsection brief-description">
-    <p>Create a frequency-scaled phase vocoder stream from another stream</p>
+    Create a frequency-scaled phase vocoder stream from another stream
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithSignal:(AKFSignal *)<em>input</em> frequencyRatio:(AKControl *)<em>frequencyRatio</em> formantRetainMethod:(AKConstant *)<em>formantRetainMethod</em> amplitudeRatio:(AKControl *)<em>amplitudeRatio</em> cepstrumCoefficients:(AKControl *)<em>numberOfCepstrumCoefficients</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithSignal:(AKFSignal *)input frequencyRatio:(AKControl *)frequencyRatio formantRetainMethod:(AKConstant *)formantRetainMethod amplitudeRatio:(AKControl *)amplitudeRatio cepstrumCoefficients:(AKControl *)numberOfCepstrumCoefficients{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>Source f-signal.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Source f-signal.</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>frequencyRatio</em></dt>
-      <dd><p>Scaling ratio.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>frequencyRatio</strong>:
+      Scaling ratio.</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>formantRetainMethod</em></dt>
-      <dd><p>Method by which to attempt to keep input signal formants.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>formantRetainMethod</strong>:
+      Method by which to attempt to keep input signal formants.</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitudeRatio</em></dt>
-      <dd><p>Amplitude scaling ratio (default 1.0 equals no change)</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>amplitudeRatio</strong>:
+      Amplitude scaling ratio (default 1.0 equals no change)</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>numberOfCepstrumCoefficients</em></dt>
-      <dd><p>Number of coefficients to use in formant preservation (defaults ot 80).</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>numberOfCepstrumCoefficients</strong>:
+      Number of coefficients to use in formant preservation (defaults ot 80).</li>
     
-  </div>
+    </ul>
   
 
   
@@ -332,7 +254,6 @@ which might not be suited to realtime use.</p>
   
 </div>
             
-          </div>
           
           
         </div>

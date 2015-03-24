@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKADSREnvelope
 title: AKADSREnvelope
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKADSREnvelope</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKControl.html">AKControl</a> : <a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,135 +16,23 @@ title: AKADSREnvelope
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKADSREnvelope.h<br />AKADSREnvelope.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Calculates the classical ADSR <a href="#//api/name/envelope">envelope</a> using exponential segments.</p>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Calculates the classical ADSR envelope using exponential segments.
 
-<p>The <a href="#//api/name/envelope">envelope</a> generated is the range 0 to 1 and may need to be scaled further, depending on the amplitude required. The length of the sustain is calculated from the length of the note. This means this operation is not suitable for use with MIDI events.</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithAttackDuration:decayDuration:sustainLevel:releaseDuration:delay:">&ndash;&nbsp;initWithAttackDuration:decayDuration:sustainLevel:releaseDuration:delay:</a></code>
-    <span class="tooltip"><p>Instantiates the adsr <a href="#//api/name/envelope">envelope</a> with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
-    <span class="tooltip"><p>Instantiates the adsr <a href="#//api/name/envelope">envelope</a> with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/envelope">+&nbsp;envelope</a></code>
-    <span class="tooltip"><p>Instantiates the adsr envelope with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/attackDuration">&nbsp;&nbsp;attackDuration</a></code>
-    <span class="tooltip"><p>Duration of attack phase in seconds [Default Value: 0.1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalAttackDuration:">&ndash;&nbsp;setOptionalAttackDuration:</a></code>
-    <span class="tooltip"><p>Set an optional attack duration</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/decayDuration">&nbsp;&nbsp;decayDuration</a></code>
-    <span class="tooltip"><p>Duration of decay in seconds [Default Value: 0.1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalDecayDuration:">&ndash;&nbsp;setOptionalDecayDuration:</a></code>
-    <span class="tooltip"><p>Set an optional decay duration</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/sustainLevel">&nbsp;&nbsp;sustainLevel</a></code>
-    <span class="tooltip"><p>Level for sustain phase [Default Value: 0.5]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalSustainLevel:">&ndash;&nbsp;setOptionalSustainLevel:</a></code>
-    <span class="tooltip"><p>Set an optional sustain level</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/releaseDuration">&nbsp;&nbsp;releaseDuration</a></code>
-    <span class="tooltip"><p>Duration of release phase in seconds. [Default Value: 1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalReleaseDuration:">&ndash;&nbsp;setOptionalReleaseDuration:</a></code>
-    <span class="tooltip"><p>Set an optional release duration</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/delay">&nbsp;&nbsp;delay</a></code>
-    <span class="tooltip"><p>Period of zero before the <a href="#//api/name/envelope">envelope</a> starts [Default Value: 0]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalDelay:">&ndash;&nbsp;setOptionalDelay:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/delay">delay</a></p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
+The envelope generated is the range 0 to 1 and may need to be scaled further, depending on the amplitude required. The length of the sustain is calculated from the length of the note. This means this operation is not suitable for use with MIDI events.</p>
           
           
 
           
           
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/attackDuration" title="attackDuration"></a>
@@ -157,12 +41,12 @@ title: AKADSREnvelope
   
   
   <div class="method-subsection brief-description">
-    <p>Duration of attack phase in seconds [Default Value: 0.1]</p>
+    Duration of attack phase in seconds [Default Value: 0.1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *attackDuration</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *attackDuration{% endhighlight %}
 
     
   
@@ -193,12 +77,12 @@ title: AKADSREnvelope
   
   
   <div class="method-subsection brief-description">
-    <p>Duration of decay in seconds [Default Value: 0.1]</p>
+    Duration of decay in seconds [Default Value: 0.1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *decayDuration</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *decayDuration{% endhighlight %}
 
     
   
@@ -229,12 +113,12 @@ title: AKADSREnvelope
   
   
   <div class="method-subsection brief-description">
-    <p>Period of zero before the <a href="#//api/name/envelope">envelope</a> starts [Default Value: 0]</p>
+    Period of zero before the envelope starts [Default Value: 0]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *delay</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *delay{% endhighlight %}
 
     
   
@@ -265,12 +149,12 @@ title: AKADSREnvelope
   
   
   <div class="method-subsection brief-description">
-    <p>Duration of release phase in seconds. [Default Value: 1]</p>
+    Duration of release phase in seconds. [Default Value: 1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *releaseDuration</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *releaseDuration{% endhighlight %}
 
     
   
@@ -301,12 +185,12 @@ title: AKADSREnvelope
   
   
   <div class="method-subsection brief-description">
-    <p>Level for sustain phase [Default Value: 0.5]</p>
+    Level for sustain phase [Default Value: 0.5]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *sustainLevel</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *sustainLevel{% endhighlight %}
 
     
   
@@ -330,13 +214,11 @@ title: AKADSREnvelope
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/envelope" title="envelope"></a>
@@ -345,12 +227,12 @@ title: AKADSREnvelope
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the adsr envelope with default values</p>
+    Instantiates the adsr envelope with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)envelope</code></div>
+ {% highlight objective-c %}+ (instancetype)envelope{% endhighlight %}
 
     
   
@@ -374,13 +256,11 @@ title: AKADSREnvelope
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/init" title="init"></a>
@@ -389,12 +269,12 @@ title: AKADSREnvelope
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the adsr <a href="#//api/name/envelope">envelope</a> with default values</p>
+    Instantiates the adsr envelope with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
+ {% highlight objective-c %}- (instancetype)init{% endhighlight %}
 
     
   
@@ -425,44 +305,33 @@ title: AKADSREnvelope
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the adsr <a href="#//api/name/envelope">envelope</a> with all values</p>
+    Instantiates the adsr envelope with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAttackDuration:(AKConstant *)<em>attackDuration</em> decayDuration:(AKConstant *)<em>decayDuration</em> sustainLevel:(AKConstant *)<em>sustainLevel</em> releaseDuration:(AKConstant *)<em>releaseDuration</em> delay:(AKConstant *)<em>delay</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithAttackDuration:(AKConstant *)attackDuration decayDuration:(AKConstant *)decayDuration sustainLevel:(AKConstant *)sustainLevel releaseDuration:(AKConstant *)releaseDuration delay:(AKConstant *)delay{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>attackDuration</em></dt>
-      <dd><p>Duration of attack phase in seconds [Default Value: 0.1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>attackDuration</strong>:
+      Duration of attack phase in seconds [Default Value: 0.1]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>decayDuration</em></dt>
-      <dd><p>Duration of decay in seconds [Default Value: 0.1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>decayDuration</strong>:
+      Duration of decay in seconds [Default Value: 0.1]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>sustainLevel</em></dt>
-      <dd><p>Level for sustain phase [Default Value: 0.5]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>sustainLevel</strong>:
+      Level for sustain phase [Default Value: 0.5]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>releaseDuration</em></dt>
-      <dd><p>Duration of release phase in seconds. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>releaseDuration</strong>:
+      Duration of release phase in seconds. [Default Value: 1]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>delay</em></dt>
-      <dd><p>Period of zero before the <a href="#//api/name/envelope">envelope</a> starts [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>delay</strong>:
+      Period of zero before the envelope starts [Default Value: 0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -491,24 +360,21 @@ title: AKADSREnvelope
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional attack duration</p>
+    Set an optional attack duration
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalAttackDuration:(AKConstant *)<em>attackDuration</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalAttackDuration:(AKConstant *)attackDuration{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>attackDuration</em></dt>
-      <dd><p>Duration of attack phase in seconds [Default Value: 0.1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>attackDuration</strong>:
+      Duration of attack phase in seconds [Default Value: 0.1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -537,24 +403,21 @@ title: AKADSREnvelope
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional decay duration</p>
+    Set an optional decay duration
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalDecayDuration:(AKConstant *)<em>decayDuration</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalDecayDuration:(AKConstant *)decayDuration{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>decayDuration</em></dt>
-      <dd><p>Duration of decay in seconds [Default Value: 0.1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>decayDuration</strong>:
+      Duration of decay in seconds [Default Value: 0.1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -583,24 +446,21 @@ title: AKADSREnvelope
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/delay">delay</a></p>
+    Set an optional delay
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalDelay:(AKConstant *)<em>delay</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalDelay:(AKConstant *)delay{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>delay</em></dt>
-      <dd><p>Period of zero before the <a href="#//api/name/envelope">envelope</a> starts [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>delay</strong>:
+      Period of zero before the envelope starts [Default Value: 0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -629,24 +489,21 @@ title: AKADSREnvelope
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional release duration</p>
+    Set an optional release duration
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalReleaseDuration:(AKConstant *)<em>releaseDuration</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalReleaseDuration:(AKConstant *)releaseDuration{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>releaseDuration</em></dt>
-      <dd><p>Duration of release phase in seconds. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>releaseDuration</strong>:
+      Duration of release phase in seconds. [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -675,24 +532,21 @@ title: AKADSREnvelope
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional sustain level</p>
+    Set an optional sustain level
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalSustainLevel:(AKConstant *)<em>sustainLevel</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalSustainLevel:(AKConstant *)sustainLevel{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>sustainLevel</em></dt>
-      <dd><p>Level for sustain phase [Default Value: 0.5]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>sustainLevel</strong>:
+      Level for sustain phase [Default Value: 0.5]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -714,7 +568,6 @@ title: AKADSREnvelope
   
 </div>
             
-          </div>
           
           
         </div>

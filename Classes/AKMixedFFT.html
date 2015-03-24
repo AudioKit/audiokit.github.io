@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKMixedFFT
 title: AKMixedFFT
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKMixedFFT</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKFSignal.html">AKFSignal</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,42 +16,15 @@ title: AKMixedFFT
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKMixedFFT.h<br />AKMixedFFT.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Mix &lsquo;seamlessly&rsquo; two pv signals. This opcode combines the most prominent
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Mix 'seamlessly' two pv signals. This opcode combines the most prominent
 components of two pvoc streams into a single mixed stream.</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithSignal1:signal2:">&ndash;&nbsp;initWithSignal1:signal2:</a></code>
-    <span class="tooltip"><p>Create a mixture of two f-signal.</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
           
           
 
@@ -65,9 +34,8 @@ components of two pvoc streams into a single mixed stream.</p>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/initWithSignal1:signal2:" title="initWithSignal1:signal2:"></a>
@@ -76,29 +44,24 @@ components of two pvoc streams into a single mixed stream.</p>
   
   
   <div class="method-subsection brief-description">
-    <p>Create a mixture of two f-signal.</p>
+    Create a mixture of two f-signal.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithSignal1:(AKFSignal *)<em>signal1</em> signal2:(AKFSignal *)<em>signal2</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithSignal1:(AKFSignal *)signal1 signal2:(AKFSignal *)signal2{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>signal1</em></dt>
-      <dd><p>The first f-signal.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>signal1</strong>:
+      The first f-signal.</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>signal2</em></dt>
-      <dd><p>The second f-signal.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>signal2</strong>:
+      The second f-signal.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -120,7 +83,6 @@ components of two pvoc streams into a single mixed stream.</p>
   
 </div>
             
-          </div>
           
           
         </div>

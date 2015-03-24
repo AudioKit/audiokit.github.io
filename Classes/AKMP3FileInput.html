@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKMP3FileInput
 title: AKMP3FileInput
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKMP3FileInput</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKStereoAudio.html">AKStereoAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,77 +16,21 @@ title: AKMP3FileInput
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKMP3FileInput.h<br />AKMP3FileInput.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>Reads stereo audio data from an external MP3 file.</p>
-          </div>
           
           
 
           
           
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithFilename:startTime:">&ndash;&nbsp;initWithFilename:startTime:</a></code>
-    <span class="tooltip"><p>Instantiates the mp3 file input with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithFilename:">&ndash;&nbsp;initWithFilename:</a></code>
-    <span class="tooltip"><p>Instantiates the mp3 file input with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/mp3WithFilename:">+&nbsp;mp3WithFilename:</a></code>
-    <span class="tooltip"><p>Instantiates the mp3 file input with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/startTime">&nbsp;&nbsp;startTime</a></code>
-    <span class="tooltip"><p>Number of seconds into the file to start playback. [Default Value: 0]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalStartTime:">&ndash;&nbsp;setOptionalStartTime:</a></code>
-    <span class="tooltip"><p>Set an optional start time</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/startTime" title="startTime"></a>
@@ -99,12 +39,12 @@ title: AKMP3FileInput
   
   
   <div class="method-subsection brief-description">
-    <p>Number of seconds into the file to start playback. [Default Value: 0]</p>
+    Number of seconds into the file to start playback. [Default Value: 0]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *startTime</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *startTime{% endhighlight %}
 
     
   
@@ -128,13 +68,11 @@ title: AKMP3FileInput
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/mp3WithFilename:" title="mp3WithFilename:"></a>
@@ -143,24 +81,21 @@ title: AKMP3FileInput
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the mp3 file input with default values</p>
+    Instantiates the mp3 file input with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)mp3WithFilename:(NSString *)<em>filename</em></code></div>
+ {% highlight objective-c %}+ (instancetype)mp3WithFilename:(NSString *)filename{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>filename</em></dt>
-      <dd><p>Input MP3 Filename.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>filename</strong>:
+      Input MP3 Filename.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -182,13 +117,11 @@ title: AKMP3FileInput
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/initWithFilename:" title="initWithFilename:"></a>
@@ -197,24 +130,21 @@ title: AKMP3FileInput
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the mp3 file input with default values</p>
+    Instantiates the mp3 file input with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFilename:(NSString *)<em>filename</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithFilename:(NSString *)filename{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>filename</em></dt>
-      <dd><p>Input MP3 Filename.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>filename</strong>:
+      Input MP3 Filename.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -243,29 +173,24 @@ title: AKMP3FileInput
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the mp3 file input with all values</p>
+    Instantiates the mp3 file input with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFilename:(NSString *)<em>filename</em> startTime:(AKConstant *)<em>startTime</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithFilename:(NSString *)filename startTime:(AKConstant *)startTime{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>filename</em></dt>
-      <dd><p>Input MP3 Filename. [Default Value: ]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>filename</strong>:
+      Input MP3 Filename. [Default Value: ]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>startTime</em></dt>
-      <dd><p>Number of seconds into the file to start playback. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>startTime</strong>:
+      Number of seconds into the file to start playback. [Default Value: 0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -294,24 +219,21 @@ title: AKMP3FileInput
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional start time</p>
+    Set an optional start time
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalStartTime:(AKConstant *)<em>startTime</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalStartTime:(AKConstant *)startTime{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>startTime</em></dt>
-      <dd><p>Number of seconds into the file to start playback. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>startTime</strong>:
+      Number of seconds into the file to start playback. [Default Value: 0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -333,7 +255,6 @@ title: AKMP3FileInput
   
 </div>
             
-          </div>
           
           
         </div>

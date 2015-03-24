@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKTools
 title: AKTools
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKTools</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value">NSObject</td>
@@ -20,139 +16,14 @@ title: AKTools
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKTools.h<br />AKTools.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>A suite of useful methods for working with AudioKit</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/randomFloatFrom:to:">+&nbsp;randomFloatFrom:to:</a></code>
-    <span class="tooltip"><p>Random number within a range</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/scaleValue:fromMinimum:fromMaximum:toMinimum:toMaximum:">+&nbsp;scaleValue:fromMinimum:fromMaximum:toMinimum:toMaximum:</a></code>
-    <span class="tooltip"><p>Scale a value from within one range to another</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/scaleLogValue:fromMinimum:fromMaximum:toMinimum:toMaximum:">+&nbsp;scaleLogValue:fromMinimum:fromMaximum:toMinimum:toMaximum:</a></code>
-    <span class="tooltip"><p>Scale the log of a value from one range to another</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/scaleProperty:withScalingFactor:">+&nbsp;scaleProperty:withScalingFactor:</a></code>
-    <span class="tooltip"><p>Scales the property with a scaling factor between 0 and 1. 0->minimum, 1->maximum</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/scaleProperty:withInverseScalingFactor:">+&nbsp;scaleProperty:withInverseScalingFactor:</a></code>
-    <span class="tooltip"><p>Scales the property with a scaling factor between 0 and 1. 0->maximum, 1->minimum</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setSlider:withValue:minimum:maximum:">+&nbsp;setSlider:withValue:minimum:maximum:</a></code>
-    <span class="tooltip"><p>Reposition a slider&rsquo;s value and range</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/scaleValueFromSlider:minimum:maximum:">+&nbsp;scaleValueFromSlider:minimum:maximum:</a></code>
-    <span class="tooltip"><p>Get the value from a slide with the minimum and maximum given here</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/scaleLogValueFromSlider:minimum:maximum:">+&nbsp;scaleLogValueFromSlider:minimum:maximum:</a></code>
-    <span class="tooltip"><p>Get the logvalue from a slide with the minimum and maximum given here</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setSlider:withProperty:">+&nbsp;setSlider:withProperty:</a></code>
-    <span class="tooltip"><p>Set a slider with an <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setProperty:withSlider:">+&nbsp;setProperty:withSlider:</a></code>
-    <span class="tooltip"><p>Set an <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a> from a slider</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setTextField:withProperty:">+&nbsp;setTextField:withProperty:</a></code>
-    <span class="tooltip"><p>Populate a text field with the value from <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setProgressView:withProperty:">+&nbsp;setProgressView:withProperty:</a></code>
-    <span class="tooltip"><p>Set a progress view with an <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setLabel:withProperty:">+&nbsp;setLabel:withProperty:</a></code>
-    <span class="tooltip"><p>Populate a label with the value from <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/midiNoteToFrequency:">+&nbsp;midiNoteToFrequency:</a></code>
-    <span class="tooltip"><p>Convert a MIDI note number to a frequency</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/scaleControllerValue:fromMinimum:toMaximum:">+&nbsp;scaleControllerValue:fromMinimum:toMaximum:</a></code>
-    <span class="tooltip"><p>Scale a MIDI controller to a new range</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
           
           
 
@@ -160,9 +31,8 @@ title: AKTools
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/midiNoteToFrequency:" title="midiNoteToFrequency:"></a>
@@ -171,24 +41,21 @@ title: AKTools
   
   
   <div class="method-subsection brief-description">
-    <p>Convert a MIDI note number to a frequency</p>
+    Convert a MIDI note number to a frequency
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (float)midiNoteToFrequency:(int)<em>note</em></code></div>
+ {% highlight objective-c %}+ (float)midiNoteToFrequency:(int)note{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>note</em></dt>
-      <dd><p>MIDI note as an integer</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>note</strong>:
+      MIDI note as an integer</li>
     
-  </div>
+    </ul>
   
 
   
@@ -217,29 +84,24 @@ title: AKTools
   
   
   <div class="method-subsection brief-description">
-    <p>Random number within a range</p>
+    Random number within a range
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (float)randomFloatFrom:(float)<em>minimum</em> to:(float)<em>maximum</em></code></div>
+ {% highlight objective-c %}+ (float)randomFloatFrom:(float)minimum to:(float)maximum{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>minimum</em></dt>
-      <dd><p>Lower bound for the random number</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>minimum</strong>:
+      Lower bound for the random number</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>maximum</em></dt>
-      <dd><p>Upper bound for the random number</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>maximum</strong>:
+      Upper bound for the random number</li>
     
-  </div>
+    </ul>
   
 
   
@@ -268,34 +130,27 @@ title: AKTools
   
   
   <div class="method-subsection brief-description">
-    <p>Scale a MIDI controller to a new range</p>
+    Scale a MIDI controller to a new range
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (float)scaleControllerValue:(float)<em>value</em> fromMinimum:(float)<em>minimum</em> toMaximum:(float)<em>maximum</em></code></div>
+ {% highlight objective-c %}+ (float)scaleControllerValue:(float)value fromMinimum:(float)minimum toMaximum:(float)maximum{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>value</em></dt>
-      <dd><p>The current controller value</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>value</strong>:
+      The current controller value</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>minimum</em></dt>
-      <dd><p>Lower bound of the output</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>minimum</strong>:
+      Lower bound of the output</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>maximum</em></dt>
-      <dd><p>Upper bound of the output</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>maximum</strong>:
+      Upper bound of the output</li>
     
-  </div>
+    </ul>
   
 
   
@@ -324,44 +179,33 @@ title: AKTools
   
   
   <div class="method-subsection brief-description">
-    <p>Scale the log of a value from one range to another</p>
+    Scale the log of a value from one range to another
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (float)scaleLogValue:(float)<em>logValue</em> fromMinimum:(float)<em>fromMinimum</em> fromMaximum:(float)<em>fromMaximum</em> toMinimum:(float)<em>toMinimum</em> toMaximum:(float)<em>toMaximum</em></code></div>
+ {% highlight objective-c %}+ (float)scaleLogValue:(float)logValue fromMinimum:(float)fromMinimum fromMaximum:(float)fromMaximum toMinimum:(float)toMinimum toMaximum:(float)toMaximum{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>logValue</em></dt>
-      <dd><p>Current value</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>logValue</strong>:
+      Current value</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>fromMinimum</em></dt>
-      <dd><p>Lower bound of the current value</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>fromMinimum</strong>:
+      Lower bound of the current value</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>fromMaximum</em></dt>
-      <dd><p>Upper bound of the current value</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>fromMaximum</strong>:
+      Upper bound of the current value</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>toMinimum</em></dt>
-      <dd><p>Lower bound of the output</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>toMinimum</strong>:
+      Lower bound of the output</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>toMaximum</em></dt>
-      <dd><p>Upper bound of the output</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>toMaximum</strong>:
+      Upper bound of the output</li>
     
-  </div>
+    </ul>
   
 
   
@@ -390,34 +234,27 @@ title: AKTools
   
   
   <div class="method-subsection brief-description">
-    <p>Get the logvalue from a slide with the minimum and maximum given here</p>
+    Get the logvalue from a slide with the minimum and maximum given here
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (float)scaleLogValueFromSlider:(AKSlider *)<em>slider</em> minimum:(float)<em>minimum</em> maximum:(float)<em>maximum</em></code></div>
+ {% highlight objective-c %}+ (float)scaleLogValueFromSlider:(AKSlider *)slider minimum:(float)minimum maximum:(float)maximum{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>slider</em></dt>
-      <dd><p>The slider to get the value from</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>slider</strong>:
+      The slider to get the value from</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>minimum</em></dt>
-      <dd><p>Lower bound of the output</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>minimum</strong>:
+      Lower bound of the output</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>maximum</em></dt>
-      <dd><p>Upper bound of the output</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>maximum</strong>:
+      Upper bound of the output</li>
     
-  </div>
+    </ul>
   
 
   
@@ -446,29 +283,24 @@ title: AKTools
   
   
   <div class="method-subsection brief-description">
-    <p>Scales the property with a scaling factor between 0 and 1. 0->maximum, 1->minimum</p>
+    Scales the property with a scaling factor between 0 and 1. 0->maximum, 1->minimum
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (void)scaleProperty:(id)<em>property</em> withInverseScalingFactor:(float)<em>scalingFactor</em></code></div>
+ {% highlight objective-c %}+ (void)scaleProperty:(id)property withInverseScalingFactor:(float)scalingFactor{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>property</em></dt>
-      <dd><p>An <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a> to be scaled</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>property</strong>:
+      An AKInstrumentProperty or AKNoteProperty to be scaled</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>scalingFactor</em></dt>
-      <dd><p>Scaling factor between 0 and 1. 0->maximum, 1->minimum</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>scalingFactor</strong>:
+      Scaling factor between 0 and 1. 0->maximum, 1->minimum</li>
     
-  </div>
+    </ul>
   
 
   
@@ -497,29 +329,24 @@ title: AKTools
   
   
   <div class="method-subsection brief-description">
-    <p>Scales the property with a scaling factor between 0 and 1. 0->minimum, 1->maximum</p>
+    Scales the property with a scaling factor between 0 and 1. 0->minimum, 1->maximum
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (void)scaleProperty:(id)<em>property</em> withScalingFactor:(float)<em>scalingFactor</em></code></div>
+ {% highlight objective-c %}+ (void)scaleProperty:(id)property withScalingFactor:(float)scalingFactor{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>property</em></dt>
-      <dd><p>An <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a> to be scaled</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>property</strong>:
+      An AKInstrumentProperty or AKNoteProperty to be scaled</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>scalingFactor</em></dt>
-      <dd><p>Scaling factor between 0 and 1. 0->minimum, 1->maximum</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>scalingFactor</strong>:
+      Scaling factor between 0 and 1. 0->minimum, 1->maximum</li>
     
-  </div>
+    </ul>
   
 
   
@@ -548,44 +375,33 @@ title: AKTools
   
   
   <div class="method-subsection brief-description">
-    <p>Scale a value from within one range to another</p>
+    Scale a value from within one range to another
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (float)scaleValue:(float)<em>value</em> fromMinimum:(float)<em>fromMinimum</em> fromMaximum:(float)<em>fromMaximum</em> toMinimum:(float)<em>toMinimum</em> toMaximum:(float)<em>toMaximum</em></code></div>
+ {% highlight objective-c %}+ (float)scaleValue:(float)value fromMinimum:(float)fromMinimum fromMaximum:(float)fromMaximum toMinimum:(float)toMinimum toMaximum:(float)toMaximum{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>value</em></dt>
-      <dd><p>Current value</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>value</strong>:
+      Current value</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>fromMinimum</em></dt>
-      <dd><p>Lower bound of the current value</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>fromMinimum</strong>:
+      Lower bound of the current value</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>fromMaximum</em></dt>
-      <dd><p>Upper bound of the current value</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>fromMaximum</strong>:
+      Upper bound of the current value</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>toMinimum</em></dt>
-      <dd><p>Lower bound of the output</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>toMinimum</strong>:
+      Lower bound of the output</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>toMaximum</em></dt>
-      <dd><p>Upper bound of the output</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>toMaximum</strong>:
+      Upper bound of the output</li>
     
-  </div>
+    </ul>
   
 
   
@@ -614,34 +430,27 @@ title: AKTools
   
   
   <div class="method-subsection brief-description">
-    <p>Get the value from a slide with the minimum and maximum given here</p>
+    Get the value from a slide with the minimum and maximum given here
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (float)scaleValueFromSlider:(AKSlider *)<em>slider</em> minimum:(float)<em>minimum</em> maximum:(float)<em>maximum</em></code></div>
+ {% highlight objective-c %}+ (float)scaleValueFromSlider:(AKSlider *)slider minimum:(float)minimum maximum:(float)maximum{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>slider</em></dt>
-      <dd><p>The slider to get the value from</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>slider</strong>:
+      The slider to get the value from</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>minimum</em></dt>
-      <dd><p>Lower bound of the output</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>minimum</strong>:
+      Lower bound of the output</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>maximum</em></dt>
-      <dd><p>Upper bound of the output</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>maximum</strong>:
+      Upper bound of the output</li>
     
-  </div>
+    </ul>
   
 
   
@@ -670,29 +479,24 @@ title: AKTools
   
   
   <div class="method-subsection brief-description">
-    <p>Populate a label with the value from <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a></p>
+    Populate a label with the value from AKInstrumentProperty or AKNoteProperty
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (void)setLabel:(UILabel *)<em>label</em> withProperty:(id)<em>property</em></code></div>
+ {% highlight objective-c %}+ (void)setLabel:(UILabel *)label withProperty:(id)property{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>label</em></dt>
-      <dd><p>The label to set up</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>label</strong>:
+      The label to set up</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>property</em></dt>
-      <dd><p>The <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a> to use to set up the slider</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>property</strong>:
+      The AKInstrumentProperty or AKNoteProperty to use to set up the slider</li>
     
-  </div>
+    </ul>
   
 
   
@@ -721,29 +525,24 @@ title: AKTools
   
   
   <div class="method-subsection brief-description">
-    <p>Set a progress view with an <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a></p>
+    Set a progress view with an AKInstrumentProperty or AKNoteProperty
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (void)setProgressView:(UIProgressView *)<em>progressView</em> withProperty:(id)<em>property</em></code></div>
+ {% highlight objective-c %}+ (void)setProgressView:(UIProgressView *)progressView withProperty:(id)property{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>progressView</em></dt>
-      <dd><p>The progress view to set up</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>progressView</strong>:
+      The progress view to set up</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>property</em></dt>
-      <dd><p>The <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a> to use to set up the slider</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>property</strong>:
+      The AKInstrumentProperty or AKNoteProperty to use to set up the slider</li>
     
-  </div>
+    </ul>
   
 
   
@@ -772,29 +571,24 @@ title: AKTools
   
   
   <div class="method-subsection brief-description">
-    <p>Set an <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a> from a slider</p>
+    Set an AKInstrumentProperty or AKNoteProperty from a slider
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (void)setProperty:(id)<em>property</em> withSlider:(AKSlider *)<em>slider</em></code></div>
+ {% highlight objective-c %}+ (void)setProperty:(id)property withSlider:(AKSlider *)slider{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>property</em></dt>
-      <dd><p>The <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a> to set with the slider</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>property</strong>:
+      The AKInstrumentProperty or AKNoteProperty to set with the slider</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>slider</em></dt>
-      <dd><p>The slider to use</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>slider</strong>:
+      The slider to use</li>
     
-  </div>
+    </ul>
   
 
   
@@ -823,29 +617,24 @@ title: AKTools
   
   
   <div class="method-subsection brief-description">
-    <p>Set a slider with an <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a></p>
+    Set a slider with an AKInstrumentProperty or AKNoteProperty
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (void)setSlider:(AKSlider *)<em>slider</em> withProperty:(id)<em>property</em></code></div>
+ {% highlight objective-c %}+ (void)setSlider:(AKSlider *)slider withProperty:(id)property{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>slider</em></dt>
-      <dd><p>The slider to set up</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>slider</strong>:
+      The slider to set up</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>property</em></dt>
-      <dd><p>The <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a> to use to set up the slider</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>property</strong>:
+      The AKInstrumentProperty or AKNoteProperty to use to set up the slider</li>
     
-  </div>
+    </ul>
   
 
   
@@ -874,39 +663,30 @@ title: AKTools
   
   
   <div class="method-subsection brief-description">
-    <p>Reposition a slider&rsquo;s value and range</p>
+    Reposition a slider's value and range
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (void)setSlider:(AKSlider *)<em>slider</em> withValue:(float)<em>value</em> minimum:(float)<em>minimum</em> maximum:(float)<em>maximum</em></code></div>
+ {% highlight objective-c %}+ (void)setSlider:(AKSlider *)slider withValue:(float)value minimum:(float)minimum maximum:(float)maximum{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>slider</em></dt>
-      <dd><p>The slider to set up</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>slider</strong>:
+      The slider to set up</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>value</em></dt>
-      <dd><p>Current value of the slider</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>value</strong>:
+      Current value of the slider</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>minimum</em></dt>
-      <dd><p>Lower bound of the slider</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>minimum</strong>:
+      Lower bound of the slider</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>maximum</em></dt>
-      <dd><p>Upper bound of the slider</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>maximum</strong>:
+      Upper bound of the slider</li>
     
-  </div>
+    </ul>
   
 
   
@@ -935,29 +715,24 @@ title: AKTools
   
   
   <div class="method-subsection brief-description">
-    <p>Populate a text field with the value from <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a></p>
+    Populate a text field with the value from AKInstrumentProperty or AKNoteProperty
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (void)setTextField:(AKTextField *)<em>textfield</em> withProperty:(id)<em>property</em></code></div>
+ {% highlight objective-c %}+ (void)setTextField:(AKTextField *)textfield withProperty:(id)property{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>textfield</em></dt>
-      <dd><p>The text field to set up</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>textfield</strong>:
+      The text field to set up</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>property</em></dt>
-      <dd><p>The <a href="../Classes/AKInstrumentProperty.html">AKInstrumentProperty</a> or <a href="../Classes/AKNoteProperty.html">AKNoteProperty</a> to use to set up the slider</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>property</strong>:
+      The AKInstrumentProperty or AKNoteProperty to use to set up the slider</li>
     
-  </div>
+    </ul>
   
 
   
@@ -979,7 +754,6 @@ title: AKTools
   
 </div>
             
-          </div>
           
 
           

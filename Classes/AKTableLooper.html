@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKTableLooper
 title: AKTableLooper
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKTableLooper</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,170 +16,23 @@ title: AKTableLooper
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKTableLooper.h<br />AKTableLooper.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Function-table-based crossfading looper.</p>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Function-table-based crossfading looper.
 
-<p>This opcode implements a crossfading looper with variable loop parameters and three looping modes. It accepts non-power-of-two tables for its source sounds, such as AKSoundFile Tables.</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/loopRepeats">+&nbsp;loopRepeats</a></code>
-    <span class="tooltip"><p>Loop plays foward and repeats from the beginning forever</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/loopPlaysBackwards">+&nbsp;loopPlaysBackwards</a></code>
-    <span class="tooltip"><p>Loop plays backwards repeating from the end when it gets back to the start</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/loopPlaysForwardAndThenBackwards">+&nbsp;loopPlaysForwardAndThenBackwards</a></code>
-    <span class="tooltip"><p>Loop first plays forward and then when it reaches the end it plays backwards and then repeats</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithTable:startTime:endTime:transpositionRatio:amplitude:crossfadeDuration:loopMode:">&ndash;&nbsp;initWithTable:startTime:endTime:transpositionRatio:amplitude:crossfadeDuration:loopMode:</a></code>
-    <span class="tooltip"><p>Instantiates the table looper with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithTable:">&ndash;&nbsp;initWithTable:</a></code>
-    <span class="tooltip"><p>Instantiates the table looper with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/looperWithTable:">+&nbsp;looperWithTable:</a></code>
-    <span class="tooltip"><p>Instantiates the table looper with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/startTime">&nbsp;&nbsp;startTime</a></code>
-    <span class="tooltip"><p>Loop start point in seconds. [Default Value: 0]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalStartTime:">&ndash;&nbsp;setOptionalStartTime:</a></code>
-    <span class="tooltip"><p>Set an optional start time</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/endTime">&nbsp;&nbsp;endTime</a></code>
-    <span class="tooltip"><p>Playback end position in seconds.  Defaults to end of table(0). [Default Value: 0]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalEndTime:">&ndash;&nbsp;setOptionalEndTime:</a></code>
-    <span class="tooltip"><p>Set an optional end time</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/transpositionRatio">&nbsp;&nbsp;transpositionRatio</a></code>
-    <span class="tooltip"><p>Pitch control by way of transposition ratio. [Default Value: 1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalTranspositionRatio:">&ndash;&nbsp;setOptionalTranspositionRatio:</a></code>
-    <span class="tooltip"><p>Set an optional transposition ratio</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/amplitude">&nbsp;&nbsp;amplitude</a></code>
-    <span class="tooltip"><p>Amplitude of loop. [Default Value: 1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalAmplitude:">&ndash;&nbsp;setOptionalAmplitude:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/crossfadeDuration">&nbsp;&nbsp;crossfadeDuration</a></code>
-    <span class="tooltip"><p>crossfade length in seconds, updated once per loop cycle and limited to loop length. [Default Value: 0]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalCrossfadeDuration:">&ndash;&nbsp;setOptionalCrossfadeDuration:</a></code>
-    <span class="tooltip"><p>Set an optional crossfade duration</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/loopMode">&nbsp;&nbsp;loopMode</a></code>
-    <span class="tooltip"><p>Loop modes are forward, backward, and back and forth.</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalLoopMode:">&ndash;&nbsp;setOptionalLoopMode:</a></code>
-    <span class="tooltip"><p>Set an optional loop mode</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
+This opcode implements a crossfading looper with variable loop parameters and three looping modes. It accepts non-power-of-two tables for its source sounds, such as AKSoundFile Tables.</p>
           
           
 
           
           
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/amplitude" title="amplitude"></a>
@@ -192,12 +41,12 @@ title: AKTableLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Amplitude of loop. [Default Value: 1]</p>
+    Amplitude of loop. [Default Value: 1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *amplitude</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *amplitude{% endhighlight %}
 
     
   
@@ -228,12 +77,12 @@ title: AKTableLooper
   
   
   <div class="method-subsection brief-description">
-    <p>crossfade length in seconds, updated once per loop cycle and limited to loop length. [Default Value: 0]</p>
+    crossfade length in seconds, updated once per loop cycle and limited to loop length. [Default Value: 0]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *crossfadeDuration</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *crossfadeDuration{% endhighlight %}
 
     
   
@@ -264,12 +113,12 @@ title: AKTableLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Playback end position in seconds.  Defaults to end of table(0). [Default Value: 0]</p>
+    Playback end position in seconds.  Defaults to end of table(0). [Default Value: 0]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *endTime</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *endTime{% endhighlight %}
 
     
   
@@ -300,12 +149,12 @@ title: AKTableLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Loop modes are forward, backward, and back and forth.</p>
+    Loop modes are forward, backward, and back and forth.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *loopMode</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *loopMode{% endhighlight %}
 
     
   
@@ -336,12 +185,12 @@ title: AKTableLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Loop start point in seconds. [Default Value: 0]</p>
+    Loop start point in seconds. [Default Value: 0]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *startTime</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *startTime{% endhighlight %}
 
     
   
@@ -372,12 +221,12 @@ title: AKTableLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Pitch control by way of transposition ratio. [Default Value: 1]</p>
+    Pitch control by way of transposition ratio. [Default Value: 1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *transpositionRatio</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *transpositionRatio{% endhighlight %}
 
     
   
@@ -401,13 +250,11 @@ title: AKTableLooper
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/loopPlaysBackwards" title="loopPlaysBackwards"></a>
@@ -416,12 +263,12 @@ title: AKTableLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Loop plays backwards repeating from the end when it gets back to the start</p>
+    Loop plays backwards repeating from the end when it gets back to the start
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (AKConstant *)loopPlaysBackwards</code></div>
+ {% highlight objective-c %}+ (AKConstant *)loopPlaysBackwards{% endhighlight %}
 
     
   
@@ -452,12 +299,12 @@ title: AKTableLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Loop first plays forward and then when it reaches the end it plays backwards and then repeats</p>
+    Loop first plays forward and then when it reaches the end it plays backwards and then repeats
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (AKConstant *)loopPlaysForwardAndThenBackwards</code></div>
+ {% highlight objective-c %}+ (AKConstant *)loopPlaysForwardAndThenBackwards{% endhighlight %}
 
     
   
@@ -488,12 +335,12 @@ title: AKTableLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Loop plays foward and repeats from the beginning forever</p>
+    Loop plays foward and repeats from the beginning forever
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (AKConstant *)loopRepeats</code></div>
+ {% highlight objective-c %}+ (AKConstant *)loopRepeats{% endhighlight %}
 
     
   
@@ -524,24 +371,21 @@ title: AKTableLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the table looper with default values</p>
+    Instantiates the table looper with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)looperWithTable:(AKTable *)<em>table</em></code></div>
+ {% highlight objective-c %}+ (instancetype)looperWithTable:(AKTable *)table{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>table</em></dt>
-      <dd><p>Sound source table, generally an AKSoundFile.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>table</strong>:
+      Sound source table, generally an AKSoundFile.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -563,13 +407,11 @@ title: AKTableLooper
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/initWithTable:" title="initWithTable:"></a>
@@ -578,24 +420,21 @@ title: AKTableLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the table looper with default values</p>
+    Instantiates the table looper with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithTable:(AKTable *)<em>table</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithTable:(AKTable *)table{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>table</em></dt>
-      <dd><p>Sound source table, generally an AKSoundFile.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>table</strong>:
+      Sound source table, generally an AKSoundFile.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -624,54 +463,39 @@ title: AKTableLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the table looper with all values</p>
+    Instantiates the table looper with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithTable:(AKTable *)<em>table</em> startTime:(AKParameter *)<em>startTime</em> endTime:(AKParameter *)<em>endTime</em> transpositionRatio:(AKParameter *)<em>transpositionRatio</em> amplitude:(AKParameter *)<em>amplitude</em> crossfadeDuration:(AKParameter *)<em>crossfadeDuration</em> loopMode:(AKConstant *)<em>loopMode</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithTable:(AKTable *)table startTime:(AKParameter *)startTime endTime:(AKParameter *)endTime transpositionRatio:(AKParameter *)transpositionRatio amplitude:(AKParameter *)amplitude crossfadeDuration:(AKParameter *)crossfadeDuration loopMode:(AKConstant *)loopMode{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>table</em></dt>
-      <dd><p>Sound source table, generally an AKSoundFile. [Default Value: ]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>table</strong>:
+      Sound source table, generally an AKSoundFile. [Default Value: ]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>startTime</em></dt>
-      <dd><p>Loop start point in seconds. Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>startTime</strong>:
+      Loop start point in seconds. Updated at Control-rate. [Default Value: 0]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>endTime</em></dt>
-      <dd><p>Playback end position in seconds.  Defaults to end of table(0). Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>endTime</strong>:
+      Playback end position in seconds.  Defaults to end of table(0). Updated at Control-rate. [Default Value: 0]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>transpositionRatio</em></dt>
-      <dd><p>Pitch control by way of transposition ratio. Updated at Control-rate. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>transpositionRatio</strong>:
+      Pitch control by way of transposition ratio. Updated at Control-rate. [Default Value: 1]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>Amplitude of loop. Updated at Control-rate. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude of loop. Updated at Control-rate. [Default Value: 1]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>crossfadeDuration</em></dt>
-      <dd><p>crossfade length in seconds, updated once per loop cycle and limited to loop length. Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>crossfadeDuration</strong>:
+      crossfade length in seconds, updated once per loop cycle and limited to loop length. Updated at Control-rate. [Default Value: 0]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>loopMode</em></dt>
-      <dd><p>Loop modes are forward, backward, and back and forth.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>loopMode</strong>:
+      Loop modes are forward, backward, and back and forth.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -700,24 +524,21 @@ title: AKTableLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p>
+    Set an optional amplitude
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalAmplitude:(AKParameter *)<em>amplitude</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalAmplitude:(AKParameter *)amplitude{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>Amplitude of loop. Updated at Control-rate. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude of loop. Updated at Control-rate. [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -746,24 +567,21 @@ title: AKTableLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional crossfade duration</p>
+    Set an optional crossfade duration
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalCrossfadeDuration:(AKParameter *)<em>crossfadeDuration</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalCrossfadeDuration:(AKParameter *)crossfadeDuration{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>crossfadeDuration</em></dt>
-      <dd><p>crossfade length in seconds, updated once per loop cycle and limited to loop length. Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>crossfadeDuration</strong>:
+      crossfade length in seconds, updated once per loop cycle and limited to loop length. Updated at Control-rate. [Default Value: 0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -792,24 +610,21 @@ title: AKTableLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional end time</p>
+    Set an optional end time
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalEndTime:(AKParameter *)<em>endTime</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalEndTime:(AKParameter *)endTime{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>endTime</em></dt>
-      <dd><p>Playback end position in seconds.  Defaults to end of table(0). Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>endTime</strong>:
+      Playback end position in seconds.  Defaults to end of table(0). Updated at Control-rate. [Default Value: 0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -838,24 +653,21 @@ title: AKTableLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional loop mode</p>
+    Set an optional loop mode
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalLoopMode:(AKConstant *)<em>loopMode</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalLoopMode:(AKConstant *)loopMode{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>loopMode</em></dt>
-      <dd><p>Loop modes are forward, backward, and back and forth.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>loopMode</strong>:
+      Loop modes are forward, backward, and back and forth.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -884,24 +696,21 @@ title: AKTableLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional start time</p>
+    Set an optional start time
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalStartTime:(AKParameter *)<em>startTime</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalStartTime:(AKParameter *)startTime{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>startTime</em></dt>
-      <dd><p>Loop start point in seconds. Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>startTime</strong>:
+      Loop start point in seconds. Updated at Control-rate. [Default Value: 0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -930,24 +739,21 @@ title: AKTableLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional transposition ratio</p>
+    Set an optional transposition ratio
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalTranspositionRatio:(AKParameter *)<em>transpositionRatio</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalTranspositionRatio:(AKParameter *)transpositionRatio{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>transpositionRatio</em></dt>
-      <dd><p>Pitch control by way of transposition ratio. Updated at Control-rate. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>transpositionRatio</strong>:
+      Pitch control by way of transposition ratio. Updated at Control-rate. [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -969,7 +775,6 @@ title: AKTableLooper
   
 </div>
             
-          </div>
           
           
         </div>

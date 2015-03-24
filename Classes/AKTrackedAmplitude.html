@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKTrackedAmplitude
 title: AKTrackedAmplitude
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKTrackedAmplitude</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKControl.html">AKControl</a> : <a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,79 +16,23 @@ title: AKTrackedAmplitude
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKTrackedAmplitude.h<br />AKTrackedAmplitude.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>One line title / summary for the operation.Determines the root-mean-square amplitude of an audio signal.</p>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>One line title / summary for the operation.Determines the root-mean-square amplitude of an audio signal.
 
-<p>Determines the root-mean-square amplitude of an audio signal. It low-pass filters the actual value, to average in the manner of a VU meter. This unit is not a signal modifier, but functions rather as a signal power-gauge. It uses an internal low-pass filter to make the response smoother. The <a href="#//api/name/halfPowerPoint">halfPowerPoint</a> can be used to control this smoothing. The higher the value, the &ldquo;snappier&rdquo; the measurement.</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithAudioSource:halfPowerPoint:">&ndash;&nbsp;initWithAudioSource:halfPowerPoint:</a></code>
-    <span class="tooltip"><p>Instantiates the tracked amplitude with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithAudioSource:">&ndash;&nbsp;initWithAudioSource:</a></code>
-    <span class="tooltip"><p>Instantiates the tracked amplitude with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/amplitudeWithAudioSource:">+&nbsp;amplitudeWithAudioSource:</a></code>
-    <span class="tooltip"><p>Instantiates the tracked amplitude with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/halfPowerPoint">&nbsp;&nbsp;halfPowerPoint</a></code>
-    <span class="tooltip"><p>Half-power point (in Hz) of a special internal low-pass filter. [Default Value: 10]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalHalfPowerPoint:">&ndash;&nbsp;setOptionalHalfPowerPoint:</a></code>
-    <span class="tooltip"><p>Set an optional half power point</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
+Determines the root-mean-square amplitude of an audio signal. It low-pass filters the actual value, to average in the manner of a VU meter. This unit is not a signal modifier, but functions rather as a signal power-gauge. It uses an internal low-pass filter to make the response smoother. The halfPowerPoint can be used to control this smoothing. The higher the value, the "snappier" the measurement.</p>
           
           
 
           
           
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/halfPowerPoint" title="halfPowerPoint"></a>
@@ -101,12 +41,12 @@ title: AKTrackedAmplitude
   
   
   <div class="method-subsection brief-description">
-    <p>Half-power point (in Hz) of a special internal low-pass filter. [Default Value: 10]</p>
+    Half-power point (in Hz) of a special internal low-pass filter. [Default Value: 10]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property AKConstant *halfPowerPoint</code></div>
+ {% highlight objective-c %}@property AKConstant *halfPowerPoint{% endhighlight %}
 
     
   
@@ -130,13 +70,11 @@ title: AKTrackedAmplitude
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/amplitudeWithAudioSource:" title="amplitudeWithAudioSource:"></a>
@@ -145,24 +83,21 @@ title: AKTrackedAmplitude
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the tracked amplitude with default values</p>
+    Instantiates the tracked amplitude with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)amplitudeWithAudioSource:(AKParameter *)<em>audioSource</em></code></div>
+ {% highlight objective-c %}+ (instancetype)amplitudeWithAudioSource:(AKParameter *)audioSource{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>audioSource</em></dt>
-      <dd><p>Input audio signal to track.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>audioSource</strong>:
+      Input audio signal to track.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -184,13 +119,11 @@ title: AKTrackedAmplitude
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/initWithAudioSource:" title="initWithAudioSource:"></a>
@@ -199,24 +132,21 @@ title: AKTrackedAmplitude
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the tracked amplitude with default values</p>
+    Instantiates the tracked amplitude with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKParameter *)<em>audioSource</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithAudioSource:(AKParameter *)audioSource{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>audioSource</em></dt>
-      <dd><p>Input audio signal to track.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>audioSource</strong>:
+      Input audio signal to track.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -245,29 +175,24 @@ title: AKTrackedAmplitude
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the tracked amplitude with all values</p>
+    Instantiates the tracked amplitude with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKParameter *)<em>audioSource</em> halfPowerPoint:(AKConstant *)<em>halfPowerPoint</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithAudioSource:(AKParameter *)audioSource halfPowerPoint:(AKConstant *)halfPowerPoint{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>audioSource</em></dt>
-      <dd><p>Input audio signal to track. [Default Value: ]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>audioSource</strong>:
+      Input audio signal to track. [Default Value: ]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>halfPowerPoint</em></dt>
-      <dd><p>Half-power point (in Hz) of a special internal low-pass filter. [Default Value: 10]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>halfPowerPoint</strong>:
+      Half-power point (in Hz) of a special internal low-pass filter. [Default Value: 10]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -296,24 +221,21 @@ title: AKTrackedAmplitude
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional half power point</p>
+    Set an optional half power point
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalHalfPowerPoint:(AKConstant *)<em>halfPowerPoint</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalHalfPowerPoint:(AKConstant *)halfPowerPoint{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>halfPowerPoint</em></dt>
-      <dd><p>Half-power point (in Hz) of a special internal low-pass filter. [Default Value: 10]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>halfPowerPoint</strong>:
+      Half-power point (in Hz) of a special internal low-pass filter. [Default Value: 10]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -335,7 +257,6 @@ title: AKTrackedAmplitude
   
 </div>
             
-          </div>
           
           
         </div>

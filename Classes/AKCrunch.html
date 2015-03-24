@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKCrunch
 title: AKCrunch
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKCrunch</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,107 +16,23 @@ title: AKCrunch
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKCrunch.h<br />AKCrunch.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Semi-physical model of a <a href="#//api/name/crunch">crunch</a> sound.</p>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Semi-physical model of a crunch sound.
 
-<p>This one of the PhISEM percussion opcodes. PhISEM (Physically Informed Stochastic Event Modeling) is an algorithmic approach for simulating collisions of multiple independent sound producing objects.</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithIntensity:dampingFactor:amplitude:">&ndash;&nbsp;initWithIntensity:dampingFactor:amplitude:</a></code>
-    <span class="tooltip"><p>Instantiates the <a href="#//api/name/crunch">crunch</a> with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
-    <span class="tooltip"><p>Instantiates the <a href="#//api/name/crunch">crunch</a> with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/crunch">+&nbsp;crunch</a></code>
-    <span class="tooltip"><p>Instantiates the crunch with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/intensity">&nbsp;&nbsp;intensity</a></code>
-    <span class="tooltip"><p>The intensity of the <a href="#//api/name/crunch">crunch</a> sound [Default Value: 100]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalIntensity:">&ndash;&nbsp;setOptionalIntensity:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/intensity">intensity</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/dampingFactor">&nbsp;&nbsp;dampingFactor</a></code>
-    <span class="tooltip"><p>Damping factor where 0 is no damping and 1 is fully damped. [Default Value: 0.1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalDampingFactor:">&ndash;&nbsp;setOptionalDampingFactor:</a></code>
-    <span class="tooltip"><p>Set an optional damping factor</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/amplitude">&nbsp;&nbsp;amplitude</a></code>
-    <span class="tooltip"><p>Amplitude of output. As these instruments are stochastic this is only a approximation. [Default Value: 1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalAmplitude:">&ndash;&nbsp;setOptionalAmplitude:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
+This one of the PhISEM percussion opcodes. PhISEM (Physically Informed Stochastic Event Modeling) is an algorithmic approach for simulating collisions of multiple independent sound producing objects.</p>
           
           
 
           
           
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/amplitude" title="amplitude"></a>
@@ -129,12 +41,12 @@ title: AKCrunch
   
   
   <div class="method-subsection brief-description">
-    <p>Amplitude of output. As these instruments are stochastic this is only a approximation. [Default Value: 1]</p>
+    Amplitude of output. As these instruments are stochastic this is only a approximation. [Default Value: 1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *amplitude</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *amplitude{% endhighlight %}
 
     
   
@@ -165,12 +77,12 @@ title: AKCrunch
   
   
   <div class="method-subsection brief-description">
-    <p>Damping factor where 0 is no damping and 1 is fully damped. [Default Value: 0.1]</p>
+    Damping factor where 0 is no damping and 1 is fully damped. [Default Value: 0.1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *dampingFactor</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *dampingFactor{% endhighlight %}
 
     
   
@@ -201,12 +113,12 @@ title: AKCrunch
   
   
   <div class="method-subsection brief-description">
-    <p>The intensity of the <a href="#//api/name/crunch">crunch</a> sound [Default Value: 100]</p>
+    The intensity of the crunch sound [Default Value: 100]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *intensity</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *intensity{% endhighlight %}
 
     
   
@@ -230,13 +142,11 @@ title: AKCrunch
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/crunch" title="crunch"></a>
@@ -245,12 +155,12 @@ title: AKCrunch
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the crunch with default values</p>
+    Instantiates the crunch with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)crunch</code></div>
+ {% highlight objective-c %}+ (instancetype)crunch{% endhighlight %}
 
     
   
@@ -274,13 +184,11 @@ title: AKCrunch
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/init" title="init"></a>
@@ -289,12 +197,12 @@ title: AKCrunch
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the <a href="#//api/name/crunch">crunch</a> with default values</p>
+    Instantiates the crunch with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
+ {% highlight objective-c %}- (instancetype)init{% endhighlight %}
 
     
   
@@ -325,34 +233,27 @@ title: AKCrunch
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the <a href="#//api/name/crunch">crunch</a> with all values</p>
+    Instantiates the crunch with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithIntensity:(AKConstant *)<em>intensity</em> dampingFactor:(AKConstant *)<em>dampingFactor</em> amplitude:(AKConstant *)<em>amplitude</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithIntensity:(AKConstant *)intensity dampingFactor:(AKConstant *)dampingFactor amplitude:(AKConstant *)amplitude{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>intensity</em></dt>
-      <dd><p>The <a href="#//api/name/intensity">intensity</a> of the <a href="#//api/name/crunch">crunch</a> sound [Default Value: 100]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>intensity</strong>:
+      The intensity of the crunch sound [Default Value: 100]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>dampingFactor</em></dt>
-      <dd><p>Damping factor where 0 is no damping and 1 is fully damped. [Default Value: 0.1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>dampingFactor</strong>:
+      Damping factor where 0 is no damping and 1 is fully damped. [Default Value: 0.1]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>Amplitude of output. As these instruments are stochastic this is only a approximation. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude of output. As these instruments are stochastic this is only a approximation. [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -381,24 +282,21 @@ title: AKCrunch
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p>
+    Set an optional amplitude
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalAmplitude:(AKConstant *)<em>amplitude</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalAmplitude:(AKConstant *)amplitude{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>Amplitude of output. As these instruments are stochastic this is only a approximation. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude of output. As these instruments are stochastic this is only a approximation. [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -427,24 +325,21 @@ title: AKCrunch
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional damping factor</p>
+    Set an optional damping factor
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalDampingFactor:(AKConstant *)<em>dampingFactor</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalDampingFactor:(AKConstant *)dampingFactor{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>dampingFactor</em></dt>
-      <dd><p>Damping factor where 0 is no damping and 1 is fully damped. [Default Value: 0.1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>dampingFactor</strong>:
+      Damping factor where 0 is no damping and 1 is fully damped. [Default Value: 0.1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -473,24 +368,21 @@ title: AKCrunch
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/intensity">intensity</a></p>
+    Set an optional intensity
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalIntensity:(AKConstant *)<em>intensity</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalIntensity:(AKConstant *)intensity{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>intensity</em></dt>
-      <dd><p>The <a href="#//api/name/intensity">intensity</a> of the <a href="#//api/name/crunch">crunch</a> sound [Default Value: 100]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>intensity</strong>:
+      The intensity of the crunch sound [Default Value: 100]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -512,7 +404,6 @@ title: AKCrunch
   
 </div>
             
-          </div>
           
           
         </div>

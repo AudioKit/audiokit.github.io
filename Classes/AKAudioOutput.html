@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKAudioOutput
 title: AKAudioOutput
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKAudioOutput</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,68 +16,20 @@ title: AKAudioOutput
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKAudioOutput.h<br />AKAudioOutput.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Writes stereo audio data to an external device or stream.</p>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Writes stereo audio data to an external device or stream.
 
-<p>Sends stereo audio samples to an accumulating output buffer
+Sends stereo audio samples to an accumulating output buffer
 (created at the beginning of performance) which serves to
 collect the output of all active instruments before the
 sound is written to disk. There can be any number of these
 output units in an instrument.</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithInput:">&ndash;&nbsp;initWithInput:</a></code>
-    <span class="tooltip"><p>Helper function to send both channels the same monoSignal</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithAudioSource:">&ndash;&nbsp;initWithAudioSource:</a></code>
-    <span class="tooltip"><p>Helper function to send both channels the same monoSignal</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithStereoAudioSource:">&ndash;&nbsp;initWithStereoAudioSource:</a></code>
-    <span class="tooltip"><p>Send a stereo output pair</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithLeftAudio:rightAudio:">&ndash;&nbsp;initWithLeftAudio:rightAudio:</a></code>
-    <span class="tooltip"><p>Initialization Statement</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
           
           
 
@@ -91,9 +39,8 @@ output units in an instrument.</p>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/initWithAudioSource:" title="initWithAudioSource:"></a>
@@ -102,24 +49,21 @@ output units in an instrument.</p>
   
   
   <div class="method-subsection brief-description">
-    <p>Helper function to send both channels the same monoSignal</p>
+    Helper function to send both channels the same monoSignal
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithAudioSource:(AKParameter *)<em>audioSource</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithAudioSource:(AKParameter *)audioSource{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>audioSource</em></dt>
-      <dd><p>The audio signal to be played on both channels.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>audioSource</strong>:
+      The audio signal to be played on both channels.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -148,24 +92,21 @@ output units in an instrument.</p>
   
   
   <div class="method-subsection brief-description">
-    <p>Helper function to send both channels the same monoSignal</p>
+    Helper function to send both channels the same monoSignal
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>source</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)source{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>source</em></dt>
-      <dd><p>The audio signal to be played on both channels.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>source</strong>:
+      The audio signal to be played on both channels.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -194,29 +135,24 @@ output units in an instrument.</p>
   
   
   <div class="method-subsection brief-description">
-    <p>Initialization Statement</p>
+    Initialization Statement
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithLeftAudio:(AKParameter *)<em>leftAudio</em> rightAudio:(AKParameter *)<em>rightAudio</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithLeftAudio:(AKParameter *)leftAudio rightAudio:(AKParameter *)rightAudio{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>leftAudio</em></dt>
-      <dd><p>The audio signal to be played on the left channel.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>leftAudio</strong>:
+      The audio signal to be played on the left channel.</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>rightAudio</em></dt>
-      <dd><p>The audio signal to be played on the right channel.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>rightAudio</strong>:
+      The audio signal to be played on the right channel.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -245,24 +181,21 @@ output units in an instrument.</p>
   
   
   <div class="method-subsection brief-description">
-    <p>Send a stereo output pair</p>
+    Send a stereo output pair
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithStereoAudioSource:(AKStereoAudio *)<em>stereoAudio</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithStereoAudioSource:(AKStereoAudio *)stereoAudio{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>stereoAudio</em></dt>
-      <dd><p>The audio as an <a href="../Classes/AKStereoAudio.html">AKStereoAudio</a> pair</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>stereoAudio</strong>:
+      The audio as an AKStereoAudio pair</li>
     
-  </div>
+    </ul>
   
 
   
@@ -284,7 +217,6 @@ output units in an instrument.</p>
   
 </div>
             
-          </div>
           
           
         </div>

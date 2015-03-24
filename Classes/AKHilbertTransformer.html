@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKHilbertTransformer
 title: AKHilbertTransformer
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKHilbertTransformer</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,53 +16,19 @@ title: AKHilbertTransformer
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKHilbertTransformer.h<br />AKHilbertTransformer.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>An IIR implementation of a Hilbert transformer.</p>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>An IIR implementation of a Hilbert transformer.
 
-<p>AKHilbertTransformer is an IIR filter based implementation of a broad-band 90 degree phase difference network. The input to AKHilbertTransformer is an audio signal, with a frequency range from 15 Hz to 15 kHz. The outputs of AKHilbertTransformer have an identical frequency response to the input (i.e. they sound the same), but the two outputs have a constant phase difference of 90 degrees, plus or minus some small amount of error, throughout the entire frequency range. The outputs are in quadrature.
+AKHilbertTransformer is an IIR filter based implementation of a broad-band 90 degree phase difference network. The input to AKHilbertTransformer is an audio signal, with a frequency range from 15 Hz to 15 kHz. The outputs of AKHilbertTransformer have an identical frequency response to the input (i.e. they sound the same), but the two outputs have a constant phase difference of 90 degrees, plus or minus some small amount of error, throughout the entire frequency range. The outputs are in quadrature.
 AKHilbertTransformer is useful in the implementation of many digital signal processing techniques that require a signal in phase quadrature. ar1 corresponds to the cosine output of AKHilbertTransformer, while ar2 corresponds to the sine output. The two outputs have a constant phase difference throughout the audio range that corresponds to the phase relationship between cosine and sine waves.
 Internally, AKHilbertTransformer is based on two parallel 6th-order allpass filters. Each allpass filter implements a phase lag that increases with frequency; the difference between the phase lags of the parallel allpass filters at any given point is approximately 90 degrees.
 Unlike an FIR-based Hilbert Transformer, the output of AKHilbertTransformer does not have a linear phase response. However, the IIR structure used in AKHilbertTransformer is far more efficient to compute, and the nonlinear phase response can be used in the creation of interesting audio effects, as in the second example below.</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithInput:frequency:">&ndash;&nbsp;initWithInput:frequency:</a></code>
-    <span class="tooltip"><p>Instantiates the hilbert transformer with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/filterWithInput:frequency:">+&nbsp;filterWithInput:frequency:</a></code>
-    <span class="tooltip"><p>Instantiates the hilbert transformer with default values</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
           
           
 
@@ -74,9 +36,8 @@ Unlike an FIR-based Hilbert Transformer, the output of AKHilbertTransformer does
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/filterWithInput:frequency:" title="filterWithInput:frequency:"></a>
@@ -85,29 +46,24 @@ Unlike an FIR-based Hilbert Transformer, the output of AKHilbertTransformer does
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the hilbert transformer with default values</p>
+    Instantiates the hilbert transformer with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)filterWithInput:(AKParameter *)<em>input</em> frequency:(AKParameter *)<em>frequency</em></code></div>
+ {% highlight objective-c %}+ (instancetype)filterWithInput:(AKParameter *)input frequency:(AKParameter *)frequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>The input audio Signal</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      The input audio Signal</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>frequency</em></dt>
-      <dd><p>The frequency shifter frequency.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>frequency</strong>:
+      The frequency shifter frequency.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -129,13 +85,11 @@ Unlike an FIR-based Hilbert Transformer, the output of AKHilbertTransformer does
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/initWithInput:frequency:" title="initWithInput:frequency:"></a>
@@ -144,29 +98,24 @@ Unlike an FIR-based Hilbert Transformer, the output of AKHilbertTransformer does
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the hilbert transformer with all values</p>
+    Instantiates the hilbert transformer with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> frequency:(AKParameter *)<em>frequency</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input frequency:(AKParameter *)frequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>The input audio Signal [Default Value: ]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      The input audio Signal [Default Value: ]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>frequency</em></dt>
-      <dd><p>The frequency shifter frequency. Updated at Control-rate. [Default Value: ]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>frequency</strong>:
+      The frequency shifter frequency. Updated at Control-rate. [Default Value: ]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -188,7 +137,6 @@ Unlike an FIR-based Hilbert Transformer, the output of AKHilbertTransformer does
   
 </div>
             
-          </div>
           
           
         </div>

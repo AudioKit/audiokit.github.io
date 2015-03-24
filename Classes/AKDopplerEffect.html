@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKDopplerEffect
 title: AKDopplerEffect
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKDopplerEffect</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,107 +16,23 @@ title: AKDopplerEffect
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKDopplerEffect.h<br />AKDopplerEffect.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>A fast and robust method for approximating sound propagation, achieving convincing Doppler shifts without having to solve equations.</p>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>A fast and robust method for approximating sound propagation, achieving convincing Doppler shifts without having to solve equations.
 
-<p>A fast and robust method for approximating sound propagation, achieving convincing Doppler shifts without having to solve equations. The method computes frequency shifts based on reading an input delay line at a delay time computed from the distance between source and mic and the speed of sound. One instance of the opcode is required for each dimension of space through which the sound source moves. If the source sound moves at a constant speed from in front of the microphone, through the microphone, to behind the microphone, then the output will be frequency shifted above the source frequency at a constant frequency while the source approaches, then discontinuously will be shifted below the source frequency at a constant frequency as the source recedes from the microphone. If the source sound moves at a constant speed through a point to one side of the microphone, then the rate of change of position will not be constant, and the familiar Doppler frequency shift typical of a siren or engine approaching and receding along a road beside a listener will be heard.</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithInput:sourcePosition:micPosition:smoothingFilterUpdateRate:">&ndash;&nbsp;initWithInput:sourcePosition:micPosition:smoothingFilterUpdateRate:</a></code>
-    <span class="tooltip"><p>Instantiates the doppler effect with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithInput:">&ndash;&nbsp;initWithInput:</a></code>
-    <span class="tooltip"><p>Instantiates the doppler effect with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/effectWithInput:">+&nbsp;effectWithInput:</a></code>
-    <span class="tooltip"><p>Instantiates the doppler effect with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/sourcePosition">&nbsp;&nbsp;sourcePosition</a></code>
-    <span class="tooltip"><p>Position of the source sound in meters. The distance between source and mic should not be changed faster than about &frac34; the speed of sound. [Default Value: 0]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalSourcePosition:">&ndash;&nbsp;setOptionalSourcePosition:</a></code>
-    <span class="tooltip"><p>Set an optional source position</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/micPosition">&nbsp;&nbsp;micPosition</a></code>
-    <span class="tooltip"><p>Position of the recording microphone in meters. The distance between source and mic should not be changed faster than about &frac34; the speed of sound. [Default Value: 0]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalMicPosition:">&ndash;&nbsp;setOptionalMicPosition:</a></code>
-    <span class="tooltip"><p>Set an optional mic position</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/smoothingFilterUpdateRate">&nbsp;&nbsp;smoothingFilterUpdateRate</a></code>
-    <span class="tooltip"><p>Rate of updating the position smoothing filter, in cycles/second. [Default Value: 6]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalSmoothingFilterUpdateRate:">&ndash;&nbsp;setOptionalSmoothingFilterUpdateRate:</a></code>
-    <span class="tooltip"><p>Set an optional smoothing filter update rate</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
+A fast and robust method for approximating sound propagation, achieving convincing Doppler shifts without having to solve equations. The method computes frequency shifts based on reading an input delay line at a delay time computed from the distance between source and mic and the speed of sound. One instance of the opcode is required for each dimension of space through which the sound source moves. If the source sound moves at a constant speed from in front of the microphone, through the microphone, to behind the microphone, then the output will be frequency shifted above the source frequency at a constant frequency while the source approaches, then discontinuously will be shifted below the source frequency at a constant frequency as the source recedes from the microphone. If the source sound moves at a constant speed through a point to one side of the microphone, then the rate of change of position will not be constant, and the familiar Doppler frequency shift typical of a siren or engine approaching and receding along a road beside a listener will be heard.</p>
           
           
 
           
           
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/micPosition" title="micPosition"></a>
@@ -129,12 +41,12 @@ title: AKDopplerEffect
   
   
   <div class="method-subsection brief-description">
-    <p>Position of the recording microphone in meters. The distance between source and mic should not be changed faster than about &frac34; the speed of sound. [Default Value: 0]</p>
+    Position of the recording microphone in meters. The distance between source and mic should not be changed faster than about 3/4 the speed of sound. [Default Value: 0]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *micPosition</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *micPosition{% endhighlight %}
 
     
   
@@ -165,12 +77,12 @@ title: AKDopplerEffect
   
   
   <div class="method-subsection brief-description">
-    <p>Rate of updating the position smoothing filter, in cycles/second. [Default Value: 6]</p>
+    Rate of updating the position smoothing filter, in cycles/second. [Default Value: 6]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *smoothingFilterUpdateRate</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *smoothingFilterUpdateRate{% endhighlight %}
 
     
   
@@ -201,12 +113,12 @@ title: AKDopplerEffect
   
   
   <div class="method-subsection brief-description">
-    <p>Position of the source sound in meters. The distance between source and mic should not be changed faster than about &frac34; the speed of sound. [Default Value: 0]</p>
+    Position of the source sound in meters. The distance between source and mic should not be changed faster than about 3/4 the speed of sound. [Default Value: 0]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *sourcePosition</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *sourcePosition{% endhighlight %}
 
     
   
@@ -230,13 +142,11 @@ title: AKDopplerEffect
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/effectWithInput:" title="effectWithInput:"></a>
@@ -245,24 +155,21 @@ title: AKDopplerEffect
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the doppler effect with default values</p>
+    Instantiates the doppler effect with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)effectWithInput:(AKParameter *)<em>input</em></code></div>
+ {% highlight objective-c %}+ (instancetype)effectWithInput:(AKParameter *)input{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>Input signal at the sound source.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input signal at the sound source.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -284,13 +191,11 @@ title: AKDopplerEffect
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/initWithInput:" title="initWithInput:"></a>
@@ -299,24 +204,21 @@ title: AKDopplerEffect
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the doppler effect with default values</p>
+    Instantiates the doppler effect with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>Input signal at the sound source.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input signal at the sound source.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -345,39 +247,30 @@ title: AKDopplerEffect
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the doppler effect with all values</p>
+    Instantiates the doppler effect with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithInput:(AKParameter *)<em>input</em> sourcePosition:(AKParameter *)<em>sourcePosition</em> micPosition:(AKParameter *)<em>micPosition</em> smoothingFilterUpdateRate:(AKConstant *)<em>smoothingFilterUpdateRate</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input sourcePosition:(AKParameter *)sourcePosition micPosition:(AKParameter *)micPosition smoothingFilterUpdateRate:(AKConstant *)smoothingFilterUpdateRate{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>input</em></dt>
-      <dd><p>Input signal at the sound source. [Default Value: ]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input signal at the sound source. [Default Value: ]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>sourcePosition</em></dt>
-      <dd><p>Position of the source sound in meters. The distance between source and mic should not be changed faster than about &frac34; the speed of sound. Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>sourcePosition</strong>:
+      Position of the source sound in meters. The distance between source and mic should not be changed faster than about 3/4 the speed of sound. Updated at Control-rate. [Default Value: 0]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>micPosition</em></dt>
-      <dd><p>Position of the recording microphone in meters. The distance between source and mic should not be changed faster than about &frac34; the speed of sound. Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>micPosition</strong>:
+      Position of the recording microphone in meters. The distance between source and mic should not be changed faster than about 3/4 the speed of sound. Updated at Control-rate. [Default Value: 0]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>smoothingFilterUpdateRate</em></dt>
-      <dd><p>Rate of updating the position smoothing filter, in cycles/second. [Default Value: 6]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>smoothingFilterUpdateRate</strong>:
+      Rate of updating the position smoothing filter, in cycles/second. [Default Value: 6]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -406,24 +299,21 @@ title: AKDopplerEffect
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional mic position</p>
+    Set an optional mic position
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalMicPosition:(AKParameter *)<em>micPosition</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalMicPosition:(AKParameter *)micPosition{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>micPosition</em></dt>
-      <dd><p>Position of the recording microphone in meters. The distance between source and mic should not be changed faster than about &frac34; the speed of sound. Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>micPosition</strong>:
+      Position of the recording microphone in meters. The distance between source and mic should not be changed faster than about 3/4 the speed of sound. Updated at Control-rate. [Default Value: 0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -452,24 +342,21 @@ title: AKDopplerEffect
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional smoothing filter update rate</p>
+    Set an optional smoothing filter update rate
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalSmoothingFilterUpdateRate:(AKConstant *)<em>smoothingFilterUpdateRate</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalSmoothingFilterUpdateRate:(AKConstant *)smoothingFilterUpdateRate{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>smoothingFilterUpdateRate</em></dt>
-      <dd><p>Rate of updating the position smoothing filter, in cycles/second. [Default Value: 6]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>smoothingFilterUpdateRate</strong>:
+      Rate of updating the position smoothing filter, in cycles/second. [Default Value: 6]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -498,24 +385,21 @@ title: AKDopplerEffect
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional source position</p>
+    Set an optional source position
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalSourcePosition:(AKParameter *)<em>sourcePosition</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalSourcePosition:(AKParameter *)sourcePosition{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>sourcePosition</em></dt>
-      <dd><p>Position of the source sound in meters. The distance between source and mic should not be changed faster than about &frac34; the speed of sound. Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>sourcePosition</strong>:
+      Position of the source sound in meters. The distance between source and mic should not be changed faster than about 3/4 the speed of sound. Updated at Control-rate. [Default Value: 0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -537,7 +421,6 @@ title: AKDopplerEffect
   
 </div>
             
-          </div>
           
           
         </div>

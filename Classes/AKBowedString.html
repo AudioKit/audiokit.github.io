@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKBowedString
 title: AKBowedString
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKBowedString</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,177 +16,23 @@ title: AKBowedString
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKBowedString.h<br />AKBowedString.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Creates a tone similar to a bowed string.</p>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Creates a tone similar to a bowed string.
 
-<p>Audio output is a tone similar to a bowed string, using a physical model developed from Perry Cook, but recoded for Csound.</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithFrequency:amplitude:pressure:position:vibratoShape:vibratoFrequency:vibratoAmplitude:minimumFrequency:">&ndash;&nbsp;initWithFrequency:amplitude:pressure:position:vibratoShape:vibratoFrequency:vibratoAmplitude:minimumFrequency:</a></code>
-    <span class="tooltip"><p>Instantiates the bowed string with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
-    <span class="tooltip"><p>Instantiates the bowed string with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/bowedString">+&nbsp;bowedString</a></code>
-    <span class="tooltip"><p>Instantiates the bowed string with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/frequency">&nbsp;&nbsp;frequency</a></code>
-    <span class="tooltip"><p>Frequency of the note played, note that this will be lowest allowable frequency unless the optional minimum frequency is set. [Default Value: 110]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalFrequency:">&ndash;&nbsp;setOptionalFrequency:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/frequency">frequency</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/amplitude">&nbsp;&nbsp;amplitude</a></code>
-    <span class="tooltip"><p>Amplitude of the note played. [Default Value: 1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalAmplitude:">&ndash;&nbsp;setOptionalAmplitude:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/pressure">&nbsp;&nbsp;pressure</a></code>
-    <span class="tooltip"><p>Parameter controlling the pressure of the bow on the string. Values should be about 3. The useful range is approximately 1 to 5. [Default Value: 3]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalPressure:">&ndash;&nbsp;setOptionalPressure:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/pressure">pressure</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/position">&nbsp;&nbsp;position</a></code>
-    <span class="tooltip"><p>Position of the bow along the string. Usual playing is about 0.127236. The suggested range is 0.025 to 0.23. [Default Value: 0.127236]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalPosition:">&ndash;&nbsp;setOptionalPosition:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/position">position</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/vibratoShape">&nbsp;&nbsp;vibratoShape</a></code>
-    <span class="tooltip"><p>Table shape of vibrato, usually a sine table. [Default Value: sine]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalVibratoShape:">&ndash;&nbsp;setOptionalVibratoShape:</a></code>
-    <span class="tooltip"><p>Set an optional vibrato shape</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/vibratoFrequency">&nbsp;&nbsp;vibratoFrequency</a></code>
-    <span class="tooltip"><p>Frequency of vibrato in Hertz. Suggested range is 0 to 12. [Default Value: 0]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalVibratoFrequency:">&ndash;&nbsp;setOptionalVibratoFrequency:</a></code>
-    <span class="tooltip"><p>Set an optional vibrato <a href="#//api/name/frequency">frequency</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/vibratoAmplitude">&nbsp;&nbsp;vibratoAmplitude</a></code>
-    <span class="tooltip"><p>Amplitude of the vibrato. [Default Value: 0]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalVibratoAmplitude:">&ndash;&nbsp;setOptionalVibratoAmplitude:</a></code>
-    <span class="tooltip"><p>Set an optional vibrato <a href="#//api/name/amplitude">amplitude</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/minimumFrequency">&nbsp;&nbsp;minimumFrequency</a></code>
-    <span class="tooltip"><p>Lowest <a href="#//api/name/frequency">frequency</a> at which the instrument will play.  [Default Value: 0]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalMinimumFrequency:">&ndash;&nbsp;setOptionalMinimumFrequency:</a></code>
-    <span class="tooltip"><p>Set an optional minimum <a href="#//api/name/frequency">frequency</a></p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
+Audio output is a tone similar to a bowed string, using a physical model developed from Perry Cook, but recoded for Csound.</p>
           
           
 
           
           
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/amplitude" title="amplitude"></a>
@@ -199,12 +41,12 @@ title: AKBowedString
   
   
   <div class="method-subsection brief-description">
-    <p>Amplitude of the note played. [Default Value: 1]</p>
+    Amplitude of the note played. [Default Value: 1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *amplitude</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *amplitude{% endhighlight %}
 
     
   
@@ -235,12 +77,12 @@ title: AKBowedString
   
   
   <div class="method-subsection brief-description">
-    <p>Frequency of the note played, note that this will be lowest allowable frequency unless the optional minimum frequency is set. [Default Value: 110]</p>
+    Frequency of the note played, note that this will be lowest allowable frequency unless the optional minimum frequency is set. [Default Value: 110]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *frequency</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *frequency{% endhighlight %}
 
     
   
@@ -271,12 +113,12 @@ title: AKBowedString
   
   
   <div class="method-subsection brief-description">
-    <p>Lowest <a href="#//api/name/frequency">frequency</a> at which the instrument will play.  [Default Value: 0]</p>
+    Lowest frequency at which the instrument will play.  [Default Value: 0]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *minimumFrequency</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *minimumFrequency{% endhighlight %}
 
     
   
@@ -307,12 +149,12 @@ title: AKBowedString
   
   
   <div class="method-subsection brief-description">
-    <p>Position of the bow along the string. Usual playing is about 0.127236. The suggested range is 0.025 to 0.23. [Default Value: 0.127236]</p>
+    Position of the bow along the string. Usual playing is about 0.127236. The suggested range is 0.025 to 0.23. [Default Value: 0.127236]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *position</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *position{% endhighlight %}
 
     
   
@@ -343,12 +185,12 @@ title: AKBowedString
   
   
   <div class="method-subsection brief-description">
-    <p>Parameter controlling the pressure of the bow on the string. Values should be about 3. The useful range is approximately 1 to 5. [Default Value: 3]</p>
+    Parameter controlling the pressure of the bow on the string. Values should be about 3. The useful range is approximately 1 to 5. [Default Value: 3]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *pressure</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *pressure{% endhighlight %}
 
     
   
@@ -379,12 +221,12 @@ title: AKBowedString
   
   
   <div class="method-subsection brief-description">
-    <p>Amplitude of the vibrato. [Default Value: 0]</p>
+    Amplitude of the vibrato. [Default Value: 0]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *vibratoAmplitude</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *vibratoAmplitude{% endhighlight %}
 
     
   
@@ -415,12 +257,12 @@ title: AKBowedString
   
   
   <div class="method-subsection brief-description">
-    <p>Frequency of vibrato in Hertz. Suggested range is 0 to 12. [Default Value: 0]</p>
+    Frequency of vibrato in Hertz. Suggested range is 0 to 12. [Default Value: 0]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *vibratoFrequency</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *vibratoFrequency{% endhighlight %}
 
     
   
@@ -451,12 +293,12 @@ title: AKBowedString
   
   
   <div class="method-subsection brief-description">
-    <p>Table shape of vibrato, usually a sine table. [Default Value: sine]</p>
+    Table shape of vibrato, usually a sine table. [Default Value: sine]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKTable *vibratoShape</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKTable *vibratoShape{% endhighlight %}
 
     
   
@@ -480,13 +322,11 @@ title: AKBowedString
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/bowedString" title="bowedString"></a>
@@ -495,12 +335,12 @@ title: AKBowedString
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the bowed string with default values</p>
+    Instantiates the bowed string with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)bowedString</code></div>
+ {% highlight objective-c %}+ (instancetype)bowedString{% endhighlight %}
 
     
   
@@ -524,13 +364,11 @@ title: AKBowedString
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/init" title="init"></a>
@@ -539,12 +377,12 @@ title: AKBowedString
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the bowed string with default values</p>
+    Instantiates the bowed string with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
+ {% highlight objective-c %}- (instancetype)init{% endhighlight %}
 
     
   
@@ -575,59 +413,42 @@ title: AKBowedString
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the bowed string with all values</p>
+    Instantiates the bowed string with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFrequency:(AKParameter *)<em>frequency</em> amplitude:(AKParameter *)<em>amplitude</em> pressure:(AKParameter *)<em>pressure</em> position:(AKParameter *)<em>position</em> vibratoShape:(AKTable *)<em>vibratoShape</em> vibratoFrequency:(AKParameter *)<em>vibratoFrequency</em> vibratoAmplitude:(AKParameter *)<em>vibratoAmplitude</em> minimumFrequency:(AKConstant *)<em>minimumFrequency</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithFrequency:(AKParameter *)frequency amplitude:(AKParameter *)amplitude pressure:(AKParameter *)pressure position:(AKParameter *)position vibratoShape:(AKTable *)vibratoShape vibratoFrequency:(AKParameter *)vibratoFrequency vibratoAmplitude:(AKParameter *)vibratoAmplitude minimumFrequency:(AKConstant *)minimumFrequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>frequency</em></dt>
-      <dd><p>Frequency of the note played, note that this will be lowest allowable <a href="#//api/name/frequency">frequency</a> unless the optional minimum <a href="#//api/name/frequency">frequency</a> is set. Updated at Control-rate. [Default Value: 110]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>frequency</strong>:
+      Frequency of the note played, note that this will be lowest allowable frequency unless the optional minimum frequency is set. Updated at Control-rate. [Default Value: 110]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>Amplitude of the note played. Updated at Control-rate. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude of the note played. Updated at Control-rate. [Default Value: 1]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>pressure</em></dt>
-      <dd><p>Parameter controlling the <a href="#//api/name/pressure">pressure</a> of the bow on the string. Values should be about 3. The useful range is approximately 1 to 5. Updated at Control-rate. [Default Value: 3]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>pressure</strong>:
+      Parameter controlling the pressure of the bow on the string. Values should be about 3. The useful range is approximately 1 to 5. Updated at Control-rate. [Default Value: 3]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>position</em></dt>
-      <dd><p>Position of the bow along the string. Usual playing is about 0.127236. The suggested range is 0.025 to 0.23. Updated at Control-rate. [Default Value: 0.127236]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>position</strong>:
+      Position of the bow along the string. Usual playing is about 0.127236. The suggested range is 0.025 to 0.23. Updated at Control-rate. [Default Value: 0.127236]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>vibratoShape</em></dt>
-      <dd><p>Table shape of vibrato, usually a sine table. [Default Value: sine]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>vibratoShape</strong>:
+      Table shape of vibrato, usually a sine table. [Default Value: sine]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>vibratoFrequency</em></dt>
-      <dd><p>Frequency of vibrato in Hertz. Suggested range is 0 to 12. Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>vibratoFrequency</strong>:
+      Frequency of vibrato in Hertz. Suggested range is 0 to 12. Updated at Control-rate. [Default Value: 0]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>vibratoAmplitude</em></dt>
-      <dd><p>Amplitude of the vibrato. Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>vibratoAmplitude</strong>:
+      Amplitude of the vibrato. Updated at Control-rate. [Default Value: 0]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>minimumFrequency</em></dt>
-      <dd><p>Lowest <a href="#//api/name/frequency">frequency</a> at which the instrument will play.  [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>minimumFrequency</strong>:
+      Lowest frequency at which the instrument will play.  [Default Value: 0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -656,24 +477,21 @@ title: AKBowedString
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p>
+    Set an optional amplitude
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalAmplitude:(AKParameter *)<em>amplitude</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalAmplitude:(AKParameter *)amplitude{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>Amplitude of the note played. Updated at Control-rate. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude of the note played. Updated at Control-rate. [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -702,24 +520,21 @@ title: AKBowedString
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/frequency">frequency</a></p>
+    Set an optional frequency
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalFrequency:(AKParameter *)<em>frequency</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalFrequency:(AKParameter *)frequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>frequency</em></dt>
-      <dd><p>Frequency of the note played, note that this will be lowest allowable <a href="#//api/name/frequency">frequency</a> unless the optional minimum <a href="#//api/name/frequency">frequency</a> is set. Updated at Control-rate. [Default Value: 110]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>frequency</strong>:
+      Frequency of the note played, note that this will be lowest allowable frequency unless the optional minimum frequency is set. Updated at Control-rate. [Default Value: 110]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -748,24 +563,21 @@ title: AKBowedString
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional minimum <a href="#//api/name/frequency">frequency</a></p>
+    Set an optional minimum frequency
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalMinimumFrequency:(AKConstant *)<em>minimumFrequency</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalMinimumFrequency:(AKConstant *)minimumFrequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>minimumFrequency</em></dt>
-      <dd><p>Lowest <a href="#//api/name/frequency">frequency</a> at which the instrument will play.  [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>minimumFrequency</strong>:
+      Lowest frequency at which the instrument will play.  [Default Value: 0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -794,24 +606,21 @@ title: AKBowedString
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/position">position</a></p>
+    Set an optional position
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalPosition:(AKParameter *)<em>position</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalPosition:(AKParameter *)position{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>position</em></dt>
-      <dd><p>Position of the bow along the string. Usual playing is about 0.127236. The suggested range is 0.025 to 0.23. Updated at Control-rate. [Default Value: 0.127236]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>position</strong>:
+      Position of the bow along the string. Usual playing is about 0.127236. The suggested range is 0.025 to 0.23. Updated at Control-rate. [Default Value: 0.127236]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -840,24 +649,21 @@ title: AKBowedString
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/pressure">pressure</a></p>
+    Set an optional pressure
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalPressure:(AKParameter *)<em>pressure</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalPressure:(AKParameter *)pressure{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>pressure</em></dt>
-      <dd><p>Parameter controlling the <a href="#//api/name/pressure">pressure</a> of the bow on the string. Values should be about 3. The useful range is approximately 1 to 5. Updated at Control-rate. [Default Value: 3]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>pressure</strong>:
+      Parameter controlling the pressure of the bow on the string. Values should be about 3. The useful range is approximately 1 to 5. Updated at Control-rate. [Default Value: 3]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -886,24 +692,21 @@ title: AKBowedString
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional vibrato <a href="#//api/name/amplitude">amplitude</a></p>
+    Set an optional vibrato amplitude
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalVibratoAmplitude:(AKParameter *)<em>vibratoAmplitude</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalVibratoAmplitude:(AKParameter *)vibratoAmplitude{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>vibratoAmplitude</em></dt>
-      <dd><p>Amplitude of the vibrato. Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>vibratoAmplitude</strong>:
+      Amplitude of the vibrato. Updated at Control-rate. [Default Value: 0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -932,24 +735,21 @@ title: AKBowedString
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional vibrato <a href="#//api/name/frequency">frequency</a></p>
+    Set an optional vibrato frequency
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalVibratoFrequency:(AKParameter *)<em>vibratoFrequency</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalVibratoFrequency:(AKParameter *)vibratoFrequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>vibratoFrequency</em></dt>
-      <dd><p>Frequency of vibrato in Hertz. Suggested range is 0 to 12. Updated at Control-rate. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>vibratoFrequency</strong>:
+      Frequency of vibrato in Hertz. Suggested range is 0 to 12. Updated at Control-rate. [Default Value: 0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -978,24 +778,21 @@ title: AKBowedString
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional vibrato shape</p>
+    Set an optional vibrato shape
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalVibratoShape:(AKTable *)<em>vibratoShape</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalVibratoShape:(AKTable *)vibratoShape{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>vibratoShape</em></dt>
-      <dd><p>Table shape of vibrato, usually a sine table. [Default Value: sine]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>vibratoShape</strong>:
+      Table shape of vibrato, usually a sine table. [Default Value: sine]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -1017,7 +814,6 @@ title: AKBowedString
   
 </div>
             
-          </div>
           
           
         </div>

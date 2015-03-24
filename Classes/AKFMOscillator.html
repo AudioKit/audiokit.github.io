@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKFMOscillator
 title: AKFMOscillator
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKFMOscillator</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,149 +16,23 @@ title: AKFMOscillator
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKFMOscillator.h<br />AKFMOscillator.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Basic frequency modulated <a href="#//api/name/oscillator">oscillator</a> with linear interpolation.</p>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Basic frequency modulated oscillator with linear interpolation.
 
-<p>Classic FM Synthesis audio generation.</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithWaveform:baseFrequency:carrierMultiplier:modulatingMultiplier:modulationIndex:amplitude:">&ndash;&nbsp;initWithWaveform:baseFrequency:carrierMultiplier:modulatingMultiplier:modulationIndex:amplitude:</a></code>
-    <span class="tooltip"><p>Instantiates the fm <a href="#//api/name/oscillator">oscillator</a> with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
-    <span class="tooltip"><p>Instantiates the fm <a href="#//api/name/oscillator">oscillator</a> with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/oscillator">+&nbsp;oscillator</a></code>
-    <span class="tooltip"><p>Instantiates the fm oscillator with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/waveform">&nbsp;&nbsp;waveform</a></code>
-    <span class="tooltip"><p>Waveform table to use.  Requires a wrap-around guard point. [Default Value: sine]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalWaveform:">&ndash;&nbsp;setOptionalWaveform:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/waveform">waveform</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/baseFrequency">&nbsp;&nbsp;baseFrequency</a></code>
-    <span class="tooltip"><p>In cycles per second, or Hz, this is the common denominator for the carrier and modulating frequencies. [Default Value: 440]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalBaseFrequency:">&ndash;&nbsp;setOptionalBaseFrequency:</a></code>
-    <span class="tooltip"><p>Set an optional base frequency</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/carrierMultiplier">&nbsp;&nbsp;carrierMultiplier</a></code>
-    <span class="tooltip"><p>This multiplied by the <a href="#//api/name/baseFrequency">baseFrequency</a> gives the carrier frequency. [Default Value: 1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalCarrierMultiplier:">&ndash;&nbsp;setOptionalCarrierMultiplier:</a></code>
-    <span class="tooltip"><p>Set an optional carrier multiplier</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/modulatingMultiplier">&nbsp;&nbsp;modulatingMultiplier</a></code>
-    <span class="tooltip"><p>This multiplied by the <a href="#//api/name/baseFrequency">baseFrequency</a> gives the modulating frequency. [Default Value: 1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalModulatingMultiplier:">&ndash;&nbsp;setOptionalModulatingMultiplier:</a></code>
-    <span class="tooltip"><p>Set an optional modulating multiplier</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/modulationIndex">&nbsp;&nbsp;modulationIndex</a></code>
-    <span class="tooltip"><p>This multiplied by the modulating frequency gives the modulation <a href="#//api/name/amplitude">amplitude</a>. [Default Value: 1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalModulationIndex:">&ndash;&nbsp;setOptionalModulationIndex:</a></code>
-    <span class="tooltip"><p>Set an optional modulation index</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/amplitude">&nbsp;&nbsp;amplitude</a></code>
-    <span class="tooltip"><p>This multiplied by the modulating frequency gives the modulation amplitude. [Default Value: 0.5]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalAmplitude:">&ndash;&nbsp;setOptionalAmplitude:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
+Classic FM Synthesis audio generation.</p>
           
           
 
           
           
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/amplitude" title="amplitude"></a>
@@ -171,12 +41,12 @@ title: AKFMOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>This multiplied by the modulating frequency gives the modulation amplitude. [Default Value: 0.5]</p>
+    This multiplied by the modulating frequency gives the modulation amplitude. [Default Value: 0.5]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *amplitude</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *amplitude{% endhighlight %}
 
     
   
@@ -207,12 +77,12 @@ title: AKFMOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>In cycles per second, or Hz, this is the common denominator for the carrier and modulating frequencies. [Default Value: 440]</p>
+    In cycles per second, or Hz, this is the common denominator for the carrier and modulating frequencies. [Default Value: 440]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *baseFrequency</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *baseFrequency{% endhighlight %}
 
     
   
@@ -243,12 +113,12 @@ title: AKFMOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>This multiplied by the <a href="#//api/name/baseFrequency">baseFrequency</a> gives the carrier frequency. [Default Value: 1]</p>
+    This multiplied by the baseFrequency gives the carrier frequency. [Default Value: 1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *carrierMultiplier</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *carrierMultiplier{% endhighlight %}
 
     
   
@@ -279,12 +149,12 @@ title: AKFMOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>This multiplied by the <a href="#//api/name/baseFrequency">baseFrequency</a> gives the modulating frequency. [Default Value: 1]</p>
+    This multiplied by the baseFrequency gives the modulating frequency. [Default Value: 1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *modulatingMultiplier</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *modulatingMultiplier{% endhighlight %}
 
     
   
@@ -315,12 +185,12 @@ title: AKFMOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>This multiplied by the modulating frequency gives the modulation <a href="#//api/name/amplitude">amplitude</a>. [Default Value: 1]</p>
+    This multiplied by the modulating frequency gives the modulation amplitude. [Default Value: 1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *modulationIndex</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *modulationIndex{% endhighlight %}
 
     
   
@@ -351,12 +221,12 @@ title: AKFMOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Waveform table to use.  Requires a wrap-around guard point. [Default Value: sine]</p>
+    Waveform table to use.  Requires a wrap-around guard point. [Default Value: sine]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKTable *waveform</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKTable *waveform{% endhighlight %}
 
     
   
@@ -380,13 +250,11 @@ title: AKFMOscillator
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/oscillator" title="oscillator"></a>
@@ -395,12 +263,12 @@ title: AKFMOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the fm oscillator with default values</p>
+    Instantiates the fm oscillator with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)oscillator</code></div>
+ {% highlight objective-c %}+ (instancetype)oscillator{% endhighlight %}
 
     
   
@@ -424,13 +292,11 @@ title: AKFMOscillator
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/init" title="init"></a>
@@ -439,12 +305,12 @@ title: AKFMOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the fm <a href="#//api/name/oscillator">oscillator</a> with default values</p>
+    Instantiates the fm oscillator with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
+ {% highlight objective-c %}- (instancetype)init{% endhighlight %}
 
     
   
@@ -475,49 +341,36 @@ title: AKFMOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the fm <a href="#//api/name/oscillator">oscillator</a> with all values</p>
+    Instantiates the fm oscillator with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithWaveform:(AKTable *)<em>waveform</em> baseFrequency:(AKParameter *)<em>baseFrequency</em> carrierMultiplier:(AKParameter *)<em>carrierMultiplier</em> modulatingMultiplier:(AKParameter *)<em>modulatingMultiplier</em> modulationIndex:(AKParameter *)<em>modulationIndex</em> amplitude:(AKParameter *)<em>amplitude</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithWaveform:(AKTable *)waveform baseFrequency:(AKParameter *)baseFrequency carrierMultiplier:(AKParameter *)carrierMultiplier modulatingMultiplier:(AKParameter *)modulatingMultiplier modulationIndex:(AKParameter *)modulationIndex amplitude:(AKParameter *)amplitude{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>waveform</em></dt>
-      <dd><p>Waveform table to use.  Requires a wrap-around guard point. [Default Value: sine]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>waveform</strong>:
+      Waveform table to use.  Requires a wrap-around guard point. [Default Value: sine]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>baseFrequency</em></dt>
-      <dd><p>In cycles per second, or Hz, this is the common denominator for the carrier and modulating frequencies. Updated at Control-rate. [Default Value: 440]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>baseFrequency</strong>:
+      In cycles per second, or Hz, this is the common denominator for the carrier and modulating frequencies. Updated at Control-rate. [Default Value: 440]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>carrierMultiplier</em></dt>
-      <dd><p>This multiplied by the <a href="#//api/name/baseFrequency">baseFrequency</a> gives the carrier frequency. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>carrierMultiplier</strong>:
+      This multiplied by the baseFrequency gives the carrier frequency. [Default Value: 1]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>modulatingMultiplier</em></dt>
-      <dd><p>This multiplied by the <a href="#//api/name/baseFrequency">baseFrequency</a> gives the modulating frequency. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>modulatingMultiplier</strong>:
+      This multiplied by the baseFrequency gives the modulating frequency. [Default Value: 1]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>modulationIndex</em></dt>
-      <dd><p>This multiplied by the modulating frequency gives the modulation <a href="#//api/name/amplitude">amplitude</a>. Updated at Control-rate. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>modulationIndex</strong>:
+      This multiplied by the modulating frequency gives the modulation amplitude. Updated at Control-rate. [Default Value: 1]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>This multiplied by the modulating frequency gives the modulation <a href="#//api/name/amplitude">amplitude</a>. [Default Value: 0.5]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      This multiplied by the modulating frequency gives the modulation amplitude. [Default Value: 0.5]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -546,24 +399,21 @@ title: AKFMOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p>
+    Set an optional amplitude
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalAmplitude:(AKParameter *)<em>amplitude</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalAmplitude:(AKParameter *)amplitude{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>This multiplied by the modulating frequency gives the modulation <a href="#//api/name/amplitude">amplitude</a>. [Default Value: 0.5]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      This multiplied by the modulating frequency gives the modulation amplitude. [Default Value: 0.5]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -592,24 +442,21 @@ title: AKFMOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional base frequency</p>
+    Set an optional base frequency
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalBaseFrequency:(AKParameter *)<em>baseFrequency</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalBaseFrequency:(AKParameter *)baseFrequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>baseFrequency</em></dt>
-      <dd><p>In cycles per second, or Hz, this is the common denominator for the carrier and modulating frequencies. Updated at Control-rate. [Default Value: 440]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>baseFrequency</strong>:
+      In cycles per second, or Hz, this is the common denominator for the carrier and modulating frequencies. Updated at Control-rate. [Default Value: 440]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -638,24 +485,21 @@ title: AKFMOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional carrier multiplier</p>
+    Set an optional carrier multiplier
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalCarrierMultiplier:(AKParameter *)<em>carrierMultiplier</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalCarrierMultiplier:(AKParameter *)carrierMultiplier{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>carrierMultiplier</em></dt>
-      <dd><p>This multiplied by the <a href="#//api/name/baseFrequency">baseFrequency</a> gives the carrier frequency. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>carrierMultiplier</strong>:
+      This multiplied by the baseFrequency gives the carrier frequency. [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -684,24 +528,21 @@ title: AKFMOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional modulating multiplier</p>
+    Set an optional modulating multiplier
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalModulatingMultiplier:(AKParameter *)<em>modulatingMultiplier</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalModulatingMultiplier:(AKParameter *)modulatingMultiplier{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>modulatingMultiplier</em></dt>
-      <dd><p>This multiplied by the <a href="#//api/name/baseFrequency">baseFrequency</a> gives the modulating frequency. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>modulatingMultiplier</strong>:
+      This multiplied by the baseFrequency gives the modulating frequency. [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -730,24 +571,21 @@ title: AKFMOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional modulation index</p>
+    Set an optional modulation index
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalModulationIndex:(AKParameter *)<em>modulationIndex</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalModulationIndex:(AKParameter *)modulationIndex{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>modulationIndex</em></dt>
-      <dd><p>This multiplied by the modulating frequency gives the modulation <a href="#//api/name/amplitude">amplitude</a>. Updated at Control-rate. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>modulationIndex</strong>:
+      This multiplied by the modulating frequency gives the modulation amplitude. Updated at Control-rate. [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -776,24 +614,21 @@ title: AKFMOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/waveform">waveform</a></p>
+    Set an optional waveform
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalWaveform:(AKTable *)<em>waveform</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalWaveform:(AKTable *)waveform{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>waveform</em></dt>
-      <dd><p>Waveform table to use.  Requires a wrap-around guard point. [Default Value: sine]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>waveform</strong>:
+      Waveform table to use.  Requires a wrap-around guard point. [Default Value: sine]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -815,7 +650,6 @@ title: AKFMOscillator
   
 </div>
             
-          </div>
           
           
         </div>

@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKInstrumentProperty
 title: AKInstrumentProperty
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKInstrumentProperty</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKControl.html">AKControl</a> : <a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,65 +16,22 @@ title: AKInstrumentProperty
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKInstrumentProperty.h<br />AKInstrumentProperty.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>Instrument properties are properties of an instrument that are shared
 amongst all the notes that are created on that instrument.</p>
-          </div>
           
           
 
           
           
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            <h3 class="subsubtitle task-title">Other Methods</h3>
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
-    <span class="tooltip"><p>Optional pretty name for properties useful for debugging.</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li>
-            </ul>
-            
-
-            
-            <h3 class="subsubtitle task-title">Other Methods</h3>
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setValue:">&ndash;&nbsp;setValue:</a></code>
-    <span class="tooltip"><p>Current value of the parameter.</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/name" title="name"></a>
@@ -87,12 +40,12 @@ amongst all the notes that are created on that instrument.</p>
   
   
   <div class="method-subsection brief-description">
-    <p>Optional pretty name for properties useful for debugging.</p>
+    Optional pretty name for properties useful for debugging.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) NSString *name</code></div>
+ {% highlight objective-c %}@property (nonatomic) NSString *name{% endhighlight %}
 
     
   
@@ -116,15 +69,13 @@ amongst all the notes that are created on that instrument.</p>
   
 </div>
             
-          </div>
           
 
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/setValue:" title="setValue:"></a>
@@ -133,12 +84,12 @@ amongst all the notes that are created on that instrument.</p>
   
   
   <div class="method-subsection brief-description">
-    <p>Current value of the parameter.</p>
+    Current value of the parameter.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setValue:(float)<em>newValue</em></code></div>
+ {% highlight objective-c %}- (void)setValue:(float)newValue{% endhighlight %}
 
     
   
@@ -162,7 +113,6 @@ amongst all the notes that are created on that instrument.</p>
   
 </div>
             
-          </div>
           
           
         </div>

@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKFileInput
 title: AKFileInput
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKFileInput</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKStereoAudio.html">AKStereoAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,91 +16,21 @@ title: AKFileInput
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKFileInput.h<br />AKFileInput.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>Reads stereo audio data from a file.</p>
-          </div>
           
           
 
           
           
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithFilename:">&ndash;&nbsp;initWithFilename:</a></code>
-    <span class="tooltip"><p>Create a file input.</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithFilename:speed:startTime:">&ndash;&nbsp;initWithFilename:speed:startTime:</a></code>
-    <span class="tooltip"><p>Create a file input.</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/speed">&nbsp;&nbsp;speed</a></code>
-    <span class="tooltip"><p>Speed of the playback relative to 1 [Default Value: 1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalSpeed:">&ndash;&nbsp;setOptionalSpeed:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/speed">speed</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/startTime">&nbsp;&nbsp;startTime</a></code>
-    <span class="tooltip"><p>Set the start time (useful for pause/resume</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalStartTime:">&ndash;&nbsp;setOptionalStartTime:</a></code>
-    <span class="tooltip"><p>Set an optional start time</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/normalizeTo:">&ndash;&nbsp;normalizeTo:</a></code>
-    <span class="tooltip"><p>Normalize the output</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/speed" title="speed"></a>
@@ -113,12 +39,12 @@ title: AKFileInput
   
   
   <div class="method-subsection brief-description">
-    <p>Speed of the playback relative to 1 [Default Value: 1]</p>
+    Speed of the playback relative to 1 [Default Value: 1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *speed</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *speed{% endhighlight %}
 
     
   
@@ -149,12 +75,12 @@ title: AKFileInput
   
   
   <div class="method-subsection brief-description">
-    <p>Set the start time (useful for pause/resume</p>
+    Set the start time (useful for pause/resume
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *startTime</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *startTime{% endhighlight %}
 
     
   
@@ -178,15 +104,13 @@ title: AKFileInput
   
 </div>
             
-          </div>
           
 
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/initWithFilename:" title="initWithFilename:"></a>
@@ -195,24 +119,21 @@ title: AKFileInput
   
   
   <div class="method-subsection brief-description">
-    <p>Create a file input.</p>
+    Create a file input.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFilename:(NSString *)<em>fileName</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithFilename:(NSString *)fileName{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>fileName</em></dt>
-      <dd><p>Location of the file on disk.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>fileName</strong>:
+      Location of the file on disk.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -241,34 +162,27 @@ title: AKFileInput
   
   
   <div class="method-subsection brief-description">
-    <p>Create a file input.</p>
+    Create a file input.
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFilename:(NSString *)<em>fileName</em> speed:(AKParameter *)<em>speed</em> startTime:(AKConstant *)<em>startTime</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithFilename:(NSString *)fileName speed:(AKParameter *)speed startTime:(AKConstant *)startTime{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>fileName</em></dt>
-      <dd><p>Location of the file on disk.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>fileName</strong>:
+      Location of the file on disk.</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>speed</em></dt>
-      <dd><p>Speed of the playback relative to 1 [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>speed</strong>:
+      Speed of the playback relative to 1 [Default Value: 1]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>startTime</em></dt>
-      <dd><p>Time in second to start the playback (useful for pause/resume)</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>startTime</strong>:
+      Time in second to start the playback (useful for pause/resume)</li>
     
-  </div>
+    </ul>
   
 
   
@@ -297,24 +211,21 @@ title: AKFileInput
   
   
   <div class="method-subsection brief-description">
-    <p>Normalize the output</p>
+    Normalize the output
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)normalizeTo:(float)<em>maximumAmplitude</em></code></div>
+ {% highlight objective-c %}- (void)normalizeTo:(float)maximumAmplitude{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>maximumAmplitude</em></dt>
-      <dd><p>The maximum amplitude will be normalized to this amount.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>maximumAmplitude</strong>:
+      The maximum amplitude will be normalized to this amount.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -343,24 +254,21 @@ title: AKFileInput
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/speed">speed</a></p>
+    Set an optional speed
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalSpeed:(AKParameter *)<em>speed</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalSpeed:(AKParameter *)speed{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>speed</em></dt>
-      <dd><p>Speed of the playback relative to 1 [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>speed</strong>:
+      Speed of the playback relative to 1 [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -389,24 +297,21 @@ title: AKFileInput
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional start time</p>
+    Set an optional start time
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalStartTime:(AKConstant *)<em>startTime</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalStartTime:(AKConstant *)startTime{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>startTime</em></dt>
-      <dd><p>Time in second to start the playback (useful for pause/resume)</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>startTime</strong>:
+      Time in second to start the playback (useful for pause/resume)</li>
     
-  </div>
+    </ul>
   
 
   
@@ -428,7 +333,6 @@ title: AKFileInput
   
 </div>
             
-          </div>
           
           
         </div>

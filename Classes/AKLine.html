@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKLine
 title: AKLine
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKLine</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,107 +16,23 @@ title: AKLine
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKLine.h<br />AKLine.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Creates an infinitely long <a href="#//api/name/line">line</a> that connects a starting to an ending point over the given time duration.</p>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Creates an infinitely long line that connects a starting to an ending point over the given time duration.
 
-<p>If this value is used past the duration point, the <a href="#//api/name/line">line</a> continues indefinitely.</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithFirstPoint:secondPoint:durationBetweenPoints:">&ndash;&nbsp;initWithFirstPoint:secondPoint:durationBetweenPoints:</a></code>
-    <span class="tooltip"><p>Instantiates the <a href="#//api/name/line">line</a> with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
-    <span class="tooltip"><p>Instantiates the <a href="#//api/name/line">line</a> with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/line">+&nbsp;line</a></code>
-    <span class="tooltip"><p>Instantiates the line with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/firstPoint">&nbsp;&nbsp;firstPoint</a></code>
-    <span class="tooltip"><p>Value to start the <a href="#//api/name/line">line</a> from. [Default Value: 0]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalFirstPoint:">&ndash;&nbsp;setOptionalFirstPoint:</a></code>
-    <span class="tooltip"><p>Set an optional first point</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/secondPoint">&nbsp;&nbsp;secondPoint</a></code>
-    <span class="tooltip"><p>Value to end the <a href="#//api/name/line">line</a> at. [Default Value: 1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalSecondPoint:">&ndash;&nbsp;setOptionalSecondPoint:</a></code>
-    <span class="tooltip"><p>Set an optional second point</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/durationBetweenPoints">&nbsp;&nbsp;durationBetweenPoints</a></code>
-    <span class="tooltip"><p>Duration in seconds between the defining points. [Default Value: 1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalDurationBetweenPoints:">&ndash;&nbsp;setOptionalDurationBetweenPoints:</a></code>
-    <span class="tooltip"><p>Set an optional duration between points</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
+If this value is used past the duration point, the line continues indefinitely.</p>
           
           
 
           
           
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/durationBetweenPoints" title="durationBetweenPoints"></a>
@@ -129,12 +41,12 @@ title: AKLine
   
   
   <div class="method-subsection brief-description">
-    <p>Duration in seconds between the defining points. [Default Value: 1]</p>
+    Duration in seconds between the defining points. [Default Value: 1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *durationBetweenPoints</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *durationBetweenPoints{% endhighlight %}
 
     
   
@@ -165,12 +77,12 @@ title: AKLine
   
   
   <div class="method-subsection brief-description">
-    <p>Value to start the <a href="#//api/name/line">line</a> from. [Default Value: 0]</p>
+    Value to start the line from. [Default Value: 0]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *firstPoint</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *firstPoint{% endhighlight %}
 
     
   
@@ -201,12 +113,12 @@ title: AKLine
   
   
   <div class="method-subsection brief-description">
-    <p>Value to end the <a href="#//api/name/line">line</a> at. [Default Value: 1]</p>
+    Value to end the line at. [Default Value: 1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *secondPoint</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *secondPoint{% endhighlight %}
 
     
   
@@ -230,13 +142,11 @@ title: AKLine
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/line" title="line"></a>
@@ -245,12 +155,12 @@ title: AKLine
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the line with default values</p>
+    Instantiates the line with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)line</code></div>
+ {% highlight objective-c %}+ (instancetype)line{% endhighlight %}
 
     
   
@@ -274,13 +184,11 @@ title: AKLine
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/init" title="init"></a>
@@ -289,12 +197,12 @@ title: AKLine
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the <a href="#//api/name/line">line</a> with default values</p>
+    Instantiates the line with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
+ {% highlight objective-c %}- (instancetype)init{% endhighlight %}
 
     
   
@@ -325,34 +233,27 @@ title: AKLine
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the <a href="#//api/name/line">line</a> with all values</p>
+    Instantiates the line with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithFirstPoint:(AKConstant *)<em>firstPoint</em> secondPoint:(AKConstant *)<em>secondPoint</em> durationBetweenPoints:(AKConstant *)<em>durationBetweenPoints</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithFirstPoint:(AKConstant *)firstPoint secondPoint:(AKConstant *)secondPoint durationBetweenPoints:(AKConstant *)durationBetweenPoints{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>firstPoint</em></dt>
-      <dd><p>Value to start the <a href="#//api/name/line">line</a> from. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>firstPoint</strong>:
+      Value to start the line from. [Default Value: 0]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>secondPoint</em></dt>
-      <dd><p>Value to end the <a href="#//api/name/line">line</a> at. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>secondPoint</strong>:
+      Value to end the line at. [Default Value: 1]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>durationBetweenPoints</em></dt>
-      <dd><p>Duration in seconds between the defining points. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>durationBetweenPoints</strong>:
+      Duration in seconds between the defining points. [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -381,24 +282,21 @@ title: AKLine
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional duration between points</p>
+    Set an optional duration between points
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalDurationBetweenPoints:(AKConstant *)<em>durationBetweenPoints</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalDurationBetweenPoints:(AKConstant *)durationBetweenPoints{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>durationBetweenPoints</em></dt>
-      <dd><p>Duration in seconds between the defining points. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>durationBetweenPoints</strong>:
+      Duration in seconds between the defining points. [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -427,24 +325,21 @@ title: AKLine
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional first point</p>
+    Set an optional first point
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalFirstPoint:(AKConstant *)<em>firstPoint</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalFirstPoint:(AKConstant *)firstPoint{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>firstPoint</em></dt>
-      <dd><p>Value to start the <a href="#//api/name/line">line</a> from. [Default Value: 0]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>firstPoint</strong>:
+      Value to start the line from. [Default Value: 0]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -473,24 +368,21 @@ title: AKLine
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional second point</p>
+    Set an optional second point
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalSecondPoint:(AKConstant *)<em>secondPoint</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalSecondPoint:(AKConstant *)secondPoint{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>secondPoint</em></dt>
-      <dd><p>Value to end the <a href="#//api/name/line">line</a> at. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>secondPoint</strong>:
+      Value to end the line at. [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -512,7 +404,6 @@ title: AKLine
   
 </div>
             
-          </div>
           
           
         </div>

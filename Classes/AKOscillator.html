@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKOscillator
 title: AKOscillator
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKOscillator</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,107 +16,23 @@ title: AKOscillator
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKOscillator.h<br />AKOscillator.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>A simple <a href="#//api/name/oscillator">oscillator</a> with linear interpolation.</p>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>A simple oscillator with linear interpolation.
 
-<p>Reads from the <a href="#//api/name/waveform">waveform</a> sequentially and repeatedly at given <a href="#//api/name/frequency">frequency</a>. Linear interpolation is applied for table look up from internal phase values.</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithWaveform:frequency:amplitude:">&ndash;&nbsp;initWithWaveform:frequency:amplitude:</a></code>
-    <span class="tooltip"><p>Instantiates the <a href="#//api/name/oscillator">oscillator</a> with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/init">&ndash;&nbsp;init</a></code>
-    <span class="tooltip"><p>Instantiates the <a href="#//api/name/oscillator">oscillator</a> with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/oscillator">+&nbsp;oscillator</a></code>
-    <span class="tooltip"><p>Instantiates the oscillator with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/waveform">&nbsp;&nbsp;waveform</a></code>
-    <span class="tooltip"><p>Requires a wrap-around guard point [Default Value: sine]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalWaveform:">&ndash;&nbsp;setOptionalWaveform:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/waveform">waveform</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/frequency">&nbsp;&nbsp;frequency</a></code>
-    <span class="tooltip"><p>Frequency in cycles per second [Default Value: 440]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalFrequency:">&ndash;&nbsp;setOptionalFrequency:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/frequency">frequency</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/amplitude">&nbsp;&nbsp;amplitude</a></code>
-    <span class="tooltip"><p>Amplitude of the output [Default Value: 1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalAmplitude:">&ndash;&nbsp;setOptionalAmplitude:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
+Reads from the waveform sequentially and repeatedly at given frequency. Linear interpolation is applied for table look up from internal phase values.</p>
           
           
 
           
           
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/amplitude" title="amplitude"></a>
@@ -129,12 +41,12 @@ title: AKOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Amplitude of the output [Default Value: 1]</p>
+    Amplitude of the output [Default Value: 1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *amplitude</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *amplitude{% endhighlight %}
 
     
   
@@ -165,12 +77,12 @@ title: AKOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Frequency in cycles per second [Default Value: 440]</p>
+    Frequency in cycles per second [Default Value: 440]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *frequency</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *frequency{% endhighlight %}
 
     
   
@@ -201,12 +113,12 @@ title: AKOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Requires a wrap-around guard point [Default Value: sine]</p>
+    Requires a wrap-around guard point [Default Value: sine]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKTable *waveform</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKTable *waveform{% endhighlight %}
 
     
   
@@ -230,13 +142,11 @@ title: AKOscillator
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/oscillator" title="oscillator"></a>
@@ -245,12 +155,12 @@ title: AKOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the oscillator with default values</p>
+    Instantiates the oscillator with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)oscillator</code></div>
+ {% highlight objective-c %}+ (instancetype)oscillator{% endhighlight %}
 
     
   
@@ -274,13 +184,11 @@ title: AKOscillator
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/init" title="init"></a>
@@ -289,12 +197,12 @@ title: AKOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the <a href="#//api/name/oscillator">oscillator</a> with default values</p>
+    Instantiates the oscillator with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)init</code></div>
+ {% highlight objective-c %}- (instancetype)init{% endhighlight %}
 
     
   
@@ -325,34 +233,27 @@ title: AKOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the <a href="#//api/name/oscillator">oscillator</a> with all values</p>
+    Instantiates the oscillator with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithWaveform:(AKTable *)<em>waveform</em> frequency:(AKParameter *)<em>frequency</em> amplitude:(AKParameter *)<em>amplitude</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithWaveform:(AKTable *)waveform frequency:(AKParameter *)frequency amplitude:(AKParameter *)amplitude{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>waveform</em></dt>
-      <dd><p>Requires a wrap-around guard point [Default Value: sine]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>waveform</strong>:
+      Requires a wrap-around guard point [Default Value: sine]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>frequency</em></dt>
-      <dd><p>Frequency in cycles per second [Default Value: 440]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>frequency</strong>:
+      Frequency in cycles per second [Default Value: 440]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>Amplitude of the output [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude of the output [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -381,24 +282,21 @@ title: AKOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p>
+    Set an optional amplitude
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalAmplitude:(AKParameter *)<em>amplitude</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalAmplitude:(AKParameter *)amplitude{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>Amplitude of the output [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude of the output [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -427,24 +325,21 @@ title: AKOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/frequency">frequency</a></p>
+    Set an optional frequency
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalFrequency:(AKParameter *)<em>frequency</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalFrequency:(AKParameter *)frequency{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>frequency</em></dt>
-      <dd><p>Frequency in cycles per second [Default Value: 440]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>frequency</strong>:
+      Frequency in cycles per second [Default Value: 440]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -473,24 +368,21 @@ title: AKOscillator
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/waveform">waveform</a></p>
+    Set an optional waveform
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalWaveform:(AKTable *)<em>waveform</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalWaveform:(AKTable *)waveform{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>waveform</em></dt>
-      <dd><p>Requires a wrap-around guard point [Default Value: sine]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>waveform</strong>:
+      Requires a wrap-around guard point [Default Value: sine]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -512,7 +404,6 @@ title: AKOscillator
   
 </div>
             
-          </div>
           
           
         </div>

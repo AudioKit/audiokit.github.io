@@ -1,18 +1,14 @@
 ---
 layout: docs
+header: AKStereoSoundFileLooper
 title: AKStereoSoundFileLooper
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
 
-        <div id="header">
-          <div class="section-header">
-            <h1 class="title title-header">AKStereoSoundFileLooper</h1>
-          </div>
-        </div>
-        <div id="container">
+        <div>
           
-          <div class="section section-specification"><table cellspacing="0"><tbody>
+          <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
   <td class="specification-value"><a href="../Classes/AKStereoAudio.html">AKStereoAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
@@ -20,128 +16,23 @@ title: AKStereoSoundFileLooper
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKStereoSoundFileLooper.h<br />AKStereoSoundFileLooper.m</td>
 </tr>
-            </tbody></table></div>
+            </tbody></table>
           
 
           
           
-          <div class="section section-overview">
             <a title="Overview" name="overview"></a>
-            <h2 class="subtitle subtitle-overview">Overview</h2>
-            <p>Read sampled sound from a table using cubic interpolation.</p>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Read sampled sound from a table using cubic interpolation.
 
-<p>Read sampled sound (stereo) from a table, with optional sustain and release looping, using cubic interpolation.</p>
-          </div>
-          
-          
-
-          
-          
-          <div class="section section-tasks">
-            <a title="Tasks" name="tasks"></a>
-            <h2 class="subtitle subtitle-tasks">Tasks</h2>
-            
-
-            
-            
-
-            <ul class="task-list">
-                <li>
-  <span class="tooltip">
-    <code><a href="#//api/name/loopPlaysOnce">+&nbsp;loopPlaysOnce</a></code>
-    <span class="tooltip"><p>Loop does not repeat</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/loopRepeats">+&nbsp;loopRepeats</a></code>
-    <span class="tooltip"><p>Loop repeats indefinitely</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/loopPlaysForwardAndThenBackwards">+&nbsp;loopPlaysForwardAndThenBackwards</a></code>
-    <span class="tooltip"><p>Loop first plays forward, then plays backwards, and then repeats</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithSoundFile:frequencyRatio:amplitude:loopMode:">&ndash;&nbsp;initWithSoundFile:frequencyRatio:amplitude:loopMode:</a></code>
-    <span class="tooltip"><p>Instantiates the stereo sound file looper with all values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/initWithSoundFile:">&ndash;&nbsp;initWithSoundFile:</a></code>
-    <span class="tooltip"><p>Instantiates the stereo sound file looper with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/looperWithSoundFile:">+&nbsp;looperWithSoundFile:</a></code>
-    <span class="tooltip"><p>Instantiates the stereo sound file looper with default values</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/frequencyRatio">&nbsp;&nbsp;frequencyRatio</a></code>
-    <span class="tooltip"><p>The frequency ratio. [Default Value: 1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalFrequencyRatio:">&ndash;&nbsp;setOptionalFrequencyRatio:</a></code>
-    <span class="tooltip"><p>Set an optional frequency ratio</p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/amplitude">&nbsp;&nbsp;amplitude</a></code>
-    <span class="tooltip"><p>The amplitude of the output [Default Value: 1]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalAmplitude:">&ndash;&nbsp;setOptionalAmplitude:</a></code>
-    <span class="tooltip"><p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p></span>
-  </span>
-  
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/loopMode">&nbsp;&nbsp;loopMode</a></code>
-    <span class="tooltip"><p>Can be no-looping, normal forward looping, or forward and backward looping. [Default Value: AKSoundFileLooperModeNormal]</p></span>
-  </span>
-  <span class="task-item-suffix">property</span>
-  
-</li><li>
-  <span class="tooltip">
-    <code><a href="#//api/name/setOptionalLoopMode:">&ndash;&nbsp;setOptionalLoopMode:</a></code>
-    <span class="tooltip"><p>Set an optional loop mode</p></span>
-  </span>
-  
-  
-</li>
-            </ul>
-            
-          </div>
+Read sampled sound (stereo) from a table, with optional sustain and release looping, using cubic interpolation.</p>
           
           
 
           
           
-          <div class="section section-methods">
             <a title="Properties" name="properties"></a>
-            <h2 class="subtitle subtitle-methods">Properties</h2>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
   <a name="//api/name/amplitude" title="amplitude"></a>
@@ -150,12 +41,12 @@ title: AKStereoSoundFileLooper
   
   
   <div class="method-subsection brief-description">
-    <p>The amplitude of the output [Default Value: 1]</p>
+    The amplitude of the output [Default Value: 1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *amplitude</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *amplitude{% endhighlight %}
 
     
   
@@ -186,12 +77,12 @@ title: AKStereoSoundFileLooper
   
   
   <div class="method-subsection brief-description">
-    <p>The frequency ratio. [Default Value: 1]</p>
+    The frequency ratio. [Default Value: 1]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKParameter *frequencyRatio</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKParameter *frequencyRatio{% endhighlight %}
 
     
   
@@ -222,12 +113,12 @@ title: AKStereoSoundFileLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Can be no-looping, normal forward looping, or forward and backward looping. [Default Value: AKSoundFileLooperModeNormal]</p>
+    Can be no-looping, normal forward looping, or forward and backward looping. [Default Value: AKSoundFileLooperModeNormal]
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>@property (nonatomic) AKConstant *loopMode</code></div>
+ {% highlight objective-c %}@property (nonatomic) AKConstant *loopMode{% endhighlight %}
 
     
   
@@ -251,13 +142,11 @@ title: AKStereoSoundFileLooper
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Class Methods" name="class_methods"></a>
-            <h2 class="subtitle subtitle-methods">Class Methods</h2>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/loopPlaysForwardAndThenBackwards" title="loopPlaysForwardAndThenBackwards"></a>
@@ -266,12 +155,12 @@ title: AKStereoSoundFileLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Loop first plays forward, then plays backwards, and then repeats</p>
+    Loop first plays forward, then plays backwards, and then repeats
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (AKConstant *)loopPlaysForwardAndThenBackwards</code></div>
+ {% highlight objective-c %}+ (AKConstant *)loopPlaysForwardAndThenBackwards{% endhighlight %}
 
     
   
@@ -302,12 +191,12 @@ title: AKStereoSoundFileLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Loop does not repeat</p>
+    Loop does not repeat
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (AKConstant *)loopPlaysOnce</code></div>
+ {% highlight objective-c %}+ (AKConstant *)loopPlaysOnce{% endhighlight %}
 
     
   
@@ -338,12 +227,12 @@ title: AKStereoSoundFileLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Loop repeats indefinitely</p>
+    Loop repeats indefinitely
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (AKConstant *)loopRepeats</code></div>
+ {% highlight objective-c %}+ (AKConstant *)loopRepeats{% endhighlight %}
 
     
   
@@ -374,24 +263,21 @@ title: AKStereoSoundFileLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the stereo sound file looper with default values</p>
+    Instantiates the stereo sound file looper with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>+ (instancetype)looperWithSoundFile:(AKTable *)<em>soundFile</em></code></div>
+ {% highlight objective-c %}+ (instancetype)looperWithSoundFile:(AKTable *)soundFile{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>soundFile</em></dt>
-      <dd><p>The sound file table.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>soundFile</strong>:
+      The sound file table.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -413,13 +299,11 @@ title: AKStereoSoundFileLooper
   
 </div>
             
-          </div>
           
 
           
-          <div class="section section-methods">
             <a title="Instance Methods" name="instance_methods"></a>
-            <h2 class="subtitle subtitle-methods">Instance Methods</h2>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
   <a name="//api/name/initWithSoundFile:" title="initWithSoundFile:"></a>
@@ -428,24 +312,21 @@ title: AKStereoSoundFileLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the stereo sound file looper with default values</p>
+    Instantiates the stereo sound file looper with default values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithSoundFile:(AKTable *)<em>soundFile</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithSoundFile:(AKTable *)soundFile{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>soundFile</em></dt>
-      <dd><p>The sound file table.</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>soundFile</strong>:
+      The sound file table.</li>
     
-  </div>
+    </ul>
   
 
   
@@ -474,39 +355,30 @@ title: AKStereoSoundFileLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Instantiates the stereo sound file looper with all values</p>
+    Instantiates the stereo sound file looper with all values
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (instancetype)initWithSoundFile:(AKTable *)<em>soundFile</em> frequencyRatio:(AKParameter *)<em>frequencyRatio</em> amplitude:(AKParameter *)<em>amplitude</em> loopMode:(AKConstant *)<em>loopMode</em></code></div>
+ {% highlight objective-c %}- (instancetype)initWithSoundFile:(AKTable *)soundFile frequencyRatio:(AKParameter *)frequencyRatio amplitude:(AKParameter *)amplitude loopMode:(AKConstant *)loopMode{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>soundFile</em></dt>
-      <dd><p>The sound file table. [Default Value: ]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>soundFile</strong>:
+      The sound file table. [Default Value: ]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>frequencyRatio</em></dt>
-      <dd><p>The frequency ratio. Updated at Control-rate. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>frequencyRatio</strong>:
+      The frequency ratio. Updated at Control-rate. [Default Value: 1]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>The <a href="#//api/name/amplitude">amplitude</a> of the output [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      The amplitude of the output [Default Value: 1]</li>
     
-    <dl class="argument-def parameter-def">
-      <dt><em>loopMode</em></dt>
-      <dd><p>Can be no-looping, normal forward looping, or forward and backward looping. [Default Value: AKSoundFileLooperModeNormal]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>loopMode</strong>:
+      Can be no-looping, normal forward looping, or forward and backward looping. [Default Value: AKSoundFileLooperModeNormal]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -535,24 +407,21 @@ title: AKStereoSoundFileLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional <a href="#//api/name/amplitude">amplitude</a></p>
+    Set an optional amplitude
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalAmplitude:(AKParameter *)<em>amplitude</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalAmplitude:(AKParameter *)amplitude{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>amplitude</em></dt>
-      <dd><p>The <a href="#//api/name/amplitude">amplitude</a> of the output [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      The amplitude of the output [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -581,24 +450,21 @@ title: AKStereoSoundFileLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional frequency ratio</p>
+    Set an optional frequency ratio
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalFrequencyRatio:(AKParameter *)<em>frequencyRatio</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalFrequencyRatio:(AKParameter *)frequencyRatio{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>frequencyRatio</em></dt>
-      <dd><p>The frequency ratio. Updated at Control-rate. [Default Value: 1]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>frequencyRatio</strong>:
+      The frequency ratio. Updated at Control-rate. [Default Value: 1]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -627,24 +493,21 @@ title: AKStereoSoundFileLooper
   
   
   <div class="method-subsection brief-description">
-    <p>Set an optional loop mode</p>
+    Set an optional loop mode
   </div>
   
     
 
-  <div class="method-subsection method-declaration"><code>- (void)setOptionalLoopMode:(AKConstant *)<em>loopMode</em></code></div>
+ {% highlight objective-c %}- (void)setOptionalLoopMode:(AKConstant *)loopMode{% endhighlight %}
 
     
   
-  <div class="method-subsection arguments-section parameters">
-    <h3 class="method-subtitle parameter-title">Parameters</h3>
+  <ul class="iconlist">
     
-    <dl class="argument-def parameter-def">
-      <dt><em>loopMode</em></dt>
-      <dd><p>Can be no-looping, normal forward looping, or forward and backward looping. [Default Value: AKSoundFileLooperModeNormal]</p></dd>
-    </dl>
+    <li><i class="icon-line-play"></i><strong>loopMode</strong>:
+      Can be no-looping, normal forward looping, or forward and backward looping. [Default Value: AKSoundFileLooperModeNormal]</li>
     
-  </div>
+    </ul>
   
 
   
@@ -666,7 +529,6 @@ title: AKStereoSoundFileLooper
   
 </div>
             
-          </div>
           
           
         </div>
