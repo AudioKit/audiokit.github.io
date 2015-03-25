@@ -5,6 +5,24 @@ header: Core Classes
 permalink: /core-classes/
 ---
 
+<h3>Foundation</h3>
+
+<p>The header file "AKFoundation.h" is what you have to import to use AudioKit.  It includes all of AudioKit's core classes os well as all operations, instruments, and note classes.  It does not import any of the classes in the Utilities folder which are all optional.</p>
+
+<h3>Manager</h3>
+
+<p>This class handles all of the lower-level interaction with the audio engine.   It rarely needs to be referred to expect for advanced users.</p>
+
+<h3>Orchestra</h3>
+
+<p>The orchestra is the object that you'll add your instruments to, makes sense doesn't it?  You can also tell the orchestra to start or stop or when you've updated an instrument it needs to reload.</p>
+
+<h3>MIDI</h3>
+
+<p>AudioKit's MIDI functionality is stored here but could eventually be moved into "Utilities" since we certainly don't all need to use MIDI.</p>
+
+
+<h3>Classes</h3>
 
 <table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
 <tr>
@@ -22,42 +40,8 @@ permalink: /core-classes/
 </td>
 </tr>
 <tr>
-<td><a href="/Classes/AKInstrument.html">AKInstrument</a></td>
-<td>This is one sound generator or processor which has its own controllable pproperties.
-</td>
-</tr>
-<tr>
-<td><a href="/Classes/AKNote.html">AKNote</a></td>
-<td>This is an instance of a instrument sound that may have separate properties to the instrument (for instance a guitar note has its own frequency from other simultaneous guitar notes).
-</td>
-</tr>
-<tr>
 <td><a href="/Classes/AKMidi.html">AKMidi</a></td>
 <td>The object that handles midi in and out information.
 </td>
 </tr>
 </table>
-
-Handling multiple notes or instructions is done through creation of events which can be combined into sequences:
-
-<table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
-<tr>
-<td><a href="/Classes/AKPhrase.html">AKPhrase</a></td>
-<td> A collection of notes and start times that can be played by an instrument.
-</td>
-</tr>
-<tr>
-<td><a href="/Classes/AKEvent.html">AKEvent</a></td>
-<td> An event that can be created and triggered at any time.
-</td>
-</tr>
-<tr>
-<td><a href="/Classes/AKSequence.html">AKSequence</a></td>
-<td>A series of events.
-</td>
-</tr>
-</table>
-
-<p>
-<a href="/parameters/">Parameters</a>, <a href="/properties/">properties</a>, and <a href="/operations/">operations</a> are also core classes, but they have many subclassed types, so they are each presented separately in this documentation.
-</a>
