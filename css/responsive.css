@@ -817,7 +817,7 @@
 		background-color: transparent !important;
 		font-weight: 600;
 		padding-left: 5px;
-		color: #55BC38 !important;
+		color: #80B16B !important;
 	}
 
 	#primary-menu ul li .mega-menu-content,
@@ -899,10 +899,10 @@
 		background-color: transparent;
 		font-weight: 600;
 		padding: 0 0 0 5px;
-		color: #55BC38 !important;
+		color: #80B16B !important;
 	}
 
-	#primary-menu ul li .mega-menu-content.style-2 > ul > li.mega-menu-title > a:hover { color: #55BC38 !important; }
+	#primary-menu ul li .mega-menu-content.style-2 > ul > li.mega-menu-title > a:hover { color: #80B16B !important; }
 
 	#primary-menu ul ul i { line-height: inherit; }
 
@@ -989,7 +989,7 @@
 		left: auto;
 		right: 15px;
 		height: auto;
-		background-color: #55BC38;
+		background-color: #80B16B;
 		z-index: 11;
 	}
 
@@ -1576,7 +1576,7 @@
 		border-radius: 2px !important;
 	}
 
-	#portfolio-filter li a:hover { color: #55BC38; }
+	#portfolio-filter li a:hover { color: #80B16B; }
 
 	#portfolio-filter li.activeFilter a {
 		color: #FFF;

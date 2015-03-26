@@ -9,7 +9,7 @@ header ("Content-Type:text/css");
  *
  ================================================================== */
 
-$color = "#55BC38"; // Change your Color Here
+$color = "#80B16B"; // Change your Color Here
 
 /** ===============================================================
  *
@@ -35,7 +35,7 @@ if( isset( $_GET[ 'color' ] ) AND $_GET[ 'color' ] != '' ) {
 }
 
 if( !$color OR !checkhexcolor( $color ) ) {
-    $color = "#55BC38";
+    $color = "#80B16B";
 }
 
 ?>
