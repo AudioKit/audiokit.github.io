@@ -161,7 +161,7 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 .dark.overlay-menu #header-wrap:not(.not-dark) #primary-menu > ul > li:hover > a,
 .dark.overlay-menu #header-wrap:not(.not-dark) #primary-menu > ul > li.current > a,
 .overlay-menu #primary-menu.dark > ul > li:hover > a,
-.overlay-menu #primary-menu.dark > ul > li.current > a { color: #1ABC9C !important; }
+.overlay-menu #primary-menu.dark > ul > li.current > a { color: #55BC38 !important; }
 
 .dark #primary-menu:not(.not-dark) ul ul,
 .dark #primary-menu:not(.not-dark) ul li .mega-menu-content,
@@ -169,7 +169,7 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 #primary-menu.dark ul li .mega-menu-content {
 	background-color: #333;
 	border-color: #3F3F3F;
-	border-top-color: #1ABC9C;
+	border-top-color: #55BC38;
 }
 
 .dark.overlay-menu #primary-menu:not(.not-dark) ul,
@@ -180,7 +180,7 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 .dark #primary-menu:not(.not-dark) ul li .mega-menu-content.style-2,
 #primary-menu.dark ul li .mega-menu-content.style-2 {
 	border-color: transparent;
-	border-top-color: #1ABC9C;
+	border-top-color: #55BC38;
 }
 
 .dark #primary-menu:not(.not-dark) ul ul li,
@@ -254,7 +254,7 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 .dark #top-cart .top-cart-content {
 	background-color: #333;
 	border-color: #3F3F3F;
-	border-top-color: #1ABC9C;
+	border-top-color: #55BC38;
 }
 
 .dark .top-cart-title { border-bottom-color: #3F3F3F; }
@@ -263,9 +263,9 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 
 .dark .top-cart-item-image { border-color: #444; }
 
-.dark .top-cart-item-image:hover { border-color: #1ABC9C; }
+.dark .top-cart-item-image:hover { border-color: #55BC38; }
 
-.dark .top-cart-item-desc a:hover { color: #1ABC9C !important; }
+.dark .top-cart-item-desc a:hover { color: #55BC38 !important; }
 
 .dark .top-cart-item-desc span.top-cart-item-price { color: #AAA; }
 
@@ -440,8 +440,8 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 
 .dark .post-timeline .entry:hover .entry-timeline,
 .dark .post-timeline .entry:hover .timeline-divider {
-	border-color: #1ABC9C;
-	color: #1ABC9C;
+	border-color: #55BC38;
+	color: #55BC38;
 }
 
 .dark .spost,
@@ -539,7 +539,7 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 
 .dark .cart-product-thumbnail img { border-color: rgba(0,0,0,0.2); }
 
-.dark .cart-product-thumbnail img:hover { border-color: #1ABC9C; }
+.dark .cart-product-thumbnail img:hover { border-color: #55BC38; }
 
 .dark .cart-product-name a,
 .dark .product-name a { color: #EEE; }
@@ -566,7 +566,7 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 .dark .button-dark:not(.button-border),
 .dark .button:hover { background-color: rgba(0,0,0,0.3); }
 
-.dark .button-dark:hover { background-color: #1ABC9C; }
+.dark .button-dark:hover { background-color: #55BC38; }
 
 .dark .button-light:not(.button-border):hover { background-color: #282828; }
 
@@ -645,10 +645,10 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 .dark .fbox-effect .fbox-icon i:hover,
 .dark .fbox-effect:hover .fbox-icon i { background-color: #494949; }
 
-.dark .fbox-effect.fbox-dark .fbox-icon i:after { box-shadow: 0 0 0 2px #1ABC9C; }
+.dark .fbox-effect.fbox-dark .fbox-icon i:after { box-shadow: 0 0 0 2px #55BC38; }
 
 .dark .fbox-effect.fbox-dark .fbox-icon i:hover,
-.dark .fbox-effect.fbox-dark:hover .fbox-icon i { background-color: #1ABC9C; }
+.dark .fbox-effect.fbox-dark:hover .fbox-icon i { background-color: #55BC38; }
 
 .dark .fbox-border.fbox-effect .fbox-icon i:hover,
 .dark .fbox-border.fbox-effect:hover .fbox-icon i { box-shadow: 0 0 0 1px #494949; }
@@ -656,9 +656,9 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 .dark .fbox-border.fbox-effect .fbox-icon i:after { background-color: #494949; }
 
 .dark .fbox-border.fbox-effect.fbox-dark .fbox-icon i:hover,
-.dark .fbox-border.fbox-effect.fbox-dark:hover .fbox-icon i { box-shadow: 0 0 0 1px #1ABC9C; }
+.dark .fbox-border.fbox-effect.fbox-dark:hover .fbox-icon i { box-shadow: 0 0 0 1px #55BC38; }
 
-.dark .fbox-border.fbox-effect.fbox-dark .fbox-icon i:after { background-color: #1ABC9C; }
+.dark .fbox-border.fbox-effect.fbox-dark .fbox-icon i:after { background-color: #55BC38; }
 
 .dark .process-steps li .i-bordered { background-color: #494949; }
 
@@ -692,7 +692,7 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 
 .dark .i-rounded:hover,
 .dark .i-circled:hover {
-	background-color: #1ABC9C;
+	background-color: #55BC38;
 	color: #FFF;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 	box-shadow: 0 0 0 rgba(0,0,0,0.2);
@@ -783,7 +783,7 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 
 .dark ul.tab-nav.tab-nav2 li a { background-color: rgba(0,0,0,0.2); }
 
-.dark ul.tab-nav.tab-nav2 li.ui-state-active a { background-color: #1ABC9C; }
+.dark ul.tab-nav.tab-nav2 li.ui-state-active a { background-color: #55BC38; }
 
 .dark .tabs-bordered .tab-container { border-color: #494949; }
 
@@ -1058,7 +1058,7 @@ body.side-push-panel #side-panel.dark #side-panel-trigger-close a {
 
 .dark .tagcloud a:hover {
 	border-color: transparent !important;
-	background-color: #1ABC9C;
+	background-color: #55BC38;
 	color: #FFF !important;
 }
 
@@ -1694,7 +1694,7 @@ body.side-push-panel #side-panel.dark #side-panel-trigger-close a {
 	body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li:hover a,
 	body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li.current a,
 	body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li:hover a,
-	body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.current a { color: #1ABC9C !important; }
+	body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.current a { color: #55BC38 !important; }
 
 	body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu ul ul a,
 	body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li:hover ul a,

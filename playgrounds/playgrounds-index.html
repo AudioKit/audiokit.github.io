@@ -4,3 +4,37 @@ header: Playgrounds
 title: AudioKit Playgrounds
 permalink: /playgrounds/
 ---
+
+<h3>Installation Instructions</h3>
+
+<a href="//player.vimeo.com/video/123271145" data-lightbox="iframe">
+<img height=300 style="padding: 0 0 10px 30px;" align=right src="/playgrounds/installation.png" alt="Playground Installation">
+</a>
+
+<p>Playgrounds require a couple of programs to be installed on your computer in addition to AudioKit.  We have built an installation script so all you have to do is go into the Playgrounds folder and run <code>install.sh</code>:</p>
+
+{% highlight bash %}
+$ cd Playgrounds
+$ ./install.sh
+{% endhighlight %}
+
+<p>This will install the Xcode <a href="https://github.com/dyci/dyci-main">Dynamic Code Injection plugin</a> and the GEM for a file-change watcher called <a href="https://github.com/alloy/kicker">Kicker</a>.</p>
+
+<h3>Running a Playground</h3>
+
+<p>The best way to run the playground is to use the included <code>run.sh</code> script. This will start an interactive bash session asking you what you would like to do.  On your first run you will want to choose option 3 and install one of the default playgrounds.  In the future when you're developing, you will want to run with option 1, the current playground.  Be careful not to accidentally trash your existing playground by installing a default on top of it!</p>
+
+{% highlight bash %}
+┌─ ~/Developer/AudioKit/Playgrounds
+└─➤ ./run.sh
+1) Run Current Playground 3) Choose Playground from List
+2) Run Empty Playground
+Enter your choice: 3
+
+1) BambooSticks        6) Oscillator    11) Table
+2) Default             7) PluckedString 12) Tambourine
+3) Mandolin            8) Sequencing    13) VCOscillator
+4) Marimba             9) Sleighbells   14) Vibraphone
+5) MicrophoneAnalysis 10) StruckMetalBar
+Enter the number of the playground you want:
+{% endhighlight %}
