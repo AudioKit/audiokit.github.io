@@ -50,27 +50,20 @@ AKInstrument *instrument;
 {% endhighlight %}
 
 <p>
-Inside the "viewDidLoad" method is a good place in the lifecycle of this app to create the internals of the instrument.  Here we first allocate the memory and then create and connect an AKOscillator to that instrument.  At this point, the instrument contains an oscillator, but nothing is connect to the audio output, so we also need to create an AKAudioOutput operation that takes the oscillator's output and sends it to your speakers.
+Inside the "viewDidLoad" method is a good place in the lifecycle of this app to create the internals of the instrument.  Here we first allocate the memory and then create and connect an AKOscillator to that instrument.  At this point, the instrument contains an oscillator, but nothing is connect to the audio output, so we also need to set the audio output to be the oscillator.
 </p>
 {% highlight objective-c %}
 // STEP 3 : Define the instrument as a simple oscillator
-instrument = [[AKInstrument alloc] init];
-AKOscillator *oscillator = [AKOscillator oscillator];
-[instrument connect:oscillator];
-AKAudioOutput *output = [[AKAudioOutput alloc] initWithAudioSource:oscillator];
-[instrument connect:output];
+instrument = [AKInstrument instrument];
+[instrument setAudioOutput:[AKOscillator oscillator]];
 {% endhighlight %}
 
-<p>Now that your instrument is created, it can be added to the orchestra.  This lets AudioKit know that the instrument is fully defined and ready to be played.  Since is the only instrument in our orchestra, we start the orchestra right after we add the instrument.
+<p>Now that your instrument is created, it can be added to the orchestra.  This lets AudioKit know that the instrument is fully defined and ready to be played.
 </p>
 {% highlight objective-c %}
-// STEP 4 : Add the instrument to the orchestra and start the orchestra
+// STEP 4 : Add the instrument to the orchestra
 [AKOrchestra addInstrument:instrument];
-[AKOrchestra start];
 {% endhighlight %}
-<p>
-If you had other instruments, you would create and them here before starting the orchestra.
-</p>
 <p>
 Finally, we just to need to connet the button from the Main.storyboard file to an action.  The only AudioKit code here is <code>[instrument play]</code> and <code>[instrument stop]</code>.  The other parts are just to update the UI to reflect the state of the instrument.
 </p>
