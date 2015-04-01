@@ -3,7 +3,7 @@ title: AudioKit Examples - Play Audio File
 header: Play Audio File
 permalink: /examples/PlayAudioFile/
 layout: examples
-last-review-date: 2015/01/31
+last-review-date: 2015/04/01
 ---
 
 <p>
@@ -12,21 +12,17 @@ Here we demonstrate audio playback and processing capabilities. Each time the bu
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/172496505&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 
-
 <p>
 A path to the audio file that will be played ("blaster.aiff") is defined in the code below from "AudioFilePlayer.m". The audio is then stored in an instance of AKSoundFileTable for later processing and playback.
 <p>
 
 {% highlight objective-c %}
-NSString *file;
-file = [[NSBundle mainBundle] pathForResource:@"blaster" ofType:@"aiff"];
-AKSoundFileTable *fileTable;
-fileTable = [[AKSoundFileTable alloc] initWithFilename:file];
-[self addFunctionTable:fileTable];
+NSString *file = [[NSBundle mainBundle] pathForResource:@"blaster" ofType:@"aiff"];
+AKSoundFileTable *fileTable = [[AKSoundFileTable alloc] initWithFilename:file];
 {% endhighlight %}
 
 <p>
-Next, and instance of AKLoopingOscillator is created, which reads sampled sound (mono or stereo) from a table, with optional sustain and release looping. The input source for "oscil" is the audio file described above. The frequency of the oscillator is determined by the variable "speed", which will be described further shortly.
+Next, and instance of AKMonoSoundFileLooper is created, which reads sampled sound (mono or stereo) from a table, with optional sustain and release looping. The input source for "looper" is the audio file described above. The frequency of the oscillator is determined by the variable "speed", which will be described further shortly.
 </p>
 
 {% highlight objective-c %}
@@ -54,10 +50,7 @@ Speed is defined at the bottom of "AudioFilePlayer.m". "_speed" is of type "AKNo
 {
     self = [super init];
     if(self) {
-        _speed = [[AKNoteProperty alloc] initWithValue:1.0
-                                               minimum:0.2
-                                               maximum:2.0];
-        [self addProperty:_speed];
+        _speed = [self createPropertyWithValue:1.0 minimum:0.2 maximum:2.0];
     }
     return self;
 }
