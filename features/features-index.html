@@ -73,12 +73,12 @@ layout: side_navigation
           <tr>
           <td>
 {% highlight objective-c %}
-[[AKFMOscillator alloc] initWithFunctionTable:[AKManager standardSineWave]
-                                baseFrequency:akp(440)
-                            carrierMultiplier:akp(1)
-                         modulatingMultiplier:akp(2)
-                              modulationIndex:akp(3)
-                                    amplitude:akp(1)];
+[[AKFMOscillator alloc] initWithWaveform:[AKTable standardSineWave]
+                           baseFrequency:akp(440)
+                       carrierMultiplier:akp(1)
+                    modulatingMultiplier:akp(2)
+                         modulationIndex:akp(3)
+                               amplitude:akp(1)];
 {% endhighlight %}
           </td>
         </tr>

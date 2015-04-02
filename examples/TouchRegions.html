@@ -29,12 +29,12 @@ The code below shows an FM oscillator with four parameters of control. Unlike th
 
 {% highlight objective-c %}
 AKFMOscillator *fmOscillator;
-fmOscillator = [[AKFMOscillator alloc] initWithFunctionTable:[AKManager standardSineWave]
-                                               baseFrequency:_frequency
-                                           carrierMultiplier:_carrierMultiplier
-                                        modulatingMultiplier:_modulatingMultiplier
-                                             modulationIndex:_modulationIndex
-                                                   amplitude:_amplitude];
+fmOscillator = [[AKFMOscillator alloc] initWithWaveform:[AKTable standardSineWave]
+                                          baseFrequency:_frequency
+                                      carrierMultiplier:_carrierMultiplier
+                                   modulatingMultiplier:_modulatingMultiplier
+                                        modulationIndex:_modulationIndex
+                                              amplitude:_amplitude];
 {% endhighlight %}
 
 

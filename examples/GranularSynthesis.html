@@ -53,9 +53,7 @@ The we create two instances of AKGranularSynthesizer, where the first step is to
 NSString *file = [[NSBundle mainBundle] pathForResource:@"PianoBassDrumLoop"
                                                  ofType:@"wav"];
 AKSoundFile *soundFile;
-soundFile = [[AKSoundFile alloc] initWithFilename:file];
-soundFile.size = 16384;
-[self addFunctionTable:soundFile];
+soundFile = [[AKSoundFileTable alloc] initWithFilename:file size:16384];
 {% endhighlight %}
 
 <p>

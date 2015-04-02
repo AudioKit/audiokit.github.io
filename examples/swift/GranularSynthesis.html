@@ -44,9 +44,7 @@ The we create two instances of AKGranularSynthesizer, where the first step is to
 {% highlight ruby %}
 let file = String (NSBundle.mainBundle().pathForResource("PianoBassDrumLoop", ofType: "wav")!)
 
-let soundFile = AKSoundFile(filename: file)
-soundFile.size = 16384
-addFunctionTable(soundFile)
+let soundFile = AKSoundFileTable(filename: file, size: 16384)
 {% endhighlight %}
 
 <p>
