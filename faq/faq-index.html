@@ -11,6 +11,14 @@ layout: section_index
 <div class="col_half nobottommargin">
 
 <h3 id="faq-1"><strong>Q.</strong>
+Why is my app giving me a prompt to use the microphone?
+</h3>
+
+<p>
+AudioKit defaults to allowing your apps to use have microphone access. You can disable microphone access by going to the Core Classes/AudioKit.plist file, and setting the "Enable Audio Input By Default" flag to "NO". 
+</p>
+
+<h3 id="faq-2"><strong>Q.</strong>
 Is AudioKit just Csound with a better front end?
 </h3>
 
@@ -18,7 +26,7 @@ Is AudioKit just Csound with a better front end?
 This is like asking if Apple OSX just FreeBSD with a better front-end.  You could look at it that way, but the front-end is what really matters when you're developing sounds for use in applications, which is what AudioKit excels at. Yes, it uses Csound as the audio engine, but the real power of AudioKit is the way that you can easily integrate audio into native iOS and OSX applications.
 </p>
 
-<h3 id="faq-2"><strong>Q.</strong>
+<h3 id="faq-3"><strong>Q.</strong>
 Can I run Csound files inside iOS or OSX using AudioKit?
 </h3>
 
@@ -26,7 +34,7 @@ Can I run Csound files inside iOS or OSX using AudioKit?
 No, but you can encapsulate Csound into user-defined opcodes which can be used as operations within AudioKit. However, we don't encourage this, as you're really not leveraging the full power of AudioKit by doing so.
 </p>
 
-<h3 id="faq-3"><strong>Q.</strong>
+<h3 id="faq-4"><strong>Q.</strong>
 What is AudioKit's license?
 </h3>
 
@@ -34,7 +42,7 @@ What is AudioKit's license?
 AudioKit is offered under the <a href="https://github.com/audiokit/AudioKit/blob/develop/LICENSE">LGPL License</a>.
 </p>
 
-<h3 id="faq-4"><strong>Q.</strong>
+<h3 id="faq-5"><strong>Q.</strong>
 What are the implications of the LGPL License for using AudioKit for AppStore Apps?
 </h3>
 
@@ -46,7 +54,7 @@ Your code outside of AudioKit does not have to be open-sourced. You can use Audi
 
 <div class="col_half nobottommargin col_last">
 
-<h3 id="faq-5"><strong>Q.</strong>
+<h3 id="faq-6"><strong>Q.</strong>
 Is AudioKit CPU or memory intensive? 
 </h3>
 
@@ -58,7 +66,7 @@ We have not found AudioKit to be very CPU or memory intensive during application
 Playgrounds, however, are rather CPU intensive. Playgrounds are only used for audio protoyping, not for deployment, so you don't need to worry if you experience heavy CPU useage while using Playgrounds.
 </p>
 
-<h3 id="faq-6"><strong>Q.</strong>
+<h3 id="faq-7"><strong>Q.</strong>
 Is there an (Android/JavaScript/Xamarin) version on the way?
 </h3>
 
@@ -67,11 +75,12 @@ We've had many questions come in asking if an Android, Javascript, or Xamarin (C
 </p>
 
 <p>
-That being said, we are extremely eager to get to work on them. But we need your help. If you're interested in helping develop AudioKit for Android, Javascript, or Xamarin, please <a href="mailto:audiokit@audiokit.io">get in touch</a> if you would be interested in contributing!. We look forward to working with you.
+That being said, we are extremely eager to get to work on them. But we need your help. If you're interested in helping develop AudioKit for Android, Javascript, or Xamarin, please <a href="mailto:audiokit@audiokit.io">get in touch</a> if you would be interested in contributing! We look forward to working with you.
 </p>
 
 
-<h3 id="faq-7"><strong>Q.</strong>
+
+<h3 id="faq-8"><strong>Q.</strong>
 What if my question isn't on here?
 </h3>
 
