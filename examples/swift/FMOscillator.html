@@ -22,7 +22,7 @@ layout: examples
 </div>
 
 <p>
-This is a Frequency-Modulation Oscillator implemented with Swift. It has five parameters controlled via UISliders: frequency, amplitude, carrier multiplier, modulating multiplier, and modulating index.
+This is a Frequency-Modulation Oscillator implemented with Swift. It has five parameters controlled via AKPropertySliders: frequency, amplitude, carrier multiplier, modulating multiplier, and modulating index.
 </p>
 
 <p>
@@ -39,7 +39,7 @@ var modulationIndex      = AKInstrumentProperty(value: 15,  minimum: 0,  maximum
 
 
 <p>
-The code for creating the FM oscillator instrument is shown below. The properites are added to the instrument, and an instance of AKSineTable is created to be the source for the FMOscillator. The parameters of the oscillator are controlled by the variables declared above.
+The code for creating the FM oscillator instrument is shown below. The properites are added to the instrument, and an instance of AKTable is created to be the waveform for the FMOscillator. The parameters of the oscillator are controlled by the variables declared above.
 </p>
 
 {% highlight ruby %}
@@ -53,7 +53,7 @@ override init() {
     addProperty(modulationIndex)
 
     let fmOscillator = AKFMOscillator(
-        functionTable: AKManager.standardSineWave(),
+        waveform: AKTable.standardSineWave(),
         baseFrequency: frequency,
         carrierMultiplier: carrierMultiplier,
         modulatingMultiplier: modulatingMultiplier,
