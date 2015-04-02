@@ -1,19 +1,12 @@
-  <h2>
-    <a href="{{ post.url }}">
-      {{ post.title }}
-    </a>
-  </h2>
-  <span class="post-category">
-    <span class="label">
-      {{ post.categories | array_to_sentence_string }}
-    </span>
-  </span>
-  <div class="post-meta">
-    <span class="post-date">
-      {{ post.date | date_to_string }}
-    </span>
-  </div>
-  <div class="post-content">
-    {{ post.content }}
-  </div>
+<div class="entry-title">
+  <h2>{{ post.title }}
+  <a href="{{ post.url }}" class="permalink" title="Permalink">∞</a></h2>
+</div>
+<ul class="entry-meta clearfix">
+  <li><i class="icon-calendar3"></i>{{ post.date | date_to_string }}</li>
+</ul>
+<div class="entry-content">
+  {{ post.content }}
+</div>
+
 <hr>
