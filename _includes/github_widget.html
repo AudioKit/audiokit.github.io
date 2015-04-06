@@ -19,6 +19,13 @@
 <div id="name3"    class="author"></div>
 <div id="contact3" class="author-contact"></div>
 </div>
+
+<div class="author-block">
+<div id="pic4"     class="author-pic"></div>
+<div id="name4"    class="author"></div>
+<div id="contact4" class="author-contact"></div>
+</div>
+
 </p>
 </div>
 
@@ -39,9 +46,12 @@ request.onload = function() {
             if (user.login == "aure") {name = "Aurelius Prochazka, Ph.D.";}
             if (user.login == "adambmedia") {name = "Adam Boulanger, Ph.D.";}
             if (user.login == "narner") {name = "Nick Arner";}
+            if (user.login == "megastep") {name = "Stephane Peter";}
             if (user.login == "aure") {url = "aure.com";}
             if (user.login == "adambmedia") {url = "adamboulanger.com";}
             if (user.login == "narner") {url = "nickarner.com";}
+            if (user.login == "megastep") {url = "catloafsoft.com";}
+
             console.log(name);
             console.log(url);
             console.log(user.contributions);
