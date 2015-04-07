@@ -52,12 +52,6 @@ request.onload = function() {
             if (user.login == "narner") {url = "nickarner.com";}
             if (user.login == "megastep") {url = "catloafsoft.com";}
 
-            console.log(name);
-            console.log(url);
-            console.log(user.contributions);
-            console.log(user.avatar_url);
-            console.log('pic'+(i+1))
-
             document.getElementById('pic'+(i+1)).innerHTML = '<img src="'+user.avatar_url+'">';
             document.getElementById('name'+(i+1)).innerHTML = name;
             document.getElementById('contact'+(i+1)).innerHTML = '<a href="http://'+url+'">'+url+'</a><br>' + user.contributions + ' Commits';
