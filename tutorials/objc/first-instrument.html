@@ -161,13 +161,6 @@ newInstrument = [[NewInstrument alloc] init];
 [AKOrchestra addInstrument:newInstrument];
 {% endhighlight %}
 
-<p>Then once our orchestra contains all the instruments it needs (only one in this case), we can start the orchestra:</p>
-
-{% highlight objective-c %}
-[AKOrchestra start];
-{% endhighlight %}
-
-
 <p>Our completed viewDidLoad function should look like this:</p>
 
 {% highlight objective-c %}
@@ -177,7 +170,6 @@ newInstrument = [[NewInstrument alloc] init];
 
     newInstrument = [[NewInstrument alloc] init];
     [AKOrchestra addInstrument:newInstrument];
-    [AKOrchestra start];
 {% endhighlight %}
 
 
@@ -231,7 +223,6 @@ This will check to see if an  newInstrument is playing. If it is, the ViewContro
 
     newInstrument = [[NewInstrument alloc] init];
     [AKOrchestra addInstrument:newInstrument];
-    [AKOrchestra start];
 }
 
 - (IBAction)toggleInstrument:(id)sender {
