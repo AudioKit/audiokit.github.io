@@ -1107,7 +1107,7 @@ body.stretched #header.full-header .container {
 
 #primary-menu ul ul > li.sub-menu > a,
 #primary-menu ul ul > li.sub-menu:hover > a {
-	background-image: url("images/icons/submenu.png");
+	background-image: url("/images/icons/submenu.png");
 	background-position: right center;
 	background-repeat: no-repeat;
 }
@@ -1377,7 +1377,7 @@ body:not(.device-sm):not(.device-xs):not(.device-xxs) #primary-menu.style-2.cent
 
 #primary-menu.sub-title > ul > li,
 #primary-menu.sub-title.style-2 > div > ul > li {
-	background: url("images/icons/menu-divider.png") no-repeat right center;
+	background: url("/images/icons/menu-divider.png") no-repeat right center;
 	margin-left: 1px;
 }
 
@@ -9944,7 +9944,7 @@ body:not(.device-touch) .rounded-skill {
 	top: 50%;
 	margin-left: -32px;
 	margin-top: -32px;
-	background: url("images/icons/play.png") no-repeat;
+	background: url("/images/icons/play.png") no-repeat;
 	cursor: pointer;
 	z-index: 1;
 	-webkit-backface-visibility: hidden;
@@ -11400,7 +11400,7 @@ body:not(.device-touch) .tagcloud a {
 
 .widget_recent_comments li {
 	display: block;
-	background: url("images/icons/widget-comment.png") left top no-repeat;
+	background: url("/images/icons/widget-comment.png") left top no-repeat;
 	padding: 4px 0 4px 20px;
 }
 
@@ -11413,7 +11413,7 @@ body:not(.device-touch) .tagcloud a {
 .widget_pages li a,
 .widget_rss li a,
 .widget_recent_comments li a {
-	background: url("images/icons/widget-link.png") left top no-repeat;
+	background: url("/images/icons/widget-link.png") left top no-repeat;
 	border: none !important;
 	color: #444;
 	font-size: 14px;
