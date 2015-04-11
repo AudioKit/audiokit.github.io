@@ -21,23 +21,6 @@ Go to your storyboard files, and put four sliders on the view controller. Add so
 <img src=/tutorials/UIScreen.png style="width:100%; max-width:476px">
 
 <p>
-Now we're going to set the value ranges for our sliders. Make sure the Xcode Utilities pane is visible. Click on the Frequency slider, and add the values shown below.
-</p>
-
-<img src=/tutorials/utilitiesPane.png style="width:100%; max-width:258px">
-
-<p>
-Click on the Carrier Multiplier slider and repeat the process. Use the same values for the Modulation Index slider.
-</p>
-
-<img src=/tutorials/multAndModSettings.png style="width:100%; max-width:259px">
-
-<p>Finally, click on the Amplitude Slider, and add the settings below:</p>
-
-<img src=/tutorials/amplitudeSettings.png style="width:100%; max-width:254px">
-
-
-<p>
 Now, we're going to declare some properties for the parameters of our FM oscillator that we want to control. Navigate to Instrument.swift, and add the following lines after the class definition:
 </p>
 
@@ -52,17 +35,6 @@ var amplitude            = AKInstrumentProperty(value: 0.25, minimum: 0,   maxim
 <p>
 These properties are of type "var", which in Swift signifies that their value will be changed at some point. These properties are of type "AKInstrumentProperty", which allow us to set a default value ("value"), as well as minimum and maximum values.
 </p>
-
-<p>Now, add the lines below above the declaration for fmOscillator:</p>
-
-{% highlight ruby %}
-addProperty(frequency)
-addProperty(amplitude)
-addProperty(carrierMultiplier)
-addProperty(modulationIndex)
-{% endhighlight %}
-
-<p>Now, our properties have been added to our instrument definition.</p>
 
 <p>Finally, we need to connect our oscillator's parameters to our properties:
 
