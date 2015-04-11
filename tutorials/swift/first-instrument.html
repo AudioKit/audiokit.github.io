@@ -78,12 +78,11 @@ let fmOscillator = FMSynth()
 
 <p>That will create an insance of our fmOscillator instrument called 'FMSynth'</p>
 
-<p>Next, we're going to add the instrument to the orchestar and start the orchestra by adding the lines below inside of the viewDidLoad method:
+<p>Next, we're going to add the instrument to the orchestra by adding the line below inside of the viewDidLoad method:
 </p>
 
 {% highlight ruby %}
 AKOrchestra.addInstrument(fmOscillator)
-AKOrchestra.start()
 {% endhighlight %}
 
 
@@ -137,7 +136,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
 
         AKOrchestra.addInstrument(fmOscillator)
-        AKOrchestra.start()
     }
 
 
