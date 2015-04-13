@@ -30,13 +30,46 @@ There are only two packaged examples that come with AudioKit.  The first example
 
 <p>There are many different synthesis tools inside AudioKit, but for this example we are only highlighting two: FM Synthesis and Physical Modeling.  Depending on where you press the rectangular boxes you will hear different parameters sent to the instruments to play different sounds.  We may add more synthesis examples over time, but this is enough of a demo to get you started. </p>
 
+<p>We create the instruments in 'viewDidLoad' and then attach a tap gesture recognizer to two custom views that takes the touch point and scales them to instrument properties:</p>
+
+{% highlight objective-c %}
+- (IBAction)tapTambourine:(UITapGestureRecognizer *)sender {
+
+    CGPoint touchPoint = [sender locationInView:tambourineTouchView];
+    float scaledX = touchPoint.x / tambourineTouchView.bounds.size.width;
+    float scaledY = 1.0 - touchPoint.y / tambourineTouchView.bounds.size.height;
+
+    float intensity = scaledY*4000 + 20;
+    float dampingFactor = scaledX / 2.0;
+    TambourineNote *note = [[TambourineNote alloc] initWithIntensity:intensity
+                                                       dampingFactor:dampingFactor];
+    [tambourine playNote:note];
+}
+{% endhighlight %}
+
+
 <h2>Processing</h2>
 
 <p>The processing part of the app plays an audio loop and allows the user to alter the direction, speed, and pitch of the playback.  Then the output is convolved with two different impulse response files which can be mixed.</p>
 
+<p>The properties are attached to sliders through the use of "AKPropertySlider".  In interface builder, change the class of the sliders to be an AKPropertySlider, then in the code, associate an instrument property with each slider:</p>
+
+{% highlight objective-c %}
+speedSlider.property    = audioFilePlayer.speed;
+pitchSlider.property    = audioFilePlayer.scaling;
+dishWellSlider.property = convolver.dishWellBalance;
+dryWetSlider.property   = convolver.dryWetBalance;
+{% endhighlight %}
+
+<p>All properties will scale appropriately.  The only custom code that is needed is to automatically scale the pitch with the speed.</p>
+
 <h2>Analysis</h2>
 
 <p>The analysis portion processes the microphone input to determine the frequency and amplitude of the incoming sound.  The frequency is then compared to a list of known frequencies to display the musical notation of the sound's pitch.</p>
+
+<p>This tab also highlights the various plots available in AudioKit, and on the storyboard you can find input waveform plots, FFT, frequency, amplitude, etc.  The parameters of these plots can be designated within the identity inspector.</p>
+
+
 
 <h2>Mac OSX Version</h2>
 
