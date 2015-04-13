@@ -21,19 +21,26 @@ Go to your storyboard files, and put four sliders on the view controller. Add so
 <img src=/tutorials/UIScreen.png style="width:100%; max-width:476px">
 
 <p>
-Now, we're going to declare some properties for the parameters of our FM oscillator that we want to control. Navigate to Instrument.swift, and add the following lines after the class definition:
+The next thing we need to do is import "AKPropertySlider" inside of our bridging-header. 
 </p>
 
-
-{% highlight ruby %}
-var frequency            = AKInstrumentProperty(value: 440,  minimum: 150, maximum: 740)
-var carrierMultiplier    = AKInstrumentProperty(value: 0.5,  minimum: 0,   maximum: 1)
-var modulationIndex      = AKInstrumentProperty(value: 0.5,  minimum: 0,   maximum: 1)
-var amplitude            = AKInstrumentProperty(value: 0.25, minimum: 0,   maximum: 0.5)
+{% highlight objective-c %}
+#import "AKPropertySlider.h"
 {% endhighlight %}
 
 <p>
-These properties are of type "var", which in Swift signifies that their value will be changed at some point. These properties are of type "AKInstrumentProperty", which allow us to set a default value ("value"), as well as minimum and maximum values.
+Now, we're going to declare some properties for the parameters of our FM oscillator that we want to control. Navigate to Instrument.swift, and add the following lines after the class definition:
+</p>
+
+{% highlight ruby %}
+var frequency = AKInstrumentProperty(value: 440, minimum: 150, maximum: 740)
+var carrierMultiplier = AKInstrumentProperty(value: 0.5, minimum: 0.0, maximum: 1.0)
+var modulationIndex = AKInstrumentProperty(value: 0.5, minimum: 0.0, maximum: 1.0)
+var amplitude = AKInstrumentProperty(value: 0.25, minimum: 0.0, maximum: 0.5)
+{% endhighlight %}
+
+<p>
+These properties are of type "AKInstrumentProperty", which allow us to set a default value ("value"), as well as minimum and maximum values.
 </p>
 
 <p>Finally, we need to connect our oscillator's parameters to our properties:
@@ -82,9 +89,9 @@ class FMSynth: AKInstrument {
 
 {% highlight ruby %}
 @IBOutlet var frequencySlider: UISlider!
-@IBOutlet var carrierMultiplierSlider : UISlider!
-@IBOutlet var modulationIndexSlider : UISlider!
-@IBOutlet var amplitudeSlider : UISlider!
+@IBOutlet var carrierMultiplierSlider: UISlider!
+@IBOutlet var modulationIndexSlider: UISlider!
+@IBOutlet var amplitudeSlider: UISlider!
 {% endhighlight %}
 
 
