@@ -33,7 +33,7 @@ In the custom-class section, set the class to be "AKPropertySlider":
 <img src=/tutorials/AKPropertySlider.png style="width:100%; max-width:251px" alt="AKPropertySlider">
 
 <p>
-Underneath our existing import statements in ViewController.m, add the line 
+Underneath our existing import statements in ViewController.m, add the line
 
 {% highlight objective-c %}
 #import "AKPropertySlider.h"
@@ -46,10 +46,10 @@ This way, our ViewController is able to use the functionality of the AKPropertyS
 <img src=/tutorials/importPropertySlider.png style="width:100%; max-width:195px" alt="Import Property Slider">
 
 <p>
-We now need to connect our sliders to our ViewController.m file. Control-drag from each slider to inside of the Implementation section, right below our 'BOOL isNewInstrumentPlaying;' line, and create an outlet for each slider. 
+We now need to connect our sliders to our ViewController.m file. Control-drag from each slider to inside of the Implementation section, right below our 'BOOL isNewInstrumentPlaying;' line, and create an outlet for each slider.
 </p>
 
-<img src=/tutorials/propertySliderOutlets.png style="width:100%; max-width:260px">
+<img src=/tutorials/propertySliderOutlets.png style="width:100%; max-width:260px" alt="Property Slider Outlets">
 
 <p>
 When you're done, your Implementation section should look like this:
@@ -115,7 +115,7 @@ fmOscillator.amplitude         = _amplitude;
 {
     self = [super init];
     if (self) {
-        
+
         _frequency = [self createPropertyWithValue:440 minimum:150 maximum:740];
         _carrierMultiplier = [self createPropertyWithValue:0.5 minimum:0.0 maximum:1.0];
         _modulationIndex = [self createPropertyWithValue:0.5 minimum:0.0 maximum:1.0];
@@ -127,7 +127,7 @@ fmOscillator.amplitude         = _amplitude;
         fmOscillator.carrierMultiplier = _carrierMultiplier;
         fmOscillator.modulationIndex = _modulationIndex;
         fmOscillator.amplitude = _amplitude;
-        
+
         [self setAudioOutput:fmOscillator];
 
     }
@@ -157,10 +157,10 @@ fmOscillator.amplitude         = _amplitude;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+
     newInstrument = [[NewInstrument alloc] init];
     [AKOrchestra addInstrument:newInstrument];
-    
+
     frequencySlider.property = newInstrument.frequency;
     carrierMultiplierSlider.property = newInstrument.carrierMultiplier;
     modulationIndexSlider.property = newInstrument.modulationIndex;
