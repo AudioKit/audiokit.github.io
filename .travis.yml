@@ -3,8 +3,8 @@ rvm:
 - 2.1
 
 script:
-- gem install jekyll
-- gem install html-proofer
+- gem install jekyll > /dev/null
+- gem install html-proofer > /dev/null
 - jekyll build && htmlproof --href-ignore "#" ./_site
 
 env:
