@@ -4,6 +4,7 @@ rvm:
 
 script:
 - gem install jekyll
+- gem install html-proofer
 - jekyll build && htmlproof --href-ignore "#" ./_site
 
 env:
