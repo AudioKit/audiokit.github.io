@@ -18,19 +18,19 @@ Now that we've learned how how to make an instrument with AudioKit, we're going 
 Next, add a label above your switch, and name it "On/Off". Now we're going to add some UISliders. Add some labels above your sliders as well. When you're done, your screen should look something like this:
 </p>
 
-<img src=/tutorials/UIScreen.png style="width:100%; max-width:476px">
+<img src=/tutorials/UIScreen.png style="width:100%; max-width:476px" alt="UI Screen">
 
 <p>
 We need to set the custom class for our sliders to be 'AKPropertySlider'. This is a custom AudioKit class that makes connecting instrument properties to UISliders very straightforward, as we will demonstrate. Navigate to the Identity Inspector, which is on the top-right side of Xcode:
 </p>
 
-<img src=/tutorials/IdentityInspector.png style="width:100%; max-width:258px">
+<img src=/tutorials/IdentityInspector.png style="width:100%; max-width:258px" alt="Identity Inspector">
 
 <p>
 In the custom-class section, set the class to be "AKPropertySlider":
 </p>
 
-<img src=/tutorials/AKPropertySlider.png style="width:100%; max-width:251px">
+<img src=/tutorials/AKPropertySlider.png style="width:100%; max-width:251px" alt="AKPropertySlider">
 
 <p>
 Underneath our existing import statements in ViewController.m, add the line 
@@ -43,7 +43,7 @@ Underneath our existing import statements in ViewController.m, add the line
 This way, our ViewController is able to use the functionality of the AKPropertySlider class. Your import statements should now look like the listing below:
 </p>
 
-<img src=/tutorials/importPropertySlider.png style="width:100%; max-width:195px">
+<img src=/tutorials/importPropertySlider.png style="width:100%; max-width:195px" alt="Import Property Slider">
 
 <p>
 We now need to connect our sliders to our ViewController.m file. Control-drag from each slider to inside of the Implementation section, right below our 'BOOL isNewInstrumentPlaying;' line, and create an outlet for each slider. 
