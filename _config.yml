@@ -24,3 +24,5 @@ collections:
   gallery:
     output: true
     permalink: /gallery/:path/
+
+exclude: [vendor]
