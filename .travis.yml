@@ -1,11 +1,8 @@
 language: ruby
 rvm:
 - 2.1
-
-script:
-- gem install jekyll > /dev/null
-- gem install html-proofer > /dev/null
-- jekyll build && htmlproof --href-ignore "#" ./_site
+before_install: gem install jekyll html-proofer -N
+script: jekyll build && htmlproof --href-ignore "#" ./_site
 
 env:
   global:
