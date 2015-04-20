@@ -6,22 +6,64 @@ permalink: /tests/
 ---
 
 
-<p>We're passionate about our tests because they allow us to build upon our code without worrying that we'll break anything along the way!</p>
+<div class="col_half ">
 
-<h3>Continuous Integration</h3>
+<h3>Continuous Integration Testing</h3>
 
 <p>We've recently synced the AudioKit GitHub repository with <a href="https://travis-ci.org">TravisCI</a>.  Travis ensures that the test suite is run and that included examples compile on a fresh system.  We also happen to run a test on this web site with TravisCI ensuring we have no broken links.  Next on our list is to add Travis to the examples repository.</p>
+</div>
 
-<p>Current Build Status:</p>
-<ul class="iconlist">
-<li><i class="icon-line-play"></i> AudioKit Develop Branch: <a href="https://travis-ci.org/audiokit/AudioKit"><img src="https://travis-ci.org/audiokit/AudioKit.svg?branch=develop"></a></li>
-<li><i class="icon-line-play"></i> AudioKit Web Site: <a href="https://travis-ci.org/audiokit/audiokit.github.io"><img src="https://travis-ci.org/audiokit/audiokit.github.io.svg?branch=master"></a></li>
-</ul>
 
+<div class="col_half col_last">
+<h3>Current Build Statuses</h3>
+
+<table class="table table-bordered"><thead><tr><th>Repository</th><th>Status</th></tr></thead>
+<tr>
+<td><a href="https://travis-ci.org/audiokit/AudioKit">AudioKit Develop Branch</a></td>
+<td><a href="https://travis-ci.org/audiokit/AudioKit"><img src="https://travis-ci.org/audiokit/AudioKit.svg?branch=develop" alt="AudioKit Develop Branch Status"></a></td>
+</tr>
+<tr>
+<td><a href="https://travis-ci.org/audiokit/audiokit.github.io">AudioKit Web Site</a></td>
+<td><a href="https://travis-ci.org/audiokit/audiokit.github.io"><img src="https://travis-ci.org/audiokit/audiokit.github.io.svg?branch=master" alt="AudioKit Web Site Status"></a></td>
+</tr>
+</table>
+</div>
+
+<br clear=all>
+
+<div class="col_half">
 <h3>Command Line Tests</h3>
 
-<p>You can run our tests from the command line to not only test a particular operation, but also to very quickly hear what something sounds like without building a project or running a playground.</p>
+<p>You can run our tests from the command line to not only test a particular operation, but also to very quickly hear what something sounds like without building a project or running a playground.  </p>
+
+<p>We use the <a href="https://github.com/supermarin/xcpretty">XCPretty</a> gem to condense test output.  To install xcpretty, use:</p>
+{% highlight bash %}
+$ gem install xcpretty
+{% endhighlight %}
+
+<p>To build all the tests, first change directories in to the tests folder and run the build_all.sh script:</p>
+
+{% highlight bash %}
+$ cd Tests
+$ ./build_all.sh
+{% endhighlight %}
+
+<p>Then, you can either run them all or be prompted to run just one using the run.sh script:</p>
+
+{% highlight bash %}
+$ ./run.sh
+1) Run All Tests
+2) Choose Test from List
+Enter your choice:
+{% endhighlight %}
+
+</div>
+
+
+<div class="col_half col_last">
+<h3>Video</h3>
 
 <p>Here is a video describing the tests and running the entire test suite as of the latest version of AudioKit.</p>
 
 <iframe src="//player.vimeo.com/video/123279578" frameborder="0" width="500" height="313" webkitallowfullscreen mozallowfullscreen allowfullscreen class="gallery-movie"></iframe>
+</div>
