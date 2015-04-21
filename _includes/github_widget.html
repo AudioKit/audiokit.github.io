@@ -20,41 +20,36 @@
 <div id="contact3" class="author-contact"></div>
 </div>
 
-<div class="author-block">
-<div id="pic4"     class="author-pic"></div>
-<div id="name4"    class="author"></div>
-<div id="contact4" class="author-contact"></div>
-</div>
-
 </p>
 </div>
 
 <script>
 request = new XMLHttpRequest();
-request.open('GET', "https://api.github.com/repos/audiokit/AudioKit/contributors", true);
+request.open('GET', "https://api.github.com/repos/aure/AudioKit/contributors", true);
 
 request.onload = function() {
   if (request.status >= 200 && request.status < 400) {
     // Success!
     data = JSON.parse(request.responseText);
-
+    index = 0;
     for (i=0; i<data.length; i++) {
         user = data[i]
-        if (user.contributions > 2) {
+        if (user.contributions > 30) {
             name = user.login
             url = ""
+
+            // Active Contributors
             if (user.login == "aure") {name = "Aurelius Prochazka, Ph.D.";}
-            if (user.login == "adambmedia") {name = "Adam Boulanger, Ph.D.";}
             if (user.login == "narner") {name = "Nick Arner";}
-            if (user.login == "megastep") {name = "Stephane Peter";}
+            if (user.login == "megastep") { name = "Stéphane Peter"}
             if (user.login == "aure") {url = "aure.com";}
-            if (user.login == "adambmedia") {url = "adamboulanger.com";}
             if (user.login == "narner") {url = "nickarner.com";}
             if (user.login == "megastep") {url = "catloafsoft.com";}
+            index++;
 
-            document.getElementById('pic'+(i+1)).innerHTML = '<img src="'+user.avatar_url+'">';
-            document.getElementById('name'+(i+1)).innerHTML = name;
-            document.getElementById('contact'+(i+1)).innerHTML = '<a href="http://'+url+'">'+url+'</a><br>' + user.contributions + ' Commits';
+            document.getElementById('pic'+(index)).innerHTML = '<img src="'+user.avatar_url+'">';
+            document.getElementById('name'+(index)).innerHTML = name;
+            document.getElementById('contact'+(index)).innerHTML = '<a href="http://'+url+'">'+url+'</a><br>' + user.contributions + ' Commits';
         }
     }
   }
