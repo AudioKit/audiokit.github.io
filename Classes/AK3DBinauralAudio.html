@@ -1,0 +1,322 @@
+---
+layout: docs
+header: AK3DBinauralAudio
+title: AK3DBinauralAudio
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div>
+          
+          <table class="table table-bordered"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKStereoAudio.html">AKStereoAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AK3DBinauralAudio.h<br />AK3DBinauralAudio.m</td>
+</tr>
+            </tbody></table>
+          
+
+          
+          
+            <a title="Overview" name="overview"></a>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Generates dynamic 3d binaural audio for headphones using a Woodworth based spherical head model with improved low frequency phase accuracy.
+
+This operation takes a source signal and spatialises it in the 3 dimensional space around a listener using head related transfer function (HRTF) based filters.
+Artifact-free user-defined trajectories are made possible using an interpolation algorithm based on spectral magnitude interpolation and a derived phase spectrum based on the Woodworth spherical head model. Accuracy is increased for the data set provided by extracting and applying a frequency dependent scaling factor to the phase spectra, leading to a more precise low frequency interaural time difference. Users can control head radius for the phase derivation, allowing a crude level of individualisation. The dynamic source version of the opcode uses a Short Time Fourier Transform algorithm to avoid artefacts caused by derived phase spectra changes.</p>
+          
+          
+
+
+          
+          
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Properties" name="properties"></a>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
+            
+            <div class="section-method">
+  <a name="//api/name/azimuth" title="azimuth"></a>
+  <h4 class="subsubtitle method-title">azimuth</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Azimuth angle in degrees. Positive values represent position on the right, negative values are positions on the left. [Default Value: 0]
+  </div>
+  
+    
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *azimuth{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/elevation" title="elevation"></a>
+  <h4 class="subsubtitle method-title">elevation</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Elevation angle in degrees. Positive values represent position above horizontal, negative values are positions below horizontal (minimum: -40). [Default Value: 0]
+  </div>
+  
+    
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *elevation{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+          
+
+          
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Class Methods" name="class_methods"></a>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
+            
+            <div class="section-method">
+  <a name="//api/name/WithInput:" title="WithInput:"></a>
+  <h4 class="subsubtitle method-title">WithInput:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the 3 d binaural audio with default values
+  </div>
+  
+    
+
+ {% highlight objective-c %}+ (instancetype)WithInput:(AKParameter *)input{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input/source signal.</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+          
+
+          
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithInput:" title="initWithInput:"></a>
+  <h4 class="subsubtitle method-title">initWithInput:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the 3 d binaural audio with default values
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input/source signal.</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithInput:azimuth:elevation:" title="initWithInput:azimuth:elevation:"></a>
+  <h4 class="subsubtitle method-title">initWithInput:azimuth:elevation:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the 3 d binaural audio with all values
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input azimuth:(AKParameter *)azimuth elevation:(AKParameter *)elevation{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input/source signal. [Default Value: ]</li>
+    
+    <li><i class="icon-line-play"></i><strong>azimuth</strong>:
+      Azimuth angle in degrees. Positive values represent position on the right, negative values are positions on the left. Updated at Control-rate. [Default Value: 0]</li>
+    
+    <li><i class="icon-line-play"></i><strong>elevation</strong>:
+      Elevation angle in degrees. Positive values represent position above horizontal, negative values are positions below horizontal (minimum: -40). Updated at Control-rate. [Default Value: 0]</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalAzimuth:" title="setOptionalAzimuth:"></a>
+  <h4 class="subsubtitle method-title">setOptionalAzimuth:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Set an optional azimuth
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (void)setOptionalAzimuth:(AKParameter *)azimuth{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>azimuth</strong>:
+      Azimuth angle in degrees. Positive values represent position on the right, negative values are positions on the left. Updated at Control-rate. [Default Value: 0]</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalElevation:" title="setOptionalElevation:"></a>
+  <h4 class="subsubtitle method-title">setOptionalElevation:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Set an optional elevation
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (void)setOptionalElevation:(AKParameter *)elevation{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>elevation</strong>:
+      Elevation angle in degrees. Positive values represent position above horizontal, negative values are positions below horizontal (minimum: -40). Updated at Control-rate. [Default Value: 0]</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+          
+          
+        </div>
+      </div>
