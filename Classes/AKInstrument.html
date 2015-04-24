@@ -67,6 +67,38 @@ title: AKInstrument
 </div>
             
             <div class="section-method">
+  <a name="//api/name/instrumentNumber" title="instrumentNumber"></a>
+  <h4 class="subsubtitle method-title">instrumentNumber</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Unique instrument number
+  </div>
+  
+    
+
+ {% highlight objective-c %}@property (readonly) NSUInteger instrumentNumber{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
   <a name="//api/name/noteProperties" title="noteProperties"></a>
   <h4 class="subsubtitle method-title">noteProperties</h4>
 
@@ -213,7 +245,7 @@ title: AKInstrument
   
     
 
- {% highlight objective-c %}+ (instancetype)instrumentWithNumber:(int)instrumentNumber{% endhighlight %}
+ {% highlight objective-c %}+ (instancetype)instrumentWithNumber:(NSUInteger)instrumentNumber{% endhighlight %}
 
     
   
@@ -537,7 +569,7 @@ title: AKInstrument
   
     
 
- {% highlight objective-c %}- (void)enableParameterLog:(NSString *)message parameter:(AKParameter *)parameter timeInterval:(float)timeInterval{% endhighlight %}
+ {% highlight objective-c %}- (void)enableParameterLog:(NSString *)message parameter:(AKParameter *)parameter timeInterval:(NSTimeInterval)timeInterval{% endhighlight %}
 
     
   
@@ -582,7 +614,7 @@ title: AKInstrument
   
     
 
- {% highlight objective-c %}- (instancetype)initWithNumber:(int)instrumentNumber{% endhighlight %}
+ {% highlight objective-c %}- (instancetype)initWithNumber:(NSUInteger)instrumentNumber{% endhighlight %}
 
     
   
@@ -592,38 +624,6 @@ title: AKInstrument
       Unique number to assign this instrument, useful when overwriting an instrument</li>
     
     </ul>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-  
-</div>
-            
-            <div class="section-method">
-  <a name="//api/name/instrumentNumber" title="instrumentNumber"></a>
-  <h4 class="subsubtitle method-title">instrumentNumber</h4>
-
-  
-  
-  <div class="method-subsection brief-description">
-    Unique instrument number
-  </div>
-  
-    
-
- {% highlight objective-c %}- (int)instrumentNumber{% endhighlight %}
-
-    
   
 
   
@@ -686,7 +686,7 @@ AKNote to begin playback for a specific amount of time.
   
     
 
- {% highlight objective-c %}- (void)playForDuration:(float)playDuration{% endhighlight %}
+ {% highlight objective-c %}- (void)playForDuration:(NSTimeInterval)playDuration{% endhighlight %}
 
     
   
@@ -764,7 +764,7 @@ AKNote to begin playback for a specific amount of time.
   
     
 
- {% highlight objective-c %}- (void)playNote:(AKNote *)note afterDelay:(float)delay{% endhighlight %}
+ {% highlight objective-c %}- (void)playNote:(AKNote *)note afterDelay:(NSTimeInterval)delay{% endhighlight %}
 
     
   
@@ -774,7 +774,7 @@ AKNote to begin playback for a specific amount of time.
       The note that will be played.</li>
     
     <li><i class="icon-line-play"></i><strong>delay</strong>:
-      The amount of time to wait until playing the note</li>
+      The amount of time in seconds to wait until playing the note</li>
     
     </ul>
   
@@ -884,7 +884,7 @@ AKNote to begin playback for a specific amount of time.
   
     
 
- {% highlight objective-c %}- (void)repeatPhrase:(AKPhrase *)phrase duration:(float)duration{% endhighlight %}
+ {% highlight objective-c %}- (void)repeatPhrase:(AKPhrase *)phrase duration:(NSTimeInterval)duration{% endhighlight %}
 
     
   
@@ -894,7 +894,7 @@ AKNote to begin playback for a specific amount of time.
       The note phrase that will be played.</li>
     
     <li><i class="icon-line-play"></i><strong>duration</strong>:
-      The period between playbacks</li>
+      The period in seconds between playbacks</li>
     
     </ul>
   
@@ -1262,7 +1262,7 @@ AKNote to begin playback for a specific amount of time.
   
     
 
- {% highlight objective-c %}- (void)stopNote:(AKNote *)note afterDelay:(float)delay{% endhighlight %}
+ {% highlight objective-c %}- (void)stopNote:(AKNote *)note afterDelay:(NSTimeInterval)delay{% endhighlight %}
 
     
   
@@ -1272,7 +1272,7 @@ AKNote to begin playback for a specific amount of time.
       The note that will be stopped.</li>
     
     <li><i class="icon-line-play"></i><strong>delay</strong>:
-      The amount of time to wait until stopping the note</li>
+      The amount of time in seconds to wait until stopping the note</li>
     
     </ul>
   

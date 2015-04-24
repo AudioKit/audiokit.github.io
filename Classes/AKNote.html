@@ -314,7 +314,7 @@ b) The note is created concurrently with other notes created by the instrument</
   
     
 
- {% highlight objective-c %}- (instancetype)initWithInstrument:(AKInstrument *)anInstrument forDuration:(float)noteDuration{% endhighlight %}
+ {% highlight objective-c %}- (instancetype)initWithInstrument:(AKInstrument *)anInstrument forDuration:(NSTimeInterval)noteDuration{% endhighlight %}
 
     
   
@@ -388,14 +388,14 @@ b) The note is created concurrently with other notes created by the instrument</
   
     
 
- {% highlight objective-c %}- (void)playAfterDelay:(float)delay{% endhighlight %}
+ {% highlight objective-c %}- (void)playAfterDelay:(NSTimeInterval)delay{% endhighlight %}
 
     
   
   <ul class="iconlist">
     
     <li><i class="icon-line-play"></i><strong>delay</strong>:
-      Time to wait before beginning note playback.</li>
+      Time to wait in seconds before beginning note playback.</li>
     
     </ul>
   
@@ -459,14 +459,14 @@ b) The note is created concurrently with other notes created by the instrument</
   
     
 
- {% highlight objective-c %}- (void)stopAfterDelay:(float)delay{% endhighlight %}
+ {% highlight objective-c %}- (void)stopAfterDelay:(NSTimeInterval)delay{% endhighlight %}
 
     
   
   <ul class="iconlist">
     
     <li><i class="icon-line-play"></i><strong>delay</strong>:
-      Time to wait before stopping note playback.</li>
+      Time to wait in seconds before stopping note playback.</li>
     
     </ul>
   
@@ -530,7 +530,7 @@ b) The note is created concurrently with other notes created by the instrument</
   
     
 
- {% highlight objective-c %}- (void)updatePropertiesAfterDelay:(float)time{% endhighlight %}
+ {% highlight objective-c %}- (void)updatePropertiesAfterDelay:(NSTimeInterval)time{% endhighlight %}
 
     
   

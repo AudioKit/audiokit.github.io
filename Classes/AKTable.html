@@ -47,7 +47,7 @@ lookup tables at the time of note creation/initialization.</p>
   
     
 
- {% highlight objective-c %}@property NSString *name{% endhighlight %}
+ {% highlight objective-c %}@property (nullable) NSString *name{% endhighlight %}
 
     
   
@@ -111,7 +111,39 @@ lookup tables at the time of note creation/initialization.</p>
   
     
 
- {% highlight objective-c %}@property int size{% endhighlight %}
+ {% highlight objective-c %}@property NSUInteger size{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/values" title="values"></a>
+  <h4 class="subsubtitle method-title">values</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    All continguous values of the table, up to size.
+  </div>
+  
+    
+
+ {% highlight objective-c %}@property (nonatomic, readonly, nullable) float *values{% endhighlight %}
 
     
   
@@ -242,6 +274,45 @@ lookup tables at the time of note creation/initialization.</p>
 </div>
             
             <div class="section-method">
+  <a name="//api/name/initWithArray:" title="initWithArray:"></a>
+  <h4 class="subsubtitle method-title">initWithArray:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Creates a table from an array of objects.
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (instancetype)initWithArray:(NSArray *)array{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>array</strong>:
+      An array of NSNumber instances.</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
   <a name="//api/name/initWithSize:" title="initWithSize:"></a>
   <h4 class="subsubtitle method-title">initWithSize:</h4>
 
@@ -253,7 +324,7 @@ lookup tables at the time of note creation/initialization.</p>
   
     
 
- {% highlight objective-c %}- (instancetype)initWithSize:(int)size{% endhighlight %}
+ {% highlight objective-c %}- (instancetype)initWithSize:(NSUInteger)size{% endhighlight %}
 
     
   
@@ -434,7 +505,7 @@ lookup tables at the time of note creation/initialization.</p>
   
     
 
- {% highlight objective-c %}- (void)populateTableWithIndexFunction:(float ( ^ ) ( int ))function{% endhighlight %}
+ {% highlight objective-c %}- (void)populateTableWithIndexFunction:(float ( ^ ) ( NSUInteger ))function{% endhighlight %}
 
     
   
@@ -481,6 +552,84 @@ lookup tables at the time of note creation/initialization.</p>
     
     <li><i class="icon-line-play"></i><strong>scalingFactor</strong>:
       Amount by which to scale each element of the table</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/valueAtFractionalWidth:" title="valueAtFractionalWidth:"></a>
+  <h4 class="subsubtitle method-title">valueAtFractionalWidth:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Access one of the values of the table
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (float)valueAtFractionalWidth:(float)fractionalWidth{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>fractionalWidth</strong>:
+      The fractional distance into the table, must be less than 1</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/valueAtIndex:" title="valueAtIndex:"></a>
+  <h4 class="subsubtitle method-title">valueAtIndex:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Access one of the values of the table
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (float)valueAtIndex:(NSUInteger)index{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>index</strong>:
+      The index of the value, must be less than size</li>
     
     </ul>
   

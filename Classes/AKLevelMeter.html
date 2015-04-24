@@ -1,7 +1,7 @@
 ---
 layout: docs
-header: AKPropertySlider
-title: AKPropertySlider
+header: AKLevelMeter
+title: AKLevelMeter
 ---
 
       <div id="contents" class="isShowingTOC" role="main">
@@ -11,10 +11,10 @@ title: AKPropertySlider
           <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value">UISlider</td>
+  <td class="specification-value">UIView</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
-  <td class="specification-value">AKPropertySlider.h<br />AKPropertySlider.m</td>
+  <td class="specification-value">AKLevelMeter.h<br />AKLevelMeter.m</td>
 </tr>
             </tbody></table>
           
@@ -23,7 +23,7 @@ title: AKPropertySlider
           
             <a title="Overview" name="overview"></a>
             <h3 class="subtitle subtitle-overview">Overview</h3>
-            <p>A slider that sets the value of a property (within the property's bounds)</p>
+            <p>A level meter that can be drawn from any property</p>
           
           
 
@@ -35,18 +35,18 @@ title: AKPropertySlider
             <h3 class="subtitle subtitle-methods">Properties</h3>
             
             <div class="section-method">
-  <a name="//api/name/property" title="property"></a>
-  <h4 class="subsubtitle method-title">property</h4>
+  <a name="//api/name/bgColor" title="bgColor"></a>
+  <h4 class="subsubtitle method-title">bgColor</h4>
 
   
   
   <div class="method-subsection brief-description">
-    A slider that sets the value of a property (within the property's bounds)
+    A level meter that can be drawn from any property
   </div>
   
     
 
- {% highlight objective-c %}@property (nonatomic) AKParameter *property{% endhighlight %}
+ {% highlight objective-c %}@property (retain) IBInspectable UIColor *bgColor{% endhighlight %}
 
     
   
