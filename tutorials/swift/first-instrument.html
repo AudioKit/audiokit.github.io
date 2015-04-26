@@ -116,8 +116,8 @@ Now, add the code below inside of your "toggleInstrument" IBAction. If the curre
 <p>
 
 {% highlight ruby %}
-  if toggleSwitchClicked.on
-        toggleSwitchClicked.on ?  fmOscillator.play() : fmOscillator.stop()
+if toggleSwitchClicked.on
+    toggleSwitchClicked.on ?  fmOscillator.play() : fmOscillator.stop()
 {% endhighlight %}
 
 <p>Your ViewController.swift file should look like the code listing below:</p>
@@ -138,14 +138,8 @@ class ViewController: UIViewController {
         AKOrchestra.addInstrument(fmOscillator)
     }
 
-
     @IBAction func toggleInstrument(sender: AnyObject) {
         toggleSwitchClicked.on ?  fmOscillator.play() : fmOscillator.stop()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
 {% endhighlight %}

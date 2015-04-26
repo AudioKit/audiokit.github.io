@@ -5,6 +5,11 @@ permalink: /tutorials/
 layout: section_index
 ---
 
+<h3>Installation Screencasts and Walkthroughs</h3>
+
+{% include configuration_videos.html %}
+
+
 <div class="cd-iphone-5s cd-silver" style="margin-left: 1em; float: right">
   <div class="cd-body">
     <div class="cd-sound"></div>
@@ -21,12 +26,12 @@ layout: section_index
   </div>
 </div>
 
+<h4>Building Your First AudioKit App</h4>
 
 <p>In this set of tutorials you will build the app you see demonstrated on the iPhone on this page. It will take you from setting up AudioKit, building an instrument, and tying the instrument's properties to user interface elements.  Since Apple has launched Swift we've created tutorials for creating iOS apps using AudioKit in both Objective-C and Swift. </p>
 
 <h4>Objective-C Tutorials</h4>
 <ul class="iconlist">
-        <li class="{% if page.permalink == '/tutorials/getting-started/' %}current{% endif %}"><i class="icon-line-play"></i><a href="/tutorials/getting-started/">Getting Started</a></li>
   <li class="{% if page.permalink == '/tutorials/first-instrument/' %}current{% endif %}"><i class="icon-line-play"></i><a href="/tutorials/first-instrument/">Coding Your First Instrument</a></li>
   <li class="{% if page.permalink == '/tutorials/user-interaction/' %}current{% endif %}"><i class="icon-line-play"></i><a href="/tutorials/user-interaction/">Adding UI Controls</a></li>
 </ul>
@@ -38,10 +43,9 @@ layout: section_index
   <li class="{% if page.permalink == '/tutorials/swift/user-interaction/' %}current{% endif %}"><i class="icon-line-play"></i><a href="/tutorials/swift/user-interaction/">Adding UI Controls</a></li>
 </ul>
 
-<h4>Advanced Tutorials</h4>
+<h3>Advanced Tutorials</h3>
 <ul class="iconlist">
   <li><i class="icon-line-play"></i><a href="https://github.com/ahodge/Game-Audio-Harmonization-Tutorial">Game Audio Harmonization with Unity</a></li>
   <li class="{% if page.permalink == '/tutorials/xcode/' %}current{% endif %}"><i class="icon-line-play"></i><a href="/tutorials/xcode/">Xcode Tips</a></li>
-  <li class="{% if page.permalink == '/tutorials/osx/configuration/' %}current{% endif %}"><i class="icon-line-play"></i><a href="/tutorials/osx/configuration/">Configuring OSX Apps to use AudioKit</a></li>
   <li class="{% if page.permalink == '/tutorials/contributing/' %}current{% endif %}"><i class="icon-line-play"></i><a href="/tutorials/contributing/">Contributing to AudioKit</a></li>
 </ul>
