@@ -16,54 +16,51 @@ layout: tutorials
 
 <p>In summary:</p>
 
-<ul>
-<li> <strong>Static Libraries</strong>
+<ul class="iconlist">
+<li><i class="icon-line-play"></i> <strong>Static Libraries</strong>
 
-<ul>
-<li>Supports iOS 7 and above.</li>
-<li>The application needs to comply with the LGPL licensing requirements by having its full source code freely available to the public.</li>
+<ul class="iconlist">
+<li><i class="icon-line-play"></i>Supports iOS 7 and above.</li>
+<li><i class="icon-line-play"></i>The application needs to comply with the LGPL licensing requirements by having its full source code freely available to the public.</li>
 </ul>
 </li>
-<li>
+<li><i class="icon-line-play"></i>
 
 
 <strong>Dynamic Frameworks</strong>
 
-<ul>
-<li>iOS 8 is required to build and use the app.</li>
-<li>No need to make the full application open-source, provided there are no further licensing restrictions; suitable for commercial and closed-source applications.</li>
+<ul class="iconlist">
+<li><i class="icon-line-play"></i>iOS 8 is required to build and use the app.</li>
+<li><i class="icon-line-play"></i>No need to make the full application open-source, provided there are no further licensing restrictions; suitable for commercial and closed-source applications.</li>
 </ul>
 </li>
 </ul>
 
 <h2>Common Steps</h2>
 <div class="col_half nobottommargin">
-<ul>
-<li>Drag and drop the <code>AudioKit.xcodeproj</code> file inside your own project in Xcode.</li>
-<li>In your project settings in Xcode, go to the <strong>Build Phases</strong> tab for your target.
+<ul class="iconlist">
+<li><i class="icon-line-play"></i>Drag and drop the <code>AudioKit.xcodeproj</code> file inside your own project in Xcode.</li>
+<p></p>
+<li><i class="icon-line-play"></i>In your project settings in Xcode, go to the <strong>Build Phases</strong> tab for your target.
 
-<ul>
-<li>Add a new <strong>Target Dependency</strong>. Pick either the iOS Static or Dynamic library under AudioKit.</li>
-<li>Expand the <strong>Link Binary With Libraries</strong> section, and add the same library from the previous step (now with a ".a" extension).</li>
+<ul class="iconlist">
+<li><i class="icon-line-play"></i>Add a new <strong>Target Dependency</strong>. Pick either the iOS Static or Dynamic library under AudioKit.</li>
+<p></p>
+<li><i class="icon-line-play"></i>Expand the <strong>Link Binary With Libraries</strong> section, and add the same library from the previous step (now with a ".a" extension).</li>
 </ul>
 </li>
-<li>In the <strong>Build Settings</strong> tab for your target :
+<p></p>
+<li><i class="icon-line-play"></i>In the <strong>Build Settings</strong> tab for your target :
 
-<ul>
-<li>Look for the <strong>Other Linker Flags</strong> setting, and set it to <code>-ObjC</code>
+<ul class="iconlist">
+<p></p>
+<li><i class="icon-line-play"></i>Look for the <strong>Other Linker Flags</strong> setting, and set it to <code>-ObjC</code>
 </li>
-<li>Look for the <strong>User Header Search Paths</strong> setting, point it to the location of the <code>AudioKit</code> directory, make sure to set it to <strong>recursive</strong>.  If your project directory is parallel to the AudioKit repository, this path will be <code>../AudioKit/AudioKit</code>.</li>
+<p></p>
+<li><i class="icon-line-play"></i>Look for the <strong>User Header Search Paths</strong> setting, point it to the location of the <code>AudioKit</code> directory, make sure to set it to <strong>recursive</strong>.  If your project directory is parallel to the AudioKit repository, this path will be <code>../AudioKit/AudioKit</code>.</li>
 </ul>
 </li>
 </ul>
-
-<h3>Using the Static Libraries</h3>
-
-<p>No further steps needed, just make sure you are indeed linking with the <code>libAudioKit iOS Static.a</code> library.</p>
-
-<p>Remember: <em>your entire application is now bound by the terms of the <a href="http://en.wikipedia.org/wiki/GNU_Lesser_General_Public_License">GNU LGPL license</a></em>.</p>
-
-
 </div>
 
 <div class="col_half nobottommargin col_last">
@@ -75,27 +72,27 @@ layout: tutorials
 </div>
 
 <br clear=all>
+<h3>Using the Static Libraries</h3>
+
+<p>No further steps needed, just make sure you are indeed linking with the <code>libAudioKit iOS Static.a</code> library.</p>
+
+<p>Remember: <em>your entire application is now bound by the terms of the <a href="http://en.wikipedia.org/wiki/GNU_Lesser_General_Public_License">GNU LGPL license</a></em>.</p>
+
+
 
 <h3>Using the Dynamic Frameworks</h3>
 <div class="col_half nobottommargin">
-<ul>
-<li>Make sure your target <strong>Deployment Target</strong> is set to at least iOS 8.0.</li>
-<li>From within the AudioKit subproject, open the <code>AudioKit &gt; Platforms &gt; iOS &gt; Dynamic Frameworks</code> group, then drag and drop the <code>CSoundLib.framework</code> and <code>libsndfile.framework</code> files to your own project.</li>
-<li>This will automatically add a "Framework Search Paths" entry for you, but it will be an absolute reference, so if you are sharing your projects with others, you should go to <strong>Build Settings</strong> Tab and add an entry relative to <code>$(SRCROOT)</code> that leads to <code>AudioKit/Platforms/iOS</code>.</li>
-<li>In your project settings, under the <strong>General</strong> tab, scroll down to the <strong>Embedded Binaries</strong> section and add the same <code>CsoundLib.framework</code> and <code>libsndfile.framework</code>. These frameworks should then also appear in the <strong>Linked Frameworks and Libraries</strong> just below.</li>
-<li>Add a run script phase, of type <code>/bin/bash</code> with the following script:</li>
+<ul class="iconlist">
+<li><i class="icon-line-play"></i>Make sure your target <strong>Deployment Target</strong> is set to at least iOS 8.0.</li>
+<p></p>
+<li><i class="icon-line-play"></i>From within the AudioKit subproject, open the <code>AudioKit &gt; Platforms &gt; iOS &gt; Dynamic Frameworks</code> group, then drag and drop the <code>CSoundLib.framework</code> and <code>libsndfile.framework</code> files to your own project.</li>
+<p></p>
+<li><i class="icon-line-play"></i>This will automatically add a "Framework Search Paths" entry for you, but it will be an absolute reference, so if you are sharing your projects with others, you should go to <strong>Build Settings</strong> Tab and add an entry relative to <code>$(SRCROOT)</code> that leads to <code>AudioKit/Platforms/iOS</code>.</li>
+<p></p>
+<li><i class="icon-line-play"></i>In your project settings, under the <strong>General</strong> tab, scroll down to the <strong>Embedded Binaries</strong> section and add the same <code>CsoundLib.framework</code> and <code>libsndfile.framework</code>. These frameworks should then also appear in the <strong>Linked Frameworks and Libraries</strong> just below.</li>
 </ul>
 
-<pre><code>for lib in CsoundLib libsndfile; do
-    install_name_tool -change $lib @rpath/$lib.framework/$lib $TARGET_BUILD_DIR/$EXECUTABLE_PATH
-    if ! test "$CURRENT_ARCH" = x86_64 -o "$CURRENT_ARCH" = i386; then
-        lipo -remove i386 -remove x86_64 $CODESIGNING_FOLDER_PATH/Frameworks/$lib.framework/$lib -output $CODESIGNING_FOLDER_PATH/Frameworks/$lib.framework/$lib || true
-    fi
-done
-</code></pre>
-
 </div>
-
 <div class="col_half nobottommargin col_last">
 
 <div class="videoWrapper">
@@ -105,13 +102,26 @@ done
 </div>
 
 <br clear=all>
+<br clear=all>
+<ul class="iconlist">
+<li><i class="icon-line-play"></i>Add a run script phase, of type <code>/bin/bash</code> with the following script:</li>
+</ul>
+{% highlight bash %}
+for lib in CsoundLib libsndfile; do
+    install_name_tool -change $lib @rpath/$lib.framework/$lib $TARGET_BUILD_DIR/$EXECUTABLE_PATH
+    if ! test "$CURRENT_ARCH" = x86_64 -o "$CURRENT_ARCH" = i386; then
+        lipo -remove i386 -remove x86_64 $CODESIGNING_FOLDER_PATH/Frameworks/$lib.framework/$lib -output $CODESIGNING_FOLDER_PATH/Frameworks/$lib.framework/$lib || true
+    fi
+done
+{% endhighlight %}
+
 
 
 <h2>Swift Projects</h2>
 
-<ul>
-<li>From within the AudioKit subproject in your project, open the <code>AudioKit &gt; Platforms &gt; Swift</code> group, and drag and drop <code>AudioKit.swift</code> to your project.</li>
-<li>Add <code>AKFoundation.h</code> to your Swift bridging header file.</li>
+<ul class="iconlist">
+<li><i class="icon-line-play"></i>From within the AudioKit subproject in your project, open the <code>AudioKit &gt; Platforms &gt; Swift</code> group, and drag and drop <code>AudioKit.swift</code> to your project.</li>
+<li><i class="icon-line-play"></i>Add <code>AKFoundation.h</code> to your Swift bridging header file.</li>
 </ul>
 
 <h2>Optional Steps</h2>
