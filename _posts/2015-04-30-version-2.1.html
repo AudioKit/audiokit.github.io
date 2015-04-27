@@ -1,0 +1,31 @@
+---
+layout: blog_post
+title: Announcing Version 2.1!
+header: Version 2.1
+date: "2015-04-30"
+---
+
+<p>Version 2.1 is a very substantial improvement to AudioKit and it is recommended that all users upgrade.</p>
+
+<h4>Dynamic Libraries and MIT License</h4>
+
+<p>The big news is that we have enabled AudioKit and its dependencies to be dynamic libraries.
+This allows us to license AudioKit under the liberal MIT License.  See the installation instructions for more information on choosing and configuring static vs. dynamic libraries.</p>
+
+<p>Stéphane Peter really took charge of updating AudioKit to be a dynamic library and he's made so many contributions to AudioKit that he's earned the right to be a core team member.  Thank you Stéphane!</p>
+
+<h4>Continuous Integration Testing</h4>
+
+<p>We've started using TravisCI for continuous integration testing.  Travis runs tests on AudioKit whenever we update the code or whenever we receive a pull request from someone in the community suggesting a change.  If TravisCI gives us the green light, we can feel more confident making the proposed change.</p>
+
+<h4>... and more!</h4>
+
+<p>We've embedded all the utility instruments, plots, and tools into AudioKit, so in general all you ever have to import is <code>AKFoundation.h</code>.</p>
+
+<p>There are some new operations and demos too.  We now have an <code>AKRingModulator</code> and an <code>AK3DBinauralAudio</code> operation which simulates 3D audio when you listen with headphones.  There is a new BinauralAudio example in the examples repository to demonstrate this efffect.  Also in this repository is the new TableDemo showing how to change tables on the fly.</p>
+
+<p>Finally, rest assured that the web site has been heavily udpated for the new version, with new installation videos and tutorials.</p>
+
+
+
+
