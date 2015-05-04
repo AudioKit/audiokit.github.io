@@ -21,3 +21,25 @@ permalink: /properties/
 </td>
 </tr>
 </table>
+
+<h3>Sliders and Labels</h3>
+
+<p>AudioKit includes two UI classes very helpful for building interfaces to instrument properties: <a href="/Classes/AKPropertySlider.html">AKPropertySlider</a> and <a href="/Classes/AKPropertyLabel.html">AKPropertyLabel</a>.
+
+<p>For example, if you have a pitch property for an instrument, you create a slider and a label in Interface Builder, change their types to <code>AKSlider</code> and <code>AKLabel</code> and inside the interface (or implementation) file:
+
+{% highlight objective-c %}
+IBOutlet AKPropertySlider *pitchSlider;
+IBOutlet AKPropertyLabel  *pitchLabel;
+{% endhighlight %}
+
+<p>Then, you only need to associate the user interface elements with the instrument property as follows:</p>
+
+{% highlight objective-c %}
+pitchSlider.property = instrument.pitch;
+pitchLabel.property  = instrument.pitch;
+{% endhighlight %}
+
+<p>Now, any changes to the instrument property "pitch" gets immediately reflected on either the slider or the label.  For the slider, the maximum and minimum are derived from the property's maximum and minimum values.</p>
+
+<p>The included "AudioKitDemo" project and many of the projects in the AudioKit Examples repository use this technique, so you can see these classes in action there.</p>
