@@ -24,16 +24,16 @@
 </div>
 
 <script>
-request = new XMLHttpRequest();
-request.open('GET', "https://api.github.com/repos/aure/AudioKit/contributors", true);
+user_request = new XMLHttpRequest();
+user_request.open('GET', "https://api.github.com/repos/audiokit/AudioKit/contributors", true);
 
-request.onload = function() {
-  if (request.status >= 200 && request.status < 400) {
+user_request.onload = function() {
+  if (user_request.status >= 200 && user_request.status < 400) {
     // Success!
-    data = JSON.parse(request.responseText);
+    user_data = JSON.parse(user_request.responseText);
     index = 0;
-    for (i=0; i<data.length; i++) {
-        user = data[i]
+    for (i=0; i<user_data.length; i++) {
+        user = user_data[i]
         if (user.contributions > 30) {
             name = user.login
             url = ""
@@ -55,6 +55,6 @@ request.onload = function() {
   }
 };
 
-request.send();
+user_request.send();
 </script>
 

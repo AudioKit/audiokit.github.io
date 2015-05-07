@@ -31,12 +31,12 @@
                             <div class="row">
 
                                 <div class="col-md-6 bottommargin-sm">
-                                    <div class="counter counter-small" style="color: #35BBAA;"><span data-from="0" data-to="885" data-refresh-interval="80" data-speed="2000" data-comma="true"></span></div>
+                                    <div class="counter counter-small" style="color: #35BBAA;" id="watchers"></div>
                                     <h5 class="nobottommargin">Stars</h5>
                                 </div>
 
                                 <div class="col-md-6 bottommargin-sm">
-                                    <div class="counter counter-small" style="color: #2CAACA;"><span data-from="0" data-to="118" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
+                                    <div class="counter counter-small" style="color: #2CAACA;" id="forks"></div>
                                     <h5 class="nobottommargin">Forks</h5>
                                 </div>
 
@@ -122,3 +122,19 @@
 
 
 <script src="/js/devices.js"></script>
+<script>
+request = new XMLHttpRequest();
+request.open('GET', "https://api.github.com/repos/audiokit/AudioKit", true);
+
+request.onload = function() {
+  if (request.status >= 200 && request.status < 400) {
+    // Success!
+    stats = JSON.parse(request.responseText);
+    document.getElementById('watchers').innerHTML = stats.watchers_count;
+    document.getElementById('forks').innerHTML = stats.forks_count;
+  }
+};
+
+request.send();
+</script>
+
