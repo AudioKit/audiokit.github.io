@@ -10,7 +10,7 @@ permalink: /pod/
 <p>If you are creating an iOS project using Objective-C, you can use CocoaPods to install AudioKit. In your project, update your Podfile:</p>
 
 {% highlight ruby %}
-pod 'AudioKit', '~> 2.0.1'
+pod 'AudioKit', '~> 2.1.1'
 {% endhighlight %}
 
 Then execute:
@@ -19,39 +19,6 @@ Then execute:
 $ pod install
 {% endhighlight %}
 
-<h3>AudioKit 2.1 Pod Status</h3>
 
-<p>Even though AudioKit is up to version 2.1 we have not updated CocoaPods to reflect this version because we have not verified that our podspec is sufficient to create a working project.   There have been reports of success, but we're not convinced, and here we'll describe the issues.</p>
-
-<p>The installation process for AudioKit 2.1 has changed significantly and details are <a href="/tutorials/ios/configuration/">outlined here</a>.  As you can see, a big decision to be made is whether to use static libraries and be compatible with older versions of iOS, or use dynamic libraries and requiring iOS 8.  For the cocoapod, do we make this decision for the user?</p>
-
-<p>After copying the project file, there a couple of configuration steps.  We've tried to add at least this line to the podspec:</p>
-
-{% highlight json %}
-"xcconfig": {
-    "OTHER_LDFLAGS": "-ObjC"
-},
-{% endhighlight %}
-
-<p>but I'm guessing we also need something in the podspec that also does the "User Header Search Paths" correctly.  And what about the other steps in the "Common Steps" section of the installation instructions?</p>
-
-<p>If we end up supporting dynamic libraries in iOS 8, then there are more configuration steps to include, an important one being the run script phase:</p>
-
-{% highlight bash %}
-for lib in CsoundLib libsndfile; do
-    install_name_tool -change $lib @rpath/$lib.framework/$lib $TARGET_BUILD_DIR/$EXECUTABLE_PATH
-    if ! test "$CURRENT_ARCH" = x86_64 -o "$CURRENT_ARCH" = i386; then
-        lipo -remove i386 -remove x86_64 $CODESIGNING_FOLDER_PATH/Frameworks/$lib.framework/$lib -output $CODESIGNING_FOLDER_PATH/Frameworks/$lib.framework/$lib || true
-    fi
-done
-{% endhighlight %}
-
-<p>Once we're able to install the pod by pointing to the develop branch, ie.:</p>
-
-{% highlight bash %}
-pod 'AudioKit', :git => 'https://github.com/audiokit/AudioKit.git', :branch => 'develop'
-{% endhighlight %}
-
-<p>we'll push it up to CocoaPods.</p>
 
 
