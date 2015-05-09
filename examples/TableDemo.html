@@ -26,7 +26,7 @@ last-review-date: 2015/04/26
 This demo shows how you can easily change the waveform for an oscillator.  It is very flexible and although we demonstrate the most standard waveforms, really it can be anything you like.  </p>
 
 <p>
-This demo demonstrates a slightly different technique where the instrument instead of exposing only instrument and note properties to be changed also gives access to its underlying operation, AKOScillator.  In the <code>OscillatorInstruemnt.h</code> file:
+This demo demonstrates a slightly different technique where the instrument instead of exposing only instrument and note properties to be changed also gives access to its underlying operation, AKOScillator.  In the <code>OscillatorInstrument.h</code> file:
 
 {% highlight objective-c %}
 @property AKInstrumentProperty *amplitude;
@@ -40,7 +40,7 @@ This demo demonstrates a slightly different technique where the instrument inste
 {% highlight objective-c %}
 // Instrument Properties
 _amplitude = [self createPropertyWithValue:0.75 minimum:0.0 maximum:1.0];
-_frequency = [self createPropertyWithValue:861 minimum:0 maximum:4000];
+_frequency = [self createPropertyWithValue:861  minimum:0.0 maximum:4000];
 
 // Instrument Definition
 _oscillator = [AKOscillator oscillator];
