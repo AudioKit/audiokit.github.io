@@ -176,4 +176,26 @@ Enter your choice: 3
 5) MicrophoneAnalysis 10) StruckMetalBar
 Enter the number of the playground you want:
 {% endhighlight %}
+
+<h3>Setting up a playground from scratch</h3>
+
+<ol>
+<li>Install cocoapods if you haven't already</li>
+<li>Create a new iOS project for your playground</li>
+<li>Close the project, and from the project folder, run <code>pod init</code></li>
+<li>Edit the podfile to include KZPlayground like in the AudioKitPlayground project</li>
+<li>Run <code>kicker -sql 0.05 YourProjectFolder</code> replacing <code>YourProjectFolder</code> with folder containing your watched classes</li>
+<li>Create a new playground class that is a subclass of <code>AKPlayground</code></li>
+<li>Edit the playground class's header file:
+{% highlight objective-c %}
+#import "AKPlayground.h"
+
+@interface Playground : AKPlayground <KZPActivePlayground>
+
+@end
+{% endhighlight %}
+</li>
+<li>Create the <code>setup</code> and <code>run</code> methods in the implementation file.</li>
+</ol>
+
 </div>
