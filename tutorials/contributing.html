@@ -36,7 +36,16 @@ To add specific features, make a branch off your repository to test your ideas. 
 <h3>Run Tests</h3>
 
 <p>
-After you’ve finished working on your branch, run the test script to make sure your changes haven't broken anything.  These tests will be automatically run on Travis when you make a pull request anyway, but the process is slow, so you might as well check locally first.  To run the tests, change your directory to the top level AudioKit directory and run:</p>
+After you’ve finished working on your branch, run the test script to make sure your changes haven't broken anything.  These tests will be automatically run on Travis when you make a pull request anyway, but the process is slow, so you might as well check locally first.  To run the tests, you'll first need to make sure you have 'xcpretty' installed. If you don't, run the script below to install it: 
+</p>
+
+{% highlight bash %}
+sudo gem install xcpretty
+{% endhighlight %}
+
+<p>
+Then, change your directory to the top level AudioKit directory and run:</p>
+</p>
 
 {% highlight bash %}
 > ./Tests/travis.sh
