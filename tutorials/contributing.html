@@ -9,6 +9,8 @@ layout: tutorials
 We’re really excited that you want to contribute to AudioKit! To help you get started, we’ve made this guide for contributing.
 </p>
 
+<h3>Fork AudioKit</h3>
+
 <p>
 First, you're going to want to fork a copy of the AudioKit repository to your own GitHub account. To do this, click on the “Fork” button in the top right corner of the repository page.
 
@@ -21,6 +23,8 @@ First, you're going to want to fork a copy of the AudioKit repository to your ow
 Next, you need to clone your forked repository to your computer. You can do this either though the terminal, or through a Git front-end, such as SourceTree. The screenshots below are from SourceTree.
 </p>
 
+<h3>Create a Branch</h3>
+
 <p>
 To add specific features, make a branch off your repository to test your ideas. Make sure you name your branch something descriptive so you can keep track of your work; this is especially important if you are working with multiple branches at once.
 </p>
@@ -28,6 +32,8 @@ To add specific features, make a branch off your repository to test your ideas. 
 <p>
 <img src=/tutorials/createBranch.png style="width:100%; max-width:480px" alt="Create Branch">
 </p>
+
+<h3>Run Tests</h3>
 
 <p>
 After you’ve finished working on your branch, run the test script to make sure your changes haven't broken anything.  These tests will be automatically run on Travis when you make a pull request anyway, but the process is slow, so you might as well check locally first.  To run the tests, change your directory to the top level AudioKit directory and run:</p>
@@ -44,6 +50,7 @@ AudioKit passed validation.
 {% endhighlight %}
 </font>
 
+<h3>Make a Pull Request</h3>
 <p>
 Once you have confirmed that the tests pass locally, commit and push your changes.
 </p>
@@ -61,6 +68,7 @@ Next, make a pull request on the AudioKit page on GitHub. Click on the button th
 <p>Then, click "Create pull request"</p>
 <p><img src=/tutorials/createPullRequest.png style="width:100%; max-width:723px" alt="Create Pull Request"></p>
 
+<h3>Switch Back to Main Development Branch</h3>
 <p>
 When your pull request has been approved, you'll see a notifcation in GitHub. At that point, change back to your main branch.
 </p>
