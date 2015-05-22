@@ -30,7 +30,22 @@ To add specific features, make a branch off your repository to test your ideas. 
 </p>
 
 <p>
-After you’ve finished working on your branch, commit and push your changes.
+After you’ve finished working on your branch, run the test script to make sure your changes haven't broken anything.  These tests will be automatically run on Travis when you make a pull request anyway, but the process is slow, so you might as well check locally first.  To run the tests, change your directory to the top level AudioKit directory and run:</p>
+
+{% highlight bash %}
+> ./Tests/travis.sh
+{% endhighlight %}
+
+<p>This will run tests and build projects and if all goes well the last line should read:
+
+<font color=green>
+{% highlight bash %}
+AudioKit passed validation.
+{% endhighlight %}
+</font>
+
+<p>
+Once you have confirmed that the tests pass locally, commit and push your changes.
 </p>
 
 <p><img src=/tutorials/push.png style="width:100%; max-width:651px" alt="Push"></p>
