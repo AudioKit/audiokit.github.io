@@ -1,7 +1,7 @@
 ---
-title: AudioKit Examples - Binaural Audio
-header: Binaural Audio
-permalink: /examples/BinauralAudio/
+title: AudioKit Examples - Binaural Audio in Swift
+header: Binaural Audio in Swift
+permalink: /examples/swift/BinauralAudio/
 layout: examples
 last-review-date: 2015/04/26
 ---
@@ -24,68 +24,65 @@ last-review-date: 2015/04/26
   </div>
 </div>
 
-
-
 <p>The idea of this demo is to play a sound into the listener in such a way that if they move their phone, the sound feels like the source is moving in 3D space.  If you you hold the phone in your hand so that it is parallel to the floor and spin in an office chair, the sound source should feel like it is staying put while you spin.  You can also move the source up or down by tilting the phone, but the effect of elevation change is pretty subtle.  Try it for yourself!</p>
 
 <p>The heart of the 3D Spatializaiton is done with <code>AK3DBinauralAudio</code> and we expose the controls in instrument properties:</p>
 
-{% highlight objective-c %}
-_azimuth = [self createPropertyWithValue:0.0 minimum:-180.0 maximum:180.0];
-_elevation = [self createPropertyWithValue:0.0 minimum:-40.0 maximum:90.0];
+{% highlight swift %}
+var azimuth   = AKInstrumentProperty(value: 0.0, minimum: -180.0, maximum: 180.0)
+var elevation = AKInstrumentProperty(value: 0.0, minimum: -40.0,  maximum: 90.0)
 
-AK3DBinauralAudio *binaural = [[AK3DBinauralAudio alloc] initWithInput:mono];
-binaural.azimuth = _azimuth;
-binaural.elevation = _elevation;
+let binaural = AK3DBinauralAudio(input: mono)
+binaural.azimuth = azimuth
+binaural.elevation = elevation
 {% endhighlight %}
 
 <p>We also enhance the "behind the listener" feeling by varying the feedback so we need:</p>
 
-{% highlight objective-c %}
-_reverbFeedback = [self createPropertyWithValue:0.5 minimum:0.0 maximum:0.99];
-_reverbLevel    = [self createPropertyWithValue:0.5 minimum:0.0 maximum:0.99];
+{% highlight swift %}
+var reverbFeedback = AKInstrumentProperty(value: 0.5, minimum: 0.0,    maximum: 0.99)
+var reverbLevel    = AKInstrumentProperty(value: 0.5, minimum: 0.0,    maximum: 0.99)
 
-AKReverb *reverb = [AKReverb reverbWithStereoInput:binaural];
-reverb.feedback = [_reverbFeedback plus:akp(0.2)];
+let reverb = AKReverb(stereoInput: binaural)
+reverb.feedback = reverbFeedback.plus(akp(0.2))
 {% endhighlight %}
 
 
 <p>Then we set up Core Motion to update the gyroscope and handle updates:</p>
 
-{% highlight objective-c %}
-motionManager = [[CMMotionManager alloc] init];
-motionManager.deviceMotionUpdateInterval = 1/10.0;
-motionManager.gyroUpdateInterval = 0.1;
+{% highlight swift %}
+motionManager.deviceMotionUpdateInterval = 1/10.0
+motionManager.gyroUpdateInterval = 0.1
 
-[motionManager startDeviceMotionUpdatesUsingReferenceFrame:CMAttitudeReferenceFrameXTrueNorthZVertical
-                                                   toQueue:[NSOperationQueue mainQueue]
-                                               withHandler:
- ^(CMDeviceMotion *motion, NSError *error) {
+motionManager.startDeviceMotionUpdatesUsingReferenceFrame(CMAttitudeReferenceFrame.XTrueNorthZVertical, toQueue: NSOperationQueue.mainQueue()) {
+    (motion: CMDeviceMotion?, _) in
 
-     // Attitude -----------------------------------------------------------
-
-     CMAttitude *attitude = motion.attitude;
-     NSMutableDictionary *d = [NSMutableDictionary dictionary];
-     [d setObject:[NSNumber numberWithFloat:attitude.roll]  forKey:@"roll"];
-     [d setObject:[NSNumber numberWithFloat:attitude.pitch] forKey:@"pitch"];
-     [d setObject:[NSNumber numberWithFloat:attitude.yaw]   forKey:@"yaw"];
-     [self receivedOrientationDictionary:d];
- }];
+    // Attitude -----------------------------------------------------------
+    if let attitude: CMAttitude = motion?.attitude {
+        var d = [String:Float]()
+        d["roll"] = Float(attitude.roll)
+        d["pitch"] = Float(attitude.pitch)
+        d["yaw"] = Float(attitude.yaw)
+        self.receivedOrientationDictionary(d)
+    }
+}
 {% endhighlight %}
 
-<p>with our method that uses the raw data to set the instrument's properties:</p>
+<p>with our function that uses the raw data to set the instrument's properties:</p>
 
-{% highlight objective-c %}
-- (void)receivedOrientationDictionary:(NSDictionary *)data
-{
-    float pitch = [(NSNumber *)data[@"pitch"] floatValue];
-    float yaw   = [(NSNumber *)data[@"yaw"]   floatValue];
-    player.elevation.value = degrees(pitch);
-    player.azimuth.value =degrees(yaw);
-    player.reverbFeedback.value = fabs(degrees(yaw))/360.0;
-    player.reverbLevel.value = fabs(degrees(yaw))/360.0;
-    headView.azimuth = - degrees(yaw);
-    [headView setNeedsDisplay];
+{% highlight swift %}
+func receivedOrientationDictionary(data: NSDictionary) {
+
+    let pitch = data["pitch"] as! Float
+    let yaw = data["yaw"] as! Float
+
+    player.elevation.value = degrees(pitch)
+    player.azimuth.value = degrees(yaw)
+    player.reverbFeedback.value = fabs(degrees(yaw))/360.0
+    player.reverbLevel.value = fabs(degrees(yaw))/360.0
+
+    headView.azimuth = CGFloat(-degrees(yaw))
+    headView.setNeedsDisplay()
 }
 {% endhighlight %}
 
