@@ -6,6 +6,8 @@ description: > #
 url: "http://audiokit.io" # the base hostname & protocol for your site
 port: 4444
 permalink: /blog/:year/:month/:day/:title/
+paginate: 5
+paginate_path: "/blog/page:num/"
 twitter_username:
 github_username:  AudioKit
 
