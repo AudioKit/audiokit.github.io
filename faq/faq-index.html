@@ -42,10 +42,6 @@ What is AudioKit's license?
 AudioKit is offered under the <a href="https://github.com/audiokit/AudioKit/blob/develop/LICENSE">MIT License</a>.  Some of AudioKit's dependencies (libsndfile) are LGPL, so these dependencies are dynamically linked.  This is fine for your OSX projects, but it does limit you to using iOS8 and newer, to be strictly compliant.  That being said, plenty of Csound-powered apps in the Apple App Store statically link LGPL libraries and it hasn't been an issue.
 </p>
 
-</div>
-
-<div class="col_half nobottommargin col_last">
-
 <h3 id="faq-5"><strong>Q.</strong>
 Is AudioKit CPU or memory intensive?
 </h3>
@@ -54,11 +50,31 @@ Is AudioKit CPU or memory intensive?
 We have not found AudioKit to be very CPU or memory intensive during application testing and development. However, you may notice a spike in CPU usage if you are using a relatively high number of instruments. This may typically happen if you have accidentaly allcoated a new instrument for every individual note in a phrase.
 </p>
 
+</div>
+
+<div class="col_half nobottommargin col_last">
+
 <p>
 Playgrounds, however, are rather CPU intensive. Playgrounds are only used for audio protoyping, not for deployment, so you don't need to worry if you experience heavy CPU useage while using Playgrounds.
 </p>
 
 <h3 id="faq-6"><strong>Q.</strong>
+"Can I use Ogg Vorbis or FLAC format files with AudioKit?"
+</h3>
+
+<p>
+You can on OS X apps, but not iOS apps. The reason for this is that we're using a compiled version of libsndfile that already supports Ogg Vorbis or FLAC files on the Mac side, but not for iOS.
+</p>
+
+<p>
+Since iOS apps are much more resource constrained than OS X apps, we thought it best not to include another dependency in the AudioKit framework to support these edge cases.
+</p>
+
+<p>
+Playgrounds, however, are rather CPU intensive. Playgrounds are only used for audio protoyping, not for deployment, so you don't need to worry if you experience heavy CPU useage while using Playgrounds.
+</p>
+
+<h3 id="faq-7"><strong>Q.</strong>
 Is there an (Android/JavaScript/Xamarin) version on the way?
 </h3>
 
@@ -72,7 +88,7 @@ That being said, we are extremely eager to get to work on them. But we need your
 
 
 
-<h3 id="faq-7"><strong>Q.</strong>
+<h3 id="faq-8"><strong>Q.</strong>
 What if my question isn't on here?
 </h3>
 
