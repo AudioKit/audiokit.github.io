@@ -86,10 +86,10 @@ Go to NewInstrument.m, where we are going to initialize our instrument propertie
 </p>
 
 {% highlight objective-c %}
-_frequency = [self createPropertyWithValue:440 minimum:150 maximum:740];
-_carrierMultiplier = [self createPropertyWithValue:0.5 minimum:0.0 maximum:1.0];
-_modulationIndex = [self createPropertyWithValue:0.5 minimum:0.0 maximum:1.0];
-_amplitude = [self createPropertyWithValue:0.25 minimum:0.0 maximum:0.5];
+_frequency         = [self createPropertyWithValue:440  minimum:150 maximum:740];
+_carrierMultiplier = [self createPropertyWithValue:0.5  minimum:0.0 maximum:1.0];
+_modulationIndex   = [self createPropertyWithValue:0.5  minimum:0.0 maximum:1.0];
+_amplitude         = [self createPropertyWithValue:0.25 minimum:0.0 maximum:0.5];
 {% endhighlight %}
 
 <p>
@@ -116,10 +116,10 @@ fmOscillator.amplitude         = _amplitude;
     self = [super init];
     if (self) {
 
-        _frequency = [self createPropertyWithValue:440 minimum:150 maximum:740];
-        _carrierMultiplier = [self createPropertyWithValue:0.5 minimum:0.0 maximum:1.0];
-        _modulationIndex = [self createPropertyWithValue:0.5 minimum:0.0 maximum:1.0];
-        _amplitude = [self createPropertyWithValue:0.25 minimum:0.0 maximum:0.5];
+        _frequency         = [self createPropertyWithValue:440  minimum:150 maximum:740];
+        _carrierMultiplier = [self createPropertyWithValue:0.5  minimum:0.0 maximum:1.0];
+        _modulationIndex   = [self createPropertyWithValue:0.5  minimum:0.0 maximum:1.0];
+        _amplitude         = [self createPropertyWithValue:0.25 minimum:0.0 maximum:0.5];
 
         AKFMOscillator *fmOscillator;
         fmOscillator = [[AKFMOscillator alloc] init];
@@ -161,10 +161,10 @@ fmOscillator.amplitude         = _amplitude;
     newInstrument = [[NewInstrument alloc] init];
     [AKOrchestra addInstrument:newInstrument];
 
-    frequencySlider.property = newInstrument.frequency;
+    frequencySlider.property         = newInstrument.frequency;
     carrierMultiplierSlider.property = newInstrument.carrierMultiplier;
-    modulationIndexSlider.property = newInstrument.modulationIndex;
-    amplitudeSlider.property = newInstrument.amplitude;
+    modulationIndexSlider.property   = newInstrument.modulationIndex;
+    amplitudeSlider.property         = newInstrument.amplitude;
 }
 
 
