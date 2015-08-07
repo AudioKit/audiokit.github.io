@@ -5,7 +5,7 @@ permalink: /sequencing/
 layout: section_index
 ---
 
-<p>There are two powerful sequencing systems available in AudioKit: <strong>note phrases</strong> and <strong>event sequences</strong>.  The difference betweeen the two is that phrases are currently limited to playing notes, whereas sequences trigger events that can be notes or any other code that you like.  Phrases are precise and fast, and suitable for a certain class of tasks (such as musical events).  While sequences are extremely general, timing is limited to the accuracy of Apple's scheduling system.</p>
+<p>There are two powerful sequencing systems available in AudioKit: <strong>note phrases</strong> and <strong>event sequences</strong>.  The difference between the two is that phrases are currently limited to playing notes, whereas sequences trigger events that can be notes or any other code that you like.  Phrases are precise and fast, and suitable for a certain class of tasks (such as musical events).  While sequences are extremely general, timing is limited to the accuracy of Apple's scheduling system.</p>
 
 <h3>Example Project</h3>
 
@@ -57,7 +57,7 @@ AKEvent *yourEvent = [[AKEvent alloc] initWithBlock:^{
     yourInstrument.frequency.value = 440;
 
     // or even non-audio related code:
-    NSLog(@"I am also logging during the sequnce!");
+    NSLog(@"I am also logging during the sequence!");
 }];
 {% endhighlight %}
 
