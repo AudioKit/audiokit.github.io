@@ -605,8 +605,6 @@ title: EZAudioUtilities
   
   <div class="method-subsection brief-description">
     Initializes the circular buffer (just a wrapper around the C method)
-*  @param circularBuffer Pointer to an instance of the TPCircularBuffer
-*  @param size           The length of the TPCircularBuffer (usually 1024)
   </div>
   
     
@@ -614,6 +612,16 @@ title: EZAudioUtilities
  {% highlight objective-c %}+ (void)circularBuffer:(TPCircularBuffer *)circularBuffer withSize:(int)size{% endhighlight %}
 
     
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>circularBuffer</strong>:
+      Pointer to an instance of the TPCircularBuffer</li>
+    
+    <li><i class="icon-line-play"></i><strong>size</strong>:
+      The length of the TPCircularBuffer (usually 1024)</li>
+    
+    </ul>
   
 
   
@@ -1591,7 +1599,7 @@ stored in one buffer one after another instead of two (or n channels) parallel b
   
     
 
- {% highlight objective-c %}+ (AudioStreamBasicDescription)stereoFloatNonInterleavedFormatWithSampleRate:(float)sameRate{% endhighlight %}
+ {% highlight objective-c %}+ (AudioStreamBasicDescription)stereoFloatNonInterleavedFormatWithSampleRate:(float)sampleRate{% endhighlight %}
 
     
   
