@@ -30,9 +30,378 @@ title: AKPitchShifterPedal
 
           
           
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Properties" name="properties"></a>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
+            
+            <div class="section-method">
+  <a name="//api/name/feedback" title="feedback"></a>
+  <h4 class="subsubtitle method-title">feedback</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Amount of feedback (0-1)
+  </div>
+  
+    
+
+ {% highlight objective-c %}@property AKInstrumentProperty *feedback{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/frequencyShift" title="frequencyShift"></a>
+  <h4 class="subsubtitle method-title">frequencyShift</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    How much to shift the frequency (1=None, <1 lower, >1 higher)
+  </div>
+  
+    
+
+ {% highlight objective-c %}@property AKInstrumentProperty *frequencyShift{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/mix" title="mix"></a>
+  <h4 class="subsubtitle method-title">mix</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Source and delay mix (0-1)
+  </div>
+  
+    
+
+ {% highlight objective-c %}@property AKInstrumentProperty *mix{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+          
 
           
 
+          
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithInput:" title="initWithInput:"></a>
+  <h4 class="subsubtitle method-title">initWithInput:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Initialize the pitch shifter with an input
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKAudio *)input{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      The input source audio signal</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setPresetArcadeFire" title="setPresetArcadeFire"></a>
+  <h4 class="subsubtitle method-title">setPresetArcadeFire</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    A pew-pew old school arcade fire button sound preset
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (void)setPresetArcadeFire{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setPresetHardBraker" title="setPresetHardBraker"></a>
+  <h4 class="subsubtitle method-title">setPresetHardBraker</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    A progressive lowering of a pitch preset
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (void)setPresetHardBraker{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setPresetPerfectFifthDown" title="setPresetPerfectFifthDown"></a>
+  <h4 class="subsubtitle method-title">setPresetPerfectFifthDown</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    A preset for a perfect fifth lower
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (void)setPresetPerfectFifthDown{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setPresetPerfectFifthUp" title="setPresetPerfectFifthUp"></a>
+  <h4 class="subsubtitle method-title">setPresetPerfectFifthUp</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    A preset for a perfect fifth higher
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (void)setPresetPerfectFifthUp{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setPresetPerfectFourthDown" title="setPresetPerfectFourthDown"></a>
+  <h4 class="subsubtitle method-title">setPresetPerfectFourthDown</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    A preset for a perfect fourth lower
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (void)setPresetPerfectFourthDown{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setPresetPerfectFourthUp" title="setPresetPerfectFourthUp"></a>
+  <h4 class="subsubtitle method-title">setPresetPerfectFourthUp</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    A preset for a perfect fourth higher
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (void)setPresetPerfectFourthUp{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setPresetWitnessProtection" title="setPresetWitnessProtection"></a>
+  <h4 class="subsubtitle method-title">setPresetWitnessProtection</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    A lowered voice preset
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (void)setPresetWitnessProtection{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
           
           
         </div>
