@@ -1,0 +1,328 @@
+---
+layout: docs
+header: AKHighShelfParametricEqualizerFilter
+title: AKHighShelfParametricEqualizerFilter
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div>
+          
+          <table class="table table-bordered"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKHighShelfParametricEqualizerFilter.h<br />AKHighShelfParametricEqualizerFilter.m</td>
+</tr>
+            </tbody></table>
+          
+
+          
+          
+            <a title="Overview" name="overview"></a>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Implementation of Zoelzer's parametric equalizer filters</p>
+          
+          
+
+
+          
+          
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Properties" name="properties"></a>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
+            
+            <div class="section-method">
+  <a name="//api/name/gain" title="gain"></a>
+  <h4 class="subsubtitle method-title">gain</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Amount or boost or cut.  Value of 1 is a flat response. [Default Value: 1]
+  </div>
+  
+    
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *gain{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/resonance" title="resonance"></a>
+  <h4 class="subsubtitle method-title">resonance</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Q of the filter sqrt(0.5) is no resonance [Default Value: 0.707]
+  </div>
+  
+    
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *resonance{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+          
+
+          
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Class Methods" name="class_methods"></a>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
+            
+            <div class="section-method">
+  <a name="//api/name/WithInput:cornerFrequency:" title="WithInput:cornerFrequency:"></a>
+  <h4 class="subsubtitle method-title">WithInput:cornerFrequency:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the high shelf parametric equalizer filter with default values
+  </div>
+  
+    
+
+ {% highlight objective-c %}+ (instancetype)WithInput:(AKParameter *)input cornerFrequency:(AKParameter *)cornerFrequency{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Source audio</li>
+    
+    <li><i class="icon-line-play"></i><strong>cornerFrequency</strong>:
+      Corner frequency</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+          
+
+          
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithInput:cornerFrequency:" title="initWithInput:cornerFrequency:"></a>
+  <h4 class="subsubtitle method-title">initWithInput:cornerFrequency:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the high shelf parametric equalizer filter with default values
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input cornerFrequency:(AKParameter *)cornerFrequency{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Source audio</li>
+    
+    <li><i class="icon-line-play"></i><strong>cornerFrequency</strong>:
+      Corner frequency</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithInput:cornerFrequency:resonance:gain:" title="initWithInput:cornerFrequency:resonance:gain:"></a>
+  <h4 class="subsubtitle method-title">initWithInput:cornerFrequency:resonance:gain:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the high shelf parametric equalizer filter with all values
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input cornerFrequency:(AKParameter *)cornerFrequency resonance:(AKParameter *)resonance gain:(AKParameter *)gain{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Source audio [Default Value: ]</li>
+    
+    <li><i class="icon-line-play"></i><strong>cornerFrequency</strong>:
+      Corner frequency Updated at Control-rate. [Default Value: ]</li>
+    
+    <li><i class="icon-line-play"></i><strong>resonance</strong>:
+      Q of the filter sqrt(0.5) is no resonance Updated at Control-rate. [Default Value: 0.707]</li>
+    
+    <li><i class="icon-line-play"></i><strong>gain</strong>:
+      Amount or boost or cut.  Value of 1 is a flat response. Updated at Control-rate. [Default Value: 1]</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalGain:" title="setOptionalGain:"></a>
+  <h4 class="subsubtitle method-title">setOptionalGain:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Set an optional gain
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (void)setOptionalGain:(AKParameter *)gain{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>gain</strong>:
+      Amount or boost or cut.  Value of 1 is a flat response. Updated at Control-rate. [Default Value: 1]</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalResonance:" title="setOptionalResonance:"></a>
+  <h4 class="subsubtitle method-title">setOptionalResonance:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Set an optional resonance
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (void)setOptionalResonance:(AKParameter *)resonance{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>resonance</strong>:
+      Q of the filter sqrt(0.5) is no resonance Updated at Control-rate. [Default Value: 0.707]</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+          
+          
+        </div>
+      </div>

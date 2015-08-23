@@ -117,6 +117,165 @@ Delays an input signal by some time interval.</p>
   
 </div>
             
+            <div class="section-method">
+  <a name="//api/name/presetChoppedDelayWithInput:" title="presetChoppedDelayWithInput:"></a>
+  <h4 class="subsubtitle method-title">presetChoppedDelayWithInput:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the delay with 'chopped' values
+  </div>
+  
+    
+
+ {% highlight objective-c %}+ (instancetype)presetChoppedDelayWithInput:(AKParameter *)input{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input signal, usually audio.</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/presetDefaultDelayWithInput:delayTime:" title="presetDefaultDelayWithInput:delayTime:"></a>
+  <h4 class="subsubtitle method-title">presetDefaultDelayWithInput:delayTime:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the delay with default values
+  </div>
+  
+    
+
+ {% highlight objective-c %}+ (instancetype)presetDefaultDelayWithInput:(AKParameter *)input delayTime:(AKConstant *)delayTime{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input signal, usually audio.</li>
+    
+    <li><i class="icon-line-play"></i><strong>delayTime</strong>:
+      Requested delay time in seconds.</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/presetRhythmicAttackDelayWithInput:" title="presetRhythmicAttackDelayWithInput:"></a>
+  <h4 class="subsubtitle method-title">presetRhythmicAttackDelayWithInput:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the delay with a rhythmic sound
+  </div>
+  
+    
+
+ {% highlight objective-c %}+ (instancetype)presetRhythmicAttackDelayWithInput:(AKParameter *)input{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input signal, usually audio.</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/presetShortAttackDelayWithInput:" title="presetShortAttackDelayWithInput:"></a>
+  <h4 class="subsubtitle method-title">presetShortAttackDelayWithInput:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the delay with 'chopped' values
+  </div>
+  
+    
+
+ {% highlight objective-c %}+ (instancetype)presetShortAttackDelayWithInput:(AKParameter *)input{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input signal, usually audio.</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
           
 
           
@@ -192,6 +351,168 @@ Delays an input signal by some time interval.</p>
     
     <li><i class="icon-line-play"></i><strong>feedback</strong>:
       How much of the signal is sent back into the delay line.  Usually values range from 0-1. Updated at Control-rate. [Default Value: 0.0]</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithPresetChoppedDelayWithInput:" title="initWithPresetChoppedDelayWithInput:"></a>
+  <h4 class="subsubtitle method-title">initWithPresetChoppedDelayWithInput:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the delay with 'chopped' values
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (instancetype)initWithPresetChoppedDelayWithInput:(AKParameter *)input{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input signal, usually audio.</li>
+    
+    <li><i class="icon-line-play"></i><strong>delayTime</strong>:
+      Requested delay time in seconds.</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithPresetDefaultDelayWithInput:delayTime:" title="initWithPresetDefaultDelayWithInput:delayTime:"></a>
+  <h4 class="subsubtitle method-title">initWithPresetDefaultDelayWithInput:delayTime:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the delay with default values
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (instancetype)initWithPresetDefaultDelayWithInput:(AKParameter *)input delayTime:(AKConstant *)delayTime{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input signal, usually audio.</li>
+    
+    <li><i class="icon-line-play"></i><strong>delayTime</strong>:
+      Requested delay time in seconds.</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithPresetRhythmicDelayWithInput:" title="initWithPresetRhythmicDelayWithInput:"></a>
+  <h4 class="subsubtitle method-title">initWithPresetRhythmicDelayWithInput:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the delay with a rhythmic sound
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (instancetype)initWithPresetRhythmicDelayWithInput:(AKParameter *)input{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input signal, usually audio.</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithPresetShortAttackDelayWithInput:" title="initWithPresetShortAttackDelayWithInput:"></a>
+  <h4 class="subsubtitle method-title">initWithPresetShortAttackDelayWithInput:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the delay with 'short attack' values
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (instancetype)initWithPresetShortAttackDelayWithInput:(AKParameter *)input{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input signal, usually audio.</li>
     
     </ul>
   

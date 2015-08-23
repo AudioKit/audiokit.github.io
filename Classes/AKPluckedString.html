@@ -139,7 +139,7 @@ A user can control the pluck point, the pickup point, the filter, and an additio
   
   
   <div class="method-subsection brief-description">
-    The coefficient of reflection, indicating the lossiness and the rate of decay. It must be strictly between 0 and 1 (it will complain about both 0 and 1). [Default Value: 0.1]
+    The coefficient of reflection, indicating the lossiness and the rate of decay. It should be between 0 and 1. [Default Value: 0.1]
   </div>
   
     
@@ -235,6 +235,134 @@ A user can control the pluck point, the pickup point, the filter, and an additio
   
 </div>
             
+            <div class="section-method">
+  <a name="//api/name/presetDecayingPluckedString" title="presetDecayingPluckedString"></a>
+  <h4 class="subsubtitle method-title">presetDecayingPluckedString</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the plucked string with a quick decay
+  </div>
+  
+    
+
+ {% highlight objective-c %}+ (instancetype)presetDecayingPluckedString{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/presetDefaultPluckedString" title="presetDefaultPluckedString"></a>
+  <h4 class="subsubtitle method-title">presetDefaultPluckedString</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the plucked string with default values
+  </div>
+  
+    
+
+ {% highlight objective-c %}+ (instancetype)presetDefaultPluckedString{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/presetRoundedPluckedString" title="presetRoundedPluckedString"></a>
+  <h4 class="subsubtitle method-title">presetRoundedPluckedString</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the plucked string with a rounded sound
+  </div>
+  
+    
+
+ {% highlight objective-c %}+ (instancetype)presetRoundedPluckedString{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/presetSnappyPluckedString" title="presetSnappyPluckedString"></a>
+  <h4 class="subsubtitle method-title">presetSnappyPluckedString</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the plucked string with a 'snappy' sound
+  </div>
+  
+    
+
+ {% highlight objective-c %}+ (instancetype)presetSnappyPluckedString{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
           
 
           
@@ -308,6 +436,102 @@ A user can control the pluck point, the pickup point, the filter, and an additio
       Amplitude of note. Updated at Control-rate. [Default Value: 1.0]</li>
     
     </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithPresetDecayingPluckedString" title="initWithPresetDecayingPluckedString"></a>
+  <h4 class="subsubtitle method-title">initWithPresetDecayingPluckedString</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the plucked string with a quick decay
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (instancetype)initWithPresetDecayingPluckedString{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithPresetRoundedPluckedString" title="initWithPresetRoundedPluckedString"></a>
+  <h4 class="subsubtitle method-title">initWithPresetRoundedPluckedString</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the plucked string with a rounded sound
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (instancetype)initWithPresetRoundedPluckedString{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithPresetSnappyPluckedString" title="initWithPresetSnappyPluckedString"></a>
+  <h4 class="subsubtitle method-title">initWithPresetSnappyPluckedString</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the plucked string with a 'snappy' sound
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (instancetype)initWithPresetSnappyPluckedString{% endhighlight %}
+
+    
   
 
   

@@ -69,6 +69,38 @@ Audio output is a tone similar to a flute, using a physical model developed from
 </div>
             
             <div class="section-method">
+  <a name="//api/name/airJetReflection" title="airJetReflection"></a>
+  <h4 class="subsubtitle method-title">airJetReflection</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Amount of reflection in the breath jet that powers the flute. [Default Value: 0.5]
+  </div>
+  
+    
+
+ {% highlight objective-c %}@property (nonatomic) AKConstant *airJetReflection{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
   <a name="//api/name/amplitude" title="amplitude"></a>
   <h4 class="subsubtitle method-title">amplitude</h4>
 
@@ -133,38 +165,6 @@ Audio output is a tone similar to a flute, using a physical model developed from
 </div>
             
             <div class="section-method">
-  <a name="//api/name/endrf" title="endrf"></a>
-  <h4 class="subsubtitle method-title">endrf</h4>
-
-  
-  
-  <div class="method-subsection brief-description">
-    Reflection coefficient of the breath jet. [Default Value: 0.5]
-  </div>
-  
-    
-
- {% highlight objective-c %}@property (nonatomic) AKConstant *endrf{% endhighlight %}
-
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-  
-</div>
-            
-            <div class="section-method">
   <a name="//api/name/frequency" title="frequency"></a>
   <h4 class="subsubtitle method-title">frequency</h4>
 
@@ -197,18 +197,18 @@ Audio output is a tone similar to a flute, using a physical model developed from
 </div>
             
             <div class="section-method">
-  <a name="//api/name/jetrf" title="jetrf"></a>
-  <h4 class="subsubtitle method-title">jetrf</h4>
+  <a name="//api/name/noiseAmplitude" title="noiseAmplitude"></a>
+  <h4 class="subsubtitle method-title">noiseAmplitude</h4>
 
   
   
   <div class="method-subsection brief-description">
-    Amount of reflection in the breath jet that powers the flute. [Default Value: 0.5]
+    Amplitude of the noise component, about 0 to 0.5 [Default Value: 0.15]
   </div>
   
     
 
- {% highlight objective-c %}@property (nonatomic) AKConstant *jetrf{% endhighlight %}
+ {% highlight objective-c %}@property (nonatomic) AKParameter *noiseAmplitude{% endhighlight %}
 
     
   
@@ -229,18 +229,18 @@ Audio output is a tone similar to a flute, using a physical model developed from
 </div>
             
             <div class="section-method">
-  <a name="//api/name/noiseAmplitude" title="noiseAmplitude"></a>
-  <h4 class="subsubtitle method-title">noiseAmplitude</h4>
+  <a name="//api/name/reflectionCoefficient" title="reflectionCoefficient"></a>
+  <h4 class="subsubtitle method-title">reflectionCoefficient</h4>
 
   
   
   <div class="method-subsection brief-description">
-    Amplitude of the noise component, about 0 to 0.5 [Default Value: 0.15]
+    Reflection coefficient of the breath jet. [Default Value: 0.5]
   </div>
   
     
 
- {% highlight objective-c %}@property (nonatomic) AKParameter *noiseAmplitude{% endhighlight %}
+ {% highlight objective-c %}@property (nonatomic) AKConstant *reflectionCoefficient{% endhighlight %}
 
     
   
@@ -427,6 +427,166 @@ Audio output is a tone similar to a flute, using a physical model developed from
   
 </div>
             
+            <div class="section-method">
+  <a name="//api/name/presetDefaultFlute" title="presetDefaultFlute"></a>
+  <h4 class="subsubtitle method-title">presetDefaultFlute</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the flute with default values
+  </div>
+  
+    
+
+ {% highlight objective-c %}+ (instancetype)presetDefaultFlute{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/presetMicFeedbackFlute" title="presetMicFeedbackFlute"></a>
+  <h4 class="subsubtitle method-title">presetMicFeedbackFlute</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the flute with a sound resembling microphone feedback
+  </div>
+  
+    
+
+ {% highlight objective-c %}+ (instancetype)presetMicFeedbackFlute{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/presetSciFiNoiseFlute" title="presetSciFiNoiseFlute"></a>
+  <h4 class="subsubtitle method-title">presetSciFiNoiseFlute</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the flute with a sci-fi type sound
+  </div>
+  
+    
+
+ {% highlight objective-c %}+ (instancetype)presetSciFiNoiseFlute{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/presetScreamingFlute" title="presetScreamingFlute"></a>
+  <h4 class="subsubtitle method-title">presetScreamingFlute</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the flute with a screaming space sound
+  </div>
+  
+    
+
+ {% highlight objective-c %}+ (instancetype)presetScreamingFlute{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/presetShipsHornFlute" title="presetShipsHornFlute"></a>
+  <h4 class="subsubtitle method-title">presetShipsHornFlute</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the flute with a sound resembling a large ship horn
+  </div>
+  
+    
+
+ {% highlight objective-c %}+ (instancetype)presetShipsHornFlute{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
           
 
           
@@ -467,8 +627,8 @@ Audio output is a tone similar to a flute, using a physical model developed from
 </div>
             
             <div class="section-method">
-  <a name="//api/name/initWithFrequency:attackTime:releaseTime:airJetPressure:jetrf:endrf:noiseAmplitude:amplitude:vibratoShape:vibratoAmplitude:vibratoFrequency:" title="initWithFrequency:attackTime:releaseTime:airJetPressure:jetrf:endrf:noiseAmplitude:amplitude:vibratoShape:vibratoAmplitude:vibratoFrequency:"></a>
-  <h4 class="subsubtitle method-title">initWithFrequency:attackTime:releaseTime:airJetPressure:jetrf:endrf:noiseAmplitude:amplitude:vibratoShape:vibratoAmplitude:vibratoFrequency:</h4>
+  <a name="//api/name/initWithFrequency:attackTime:releaseTime:airJetPressure:airJetReflection:reflectionCoefficient:noiseAmplitude:amplitude:vibratoShape:vibratoAmplitude:vibratoFrequency:" title="initWithFrequency:attackTime:releaseTime:airJetPressure:airJetReflection:reflectionCoefficient:noiseAmplitude:amplitude:vibratoShape:vibratoAmplitude:vibratoFrequency:"></a>
+  <h4 class="subsubtitle method-title">initWithFrequency:attackTime:releaseTime:airJetPressure:airJetReflection:reflectionCoefficient:noiseAmplitude:amplitude:vibratoShape:vibratoAmplitude:vibratoFrequency:</h4>
 
   
   
@@ -478,7 +638,7 @@ Audio output is a tone similar to a flute, using a physical model developed from
   
     
 
- {% highlight objective-c %}- (instancetype)initWithFrequency:(AKParameter *)frequency attackTime:(AKConstant *)attackTime releaseTime:(AKConstant *)releaseTime airJetPressure:(AKParameter *)airJetPressure jetrf:(AKConstant *)jetrf endrf:(AKConstant *)endrf noiseAmplitude:(AKParameter *)noiseAmplitude amplitude:(AKParameter *)amplitude vibratoShape:(AKTable *)vibratoShape vibratoAmplitude:(AKParameter *)vibratoAmplitude vibratoFrequency:(AKParameter *)vibratoFrequency{% endhighlight %}
+ {% highlight objective-c %}- (instancetype)initWithFrequency:(AKParameter *)frequency attackTime:(AKConstant *)attackTime releaseTime:(AKConstant *)releaseTime airJetPressure:(AKParameter *)airJetPressure airJetReflection:(AKConstant *)airJetReflection reflectionCoefficient:(AKConstant *)reflectionCoefficient noiseAmplitude:(AKParameter *)noiseAmplitude amplitude:(AKParameter *)amplitude vibratoShape:(AKTable *)vibratoShape vibratoAmplitude:(AKParameter *)vibratoAmplitude vibratoFrequency:(AKParameter *)vibratoFrequency{% endhighlight %}
 
     
   
@@ -496,10 +656,10 @@ Audio output is a tone similar to a flute, using a physical model developed from
     <li><i class="icon-line-play"></i><strong>airJetPressure</strong>:
       a parameter controlling the air jet. Values should be positive, and the useful range is approximately 0.08 to 0.56. Updated at Control-rate. [Default Value: 0.2]</li>
     
-    <li><i class="icon-line-play"></i><strong>jetrf</strong>:
+    <li><i class="icon-line-play"></i><strong>airJetReflection</strong>:
       Amount of reflection in the breath jet that powers the flute. [Default Value: 0.5]</li>
     
-    <li><i class="icon-line-play"></i><strong>endrf</strong>:
+    <li><i class="icon-line-play"></i><strong>reflectionCoefficient</strong>:
       Reflection coefficient of the breath jet. [Default Value: 0.5]</li>
     
     <li><i class="icon-line-play"></i><strong>noiseAmplitude</strong>:
@@ -518,6 +678,134 @@ Audio output is a tone similar to a flute, using a physical model developed from
       Frequency of vibrato in Hertz. Suggested range is 0 to 12 Updated at Control-rate. [Default Value: 0]</li>
     
     </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithPresetMicFeedbackFlute" title="initWithPresetMicFeedbackFlute"></a>
+  <h4 class="subsubtitle method-title">initWithPresetMicFeedbackFlute</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the flute with a sound resembling microphone feedback
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (instancetype)initWithPresetMicFeedbackFlute{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithPresetSciFiNoiseFlute" title="initWithPresetSciFiNoiseFlute"></a>
+  <h4 class="subsubtitle method-title">initWithPresetSciFiNoiseFlute</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the flute with a sci-fi type sound
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (instancetype)initWithPresetSciFiNoiseFlute{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithPresetScreamingFlute" title="initWithPresetScreamingFlute"></a>
+  <h4 class="subsubtitle method-title">initWithPresetScreamingFlute</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the flute with a screaming space sound
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (instancetype)initWithPresetScreamingFlute{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithPresetShipsHornFlute" title="initWithPresetShipsHornFlute"></a>
+  <h4 class="subsubtitle method-title">initWithPresetShipsHornFlute</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the flute with a sound resembling a large ship horn
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (instancetype)initWithPresetShipsHornFlute{% endhighlight %}
+
+    
   
 
   
@@ -555,6 +843,45 @@ Audio output is a tone similar to a flute, using a physical model developed from
     
     <li><i class="icon-line-play"></i><strong>airJetPressure</strong>:
       a parameter controlling the air jet. Values should be positive, and the useful range is approximately 0.08 to 0.56. Updated at Control-rate. [Default Value: 0.2]</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalAirJetReflection:" title="setOptionalAirJetReflection:"></a>
+  <h4 class="subsubtitle method-title">setOptionalAirJetReflection:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Set an optional air jet reflection
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (void)setOptionalAirJetReflection:(AKConstant *)airJetReflection{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>airJetReflection</strong>:
+      Amount of reflection in the breath jet that powers the flute. [Default Value: 0.5]</li>
     
     </ul>
   
@@ -653,45 +980,6 @@ Audio output is a tone similar to a flute, using a physical model developed from
 </div>
             
             <div class="section-method">
-  <a name="//api/name/setOptionalEndrf:" title="setOptionalEndrf:"></a>
-  <h4 class="subsubtitle method-title">setOptionalEndrf:</h4>
-
-  
-  
-  <div class="method-subsection brief-description">
-    Set an optional endrf
-  </div>
-  
-    
-
- {% highlight objective-c %}- (void)setOptionalEndrf:(AKConstant *)endrf{% endhighlight %}
-
-    
-  
-  <ul class="iconlist">
-    
-    <li><i class="icon-line-play"></i><strong>endrf</strong>:
-      Reflection coefficient of the breath jet. [Default Value: 0.5]</li>
-    
-    </ul>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-  
-</div>
-            
-            <div class="section-method">
   <a name="//api/name/setOptionalFrequency:" title="setOptionalFrequency:"></a>
   <h4 class="subsubtitle method-title">setOptionalFrequency:</h4>
 
@@ -731,25 +1019,25 @@ Audio output is a tone similar to a flute, using a physical model developed from
 </div>
             
             <div class="section-method">
-  <a name="//api/name/setOptionalJetrf:" title="setOptionalJetrf:"></a>
-  <h4 class="subsubtitle method-title">setOptionalJetrf:</h4>
+  <a name="//api/name/setOptionalNoiseAmplitude:" title="setOptionalNoiseAmplitude:"></a>
+  <h4 class="subsubtitle method-title">setOptionalNoiseAmplitude:</h4>
 
   
   
   <div class="method-subsection brief-description">
-    Set an optional jetrf
+    Set an optional noise amplitude
   </div>
   
     
 
- {% highlight objective-c %}- (void)setOptionalJetrf:(AKConstant *)jetrf{% endhighlight %}
+ {% highlight objective-c %}- (void)setOptionalNoiseAmplitude:(AKParameter *)noiseAmplitude{% endhighlight %}
 
     
   
   <ul class="iconlist">
     
-    <li><i class="icon-line-play"></i><strong>jetrf</strong>:
-      Amount of reflection in the breath jet that powers the flute. [Default Value: 0.5]</li>
+    <li><i class="icon-line-play"></i><strong>noiseAmplitude</strong>:
+      Amplitude of the noise component, about 0 to 0.5 Updated at Control-rate. [Default Value: 0.15]</li>
     
     </ul>
   
@@ -770,25 +1058,25 @@ Audio output is a tone similar to a flute, using a physical model developed from
 </div>
             
             <div class="section-method">
-  <a name="//api/name/setOptionalNoiseAmplitude:" title="setOptionalNoiseAmplitude:"></a>
-  <h4 class="subsubtitle method-title">setOptionalNoiseAmplitude:</h4>
+  <a name="//api/name/setOptionalReflectionCoefficient:" title="setOptionalReflectionCoefficient:"></a>
+  <h4 class="subsubtitle method-title">setOptionalReflectionCoefficient:</h4>
 
   
   
   <div class="method-subsection brief-description">
-    Set an optional noise amplitude
+    Set an optional reflection coefficient
   </div>
   
     
 
- {% highlight objective-c %}- (void)setOptionalNoiseAmplitude:(AKParameter *)noiseAmplitude{% endhighlight %}
+ {% highlight objective-c %}- (void)setOptionalReflectionCoefficient:(AKConstant *)reflectionCoefficient{% endhighlight %}
 
     
   
   <ul class="iconlist">
     
-    <li><i class="icon-line-play"></i><strong>noiseAmplitude</strong>:
-      Amplitude of the noise component, about 0 to 0.5 Updated at Control-rate. [Default Value: 0.15]</li>
+    <li><i class="icon-line-play"></i><strong>reflectionCoefficient</strong>:
+      Reflection coefficient of the breath jet. [Default Value: 0.5]</li>
     
     </ul>
   

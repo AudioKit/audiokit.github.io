@@ -1,0 +1,489 @@
+---
+layout: docs
+header: AKPitchShifter
+title: AKPitchShifter
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div>
+          
+          <table class="table table-bordered"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKPitchShifter.h<br />AKPitchShifter.m</td>
+</tr>
+            </tbody></table>
+          
+
+          
+          
+            <a title="Overview" name="overview"></a>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Shifts the pitch of a signal by a given pitch scaling ratio.</p>
+          
+          
+
+
+          
+          
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Properties" name="properties"></a>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
+            
+            <div class="section-method">
+  <a name="//api/name/fftSize" title="fftSize"></a>
+  <h4 class="subsubtitle method-title">fftSize</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+      The FFT size in samples. Need not be a power of two (though these are especially efficient), but must be even. [Default Value: 1024]
+  </div>
+  
+    
+
+ {% highlight objective-c %}@property (nonatomic) AKConstant *fftSize{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/formantRetainMethod" title="formantRetainMethod"></a>
+  <h4 class="subsubtitle method-title">formantRetainMethod</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Whether to retain formants or not, and which method to use.  Default none. [Default Value: 0]
+  </div>
+  
+    
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *formantRetainMethod{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/frequencyRatio" title="frequencyRatio"></a>
+  <h4 class="subsubtitle method-title">frequencyRatio</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    The frequency scaling ratio, 0.5 for an octave down, 2.0 for an octave up. [Default Value: 1]
+  </div>
+  
+    
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *frequencyRatio{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+          
+
+          
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Class Methods" name="class_methods"></a>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
+            
+            <div class="section-method">
+  <a name="//api/name/lifteredCepstrumFormantRetainMethod" title="lifteredCepstrumFormantRetainMethod"></a>
+  <h4 class="subsubtitle method-title">lifteredCepstrumFormantRetainMethod</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Liftered Cepstrum Formant Retain Method
+  </div>
+  
+    
+
+ {% highlight objective-c %}+ (AKConstant *)lifteredCepstrumFormantRetainMethod{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/noFormantRetainMethod" title="noFormantRetainMethod"></a>
+  <h4 class="subsubtitle method-title">noFormantRetainMethod</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    No Formant Retain Method
+  </div>
+  
+    
+
+ {% highlight objective-c %}+ (AKConstant *)noFormantRetainMethod{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/pitchShifterWithInput:" title="pitchShifterWithInput:"></a>
+  <h4 class="subsubtitle method-title">pitchShifterWithInput:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the pitch shifter with default values
+  </div>
+  
+    
+
+ {% highlight objective-c %}+ (instancetype)pitchShifterWithInput:(AKParameter *)input{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input signal, usually audio.</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/trueEnvelopeFormantRetainMethod" title="trueEnvelopeFormantRetainMethod"></a>
+  <h4 class="subsubtitle method-title">trueEnvelopeFormantRetainMethod</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    True Envelope Formant Retain Method
+  </div>
+  
+    
+
+ {% highlight objective-c %}+ (AKConstant *)trueEnvelopeFormantRetainMethod{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+          
+
+          
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithInput:" title="initWithInput:"></a>
+  <h4 class="subsubtitle method-title">initWithInput:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the pitch shifter with default values
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input signal, usually audio.</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithInput:frequencyRatio:formantRetainMethod:fftSize:" title="initWithInput:frequencyRatio:formantRetainMethod:fftSize:"></a>
+  <h4 class="subsubtitle method-title">initWithInput:frequencyRatio:formantRetainMethod:fftSize:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the pitch shifter with all values
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input frequencyRatio:(AKParameter *)frequencyRatio formantRetainMethod:(AKConstant *)formantRetainMethod fftSize:(AKConstant *)fftSize{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input signal, usually audio. [Default Value: ]</li>
+    
+    <li><i class="icon-line-play"></i><strong>frequencyRatio</strong>:
+      The frequency scaling ratio, 0.5 for an octave down, 2.0 for an octave up. Updated at Control-rate. [Default Value: 1]</li>
+    
+    <li><i class="icon-line-play"></i><strong>formantRetainMethod</strong>:
+      Whether to retain formants or not, and which method to use.  Default none. Updated at Control-rate. [Default Value: 0]</li>
+    
+    <li><i class="icon-line-play"></i><strong>fftSize</strong>:
+      The FFT size in samples. Need not be a power of two (though these are especially efficient), but must be even. [Default Value: 1024]</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalFftSize:" title="setOptionalFftSize:"></a>
+  <h4 class="subsubtitle method-title">setOptionalFftSize:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Set an optional fft size
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (void)setOptionalFftSize:(AKConstant *)fftSize{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>fftSize</strong>:
+      The FFT size in samples. Need not be a power of two (though these are especially efficient), but must be even. [Default Value: 1024]</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalFormantRetainMethod:" title="setOptionalFormantRetainMethod:"></a>
+  <h4 class="subsubtitle method-title">setOptionalFormantRetainMethod:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Set an optional formant retain method
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (void)setOptionalFormantRetainMethod:(AKConstant *)formantRetainMethod{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>formantRetainMethod</strong>:
+      Whether to retain formants or not, and which method to use.  Default none. Updated at Control-rate. [Default Value: 0]</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/setOptionalFrequencyRatio:" title="setOptionalFrequencyRatio:"></a>
+  <h4 class="subsubtitle method-title">setOptionalFrequencyRatio:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Set an optional frequency ratio
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (void)setOptionalFrequencyRatio:(AKParameter *)frequencyRatio{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>frequencyRatio</strong>:
+      The frequency scaling ratio, 0.5 for an octave down, 2.0 for an octave up. Updated at Control-rate. [Default Value: 1]</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+          
+          
+        </div>
+      </div>

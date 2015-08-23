@@ -194,38 +194,6 @@ title: AKManager
   
 </div>
             
-            <div class="section-method">
-  <a name="//api/name/testLog" title="testLog"></a>
-  <h4 class="subsubtitle method-title">testLog</h4>
-
-  
-  
-  <div class="method-subsection brief-description">
-    Place to put lines of testing logs
-  </div>
-  
-    
-
- {% highlight objective-c %}@property NSMutableArray *testLog{% endhighlight %}
-
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-  
-</div>
-            
           
 
           
@@ -437,18 +405,18 @@ title: AKManager
             <h3 class="subtitle subtitle-methods">Instance Methods</h3>
             
             <div class="section-method">
-  <a name="//api/name/disableAudioInput" title="disableAudioInput"></a>
-  <h4 class="subsubtitle method-title">disableAudioInput</h4>
+  <a name="//api/name/cleanup" title="cleanup"></a>
+  <h4 class="subsubtitle method-title">cleanup</h4>
 
   
   
   <div class="method-subsection brief-description">
-    Disable AudioInput
+    Stop AudioKit and do some internal cleanups.
   </div>
   
     
 
- {% highlight objective-c %}- (void)disableAudioInput{% endhighlight %}
+ {% highlight objective-c %}- (void)cleanup{% endhighlight %}
 
     
   
@@ -469,18 +437,18 @@ title: AKManager
 </div>
             
             <div class="section-method">
-  <a name="//api/name/disableMidi" title="disableMidi"></a>
-  <h4 class="subsubtitle method-title">disableMidi</h4>
+  <a name="//api/name/disableAudioInput" title="disableAudioInput"></a>
+  <h4 class="subsubtitle method-title">disableAudioInput</h4>
 
   
   
   <div class="method-subsection brief-description">
-    Disable MIDI
+    Disable AudioInput
   </div>
   
     
 
- {% highlight objective-c %}- (void)disableMidi{% endhighlight %}
+ {% highlight objective-c %}- (void)disableAudioInput{% endhighlight %}
 
     
   
@@ -533,18 +501,18 @@ title: AKManager
 </div>
             
             <div class="section-method">
-  <a name="//api/name/enableMidi" title="enableMidi"></a>
-  <h4 class="subsubtitle method-title">enableMidi</h4>
+  <a name="//api/name/endBatch" title="endBatch"></a>
+  <h4 class="subsubtitle method-title">endBatch</h4>
 
   
   
   <div class="method-subsection brief-description">
-    Enable MIDI
+    Send all batched events at once when a batch is ended
   </div>
   
     
 
- {% highlight objective-c %}- (void)enableMidi{% endhighlight %}
+ {% highlight objective-c %}- (void)endBatch{% endhighlight %}
 
     
   
@@ -565,20 +533,30 @@ title: AKManager
 </div>
             
             <div class="section-method">
-  <a name="//api/name/endBatch" title="endBatch"></a>
-  <h4 class="subsubtitle method-title">endBatch</h4>
+  <a name="//api/name/renderToFile:forDuration:" title="renderToFile:forDuration:"></a>
+  <h4 class="subsubtitle method-title">renderToFile:forDuration:</h4>
 
   
   
   <div class="method-subsection brief-description">
-    Send all batched events at once when a batch is ended
+    For testing, render to a file instead of real time
   </div>
   
     
 
- {% highlight objective-c %}- (void)endBatch{% endhighlight %}
+ {% highlight objective-c %}- (void)renderToFile:(NSString *)outputPath forDuration:(NSTimeInterval)duration{% endhighlight %}
 
     
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>outputPath</strong>:
+      Destination path for the output file</li>
+    
+    <li><i class="icon-line-play"></i><strong>duration</strong>:
+      Total duration of the performance</li>
+    
+    </ul>
   
 
   

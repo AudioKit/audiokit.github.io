@@ -108,6 +108,123 @@ This filter reiterates the input with an echo density determined by loop time. T
             <h3 class="subtitle subtitle-methods">Class Methods</h3>
             
             <div class="section-method">
+  <a name="//api/name/presetDefaultReverbWithInput:" title="presetDefaultReverbWithInput:"></a>
+  <h4 class="subsubtitle method-title">presetDefaultReverbWithInput:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the flat frequency response reverb with default values
+  </div>
+  
+    
+
+ {% highlight objective-c %}+ (instancetype)presetDefaultReverbWithInput:(AKParameter *)input{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      The input signal to be reverberated.</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/presetMetallicReverbWithInput:" title="presetMetallicReverbWithInput:"></a>
+  <h4 class="subsubtitle method-title">presetMetallicReverbWithInput:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the flat frequency response reverb with a 'metallic' sound
+  </div>
+  
+    
+
+ {% highlight objective-c %}+ (instancetype)presetMetallicReverbWithInput:(AKParameter *)input{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      The input signal to be reverberated.</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/presetStutteringReverbWithInput:" title="presetStutteringReverbWithInput:"></a>
+  <h4 class="subsubtitle method-title">presetStutteringReverbWithInput:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the flat frequency response reverb with a 'stuttering' sound
+  </div>
+  
+    
+
+ {% highlight objective-c %}+ (instancetype)presetStutteringReverbWithInput:(AKParameter *)input{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      The input signal to be reverberated.</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
   <a name="//api/name/reverbWithInput:" title="reverbWithInput:"></a>
   <h4 class="subsubtitle method-title">reverbWithInput:</h4>
 
@@ -211,13 +328,130 @@ This filter reiterates the input with an echo density determined by loop time. T
   <ul class="iconlist">
     
     <li><i class="icon-line-play"></i><strong>input</strong>:
-      The input signal to be reverberated. [Default Value: ]</li>
+      The input signal to be reverberated.</li>
     
     <li><i class="icon-line-play"></i><strong>reverbDuration</strong>:
       The duration in seconds for a signal to decay to 1/1000, or 60dB down from its original amplitude. Updated at Control-rate. [Default Value: 0.5]</li>
     
     <li><i class="icon-line-play"></i><strong>loopDuration</strong>:
       The loop duration in seconds, which determines the “echo density” of the reverberation. [Default Value: 0.1]</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithPresetDefaultReverbWithInput:" title="initWithPresetDefaultReverbWithInput:"></a>
+  <h4 class="subsubtitle method-title">initWithPresetDefaultReverbWithInput:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the flat frequency response reverb with default values
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (instancetype)initWithPresetDefaultReverbWithInput:(AKParameter *)input{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      The input signal to be reverberated.</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithPresetMetallicReverbWithInput:" title="initWithPresetMetallicReverbWithInput:"></a>
+  <h4 class="subsubtitle method-title">initWithPresetMetallicReverbWithInput:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the flat frequency response reverb with 'metallic' sound
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (instancetype)initWithPresetMetallicReverbWithInput:(AKParameter *)input{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      The input signal to be reverberated.</li>
+    
+    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
+  <a name="//api/name/initWithPresetStutteringReverbWithInput:" title="initWithPresetStutteringReverbWithInput:"></a>
+  <h4 class="subsubtitle method-title">initWithPresetStutteringReverbWithInput:</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Instantiates the flat frequency response reverb with 'stuttering' sound
+  </div>
+  
+    
+
+ {% highlight objective-c %}- (instancetype)initWithPresetStutteringReverbWithInput:(AKParameter *)input{% endhighlight %}
+
+    
+  
+  <ul class="iconlist">
+    
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      The input signal to be reverberated.</li>
     
     </ul>
   
