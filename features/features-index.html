@@ -10,7 +10,7 @@ layout: side_navigation
         <li><a href="#overview">Overview<i class="icon-chevron-right"></i></a></li>
         <li><a href="#playgrounds"      ><i class="icon-bolt2 "     ></i>Fast-development       <i class="icon-chevron-right"></i></a></li>
         <li><a href="#well_named"       ><i class="icon-code"       ></i>Well-Named Code        <i class="icon-chevron-right"></i></a></li>
-        <li><a href="#sensible-defaults"><i class="icon-params"     ></i>Sensible Defaults      <i class="icon-chevron-right"></i></a></li>
+        <li><a href="#sensible-defaults"><i class="icon-params"     ></i>Sensible Defaults & Presets<i class="icon-chevron-right"></i></a></li>
         <li><a href="#xcode-integration"><i class="icon-apple"      ></i>Tight Xcode Integration<i class="icon-chevron-right"></i></a></li>
         <li><a href="#examples"         ><i class="icon-tablet2"    ></i>Many Examples          <i class="icon-chevron-right"></i></a></li>
         <li><a href="#tests"            ><i class="icon-stethoscope"></i>Thorough Test Suite    <i class="icon-chevron-right"></i></a></li>
@@ -128,9 +128,15 @@ layout: side_navigation
           </td>
         </tr>
         </table>
+
+        <h3>Sensible Presets</h3>
+        <p>In addition to sensible defaults, we give you a variety of default parameter sets lumped together into presets. For example, with the sleighbells above you could also create sleighbells wift softer bell sounds or an open bell sounds. </p>
+{% highlight objective-c %}
+[AKSleighbells presetSoftBells];
+[AKSleighbells presetOpenBells];
+{% endhighlight %}
+
         </div>
-
-
     </div>
 
     <div id="xcode-integration">
