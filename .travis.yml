@@ -1,9 +1,11 @@
 language: ruby
 rvm:
 - 2.1
+sudo: required
+
 before_install:
-    gem install jekyll jekyll-paginate html-proofer -N;
-    sudo pip install Pygments
+  - sudo pip install Pygments
+  - gem install jekyll jekyll-paginate html-proofer -N
 
 script: jekyll build && htmlproof --href-ignore "#" ./_site
 
