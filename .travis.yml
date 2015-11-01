@@ -1,7 +1,7 @@
 language: ruby
 rvm:
 - 2.1
-before_install: gem install jekyll html-proofer -N
+before_install: gem install jekyll jekyll-paginate html-proofer -N
 script: jekyll build && htmlproof --href-ignore "#" ./_site
 
 env:
