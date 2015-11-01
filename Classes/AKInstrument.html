@@ -46,7 +46,7 @@ title: AKInstrument
   
     
 
- {% highlight objective-c %}@property NSMutableSet *globalParameters{% endhighlight %}
+ {% highlight objective-c %}@property NSMutableSet&lt;AKParameter*&gt; *globalParameters{% endhighlight %}
 
     
   
@@ -99,6 +99,40 @@ title: AKInstrument
 </div>
             
             <div class="section-method">
+  <a name="//api/name/maximumNoteAllocation" title="maximumNoteAllocation"></a>
+  <h4 class="subsubtitle method-title">maximumNoteAllocation</h4>
+
+  
+  
+  <div class="method-subsection brief-description">
+    Set a limit to the number of notes to allocate at any one time. Note which exceed this limit will be deallocated.
+Defaults to zero, which is equivalent to setting no limit.
+See http://www.csounds.com/manual/html/maxalloc.html for more info.
+  </div>
+  
+    
+
+ {% highlight objective-c %}@property NSUInteger maximumNoteAllocation{% endhighlight %}
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</div>
+            
+            <div class="section-method">
   <a name="//api/name/noteProperties" title="noteProperties"></a>
   <h4 class="subsubtitle method-title">noteProperties</h4>
 
@@ -110,7 +144,7 @@ title: AKInstrument
   
     
 
- {% highlight objective-c %}@property NSMutableArray *noteProperties{% endhighlight %}
+ {% highlight objective-c %}@property NSMutableArray&lt;AKNoteProperty*&gt; *noteProperties{% endhighlight %}
 
     
   
@@ -142,7 +176,7 @@ title: AKInstrument
   
     
 
- {% highlight objective-c %}@property NSMutableArray *properties{% endhighlight %}
+ {% highlight objective-c %}@property NSMutableArray&lt;AKInstrumentProperty*&gt; *properties{% endhighlight %}
 
     
   
@@ -174,7 +208,7 @@ title: AKInstrument
   
     
 
- {% highlight objective-c %}@property NSMutableSet *userDefinedOperations{% endhighlight %}
+ {% highlight objective-c %}@property NSMutableSet&lt;NSString*&gt; *userDefinedOperations{% endhighlight %}
 
     
   

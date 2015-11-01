@@ -46,7 +46,7 @@ title: AKSoundFont
   
     
 
- {% highlight objective-c %}@property (nonatomic, readonly, nullable) NSArray *instruments{% endhighlight %}
+ {% highlight objective-c %}@property (nonatomic, readonly, nullable) NSArray&lt;AKSoundFontInstrument*&gt; *instruments{% endhighlight %}
 
     
   
@@ -142,7 +142,7 @@ title: AKSoundFont
   
     
 
- {% highlight objective-c %}@property (nonatomic, readonly, nullable) NSArray *presets{% endhighlight %}
+ {% highlight objective-c %}@property (nonatomic, readonly, nullable) NSArray&lt;AKSoundFontPreset*&gt; *presets{% endhighlight %}
 
     
   
@@ -183,7 +183,7 @@ title: AKSoundFont
   
     
 
- {% highlight objective-c %}- (void)fetchPresets:(__nullable AKSoundFontCompletionBlock)completionBlock{% endhighlight %}
+ {% highlight objective-c %}- (void)fetchPresets:(nullable AKSoundFontCompletionBlock)completionBlock{% endhighlight %}
 
     
   
@@ -222,7 +222,7 @@ title: AKSoundFont
   
     
 
- {% highlight objective-c %}- (AKSoundFontInstrument *__nullable)findInstrumentNamed:(NSString *)name{% endhighlight %}
+ {% highlight objective-c %}- (nullable AKSoundFontInstrument *)findInstrumentNamed:(NSString *)name{% endhighlight %}
 
     
   
@@ -261,7 +261,7 @@ title: AKSoundFont
   
     
 
- {% highlight objective-c %}- (AKSoundFontPreset *__nullable)findPresetNamed:(NSString *)name{% endhighlight %}
+ {% highlight objective-c %}- (nullable AKSoundFontPreset *)findPresetNamed:(NSString *)name{% endhighlight %}
 
     
   
@@ -300,7 +300,7 @@ title: AKSoundFont
   
     
 
- {% highlight objective-c %}- (AKSoundFontPreset *__nullable)findPresetProgram:(NSUInteger)program fromBank:(NSUInteger)bank{% endhighlight %}
+ {% highlight objective-c %}- (nullable AKSoundFontPreset *)findPresetProgram:(NSUInteger)program fromBank:(NSUInteger)bank{% endhighlight %}
 
     
   
