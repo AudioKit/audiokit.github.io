@@ -7,18 +7,24 @@ date: "2015-10-31"
 
 <img align=right style="padding-left: 20px" src="/blog/appletv.png" alt="AppleTV">
 
-<p>Version 2.3 keeps AudioKit up-to-date with Xcode7, Swift2, iOS9 and adds tvOS support</p>
+<P>We are proud to announce the release of the latest version of AudioKit, v2.3.</P>
+
+<p>Version 2.3 keeps AudioKit up-to-date with Xcode 7, Swift 2, iOS 9 and also adds tvOS support for the brand new Apple TV. We also include binary libraries including Bitcode for both iOS and tvOS.</p>
+
+<p>Summary of the changes in this release follows:</p>
 
 <h4>tvOS Support</h4>
+<p>You can write audio apps for the AppleTV with AudioKit as easily as you could for iOS and OSX.  There is an included HelloWorld example to help get you started. Most classes are available on tvOS, with a few exceptions like MIDI support (AKMidi) and user interface elements based on sliders.</p>
 
-<p>You can write audio apps for the AppleTV with AudioKit as easily as you could for iOS and OSX.  There is an included HelloWorld example to help get you started.</p>
-
-<h4>Xcode7, Swift2, and iOS9 Updates</h4>
-
-<p>The internals of AudioKit were updated to take advantage of new features such as generics, null specifiers, etc.
+<h4>Xcode 7, Swift 2.0, and iOS 9 Updates</h4>
+<p>The internals of AudioKit were updated to take advantage of new features such as generics, null specifiers, etc. This makes AudioKit even easier to be used with Swift. Bitcode support means that you can now submit AudioKit apps with Bitcode for iOS and tvOS (it is actually a requirement for the Apple TV).</p>
 
 <h4>New operations</h4>
-
 <p>Daniel Clelland was busy improving AudioKit's FFT library with the new AKFilteredFFT, AKMaskedFFT, AKTableReader, and AKTableWriter operations.</p>
 
-<p>There is also a beat clock implementation in AKBeatClock that can be used to write looper apps as well as a new AKCompressorExpander that is a bit more intuitive than the powerful yet a bit cumbersome AKCompressor.  </p>
+<p>There is also a beat clock implementation in AKBeatClock that can be used to write looper apps as well as a new AKCompressorExpander that is a bit more intuitive than the powerful yet a bit cumbersome AKCompressor.</p>
+<h4>Miscellaneous</h4>
+
+<p>We also included a few more bug fixes, including a performance issue that should make CPU usage in AudioKit significantly go down on iOS in this release.</p>
+
+<p>We still have more cool features coming up in the next versions, including support for a proper AudioKit framework, expanded Sound Font support, and more!</p>
