@@ -4,7 +4,7 @@ rvm:
 sudo: required
 
 before_install:
-  - sudo pip install Pygments
+  - sudo -H pip install pygments
   - gem install jekyll jekyll-paginate html-proofer -N
 
 script: jekyll build && htmlproof --href-ignore "#" ./_site
