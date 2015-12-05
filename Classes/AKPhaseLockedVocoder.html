@@ -7,166 +7,166 @@ title: AKPhaseLockedVocoder
       <div id="contents" class="isShowingTOC" role="main">
 
         <div>
-          
+
           <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+  <td class="specification-value"><a href="/Classes/AKAudio.html">AKAudio</a> : <a href="/Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKPhaseLockedVocoder.h<br />AKPhaseLockedVocoder.m</td>
 </tr>
             </tbody></table>
-          
 
-          
-          
+
+
+
             <a title="Overview" name="overview"></a>
             <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>Phase-locked vocoder processing.
 
 More detailed description from http://www.csounds.com/manual/html/mincer.html</p>
-          
-          
 
 
-          
-          
 
-          
 
-          
+
+
+
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Instance Methods" name="instance_methods"></a>
             <h3 class="subtitle subtitle-methods">Instance Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithTable:time:scaledPitch:amplitude:" title="initWithTable:time:scaledPitch:amplitude:"></a>
   <h4 class="subsubtitle method-title">initWithTable:time:scaledPitch:amplitude:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the phase locked vocoder
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithTable:(AKControl *)table time:(AKAudio *)time scaledPitch:(AKControl *)scaledPitch amplitude:(AKControl *)amplitude{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>table</strong>:
       Source signal table. Only mono audio files work.</li>
-    
+
     <li><i class="icon-line-play"></i><strong>time</strong>:
       Time position of current audio sample in secs. Table reading wraps around the ends of the table.</li>
-    
+
     <li><i class="icon-line-play"></i><strong>scaledPitch</strong>:
       Grain pitch scaling (1=normal pitch, < 1 lower, > 1 higher; negative, backwards)</li>
-    
+
     <li><i class="icon-line-play"></i><strong>amplitude</strong>:
       Amplitude scaling</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalDecimation:" title="setOptionalDecimation:"></a>
   <h4 class="subsubtitle method-title">setOptionalDecimation:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional decimation
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalDecimation:(AKConstant *)decimation{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>decimation</strong>:
       Defaults to 4 (meaning hopsize = fftsize/4)</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalSizeOfFFT:" title="setOptionalSizeOfFFT:"></a>
   <h4 class="subsubtitle method-title">setOptionalSizeOfFFT:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional size of fft
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalSizeOfFFT:(AKConstant *)sizeOfFFT{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>sizeOfFFT</strong>:
       FFT size (power-of-two), defaults to 2048.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
-          
+
+
+
         </div>
       </div>

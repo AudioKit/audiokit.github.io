@@ -7,707 +7,707 @@ title: AKTableLooper
       <div id="contents" class="isShowingTOC" role="main">
 
         <div>
-          
+
           <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+  <td class="specification-value"><a href="/Classes/AKAudio.html">AKAudio</a> : <a href="/Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKTableLooper.h<br />AKTableLooper.m</td>
 </tr>
             </tbody></table>
-          
 
-          
-          
+
+
+
             <a title="Overview" name="overview"></a>
             <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>Function-table-based crossfading looper.
 
 This opcode implements a crossfading looper with variable loop parameters and three looping modes. It accepts non-power-of-two tables for its source sounds, such as AKSoundFile Tables.</p>
-          
-          
 
 
-          
-          
+
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Properties" name="properties"></a>
             <h3 class="subtitle subtitle-methods">Properties</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/amplitude" title="amplitude"></a>
   <h4 class="subsubtitle method-title">amplitude</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Amplitude of loop. [Default Value: 1]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *amplitude{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/crossfadeDuration" title="crossfadeDuration"></a>
   <h4 class="subsubtitle method-title">crossfadeDuration</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     crossfade length in seconds, updated once per loop cycle and limited to loop length. [Default Value: 0]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *crossfadeDuration{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/endTime" title="endTime"></a>
   <h4 class="subsubtitle method-title">endTime</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Playback end position in seconds.  Defaults to end of table(0). [Default Value: 0]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *endTime{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/loopMode" title="loopMode"></a>
   <h4 class="subsubtitle method-title">loopMode</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Loop modes are forward, backward, and back and forth.
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKConstant *loopMode{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/startTime" title="startTime"></a>
   <h4 class="subsubtitle method-title">startTime</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Loop start point in seconds. [Default Value: 0]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *startTime{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/transpositionRatio" title="transpositionRatio"></a>
   <h4 class="subsubtitle method-title">transpositionRatio</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Pitch control by way of transposition ratio. [Default Value: 1]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *transpositionRatio{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Class Methods" name="class_methods"></a>
             <h3 class="subtitle subtitle-methods">Class Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/loopPlaysBackwards" title="loopPlaysBackwards"></a>
   <h4 class="subsubtitle method-title">loopPlaysBackwards</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Loop plays backwards repeating from the end when it gets back to the start
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (AKConstant *)loopPlaysBackwards{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/loopPlaysForwardAndThenBackwards" title="loopPlaysForwardAndThenBackwards"></a>
   <h4 class="subsubtitle method-title">loopPlaysForwardAndThenBackwards</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Loop first plays forward and then when it reaches the end it plays backwards and then repeats
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (AKConstant *)loopPlaysForwardAndThenBackwards{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/loopRepeats" title="loopRepeats"></a>
   <h4 class="subsubtitle method-title">loopRepeats</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Loop plays foward and repeats from the beginning forever
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (AKConstant *)loopRepeats{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/looperWithTable:" title="looperWithTable:"></a>
   <h4 class="subsubtitle method-title">looperWithTable:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the table looper with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)looperWithTable:(AKTable *)table{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>table</strong>:
       Sound source table, generally an AKSoundFile.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Instance Methods" name="instance_methods"></a>
             <h3 class="subtitle subtitle-methods">Instance Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithTable:" title="initWithTable:"></a>
   <h4 class="subsubtitle method-title">initWithTable:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the table looper with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithTable:(AKTable *)table{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>table</strong>:
       Sound source table, generally an AKSoundFile.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithTable:startTime:endTime:transpositionRatio:amplitude:crossfadeDuration:loopMode:" title="initWithTable:startTime:endTime:transpositionRatio:amplitude:crossfadeDuration:loopMode:"></a>
   <h4 class="subsubtitle method-title">initWithTable:startTime:endTime:transpositionRatio:amplitude:crossfadeDuration:loopMode:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the table looper with all values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithTable:(AKTable *)table startTime:(AKParameter *)startTime endTime:(AKParameter *)endTime transpositionRatio:(AKParameter *)transpositionRatio amplitude:(AKParameter *)amplitude crossfadeDuration:(AKParameter *)crossfadeDuration loopMode:(AKConstant *)loopMode{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>table</strong>:
       Sound source table, generally an AKSoundFile.</li>
-    
+
     <li><i class="icon-line-play"></i><strong>startTime</strong>:
       Loop start point in seconds. Updated at Control-rate. [Default Value: 0]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>endTime</strong>:
       Playback end position in seconds.  Defaults to end of table(0). Updated at Control-rate. [Default Value: 0]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>transpositionRatio</strong>:
       Pitch control by way of transposition ratio. Updated at Control-rate. [Default Value: 1]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>amplitude</strong>:
       Amplitude of loop. Updated at Control-rate. [Default Value: 1]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>crossfadeDuration</strong>:
       crossfade length in seconds, updated once per loop cycle and limited to loop length. Updated at Control-rate. [Default Value: 0]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>loopMode</strong>:
       Loop modes are forward, backward, and back and forth.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalAmplitude:" title="setOptionalAmplitude:"></a>
   <h4 class="subsubtitle method-title">setOptionalAmplitude:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional amplitude
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalAmplitude:(AKParameter *)amplitude{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>amplitude</strong>:
       Amplitude of loop. Updated at Control-rate. [Default Value: 1]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalCrossfadeDuration:" title="setOptionalCrossfadeDuration:"></a>
   <h4 class="subsubtitle method-title">setOptionalCrossfadeDuration:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional crossfade duration
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalCrossfadeDuration:(AKParameter *)crossfadeDuration{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>crossfadeDuration</strong>:
       crossfade length in seconds, updated once per loop cycle and limited to loop length. Updated at Control-rate. [Default Value: 0]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalEndTime:" title="setOptionalEndTime:"></a>
   <h4 class="subsubtitle method-title">setOptionalEndTime:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional end time
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalEndTime:(AKParameter *)endTime{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>endTime</strong>:
       Playback end position in seconds.  Defaults to end of table(0). Updated at Control-rate. [Default Value: 0]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalLoopMode:" title="setOptionalLoopMode:"></a>
   <h4 class="subsubtitle method-title">setOptionalLoopMode:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional loop mode
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalLoopMode:(AKConstant *)loopMode{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>loopMode</strong>:
       Loop modes are forward, backward, and back and forth.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalStartTime:" title="setOptionalStartTime:"></a>
   <h4 class="subsubtitle method-title">setOptionalStartTime:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional start time
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalStartTime:(AKParameter *)startTime{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>startTime</strong>:
       Loop start point in seconds. Updated at Control-rate. [Default Value: 0]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalTranspositionRatio:" title="setOptionalTranspositionRatio:"></a>
   <h4 class="subsubtitle method-title">setOptionalTranspositionRatio:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional transposition ratio
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalTranspositionRatio:(AKParameter *)transpositionRatio{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>transpositionRatio</strong>:
       Pitch control by way of transposition ratio. Updated at Control-rate. [Default Value: 1]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
-          
+
+
+
         </div>
       </div>

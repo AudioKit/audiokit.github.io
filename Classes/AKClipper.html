@@ -7,483 +7,483 @@ title: AKClipper
       <div id="contents" class="isShowingTOC" role="main">
 
         <div>
-          
+
           <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+  <td class="specification-value"><a href="/Classes/AKAudio.html">AKAudio</a> : <a href="/Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKClipper.h<br />AKClipper.m</td>
 </tr>
             </tbody></table>
-          
 
-          
-          
+
+
+
             <a title="Overview" name="overview"></a>
             <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>Clips a signal to a predefined limit, in a "soft" manner, using one of three methods.</p>
-          
-          
 
 
-          
-          
+
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Properties" name="properties"></a>
             <h3 class="subtitle subtitle-methods">Properties</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/clippingStartPoint" title="clippingStartPoint"></a>
   <h4 class="subsubtitle method-title">clippingStartPoint</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Where to start clipping in the Bram de Jong method only. [Default Value: 0.5]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKConstant *clippingStartPoint{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/limit" title="limit"></a>
   <h4 class="subsubtitle method-title">limit</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     The limiting value. [Default Value: 1]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKConstant *limit{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/method" title="method"></a>
   <h4 class="subsubtitle method-title">method</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Clipping method Bram de Jong (default), sine, or tanh. [Default Value: AKClipperMethodBramDeJong]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKConstant *method{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Class Methods" name="class_methods"></a>
             <h3 class="subtitle subtitle-methods">Class Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/clipperWithInput:" title="clipperWithInput:"></a>
   <h4 class="subsubtitle method-title">clipperWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the clipper with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)clipperWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/clippingMethodBramDeJong" title="clippingMethodBramDeJong"></a>
   <h4 class="subsubtitle method-title">clippingMethodBramDeJong</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Default Bram de Jong method
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (AKConstant *)clippingMethodBramDeJong{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/clippingMethodSine" title="clippingMethodSine"></a>
   <h4 class="subsubtitle method-title">clippingMethodSine</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Sine clipper
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (AKConstant *)clippingMethodSine{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/clippingMethodTanh" title="clippingMethodTanh"></a>
   <h4 class="subsubtitle method-title">clippingMethodTanh</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Tanh clipper method
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (AKConstant *)clippingMethodTanh{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Instance Methods" name="instance_methods"></a>
             <h3 class="subtitle subtitle-methods">Instance Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithInput:" title="initWithInput:"></a>
   <h4 class="subsubtitle method-title">initWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the clipper with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithInput:limit:method:clippingStartPoint:" title="initWithInput:limit:method:clippingStartPoint:"></a>
   <h4 class="subsubtitle method-title">initWithInput:limit:method:clippingStartPoint:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the clipper with all values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input limit:(AKConstant *)limit method:(AKConstant *)method clippingStartPoint:(AKConstant *)clippingStartPoint{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal [Default Value: ]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>limit</strong>:
       The limiting value. [Default Value: 1]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>method</strong>:
       Clipping method Bram de Jong (default), sine, or tanh. [Default Value: AKClipperMethodBramDeJong]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>clippingStartPoint</strong>:
       Where to start clipping in the Bram de Jong method only (0-1). [Default Value: 0.5]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalClippingStartPoint:" title="setOptionalClippingStartPoint:"></a>
   <h4 class="subsubtitle method-title">setOptionalClippingStartPoint:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional clipping start point
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalClippingStartPoint:(AKConstant *)clippingStartPoint{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>clippingStartPoint</strong>:
       Where to start clipping in the Bram de Jong method only (0-1). [Default Value: 0.5]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalLimit:" title="setOptionalLimit:"></a>
   <h4 class="subsubtitle method-title">setOptionalLimit:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional limit
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalLimit:(AKConstant *)limit{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>limit</strong>:
       The limiting value. [Default Value: 1]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalMethod:" title="setOptionalMethod:"></a>
   <h4 class="subsubtitle method-title">setOptionalMethod:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional method
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalMethod:(AKConstant *)method{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>method</strong>:
       Clipping method Bram de Jong (default), sine, or tanh. [Default Value: AKClipperMethodBramDeJong]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
-          
+
+
+
         </div>
       </div>

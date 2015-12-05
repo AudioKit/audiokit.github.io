@@ -7,568 +7,568 @@ title: AKDelay
       <div id="contents" class="isShowingTOC" role="main">
 
         <div>
-          
+
           <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+  <td class="specification-value"><a href="/Classes/AKAudio.html">AKAudio</a> : <a href="/Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKDelay.h<br />AKDelay.m</td>
 </tr>
             </tbody></table>
-          
 
-          
-          
+
+
+
             <a title="Overview" name="overview"></a>
             <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>Simple audio delay
 
 Delays an input signal by some time interval.</p>
-          
-          
 
 
-          
-          
+
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Properties" name="properties"></a>
             <h3 class="subtitle subtitle-methods">Properties</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/feedback" title="feedback"></a>
   <h4 class="subsubtitle method-title">feedback</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     How much of the signal is sent back into the delay line.  Usually values range from 0-1. [Default Value: 0.0]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *feedback{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Class Methods" name="class_methods"></a>
             <h3 class="subtitle subtitle-methods">Class Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/delayWithInput:delayTime:" title="delayWithInput:delayTime:"></a>
   <h4 class="subsubtitle method-title">delayWithInput:delayTime:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the delay with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)delayWithInput:(AKParameter *)input delayTime:(AKConstant *)delayTime{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal, usually audio.</li>
-    
+
     <li><i class="icon-line-play"></i><strong>delayTime</strong>:
       Requested delay time in seconds.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetChoppedDelayWithInput:" title="presetChoppedDelayWithInput:"></a>
   <h4 class="subsubtitle method-title">presetChoppedDelayWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the delay with 'chopped' values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetChoppedDelayWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal, usually audio.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetDefaultDelayWithInput:delayTime:" title="presetDefaultDelayWithInput:delayTime:"></a>
   <h4 class="subsubtitle method-title">presetDefaultDelayWithInput:delayTime:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the delay with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetDefaultDelayWithInput:(AKParameter *)input delayTime:(AKConstant *)delayTime{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal, usually audio.</li>
-    
+
     <li><i class="icon-line-play"></i><strong>delayTime</strong>:
       Requested delay time in seconds.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetRhythmicAttackDelayWithInput:" title="presetRhythmicAttackDelayWithInput:"></a>
   <h4 class="subsubtitle method-title">presetRhythmicAttackDelayWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the delay with a rhythmic sound
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetRhythmicAttackDelayWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal, usually audio.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetShortAttackDelayWithInput:" title="presetShortAttackDelayWithInput:"></a>
   <h4 class="subsubtitle method-title">presetShortAttackDelayWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the delay with 'chopped' values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetShortAttackDelayWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal, usually audio.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Instance Methods" name="instance_methods"></a>
             <h3 class="subtitle subtitle-methods">Instance Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithInput:delayTime:" title="initWithInput:delayTime:"></a>
   <h4 class="subsubtitle method-title">initWithInput:delayTime:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the delay with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input delayTime:(AKConstant *)delayTime{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal, usually audio.</li>
-    
+
     <li><i class="icon-line-play"></i><strong>delayTime</strong>:
       Requested delay time in seconds.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithInput:delayTime:feedback:" title="initWithInput:delayTime:feedback:"></a>
   <h4 class="subsubtitle method-title">initWithInput:delayTime:feedback:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the delay with all values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input delayTime:(AKConstant *)delayTime feedback:(AKParameter *)feedback{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal, usually audio.</li>
-    
+
     <li><i class="icon-line-play"></i><strong>delayTime</strong>:
       Requested delay time in seconds.</li>
-    
+
     <li><i class="icon-line-play"></i><strong>feedback</strong>:
       How much of the signal is sent back into the delay line.  Usually values range from 0-1. Updated at Control-rate. [Default Value: 0.0]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetChoppedDelayWithInput:" title="initWithPresetChoppedDelayWithInput:"></a>
   <h4 class="subsubtitle method-title">initWithPresetChoppedDelayWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the delay with 'chopped' values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetChoppedDelayWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal, usually audio.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetDefaultDelayWithInput:delayTime:" title="initWithPresetDefaultDelayWithInput:delayTime:"></a>
   <h4 class="subsubtitle method-title">initWithPresetDefaultDelayWithInput:delayTime:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the delay with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetDefaultDelayWithInput:(AKParameter *)input delayTime:(AKConstant *)delayTime{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal, usually audio.</li>
-    
+
     <li><i class="icon-line-play"></i><strong>delayTime</strong>:
       Requested delay time in seconds.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetRhythmicDelayWithInput:" title="initWithPresetRhythmicDelayWithInput:"></a>
   <h4 class="subsubtitle method-title">initWithPresetRhythmicDelayWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the delay with a rhythmic sound
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetRhythmicDelayWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal, usually audio.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetShortAttackDelayWithInput:" title="initWithPresetShortAttackDelayWithInput:"></a>
   <h4 class="subsubtitle method-title">initWithPresetShortAttackDelayWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the delay with 'short attack' values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetShortAttackDelayWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal, usually audio.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalFeedback:" title="setOptionalFeedback:"></a>
   <h4 class="subsubtitle method-title">setOptionalFeedback:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional feedback
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalFeedback:(AKParameter *)feedback{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>feedback</strong>:
       How much of the signal is sent back into the delay line.  Usually values range from 0-1. Updated at Control-rate. [Default Value: 0.0]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
-          
+
+
+
         </div>
       </div>

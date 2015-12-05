@@ -7,611 +7,611 @@ title: AKBeatenPlate
       <div id="contents" class="isShowingTOC" role="main">
 
         <div>
-          
+
           <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+  <td class="specification-value"><a href="/Classes/AKAudio.html">AKAudio</a> : <a href="/Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKBeatenPlate.h<br />AKBeatenPlate.m</td>
 </tr>
             </tbody></table>
-          
 
-          
-          
+
+
+
             <a title="Overview" name="overview"></a>
             <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>A model of beaten plate consisting of two parallel delay-lines and two first-order lowpass filters.
 
 This  is a model of beaten plate consisting of two parallel delay-lines and two first-order lowpass filters. The two feedback lines are mixed and sent to the delay again each cycle.</p>
-          
-          
 
 
-          
-          
+
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Properties" name="properties"></a>
             <h3 class="subtitle subtitle-methods">Properties</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/cutoffFrequency1" title="cutoffFrequency1"></a>
   <h4 class="subsubtitle method-title">cutoffFrequency1</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     The filter cutoff frequency in Hz for the first low-pass filter. [Default Value: 3000]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property AKParameter *cutoffFrequency1{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/cutoffFrequency2" title="cutoffFrequency2"></a>
   <h4 class="subsubtitle method-title">cutoffFrequency2</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     The filter cutoff frequency in Hz for the second low-pass filter. [Default Value: 1500]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property AKParameter *cutoffFrequency2{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/feedback1" title="feedback1"></a>
   <h4 class="subsubtitle method-title">feedback1</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     The feedback factor for the first effects loop. [Default Value: 0.25]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property AKParameter *feedback1{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/feedback2" title="feedback2"></a>
   <h4 class="subsubtitle method-title">feedback2</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     The feedback factor for the second effects loop. [Default Value: 0.25]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property AKParameter *feedback2{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/frequency1" title="frequency1"></a>
   <h4 class="subsubtitle method-title">frequency1</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     The inverse of delay time for the first of two parallel delay lines. [Default Value: 5000]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property AKParameter *frequency1{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/frequency2" title="frequency2"></a>
   <h4 class="subsubtitle method-title">frequency2</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     The inverse of delay time for the second of two parallel delay lines. [Default Value: 2000]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property AKParameter *frequency2{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Class Methods" name="class_methods"></a>
             <h3 class="subtitle subtitle-methods">Class Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/beatenPlateWithInput:" title="beatenPlateWithInput:"></a>
   <h4 class="subsubtitle method-title">beatenPlateWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the beaten plate with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)beatenPlateWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The excitation noise.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Instance Methods" name="instance_methods"></a>
             <h3 class="subtitle subtitle-methods">Instance Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithInput:" title="initWithInput:"></a>
   <h4 class="subsubtitle method-title">initWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the beaten plate with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The excitation noise.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithInput:frequency1:frequency2:cutoffFrequency1:cutoffFrequency2:feedback1:feedback2:" title="initWithInput:frequency1:frequency2:cutoffFrequency1:cutoffFrequency2:feedback1:feedback2:"></a>
   <h4 class="subsubtitle method-title">initWithInput:frequency1:frequency2:cutoffFrequency1:cutoffFrequency2:feedback1:feedback2:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the beaten plate with all values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input frequency1:(AKParameter *)frequency1 frequency2:(AKParameter *)frequency2 cutoffFrequency1:(AKParameter *)cutoffFrequency1 cutoffFrequency2:(AKParameter *)cutoffFrequency2 feedback1:(AKParameter *)feedback1 feedback2:(AKParameter *)feedback2{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The excitation noise.</li>
-    
+
     <li><i class="icon-line-play"></i><strong>frequency1</strong>:
       The inverse of delay time for the first of two parallel delay lines. [Default Value: 5000]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>frequency2</strong>:
       The inverse of delay time for the second of two parallel delay lines. [Default Value: 2000]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>cutoffFrequency1</strong>:
       The filter cutoff frequency in Hz for the first low-pass filter. Updated at Control-rate. [Default Value: 3000]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>cutoffFrequency2</strong>:
       The filter cutoff frequency in Hz for the second low-pass filter. Updated at Control-rate. [Default Value: 1500]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>feedback1</strong>:
       The feedback factor for the first effects loop. Updated at Control-rate. [Default Value: 0.25]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>feedback2</strong>:
       The feedback factor for the second effects loop. Updated at Control-rate. [Default Value: 0.25]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalCutoffFrequency1:" title="setOptionalCutoffFrequency1:"></a>
   <h4 class="subsubtitle method-title">setOptionalCutoffFrequency1:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional cutoff frequency1
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalCutoffFrequency1:(AKParameter *)cutoffFrequency1{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>cutoffFrequency1</strong>:
       The filter cutoff frequency in Hz for the first low-pass filter. Updated at Control-rate. [Default Value: 3000]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalCutoffFrequency2:" title="setOptionalCutoffFrequency2:"></a>
   <h4 class="subsubtitle method-title">setOptionalCutoffFrequency2:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional cutoff frequency2
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalCutoffFrequency2:(AKParameter *)cutoffFrequency2{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>cutoffFrequency2</strong>:
       The filter cutoff frequency in Hz for the second low-pass filter. Updated at Control-rate. [Default Value: 1500]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalFeedback1:" title="setOptionalFeedback1:"></a>
   <h4 class="subsubtitle method-title">setOptionalFeedback1:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional feedback1
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalFeedback1:(AKParameter *)feedback1{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>feedback1</strong>:
       The feedback factor for the first effects loop. Updated at Control-rate. [Default Value: 0.25]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalFeedback2:" title="setOptionalFeedback2:"></a>
   <h4 class="subsubtitle method-title">setOptionalFeedback2:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional feedback2
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalFeedback2:(AKParameter *)feedback2{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>feedback2</strong>:
       The feedback factor for the second effects loop. Updated at Control-rate. [Default Value: 0.25]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalFrequency1:" title="setOptionalFrequency1:"></a>
   <h4 class="subsubtitle method-title">setOptionalFrequency1:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional frequency1
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalFrequency1:(AKParameter *)frequency1{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>frequency1</strong>:
       The inverse of delay time for the first of two parallel delay lines. [Default Value: 5000]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalFrequency2:" title="setOptionalFrequency2:"></a>
   <h4 class="subsubtitle method-title">setOptionalFrequency2:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional frequency2
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalFrequency2:(AKParameter *)frequency2{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>frequency2</strong>:
       The inverse of delay time for the second of two parallel delay lines. [Default Value: 2000]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
-          
+
+
+
         </div>
       </div>

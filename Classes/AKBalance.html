@@ -7,250 +7,250 @@ title: AKBalance
       <div id="contents" class="isShowingTOC" role="main">
 
         <div>
-          
+
           <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+  <td class="specification-value"><a href="/Classes/AKAudio.html">AKAudio</a> : <a href="/Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKBalance.h<br />AKBalance.m</td>
 </tr>
             </tbody></table>
-          
 
-          
-          
+
+
+
             <a title="Overview" name="overview"></a>
             <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>Adjusts one audio signal according to the values of another.
 
 This operation outputs a version of the audio source, amplitude-modified so that its rms power is equal to that of the comparator audio source. Thus a signal that has suffered loss of power (eg., in passing through a filter bank) can be restored by matching it with, for instance, its own source. It should be noted that this modifies amplitude only; output signal is not altered in any other respect.</p>
-          
-          
 
 
-          
-          
+
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Properties" name="properties"></a>
             <h3 class="subtitle subtitle-methods">Properties</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/halfPowerPoint" title="halfPowerPoint"></a>
   <h4 class="subsubtitle method-title">halfPowerPoint</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Half-power point (in Hz) of a special internal low-pass filter. The default value is 10. [Default Value: 10]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKConstant *halfPowerPoint{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Class Methods" name="class_methods"></a>
             <h3 class="subtitle subtitle-methods">Class Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/balanceWithInput:comparatorAudioSource:" title="balanceWithInput:comparatorAudioSource:"></a>
   <h4 class="subsubtitle method-title">balanceWithInput:comparatorAudioSource:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the balance with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)balanceWithInput:(AKParameter *)input comparatorAudioSource:(AKParameter *)comparatorAudioSource{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input audio signal</li>
-    
+
     <li><i class="icon-line-play"></i><strong>comparatorAudioSource</strong>:
       The comparator signal</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Instance Methods" name="instance_methods"></a>
             <h3 class="subtitle subtitle-methods">Instance Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithInput:comparatorAudioSource:" title="initWithInput:comparatorAudioSource:"></a>
   <h4 class="subsubtitle method-title">initWithInput:comparatorAudioSource:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the balance with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input comparatorAudioSource:(AKParameter *)comparatorAudioSource{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input audio signal</li>
-    
+
     <li><i class="icon-line-play"></i><strong>comparatorAudioSource</strong>:
       The comparator signal</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithInput:comparatorAudioSource:halfPowerPoint:" title="initWithInput:comparatorAudioSource:halfPowerPoint:"></a>
   <h4 class="subsubtitle method-title">initWithInput:comparatorAudioSource:halfPowerPoint:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the balance with all values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input comparatorAudioSource:(AKParameter *)comparatorAudioSource halfPowerPoint:(AKConstant *)halfPowerPoint{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input audio signal</li>
-    
+
     <li><i class="icon-line-play"></i><strong>comparatorAudioSource</strong>:
       The comparator signal</li>
-    
+
     <li><i class="icon-line-play"></i><strong>halfPowerPoint</strong>:
       Half-power point (in Hz) of a special internal low-pass filter. The default value is 10. [Default Value: 10]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalHalfPowerPoint:" title="setOptionalHalfPowerPoint:"></a>
   <h4 class="subsubtitle method-title">setOptionalHalfPowerPoint:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional half power point
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalHalfPowerPoint:(AKConstant *)halfPowerPoint{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>halfPowerPoint</strong>:
       Half-power point (in Hz) of a special internal low-pass filter. The default value is 10. [Default Value: 10]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
-          
+
+
+
         </div>
       </div>

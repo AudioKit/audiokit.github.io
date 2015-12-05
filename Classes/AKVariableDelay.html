@@ -7,313 +7,313 @@ title: AKVariableDelay
       <div id="contents" class="isShowingTOC" role="main">
 
         <div>
-          
+
           <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+  <td class="specification-value"><a href="/Classes/AKAudio.html">AKAudio</a> : <a href="/Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKVariableDelay.h<br />AKVariableDelay.m</td>
 </tr>
             </tbody></table>
-          
 
-          
-          
+
+
+
             <a title="Overview" name="overview"></a>
             <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>An interpolating variable time delay.</p>
-          
-          
 
 
-          
-          
+
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Properties" name="properties"></a>
             <h3 class="subtitle subtitle-methods">Properties</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/delayTime" title="delayTime"></a>
   <h4 class="subsubtitle method-title">delayTime</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Current value of delay in seconds. Note that linear functions have no pitch change effects. Fast changing values will cause discontinuities in the waveform resulting noise. [Default Value: 0]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *delayTime{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/maximumDelayTime" title="maximumDelayTime"></a>
   <h4 class="subsubtitle method-title">maximumDelayTime</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Maximum value of delay in seconds. [Default Value: 5]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKConstant *maximumDelayTime{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Class Methods" name="class_methods"></a>
             <h3 class="subtitle subtitle-methods">Class Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/delayWithInput:" title="delayWithInput:"></a>
   <h4 class="subsubtitle method-title">delayWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the variable delay with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)delayWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Instance Methods" name="instance_methods"></a>
             <h3 class="subtitle subtitle-methods">Instance Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithInput:" title="initWithInput:"></a>
   <h4 class="subsubtitle method-title">initWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the variable delay with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithInput:delayTime:maximumDelayTime:" title="initWithInput:delayTime:maximumDelayTime:"></a>
   <h4 class="subsubtitle method-title">initWithInput:delayTime:maximumDelayTime:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the variable delay with all values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input delayTime:(AKParameter *)delayTime maximumDelayTime:(AKConstant *)maximumDelayTime{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal.</li>
-    
+
     <li><i class="icon-line-play"></i><strong>delayTime</strong>:
       Current value of delay in seconds. Note that linear functions have no pitch change effects. Fast changing values will cause discontinuities in the waveform resulting noise. [Default Value: 0]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>maximumDelayTime</strong>:
       Maximum value of delay in seconds. [Default Value: 5]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalDelayTime:" title="setOptionalDelayTime:"></a>
   <h4 class="subsubtitle method-title">setOptionalDelayTime:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional delay time
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalDelayTime:(AKParameter *)delayTime{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>delayTime</strong>:
       Current value of delay in seconds. Note that linear functions have no pitch change effects. Fast changing values will cause discontinuities in the waveform resulting noise. [Default Value: 0]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalMaximumDelayTime:" title="setOptionalMaximumDelayTime:"></a>
   <h4 class="subsubtitle method-title">setOptionalMaximumDelayTime:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional maximum delay time
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalMaximumDelayTime:(AKConstant *)maximumDelayTime{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>maximumDelayTime</strong>:
       Maximum value of delay in seconds. [Default Value: 5]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
-          
+
+
+
         </div>
       </div>

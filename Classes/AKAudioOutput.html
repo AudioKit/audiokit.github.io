@@ -7,20 +7,20 @@ title: AKAudioOutput
       <div id="contents" class="isShowingTOC" role="main">
 
         <div>
-          
+
           <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+  <td class="specification-value"><a href="/Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKAudioOutput.h<br />AKAudioOutput.m</td>
 </tr>
             </tbody></table>
-          
 
-          
-          
+
+
+
             <a title="Overview" name="overview"></a>
             <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>Writes stereo audio data to an external device or stream.
@@ -30,180 +30,180 @@ Sends stereo audio samples to an accumulating output buffer
 collect the output of all active instruments before the
 sound is written to disk. There can be any number of these
 output units in an instrument.</p>
-          
-          
 
 
-          
-          
 
-          
 
-          
+
+
+
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Instance Methods" name="instance_methods"></a>
             <h3 class="subtitle subtitle-methods">Instance Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithAudioSource:" title="initWithAudioSource:"></a>
   <h4 class="subsubtitle method-title">initWithAudioSource:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Helper function to send both channels the same monoSignal
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithAudioSource:(AKParameter *)audioSource{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>audioSource</strong>:
       The audio signal to be played on both channels.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithInput:" title="initWithInput:"></a>
   <h4 class="subsubtitle method-title">initWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Helper function to send both channels the same monoSignal
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)source{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>source</strong>:
       The audio signal to be played on both channels.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithLeftAudio:rightAudio:" title="initWithLeftAudio:rightAudio:"></a>
   <h4 class="subsubtitle method-title">initWithLeftAudio:rightAudio:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Initialization Statement
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithLeftAudio:(AKParameter *)leftAudio rightAudio:(AKParameter *)rightAudio{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>leftAudio</strong>:
       The audio signal to be played on the left channel.</li>
-    
+
     <li><i class="icon-line-play"></i><strong>rightAudio</strong>:
       The audio signal to be played on the right channel.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithStereoAudioSource:" title="initWithStereoAudioSource:"></a>
   <h4 class="subsubtitle method-title">initWithStereoAudioSource:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Send a stereo output pair
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithStereoAudioSource:(AKStereoAudio *)stereoAudio{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>stereoAudio</strong>:
       The audio as an AKStereoAudio pair</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
-          
+
+
+
         </div>
       </div>

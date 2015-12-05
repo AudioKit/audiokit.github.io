@@ -7,532 +7,532 @@ title: AKCabasa
       <div id="contents" class="isShowingTOC" role="main">
 
         <div>
-          
+
           <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+  <td class="specification-value"><a href="/Classes/AKAudio.html">AKAudio</a> : <a href="/Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKCabasa.h<br />AKCabasa.m</td>
 </tr>
             </tbody></table>
-          
 
-          
-          
+
+
+
             <a title="Overview" name="overview"></a>
             <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>Semi-physical model of a cabasa sound.
 
 This one of the PhISEM percussion opcodes. PhISEM (Physically Informed Stochastic Event Modeling) is an algorithmic approach for simulating collisions of multiple independent sound producing objects.</p>
-          
-          
 
 
-          
-          
+
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Properties" name="properties"></a>
             <h3 class="subtitle subtitle-methods">Properties</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/amplitude" title="amplitude"></a>
   <h4 class="subsubtitle method-title">amplitude</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Amplitude of output. As these instruments are stochastic this is only a approximation. [Default Value: 1]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKConstant *amplitude{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/count" title="count"></a>
   <h4 class="subsubtitle method-title">count</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     The number of beads, teeth, bells, timbrels, etc. [Default Value: 100]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKConstant *count{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/dampingFactor" title="dampingFactor"></a>
   <h4 class="subsubtitle method-title">dampingFactor</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Damping factor where 0 is no damping and 1 is fully damped. [Default Value: 0.14]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKConstant *dampingFactor{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Class Methods" name="class_methods"></a>
             <h3 class="subtitle subtitle-methods">Class Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/cabasa" title="cabasa"></a>
   <h4 class="subsubtitle method-title">cabasa</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the cabasa with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)cabasa{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetDefaultCabasa" title="presetDefaultCabasa"></a>
   <h4 class="subsubtitle method-title">presetDefaultCabasa</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the cabasa with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetDefaultCabasa{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetLooseCabasa" title="presetLooseCabasa"></a>
   <h4 class="subsubtitle method-title">presetLooseCabasa</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the cabasa with muted values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetLooseCabasa{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetMutedCabasa" title="presetMutedCabasa"></a>
   <h4 class="subsubtitle method-title">presetMutedCabasa</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the cabasa with loose values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetMutedCabasa{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Instance Methods" name="instance_methods"></a>
             <h3 class="subtitle subtitle-methods">Instance Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/init" title="init"></a>
   <h4 class="subsubtitle method-title">init</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the cabasa with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)init{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithCount:dampingFactor:amplitude:" title="initWithCount:dampingFactor:amplitude:"></a>
   <h4 class="subsubtitle method-title">initWithCount:dampingFactor:amplitude:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the cabasa with all values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithCount:(AKConstant *)count dampingFactor:(AKConstant *)dampingFactor amplitude:(AKConstant *)amplitude{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>count</strong>:
       The number of beads, teeth, bells, timbrels, etc. [Default Value: 100]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>dampingFactor</strong>:
       Damping factor where 0 is no damping and 1 is fully damped. [Default Value: 0.14]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>amplitude</strong>:
       Amplitude of output. As these instruments are stochastic this is only a approximation. [Default Value: 1]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetLooseCabasa" title="initWithPresetLooseCabasa"></a>
   <h4 class="subsubtitle method-title">initWithPresetLooseCabasa</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the cabasa with loose values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetLooseCabasa{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetMutedCabasa" title="initWithPresetMutedCabasa"></a>
   <h4 class="subsubtitle method-title">initWithPresetMutedCabasa</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the cabasa with muted values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetMutedCabasa{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalAmplitude:" title="setOptionalAmplitude:"></a>
   <h4 class="subsubtitle method-title">setOptionalAmplitude:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional amplitude
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalAmplitude:(AKConstant *)amplitude{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>amplitude</strong>:
       Amplitude of output. As these instruments are stochastic this is only a approximation. [Default Value: 1]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalCount:" title="setOptionalCount:"></a>
   <h4 class="subsubtitle method-title">setOptionalCount:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional count
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalCount:(AKConstant *)count{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>count</strong>:
       The number of beads, teeth, bells, timbrels, etc. [Default Value: 100]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalDampingFactor:" title="setOptionalDampingFactor:"></a>
   <h4 class="subsubtitle method-title">setOptionalDampingFactor:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional damping factor
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalDampingFactor:(AKConstant *)dampingFactor{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>dampingFactor</strong>:
       Damping factor where 0 is no damping and 1 is fully damped. [Default Value: 0.14]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
-          
+
+
+
         </div>
       </div>

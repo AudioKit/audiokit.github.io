@@ -7,562 +7,562 @@ title: AKLowFrequencyOscillator
       <div id="contents" class="isShowingTOC" role="main">
 
         <div>
-          
+
           <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+  <td class="specification-value"><a href="/Classes/AKAudio.html">AKAudio</a> : <a href="/Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKLowFrequencyOscillator.h<br />AKLowFrequencyOscillator.m</td>
 </tr>
             </tbody></table>
-          
 
-          
-          
+
+
+
             <a title="Overview" name="overview"></a>
             <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>A low frequency oscillator of various shapes.</p>
-          
-          
 
 
-          
-          
+
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Properties" name="properties"></a>
             <h3 class="subtitle subtitle-methods">Properties</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/amplitude" title="amplitude"></a>
   <h4 class="subsubtitle method-title">amplitude</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Amplitude of output. [Default Value: 1]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *amplitude{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/frequency" title="frequency"></a>
   <h4 class="subsubtitle method-title">frequency</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Frequency of the note. [Default Value: 110]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *frequency{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/waveformType" title="waveformType"></a>
   <h4 class="subsubtitle method-title">waveformType</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Waveform of the oscillator, can be sine, triangle, square (bipolar), square (unipolar), saw-tooth, saw-tooth (down). [Default Value: AKLowFrequencyOscillatorTypeSine]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property AKConstant *waveformType{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Class Methods" name="class_methods"></a>
             <h3 class="subtitle subtitle-methods">Class Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/oscillator" title="oscillator"></a>
   <h4 class="subsubtitle method-title">oscillator</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the low frequency oscillator with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)oscillator{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/waveformTypeForBipolarSquare" title="waveformTypeForBipolarSquare"></a>
   <h4 class="subsubtitle method-title">waveformTypeForBipolarSquare</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Bipolar square waveform
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (AKConstant *)waveformTypeForBipolarSquare{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/waveformTypeForDownSawtooth" title="waveformTypeForDownSawtooth"></a>
   <h4 class="subsubtitle method-title">waveformTypeForDownSawtooth</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Reverse sawtooth waveform
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (AKConstant *)waveformTypeForDownSawtooth{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/waveformTypeForSawtooth" title="waveformTypeForSawtooth"></a>
   <h4 class="subsubtitle method-title">waveformTypeForSawtooth</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Sawtooth waveform
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (AKConstant *)waveformTypeForSawtooth{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/waveformTypeForSine" title="waveformTypeForSine"></a>
   <h4 class="subsubtitle method-title">waveformTypeForSine</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Sine Waveform
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (AKConstant *)waveformTypeForSine{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/waveformTypeForTriangle" title="waveformTypeForTriangle"></a>
   <h4 class="subsubtitle method-title">waveformTypeForTriangle</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Triangle waveform
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (AKConstant *)waveformTypeForTriangle{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/waveformTypeForUnipolarSquare" title="waveformTypeForUnipolarSquare"></a>
   <h4 class="subsubtitle method-title">waveformTypeForUnipolarSquare</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Unipolar Square waveform
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (AKConstant *)waveformTypeForUnipolarSquare{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Instance Methods" name="instance_methods"></a>
             <h3 class="subtitle subtitle-methods">Instance Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/init" title="init"></a>
   <h4 class="subsubtitle method-title">init</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the low frequency oscillator with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)init{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithWaveformType:frequency:amplitude:" title="initWithWaveformType:frequency:amplitude:"></a>
   <h4 class="subsubtitle method-title">initWithWaveformType:frequency:amplitude:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the low frequency oscillator with all values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithWaveformType:(AKConstant *)waveformType frequency:(AKParameter *)frequency amplitude:(AKParameter *)amplitude{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>waveformType</strong>:
       Waveform of the oscillator, can be sine, triangle, square (bipolar), square (unipolar), saw-tooth, saw-tooth (down). [Default Value: AKLowFrequencyOscillatorTypeSine]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>frequency</strong>:
       Frequency of the note. Updated at Control-rate. [Default Value: 110]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>amplitude</strong>:
       Amplitude of output. Updated at Control-rate. [Default Value: 1]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalAmplitude:" title="setOptionalAmplitude:"></a>
   <h4 class="subsubtitle method-title">setOptionalAmplitude:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional amplitude
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalAmplitude:(AKParameter *)amplitude{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>amplitude</strong>:
       Amplitude of output. Updated at Control-rate. [Default Value: 1]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalFrequency:" title="setOptionalFrequency:"></a>
   <h4 class="subsubtitle method-title">setOptionalFrequency:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional frequency
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalFrequency:(AKParameter *)frequency{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>frequency</strong>:
       Frequency of the note. Updated at Control-rate. [Default Value: 110]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalWaveformType:" title="setOptionalWaveformType:"></a>
   <h4 class="subsubtitle method-title">setOptionalWaveformType:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional type
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalWaveformType:(AKConstant *)waveformType{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>waveformType</strong>:
       Waveform of the oscillator, can be sine, triangle, square (bipolar), square (unipolar), saw-tooth, saw-tooth (down). [Default Value: AKLowFrequencyOscillatorTypeSine]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
-          
+
+
+
         </div>
       </div>
