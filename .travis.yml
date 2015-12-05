@@ -7,7 +7,7 @@ before_install:
   - sudo -H pip install pygments
   - gem install pygments.rb jekyll jekyll-paginate html-proofer -N
 
-script: jekyll build && htmlproof --href-ignore "#" ./_site
+script: jekyll build && htmlproof --href-ignore "#,/Classes"  ./_site
 
 env:
   global:
