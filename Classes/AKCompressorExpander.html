@@ -7,537 +7,537 @@ title: AKCompressorExpander
       <div id="contents" class="isShowingTOC" role="main">
 
         <div>
-          
+
           <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+  <td class="specification-value"><a href="/Classes/AKAudio.html">AKAudio</a> : <a href="/Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKCompressorExpander.h<br />AKCompressorExpander.m</td>
 </tr>
             </tbody></table>
-          
 
-          
-          
+
+
+
             <a title="Overview" name="overview"></a>
             <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>Dynamic Compressor / Expander
 
 This operation dynamically modifies a gain value applied to the input sound by comparing its power level to a given threshold level. The signal will be compressed/expanded with different factors regarding that it is over or under the threshold.</p>
-          
-          
 
 
-          
-          
+
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Properties" name="properties"></a>
             <h3 class="subtitle subtitle-methods">Properties</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/attackTime" title="attackTime"></a>
   <h4 class="subsubtitle method-title">attackTime</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Gain rise time in seconds. Time over which the gain factor is allowed to raise of one unit. [Default Value: 0.05]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKConstant *attackTime{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/lowerRatio" title="lowerRatio"></a>
   <h4 class="subsubtitle method-title">lowerRatio</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Compression ratio for lower zone. Value less than 1 is compressors, greater than 1 for expanders. [Default Value: 1]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKConstant *lowerRatio{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/releaseTime" title="releaseTime"></a>
   <h4 class="subsubtitle method-title">releaseTime</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Gain fall time in seconds. Time over which the gain factor is allowed to decrease of one unit. [Default Value: 0.5]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKConstant *releaseTime{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/threshold" title="threshold"></a>
   <h4 class="subsubtitle method-title">threshold</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Level of input signal which acts as the threshold [Default Value: 1]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *threshold{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/upperRatio" title="upperRatio"></a>
   <h4 class="subsubtitle method-title">upperRatio</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Compression ratio for upper zone. Value less than 1 is compressors, greater than 1 for expanders. [Default Value: 1]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKConstant *upperRatio{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Class Methods" name="class_methods"></a>
             <h3 class="subtitle subtitle-methods">Class Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/compressorWithInput:" title="compressorWithInput:"></a>
   <h4 class="subsubtitle method-title">compressorWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the compressor expander with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)compressorWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Audio signal</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Instance Methods" name="instance_methods"></a>
             <h3 class="subtitle subtitle-methods">Instance Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithInput:" title="initWithInput:"></a>
   <h4 class="subsubtitle method-title">initWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the compressor expander with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Audio signal</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithInput:threshold:lowerRatio:upperRatio:attackTime:releaseTime:" title="initWithInput:threshold:lowerRatio:upperRatio:attackTime:releaseTime:"></a>
   <h4 class="subsubtitle method-title">initWithInput:threshold:lowerRatio:upperRatio:attackTime:releaseTime:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the compressor expander with all values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input threshold:(AKParameter *)threshold lowerRatio:(AKConstant *)lowerRatio upperRatio:(AKConstant *)upperRatio attackTime:(AKConstant *)attackTime releaseTime:(AKConstant *)releaseTime{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Audio signal [Default Value: ]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>threshold</strong>:
       Level of input signal which acts as the threshold Updated at Control-rate. [Default Value: 1]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>lowerRatio</strong>:
       Compression ratio for lower zone. Value less than 1 is compressors, greater than 1 for expanders. [Default Value: 1]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>upperRatio</strong>:
       Compression ratio for upper zone. Value less than 1 is compressors, greater than 1 for expanders. [Default Value: 1]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>attackTime</strong>:
       Gain rise time in seconds. Time over which the gain factor is allowed to raise of one unit. [Default Value: 0.05]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>releaseTime</strong>:
       Gain fall time in seconds. Time over which the gain factor is allowed to decrease of one unit. [Default Value: 0.5]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalAttackTime:" title="setOptionalAttackTime:"></a>
   <h4 class="subsubtitle method-title">setOptionalAttackTime:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional attack time
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalAttackTime:(AKConstant *)attackTime{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>attackTime</strong>:
       Gain rise time in seconds. Time over which the gain factor is allowed to raise of one unit. [Default Value: 0.05]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalLowerRatio:" title="setOptionalLowerRatio:"></a>
   <h4 class="subsubtitle method-title">setOptionalLowerRatio:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional lower ratio
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalLowerRatio:(AKConstant *)lowerRatio{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>lowerRatio</strong>:
       Compression ratio for lower zone. Value less than 1 is compressors, greater than 1 for expanders. [Default Value: 1]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalReleaseTime:" title="setOptionalReleaseTime:"></a>
   <h4 class="subsubtitle method-title">setOptionalReleaseTime:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional release time
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalReleaseTime:(AKConstant *)releaseTime{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>releaseTime</strong>:
       Gain fall time in seconds. Time over which the gain factor is allowed to decrease of one unit. [Default Value: 0.5]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalThreshold:" title="setOptionalThreshold:"></a>
   <h4 class="subsubtitle method-title">setOptionalThreshold:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional threshold
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalThreshold:(AKParameter *)threshold{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>threshold</strong>:
       Level of input signal which acts as the threshold Updated at Control-rate. [Default Value: 1]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalUpperRatio:" title="setOptionalUpperRatio:"></a>
   <h4 class="subsubtitle method-title">setOptionalUpperRatio:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional upper ratio
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalUpperRatio:(AKConstant *)upperRatio{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>upperRatio</strong>:
       Compression ratio for upper zone. Value less than 1 is compressors, greater than 1 for expanders. [Default Value: 1]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
-          
+
+
+
         </div>
       </div>

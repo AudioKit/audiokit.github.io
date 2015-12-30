@@ -7,627 +7,627 @@ title: AKResonantFilter
       <div id="contents" class="isShowingTOC" role="main">
 
         <div>
-          
+
           <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+  <td class="specification-value"><a href="/Classes/AKAudio.html">AKAudio</a> : <a href="/Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKResonantFilter.h<br />AKResonantFilter.m</td>
 </tr>
             </tbody></table>
-          
 
-          
-          
+
+
+
             <a title="Overview" name="overview"></a>
             <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>A second-order resonant filter.
 
 This is a second-order filter defined by a center frequency which is the frequency position of the peak response, and a bandwidth which is the frequency difference between the upper and lower half-power points.</p>
-          
-          
 
 
-          
-          
+
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Properties" name="properties"></a>
             <h3 class="subtitle subtitle-methods">Properties</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/bandwidth" title="bandwidth"></a>
   <h4 class="subsubtitle method-title">bandwidth</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Bandwidth of the filter (the Hz difference between the upper and lower half-power points). [Default Value: 10]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *bandwidth{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/centerFrequency" title="centerFrequency"></a>
   <h4 class="subsubtitle method-title">centerFrequency</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Center frequency of the filter, or frequency position of the peak response. [Default Value: 1000]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *centerFrequency{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Class Methods" name="class_methods"></a>
             <h3 class="subtitle subtitle-methods">Class Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/filterWithInput:" title="filterWithInput:"></a>
   <h4 class="subsubtitle method-title">filterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the resonant filter with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)filterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The input audio stream.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetDefaultFilterWithInput:" title="presetDefaultFilterWithInput:"></a>
   <h4 class="subsubtitle method-title">presetDefaultFilterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the resonant filter with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetDefaultFilterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The input audio stream.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetHighBassFilterWithInput:" title="presetHighBassFilterWithInput:"></a>
   <h4 class="subsubtitle method-title">presetHighBassFilterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the resonant filter with a high-bass sound
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetHighBassFilterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The input audio stream.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetHighTrebleFilterWithInput:" title="presetHighTrebleFilterWithInput:"></a>
   <h4 class="subsubtitle method-title">presetHighTrebleFilterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the resonant filter with a high-treble sound
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetHighTrebleFilterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The input audio stream.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetMuffledFilterWithInput:" title="presetMuffledFilterWithInput:"></a>
   <h4 class="subsubtitle method-title">presetMuffledFilterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the resonant filter with a muffled sound
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetMuffledFilterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The input audio stream.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Instance Methods" name="instance_methods"></a>
             <h3 class="subtitle subtitle-methods">Instance Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithInput:" title="initWithInput:"></a>
   <h4 class="subsubtitle method-title">initWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the resonant filter with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The input audio stream.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithInput:centerFrequency:bandwidth:" title="initWithInput:centerFrequency:bandwidth:"></a>
   <h4 class="subsubtitle method-title">initWithInput:centerFrequency:bandwidth:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the resonant filter with all values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input centerFrequency:(AKParameter *)centerFrequency bandwidth:(AKParameter *)bandwidth{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The input audio stream.</li>
-    
+
     <li><i class="icon-line-play"></i><strong>centerFrequency</strong>:
       Center frequency of the filter, or frequency position of the peak response. Updated at Control-rate. [Default Value: 1000]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>bandwidth</strong>:
       Bandwidth of the filter (the Hz difference between the upper and lower half-power points). Updated at Control-rate. [Default Value: 10]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetDefaultFilterWithInput:" title="initWithPresetDefaultFilterWithInput:"></a>
   <h4 class="subsubtitle method-title">initWithPresetDefaultFilterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the resonant filter with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetDefaultFilterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The input audio stream.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetHighBassFilterWithInput:" title="initWithPresetHighBassFilterWithInput:"></a>
   <h4 class="subsubtitle method-title">initWithPresetHighBassFilterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the resonant filter with a high-bass sound
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetHighBassFilterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The input audio stream.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetHighTrebleFilterWithInput:" title="initWithPresetHighTrebleFilterWithInput:"></a>
   <h4 class="subsubtitle method-title">initWithPresetHighTrebleFilterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the resonant filter with a high-treble sound
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetHighTrebleFilterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The input audio stream.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetMuffledFilterWithInput:" title="initWithPresetMuffledFilterWithInput:"></a>
   <h4 class="subsubtitle method-title">initWithPresetMuffledFilterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the resonant filter with a muffled sound
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetMuffledFilterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The input audio stream.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalBandwidth:" title="setOptionalBandwidth:"></a>
   <h4 class="subsubtitle method-title">setOptionalBandwidth:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional bandwidth
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalBandwidth:(AKParameter *)bandwidth{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>bandwidth</strong>:
       Bandwidth of the filter (the Hz difference between the upper and lower half-power points). Updated at Control-rate. [Default Value: 10]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalCenterFrequency:" title="setOptionalCenterFrequency:"></a>
   <h4 class="subsubtitle method-title">setOptionalCenterFrequency:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional center frequency
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalCenterFrequency:(AKParameter *)centerFrequency{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>centerFrequency</strong>:
       Center frequency of the filter, or frequency position of the peak response. Updated at Control-rate. [Default Value: 1000]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
-          
+
+
+
         </div>
       </div>

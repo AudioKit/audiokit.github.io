@@ -7,200 +7,200 @@ title: AKMix
       <div id="contents" class="isShowingTOC" role="main">
 
         <div>
-          
+
           <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+  <td class="specification-value"><a href="/Classes/AKAudio.html">AKAudio</a> : <a href="/Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKMix.h<br />AKMix.m</td>
 </tr>
             </tbody></table>
-          
 
-          
-          
+
+
+
             <a title="Overview" name="overview"></a>
             <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>Calculates the weighted mean value of two input signals.</p>
-          
-          
 
 
-          
-          
 
-          
 
-          
+
+
+
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Instance Methods" name="instance_methods"></a>
             <h3 class="subtitle subtitle-methods">Instance Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/initMonoAudioFromStereoInput:" title="initMonoAudioFromStereoInput:"></a>
   <h4 class="subsubtitle method-title">initMonoAudioFromStereoInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Create a mono audio from equal parts of the left and right channels of a stereo input
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initMonoAudioFromStereoInput:(AKStereoAudio *)stereoInput{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>stereoInput</strong>:
       Stereo audio source to be mixed down to mono</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithInput1:input2:balance:" title="initWithInput1:input2:balance:"></a>
   <h4 class="subsubtitle method-title">initWithInput1:input2:balance:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Create a weighted mean of two inputs using a balance point.
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithInput1:(AKParameter *)input1 input2:(AKParameter *)input2 balance:(AKParameter *)balancePoint{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input1</strong>:
       First input</li>
-    
+
     <li><i class="icon-line-play"></i><strong>input2</strong>:
       Second input</li>
-    
+
     <li><i class="icon-line-play"></i><strong>balancePoint</strong>:
       A number from 0 (all input 1) to 1 (all input 2).</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setMaximumBalancePoint:" title="setMaximumBalancePoint:"></a>
   <h4 class="subsubtitle method-title">setMaximumBalancePoint:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set the maximum balance point.
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setMaximumBalancePoint:(AKConstant *)maximumBalancePoint{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>maximumBalancePoint</strong>:
       The value for which the balance point would indicate all input 2.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setMinimumBalancePoint:" title="setMinimumBalancePoint:"></a>
   <h4 class="subsubtitle method-title">setMinimumBalancePoint:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set the minimum balance point.
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setMinimumBalancePoint:(AKConstant *)minimumBalancePoint{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>minimumBalancePoint</strong>:
       The value for which the balance point would indicate all input 1.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
-          
+
+
+
         </div>
       </div>

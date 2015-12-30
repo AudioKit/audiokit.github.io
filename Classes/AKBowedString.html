@@ -7,1094 +7,1094 @@ title: AKBowedString
       <div id="contents" class="isShowingTOC" role="main">
 
         <div>
-          
+
           <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+  <td class="specification-value"><a href="/Classes/AKAudio.html">AKAudio</a> : <a href="/Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKBowedString.h<br />AKBowedString.m</td>
 </tr>
             </tbody></table>
-          
 
-          
-          
+
+
+
             <a title="Overview" name="overview"></a>
             <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>Creates a tone similar to a bowed string.
 
 Audio output is a tone similar to a bowed string, using a physical model developed from Perry Cook, but recoded for Csound.</p>
-          
-          
 
 
-          
-          
+
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Properties" name="properties"></a>
             <h3 class="subtitle subtitle-methods">Properties</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/amplitude" title="amplitude"></a>
   <h4 class="subsubtitle method-title">amplitude</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Amplitude of the note played. [Default Value: 1]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *amplitude{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/frequency" title="frequency"></a>
   <h4 class="subsubtitle method-title">frequency</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Frequency of the note played, note that this will be lowest allowable frequency unless the optional minimum frequency is set. [Default Value: 110]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *frequency{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/minimumFrequency" title="minimumFrequency"></a>
   <h4 class="subsubtitle method-title">minimumFrequency</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Lowest frequency at which the instrument will play.  [Default Value: 0]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKConstant *minimumFrequency{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/position" title="position"></a>
   <h4 class="subsubtitle method-title">position</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Position of the bow along the string. Usual playing is about 0.127236. The suggested range is 0.025 to 0.23. [Default Value: 0.127236]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *position{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/pressure" title="pressure"></a>
   <h4 class="subsubtitle method-title">pressure</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Parameter controlling the pressure of the bow on the string. Values should be about 3. The useful range is approximately 1 to 5. [Default Value: 3]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *pressure{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/vibratoAmplitude" title="vibratoAmplitude"></a>
   <h4 class="subsubtitle method-title">vibratoAmplitude</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Amplitude of the vibrato. [Default Value: 0]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *vibratoAmplitude{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/vibratoFrequency" title="vibratoFrequency"></a>
   <h4 class="subsubtitle method-title">vibratoFrequency</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Frequency of vibrato in Hertz. Suggested range is 0 to 12. [Default Value: 0]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *vibratoFrequency{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/vibratoShape" title="vibratoShape"></a>
   <h4 class="subsubtitle method-title">vibratoShape</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Table shape of vibrato, usually a sine table. [Default Value: sine]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKTable *vibratoShape{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Class Methods" name="class_methods"></a>
             <h3 class="subtitle subtitle-methods">Class Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/bowedString" title="bowedString"></a>
   <h4 class="subsubtitle method-title">bowedString</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the bowed string with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)bowedString{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetCelloBowedString" title="presetCelloBowedString"></a>
   <h4 class="subsubtitle method-title">presetCelloBowedString</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the bowed string with a cello sound
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetCelloBowedString{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetDefaultBowedString" title="presetDefaultBowedString"></a>
   <h4 class="subsubtitle method-title">presetDefaultBowedString</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the bowed string with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetDefaultBowedString{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetFeedbackBowedString" title="presetFeedbackBowedString"></a>
   <h4 class="subsubtitle method-title">presetFeedbackBowedString</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the bowed string with a guitar feedback-esque sound
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetFeedbackBowedString{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetFogHornBowedString" title="presetFogHornBowedString"></a>
   <h4 class="subsubtitle method-title">presetFogHornBowedString</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the bowed string with a sound like a ship horn
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetFogHornBowedString{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetTrainWhislteBowedString" title="presetTrainWhislteBowedString"></a>
   <h4 class="subsubtitle method-title">presetTrainWhislteBowedString</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the bowed string with a sound like a train whistle
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetTrainWhislteBowedString{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetWhistlingBowedString" title="presetWhistlingBowedString"></a>
   <h4 class="subsubtitle method-title">presetWhistlingBowedString</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the bowed string with a 'whistling' sound
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetWhistlingBowedString{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Instance Methods" name="instance_methods"></a>
             <h3 class="subtitle subtitle-methods">Instance Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/init" title="init"></a>
   <h4 class="subsubtitle method-title">init</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the bowed string with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)init{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithFrequency:amplitude:pressure:position:vibratoShape:vibratoFrequency:vibratoAmplitude:minimumFrequency:" title="initWithFrequency:amplitude:pressure:position:vibratoShape:vibratoFrequency:vibratoAmplitude:minimumFrequency:"></a>
   <h4 class="subsubtitle method-title">initWithFrequency:amplitude:pressure:position:vibratoShape:vibratoFrequency:vibratoAmplitude:minimumFrequency:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the bowed string with all values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithFrequency:(AKParameter *)frequency amplitude:(AKParameter *)amplitude pressure:(AKParameter *)pressure position:(AKParameter *)position vibratoShape:(AKTable *)vibratoShape vibratoFrequency:(AKParameter *)vibratoFrequency vibratoAmplitude:(AKParameter *)vibratoAmplitude minimumFrequency:(AKConstant *)minimumFrequency{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>frequency</strong>:
       Frequency of the note played, note that this will be lowest allowable frequency unless the optional minimum frequency is set. Updated at Control-rate. [Default Value: 110]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>amplitude</strong>:
       Amplitude of the note played. Updated at Control-rate. [Default Value: 1]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>pressure</strong>:
       Parameter controlling the pressure of the bow on the string. Values should be about 3. The useful range is approximately 1 to 5. Updated at Control-rate. [Default Value: 3]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>position</strong>:
       Position of the bow along the string. Usual playing is about 0.127236. The suggested range is 0.025 to 0.23. Updated at Control-rate. [Default Value: 0.127236]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>vibratoShape</strong>:
       Table shape of vibrato, usually a sine table. [Default Value: sine]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>vibratoFrequency</strong>:
       Frequency of vibrato in Hertz. Suggested range is 0 to 12. Updated at Control-rate. [Default Value: 0]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>vibratoAmplitude</strong>:
       Amplitude of the vibrato. Updated at Control-rate. [Default Value: 0]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>minimumFrequency</strong>:
       Lowest frequency at which the instrument will play.  [Default Value: 0]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetCelloBowedString" title="initWithPresetCelloBowedString"></a>
   <h4 class="subsubtitle method-title">initWithPresetCelloBowedString</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the bowed string with a cello sound
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetCelloBowedString{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetFeedbackBowedString" title="initWithPresetFeedbackBowedString"></a>
   <h4 class="subsubtitle method-title">initWithPresetFeedbackBowedString</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the bowed string with a guitar feedback-esque sound
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetFeedbackBowedString{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetFogHornBowedString" title="initWithPresetFogHornBowedString"></a>
   <h4 class="subsubtitle method-title">initWithPresetFogHornBowedString</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the bowed string with a sound like a ship horn
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetFogHornBowedString{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetTrainWhislteBowedString" title="initWithPresetTrainWhislteBowedString"></a>
   <h4 class="subsubtitle method-title">initWithPresetTrainWhislteBowedString</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the bowed string with a sound like a train whistle
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetTrainWhislteBowedString{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetWhistlingBowedString" title="initWithPresetWhistlingBowedString"></a>
   <h4 class="subsubtitle method-title">initWithPresetWhistlingBowedString</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the bowed string with a 'whistling' sound
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetWhistlingBowedString{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalAmplitude:" title="setOptionalAmplitude:"></a>
   <h4 class="subsubtitle method-title">setOptionalAmplitude:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional amplitude
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalAmplitude:(AKParameter *)amplitude{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>amplitude</strong>:
       Amplitude of the note played. Updated at Control-rate. [Default Value: 1]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalFrequency:" title="setOptionalFrequency:"></a>
   <h4 class="subsubtitle method-title">setOptionalFrequency:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional frequency
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalFrequency:(AKParameter *)frequency{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>frequency</strong>:
       Frequency of the note played, note that this will be lowest allowable frequency unless the optional minimum frequency is set. Updated at Control-rate. [Default Value: 110]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalMinimumFrequency:" title="setOptionalMinimumFrequency:"></a>
   <h4 class="subsubtitle method-title">setOptionalMinimumFrequency:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional minimum frequency
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalMinimumFrequency:(AKConstant *)minimumFrequency{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>minimumFrequency</strong>:
       Lowest frequency at which the instrument will play.  [Default Value: 0]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalPosition:" title="setOptionalPosition:"></a>
   <h4 class="subsubtitle method-title">setOptionalPosition:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional position
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalPosition:(AKParameter *)position{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>position</strong>:
       Position of the bow along the string. Usual playing is about 0.127236. The suggested range is 0.025 to 0.23. Updated at Control-rate. [Default Value: 0.127236]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalPressure:" title="setOptionalPressure:"></a>
   <h4 class="subsubtitle method-title">setOptionalPressure:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional pressure
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalPressure:(AKParameter *)pressure{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>pressure</strong>:
       Parameter controlling the pressure of the bow on the string. Values should be about 3. The useful range is approximately 1 to 5. Updated at Control-rate. [Default Value: 3]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalVibratoAmplitude:" title="setOptionalVibratoAmplitude:"></a>
   <h4 class="subsubtitle method-title">setOptionalVibratoAmplitude:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional vibrato amplitude
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalVibratoAmplitude:(AKParameter *)vibratoAmplitude{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>vibratoAmplitude</strong>:
       Amplitude of the vibrato. Updated at Control-rate. [Default Value: 0]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalVibratoFrequency:" title="setOptionalVibratoFrequency:"></a>
   <h4 class="subsubtitle method-title">setOptionalVibratoFrequency:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional vibrato frequency
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalVibratoFrequency:(AKParameter *)vibratoFrequency{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>vibratoFrequency</strong>:
       Frequency of vibrato in Hertz. Suggested range is 0 to 12. Updated at Control-rate. [Default Value: 0]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalVibratoShape:" title="setOptionalVibratoShape:"></a>
   <h4 class="subsubtitle method-title">setOptionalVibratoShape:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional vibrato shape
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalVibratoShape:(AKTable *)vibratoShape{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>vibratoShape</strong>:
       Table shape of vibrato, usually a sine table. [Default Value: sine]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
-          
+
+
+
         </div>
       </div>

@@ -7,1010 +7,1010 @@ title: AKFMOscillator
       <div id="contents" class="isShowingTOC" role="main">
 
         <div>
-          
+
           <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+  <td class="specification-value"><a href="/Classes/AKAudio.html">AKAudio</a> : <a href="/Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKFMOscillator.h<br />AKFMOscillator.m</td>
 </tr>
             </tbody></table>
-          
 
-          
-          
+
+
+
             <a title="Overview" name="overview"></a>
             <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>Basic frequency modulated oscillator with linear interpolation.
 
 Classic FM Synthesis audio generation.</p>
-          
-          
 
 
-          
-          
+
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Properties" name="properties"></a>
             <h3 class="subtitle subtitle-methods">Properties</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/amplitude" title="amplitude"></a>
   <h4 class="subsubtitle method-title">amplitude</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     This multiplied by the modulating frequency gives the modulation amplitude. [Default Value: 0.5]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *amplitude{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/baseFrequency" title="baseFrequency"></a>
   <h4 class="subsubtitle method-title">baseFrequency</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     In cycles per second, or Hz, this is the common denominator for the carrier and modulating frequencies. [Default Value: 440]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *baseFrequency{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/carrierMultiplier" title="carrierMultiplier"></a>
   <h4 class="subsubtitle method-title">carrierMultiplier</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     This multiplied by the baseFrequency gives the carrier frequency. [Default Value: 1]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *carrierMultiplier{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/modulatingMultiplier" title="modulatingMultiplier"></a>
   <h4 class="subsubtitle method-title">modulatingMultiplier</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     This multiplied by the baseFrequency gives the modulating frequency. [Default Value: 1]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *modulatingMultiplier{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/modulationIndex" title="modulationIndex"></a>
   <h4 class="subsubtitle method-title">modulationIndex</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     This multiplied by the modulating frequency gives the modulation amplitude. [Default Value: 1]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *modulationIndex{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/waveform" title="waveform"></a>
   <h4 class="subsubtitle method-title">waveform</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Waveform table to use.  Requires a wrap-around guard point. [Default Value: sine]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKTable *waveform{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Class Methods" name="class_methods"></a>
             <h3 class="subtitle subtitle-methods">Class Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/oscillator" title="oscillator"></a>
   <h4 class="subsubtitle method-title">oscillator</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the fm oscillator with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)oscillator{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetBuzzer" title="presetBuzzer"></a>
   <h4 class="subsubtitle method-title">presetBuzzer</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the oscillator with 'buzzer' type values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetBuzzer{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetDefaultOscillator" title="presetDefaultOscillator"></a>
   <h4 class="subsubtitle method-title">presetDefaultOscillator</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the oscillator with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetDefaultOscillator{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetFogHorn" title="presetFogHorn"></a>
   <h4 class="subsubtitle method-title">presetFogHorn</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the oscillator with 'foghorn' type values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetFogHorn{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetSpaceWobble" title="presetSpaceWobble"></a>
   <h4 class="subsubtitle method-title">presetSpaceWobble</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the oscillator with 'space-wobble' type values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetSpaceWobble{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetSpiral" title="presetSpiral"></a>
   <h4 class="subsubtitle method-title">presetSpiral</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the oscillator with 'spiral' type values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetSpiral{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetStunRay" title="presetStunRay"></a>
   <h4 class="subsubtitle method-title">presetStunRay</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the oscillator with 'stun-ray' type values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetStunRay{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetWobble" title="presetWobble"></a>
   <h4 class="subsubtitle method-title">presetWobble</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the oscillator with 'wobble' type values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetWobble{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Instance Methods" name="instance_methods"></a>
             <h3 class="subtitle subtitle-methods">Instance Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/init" title="init"></a>
   <h4 class="subsubtitle method-title">init</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the fm oscillator with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)init{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetBuzzer" title="initWithPresetBuzzer"></a>
   <h4 class="subsubtitle method-title">initWithPresetBuzzer</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the oscillator with 'buzzer' type values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetBuzzer{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetFogHorn" title="initWithPresetFogHorn"></a>
   <h4 class="subsubtitle method-title">initWithPresetFogHorn</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the oscillator with 'foghorn' type values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetFogHorn{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetSpaceWobble" title="initWithPresetSpaceWobble"></a>
   <h4 class="subsubtitle method-title">initWithPresetSpaceWobble</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the oscillator with 'space-wobble' type values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetSpaceWobble{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetSpiral" title="initWithPresetSpiral"></a>
   <h4 class="subsubtitle method-title">initWithPresetSpiral</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the oscillator with 'spiral' type values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetSpiral{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetStunRay" title="initWithPresetStunRay"></a>
   <h4 class="subsubtitle method-title">initWithPresetStunRay</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the oscillator with 'stun-ray' type values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetStunRay{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetWobble" title="initWithPresetWobble"></a>
   <h4 class="subsubtitle method-title">initWithPresetWobble</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the oscillator with 'wobble' type values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetWobble{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithWaveform:baseFrequency:carrierMultiplier:modulatingMultiplier:modulationIndex:amplitude:" title="initWithWaveform:baseFrequency:carrierMultiplier:modulatingMultiplier:modulationIndex:amplitude:"></a>
   <h4 class="subsubtitle method-title">initWithWaveform:baseFrequency:carrierMultiplier:modulatingMultiplier:modulationIndex:amplitude:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the fm oscillator with all values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithWaveform:(AKTable *)waveform baseFrequency:(AKParameter *)baseFrequency carrierMultiplier:(AKParameter *)carrierMultiplier modulatingMultiplier:(AKParameter *)modulatingMultiplier modulationIndex:(AKParameter *)modulationIndex amplitude:(AKParameter *)amplitude{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>waveform</strong>:
       Waveform table to use.  Requires a wrap-around guard point. [Default Value: sine]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>baseFrequency</strong>:
       In cycles per second, or Hz, this is the common denominator for the carrier and modulating frequencies. Updated at Control-rate. [Default Value: 440]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>carrierMultiplier</strong>:
       This multiplied by the baseFrequency gives the carrier frequency. [Default Value: 1]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>modulatingMultiplier</strong>:
       This multiplied by the baseFrequency gives the modulating frequency. [Default Value: 1]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>modulationIndex</strong>:
       This multiplied by the modulating frequency gives the modulation amplitude. Updated at Control-rate. [Default Value: 1]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>amplitude</strong>:
       This multiplied by the modulating frequency gives the modulation amplitude. [Default Value: 0.5]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalAmplitude:" title="setOptionalAmplitude:"></a>
   <h4 class="subsubtitle method-title">setOptionalAmplitude:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional amplitude
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalAmplitude:(AKParameter *)amplitude{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>amplitude</strong>:
       This multiplied by the modulating frequency gives the modulation amplitude. [Default Value: 0.5]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalBaseFrequency:" title="setOptionalBaseFrequency:"></a>
   <h4 class="subsubtitle method-title">setOptionalBaseFrequency:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional base frequency
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalBaseFrequency:(AKParameter *)baseFrequency{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>baseFrequency</strong>:
       In cycles per second, or Hz, this is the common denominator for the carrier and modulating frequencies. Updated at Control-rate. [Default Value: 440]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalCarrierMultiplier:" title="setOptionalCarrierMultiplier:"></a>
   <h4 class="subsubtitle method-title">setOptionalCarrierMultiplier:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional carrier multiplier
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalCarrierMultiplier:(AKParameter *)carrierMultiplier{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>carrierMultiplier</strong>:
       This multiplied by the baseFrequency gives the carrier frequency. [Default Value: 1]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalModulatingMultiplier:" title="setOptionalModulatingMultiplier:"></a>
   <h4 class="subsubtitle method-title">setOptionalModulatingMultiplier:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional modulating multiplier
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalModulatingMultiplier:(AKParameter *)modulatingMultiplier{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>modulatingMultiplier</strong>:
       This multiplied by the baseFrequency gives the modulating frequency. [Default Value: 1]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalModulationIndex:" title="setOptionalModulationIndex:"></a>
   <h4 class="subsubtitle method-title">setOptionalModulationIndex:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional modulation index
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalModulationIndex:(AKParameter *)modulationIndex{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>modulationIndex</strong>:
       This multiplied by the modulating frequency gives the modulation amplitude. Updated at Control-rate. [Default Value: 1]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalWaveform:" title="setOptionalWaveform:"></a>
   <h4 class="subsubtitle method-title">setOptionalWaveform:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional waveform
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalWaveform:(AKTable *)waveform{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>waveform</strong>:
       Waveform table to use.  Requires a wrap-around guard point. [Default Value: sine]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
-          
+
+
+
         </div>
       </div>

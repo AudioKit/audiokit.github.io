@@ -7,549 +7,549 @@ title: AKBandRejectButterworthFilter
       <div id="contents" class="isShowingTOC" role="main">
 
         <div>
-          
+
           <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+  <td class="specification-value"><a href="/Classes/AKAudio.html">AKAudio</a> : <a href="/Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKBandRejectButterworthFilter.h<br />AKBandRejectButterworthFilter.m</td>
 </tr>
             </tbody></table>
-          
 
-          
-          
+
+
+
             <a title="Overview" name="overview"></a>
             <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>A band-reject Butterworth filter.
 
 These filters are Butterworth second-order IIR filters. They offer an almost flat passband and very good precision and stopband attenuation.</p>
-          
-          
 
 
-          
-          
+
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Properties" name="properties"></a>
             <h3 class="subtitle subtitle-methods">Properties</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/bandwidth" title="bandwidth"></a>
   <h4 class="subsubtitle method-title">bandwidth</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Bandwidth of the band-reject filters. [Default Value: 2000]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *bandwidth{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/centerFrequency" title="centerFrequency"></a>
   <h4 class="subsubtitle method-title">centerFrequency</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Center frequency for each of the filters. [Default Value: 3000]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *centerFrequency{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Class Methods" name="class_methods"></a>
             <h3 class="subtitle subtitle-methods">Class Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/filterWithInput:" title="filterWithInput:"></a>
   <h4 class="subsubtitle method-title">filterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the band reject butterworth filter with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)filterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal to be filtered.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetBassRejectFilterWithInput:" title="presetBassRejectFilterWithInput:"></a>
   <h4 class="subsubtitle method-title">presetBassRejectFilterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the band reject butterworth filter with a treble-heavy sound
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetBassRejectFilterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal to be filtered.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetDefaultFilterWithInput:" title="presetDefaultFilterWithInput:"></a>
   <h4 class="subsubtitle method-title">presetDefaultFilterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the band reject butterworth filter with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetDefaultFilterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal to be filtered.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetTrebleRejectFilterWithInput:" title="presetTrebleRejectFilterWithInput:"></a>
   <h4 class="subsubtitle method-title">presetTrebleRejectFilterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the band reject butterworth filter with a bass-heavy sound
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetTrebleRejectFilterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal to be filtered.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Instance Methods" name="instance_methods"></a>
             <h3 class="subtitle subtitle-methods">Instance Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithInput:" title="initWithInput:"></a>
   <h4 class="subsubtitle method-title">initWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the band reject butterworth filter with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal to be filtered.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithInput:centerFrequency:bandwidth:" title="initWithInput:centerFrequency:bandwidth:"></a>
   <h4 class="subsubtitle method-title">initWithInput:centerFrequency:bandwidth:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the band reject butterworth filter with all values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input centerFrequency:(AKParameter *)centerFrequency bandwidth:(AKParameter *)bandwidth{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal to be filtered.</li>
-    
+
     <li><i class="icon-line-play"></i><strong>centerFrequency</strong>:
       Center frequency for each of the filters. Updated at Control-rate. [Default Value: 3000]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>bandwidth</strong>:
       Bandwidth of the band-reject filters. Updated at Control-rate. [Default Value: 2000]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetBassRejectFilterWithInput:" title="initWithPresetBassRejectFilterWithInput:"></a>
   <h4 class="subsubtitle method-title">initWithPresetBassRejectFilterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the band reject butterworth filter with a treble-heavy sound
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetBassRejectFilterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal to be filtered.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetDefaultFilterWithInput:" title="initWithPresetDefaultFilterWithInput:"></a>
   <h4 class="subsubtitle method-title">initWithPresetDefaultFilterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the band reject butterworth filter with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetDefaultFilterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal to be filtered.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetTrebleRejectFilterWithInput:" title="initWithPresetTrebleRejectFilterWithInput:"></a>
   <h4 class="subsubtitle method-title">initWithPresetTrebleRejectFilterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the band reject butterworth filter with a bass-heavy sound
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetTrebleRejectFilterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal to be filtered.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalBandwidth:" title="setOptionalBandwidth:"></a>
   <h4 class="subsubtitle method-title">setOptionalBandwidth:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional bandwidth
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalBandwidth:(AKParameter *)bandwidth{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>bandwidth</strong>:
       Bandwidth of the band-reject filters. Updated at Control-rate. [Default Value: 2000]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalCenterFrequency:" title="setOptionalCenterFrequency:"></a>
   <h4 class="subsubtitle method-title">setOptionalCenterFrequency:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional center frequency
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalCenterFrequency:(AKParameter *)centerFrequency{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>centerFrequency</strong>:
       Center frequency for each of the filters. Updated at Control-rate. [Default Value: 3000]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
-          
+
+
+
         </div>
       </div>

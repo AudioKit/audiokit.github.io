@@ -7,852 +7,852 @@ title: AKRandomDistributionTableGenerator
       <div id="contents" class="isShowingTOC" role="main">
 
         <div>
-          
+
           <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKTableGenerator.html">AKTableGenerator</a> : NSObject</td>
+  <td class="specification-value"><a href="/Classes/AKTableGenerator.html">AKTableGenerator</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKRandomDistributionTableGenerator.h<br />AKRandomDistributionTableGenerator.m</td>
 </tr>
             </tbody></table>
-          
 
-          
-          
+
+
+
             <a title="Overview" name="overview"></a>
             <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>Generates tables of different random distributions.</p>
-          
-          
 
 
-          
-          
 
-          
+
+
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Class Methods" name="class_methods"></a>
             <h3 class="subtitle subtitle-methods">Class Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/betaDistributionWithAlpha:beta:" title="betaDistributionWithAlpha:beta:"></a>
   <h4 class="subsubtitle method-title">betaDistributionWithAlpha:beta:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Create a random distribution table of the Beta (positive numbers only) type. If both alpha and beta equal one we have uniform distribution. If both alpha and beta are greater than one we have a sort of Gaussian distribution.
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)betaDistributionWithAlpha:(float)alpha beta:(float)beta{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>alpha</strong>:
       If alpha is smaller than one, smaller values favor values near 0.</li>
-    
+
     <li><i class="icon-line-play"></i><strong>beta</strong>:
       If beta is smaller than one, smaller values favor values near level.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/biexponentialDistribution" title="biexponentialDistribution"></a>
   <h4 class="subsubtitle method-title">biexponentialDistribution</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Create random numbers with a biexponential (positive and negative numbers) distribution
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)biexponentialDistribution{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/cauchyDistribution" title="cauchyDistribution"></a>
   <h4 class="subsubtitle method-title">cauchyDistribution</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Create random numbers with a Cauchy (positive and negative numbers) distribution
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)cauchyDistribution{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/exponentialDistribution" title="exponentialDistribution"></a>
   <h4 class="subsubtitle method-title">exponentialDistribution</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Create random numbers with a exponential (positive numbers only) distribution
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)exponentialDistribution{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/gaussianDistribution" title="gaussianDistribution"></a>
   <h4 class="subsubtitle method-title">gaussianDistribution</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Create random numbers with a Gaussian (positive and negative numbers) distribution
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)gaussianDistribution{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/linearDistribution" title="linearDistribution"></a>
   <h4 class="subsubtitle method-title">linearDistribution</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Create random numbers with a linear (positive numbers only) distribution
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)linearDistribution{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/poissonDistribution" title="poissonDistribution"></a>
   <h4 class="subsubtitle method-title">poissonDistribution</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Create random numbers with a Poisson (positive numbers only) distribution
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)poissonDistribution{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/positiveCauchyDistribution" title="positiveCauchyDistribution"></a>
   <h4 class="subsubtitle method-title">positiveCauchyDistribution</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Create random numbers with a positive Cauchy (positive numbers only) distribution
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)positiveCauchyDistribution{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/triangularDistribution" title="triangularDistribution"></a>
   <h4 class="subsubtitle method-title">triangularDistribution</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Create random numbers with a triangular (positive and negative numbers) distribution
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)triangularDistribution{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/uniformDistribution" title="uniformDistribution"></a>
   <h4 class="subsubtitle method-title">uniformDistribution</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Create random numbers with a uniform (positive numbers only) distribution
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)uniformDistribution{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/weibullDistributionWithSigma:" title="weibullDistributionWithSigma:"></a>
   <h4 class="subsubtitle method-title">weibullDistributionWithSigma:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Create a random distribution table of the Weibull type.
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)weibullDistributionWithSigma:(float)sigma{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>sigma</strong>:
       Value that determines the spread of the distribution.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Instance Methods" name="instance_methods"></a>
             <h3 class="subtitle subtitle-methods">Instance Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/generationRoutineNumber" title="generationRoutineNumber"></a>
   <h4 class="subsubtitle method-title">generationRoutineNumber</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Generation Routine Number
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (int)generationRoutineNumber{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initBetaDistributionWithAlpha:beta:" title="initBetaDistributionWithAlpha:beta:"></a>
   <h4 class="subsubtitle method-title">initBetaDistributionWithAlpha:beta:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Create a random distribution table of the Beta (positive numbers only) type. If both alpha and beta equal one we have uniform distribution. If both alpha and beta are greater than one we have a sort of Gaussian distribution.
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initBetaDistributionWithAlpha:(float)alpha beta:(float)beta{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>alpha</strong>:
       If alpha is smaller than one, smaller values favor values near 0.</li>
-    
+
     <li><i class="icon-line-play"></i><strong>beta</strong>:
       If beta is smaller than one, smaller values favor values near level.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initBiexponentialDistribution" title="initBiexponentialDistribution"></a>
   <h4 class="subsubtitle method-title">initBiexponentialDistribution</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Create random numbers with a biexponential (positive and negative numbers) distribution
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initBiexponentialDistribution{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initCauchyDistribution" title="initCauchyDistribution"></a>
   <h4 class="subsubtitle method-title">initCauchyDistribution</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Create random numbers with a Cauchy (positive and negative numbers) distribution
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initCauchyDistribution{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initExponentialDistribution" title="initExponentialDistribution"></a>
   <h4 class="subsubtitle method-title">initExponentialDistribution</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Create random numbers with a exponential (positive numbers only) distribution
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initExponentialDistribution{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initGaussianDistribution" title="initGaussianDistribution"></a>
   <h4 class="subsubtitle method-title">initGaussianDistribution</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Create random numbers with a Gaussian (positive and negative numbers) distribution
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initGaussianDistribution{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initLinearDistribution" title="initLinearDistribution"></a>
   <h4 class="subsubtitle method-title">initLinearDistribution</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Create random numbers with a linear (positive numbers only) distribution
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initLinearDistribution{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initPoissonDistribution" title="initPoissonDistribution"></a>
   <h4 class="subsubtitle method-title">initPoissonDistribution</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Create random numbers with a Poisson (positive numbers only) distribution
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initPoissonDistribution{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initPositiveCauchyDistribution" title="initPositiveCauchyDistribution"></a>
   <h4 class="subsubtitle method-title">initPositiveCauchyDistribution</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Create random numbers with a positive Cauchy (positive numbers only) distribution
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initPositiveCauchyDistribution{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initTriangularDistribution" title="initTriangularDistribution"></a>
   <h4 class="subsubtitle method-title">initTriangularDistribution</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Create random numbers with a triangular (positive and negative numbers) distribution
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initTriangularDistribution{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initUniformDistribution" title="initUniformDistribution"></a>
   <h4 class="subsubtitle method-title">initUniformDistribution</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Create random numbers with a uniform (positive numbers only) distribution
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initUniformDistribution{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWeibullDistributionWithSigma:" title="initWeibullDistributionWithSigma:"></a>
   <h4 class="subsubtitle method-title">initWeibullDistributionWithSigma:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Create a random distribution table of the Weibull type.
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWeibullDistributionWithSigma:(float)sigma{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>sigma</strong>:
       Value that determines the spread of the distribution.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/parametersWithSize:" title="parametersWithSize:"></a>
   <h4 class="subsubtitle method-title">parametersWithSize:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Parameters for the generator
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (NSArray *)parametersWithSize:(NSUInteger)size{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>size</strong>:
       The final size of the table, useful for scaling</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
-          
+
+
+
         </div>
       </div>

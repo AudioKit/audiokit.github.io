@@ -7,20 +7,20 @@ title: AKTrackedFrequency
       <div id="contents" class="isShowingTOC" role="main">
 
         <div>
-          
+
           <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKControl.html">AKControl</a> : <a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+  <td class="specification-value"><a href="/Classes/AKControl.html">AKControl</a> : <a href="/Classes/AKAudio.html">AKAudio</a> : <a href="/Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKTrackedFrequency.h<br />AKTrackedFrequency.m</td>
 </tr>
             </tbody></table>
-          
 
-          
-          
+
+
+
             <a title="Overview" name="overview"></a>
             <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>Tracks the pitch of a signal.
@@ -34,102 +34,102 @@ Smaller windows will give better time precision, but worse frequency accuracy
 (esp. in low fundamentals).
 
 Based on an original algorithm by M. Puckette.</p>
-          
-          
 
 
-          
-          
 
-          
 
-          
+
+
+
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Instance Methods" name="instance_methods"></a>
             <h3 class="subtitle subtitle-methods">Instance Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithInput:sampleSize:" title="initWithInput:sampleSize:"></a>
   <h4 class="subsubtitle method-title">initWithInput:sampleSize:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Initialize the tracked frequency.
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithInput:(AKAudio *)input sampleSize:(AKConstant *)hopSize{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       Input signal.</li>
-    
+
     <li><i class="icon-line-play"></i><strong>hopSize</strong>:
       Size of the analysis 'hop', in samples, required to be power-of-two (min 64, max 4096). This is the period between measurements.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalSpectralPeaks:" title="setOptionalSpectralPeaks:"></a>
   <h4 class="subsubtitle method-title">setOptionalSpectralPeaks:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set the optional number of spectral peaks
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalSpectralPeaks:(AKConstant *)numberOfSpectralPeaks{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>numberOfSpectralPeaks</strong>:
       Number of spectral peaks to use in the analysis, defaults to 20.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
-          
+
+
+
         </div>
       </div>

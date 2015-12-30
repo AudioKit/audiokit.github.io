@@ -7,298 +7,298 @@ title: AKInterpolatedRandomNumberPulse
       <div id="contents" class="isShowingTOC" role="main">
 
         <div>
-          
+
           <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+  <td class="specification-value"><a href="/Classes/AKAudio.html">AKAudio</a> : <a href="/Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKInterpolatedRandomNumberPulse.h<br />AKInterpolatedRandomNumberPulse.m</td>
 </tr>
             </tbody></table>
-          
 
-          
-          
+
+
+
             <a title="Overview" name="overview"></a>
             <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>Generates a controlled random number series with interpolation between each new number.
 
 New random numbers are generated at a given frequency between zero and a maximum upper bound.  In between random numbers, the value of this operation is linearly interpolated between the two numbers in time.</p>
-          
-          
 
 
-          
-          
+
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Properties" name="properties"></a>
             <h3 class="subtitle subtitle-methods">Properties</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/frequency" title="frequency"></a>
   <h4 class="subsubtitle method-title">frequency</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Frequency at which the new numbers are generated in Hz. [Default Value: 1]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *frequency{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/upperBound" title="upperBound"></a>
   <h4 class="subsubtitle method-title">upperBound</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Maximum maximum range limit.  Sampled values will be between 0 and this maximum [Default Value: 1]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *upperBound{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Class Methods" name="class_methods"></a>
             <h3 class="subtitle subtitle-methods">Class Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/pulse" title="pulse"></a>
   <h4 class="subsubtitle method-title">pulse</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the interpolated random number pulse with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)pulse{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Instance Methods" name="instance_methods"></a>
             <h3 class="subtitle subtitle-methods">Instance Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/init" title="init"></a>
   <h4 class="subsubtitle method-title">init</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the interpolated random number pulse with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)init{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithUpperBound:frequency:" title="initWithUpperBound:frequency:"></a>
   <h4 class="subsubtitle method-title">initWithUpperBound:frequency:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the interpolated random number pulse with all values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithUpperBound:(AKParameter *)upperBound frequency:(AKParameter *)frequency{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>upperBound</strong>:
       Maximum maximum range limit.  Sampled values will be between 0 and this maximum [Default Value: 1]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>frequency</strong>:
       Frequency at which the new numbers are generated in Hz. [Default Value: 1]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalFrequency:" title="setOptionalFrequency:"></a>
   <h4 class="subsubtitle method-title">setOptionalFrequency:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional frequency
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalFrequency:(AKParameter *)frequency{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>frequency</strong>:
       Frequency at which the new numbers are generated in Hz. [Default Value: 1]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalUpperBound:" title="setOptionalUpperBound:"></a>
   <h4 class="subsubtitle method-title">setOptionalUpperBound:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional upper bound
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalUpperBound:(AKParameter *)upperBound{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>upperBound</strong>:
       Maximum maximum range limit.  Sampled values will be between 0 and this maximum [Default Value: 1]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
-          
+
+
+
         </div>
       </div>

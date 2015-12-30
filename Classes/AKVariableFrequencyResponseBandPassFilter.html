@@ -7,875 +7,875 @@ title: AKVariableFrequencyResponseBandPassFilter
       <div id="contents" class="isShowingTOC" role="main">
 
         <div>
-          
+
           <table class="table table-bordered"><tbody>
             <tr>
   <td class="specification-title">Inherits from</td>
-  <td class="specification-value"><a href="../Classes/AKAudio.html">AKAudio</a> : <a href="../Classes/AKParameter.html">AKParameter</a> : NSObject</td>
+  <td class="specification-value"><a href="/Classes/AKAudio.html">AKAudio</a> : <a href="/Classes/AKParameter.html">AKParameter</a> : NSObject</td>
 </tr><tr>
   <td class="specification-title">Declared in</td>
   <td class="specification-value">AKVariableFrequencyResponseBandPassFilter.h<br />AKVariableFrequencyResponseBandPassFilter.m</td>
 </tr>
             </tbody></table>
-          
 
-          
-          
+
+
+
             <a title="Overview" name="overview"></a>
             <h3 class="subtitle subtitle-overview">Overview</h3>
             <p>A second-order resonant filter.
 
 This is a second-order filter defined by a center frequency which is the frequency position of the peak response, and a bandwidth which is the frequency difference between the upper and lower half-power points.</p>
-          
-          
 
 
-          
-          
+
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Properties" name="properties"></a>
             <h3 class="subtitle subtitle-methods">Properties</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/bandwidth" title="bandwidth"></a>
   <h4 class="subsubtitle method-title">bandwidth</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Bandwidth of the filter (the Hz difference between the upper and lower half-power points). [Default Value: 10]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *bandwidth{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/cutoffFrequency" title="cutoffFrequency"></a>
   <h4 class="subsubtitle method-title">cutoffFrequency</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Cutoff or resonant frequency of the filter, measured in Hz. [Default Value: 1000]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKParameter *cutoffFrequency{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/scalingFactor" title="scalingFactor"></a>
   <h4 class="subsubtitle method-title">scalingFactor</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     There are three scaling factors possible, 'None' or 0, 'Peak' (Default) or 1, and 'RMS' or 2.  All are accessibly through class function 'scalingFactor...'   'Peak' signifies a peak response factor of 1, i.e. all frequencies other than the cutoffFrequency are attenuated in accordance with the (normalized) response curve. 'RMS' raises the response factor so that its overall RMS value equals 1. This intended equalization of input and output power assumes all frequencies are physically present; hence it is most applicable to white noise.   [Default Value: 1]
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}@property (nonatomic) AKConstant *scalingFactor{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Class Methods" name="class_methods"></a>
             <h3 class="subtitle subtitle-methods">Class Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/filterWithInput:" title="filterWithInput:"></a>
   <h4 class="subsubtitle method-title">filterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the variable frequency response band pass filter with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)filterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The input signal to be filtered.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetBassPeakFilterWithInput:" title="presetBassPeakFilterWithInput:"></a>
   <h4 class="subsubtitle method-title">presetBassPeakFilterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the variable frequency response band pass filter with a high bass value
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetBassPeakFilterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The input signal to be filtered.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetDefautFilterWithInput:" title="presetDefautFilterWithInput:"></a>
   <h4 class="subsubtitle method-title">presetDefautFilterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the variable frequency response band pass filter with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetDefautFilterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The input signal to be filtered.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetLargeMuffledFilterWithInput:" title="presetLargeMuffledFilterWithInput:"></a>
   <h4 class="subsubtitle method-title">presetLargeMuffledFilterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the variable frequency response band pass filter with a large and muffled sound
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetLargeMuffledFilterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The input signal to be filtered.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetMuffledFilterWithInput:" title="presetMuffledFilterWithInput:"></a>
   <h4 class="subsubtitle method-title">presetMuffledFilterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the variable frequency response band pass filter with a muffled sound
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetMuffledFilterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The input signal to be filtered.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/presetTreblePeakFilterWithInput:" title="presetTreblePeakFilterWithInput:"></a>
   <h4 class="subsubtitle method-title">presetTreblePeakFilterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the variable frequency response band pass filter with a high treble value
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (instancetype)presetTreblePeakFilterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The input signal to be filtered.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/scalingFactorNone" title="scalingFactorNone"></a>
   <h4 class="subsubtitle method-title">scalingFactorNone</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     No scaling of the output
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (AKConstant *)scalingFactorNone{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/scalingFactorPeak" title="scalingFactorPeak"></a>
   <h4 class="subsubtitle method-title">scalingFactorPeak</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Signifies a peak response factor of 1, i.e. all frequencies other than the cutoffFrequency are attenuated in accordance with the (normalized) response curve.
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (AKConstant *)scalingFactorPeak{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/scalingFactorRMS" title="scalingFactorRMS"></a>
   <h4 class="subsubtitle method-title">scalingFactorRMS</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Raises the response factor so that its overall RMS value equals 1. This intended equalization of input and output power assumes all frequencies are physically present; hence it is most applicable to white noise.
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}+ (AKConstant *)scalingFactorRMS{% endhighlight %}
 
-    
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
 
-          
+
+
+
             <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
             <a title="Instance Methods" name="instance_methods"></a>
             <h3 class="subtitle subtitle-methods">Instance Methods</h3>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithInput:" title="initWithInput:"></a>
   <h4 class="subsubtitle method-title">initWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the variable frequency response band pass filter with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The input signal to be filtered.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithInput:cutoffFrequency:bandwidth:scalingFactor:" title="initWithInput:cutoffFrequency:bandwidth:scalingFactor:"></a>
   <h4 class="subsubtitle method-title">initWithInput:cutoffFrequency:bandwidth:scalingFactor:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the variable frequency response band pass filter with all values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input cutoffFrequency:(AKParameter *)cutoffFrequency bandwidth:(AKParameter *)bandwidth scalingFactor:(AKConstant *)scalingFactor{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The input signal to be filtered.</li>
-    
+
     <li><i class="icon-line-play"></i><strong>cutoffFrequency</strong>:
       Cutoff or resonant frequency of the filter, measured in Hz. Updated at Control-rate. [Default Value: 1000]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>bandwidth</strong>:
       Bandwidth of the filter (the Hz difference between the upper and lower half-power points). Updated at Control-rate. [Default Value: 10]</li>
-    
+
     <li><i class="icon-line-play"></i><strong>scalingFactor</strong>:
       There are three scaling factors possible, 'None' (Default, 0), 'Peak' or 1, and 'RMS' or 2.  All are accessibly through class function 'scalingFactor...'   'Peak' signifies a peak response factor of 1, i.e. all frequencies other than the cutoffFrequency are attenuated in accordance with the (normalized) response curve. 'RMS' raises the response factor so that its overall RMS value equals 1. This intended equalization of input and output power assumes all frequencies are physically present; hence it is most applicable to white noise.   [Default Value: 1]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetBassPeakFilterWithInput:" title="initWithPresetBassPeakFilterWithInput:"></a>
   <h4 class="subsubtitle method-title">initWithPresetBassPeakFilterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the variable frequency response band pass filter with a high bass value
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetBassPeakFilterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The input signal to be filtered.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetDefaultFilterWithInput:" title="initWithPresetDefaultFilterWithInput:"></a>
   <h4 class="subsubtitle method-title">initWithPresetDefaultFilterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the variable frequency response band pass filter with default values
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetDefaultFilterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The input signal to be filtered.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetLargeMuffledFilterWithInput:" title="initWithPresetLargeMuffledFilterWithInput:"></a>
   <h4 class="subsubtitle method-title">initWithPresetLargeMuffledFilterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the variable frequency response band pass filter with a large and muffled sound
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetLargeMuffledFilterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The input signal to be filtered.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetMuffledFilterWithInput:" title="initWithPresetMuffledFilterWithInput:"></a>
   <h4 class="subsubtitle method-title">initWithPresetMuffledFilterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the variable frequency response band pass filter with a muffled sound
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetMuffledFilterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The input signal to be filtered.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/initWithPresetTreblePeakFilterWithInput:" title="initWithPresetTreblePeakFilterWithInput:"></a>
   <h4 class="subsubtitle method-title">initWithPresetTreblePeakFilterWithInput:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Instantiates the variable frequency response band pass filter with a high treble value
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (instancetype)initWithPresetTreblePeakFilterWithInput:(AKParameter *)input{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>input</strong>:
       The input signal to be filtered.</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalBandwidth:" title="setOptionalBandwidth:"></a>
   <h4 class="subsubtitle method-title">setOptionalBandwidth:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional bandwidth
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalBandwidth:(AKParameter *)bandwidth{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>bandwidth</strong>:
       Bandwidth of the filter (the Hz difference between the upper and lower half-power points). Updated at Control-rate. [Default Value: 10]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalCutoffFrequency:" title="setOptionalCutoffFrequency:"></a>
   <h4 class="subsubtitle method-title">setOptionalCutoffFrequency:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional cutoff frequency
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalCutoffFrequency:(AKParameter *)cutoffFrequency{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>cutoffFrequency</strong>:
       Cutoff or resonant frequency of the filter, measured in Hz. Updated at Control-rate. [Default Value: 1000]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
+
             <div class="section-method">
   <a name="//api/name/setOptionalScalingFactor:" title="setOptionalScalingFactor:"></a>
   <h4 class="subsubtitle method-title">setOptionalScalingFactor:</h4>
 
-  
-  
+
+
   <div class="method-subsection brief-description">
     Set an optional scaling factor
   </div>
-  
-    
+
+
 
  {% highlight objective-c %}- (void)setOptionalScalingFactor:(AKConstant *)scalingFactor{% endhighlight %}
 
-    
-  
+
+
   <ul class="iconlist">
-    
+
     <li><i class="icon-line-play"></i><strong>scalingFactor</strong>:
       /// There are three scaling factors possible, 'None' or 0, 'Peak' (Default) or 1, and 'RMS' or 2.  All are accessibly through class function 'scalingFactor...'   'Peak' signifies a peak response factor of 1, i.e. all frequencies other than the cutoffFrequency are attenuated in accordance with the (normalized) response curve. 'RMS' raises the response factor so that its overall RMS value equals 1. This intended equalization of input and output power assumes all frequencies are physically present; hence it is most applicable to white noise.   [Default Value: 1]</li>
-    
+
     </ul>
-  
 
-  
 
-  
 
-  
 
-  
 
-  
 
-  
-  
-  
+
+
+
+
+
+
+
+
+
 </div>
-            
-          
-          
+
+
+
         </div>
       </div>
