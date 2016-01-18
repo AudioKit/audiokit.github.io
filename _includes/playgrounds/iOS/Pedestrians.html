@@ -1,0 +1,36 @@
+<p><h3>Pedestrians
+</h3><h4>A British crossing signal implemented with AudioKit, an example from Andy Farnell&#39;s excellent book &quot;Designing Sound&quot;
+</h4></p>
+
+{% highlight ruby %}import XCPlayground
+import AudioKit
+
+let audiokit = AKManager.sharedInstance
+
+{% endhighlight %}
+<p>Generate a sine wave at the right frequency</p>
+
+{% highlight ruby %}let crossingSignalTone = AKOperation.sineWave(frequency: 2500)
+
+{% endhighlight %}
+<p>Periodically trigger an envelope around that signal</p>
+
+{% highlight ruby %}let crossingSignalTrigger = AKOperation.periodicTrigger(0.2)
+let crossingSignal = crossingSignalTone.triggeredWithEnvelope(crossingSignalTrigger, attack: 0.01, hold: 0.1, release: 0.01)
+
+{% endhighlight %}
+<p>Create the generator node (and scale that volume!)</p>
+
+{% highlight ruby %}let generator = AKOperationGenerator(operation: crossingSignal * 0.2)
+
+audiokit.audioOutput = generator
+audiokit.start()
+
+{% endhighlight %}
+<p>Activate the signal</p>
+
+{% highlight ruby %}generator.start()
+
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+
+{% endhighlight %}

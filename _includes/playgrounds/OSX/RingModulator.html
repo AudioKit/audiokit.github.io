@@ -1,0 +1,44 @@
+<p><h3>AKRingModulator
+</h3><h4>Add description
+</h4></p>
+
+{% highlight ruby %}import XCPlayground
+import AudioKit
+
+let audiokit = AKManager.sharedInstance
+
+{% endhighlight %}
+<p>This section prepares the player and the microphone</p>
+
+{% highlight ruby %}var mic = AKMicrophone()
+mic.volume = 0
+let micWindow = AKMicrophoneWindow(mic)
+
+let bundle = NSBundle.mainBundle()
+let file = bundle.pathForResource("leadloop", ofType: "wav")
+var player = AKAudioPlayer(file!)
+player.looping = true
+let playerWindow = AKAudioPlayerWindow(player)
+
+{% endhighlight %}
+<p>Next, we&#39;ll connect the audio sources to a ring modulator</p>
+
+{% highlight ruby %}let inputMix = AKMixer(mic, player)
+var ringModulator = AKRingModulator(inputMix)
+
+{% endhighlight %}
+<p>Set the parameters of the ring modulator here</p>
+
+{% highlight ruby %}ringModulator.frequency1 = 440 // Hertz
+ringModulator.frequency2 = 660 // Hertz
+ringModulator.balance = 50 // Percent
+ringModulator.mix = 50 // Percent
+
+var ringModulatorWindow = AKRingModulatorWindow(ringModulator)
+
+audiokit.audioOutput = ringModulator
+audiokit.start()
+
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+
+{% endhighlight %}

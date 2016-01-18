@@ -1,0 +1,42 @@
+<p><h3>Simple Reverb
+</h3><h4>This is an implementation of Apple&#39;s simplest reverb which only allows you to set presets
+</h4></p>
+
+{% highlight ruby %}
+import XCPlayground
+import AudioKit
+
+let audiokit = AKManager.sharedInstance
+
+let bundle = NSBundle.mainBundle()
+let file = bundle.pathForResource("drumloop", ofType: "wav")
+var player = AKAudioPlayer(file!)
+player.looping = true
+var reverb = AKReverb(player)
+
+{% endhighlight %}
+<p>Load factory preset and give the dry/wet mix amount here</p>
+
+{% highlight ruby %}reverb.loadFactoryPreset(.Cathedral)
+reverb.dryWetMix = 0.5
+
+audiokit.audioOutput = reverb
+audiokit.start()
+
+player.play()
+
+{% endhighlight %}
+<p>Toggle processing on every loop</p>
+
+{% highlight ruby %}AKPlaygroundLoop(every: 3.428) { () -> () in
+    if reverb.isBypassed {
+        reverb.start()
+    } else {
+        reverb.bypass()
+    }
+    reverb.isBypassed ? "Bypassed" : "Processing" // Open Quicklook for this
+}
+
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+
+{% endhighlight %}

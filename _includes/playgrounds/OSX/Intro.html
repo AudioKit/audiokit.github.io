@@ -1,0 +1,40 @@
+<p><h3>Introduction
+</h3><h4>Making sure things work on your system by playing back audio with AKAudioPlayer
+</h4></p>
+
+{% highlight ruby %}import XCPlayground
+import AudioKit
+
+{% endhighlight %}
+<p>All AudioKit powered apps need a reference to the AKManager</p>
+
+{% highlight ruby %}let audiokit = AKManager.sharedInstance
+
+{% endhighlight %}
+<p>Try Changing &quot;mixloop&quot; to &quot;drumloop&quot;</p>
+
+{% highlight ruby %}let bundle = NSBundle.mainBundle()
+let file = bundle.pathForResource("mixloop", ofType: "wav")
+let player = AKAudioPlayer(file!)
+
+{% endhighlight %}
+<p>Next set AudioKit&#39;s main audio output to be this player</p>
+
+{% highlight ruby %}audiokit.audioOutput = player
+
+{% endhighlight %}
+<p>Start up AudioKit to connect all nodes to the system</p>
+
+{% highlight ruby %}audiokit.start()
+
+{% endhighlight %}
+<p>Start the player&#39;s audio playback</p>
+
+{% highlight ruby %}player.play()
+
+{% endhighlight %}
+<p>Because we need to keep this playground running to playback the audio, we add the following line at the bottom to most playgrounds (or in some cases, we can set up a never ending loop)</p>
+
+{% highlight ruby %}XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+
+{% endhighlight %}

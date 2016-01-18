@@ -1,0 +1,42 @@
+<p><h3>AKLowPassFilter
+</h3><h4>Add description
+</h4></p>
+
+{% highlight ruby %}import XCPlayground
+import AudioKit
+
+let audiokit = AKManager.sharedInstance
+
+{% endhighlight %}
+<p>This section prepares the player and the microphone</p>
+
+{% highlight ruby %}var mic = AKMicrophone()
+mic.volume = 0
+let micWindow = AKMicrophoneWindow(mic)
+
+let bundle = NSBundle.mainBundle()
+let file = bundle.pathForResource("mixloop", ofType: "wav")
+var player = AKAudioPlayer(file!)
+player.looping = true
+let playerWindow = AKAudioPlayerWindow(player)
+
+{% endhighlight %}
+<p>Next, we&#39;ll connect the audio sources to a low pass filter</p>
+
+{% highlight ruby %}let inputMix = AKMixer(mic, player)
+var lowPassFilter = AKLowPassFilter(inputMix)
+
+{% endhighlight %}
+<p>Set the parameters of the low pass filter here</p>
+
+{% highlight ruby %}lowPassFilter.cutoffFrequency = 6900 // Hz
+lowPassFilter.resonance = 0 // dB
+
+var lowPassFilterWindow = AKLowPassFilterWindow(lowPassFilter)
+
+audiokit.audioOutput = lowPassFilter
+audiokit.start()
+
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+
+{% endhighlight %}

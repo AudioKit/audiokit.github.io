@@ -1,0 +1,28 @@
+<p><h3>Delay
+</h3><h4>Here we can explore the powerful effect of repeating sounds after varying length delay times and feedback amounts. Our delay has three parameters: &quot;time&quot;, which is the amount of time in seconds you want your sound to be delayed, &quot;feedback&quot;, which is sets how much the delayed signal should be fed back into itself, and &quot;dryWetMix&quot;, which is the amount of &quot;dry&quot; (or non-delayed signal), and &quot;wet&quot; (delayed-signal) audio you want your output signal to consist of.
+</h4></p>
+
+{% highlight ruby %}import XCPlayground
+import AudioKit
+
+let audiokit = AKManager.sharedInstance
+
+let bundle = NSBundle.mainBundle()
+let file = bundle.pathForResource("drumloop", ofType: "wav")
+
+var player = AKAudioPlayer(file!)
+player.looping = true
+
+var delay = AKDelay(player)
+
+delay.time      = 0.1 // seconds
+delay.feedback  = 0.5 // Normalized Value 0 - 1
+delay.dryWetMix = 0.5 // Normalized Value 0 - 1
+
+audiokit.audioOutput = delay
+
+audiokit.start()
+player.play()
+
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+{% endhighlight %}

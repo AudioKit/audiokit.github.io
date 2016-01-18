@@ -1,0 +1,47 @@
+<p><h3>Variable Delay
+</h3><h4>When you smooth vary effect parameters, you get completely new kinds of effects.<br>
+</h4></p>
+
+{% highlight ruby %}import XCPlayground
+import AudioKit
+
+let audiokit = AKManager.sharedInstance
+let bundle = NSBundle.mainBundle()
+let file = bundle.pathForResource("drumloop", ofType: "wav")
+var player = AKAudioPlayer(file!)
+player.looping = true
+var delay = AKVariableDelay(player)
+
+{% endhighlight %}
+<p>Set the parameters of the delay here </p>
+
+{% highlight ruby %}delay.time = 0.1 // seconds
+audiokit.audioOutput = delay
+audiokit.start()
+player.play()
+
+var t = 0.0
+let timeStep = 0.02
+
+AKPlaygroundLoop(every: timeStep) {
+    
+{% endhighlight %}
+<p>Vary the delay time between 0.0 and 0. 4 in a sinusoid at 0.5 hz</p>
+
+{% highlight ruby %}    let delayModulationHz = 0.5
+    let delayModulation = (1.0 - cos(2 * 3.14 * delayModulationHz * t)) * 0.02
+    delay.time = delayModulation
+    
+{% endhighlight %}
+<p>Vary the feedback between zero and 1 in a sinusoid at 0.5Hz</p>
+
+{% highlight ruby %}    let feedbackModulationHz = 0.5
+    let feedbackModulation = (1.0 - sin(2 * 3.14 * feedbackModulationHz * t)) * 0.5
+    delay.feedback = feedbackModulation
+    
+    t = t + timeStep
+}
+
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+
+{% endhighlight %}

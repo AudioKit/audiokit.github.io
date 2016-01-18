@@ -1,0 +1,26 @@
+---
+layout: section_index
+header: Playgrounds
+title: Test
+permalink: /playgrounds/iOS/Test/
+---
+
+<p><a href="@previous">Previous</a></p>
+
+{% highlight ruby %}
+import XCPlayground
+import AudioKit
+
+let audiokit = AKManager.sharedInstance
+
+let descent = (1 - AKOperation.phasor(frequency: 0.9)).triggeredWithEnvelope(AKOperation.trigger, attack: 0, hold: 1, release: 0.1)
+let sine = AKOperation.sineWave(frequency: 440 * descent, amplitude:  descent)
+
+let generator = AKOperationGenerator(operation: sine)
+
+audiokit.audioOutput = generator
+audiokit.start()
+generator.start()
+generator.trigger()
+
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true{% endhighlight %}

@@ -1,0 +1,40 @@
+<p><h3>Dry Wet Mixer
+</h3><h4>It&#39;s a very common operation to mix exactly two inputs, one before processing occurs, and one after, and then mixing down to a combination of the two.  This is so common that most of the AudioKit nodes have a dry/wet mix parameter built in.  But, if you are building your own custom effects, or making a long chain of effects, you can use AKDryWetMixer to blend your signals.
+</h4></p>
+
+{% highlight ruby %}import XCPlayground
+import AudioKit
+
+let audiokit = AKManager.sharedInstance
+
+{% endhighlight %}
+<p>This section prepares the players</p>
+
+{% highlight ruby %}let bundle = NSBundle.mainBundle()
+let drumFile   = bundle.pathForResource("drumloop",   ofType: "wav")
+var drums  = AKAudioPlayer(drumFile!)
+drums.looping  = true
+
+{% endhighlight %}
+<p>Let&#39;s build a chain:</p>
+
+{% highlight ruby %}
+var delay = AKDelay(drums)
+delay.time = 0.1
+delay.feedback = 0.8
+let reverb = AKReverb(delay)
+reverb.loadFactoryPreset(.LargeChamber)
+
+{% endhighlight %}
+<p>Now let&#39;s mix the result of those two processors back with the original</p>
+
+{% highlight ruby %}
+let mixture = AKDryWetMixer(drums, reverb, balance: 0.5)
+
+audiokit.audioOutput = mixture
+audiokit.start()
+drums.play()
+
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+
+{% endhighlight %}

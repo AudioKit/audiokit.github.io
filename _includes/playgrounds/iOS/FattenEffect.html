@@ -1,0 +1,49 @@
+<p><h3>Fattening Effect Playground
+</h3><h4>Needed to test this for the keyboard project
+</h4></p>
+
+{% highlight ruby %}import XCPlayground
+import AudioKit
+
+let audiokit = AKManager.sharedInstance
+
+let bundle = NSBundle.mainBundle()
+let file = bundle.pathForResource("drumloop", ofType: "wav")
+
+{% endhighlight %}
+<p>Here we set up a player to the loop the file&#39;s playback</p>
+
+{% highlight ruby %}var player = AKAudioPlayer(file!)
+player.looping = true
+
+
+{% endhighlight %}
+<p>Define parameters that will be required</p>
+
+{% highlight ruby %}let input = AKStereoOperation.input
+let fattenTimeParameter = AKOperation.parameters(0)
+let fattenMixParameter = AKOperation.parameters(1)
+
+let fattenOperation = AKStereoOperation(
+    "\(input) dup \(1 - fattenMixParameter) * swap 0 \(fattenTimeParameter) 1.0 vdelay \(fattenMixParameter) * +")
+let fatten = AKOperationEffect(player, stereoOperation: fattenOperation)
+
+audiokit.audioOutput = fatten
+audiokit.start()
+
+player.play()
+
+{% endhighlight %}
+<p>Toggle processing on every loop</p>
+
+{% highlight ruby %}AKPlaygroundLoop(every: 3.428) { () -> () in
+    let time = random(0.03, 0.1)
+    let mix = random(0.3, 1.0)
+    fatten.parameters = [time, mix];
+}
+
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+
+
+
+{% endhighlight %}

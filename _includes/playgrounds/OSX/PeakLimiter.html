@@ -1,0 +1,43 @@
+<p><h3>AKPeakLimiter
+</h3><h4>A peak limiter will set a hard limit on the amplitude of an audio signal. They&#39;re espeically useful for any type of live input processing, when you may not be in total control of the audio signal you&#39;re recording or processing. 
+</h4></p>
+
+{% highlight ruby %}import XCPlayground
+import AudioKit
+
+let audiokit = AKManager.sharedInstance
+
+{% endhighlight %}
+<p>This section prepares the player and the microphone</p>
+
+{% highlight ruby %}var mic = AKMicrophone()
+mic.volume = 0
+let micWindow = AKMicrophoneWindow(mic)
+
+let bundle = NSBundle.mainBundle()
+let file = bundle.pathForResource("mixloop", ofType: "wav")
+var player = AKAudioPlayer(file!)
+player.looping = true
+let playerWindow = AKAudioPlayerWindow(player)
+
+{% endhighlight %}
+<p>Next, we&#39;ll connect the audio sources to a peak limiter</p>
+
+{% highlight ruby %}let inputMix = AKMixer(mic, player)
+var peakLimiter = AKPeakLimiter(inputMix)
+
+{% endhighlight %}
+<p>Set the parameters of the Peak Limiter here</p>
+
+{% highlight ruby %}peakLimiter.attackTime = 0.001 // seconds
+peakLimiter.decayTime  = 0.01  // seconds
+peakLimiter.preGain    = 10 // dB (-40 to 40)
+
+var peakLimiterWindow  = AKPeakLimiterWindow(peakLimiter)
+
+audiokit.audioOutput = peakLimiter
+audiokit.start()
+
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+
+{% endhighlight %}

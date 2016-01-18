@@ -1,0 +1,44 @@
+<p><h3>Connecting Nodes
+</h3><h4>Playing audio is great, but now let&#39;s process that audio. Now that you&#39;re up and running, let&#39;s take it a step further by loading up an audio file and processing it. We&#39;re going to do this by connecting nodes together. A node is simply an object that will take in audio input, process it, and pass the processed audio to another node, or to the Digital-Analog Converter (speaker). 
+</h4></p>
+
+{% highlight ruby %}import XCPlayground
+import AudioKit
+
+let audiokit = AKManager.sharedInstance
+
+let bundle = NSBundle.mainBundle()
+let file = bundle.pathForResource("drumloop", ofType: "wav")
+
+{% endhighlight %}
+<p>Here we set up a player to the loop the file&#39;s playback</p>
+
+{% highlight ruby %}var player = AKAudioPlayer(file!)
+player.looping = true
+
+{% endhighlight %}
+<p>Next we&#39;ll connect the audio player to a delay effect</p>
+
+{% highlight ruby %}var delay = AKDelay(player)
+
+{% endhighlight %}
+<p>Set the parameters of the delay here</p>
+
+{% highlight ruby %}delay.time = 0.1 // seconds
+delay.feedback  = 0.8 // Normalized Value 0 - 1
+delay.dryWetMix = 0.2 // Normalized Value 0 - 1
+
+{% endhighlight %}
+<p>You can continue add more nodes as you wish, and here we add a reverb</p>
+
+{% highlight ruby %}let reverb = AKReverb(delay)
+reverb.loadFactoryPreset(.Cathedral)
+
+audiokit.audioOutput = reverb
+audiokit.start()
+
+player.play()
+
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+
+{% endhighlight %}

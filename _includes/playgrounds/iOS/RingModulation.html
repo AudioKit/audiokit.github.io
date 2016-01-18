@@ -1,0 +1,43 @@
+<p><h3>AKRingModulator
+</h3><h4>Add description
+</h4></p>
+
+{% highlight ruby %}import XCPlayground
+import AudioKit
+
+let audiokit = AKManager.sharedInstance
+
+let bundle = NSBundle.mainBundle()
+let file = bundle.pathForResource("leadloop", ofType: "wav")
+var player = AKAudioPlayer(file!)
+player.looping = true
+var ringModulator = AKRingModulator(player)
+
+{% endhighlight %}
+<p>Set the parameters of the Ring Modulator here</p>
+
+{% highlight ruby %}ringModulator.frequency1 = 440 // Hertz
+ringModulator.frequency2 = 660 // Hertz
+ringModulator.balance = 0.5 //  Normalized Value: 0 - 1
+ringModulator.mix     = 0.5 //  Normalized Value: 0 - 1
+
+audiokit.audioOutput = ringModulator
+audiokit.start()
+
+player.play()
+
+{% endhighlight %}
+<p>Toggle processing on every loop</p>
+
+{% highlight ruby %}AKPlaygroundLoop(every: 3.428) { () -> () in
+    if ringModulator.isBypassed {
+        ringModulator.start()
+    } else {
+        ringModulator.bypass()
+    }
+    ringModulator.isBypassed ? "Bypassed" : "Processing" // Open Quicklook for this
+}
+
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+
+{% endhighlight %}

@@ -1,0 +1,47 @@
+<p><h3>Non-Audio Tutorial
+</h3><h4>In the AudioKit Playgrounds, you&#39;ll learn a lot about processing audio, but we won&#39;t explain most other basic programming concepts that we&#39;ll use.  So, here&#39;s a mini-tutorial of things that you should probably understand going forward.
+</h4> You will always see the <code>import AudioKit</code> line which brings in all of AudioKit&#39;s functionality to the playground.</p>
+
+{% highlight ruby %}import AudioKit
+
+{% endhighlight %}
+<p>Another import line you will see in most playgrounds enables <code>XCPlayground</code> functions for plotting, keeping the playground alive while audio plays, and more.</p>
+
+{% highlight ruby %}import XCPlayground
+
+{% endhighlight %}
+<p>All AudioKit powered apps and playgrounds need a reference to an instance of <code>AKManager</code> shared across the app.</p>
+
+{% highlight ruby %}let audiokit = AKManager.sharedInstance
+
+{% endhighlight %}
+<p>This main bundle line just helps the playground find the files it will be able to play and process.</p>
+
+{% highlight ruby %}let bundle = NSBundle.mainBundle()
+
+{% endhighlight %}
+<p>To reference a file, you use the bundle from about and the <code>pathForResource</code> method that includes the name with the extension given in the <code>ofType</code> parameter.</p>
+
+{% highlight ruby %}let file = bundle.pathForResource("PianoBassDrumLoop", ofType: "wav")
+
+{% endhighlight %}
+<p>You are not limited to using the sound files provided with AudioKit, in fact we encourage you to drag your own sound files to the Resources folder.  Ideally, to keep things running quickly, loopable 10-20 second <code>.wav</code> or <code>.aiff</code> files are recommended.  Many free loops are avaiable online at sites such as <a href="http://www.looperman.com/">looperman.com</a> or <a href="http://www.freesound.org/">freesound.org</a>.</p>
+
+<p><img src="http://audiokit.io/playgrounds/DragResource.gif" alt="drag" title="drag"></p>
+
+{% highlight ruby %}
+{% endhighlight %}
+<p>Remember the <code>import XCPlayground</code> line above?  Here&#39;s one way that is used.  The following line keeps a playground executing even after the last line is run so that the audio elements that were started have time to play and make sounds for us to listen to.</p>
+
+{% highlight ruby %}XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+
+{% endhighlight %}
+<p>The other ways we&#39;ll keep playgrounds running will by using <code>sleep</code> and <code>usleep</code> functions and infinite while loops.</p>
+
+<p>Now that we are near the bottom of the screen (unless you have a majorly tall monitor!) we&#39;d like to call your attention to the playground controls on the bottom left right below the navbar.</p>
+
+<p>The first button toggles the console log which can be useful to look at when things go wrong. The second button is your play / stop button which is useful to control playback of the audio in the playground. If you click and hold on this button you will get a pop-up that will allow you choose between automatically running the playground or manually pressing play.  They both have their reason.  Automatic running is great for changing a parameter and quickly hearing the audio results.   Manual Run is better for when you&#39;re in the middle of creating an audio system and you don&#39;t want to hear results until you&#39;re further along in the process.
+ <img src="http://audiokit.io/playgrounds/controls.png" alt="controls" title="controls"></p>
+
+{% highlight ruby %}
+{% endhighlight %}

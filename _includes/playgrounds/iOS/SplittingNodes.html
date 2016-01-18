@@ -1,0 +1,38 @@
+<p><h3>Splitting Nodes
+</h3><h4>All nodes in AudioKit can have multiple destinations, the only caveat is that all of the destinations do have to eventually be mixed back together and none of the parallel signal paths can have any time stretching.
+</h4></p>
+
+{% highlight ruby %}import XCPlayground
+import AudioKit
+import AVFoundation
+
+let audiokit = AKManager.sharedInstance
+
+{% endhighlight %}
+<p>Prepare the source audio player</p>
+
+{% highlight ruby %}let bundle = NSBundle.mainBundle()
+let file = bundle.pathForResource("drumloop", ofType: "wav")
+var player = AKAudioPlayer(file!)
+player.looping = true
+
+{% endhighlight %}
+<p>The following nodes are both acting on the original player node</p>
+
+{% highlight ruby %}var ringMod = AKRingModulator(player)
+
+var delay = AKDelay(player)
+delay.time = 0.01
+delay.feedback = 0.8
+delay.dryWetMix = 1
+
+{% endhighlight %}
+<p>Any number of inputs can be equally summed into one output, including the original player, allowing us to create dry/wet mixes even for effects that don&#39;t have that property by default</p>
+
+{% highlight ruby %}let mixer = AKMixer(player, delay)
+
+audiokit.audioOutput = mixer
+audiokit.start()
+player.play()
+
+{% endhighlight %}

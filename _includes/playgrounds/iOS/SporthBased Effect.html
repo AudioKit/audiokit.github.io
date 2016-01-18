@@ -1,0 +1,28 @@
+<p><h3>AKOperationEffect
+</h3><h4>You can also create nodes for AudioKit using <a href="https://github.com/PaulBatchelor/Sporth">Sporth</a>. We&#39;ll show you how to do that for an effect node below...
+</h4></p>
+
+{% highlight ruby %}import XCPlayground
+import AudioKit
+
+let audiokit = AKManager.sharedInstance
+
+let bundle = NSBundle.mainBundle()
+
+let file = bundle.pathForResource("drumloop", ofType: "wav")
+var player = AKAudioPlayer(file!)
+player.looping = true
+
+let input  = AKStereoOperation.input
+let zitarev_example = "\(input) 15 200 7.0 8.0 10000 315 0 1500 0 1 0 zitarev"
+
+let effect = AKOperationEffect(player, sporth: zitarev_example)
+
+audiokit.audioOutput = effect
+audiokit.start()
+
+player.play()
+
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+
+{% endhighlight %}

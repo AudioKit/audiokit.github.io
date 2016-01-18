@@ -1,0 +1,41 @@
+<p><h3>Stereo Panning
+</h3><h4>Panning is a basic operation that is essential to mixing and direction perception and it couldn&#39;t be easier with AKPanner.
+</h4></p>
+
+{% highlight ruby %}import XCPlayground
+import AudioKit
+
+let audiokit = AKManager.sharedInstance
+
+{% endhighlight %}
+<p>Set up the audio player</p>
+
+{% highlight ruby %}let bundle = NSBundle.mainBundle()
+let file = bundle.pathForResource("drumloop", ofType: "wav")
+var player = AKAudioPlayer(file!)
+player.looping = true
+
+{% endhighlight %}
+<p>Route the audio player through the panner</p>
+
+{% highlight ruby %}var panner = AKPanner(player)
+
+audiokit.audioOutput = panner
+
+audiokit.start()
+player.play()
+
+{% endhighlight %}
+<p>Adjust the pan to smoothly cycle left and right over time</p>
+
+{% highlight ruby %}
+var t = 0.0
+let timeStep = 0.05
+AKPlaygroundLoop(every: timeStep) {
+    panner.pan
+    panner.pan = sin(t)
+    t = t + timeStep
+}
+
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+{% endhighlight %}

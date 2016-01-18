@@ -1,0 +1,72 @@
+<p><h3>Distortion
+</h3><h4>This playground provides access to Apple&#39;s built-in distortion effect that they lump together into one giant Audio Unit.  For clarity, the submodules to the distortion are also available as individual nodes themselves.
+</h4></p>
+
+{% highlight ruby %}import XCPlayground
+import AudioKit
+
+let audiokit = AKManager.sharedInstance
+
+let bundle = NSBundle.mainBundle()
+let file = bundle.pathForResource("guitarloop", ofType: "wav")
+var player = AKAudioPlayer(file!)
+player.looping = true
+var distortion = AKDistortion(player)
+
+{% endhighlight %}
+<p>Delay parameters</p>
+
+{% highlight ruby %}distortion.delay = 0.1 // Milliseconds
+distortion.decay = 1.0 // Rate
+distortion.delayMix = 0.1 // Normalized Value: 0 - 1
+
+{% endhighlight %}
+<p>Decimator parameters</p>
+
+{% highlight ruby %}distortion.decimation = 0.1    // Normalized Value: 0 - 1
+distortion.rounding = 0.1      // Normalized Value: 0 - 1
+distortion.decimationMix = 0.1 // Normalized Value: 0 - 1
+
+{% endhighlight %}
+<p>Ring modulator parameters</p>
+
+{% highlight ruby %}distortion.ringModFreq1 = 100 // Hertz
+distortion.ringModFreq2 = 100 // Hertz
+distortion.ringModBalance = 0.5 // Normalized Value: 0 - 1
+distortion.ringModMix = 0.5       // Normalized Value: 0 - 1
+
+
+{% endhighlight %}
+<p>Polynomial parameters</p>
+
+{% highlight ruby %}distortion.linearTerm    = 0.5 // Normalized Value: 0 - 1
+distortion.squaredTerm   = 0.5 // Normalized Value: 0 - 1
+distortion.cubicTerm     = 0.5 // Normalized Value: 0 - 1
+distortion.polynomialMix = 0.5 // Normalized Value: 0 - 1
+
+{% endhighlight %}
+<p>Gain and mix parameters</p>
+
+{% highlight ruby %}distortion.softClipGain = -6 // dB
+distortion.finalMix = 0.2    // Normalized Value: 0 - 1
+
+audiokit.audioOutput = distortion
+audiokit.start()
+player.play()
+
+{% endhighlight %}
+<p>Toggle processing on every loop</p>
+
+{% highlight ruby %}AKPlaygroundLoop(every: 3.428) { () -> () in
+
+    if distortion.isBypassed {
+        distortion.start()
+    } else {
+        distortion.bypass()
+    }
+    distortion.isBypassed ? "Bypassed" : "Processing" // Open Quicklook for this
+}
+
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+
+{% endhighlight %}

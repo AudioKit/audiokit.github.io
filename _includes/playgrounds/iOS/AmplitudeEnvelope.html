@@ -1,0 +1,34 @@
+<p><h3>Amplitude Envelope
+</h3><h4>Enveloping an FM Oscillator with an ADSR envelope
+</h4></p>
+
+{% highlight ruby %}import XCPlayground
+import AudioKit
+
+let audiokit = AKManager.sharedInstance
+
+{% endhighlight %}
+<p>Try changing the table type to triangle or another AKTableType
+ or changing the number of points to a smaller number (has to be a power of 2)</p>
+
+{% highlight ruby %}var fm = AKFMOscillator(waveform: AKTable(.Sine, size: 4096))
+
+var fmWithADSR = AKAmplitudeEnvelope(fm, attackDuration: 0.1, decayDuration: 0.3, sustainLevel: 0.8, releaseDuration: 1.0)
+
+audiokit.audioOutput = fmWithADSR
+audiokit.start()
+
+fm.start()
+fmWithADSR.start()
+
+AKPlaygroundLoop(every:1) {
+    if fmWithADSR.isStarted {
+        fmWithADSR.stop()
+    } else {
+        fm.baseFrequency = random(220, 880)
+        fmWithADSR.start()
+    }
+}
+
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+{% endhighlight %}
