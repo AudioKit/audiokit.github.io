@@ -1,0 +1,378 @@
+---
+layout: v2_docs
+header: AKNoise
+title: AKNoise
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div>
+
+          <table class="table table-bordered"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="/v2/Classes/AKAudio/">AKAudio</a> : <a href="/v2/Classes/AKParameter/">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKNoise.h<br />AKNoise.m</td>
+</tr>
+            </tbody></table>
+
+
+
+
+            <a title="Overview" name="overview"></a>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>A noise generator that can do white, pink, or brown noise.
+
+Implementation is a combination of white noise with IIR Filters.</p>
+
+
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Properties" name="properties"></a>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
+
+            <div class="section-method">
+  <a name="//api/name/amplitude" title="amplitude"></a>
+  <h4 class="subsubtitle method-title">amplitude</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Amplitude of the output. [Default Value: 1]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *amplitude{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/beta" title="beta"></a>
+  <h4 class="subsubtitle method-title">beta</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Beta of the low pass filter, in the range -1 to 1, exclusive of the end-points. [Default Value: 0]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *beta{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/pinkBalance" title="pinkBalance"></a>
+  <h4 class="subsubtitle method-title">pinkBalance</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Amount of pink noise to output from 0 to 1 (all pink) [Default Value: 0]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *pinkBalance{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Class Methods" name="class_methods"></a>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/noise" title="noise"></a>
+  <h4 class="subsubtitle method-title">noise</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the noise with default values
+  </div>
+
+
+
+ {% highlight objective-c %}+ (instancetype)noise{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/init" title="init"></a>
+  <h4 class="subsubtitle method-title">init</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the noise with default values
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)init{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initWithAmplitude:pinkBalance:beta:" title="initWithAmplitude:pinkBalance:beta:"></a>
+  <h4 class="subsubtitle method-title">initWithAmplitude:pinkBalance:beta:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the noise with all values
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithAmplitude:(AKParameter *)amplitude pinkBalance:(AKParameter *)pinkBalance beta:(AKParameter *)beta{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude of the output. [Default Value: 1]</li>
+
+    <li><i class="icon-line-play"></i><strong>pinkBalance</strong>:
+      Amount of pink noise to output from 0 to 1 (all pink) [Default Value: 0]</li>
+
+    <li><i class="icon-line-play"></i><strong>beta</strong>:
+      Beta of the low pass filter, in the range -1 to 1, exclusive of the end-points. Updated at Control-rate. [Default Value: 0]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalAmplitude:" title="setOptionalAmplitude:"></a>
+  <h4 class="subsubtitle method-title">setOptionalAmplitude:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional amplitude
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalAmplitude:(AKParameter *)amplitude{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude of the output. [Default Value: 1]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalBeta:" title="setOptionalBeta:"></a>
+  <h4 class="subsubtitle method-title">setOptionalBeta:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional beta
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalBeta:(AKParameter *)beta{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>beta</strong>:
+      Beta of the low pass filter, in the range -1 to 1, exclusive of the end-points. Updated at Control-rate. [Default Value: 0]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalPinkBalance:" title="setOptionalPinkBalance:"></a>
+  <h4 class="subsubtitle method-title">setOptionalPinkBalance:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional pink balance
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalPinkBalance:(AKParameter *)pinkBalance{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>pinkBalance</strong>:
+      Amount of pink noise to output from 0 to 1 (all pink) [Default Value: 0]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+        </div>
+      </div>

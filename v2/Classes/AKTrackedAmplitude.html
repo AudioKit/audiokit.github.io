@@ -1,0 +1,247 @@
+---
+layout: v2_docs
+header: AKTrackedAmplitude
+title: AKTrackedAmplitude
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div>
+
+          <table class="table table-bordered"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="/v2/Classes/AKControl/">AKControl</a> : <a href="/v2/Classes/AKAudio/">AKAudio</a> : <a href="/v2/Classes/AKParameter/">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKTrackedAmplitude.h<br />AKTrackedAmplitude.m</td>
+</tr>
+            </tbody></table>
+
+
+
+
+            <a title="Overview" name="overview"></a>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Root-mean-square amplitude of an audio signal
+
+This operation low-pass filters the actual value, to average in the manner of a VU meter. This unit is not a signal modifier, but functions rather as a signal power-gauge. It uses an internal low-pass filter to make the response smoother. The halfPowerPoint can be used to control this smoothing. The higher the value, the "snappier" the measurement.</p>
+
+
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Properties" name="properties"></a>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
+
+            <div class="section-method">
+  <a name="//api/name/halfPowerPoint" title="halfPowerPoint"></a>
+  <h4 class="subsubtitle method-title">halfPowerPoint</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Half-power point (in Hz) of a special internal low-pass filter. [Default Value: 10]
+  </div>
+
+
+
+ {% highlight objective-c %}@property AKConstant *halfPowerPoint{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Class Methods" name="class_methods"></a>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/amplitudeWithInput:" title="amplitudeWithInput:"></a>
+  <h4 class="subsubtitle method-title">amplitudeWithInput:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the tracked amplitude with default values
+  </div>
+
+
+
+ {% highlight objective-c %}+ (instancetype)amplitudeWithInput:(AKParameter *)input{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input audio signal to track.</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/initWithInput:" title="initWithInput:"></a>
+  <h4 class="subsubtitle method-title">initWithInput:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the tracked amplitude with default values
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input audio signal to track.</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initWithInput:halfPowerPoint:" title="initWithInput:halfPowerPoint:"></a>
+  <h4 class="subsubtitle method-title">initWithInput:halfPowerPoint:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the tracked amplitude with all values
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input halfPowerPoint:(AKConstant *)halfPowerPoint{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input audio signal to track.</li>
+
+    <li><i class="icon-line-play"></i><strong>halfPowerPoint</strong>:
+      Half-power point (in Hz) of a special internal low-pass filter. [Default Value: 10]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalHalfPowerPoint:" title="setOptionalHalfPowerPoint:"></a>
+  <h4 class="subsubtitle method-title">setOptionalHalfPowerPoint:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional half power point
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalHalfPowerPoint:(AKConstant *)halfPowerPoint{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>halfPowerPoint</strong>:
+      Half-power point (in Hz) of a special internal low-pass filter. [Default Value: 10]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+        </div>
+      </div>

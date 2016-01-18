@@ -1,0 +1,379 @@
+---
+layout: v2_docs
+header: AKJitter
+title: AKJitter
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div>
+
+          <table class="table table-bordered"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="/v2/Classes/AKControl/">AKControl</a> : <a href="/v2/Classes/AKAudio/">AKAudio</a> : <a href="/v2/Classes/AKParameter/">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKJitter.h<br />AKJitter.m</td>
+</tr>
+            </tbody></table>
+
+
+
+
+            <a title="Overview" name="overview"></a>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Generates a segmented line whose segments are randomly generated.
+
+This operation generates a segmented line whose segments are randomly generated inside the interval amplitude to amplitude. Duration of each segment is a random value generated according to minimum and maximum frequency values.
+This can be used to make more natural and “analog-sounding” some static, dull sound. For best results, it is suggested to keep its amplitude moderate.</p>
+
+
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Properties" name="properties"></a>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
+
+            <div class="section-method">
+  <a name="//api/name/amplitude" title="amplitude"></a>
+  <h4 class="subsubtitle method-title">amplitude</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Amplitude of jitter deviation [Default Value: 1]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *amplitude{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/maximumFrequency" title="maximumFrequency"></a>
+  <h4 class="subsubtitle method-title">maximumFrequency</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Maximum speed of random frequency variations (expressed in Hz) [Default Value: 60]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *maximumFrequency{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/minimumFrequency" title="minimumFrequency"></a>
+  <h4 class="subsubtitle method-title">minimumFrequency</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Minimum speed of random frequency variations (expressed in Hz) [Default Value: 0]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *minimumFrequency{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Class Methods" name="class_methods"></a>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/jitter" title="jitter"></a>
+  <h4 class="subsubtitle method-title">jitter</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the jitter with default values
+  </div>
+
+
+
+ {% highlight objective-c %}+ (instancetype)jitter{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/init" title="init"></a>
+  <h4 class="subsubtitle method-title">init</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the jitter with default values
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)init{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initWithAmplitude:minimumFrequency:maximumFrequency:" title="initWithAmplitude:minimumFrequency:maximumFrequency:"></a>
+  <h4 class="subsubtitle method-title">initWithAmplitude:minimumFrequency:maximumFrequency:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the jitter with all values
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithAmplitude:(AKParameter *)amplitude minimumFrequency:(AKParameter *)minimumFrequency maximumFrequency:(AKParameter *)maximumFrequency{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude of jitter deviation Updated at Control-rate. [Default Value: 1]</li>
+
+    <li><i class="icon-line-play"></i><strong>minimumFrequency</strong>:
+      Minimum speed of random frequency variations (expressed in Hz) Updated at Control-rate. [Default Value: 0]</li>
+
+    <li><i class="icon-line-play"></i><strong>maximumFrequency</strong>:
+      Maximum speed of random frequency variations (expressed in Hz) Updated at Control-rate. [Default Value: 60]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalAmplitude:" title="setOptionalAmplitude:"></a>
+  <h4 class="subsubtitle method-title">setOptionalAmplitude:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional amplitude
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalAmplitude:(AKParameter *)amplitude{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude of jitter deviation Updated at Control-rate. [Default Value: 1]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalMaximumFrequency:" title="setOptionalMaximumFrequency:"></a>
+  <h4 class="subsubtitle method-title">setOptionalMaximumFrequency:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional maximum frequency
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalMaximumFrequency:(AKParameter *)maximumFrequency{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>maximumFrequency</strong>:
+      Maximum speed of random frequency variations (expressed in Hz) Updated at Control-rate. [Default Value: 60]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalMinimumFrequency:" title="setOptionalMinimumFrequency:"></a>
+  <h4 class="subsubtitle method-title">setOptionalMinimumFrequency:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional minimum frequency
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalMinimumFrequency:(AKParameter *)minimumFrequency{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>minimumFrequency</strong>:
+      Minimum speed of random frequency variations (expressed in Hz) Updated at Control-rate. [Default Value: 0]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+        </div>
+      </div>

@@ -1,0 +1,388 @@
+---
+layout: v2_docs
+header: AKFileInput
+title: AKFileInput
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div>
+
+          <table class="table table-bordered"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="/v2/Classes/AKStereoAudio/">AKStereoAudio</a> : <a href="/v2/Classes/AKParameter/">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKFileInput.h<br />AKFileInput.m</td>
+</tr>
+            </tbody></table>
+
+
+
+
+            <a title="Overview" name="overview"></a>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Reads stereo audio data from a file.</p>
+
+
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Properties" name="properties"></a>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
+
+            <div class="section-method">
+  <a name="//api/name/loop" title="loop"></a>
+  <h4 class="subsubtitle method-title">loop</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Whether or not to loop playback (Default Value: NO)
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) BOOL loop{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/speed" title="speed"></a>
+  <h4 class="subsubtitle method-title">speed</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Speed of the playback relative to 1 [Default Value: 1]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *speed{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/startTime" title="startTime"></a>
+  <h4 class="subsubtitle method-title">startTime</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set the start time (useful for pause/resume)
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKConstant *startTime{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/initWithFilename:" title="initWithFilename:"></a>
+  <h4 class="subsubtitle method-title">initWithFilename:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Create a file input.
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithFilename:(NSString *)fileName{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>fileName</strong>:
+      Location of the file on disk.</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initWithFilename:speed:startTime:loop:" title="initWithFilename:speed:startTime:loop:"></a>
+  <h4 class="subsubtitle method-title">initWithFilename:speed:startTime:loop:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Create a file input.
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithFilename:(NSString *)fileName speed:(AKParameter *)speed startTime:(AKConstant *)startTime loop:(BOOL)loop{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>fileName</strong>:
+      Location of the file on disk.</li>
+
+    <li><i class="icon-line-play"></i><strong>speed</strong>:
+      Speed of the playback relative to 1 [Default Value: 1]</li>
+
+    <li><i class="icon-line-play"></i><strong>startTime</strong>:
+      Time in second to start the playback (useful for pause/resume)</li>
+
+    <li><i class="icon-line-play"></i><strong>loop</strong>:
+      Whether or not to loop the playback (Default Value: NO)</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/normalizeTo:" title="normalizeTo:"></a>
+  <h4 class="subsubtitle method-title">normalizeTo:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Normalize the output
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)normalizeTo:(float)maximumAmplitude{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>maximumAmplitude</strong>:
+      The maximum amplitude will be normalized to this amount.</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalLoop:" title="setOptionalLoop:"></a>
+  <h4 class="subsubtitle method-title">setOptionalLoop:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set whether to loop playback
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalLoop:(BOOL)loop{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>loop</strong>:
+      Whether or not to loop the playback (Default Value: NO)</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalSpeed:" title="setOptionalSpeed:"></a>
+  <h4 class="subsubtitle method-title">setOptionalSpeed:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional speed
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalSpeed:(AKParameter *)speed{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>speed</strong>:
+      Speed of the playback relative to 1 [Default Value: 1]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalStartTime:" title="setOptionalStartTime:"></a>
+  <h4 class="subsubtitle method-title">setOptionalStartTime:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional start time
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalStartTime:(AKConstant *)startTime{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>startTime</strong>:
+      Time in second to start the playback (useful for pause/resume)</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+        </div>
+      </div>

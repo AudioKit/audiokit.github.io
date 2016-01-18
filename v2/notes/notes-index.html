@@ -1,0 +1,31 @@
+---
+title: AudioKit Notes
+header: Notes
+permalink: /v2/notes/
+layout: v2_section_index
+---
+
+<p>Notes are "things" created by an instrument.  Usually these "things" are sounds, but a note is not limited to being a sound.  </p>
+
+<h3>Note Properties</h3>
+
+<p>A note can have properties of its own, distinct from the properties of the instrument that it is created on.  As an example, a guitar can create many notes, each with its own frequency.  </p>
+
+<h3>Defining Notes for an Instrument</h3>
+
+<p>It is common practice to include a note class definition with the file containing the instrument class.  For example, file interface and implementation files defining the tambourine class "Tambourine" may contain the "TambourineNote" class as well.  This is handy since you only have to import the one interface file instead of one for the instrument and a second for the note.</p>
+
+<h3> Classes</h3>
+<table class="table table-bordered"><thead><th>Class</th><th>Description</th></tr></thead>
+
+<tr>
+<td class='one-third'><a href="/v2/Classes/AKNote/">AKNote</td>
+ <td class='two-thirds'> AKNote is a representation of a sound object that is created by an
+</td>
+</tr>
+<tr>
+<td class='one-third'><a href="/v2/Classes/AKNoteProperty/">AKNoteProperty</td>
+ <td class='two-thirds'> Note properties are properties of an instrument that are defined
+</td>
+</tr>
+</table>

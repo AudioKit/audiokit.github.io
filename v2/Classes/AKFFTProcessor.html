@@ -1,0 +1,692 @@
+---
+layout: v2_docs
+header: AKFFTProcessor
+title: AKFFTProcessor
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div>
+
+          <table class="table table-bordered"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="/v2/Classes/AKFSignal/">AKFSignal</a> : <a href="/v2/Classes/AKParameter/">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKFFTProcessor.h<br />AKFFTProcessor.m</td>
+</tr>
+            </tbody></table>
+
+
+
+
+            <a title="Overview" name="overview"></a>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Phase vocoder analysis processing with onset detection/processing.
+
+This operation allows for time and frequency-independent scaling. Time is advanced internally, but controlled by a tempo scaling parameter; when an onset is detected, timescaling is momentarily stopped to avoid smearing of attacks. The quality of the effect is generally improved with phase locking switched on.
+This operation will also scale pitch, independently of frequency, using a transposition factor.</p>
+
+
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Properties" name="properties"></a>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
+
+            <div class="section-method">
+  <a name="//api/name/amplitude" title="amplitude"></a>
+  <h4 class="subsubtitle method-title">amplitude</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Amplitude of the output. [Default Value: 1]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *amplitude{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/dbthresh" title="dbthresh"></a>
+  <h4 class="subsubtitle method-title">dbthresh</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Threshold for onset detection, based on dB power spectrum ratio between two successive windows. A detected ratio above it will cancel timescaling momentarily, to avoid smearing (defaults to 1). By default anything more than a 1 dB inter-frame power difference will be detected as an onset. [Default Value: 1]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKConstant *dbthresh{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/frequencyRatio" title="frequencyRatio"></a>
+  <h4 class="subsubtitle method-title">frequencyRatio</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Grain frequency scaling (1=normal pitch, < 1 lower, > 1 higher; negative, backwards) [Default Value: 1]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *frequencyRatio{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/hopSize" title="hopSize"></a>
+  <h4 class="subsubtitle method-title">hopSize</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Size of hop [Default Value: 512]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKConstant *hopSize{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/sizeOfFFT" title="sizeOfFFT"></a>
+  <h4 class="subsubtitle method-title">sizeOfFFT</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    FFT size- must be a factor of 2. [Default Value: 2048]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKConstant *sizeOfFFT{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/tableOffset" title="tableOffset"></a>
+  <h4 class="subsubtitle method-title">tableOffset</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Startup read offset into table, in seconds. [Default Value: 0]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKConstant *tableOffset{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/timeRatio" title="timeRatio"></a>
+  <h4 class="subsubtitle method-title">timeRatio</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Time Scaling ratio, < 1 stretches, > 1 contracts. [Default Value: 1]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *timeRatio{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Class Methods" name="class_methods"></a>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/WithTable:" title="WithTable:"></a>
+  <h4 class="subsubtitle method-title">WithTable:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the fft processor with default values
+  </div>
+
+
+
+ {% highlight objective-c %}+ (instancetype)WithTable:(AKParameter *)table{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>table</strong>:
+      Primary input is a table, usually a mono sound file.</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/initWithTable:" title="initWithTable:"></a>
+  <h4 class="subsubtitle method-title">initWithTable:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the fft processor with default values
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithTable:(AKParameter *)table{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>table</strong>:
+      Primary input is a table, usually a mono sound file.</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initWithTable:frequencyRatio:timeRatio:amplitude:tableOffset:sizeOfFFT:hopSize:dbthresh:" title="initWithTable:frequencyRatio:timeRatio:amplitude:tableOffset:sizeOfFFT:hopSize:dbthresh:"></a>
+  <h4 class="subsubtitle method-title">initWithTable:frequencyRatio:timeRatio:amplitude:tableOffset:sizeOfFFT:hopSize:dbthresh:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the fft processor with all values
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithTable:(AKParameter *)table frequencyRatio:(AKParameter *)frequencyRatio timeRatio:(AKParameter *)timeRatio amplitude:(AKParameter *)amplitude tableOffset:(AKConstant *)tableOffset sizeOfFFT:(AKConstant *)sizeOfFFT hopSize:(AKConstant *)hopSize dbthresh:(AKConstant *)dbthresh{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>table</strong>:
+      Primary input is a table, usually a mono sound file. Updated at Control-rate.</li>
+
+    <li><i class="icon-line-play"></i><strong>frequencyRatio</strong>:
+      Grain frequency scaling (1=normal pitch, < 1 lower, > 1 higher; negative, backwards) Updated at Control-rate. [Default Value: 1]</li>
+
+    <li><i class="icon-line-play"></i><strong>timeRatio</strong>:
+      Time Scaling ratio, < 1 stretches, > 1 contracts. Updated at Control-rate. [Default Value: 1]</li>
+
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude of the output. Updated at Control-rate. [Default Value: 1]</li>
+
+    <li><i class="icon-line-play"></i><strong>tableOffset</strong>:
+      Startup read offset into table, in seconds. [Default Value: 0]</li>
+
+    <li><i class="icon-line-play"></i><strong>sizeOfFFT</strong>:
+      FFT size- must be a factor of 2. [Default Value: 2048]</li>
+
+    <li><i class="icon-line-play"></i><strong>hopSize</strong>:
+      Size of hop [Default Value: 512]</li>
+
+    <li><i class="icon-line-play"></i><strong>dbthresh</strong>:
+      Threshold for onset detection, based on dB power spectrum ratio between two successive windows. A detected ratio above it will cancel timescaling momentarily, to avoid smearing (defaults to 1). By default anything more than a 1 dB inter-frame power difference will be detected as an onset. [Default Value: 1]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalAmplitude:" title="setOptionalAmplitude:"></a>
+  <h4 class="subsubtitle method-title">setOptionalAmplitude:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional amplitude
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalAmplitude:(AKParameter *)amplitude{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude of the output. Updated at Control-rate. [Default Value: 1]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalDbthresh:" title="setOptionalDbthresh:"></a>
+  <h4 class="subsubtitle method-title">setOptionalDbthresh:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional dbthresh
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalDbthresh:(AKConstant *)dbthresh{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>dbthresh</strong>:
+      Threshold for onset detection, based on dB power spectrum ratio between two successive windows. A detected ratio above it will cancel timescaling momentarily, to avoid smearing (defaults to 1). By default anything more than a 1 dB inter-frame power difference will be detected as an onset. [Default Value: 1]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalFrequencyRatio:" title="setOptionalFrequencyRatio:"></a>
+  <h4 class="subsubtitle method-title">setOptionalFrequencyRatio:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional frequency ratio
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalFrequencyRatio:(AKParameter *)frequencyRatio{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>frequencyRatio</strong>:
+      Grain frequency scaling (1=normal pitch, < 1 lower, > 1 higher; negative, backwards) Updated at Control-rate. [Default Value: 1]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalHopSize:" title="setOptionalHopSize:"></a>
+  <h4 class="subsubtitle method-title">setOptionalHopSize:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional hop size
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalHopSize:(AKConstant *)hopSize{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>hopSize</strong>:
+      Size of hop [Default Value: 512]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalSizeOfFFT:" title="setOptionalSizeOfFFT:"></a>
+  <h4 class="subsubtitle method-title">setOptionalSizeOfFFT:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional size of fft
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalSizeOfFFT:(AKConstant *)sizeOfFFT{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>sizeOfFFT</strong>:
+      FFT size- must be a factor of 2. [Default Value: 2048]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalTableOffset:" title="setOptionalTableOffset:"></a>
+  <h4 class="subsubtitle method-title">setOptionalTableOffset:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional table offset
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalTableOffset:(AKConstant *)tableOffset{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>tableOffset</strong>:
+      Startup read offset into table, in seconds. [Default Value: 0]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalTimeRatio:" title="setOptionalTimeRatio:"></a>
+  <h4 class="subsubtitle method-title">setOptionalTimeRatio:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional time ratio
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalTimeRatio:(AKParameter *)timeRatio{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>timeRatio</strong>:
+      Time Scaling ratio, < 1 stretches, > 1 contracts. Updated at Control-rate. [Default Value: 1]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+        </div>
+      </div>

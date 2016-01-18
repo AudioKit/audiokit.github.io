@@ -1,0 +1,40 @@
+---
+layout: default
+section: docs
+---
+<section id="page-title">
+
+    <div class="container clearfix">
+        <h1>
+          {% if page.header != '' %}
+            {{ page.header }}
+          {% else %}
+            {{ page.title }}
+          {% endif %}
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+             <li><a href="/docs/">Documentation</a></li>
+            <li class="active">
+              {% if page.header != '' %}
+                {{ page.header }}
+              {% else %}
+                {{ page.title }}
+              {% endif %}
+            </li>
+        </ol>
+    </div>
+
+</section><!-- #page-title end -->
+<section id="content">
+
+    <div class="content-wrap">
+
+        <div class="container clearfix">
+            {{ content }}
+        </div>
+
+    </div>
+
+</section><!-- #content end -->
+

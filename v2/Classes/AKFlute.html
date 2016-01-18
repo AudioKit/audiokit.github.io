@@ -1,0 +1,1258 @@
+---
+layout: v2_docs
+header: AKFlute
+title: AKFlute
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div>
+
+          <table class="table table-bordered"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="/v2/Classes/AKAudio/">AKAudio</a> : <a href="/v2/Classes/AKParameter/">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKFlute.h<br />AKFlute.m</td>
+</tr>
+            </tbody></table>
+
+
+
+
+            <a title="Overview" name="overview"></a>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>A physical model of a flute
+
+Audio output is a tone similar to a flute, using a physical model developed from Perry Cook</p>
+
+
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Properties" name="properties"></a>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
+
+            <div class="section-method">
+  <a name="//api/name/airJetPressure" title="airJetPressure"></a>
+  <h4 class="subsubtitle method-title">airJetPressure</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    a parameter controlling the air jet. Values should be positive, and the useful range is approximately 0.08 to 0.56. [Default Value: 0.2]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *airJetPressure{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/airJetReflection" title="airJetReflection"></a>
+  <h4 class="subsubtitle method-title">airJetReflection</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Amount of reflection in the breath jet that powers the flute. [Default Value: 0.5]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKConstant *airJetReflection{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/amplitude" title="amplitude"></a>
+  <h4 class="subsubtitle method-title">amplitude</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Amplitude of the note, up to but not including 1. [Default Value: 0.5]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *amplitude{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/attackTime" title="attackTime"></a>
+  <h4 class="subsubtitle method-title">attackTime</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Time in seconds to reach full blowing pressure. [Default Value: 0.1]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKConstant *attackTime{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/frequency" title="frequency"></a>
+  <h4 class="subsubtitle method-title">frequency</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Frequency of the note. [Default Value: 440]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *frequency{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/noiseAmplitude" title="noiseAmplitude"></a>
+  <h4 class="subsubtitle method-title">noiseAmplitude</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Amplitude of the noise component, about 0 to 0.5 [Default Value: 0.15]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *noiseAmplitude{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/reflectionCoefficient" title="reflectionCoefficient"></a>
+  <h4 class="subsubtitle method-title">reflectionCoefficient</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Reflection coefficient of the breath jet. [Default Value: 0.5]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKConstant *reflectionCoefficient{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/releaseTime" title="releaseTime"></a>
+  <h4 class="subsubtitle method-title">releaseTime</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Time in seconds taken to stop blowing. [Default Value: 0.1]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKConstant *releaseTime{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/vibratoAmplitude" title="vibratoAmplitude"></a>
+  <h4 class="subsubtitle method-title">vibratoAmplitude</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Amplitude of the vibrato. [Default Value: 0]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *vibratoAmplitude{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/vibratoFrequency" title="vibratoFrequency"></a>
+  <h4 class="subsubtitle method-title">vibratoFrequency</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Frequency of vibrato in Hertz. Suggested range is 0 to 12 [Default Value: 0]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *vibratoFrequency{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/vibratoShape" title="vibratoShape"></a>
+  <h4 class="subsubtitle method-title">vibratoShape</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Table defining the shape of the vibrato. [Default Value: sine]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKTable *vibratoShape{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Class Methods" name="class_methods"></a>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/flute" title="flute"></a>
+  <h4 class="subsubtitle method-title">flute</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the flute with default values
+  </div>
+
+
+
+ {% highlight objective-c %}+ (instancetype)flute{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/presetDefaultFlute" title="presetDefaultFlute"></a>
+  <h4 class="subsubtitle method-title">presetDefaultFlute</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the flute with default values
+  </div>
+
+
+
+ {% highlight objective-c %}+ (instancetype)presetDefaultFlute{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/presetMicFeedbackFlute" title="presetMicFeedbackFlute"></a>
+  <h4 class="subsubtitle method-title">presetMicFeedbackFlute</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the flute with a sound resembling microphone feedback
+  </div>
+
+
+
+ {% highlight objective-c %}+ (instancetype)presetMicFeedbackFlute{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/presetSciFiNoiseFlute" title="presetSciFiNoiseFlute"></a>
+  <h4 class="subsubtitle method-title">presetSciFiNoiseFlute</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the flute with a sci-fi type sound
+  </div>
+
+
+
+ {% highlight objective-c %}+ (instancetype)presetSciFiNoiseFlute{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/presetScreamingFlute" title="presetScreamingFlute"></a>
+  <h4 class="subsubtitle method-title">presetScreamingFlute</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the flute with a screaming space sound
+  </div>
+
+
+
+ {% highlight objective-c %}+ (instancetype)presetScreamingFlute{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/presetShipsHornFlute" title="presetShipsHornFlute"></a>
+  <h4 class="subsubtitle method-title">presetShipsHornFlute</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the flute with a sound resembling a large ship horn
+  </div>
+
+
+
+ {% highlight objective-c %}+ (instancetype)presetShipsHornFlute{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/init" title="init"></a>
+  <h4 class="subsubtitle method-title">init</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the flute with default values
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)init{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initWithFrequency:attackTime:releaseTime:airJetPressure:airJetReflection:reflectionCoefficient:noiseAmplitude:amplitude:vibratoShape:vibratoAmplitude:vibratoFrequency:" title="initWithFrequency:attackTime:releaseTime:airJetPressure:airJetReflection:reflectionCoefficient:noiseAmplitude:amplitude:vibratoShape:vibratoAmplitude:vibratoFrequency:"></a>
+  <h4 class="subsubtitle method-title">initWithFrequency:attackTime:releaseTime:airJetPressure:airJetReflection:reflectionCoefficient:noiseAmplitude:amplitude:vibratoShape:vibratoAmplitude:vibratoFrequency:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the flute with all values
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithFrequency:(AKParameter *)frequency attackTime:(AKConstant *)attackTime releaseTime:(AKConstant *)releaseTime airJetPressure:(AKParameter *)airJetPressure airJetReflection:(AKConstant *)airJetReflection reflectionCoefficient:(AKConstant *)reflectionCoefficient noiseAmplitude:(AKParameter *)noiseAmplitude amplitude:(AKParameter *)amplitude vibratoShape:(AKTable *)vibratoShape vibratoAmplitude:(AKParameter *)vibratoAmplitude vibratoFrequency:(AKParameter *)vibratoFrequency{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>frequency</strong>:
+      Frequency of the note. Updated at Control-rate. [Default Value: 440]</li>
+
+    <li><i class="icon-line-play"></i><strong>attackTime</strong>:
+      Time in seconds to reach full blowing pressure. [Default Value: 0.1]</li>
+
+    <li><i class="icon-line-play"></i><strong>releaseTime</strong>:
+      Time in seconds taken to stop blowing. [Default Value: 0.1]</li>
+
+    <li><i class="icon-line-play"></i><strong>airJetPressure</strong>:
+      a parameter controlling the air jet. Values should be positive, and the useful range is approximately 0.08 to 0.56. Updated at Control-rate. [Default Value: 0.2]</li>
+
+    <li><i class="icon-line-play"></i><strong>airJetReflection</strong>:
+      Amount of reflection in the breath jet that powers the flute. [Default Value: 0.5]</li>
+
+    <li><i class="icon-line-play"></i><strong>reflectionCoefficient</strong>:
+      Reflection coefficient of the breath jet. [Default Value: 0.5]</li>
+
+    <li><i class="icon-line-play"></i><strong>noiseAmplitude</strong>:
+      Amplitude of the noise component, about 0 to 0.5 Updated at Control-rate. [Default Value: 0.15]</li>
+
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude of the note, up to but not including 1. Updated at Control-rate. [Default Value: 0.5]</li>
+
+    <li><i class="icon-line-play"></i><strong>vibratoShape</strong>:
+      Table defining the shape of the vibrato. [Default Value: sine]</li>
+
+    <li><i class="icon-line-play"></i><strong>vibratoAmplitude</strong>:
+      Amplitude of the vibrato. Updated at Control-rate. [Default Value: 0]</li>
+
+    <li><i class="icon-line-play"></i><strong>vibratoFrequency</strong>:
+      Frequency of vibrato in Hertz. Suggested range is 0 to 12 Updated at Control-rate. [Default Value: 0]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initWithPresetMicFeedbackFlute" title="initWithPresetMicFeedbackFlute"></a>
+  <h4 class="subsubtitle method-title">initWithPresetMicFeedbackFlute</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the flute with a sound resembling microphone feedback
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithPresetMicFeedbackFlute{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initWithPresetSciFiNoiseFlute" title="initWithPresetSciFiNoiseFlute"></a>
+  <h4 class="subsubtitle method-title">initWithPresetSciFiNoiseFlute</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the flute with a sci-fi type sound
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithPresetSciFiNoiseFlute{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initWithPresetScreamingFlute" title="initWithPresetScreamingFlute"></a>
+  <h4 class="subsubtitle method-title">initWithPresetScreamingFlute</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the flute with a screaming space sound
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithPresetScreamingFlute{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initWithPresetShipsHornFlute" title="initWithPresetShipsHornFlute"></a>
+  <h4 class="subsubtitle method-title">initWithPresetShipsHornFlute</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the flute with a sound resembling a large ship horn
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithPresetShipsHornFlute{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalAirJetPressure:" title="setOptionalAirJetPressure:"></a>
+  <h4 class="subsubtitle method-title">setOptionalAirJetPressure:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional air jet pressure
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalAirJetPressure:(AKParameter *)airJetPressure{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>airJetPressure</strong>:
+      a parameter controlling the air jet. Values should be positive, and the useful range is approximately 0.08 to 0.56. Updated at Control-rate. [Default Value: 0.2]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalAirJetReflection:" title="setOptionalAirJetReflection:"></a>
+  <h4 class="subsubtitle method-title">setOptionalAirJetReflection:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional air jet reflection
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalAirJetReflection:(AKConstant *)airJetReflection{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>airJetReflection</strong>:
+      Amount of reflection in the breath jet that powers the flute. [Default Value: 0.5]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalAmplitude:" title="setOptionalAmplitude:"></a>
+  <h4 class="subsubtitle method-title">setOptionalAmplitude:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional amplitude
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalAmplitude:(AKParameter *)amplitude{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude of the note, up to but not including 1. Updated at Control-rate. [Default Value: 0.5]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalAttackTime:" title="setOptionalAttackTime:"></a>
+  <h4 class="subsubtitle method-title">setOptionalAttackTime:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional attack time
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalAttackTime:(AKConstant *)attackTime{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>attackTime</strong>:
+      Time in seconds to reach full blowing pressure. [Default Value: 0.1]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalFrequency:" title="setOptionalFrequency:"></a>
+  <h4 class="subsubtitle method-title">setOptionalFrequency:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional frequency
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalFrequency:(AKParameter *)frequency{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>frequency</strong>:
+      Frequency of the note. Updated at Control-rate. [Default Value: 440]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalNoiseAmplitude:" title="setOptionalNoiseAmplitude:"></a>
+  <h4 class="subsubtitle method-title">setOptionalNoiseAmplitude:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional noise amplitude
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalNoiseAmplitude:(AKParameter *)noiseAmplitude{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>noiseAmplitude</strong>:
+      Amplitude of the noise component, about 0 to 0.5 Updated at Control-rate. [Default Value: 0.15]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalReflectionCoefficient:" title="setOptionalReflectionCoefficient:"></a>
+  <h4 class="subsubtitle method-title">setOptionalReflectionCoefficient:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional reflection coefficient
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalReflectionCoefficient:(AKConstant *)reflectionCoefficient{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>reflectionCoefficient</strong>:
+      Reflection coefficient of the breath jet. [Default Value: 0.5]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalReleaseTime:" title="setOptionalReleaseTime:"></a>
+  <h4 class="subsubtitle method-title">setOptionalReleaseTime:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional release time
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalReleaseTime:(AKConstant *)releaseTime{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>releaseTime</strong>:
+      Time in seconds taken to stop blowing. [Default Value: 0.1]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalVibratoAmplitude:" title="setOptionalVibratoAmplitude:"></a>
+  <h4 class="subsubtitle method-title">setOptionalVibratoAmplitude:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional vibrato amplitude
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalVibratoAmplitude:(AKParameter *)vibratoAmplitude{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>vibratoAmplitude</strong>:
+      Amplitude of the vibrato. Updated at Control-rate. [Default Value: 0]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalVibratoFrequency:" title="setOptionalVibratoFrequency:"></a>
+  <h4 class="subsubtitle method-title">setOptionalVibratoFrequency:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional vibrato frequency
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalVibratoFrequency:(AKParameter *)vibratoFrequency{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>vibratoFrequency</strong>:
+      Frequency of vibrato in Hertz. Suggested range is 0 to 12 Updated at Control-rate. [Default Value: 0]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalVibratoShape:" title="setOptionalVibratoShape:"></a>
+  <h4 class="subsubtitle method-title">setOptionalVibratoShape:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional vibrato shape
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalVibratoShape:(AKTable *)vibratoShape{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>vibratoShape</strong>:
+      Table defining the shape of the vibrato. [Default Value: sine]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+        </div>
+      </div>

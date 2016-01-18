@@ -1,0 +1,70 @@
+---
+title: AudioKit Examples - Swift FMOscillator
+header: Swift FM Oscillator
+permalink: /v2/examples/swift/FMOscillator/
+layout: v2_examples
+---
+
+<div class="cd-iphone-5s cd-silver hide-on-tablets-and-smaller" style="margin-left: 1em; float: right">
+  <div class="cd-body">
+    <div class="cd-sound"></div>
+    <div class="cd-sleep"></div>
+    <div class="cd-camera"></div>
+    <div class="cd-ear"></div>
+    <div class="cd-home"></div>
+    <div class="cd-screen">
+      <video controls class="cd-fill">
+        <source src="https://dl.dropboxusercontent.com/u/31568349/movies/SwiftFMOscillator.m4v" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</div>
+<p>This example is part of the <a href="https://github.com/audiokit/Examples">AudioKit Examples</a> GitHub repository.</p>
+
+<p>
+This is a Frequency-Modulation Oscillator implemented with Swift. It has five parameters controlled via AKPropertySliders: frequency, amplitude, carrier multiplier, modulating multiplier, and modulating index.
+</p>
+
+<p>
+In "FMSynth.swift", five variables are declared for each synthesizer parameter we want to control. Each variable is an instance of AKInstrumentProperty, which are properties of an instrument that are shared amongst all the notes that are created on that instrument. These properties are used by UISliders in the "ViewController.swift" to alter each individual parameter.The code for creating these variables and setting their initial, minimum, and maximum values is shown below:
+</p>
+
+{% highlight ruby %}
+var frequency            = AKInstrumentProperty(value: 440, minimum: 20, maximum: 2000)
+var amplitude            = AKInstrumentProperty(value: 0.2, minimum: 0,  maximum: 1)
+var carrierMultiplier    = AKInstrumentProperty(value: 1,   minimum: 0,  maximum: 3)
+var modulatingMultiplier = AKInstrumentProperty(value: 1,   minimum: 0,  maximum: 3)
+var modulationIndex      = AKInstrumentProperty(value: 15,  minimum: 0,  maximum: 30)
+{% endhighlight %}
+
+
+<p>
+The code for creating the FM oscillator instrument is shown below. The properites are added to the instrument, and an instance of AKTable is created to be the waveform for the FMOscillator. The parameters of the oscillator are controlled by the variables declared above.
+</p>
+
+{% highlight ruby %}
+override init() {
+    super.init()
+
+    addProperty(frequency)
+    addProperty(amplitude)
+    addProperty(carrierMultiplier)
+    addProperty(modulatingMultiplier)
+    addProperty(modulationIndex)
+
+    let fmOscillator = AKFMOscillator(
+        waveform: AKTable.standardSineWave(),
+        baseFrequency: frequency,
+        carrierMultiplier: carrierMultiplier,
+        modulatingMultiplier: modulatingMultiplier,
+        modulationIndex: modulationIndex,
+        amplitude: amplitude
+    )
+    setAudioOutput(fmOscillator)
+}
+{% endhighlight %}
+
+<h2>Audio Clip</h2>
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/172497122&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>

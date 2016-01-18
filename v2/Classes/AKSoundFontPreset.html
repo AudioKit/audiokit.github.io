@@ -1,0 +1,292 @@
+---
+layout: v2_docs
+header: AKSoundFontPreset
+title: AKSoundFontPreset
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div>
+
+          <table class="table table-bordered"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value">NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKSoundFontPreset.h<br />AKSoundFontPreset.m</td>
+</tr>
+            </tbody></table>
+
+
+
+
+            <a title="Overview" name="overview"></a>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>The AudioKit class for sound font presets</p>
+
+
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Properties" name="properties"></a>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
+
+            <div class="section-method">
+  <a name="//api/name/bank" title="bank"></a>
+  <h4 class="subsubtitle method-title">bank</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Bank Number
+  </div>
+
+
+
+ {% highlight objective-c %}@property (readonly) NSUInteger bank{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/name" title="name"></a>
+  <h4 class="subsubtitle method-title">name</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Name of the preset
+  </div>
+
+
+
+ {% highlight objective-c %}@property (readonly) NSString *name{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/number" title="number"></a>
+  <h4 class="subsubtitle method-title">number</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Unique number of the preset
+  </div>
+
+
+
+ {% highlight objective-c %}@property (readonly) NSUInteger number{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/program" title="program"></a>
+  <h4 class="subsubtitle method-title">program</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Program Number
+  </div>
+
+
+
+ {% highlight objective-c %}@property (readonly) NSUInteger program{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/soundFont" title="soundFont"></a>
+  <h4 class="subsubtitle method-title">soundFont</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Sound font the instrument is part of
+  </div>
+
+
+
+ {% highlight objective-c %}@property (readonly) AKSoundFont *soundFont{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/initWithName:number:program:bank:soundFont:" title="initWithName:number:program:bank:soundFont:"></a>
+  <h4 class="subsubtitle method-title">initWithName:number:program:bank:soundFont:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Create the sound font preset with information from the sf2 file format
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithName:(NSString *)name number:(NSUInteger)number program:(NSUInteger)program bank:(NSUInteger)bank soundFont:(AKSoundFont *)soundFont{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>name</strong>:
+      Name of the preset</li>
+
+    <li><i class="icon-line-play"></i><strong>number</strong>:
+      Unique number of the preset</li>
+
+    <li><i class="icon-line-play"></i><strong>program</strong>:
+      Program Number</li>
+
+    <li><i class="icon-line-play"></i><strong>bank</strong>:
+      Bank Number</li>
+
+    <li><i class="icon-line-play"></i><strong>soundFont</strong>:
+      Sound Font this preset is part of</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/orchestraString" title="orchestraString"></a>
+  <h4 class="subsubtitle method-title">orchestraString</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    String for invocation when needed
+  </div>
+
+
+
+ {% highlight objective-c %}- (NSString *)orchestraString{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+        </div>
+      </div>

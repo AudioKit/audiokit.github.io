@@ -1,0 +1,703 @@
+---
+layout: v2_docs
+header: EZAudioFFT
+title: EZAudioFFT
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div>
+
+          <table class="table table-bordered"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value">NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">EZAudioFFT.h<br />EZAudioFFT.m</td>
+</tr>
+            </tbody></table>
+
+
+
+
+            <a title="Overview" name="overview"></a>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>The EZAudioFFT provides a base class to quickly calculate the FFT of incoming audio data using the Accelerate framework. In addition, the EZAudioFFT contains an EZAudioFFTDelegate to receive an event anytime an FFT is computed.</p>
+
+
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Properties" name="properties"></a>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
+
+            <div class="section-method">
+  <a name="//api/name/complexSplit" title="complexSplit"></a>
+  <h4 class="subsubtitle method-title">complexSplit</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    A COMPLEX_SPLIT data structure used to hold the FFT's imaginary and real components.
+  </div>
+
+
+
+ {% highlight objective-c %}@property (readonly, nonatomic) COMPLEX_SPLIT complexSplit{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/delegate" title="delegate"></a>
+  <h4 class="subsubtitle method-title">delegate</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    An EZAudioFFTDelegate to receive an event whenever the FFT is calculated.
+  </div>
+
+
+
+ {% highlight objective-c %}@property (weak, nonatomic) id&lt;EZAudioFFTDelegate&gt; delegate{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/fftData" title="fftData"></a>
+  <h4 class="subsubtitle method-title">fftData</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    A float array containing the last calculated FFT data.
+  </div>
+
+
+
+ {% highlight objective-c %}@property (readonly, nonatomic) float *fftData{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/fftSetup" title="fftSetup"></a>
+  <h4 class="subsubtitle method-title">fftSetup</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    An FFTSetup data structure used to internally calculate the FFT using Accelerate.
+  </div>
+
+
+
+ {% highlight objective-c %}@property (readonly, nonatomic) FFTSetup fftSetup{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/inversedFFTData" title="inversedFFTData"></a>
+  <h4 class="subsubtitle method-title">inversedFFTData</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    A float array containing the last calculated inverse FFT data (the time domain signal).
+  </div>
+
+
+
+ {% highlight objective-c %}@property (readonly, nonatomic) float *inversedFFTData{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/maxFrequency" title="maxFrequency"></a>
+  <h4 class="subsubtitle method-title">maxFrequency</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    A float representing the frequency with the highest energy is the last FFT calculation.
+  </div>
+
+
+
+ {% highlight objective-c %}@property (readonly, nonatomic) float maxFrequency{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/maxFrequencyIndex" title="maxFrequencyIndex"></a>
+  <h4 class="subsubtitle method-title">maxFrequencyIndex</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    A vDSP_Length (unsigned long) representing the index of the frequency with the highest energy is the last FFT calculation.
+  </div>
+
+
+
+ {% highlight objective-c %}@property (readonly, nonatomic) vDSP_Length maxFrequencyIndex{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/maxFrequencyMagnitude" title="maxFrequencyMagnitude"></a>
+  <h4 class="subsubtitle method-title">maxFrequencyMagnitude</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    A float representing the magnitude of the frequency with the highest energy is the last FFT calculation.
+  </div>
+
+
+
+ {% highlight objective-c %}@property (readonly, nonatomic) float maxFrequencyMagnitude{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/maximumBufferSize" title="maximumBufferSize"></a>
+  <h4 class="subsubtitle method-title">maximumBufferSize</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    A vDSP_Length (unsigned long) representing the maximum buffer size. This is the maximum length the incoming audio data in the computeFFTWithBuffer:withBufferSize method can be.
+  </div>
+
+
+
+ {% highlight objective-c %}@property (readonly, nonatomic) vDSP_Length maximumBufferSize{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/sampleRate" title="sampleRate"></a>
+  <h4 class="subsubtitle method-title">sampleRate</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    A float representing the sample rate of the incoming audio data.
+  </div>
+
+
+
+ {% highlight objective-c %}@property (readwrite, nonatomic) float sampleRate{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Class Methods" name="class_methods"></a>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/fftWithMaximumBufferSize:sampleRate:" title="fftWithMaximumBufferSize:sampleRate:"></a>
+  <h4 class="subsubtitle method-title">fftWithMaximumBufferSize:sampleRate:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Class method to initialize an EZAudioFFT (or subclass) instance with a maximum buffer size and sample rate. The sample rate is used specifically to calculate the maxFrequency property. If you don't care about the maxFrequency property then you can set the sample rate to 0.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (instancetype)fftWithMaximumBufferSize:(vDSP_Length)maximumBufferSize sampleRate:(float)sampleRate{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>maximumBufferSize</strong>:
+      A vDSP_Length (unsigned long) representing the maximum length of the incoming audio data.</li>
+
+    <li><i class="icon-line-play"></i><strong>sampleRate</strong>:
+      A float representing the sample rate of the incoming audio data.</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    A newly created EZAudioFFT (or subclass) instance.
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/fftWithMaximumBufferSize:sampleRate:delegate:" title="fftWithMaximumBufferSize:sampleRate:delegate:"></a>
+  <h4 class="subsubtitle method-title">fftWithMaximumBufferSize:sampleRate:delegate:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Class method to initialize an EZAudioFFT (or subclass) instance with a maximum buffer size, sample rate, and EZAudioFFTDelegate. The sample rate is used specifically to calculate the maxFrequency property. If you don't care about the maxFrequency property then you can set the sample rate to 0. The EZAudioFFTDelegate will act as a receive to get an event whenever the FFT is calculated.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (instancetype)fftWithMaximumBufferSize:(vDSP_Length)maximumBufferSize sampleRate:(float)sampleRate delegate:(id&lt;EZAudioFFTDelegate&gt;)delegate{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>maximumBufferSize</strong>:
+      A vDSP_Length (unsigned long) representing the maximum length of the incoming audio data.</li>
+
+    <li><i class="icon-line-play"></i><strong>sampleRate</strong>:
+      A float representing the sample rate of the incoming audio data.</li>
+
+    <li><i class="icon-line-play"></i><strong>delegate</strong>:
+      An EZAudioFFTDelegate to receive an event whenever the FFT is calculated.</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    A newly created EZAudioFFT (or subclass) instance.
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/computeFFTWithBuffer:withBufferSize:" title="computeFFTWithBuffer:withBufferSize:"></a>
+  <h4 class="subsubtitle method-title">computeFFTWithBuffer:withBufferSize:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Computes the FFT for a float array representing an incoming audio signal. This will trigger the EZAudioFFTDelegate method fft:updatedWithFFTData:bufferSize:.
+  </div>
+
+
+
+ {% highlight objective-c %}- (float *)computeFFTWithBuffer:(float *)buffer withBufferSize:(UInt32)bufferSize{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>buffer</strong>:
+      A float array representing the audio data.</li>
+
+    <li><i class="icon-line-play"></i><strong>bufferSize</strong>:
+      The length of the float array of audio data.</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    A float array containing the computed FFT data. The length of the output will be half the incoming buffer (half the bufferSize argument).
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/frequencyAtIndex:" title="frequencyAtIndex:"></a>
+  <h4 class="subsubtitle method-title">frequencyAtIndex:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Provides the frequency corresponding to an index in the last computed FFT data.
+  </div>
+
+
+
+ {% highlight objective-c %}- (float)frequencyAtIndex:(vDSP_Length)index{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>index</strong>:
+      A vDSP_Length (unsigned integer) representing the index of the frequency bin value you'd like to get</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    A float representing the frequency value at that index.
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/frequencyMagnitudeAtIndex:" title="frequencyMagnitudeAtIndex:"></a>
+  <h4 class="subsubtitle method-title">frequencyMagnitudeAtIndex:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Provides the magnitude of the frequenecy corresponding to an index in the last computed FFT data.
+  </div>
+
+
+
+ {% highlight objective-c %}- (float)frequencyMagnitudeAtIndex:(vDSP_Length)index{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>index</strong>:
+      A vDSP_Length (unsigned integer) representing the index of the frequency bin value you'd like to get</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    A float representing the frequency magnitude value at that index.
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initWithMaximumBufferSize:sampleRate:" title="initWithMaximumBufferSize:sampleRate:"></a>
+  <h4 class="subsubtitle method-title">initWithMaximumBufferSize:sampleRate:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Initializes an EZAudioFFT (or subclass) instance with a maximum buffer size and sample rate. The sample rate is used specifically to calculate the maxFrequency property. If you don't care about the maxFrequency property then you can set the sample rate to 0.
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithMaximumBufferSize:(vDSP_Length)maximumBufferSize sampleRate:(float)sampleRate{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>maximumBufferSize</strong>:
+      A vDSP_Length (unsigned long) representing the maximum length of the incoming audio data.</li>
+
+    <li><i class="icon-line-play"></i><strong>sampleRate</strong>:
+      A float representing the sample rate of the incoming audio data.</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    A newly created EZAudioFFT (or subclass) instance.
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initWithMaximumBufferSize:sampleRate:delegate:" title="initWithMaximumBufferSize:sampleRate:delegate:"></a>
+  <h4 class="subsubtitle method-title">initWithMaximumBufferSize:sampleRate:delegate:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Initializes an EZAudioFFT (or subclass) instance with a maximum buffer size, sample rate, and EZAudioFFTDelegate. The sample rate is used specifically to calculate the maxFrequency property. If you don't care about the maxFrequency property then you can set the sample rate to 0. The EZAudioFFTDelegate will act as a receive to get an event whenever the FFT is calculated.
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithMaximumBufferSize:(vDSP_Length)maximumBufferSize sampleRate:(float)sampleRate delegate:(id&lt;EZAudioFFTDelegate&gt;)delegate{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>maximumBufferSize</strong>:
+      A vDSP_Length (unsigned long) representing the maximum length of the incoming audio data.</li>
+
+    <li><i class="icon-line-play"></i><strong>sampleRate</strong>:
+      A float representing the sample rate of the incoming audio data.</li>
+
+    <li><i class="icon-line-play"></i><strong>delegate</strong>:
+      An EZAudioFFTDelegate to receive an event whenever the FFT is calculated.</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    A newly created EZAudioFFT (or subclass) instance.
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+        </div>
+      </div>

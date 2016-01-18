@@ -1,0 +1,149 @@
+---
+layout: v2_docs
+header: AKEvent
+title: AKEvent
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div>
+
+          <table class="table table-bordered"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value">NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKEvent.h<br />AKEvent.m</td>
+</tr>
+            </tbody></table>
+
+
+
+
+            <a title="Overview" name="overview"></a>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Analogous to a MIDI event, an AK Event can be based on a AKNote such as
+a note on, note off, note property change, or it can be a block containing
+intrument property changes.  The block can</p>
+
+
+
+
+
+
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/initWithBlock:" title="initWithBlock:"></a>
+  <h4 class="subsubtitle method-title">initWithBlock:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Create an event from the code block given
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithBlock:(void ( ^ ) ( ))aBlock{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>aBlock</strong>:
+      Code to run when the event is started</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/runBlock" title="runBlock"></a>
+  <h4 class="subsubtitle method-title">runBlock</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Execute the block of code stored in the event.
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)runBlock{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/trigger" title="trigger"></a>
+  <h4 class="subsubtitle method-title">trigger</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Helper method to start the event.
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)trigger{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+        </div>
+      </div>

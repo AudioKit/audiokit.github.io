@@ -1,0 +1,55 @@
+---
+title: AudioKit Examples - Swift Harmonizer
+header: Swift Harmonizer
+permalink: /v2/examples/swift/Harmonizer/
+layout: v2_examples
+last-review-date: 2015/02/01
+---
+
+<p>This example is part of the <a href="https://github.com/audiokit/Examples">AudioKit Examples</a> GitHub repository.</p>
+
+<p>
+This example demonstrates a simpler harmonizer, with the input signal being the device microphone. The code below (from "HarmonizerInstrument.swift") takes the audio input from the device microphone and applies a window to the signal.</p>
+
+{% highlight ruby %}
+let microphone: AKAudioInput = AKAudioInput ()
+
+let microphoneFFT = AKFFT(
+    input: microphone,
+    fftSize: 2048.ak,
+    overlap: 256.ak,
+    windowType: AKFFTWindowType.VonHann,
+    windowFilterSize: 2048.ak
+)
+{% endhighlight %}
+
+<p>Notice that float and integers can't be directly used, they need to be converted into AudioKit constant parameters, which is simple done by append <code>.ak</code> to the end of the number.  This analagous to the Objective-C function <code>akp()</code>.</p>
+
+
+<p>
+The input signal is then altered with two instances of "AKScaledFFT", which scales the frequency of the FFT, which results in a pitch shift.
+</p>
+
+{% highlight ruby %}
+let scaledFFT = AKScaledFFT(
+    signal: microphoneFFT,
+    frequencyRatio: 2.ak,
+    formantRetainMethod: AKScaledFFTFormantRetainMethod.LifteredCepstrum,
+    amplitudeRatio: 2.ak,
+    cepstrumCoefficients: nil
+)
+{% endhighlight %}
+
+<p>These signals are then mixed with an instance of AKMixedFFT: </p>
+
+{% highlight ruby %}
+let mixedFFT = AKMixedFFT(signal1: microphoneFFT, signal2: scaledFFT)
+{% endhighlight %}
+
+<p>
+Finally, the audio is resynthesized from the FFT data using an instance of "AKResynthesizedAudio":
+</p>
+
+{% highlight ruby %}
+let audioOutput = AKResynthesizedAudio(signal: mixedFFT)
+{% endhighlight %}

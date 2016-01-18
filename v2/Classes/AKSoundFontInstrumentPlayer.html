@@ -1,0 +1,467 @@
+---
+layout: v2_docs
+header: AKSoundFontInstrumentPlayer
+title: AKSoundFontInstrumentPlayer
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div>
+
+          <table class="table table-bordered"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="/v2/Classes/AKStereoAudio/">AKStereoAudio</a> : <a href="/v2/Classes/AKParameter/">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKSoundFontInstrumentPlayer.h<br />AKSoundFontInstrumentPlayer.m</td>
+</tr>
+            </tbody></table>
+
+
+
+
+            <a title="Overview" name="overview"></a>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Plays a SoundFont2 (SF2) sample instrument, generating a stereo sound with cubic interpolation.</p>
+
+
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Properties" name="properties"></a>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
+
+            <div class="section-method">
+  <a name="//api/name/amplitude" title="amplitude"></a>
+  <h4 class="subsubtitle method-title">amplitude</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Amplitude correction (different from velocity. [Default Value: 1]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *amplitude{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/frequencyMultiplier" title="frequencyMultiplier"></a>
+  <h4 class="subsubtitle method-title">frequencyMultiplier</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Frequency Multiplier. [Default Value: 440]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *frequencyMultiplier{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/noteNumber" title="noteNumber"></a>
+  <h4 class="subsubtitle method-title">noteNumber</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    MIDI Note Number. [Default Value: 60]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKConstant *noteNumber{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/velocity" title="velocity"></a>
+  <h4 class="subsubtitle method-title">velocity</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Velocity from zero to 1. [Default Value: 1]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKConstant *velocity{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Class Methods" name="class_methods"></a>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/playerWithSoundFontInstrument:" title="playerWithSoundFontInstrument:"></a>
+  <h4 class="subsubtitle method-title">playerWithSoundFontInstrument:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the sound font instrument player with default values
+  </div>
+
+
+
+ {% highlight objective-c %}+ (instancetype)playerWithSoundFontInstrument:(AKSoundFontInstrument *)soundFontInstrument{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>soundFontInstrument</strong>:
+      Sound Font Instrument</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/initWithSoundFontInstrument:" title="initWithSoundFontInstrument:"></a>
+  <h4 class="subsubtitle method-title">initWithSoundFontInstrument:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the sound font instrument player with default values
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithSoundFontInstrument:(AKSoundFontInstrument *)soundFontInstrument{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>soundFontInstrument</strong>:
+      Sound Font Instrument</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initWithSoundFontInstrument:noteNumber:velocity:frequencyMultiplier:amplitude:" title="initWithSoundFontInstrument:noteNumber:velocity:frequencyMultiplier:amplitude:"></a>
+  <h4 class="subsubtitle method-title">initWithSoundFontInstrument:noteNumber:velocity:frequencyMultiplier:amplitude:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the sound font instrument player with all values
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithSoundFontInstrument:(AKSoundFontInstrument *)soundFontInstrument noteNumber:(AKConstant *)noteNumber velocity:(AKConstant *)velocity frequencyMultiplier:(AKParameter *)frequencyMultiplier amplitude:(AKParameter *)amplitude{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>soundFontInstrument</strong>:
+      Sound Font Instrument</li>
+
+    <li><i class="icon-line-play"></i><strong>noteNumber</strong>:
+      MIDI Note Number. [Default Value: 60]</li>
+
+    <li><i class="icon-line-play"></i><strong>velocity</strong>:
+      Velocity from zero to 1. [Default Value: 1]</li>
+
+    <li><i class="icon-line-play"></i><strong>frequencyMultiplier</strong>:
+      Frequency Multiplier. [Default Value: 440]</li>
+
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude correction (different from velocity. [Default Value: 1]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalAmplitude:" title="setOptionalAmplitude:"></a>
+  <h4 class="subsubtitle method-title">setOptionalAmplitude:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional amplitude
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalAmplitude:(AKParameter *)amplitude{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude correction (different from velocity. [Default Value: 1]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalFrequencyMultiplier:" title="setOptionalFrequencyMultiplier:"></a>
+  <h4 class="subsubtitle method-title">setOptionalFrequencyMultiplier:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional frequency multiplier
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalFrequencyMultiplier:(AKParameter *)frequencyMultiplier{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>frequencyMultiplier</strong>:
+      Frequency Multiplier. [Default Value: 440]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalNoteNumber:" title="setOptionalNoteNumber:"></a>
+  <h4 class="subsubtitle method-title">setOptionalNoteNumber:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional note number
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalNoteNumber:(AKConstant *)noteNumber{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>noteNumber</strong>:
+      MIDI Note Number. [Default Value: 60]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalVelocity:" title="setOptionalVelocity:"></a>
+  <h4 class="subsubtitle method-title">setOptionalVelocity:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional velocity
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalVelocity:(AKConstant *)velocity{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>velocity</strong>:
+      Velocity from zero to 1. [Default Value: 1]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+        </div>
+      </div>

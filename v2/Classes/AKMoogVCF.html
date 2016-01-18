@@ -1,0 +1,555 @@
+---
+layout: v2_docs
+header: AKMoogVCF
+title: AKMoogVCF
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div>
+
+          <table class="table table-bordered"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="/v2/Classes/AKAudio/">AKAudio</a> : <a href="/v2/Classes/AKParameter/">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKMoogVCF.h<br />AKMoogVCF.m</td>
+</tr>
+            </tbody></table>
+
+
+
+
+            <a title="Overview" name="overview"></a>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>A digital emulation of the Moog diode ladder filter configuration.
+
+This emulation is based loosely on the paper “Analyzing the Moog VCF with Considerations for Digital Implementation” by Stilson and Smith (CCRMA). This version was originally coded in Csound by Josep Comajuncosas. Some modifications and conversion to C were done by Hans Mikelson and then adjusted.</p>
+
+
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Properties" name="properties"></a>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
+
+            <div class="section-method">
+  <a name="//api/name/cutoffFrequency" title="cutoffFrequency"></a>
+  <h4 class="subsubtitle method-title">cutoffFrequency</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Filter cut-off frequency in Hz. [Default Value: 1000]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *cutoffFrequency{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/resonance" title="resonance"></a>
+  <h4 class="subsubtitle method-title">resonance</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Amount of resonance. Self-oscillation occurs when this is approximately one. [Default Value: 0.5]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *resonance{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Class Methods" name="class_methods"></a>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/filterWithInput:" title="filterWithInput:"></a>
+  <h4 class="subsubtitle method-title">filterWithInput:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the moog vcf with default values
+  </div>
+
+
+
+ {% highlight objective-c %}+ (instancetype)filterWithInput:(AKParameter *)input{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input signal.</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/presetDefaultFilterWithInput:" title="presetDefaultFilterWithInput:"></a>
+  <h4 class="subsubtitle method-title">presetDefaultFilterWithInput:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the moog vcf with default values
+  </div>
+
+
+
+ {% highlight objective-c %}+ (instancetype)presetDefaultFilterWithInput:(AKParameter *)input{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input signal.</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/presetFoggyBottomFilterWithInput:" title="presetFoggyBottomFilterWithInput:"></a>
+  <h4 class="subsubtitle method-title">presetFoggyBottomFilterWithInput:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the moog vcf with a bass-heavy sound
+  </div>
+
+
+
+ {% highlight objective-c %}+ (instancetype)presetFoggyBottomFilterWithInput:(AKParameter *)input{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input signal.</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/presetHighTrebleFilterWithInput:" title="presetHighTrebleFilterWithInput:"></a>
+  <h4 class="subsubtitle method-title">presetHighTrebleFilterWithInput:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the moog vcf with a high-treble sound
+  </div>
+
+
+
+ {% highlight objective-c %}+ (instancetype)presetHighTrebleFilterWithInput:(AKParameter *)input{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input signal.</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/initWithInput:" title="initWithInput:"></a>
+  <h4 class="subsubtitle method-title">initWithInput:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the moog vcf with default values
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input signal.</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initWithInput:cutoffFrequency:resonance:" title="initWithInput:cutoffFrequency:resonance:"></a>
+  <h4 class="subsubtitle method-title">initWithInput:cutoffFrequency:resonance:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the moog vcf with all values
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input cutoffFrequency:(AKParameter *)cutoffFrequency resonance:(AKParameter *)resonance{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input signal.</li>
+
+    <li><i class="icon-line-play"></i><strong>cutoffFrequency</strong>:
+      Filter cut-off frequency in Hz. [Default Value: 1000]</li>
+
+    <li><i class="icon-line-play"></i><strong>resonance</strong>:
+      Amount of resonance. Self-oscillation occurs when this is approximately one. [Default Value: 0.5]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initWithPresetDefaultFilterWithInput:" title="initWithPresetDefaultFilterWithInput:"></a>
+  <h4 class="subsubtitle method-title">initWithPresetDefaultFilterWithInput:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the moog vcf with default values
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithPresetDefaultFilterWithInput:(AKParameter *)input{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input signal.</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initWithPresetFoggyBottomFilterWithInput:" title="initWithPresetFoggyBottomFilterWithInput:"></a>
+  <h4 class="subsubtitle method-title">initWithPresetFoggyBottomFilterWithInput:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the moog vcf with a bass-heavy sound
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithPresetFoggyBottomFilterWithInput:(AKParameter *)input{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input signal.</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initWithPresetHighTrebleFilterWithInput:" title="initWithPresetHighTrebleFilterWithInput:"></a>
+  <h4 class="subsubtitle method-title">initWithPresetHighTrebleFilterWithInput:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the moog vcf with a high-treble sound
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithPresetHighTrebleFilterWithInput:(AKParameter *)input{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      Input signal.</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalCutoffFrequency:" title="setOptionalCutoffFrequency:"></a>
+  <h4 class="subsubtitle method-title">setOptionalCutoffFrequency:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional cutoff frequency
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalCutoffFrequency:(AKParameter *)cutoffFrequency{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>cutoffFrequency</strong>:
+      Filter cut-off frequency in Hz. [Default Value: 1000]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalResonance:" title="setOptionalResonance:"></a>
+  <h4 class="subsubtitle method-title">setOptionalResonance:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional resonance
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalResonance:(AKParameter *)resonance{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>resonance</strong>:
+      Amount of resonance. Self-oscillation occurs when this is approximately one. [Default Value: 0.5]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+        </div>
+      </div>

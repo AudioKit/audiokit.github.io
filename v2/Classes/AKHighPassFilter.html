@@ -1,0 +1,403 @@
+---
+layout: v2_docs
+header: AKHighPassFilter
+title: AKHighPassFilter
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div>
+
+          <table class="table table-bordered"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="/v2/Classes/AKAudio/">AKAudio</a> : <a href="/v2/Classes/AKParameter/">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKHighPassFilter.h<br />AKHighPassFilter.m</td>
+</tr>
+            </tbody></table>
+
+
+
+
+            <a title="Overview" name="overview"></a>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>A first-order recursive high-pass filter with variable frequency response.
+
+A complement to the AKLowPassFilter.</p>
+
+
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Properties" name="properties"></a>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
+
+            <div class="section-method">
+  <a name="//api/name/cutoffFrequency" title="cutoffFrequency"></a>
+  <h4 class="subsubtitle method-title">cutoffFrequency</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    The response curve's half-power point, in Hertz. Half power is defined as peak power / root 2. [Default Value: 4000]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *cutoffFrequency{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Class Methods" name="class_methods"></a>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/filterWithInput:" title="filterWithInput:"></a>
+  <h4 class="subsubtitle method-title">filterWithInput:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the high pass filter with default values
+  </div>
+
+
+
+ {% highlight objective-c %}+ (instancetype)filterWithInput:(AKParameter *)input{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      The input signal to be filtered</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/presetDefaultFilterWithInput:" title="presetDefaultFilterWithInput:"></a>
+  <h4 class="subsubtitle method-title">presetDefaultFilterWithInput:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the high pass filter with default values
+  </div>
+
+
+
+ {% highlight objective-c %}+ (instancetype)presetDefaultFilterWithInput:(AKParameter *)input{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      The input signal to be filtered</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/presetHighCutoffFilterWithInput:" title="presetHighCutoffFilterWithInput:"></a>
+  <h4 class="subsubtitle method-title">presetHighCutoffFilterWithInput:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the high pass filter with a high cuttoff frequency
+  </div>
+
+
+
+ {% highlight objective-c %}+ (instancetype)presetHighCutoffFilterWithInput:(AKParameter *)input{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      The input signal to be filtered</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/initWithInput:" title="initWithInput:"></a>
+  <h4 class="subsubtitle method-title">initWithInput:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the high pass filter with default values
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      The input signal to be filtered</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initWithInput:cutoffFrequency:" title="initWithInput:cutoffFrequency:"></a>
+  <h4 class="subsubtitle method-title">initWithInput:cutoffFrequency:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the high pass filter with all values
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithInput:(AKParameter *)input cutoffFrequency:(AKParameter *)cutoffFrequency{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      The input signal to be filtered</li>
+
+    <li><i class="icon-line-play"></i><strong>cutoffFrequency</strong>:
+      The response curve's half-power point, in Hertz. Half power is defined as peak power / root 2. Updated at Control-rate. [Default Value: 4000]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initWithPresetDefaultFilterWithInput:" title="initWithPresetDefaultFilterWithInput:"></a>
+  <h4 class="subsubtitle method-title">initWithPresetDefaultFilterWithInput:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the high pass filter with default values
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithPresetDefaultFilterWithInput:(AKParameter *)input{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      The input signal to be filtered</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initWithPresetHighCutoffFilterWithInput:" title="initWithPresetHighCutoffFilterWithInput:"></a>
+  <h4 class="subsubtitle method-title">initWithPresetHighCutoffFilterWithInput:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the high pass filter with a high cuttoff frequency
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithPresetHighCutoffFilterWithInput:(AKParameter *)input{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>input</strong>:
+      The input signal to be filtered</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalCutoffFrequency:" title="setOptionalCutoffFrequency:"></a>
+  <h4 class="subsubtitle method-title">setOptionalCutoffFrequency:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional cutoff frequency
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalCutoffFrequency:(AKParameter *)cutoffFrequency{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>cutoffFrequency</strong>:
+      The response curve's half-power point, in Hertz. Half power is defined as peak power / root 2. Updated at Control-rate. [Default Value: 4000]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+        </div>
+      </div>

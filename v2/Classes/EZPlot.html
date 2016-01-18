@@ -1,0 +1,293 @@
+---
+layout: v2_docs
+header: EZPlot
+title: EZPlot
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div>
+
+          <table class="table table-bordered"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value">AKPlotView : UIView</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">EZPlot.h<br />EZPlot.m</td>
+</tr>
+            </tbody></table>
+
+
+
+
+            <a title="Overview" name="overview"></a>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>EZPlot is a cross-platform (iOS and OSX) class used to subclass the default view type (either UIView or NSView, respectively).
+
+## Subclassing Notes
+
+This class isn't meant to be directly used in practice, but instead establishes the default properties and behaviors subclasses should obey to provide consistent behavior accross multiple types of graphs (i.e. set background color, plot type, should fill in, etc.). Subclasses should make use of the inherited properties from this class to allow all child plots to benefit from the same</p>
+
+
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Properties" name="properties"></a>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
+
+            <div class="section-method">
+  <a name="//api/name/color" title="color"></a>
+  <h4 class="subsubtitle method-title">color</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    The default color of the plot's data (i.e. waveform, y-axis values). For iOS the color is specified as a UIColor while for OSX the color is an NSColor. The default value on both platforms is red.
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic, strong) IBInspectable UIColor *color{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/gain" title="gain"></a>
+  <h4 class="subsubtitle method-title">gain</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    The plot's gain value, which controls the scale of the y-axis values. The default value of the gain is 1.0f and should always be greater than 0.0f.
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic, assign) IBInspectable float gain{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/plotType" title="plotType"></a>
+  <h4 class="subsubtitle method-title">plotType</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    The type of plot as specified by the EZPlotType enumeration (i.e. a buffer or rolling plot type).
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic, assign) EZPlotType plotType{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/shouldFill" title="shouldFill"></a>
+  <h4 class="subsubtitle method-title">shouldFill</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    A boolean indicating whether or not to fill in the graph. A value of YES will make a filled graph (filling in the space between the x-axis and the y-value), while a value of NO will create a stroked graph (connecting the points along the y-axis).
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic, assign) IBInspectable BOOL shouldFill{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/shouldMirror" title="shouldMirror"></a>
+  <h4 class="subsubtitle method-title">shouldMirror</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    A boolean indicating whether the graph should be rotated along the x-axis to give a mirrored reflection. This is typical for audio plots to produce the classic waveform look. A value of YES will produce a mirrored reflection of the y-values about the x-axis, while a value of NO will only plot the y-values.
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic, assign) IBInspectable BOOL shouldMirror{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/clear" title="clear"></a>
+  <h4 class="subsubtitle method-title">clear</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Clears all data from the audio plot (includes both EZPlotTypeBuffer and EZPlotTypeRolling)
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)clear{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/updateBuffer:withBufferSize:" title="updateBuffer:withBufferSize:"></a>
+  <h4 class="subsubtitle method-title">updateBuffer:withBufferSize:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Updates the plot with the new buffer data and tells the view to redraw itself. Caller will provide a float array with the values they expect to see on the y-axis. The plot will internally handle mapping the x-axis and y-axis to the current view port, any interpolation for fills effects, and mirroring.
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)updateBuffer:(const float *)buffer withBufferSize:(UInt32)bufferSize{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>buffer</strong>:
+      A float array of values to map to the y-axis.</li>
+
+    <li><i class="icon-line-play"></i><strong>bufferSize</strong>:
+      The size of the float array that will be mapped to the y-axis.</li>
+
+    </ul>
+
+
+
+
+
+
+
+  <div class="method-subsection discussion-section">
+    <h4 class="method-subtitle">Discussion</h4>
+    > %warning%
+> Warning: The bufferSize is expected to be the same, constant value once initial triggered. For plots using OpenGL a vertex buffer object will be allocated with a maximum buffersize of (2 * the initial given buffer size) to account for any interpolation necessary for filling in the graph. Updates use the glBufferSubData(...) function, which will crash if the buffersize exceeds the initial maximum allocated size.
+  </div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+        </div>
+      </div>

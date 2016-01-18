@@ -1,0 +1,750 @@
+---
+layout: v2_docs
+header: AKPluckedString
+title: AKPluckedString
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div>
+
+          <table class="table table-bordered"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="/v2/Classes/AKAudio/">AKAudio</a> : <a href="/v2/Classes/AKParameter/">AKParameter</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKPluckedString.h<br />AKPluckedString.m</td>
+</tr>
+            </tbody></table>
+
+
+
+
+            <a title="Overview" name="overview"></a>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Physical model of the plucked string.
+
+A user can control the pluck point, the pickup point, the filter, and an additional audio signal used to excite the 'string'. Based on the Karplus-Strong algorithm.</p>
+
+
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Properties" name="properties"></a>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
+
+            <div class="section-method">
+  <a name="//api/name/amplitude" title="amplitude"></a>
+  <h4 class="subsubtitle method-title">amplitude</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Amplitude of note. [Default Value: 1.0]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *amplitude{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/frequency" title="frequency"></a>
+  <h4 class="subsubtitle method-title">frequency</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Frequency of the string [Default Value: 440]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKConstant *frequency{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/pluckPosition" title="pluckPosition"></a>
+  <h4 class="subsubtitle method-title">pluckPosition</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    The point of pluck as a fraction of the way up the string (0 to 1). A pluck point of zero means no initial pluck. [Default Value: 0.01]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKConstant *pluckPosition{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/reflectionCoefficient" title="reflectionCoefficient"></a>
+  <h4 class="subsubtitle method-title">reflectionCoefficient</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    The coefficient of reflection, indicating the lossiness and the rate of decay. It should be between 0 and 1. [Default Value: 0.1]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *reflectionCoefficient{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/samplePosition" title="samplePosition"></a>
+  <h4 class="subsubtitle method-title">samplePosition</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Proportion of the way along the string to sample the output. [Default Value: 0.1]
+  </div>
+
+
+
+ {% highlight objective-c %}@property (nonatomic) AKParameter *samplePosition{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Class Methods" name="class_methods"></a>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/pluck" title="pluck"></a>
+  <h4 class="subsubtitle method-title">pluck</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the plucked string with default values
+  </div>
+
+
+
+ {% highlight objective-c %}+ (instancetype)pluck{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/presetDecayingPluckedString" title="presetDecayingPluckedString"></a>
+  <h4 class="subsubtitle method-title">presetDecayingPluckedString</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the plucked string with a quick decay
+  </div>
+
+
+
+ {% highlight objective-c %}+ (instancetype)presetDecayingPluckedString{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/presetDefaultPluckedString" title="presetDefaultPluckedString"></a>
+  <h4 class="subsubtitle method-title">presetDefaultPluckedString</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the plucked string with default values
+  </div>
+
+
+
+ {% highlight objective-c %}+ (instancetype)presetDefaultPluckedString{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/presetRoundedPluckedString" title="presetRoundedPluckedString"></a>
+  <h4 class="subsubtitle method-title">presetRoundedPluckedString</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the plucked string with a rounded sound
+  </div>
+
+
+
+ {% highlight objective-c %}+ (instancetype)presetRoundedPluckedString{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/presetSnappyPluckedString" title="presetSnappyPluckedString"></a>
+  <h4 class="subsubtitle method-title">presetSnappyPluckedString</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the plucked string with a 'snappy' sound
+  </div>
+
+
+
+ {% highlight objective-c %}+ (instancetype)presetSnappyPluckedString{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/init" title="init"></a>
+  <h4 class="subsubtitle method-title">init</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the plucked string with default values
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)init{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initWithFrequency:pluckPosition:samplePosition:reflectionCoefficient:amplitude:" title="initWithFrequency:pluckPosition:samplePosition:reflectionCoefficient:amplitude:"></a>
+  <h4 class="subsubtitle method-title">initWithFrequency:pluckPosition:samplePosition:reflectionCoefficient:amplitude:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the plucked string with all values
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithFrequency:(AKConstant *)frequency pluckPosition:(AKConstant *)pluckPosition samplePosition:(AKParameter *)samplePosition reflectionCoefficient:(AKParameter *)reflectionCoefficient amplitude:(AKParameter *)amplitude{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>frequency</strong>:
+      Frequency of the string [Default Value: 440]</li>
+
+    <li><i class="icon-line-play"></i><strong>pluckPosition</strong>:
+      The point of pluck as a fraction of the way up the string (0 to 1). A pluck point of zero means no initial pluck. [Default Value: 0.01]</li>
+
+    <li><i class="icon-line-play"></i><strong>samplePosition</strong>:
+      Proportion of the way along the string to sample the output. Updated at Control-rate. [Default Value: 0.1]</li>
+
+    <li><i class="icon-line-play"></i><strong>reflectionCoefficient</strong>:
+      The coefficient of reflection, indicating the lossiness and the rate of decay. It must be strictly between 0 and 1 (it will complain about both 0 and 1). Updated at Control-rate. [Default Value: 0.1]</li>
+
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude of note. Updated at Control-rate. [Default Value: 1.0]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initWithPresetDecayingPluckedString" title="initWithPresetDecayingPluckedString"></a>
+  <h4 class="subsubtitle method-title">initWithPresetDecayingPluckedString</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the plucked string with a quick decay
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithPresetDecayingPluckedString{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initWithPresetRoundedPluckedString" title="initWithPresetRoundedPluckedString"></a>
+  <h4 class="subsubtitle method-title">initWithPresetRoundedPluckedString</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the plucked string with a rounded sound
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithPresetRoundedPluckedString{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initWithPresetSnappyPluckedString" title="initWithPresetSnappyPluckedString"></a>
+  <h4 class="subsubtitle method-title">initWithPresetSnappyPluckedString</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Instantiates the plucked string with a 'snappy' sound
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithPresetSnappyPluckedString{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalAmplitude:" title="setOptionalAmplitude:"></a>
+  <h4 class="subsubtitle method-title">setOptionalAmplitude:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional amplitude
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalAmplitude:(AKParameter *)amplitude{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>amplitude</strong>:
+      Amplitude of note. Updated at Control-rate. [Default Value: 1.0]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalFrequency:" title="setOptionalFrequency:"></a>
+  <h4 class="subsubtitle method-title">setOptionalFrequency:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional frequency
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalFrequency:(AKConstant *)frequency{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>frequency</strong>:
+      Frequency of the string [Default Value: 440]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalPluckPosition:" title="setOptionalPluckPosition:"></a>
+  <h4 class="subsubtitle method-title">setOptionalPluckPosition:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional pluck position
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalPluckPosition:(AKConstant *)pluckPosition{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>pluckPosition</strong>:
+      The point of pluck as a fraction of the way up the string (0 to 1). A pluck point of zero means no initial pluck. [Default Value: 0.01]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalReflectionCoefficient:" title="setOptionalReflectionCoefficient:"></a>
+  <h4 class="subsubtitle method-title">setOptionalReflectionCoefficient:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional reflection coefficient
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalReflectionCoefficient:(AKParameter *)reflectionCoefficient{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>reflectionCoefficient</strong>:
+      The coefficient of reflection, indicating the lossiness and the rate of decay. It must be strictly between 0 and 1 (it will complain about both 0 and 1). Updated at Control-rate. [Default Value: 0.1]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setOptionalSamplePosition:" title="setOptionalSamplePosition:"></a>
+  <h4 class="subsubtitle method-title">setOptionalSamplePosition:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Set an optional sample position
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)setOptionalSamplePosition:(AKParameter *)samplePosition{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>samplePosition</strong>:
+      Proportion of the way along the string to sample the output. Updated at Control-rate. [Default Value: 0.1]</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+        </div>
+      </div>

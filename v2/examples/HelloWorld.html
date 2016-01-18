@@ -1,0 +1,103 @@
+---
+title: AudioKit Examples - Hello World
+header: Hello World!
+permalink: /v2/examples/HelloWorld/
+layout: v2_examples
+last-review-date: 2015/02/19
+---
+
+<div class="cd-iphone-5s cd-silver hide-on-tablets-and-smaller" style="margin-left: 1em; float: right">
+  <div class="cd-body">
+    <div class="cd-sound"></div>
+    <div class="cd-sleep"></div>
+    <div class="cd-camera"></div>
+    <div class="cd-ear"></div>
+    <div class="cd-home"></div>
+    <div class="cd-screen">
+<img src=/v2/examples/HelloWorldiOS.png class="screenshot" alt="Hello World">
+    </div>
+  </div>
+</div>
+
+
+<p>
+Every good programming framework needs a "Hello World" and this is AudioKit's version of Hello World!  Basically, it is just the simplest and shortest amount of code that create an instrument and allow the user to start and stop that instrument from a button on the screen.  The app simply plays an oscillator at 440Hz, but don't worry there are plenty of more complicated examples to try out once you have this one working.
+</p>
+
+<p>
+This starter example is included in AudioKit in the Examples directory with one version for iOS and one for OSX.  When you open the project you will see that there are two primary files that drive this example:
+</p>
+<img src=/v2/examples/HelloWorldFiles.png style="width:100%; max-width:209px" alt="Hello World Files">
+
+<p>
+The ViewController.m file contains all of the AudioKit code as well and the Main.storyboard contains the button that activates methods in the ViewController.m file to control the instrument.   There are main storyboard tutorials available online, so we'll just focus on the ViewController.m's AudioKit code.
+</p>
+
+<p>
+Each important step is labeled with a comment and there only five steps!  The first step is to make the AudioKit code available to this file which is accomplished by importing "AKFoundation.h":
+</p>
+{% highlight objective-c %}
+// STEP 1 : Import AudioKit's suite of classes
+#import "AKFoundation.h"
+{% endhighlight %}
+
+<p>
+Next, we're going to make an instrument available to every method in this class, so we create an instance of an AKInstrument which we will just call "instrument" in the implementation's instance variable declaration block:
+</p>
+{% highlight objective-c %}
+// STEP 2 : Set up an instance variable for the instrument
+AKInstrument *instrument;
+{% endhighlight %}
+
+<p>
+Inside the "viewDidLoad" method is a good place in the lifecycle of this app to create the internals of the instrument.  Here we first allocate the memory and then create and connect an AKOscillator to that instrument.  At this point, the instrument contains an oscillator, but nothing is connect to the audio output, so we also need to set the audio output to be the oscillator.
+</p>
+{% highlight objective-c %}
+// STEP 3 : Define the instrument as a simple oscillator
+instrument = [AKInstrument instrument];
+[instrument setAudioOutput:[AKOscillator oscillator]];
+{% endhighlight %}
+
+<p>Now that your instrument is created, it can be added to the orchestra.  This lets AudioKit know that the instrument is fully defined and ready to be played.
+</p>
+{% highlight objective-c %}
+// STEP 4 : Add the instrument to the orchestra
+[AKOrchestra addInstrument:instrument];
+{% endhighlight %}
+<p>
+Finally, we just to need to connet the button from the Main.storyboard file to an action.  The only AudioKit code here is <code>[instrument play]</code> and <code>[instrument stop]</code>.  The other parts are just to update the UI to reflect the state of the instrument.
+</p>
+
+{% highlight objective-c %}
+// STEP 5 : React to a button press on the Storyboard UI by
+//          playing or stopping the instrument and updating the button text.
+- (IBAction)toggleSound:(NSButton *)sender {
+
+    if (![sender.title isEqual: @"Stop"]) {
+        [instrument play];
+        sender.title = @"Stop";
+    } else {
+        [instrument stop];
+        sender.title = @"Play Sine Wave at 440Hz";
+    }
+}
+{% endhighlight %}
+
+<p>And that's it!</p>
+
+
+<h2> Mac Version </h2>
+
+<p>The OS X and iOS versions of this example only differ in the user interface code.</p>
+
+
+<div class="cd-mac hide-on-mobiles">
+  <div class="cd-top"></div>
+  <div class="cd-bottom"></div>
+  <div class="cd-camera"></div>
+  <div class="cd-notch"></div>
+  <div class="cd-screen"  style="background-color: #f6f6f6">
+    <img src=/v2/examples/HelloWorldMac.png class="screenshot" alt="Hello World">
+  </div>
+</div>
+

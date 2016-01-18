@@ -1,0 +1,92 @@
+---
+title: AudioKit Examples - Binaural Audio in Swift
+header: Binaural Audio in Swift
+permalink: /v2/examples/swift/BinauralAudio/
+layout: v2_examples
+last-review-date: 2015/04/26
+---
+<h3>3D Spatialization using the iPhone's Gyroscope</h3>
+
+
+<div class="cd-iphone-5s cd-silver hide-on-tablets-and-smaller" style="margin-left: 3em; float: right">
+  <div class="cd-body">
+    <div class="cd-sound"></div>
+    <div class="cd-sleep"></div>
+    <div class="cd-camera"></div>
+    <div class="cd-ear"></div>
+    <div class="cd-home"></div>
+    <div class="cd-screen">
+      <video controls class="cd-fill">
+        <source src="https://dl.dropboxusercontent.com/u/31568349/movies/BinauralAudio.m4v" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</div>
+
+<p>The idea of this demo is to play a sound into the listener in such a way that if they move their phone, the sound feels like the source is moving in 3D space.  If you you hold the phone in your hand so that it is parallel to the floor and spin in an office chair, the sound source should feel like it is staying put while you spin.  You can also move the source up or down by tilting the phone, but the effect of elevation change is pretty subtle.  Try it for yourself!</p>
+
+<p>The heart of the 3D Spatializaiton is done with <code>AK3DBinauralAudio</code> and we expose the controls in instrument properties:</p>
+
+{% highlight swift %}
+var azimuth   = AKInstrumentProperty(value: 0.0, minimum: -180.0, maximum: 180.0)
+var elevation = AKInstrumentProperty(value: 0.0, minimum: -40.0,  maximum: 90.0)
+
+let binaural = AK3DBinauralAudio(input: mono)
+binaural.azimuth = azimuth
+binaural.elevation = elevation
+{% endhighlight %}
+
+<p>We also enhance the "behind the listener" feeling by varying the feedback so we need:</p>
+
+{% highlight swift %}
+var reverbFeedback = AKInstrumentProperty(value: 0.5, minimum: 0.0,    maximum: 0.99)
+var reverbLevel    = AKInstrumentProperty(value: 0.5, minimum: 0.0,    maximum: 0.99)
+
+let reverb = AKReverb(stereoInput: binaural)
+reverb.feedback = reverbFeedback.plus(akp(0.2))
+{% endhighlight %}
+
+
+<p>Then we set up Core Motion to update the gyroscope and handle updates:</p>
+
+{% highlight swift %}
+motionManager.deviceMotionUpdateInterval = 1/10.0
+motionManager.gyroUpdateInterval = 0.1
+
+motionManager.startDeviceMotionUpdatesUsingReferenceFrame(CMAttitudeReferenceFrame.XTrueNorthZVertical, toQueue: NSOperationQueue.mainQueue()) {
+    (motion: CMDeviceMotion?, _) in
+
+    // Attitude -----------------------------------------------------------
+    if let attitude: CMAttitude = motion?.attitude {
+        var d = [String:Float]()
+        d["roll"] = Float(attitude.roll)
+        d["pitch"] = Float(attitude.pitch)
+        d["yaw"] = Float(attitude.yaw)
+        self.receivedOrientationDictionary(d)
+    }
+}
+{% endhighlight %}
+
+<p>with our function that uses the raw data to set the instrument's properties:</p>
+
+{% highlight swift %}
+func receivedOrientationDictionary(data: NSDictionary) {
+
+    let pitch = data["pitch"] as! Float
+    let yaw = data["yaw"] as! Float
+
+    player.elevation.value = degrees(pitch)
+    player.azimuth.value = degrees(yaw)
+    player.reverbFeedback.value = fabs(degrees(yaw))/360.0
+    player.reverbLevel.value = fabs(degrees(yaw))/360.0
+
+    headView.azimuth = CGFloat(-degrees(yaw))
+    headView.setNeedsDisplay()
+}
+{% endhighlight %}
+
+
+<h3>About Head Related Transfer Function Based 3D Spatialization</h3>
+<p>
+This example takes a source signal and spatialises it in the 3 dimensional space around a listener by convolving the source with stored head related transfer function (HRTF) based filters.  Artifact-free user-defined trajectories are made possible using an interpolation algorithm based on spectral magnitude interpolation and phase truncation. Crossfades are implemented to minimise/eliminate any inconsistencies caused by updating phase values. These crossfades are performed over a user definable number of convolution processing buffers. Complex sources may only need to crossfade over 1 buffer; narrow band sources may need several. The operations also offers minimum phase based processing, a more traditional and complex method. In this mode, the hrtf filters used are reduced to minimum phase representations and the interpolation process then uses the relationship between minimum phase magnitude and phase spectra. Interaural time difference, which is inherent to the phase truncation process, is reintroduced in the minimum phase process using variable delay lines.</p>

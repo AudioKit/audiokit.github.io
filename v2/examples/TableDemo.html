@@ -1,0 +1,85 @@
+---
+title: AudioKit Examples - Table Demo
+header: Table Demo
+permalink: /v2/examples/TableDemo/
+layout: v2_examples
+last-review-date: 2015/04/26
+---
+
+<div class="cd-iphone-5s cd-silver hide-on-tablets-and-smaller" style="margin-left: 3em; float: right">
+  <div class="cd-body">
+    <div class="cd-sound"></div>
+    <div class="cd-sleep"></div>
+    <div class="cd-camera"></div>
+    <div class="cd-ear"></div>
+    <div class="cd-home"></div>
+    <div class="cd-screen">
+      <video controls class="cd-fill">
+        <source src="https://dl.dropboxusercontent.com/u/31568349/movies/TableDemo.m4v" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</div>
+
+<p>
+This demo shows how you can easily change the waveform for an oscillator.  It is very flexible and although we demonstrate the most standard waveforms, really it can be anything you like.  </p>
+
+<p>
+This demo demonstrates a slightly different technique where the instrument instead of exposing only instrument and note properties to be changed also gives access to its underlying operation, AKOScillator.  In the <code>OscillatorInstrument.h</code> file:
+
+{% highlight objective-c %}
+@property AKInstrumentProperty *amplitude;
+@property AKInstrumentProperty *frequency;
+@property AKOscillator *oscillator;
+{% endhighlight %}
+
+<p>and the instrument is a very basic oscillator:</p>
+
+
+{% highlight objective-c %}
+// Instrument Properties
+_amplitude = [self createPropertyWithValue:0.75 minimum:0.0 maximum:1.0];
+_frequency = [self createPropertyWithValue:861  minimum:0.0 maximum:4000];
+
+// Instrument Definition
+_oscillator = [AKOscillator oscillator];
+_oscillator.frequency = _frequency;
+
+[self setAudioOutput:[_oscillator scaledBy:_amplitude]];
+{% endhighlight %}
+
+<p>This allows us to associate the frequency-related UI elements with the frequency property:</p>
+
+{% highlight objective-c %}
+frequencyLabel.property  = oscillatorInstrument.frequency;
+frequencySlider.property = oscillatorInstrument.frequency;
+{% endhighlight %}
+
+<p> and choose from the available waveforms:</p>
+
+{% highlight objective-c %}
+// The standard square wave goes from -1 to 1 producing a clicking sound
+AKTable *playableSquare = [AKTable standardSquareWave];
+// but scaling to just below 1 works fine
+[playableSquare scaleBy:0.99999];
+
+waveforms = @[[AKTable standardSawtoothWave],
+              [AKTable standardSineWave],
+              playableSquare,
+              [AKTable standardTriangleWave]];
+{% endhighlight %}
+
+<p>We can redeclare the oscillator as follows:</p>
+
+{% highlight objective-c %}
+oscillatorInstrument.oscillator.waveform = waveforms[index];
+tablePlot.table = waveforms[index];
+[AKOrchestra updateInstrument:oscillatorInstrument];
+{% endhighlight %}
+
+<p>However, the change will not be heard until you start a new note on the instrument, so we just restart the instrument when the waveform changes:</p>
+
+{% highlight objective-c %}
+if (isPlaying) [oscillatorInstrument restart];
+{% endhighlight %}

@@ -1,0 +1,101 @@
+---
+title: Contributing to AudioKit
+header: Contributing to AudioKit
+permalink: /v2/tutorials/contributing/
+layout: v2_tutorials
+---
+
+<p>
+We’re really excited that you want to contribute to AudioKit! To help you get started, we’ve made this guide for contributing.
+</p>
+
+<h3>Fork AudioKit</h3>
+
+<p>
+First, you're going to want to fork a copy of the AudioKit repository to your own GitHub account. To do this, click on the “Fork” button in the top right corner of the repository page.
+
+<p>
+<img src=/v2/tutorials/fork.png style="width:100%; max-width:98px" alt="Fork">
+</p>
+
+
+<p>
+Next, you need to clone your forked repository to your computer. You can do this either though the terminal, or through a Git front-end, such as SourceTree. The screenshots below are from SourceTree.
+</p>
+
+<h3>Create a Branch</h3>
+
+<p>
+To add specific features, make a branch off your repository to test your ideas. Make sure you name your branch something descriptive so you can keep track of your work; this is especially important if you are working with multiple branches at once.
+</p>
+
+<p>
+<img src=/v2/tutorials/createBranch.png style="width:100%; max-width:480px" alt="Create Branch">
+</p>
+
+<h3>Run Tests</h3>
+
+<p>
+After you’ve finished working on your branch, run the test script to make sure your changes haven't broken anything.  These tests will be automatically run on Travis when you make a pull request anyway, but the process is slow, so you might as well check locally first.  To run the tests, you'll first need to make sure you have 'xcpretty' installed. If you don't, run the script below to install it:
+</p>
+
+{% highlight bash %}
+sudo gem install xcpretty
+{% endhighlight %}
+
+<p>
+Then, change your directory to the top level AudioKit directory and run:</p>
+</p>
+
+{% highlight bash %}
+> ./Tests/travis.sh
+{% endhighlight %}
+
+<p>This will run tests and build projects and if all goes well the last line should read:
+
+<font color=green>
+{% highlight bash %}
+AudioKit passed validation.
+{% endhighlight %}
+</font>
+
+<h3>Make a Pull Request</h3>
+<p>
+Once you have confirmed that the tests pass locally, commit and push your changes.
+</p>
+
+<p><img src=/v2/tutorials/push.png style="width:100%; max-width:651px" alt="Push"></p>
+
+<p>
+Next, make a pull request on the AudioKit page on GitHub. Click on the button that says "Compare & pull request"
+</p>
+
+<p>
+<img src=/v2/tutorials/compareAndPullRequest.png style="width:100%; max-width:529px" alt="Compare And Pull Request">
+</p>
+
+<p>Then, click "Create pull request"</p>
+<p><img src=/v2/tutorials/createPullRequest.png style="width:100%; max-width:723px" alt="Create Pull Request"></p>
+
+<h3>Switch Back to Main Development Branch</h3>
+<p>
+When your pull request has been approved, you'll see a notification in GitHub. At that point, change back to your main branch.
+</p>
+
+<p><img src=/v2/tutorials/switchBranch.png style="width:100%; max-width:299px" alt="Switch Branch"></p>
+
+<p>
+Then, delete the branch you were working on your changes in.
+</p>
+
+<p>
+<img src=/v2/tutorials/branchDeletion.png style="width:100%; max-width:529px" alt="Branch Deletion">
+</p>
+
+<p>
+Finally, pull your changes from the develop branch. Make sure that you pull from “upstream”.
+</p>
+
+<p>
+<img src=/v2/tutorials/pull.png style="width:100%; max-width:442px" alt="Pull">
+</p>

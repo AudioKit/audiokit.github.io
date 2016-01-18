@@ -1,0 +1,237 @@
+---
+layout: v2_docs
+header: AKSoundFileTable
+title: AKSoundFileTable
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div>
+
+          <table class="table table-bordered"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value"><a href="/v2/Classes/AKTable/">AKTable</a> : NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKSoundFileTable.h<br />AKSoundFileTable.m</td>
+</tr>
+            </tbody></table>
+
+
+
+
+            <a title="Overview" name="overview"></a>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>Transfers data from a soundfile into a table.
+
+File types supported are given here: http://www.mega-nerd.com/libsndfile/</p>
+
+
+
+
+
+
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/channels" title="channels"></a>
+  <h4 class="subsubtitle method-title">channels</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Returns the string to retrieve the number of channels of a sound file table
+  </div>
+
+
+
+ {% highlight objective-c %}- (AKConstant *)channels{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initAsMonoFromLeftChannelOfStereoFile:" title="initAsMonoFromLeftChannelOfStereoFile:"></a>
+  <h4 class="subsubtitle method-title">initAsMonoFromLeftChannelOfStereoFile:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Store mono file from the left channel of a file
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initAsMonoFromLeftChannelOfStereoFile:(NSString *)filename{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>filename</strong>:
+      Audio file to load.  Most types are supported.</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initAsMonoFromRightChannelOfStereoFile:" title="initAsMonoFromRightChannelOfStereoFile:"></a>
+  <h4 class="subsubtitle method-title">initAsMonoFromRightChannelOfStereoFile:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Store mono file from the right channel of a file
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initAsMonoFromRightChannelOfStereoFile:(NSString *)filename{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>filename</strong>:
+      Audio file to load.  Most types are supported.</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initWithFilename:" title="initWithFilename:"></a>
+  <h4 class="subsubtitle method-title">initWithFilename:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Store file with a filename
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithFilename:(NSString *)filename{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>filename</strong>:
+      Audio file to load.  Most types are supported.</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/initWithFilename:size:" title="initWithFilename:size:"></a>
+  <h4 class="subsubtitle method-title">initWithFilename:size:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Store file with a filename
+  </div>
+
+
+
+ {% highlight objective-c %}- (instancetype)initWithFilename:(NSString *)filename size:(int)size{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>filename</strong>:
+      Audio file to load.  Most types are supported.</li>
+
+    <li><i class="icon-line-play"></i><strong>size</strong>:
+      Size of the table</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+        </div>
+      </div>

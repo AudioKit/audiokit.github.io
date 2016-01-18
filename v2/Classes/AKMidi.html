@@ -1,0 +1,255 @@
+---
+layout: v2_docs
+header: AKMidi
+title: AKMidi
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div>
+
+          <table class="table table-bordered"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value">NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">AKMidi.h<br />AKMidi.m</td>
+</tr>
+            </tbody></table>
+
+
+
+
+            <a title="Overview" name="overview"></a>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>AKMidi is the object that handles the MIDI input and output from AudioKit.</p>
+
+
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Properties" name="properties"></a>
+            <h3 class="subtitle subtitle-methods">Properties</h3>
+
+            <div class="section-method">
+  <a name="//api/name/forwardEvents" title="forwardEvents"></a>
+  <h4 class="subsubtitle method-title">forwardEvents</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Whether received MIDI events are automatically forwarded to Csound (default: YES)
+  </div>
+
+
+
+ {% highlight objective-c %}@property BOOL forwardEvents{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/inputs" title="inputs"></a>
+  <h4 class="subsubtitle method-title">inputs</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    The number of detected MIDI inputs.
+  </div>
+
+
+
+ {% highlight objective-c %}@property (readonly) NSUInteger inputs{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Instance Methods" name="instance_methods"></a>
+            <h3 class="subtitle subtitle-methods">Instance Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/closeMidiIn" title="closeMidiIn"></a>
+  <h4 class="subsubtitle method-title">closeMidiIn</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Dispose of the MIDI client.
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)closeMidiIn{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/connectToCsound:" title="connectToCsound:"></a>
+  <h4 class="subsubtitle method-title">connectToCsound:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Sets up MIDI communication with Csound. This also enables MIDI forwarding.
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)connectToCsound:(CsoundObj *)csound{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>csound</strong>:
+      Pointer to the Csound object</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/openMidiIn" title="openMidiIn"></a>
+  <h4 class="subsubtitle method-title">openMidiIn</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Create the MIDI client and connect to all available MIDI input sources.
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)openMidiIn{% endhighlight %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/sendEvent:" title="sendEvent:"></a>
+  <h4 class="subsubtitle method-title">sendEvent:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Send a MIDI event to Csound.
+  </div>
+
+
+
+ {% highlight objective-c %}- (void)sendEvent:(AKMidiEvent *)event{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>event</strong>:
+      MIDI event to send to Csound</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+        </div>
+      </div>

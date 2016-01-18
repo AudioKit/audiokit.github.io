@@ -1,0 +1,1781 @@
+---
+layout: v2_docs
+header: EZAudioUtilities
+title: EZAudioUtilities
+---
+
+      <div id="contents" class="isShowingTOC" role="main">
+
+        <div>
+
+          <table class="table table-bordered"><tbody>
+            <tr>
+  <td class="specification-title">Inherits from</td>
+  <td class="specification-value">NSObject</td>
+</tr><tr>
+  <td class="specification-title">Declared in</td>
+  <td class="specification-value">EZAudioUtilities.h<br />EZAudioUtilities.m</td>
+</tr>
+            </tbody></table>
+
+
+
+
+            <a title="Overview" name="overview"></a>
+            <h3 class="subtitle subtitle-overview">Overview</h3>
+            <p>The EZAudioUtilities class provides a set of class-level utility methods used throughout EZAudio to handle common operations such as allocating audio buffers and structures, creating various types of AudioStreamBasicDescription structures, string helpers for formatting and debugging, various math utilities, a very handy check result function (used everywhere!), and helpers for dealing with circular buffers. These were previously on the EZAudio class, but as of the 0.1.0 release have been moved here so the whole EZAudio is not needed when using only certain modules.</p>
+
+
+
+
+
+
+
+
+            <div class="divider divider-center"><a href="#" data-scrollto="#header"><i class="icon-chevron-up"></i></a></div>
+            <a title="Class Methods" name="class_methods"></a>
+            <h3 class="subtitle subtitle-methods">Class Methods</h3>
+
+            <div class="section-method">
+  <a name="//api/name/AIFFFormatWithNumberOfChannels:sampleRate:" title="AIFFFormatWithNumberOfChannels:sampleRate:"></a>
+  <h4 class="subsubtitle method-title">AIFFFormatWithNumberOfChannels:sampleRate:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Creates a signed-integer, interleaved AudioStreamBasicDescription for the number of channels specified for an AIFF format.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (AudioStreamBasicDescription)AIFFFormatWithNumberOfChannels:(UInt32)channels sampleRate:(float)sampleRate{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>channels</strong>:
+      The desired number of channels</li>
+
+    <li><i class="icon-line-play"></i><strong>sampleRate</strong>:
+      A float representing the sample rate.</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    A new AudioStreamBasicDescription with the specified format.
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/M4AFormatWithNumberOfChannels:sampleRate:" title="M4AFormatWithNumberOfChannels:sampleRate:"></a>
+  <h4 class="subsubtitle method-title">M4AFormatWithNumberOfChannels:sampleRate:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Creates an AudioStreamBasicDescription for an M4A AAC format.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (AudioStreamBasicDescription)M4AFormatWithNumberOfChannels:(UInt32)channels sampleRate:(float)sampleRate{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>channels</strong>:
+      The desired number of channels</li>
+
+    <li><i class="icon-line-play"></i><strong>sampleRate</strong>:
+      A float representing the sample rate.</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    A new AudioStreamBasicDescription with the specified format.
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/MAP:leftMin:leftMax:rightMin:rightMax:" title="MAP:leftMin:leftMax:rightMin:rightMax:"></a>
+  <h4 class="subsubtitle method-title">MAP:leftMin:leftMax:rightMin:rightMax:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Maps a value from one coordinate system into another one. Takes in the current value to map, the minimum and maximum values of the first coordinate system, and the minimum and maximum values of the second coordinate system and calculates the mapped value in the second coordinate system's constraints.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (float)MAP:(float)value leftMin:(float)leftMin leftMax:(float)leftMax rightMin:(float)rightMin rightMax:(float)rightMax{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>value</strong>:
+      The value expressed in the first coordinate system</li>
+
+    <li><i class="icon-line-play"></i><strong>leftMin</strong>:
+      The minimum of the first coordinate system</li>
+
+    <li><i class="icon-line-play"></i><strong>leftMax</strong>:
+      The maximum of the first coordinate system</li>
+
+    <li><i class="icon-line-play"></i><strong>rightMin</strong>:
+      The minimum of the second coordindate system</li>
+
+    <li><i class="icon-line-play"></i><strong>rightMax</strong>:
+      The maximum of the second coordinate system</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    The mapped value in terms of the second coordinate system
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/RMS:length:" title="RMS:length:"></a>
+  <h4 class="subsubtitle method-title">RMS:length:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Calculates the root mean squared for a buffer.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (float)RMS:(const float *)buffer length:(int)bufferSize{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>buffer</strong>:
+      A float buffer array of values whose root mean squared to calculate</li>
+
+    <li><i class="icon-line-play"></i><strong>bufferSize</strong>:
+      The size of the float buffer</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    The root mean squared of the buffer
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/SGN:" title="SGN:"></a>
+  <h4 class="subsubtitle method-title">SGN:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Calculate the sign function sgn(x) =
+{  -1 , x < 0,
+{   0 , x = 0,
+{   1 , x > 0
+  </div>
+
+
+
+ {% highlight objective-c %}+ (float)SGN:(float)value{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>value</strong>:
+      The float value for which to use as x</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    The float sign value
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/appendBuffer:withBufferSize:toHistoryInfo:" title="appendBuffer:withBufferSize:toHistoryInfo:"></a>
+  <h4 class="subsubtitle method-title">appendBuffer:withBufferSize:toHistoryInfo:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Appends a buffer of audio data to the tail of a EZPlotHistoryInfo data structure. Thread-safe.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (void)appendBuffer:(const float *)buffer withBufferSize:(UInt32)bufferSize toHistoryInfo:(EZPlotHistoryInfo *)historyInfo{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>buffer</strong>:
+      A float array containing the incoming audio buffer to append to the history buffer</li>
+
+    <li><i class="icon-line-play"></i><strong>bufferSize</strong>:
+      A UInt32 representing the length of the incoming audio buffer</li>
+
+    <li><i class="icon-line-play"></i><strong>historyInfo</strong>:
+      A pointer to a EZPlotHistoryInfo structure to use for managing the history buffers</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/appendBufferAndShift:withBufferSize:toScrollHistory:withScrollHistorySize:" title="appendBufferAndShift:withBufferSize:toScrollHistory:withScrollHistorySize:"></a>
+  <h4 class="subsubtitle method-title">appendBufferAndShift:withBufferSize:toScrollHistory:withScrollHistorySize:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Appends an array of values to a history buffer and performs an internal shift to add the values to the tail and removes the same number of values from the head.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (void)appendBufferAndShift:(float *)buffer withBufferSize:(int)bufferLength toScrollHistory:(float *)scrollHistory withScrollHistorySize:(int)scrollHistoryLength{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>buffer</strong>:
+      A float array of values to append to the tail of the history buffer</li>
+
+    <li><i class="icon-line-play"></i><strong>bufferLength</strong>:
+      The length of the float array being appended to the history buffer</li>
+
+    <li><i class="icon-line-play"></i><strong>scrollHistory</strong>:
+      The target history buffer in which to append the values</li>
+
+    <li><i class="icon-line-play"></i><strong>scrollHistoryLength</strong>:
+      The length of the target history buffer</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/appendBufferRMS:withBufferSize:toHistoryInfo:" title="appendBufferRMS:withBufferSize:toHistoryInfo:"></a>
+  <h4 class="subsubtitle method-title">appendBufferRMS:withBufferSize:toHistoryInfo:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Calculates the RMS of a float array containing audio data and appends it to the tail of a EZPlotHistoryInfo data structure. Thread-safe.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (void)appendBufferRMS:(const float *)buffer withBufferSize:(UInt32)bufferSize toHistoryInfo:(EZPlotHistoryInfo *)historyInfo{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>buffer</strong>:
+      A float array containing the incoming audio buffer to append to the history buffer</li>
+
+    <li><i class="icon-line-play"></i><strong>bufferSize</strong>:
+      A UInt32 representing the length of the incoming audio buffer</li>
+
+    <li><i class="icon-line-play"></i><strong>historyInfo</strong>:
+      A pointer to a EZPlotHistoryInfo structure to use for managing the history buffers</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/appendDataToCircularBuffer:fromAudioBufferList:" title="appendDataToCircularBuffer:fromAudioBufferList:"></a>
+  <h4 class="subsubtitle method-title">appendDataToCircularBuffer:fromAudioBufferList:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Appends the data from the audio buffer list to the circular buffer
+  </div>
+
+
+
+ {% highlight objective-c %}+ (void)appendDataToCircularBuffer:(TPCircularBuffer *)circularBuffer fromAudioBufferList:(AudioBufferList *)audioBufferList{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>circularBuffer</strong>:
+      Pointer to the instance of the TPCircularBuffer to add the audio data to</li>
+
+    <li><i class="icon-line-play"></i><strong>audioBufferList</strong>:
+      Pointer to the instance of the AudioBufferList with the audio data</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/appendValue:toScrollHistory:withScrollHistorySize:" title="appendValue:toScrollHistory:withScrollHistorySize:"></a>
+  <h4 class="subsubtitle method-title">appendValue:toScrollHistory:withScrollHistorySize:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Appends a value to a history buffer and performs an internal shift to add the value to the tail and remove the 0th value.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (void)appendValue:(float)value toScrollHistory:(float *)scrollHistory withScrollHistorySize:(int)scrollHistoryLength{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>value</strong>:
+      The float value to append to the history array</li>
+
+    <li><i class="icon-line-play"></i><strong>scrollHistory</strong>:
+      The target history buffer in which to append the values</li>
+
+    <li><i class="icon-line-play"></i><strong>scrollHistoryLength</strong>:
+      The length of the target history buffer</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/audioBufferListWithNumberOfFrames:numberOfChannels:interleaved:" title="audioBufferListWithNumberOfFrames:numberOfChannels:interleaved:"></a>
+  <h4 class="subsubtitle method-title">audioBufferListWithNumberOfFrames:numberOfChannels:interleaved:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Allocates an AudioBufferList structure. Make sure to call freeBufferList when done using AudioBufferList or it will leak.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (AudioBufferList *)audioBufferListWithNumberOfFrames:(UInt32)frames numberOfChannels:(UInt32)channels interleaved:(BOOL)interleaved{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>frames</strong>:
+      The number of frames that will be stored within each audio buffer</li>
+
+    <li><i class="icon-line-play"></i><strong>channels</strong>:
+      The number of channels (e.g. 2 for stereo, 1 for mono, etc.)</li>
+
+    <li><i class="icon-line-play"></i><strong>interleaved</strong>:
+      Whether the samples will be interleaved (if not it will be assumed to be non-interleaved and each channel will have an AudioBuffer allocated)</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    An AudioBufferList struct that has been allocated in memory
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/checkResult:operation:" title="checkResult:operation:"></a>
+  <h4 class="subsubtitle method-title">checkResult:operation:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Basic check result function useful for checking each step of the audio setup process
+  </div>
+
+
+
+ {% highlight objective-c %}+ (void)checkResult:(OSStatus)result operation:(const char *)operation{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>result</strong>:
+      The OSStatus representing the result of an operation</li>
+
+    <li><i class="icon-line-play"></i><strong>operation</strong>:
+      A string (const char, not NSString) describing the operation taking place (will print if fails)</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/circularBuffer:withSize:" title="circularBuffer:withSize:"></a>
+  <h4 class="subsubtitle method-title">circularBuffer:withSize:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Initializes the circular buffer (just a wrapper around the C method)
+  </div>
+
+
+
+ {% highlight objective-c %}+ (void)circularBuffer:(TPCircularBuffer *)circularBuffer withSize:(int)size{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>circularBuffer</strong>:
+      Pointer to an instance of the TPCircularBuffer</li>
+
+    <li><i class="icon-line-play"></i><strong>size</strong>:
+      The length of the TPCircularBuffer (usually 1024)</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/clearHistoryInfo:" title="clearHistoryInfo:"></a>
+  <h4 class="subsubtitle method-title">clearHistoryInfo:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Zeroes out a EZPlotHistoryInfo data structure without freeing the resources.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (void)clearHistoryInfo:(EZPlotHistoryInfo *)historyInfo{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>historyInfo</strong>:
+      A pointer to a EZPlotHistoryInfo data structure</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/displayTimeStringFromSeconds:" title="displayTimeStringFromSeconds:"></a>
+  <h4 class="subsubtitle method-title">displayTimeStringFromSeconds:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Converts seconds into a string formatted as MM:SS
+  </div>
+
+
+
+ {% highlight objective-c %}+ (NSString *)displayTimeStringFromSeconds:(NSTimeInterval)seconds{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>seconds</strong>:
+      An NSTimeInterval representing the number of seconds</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    An NSString instance formatted as MM:SS from the seconds provided.
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/floatBuffersWithNumberOfFrames:numberOfChannels:" title="floatBuffersWithNumberOfFrames:numberOfChannels:"></a>
+  <h4 class="subsubtitle method-title">floatBuffersWithNumberOfFrames:numberOfChannels:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Allocates an array of float arrays given the number of frames needed to store in each float array.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (float **)floatBuffersWithNumberOfFrames:(UInt32)frames numberOfChannels:(UInt32)channels{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>frames</strong>:
+      A UInt32 representing the number of frames to store in each float buffer</li>
+
+    <li><i class="icon-line-play"></i><strong>channels</strong>:
+      A UInt32 representing the number of channels (i.e. the number of float arrays to allocate)</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    An array of float arrays, each the length of the number of frames specified
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/floatFormatWithNumberOfChannels:sampleRate:" title="floatFormatWithNumberOfChannels:sampleRate:"></a>
+  <h4 class="subsubtitle method-title">floatFormatWithNumberOfChannels:sampleRate:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Creates a float-based, non-interleaved AudioStreamBasicDescription for the number of channels specified.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (AudioStreamBasicDescription)floatFormatWithNumberOfChannels:(UInt32)channels sampleRate:(float)sampleRate{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>channels</strong>:
+      A UInt32 representing the number of channels.</li>
+
+    <li><i class="icon-line-play"></i><strong>sampleRate</strong>:
+      A float representing the sample rate.</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    A float-based AudioStreamBasicDescription with the number of channels specified.
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/freeBufferList:" title="freeBufferList:"></a>
+  <h4 class="subsubtitle method-title">freeBufferList:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Deallocates an AudioBufferList structure from memory.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (void)freeBufferList:(AudioBufferList *)bufferList{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>bufferList</strong>:
+      A pointer to the buffer list you would like to free</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/freeCircularBuffer:" title="freeCircularBuffer:"></a>
+  <h4 class="subsubtitle method-title">freeCircularBuffer:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Frees a circular buffer
+  </div>
+
+
+
+ {% highlight objective-c %}+ (void)freeCircularBuffer:(TPCircularBuffer *)circularBuffer{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>circularBuffer</strong>:
+      Pointer to the circular buffer to clear</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/freeFloatBuffers:numberOfChannels:" title="freeFloatBuffers:numberOfChannels:"></a>
+  <h4 class="subsubtitle method-title">freeFloatBuffers:numberOfChannels:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Deallocates an array of float buffers
+  </div>
+
+
+
+ {% highlight objective-c %}+ (void)freeFloatBuffers:(float **)buffers numberOfChannels:(UInt32)channels{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>buffers</strong>:
+      An array of float arrays</li>
+
+    <li><i class="icon-line-play"></i><strong>channels</strong>:
+      A UInt32 representing the number of channels (i.e. the number of float arrays to deallocate)</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/freeHistoryInfo:" title="freeHistoryInfo:"></a>
+  <h4 class="subsubtitle method-title">freeHistoryInfo:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Frees a EZPlotHistoryInfo data structure
+  </div>
+
+
+
+ {% highlight objective-c %}+ (void)freeHistoryInfo:(EZPlotHistoryInfo *)historyInfo{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>historyInfo</strong>:
+      A pointer to a EZPlotHistoryInfo data structure</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/getColorComponentsFromCGColor:red:green:blue:alpha:" title="getColorComponentsFromCGColor:red:green:blue:alpha:"></a>
+  <h4 class="subsubtitle method-title">getColorComponentsFromCGColor:red:green:blue:alpha:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Helper function to get the color components from a CGColorRef in the RGBA colorspace.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (void)getColorComponentsFromCGColor:(CGColorRef)color red:(CGFloat *)red green:(CGFloat *)green blue:(CGFloat *)blue alpha:(CGFloat *)alpha{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>color</strong>:
+      A CGColorRef that represents a color.</li>
+
+    <li><i class="icon-line-play"></i><strong>red</strong>:
+      A pointer to a CGFloat to hold the value of the red component. This value will be between 0 and 1.</li>
+
+    <li><i class="icon-line-play"></i><strong>green</strong>:
+      A pointer to a CGFloat to hold the value of the green component. This value will be between 0 and 1.</li>
+
+    <li><i class="icon-line-play"></i><strong>blue</strong>:
+      A pointer to a CGFloat to hold the value of the blue component. This value will be between 0 and 1.</li>
+
+    <li><i class="icon-line-play"></i><strong>alpha</strong>:
+      A pointer to a CGFloat to hold the value of the alpha component. This value will be between 0 and 1.</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/historyInfoWithDefaultLength:maximumLength:" title="historyInfoWithDefaultLength:maximumLength:"></a>
+  <h4 class="subsubtitle method-title">historyInfoWithDefaultLength:maximumLength:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Creates an EZPlotHistoryInfo data structure with a default length for the window buffer and a maximum length capacity for the internal circular buffer that holds all the audio data.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (EZPlotHistoryInfo *)historyInfoWithDefaultLength:(int)defaultLength maximumLength:(int)maximumLength{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>defaultLength</strong>:
+      An int representing the default length (i.e. the number of points that will be displayed on screen) of the history window.</li>
+
+    <li><i class="icon-line-play"></i><strong>maximumLength</strong>:
+      An int representing the default maximum length that is the absolute maximum amount of values that can be held in the history's circular buffer.</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    A pointer to the EZPlotHistoryInfo created. The caller is responsible for freeing this structure using the freeHistoryInfo method above.
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/iLBCFormatWithSampleRate:" title="iLBCFormatWithSampleRate:"></a>
+  <h4 class="subsubtitle method-title">iLBCFormatWithSampleRate:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Creates an AudioStreamBasicDescription for the iLBC narrow band speech codec.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (AudioStreamBasicDescription)iLBCFormatWithSampleRate:(float)sampleRate{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>sampleRate</strong>:
+      A float representing the sample rate.</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    A new AudioStreamBasicDescription with the specified format.
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/isFloatFormat:" title="isFloatFormat:"></a>
+  <h4 class="subsubtitle method-title">isFloatFormat:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Checks an AudioStreamBasicDescription to see if it is a float-based format (as opposed to a signed integer based format).
+  </div>
+
+
+
+ {% highlight objective-c %}+ (BOOL)isFloatFormat:(AudioStreamBasicDescription)asbd{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>asbd</strong>:
+      A valid AudioStreamBasicDescription</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    A BOOL indicating whether or not the AudioStreamBasicDescription is a float format.
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/isInterleaved:" title="isInterleaved:"></a>
+  <h4 class="subsubtitle method-title">isInterleaved:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Checks an AudioStreamBasicDescription to check for an interleaved flag (samples are
+stored in one buffer one after another instead of two (or n channels) parallel buffers
+  </div>
+
+
+
+ {% highlight objective-c %}+ (BOOL)isInterleaved:(AudioStreamBasicDescription)asbd{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>asbd</strong>:
+      A valid AudioStreamBasicDescription</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    A BOOL indicating whether or not the AudioStreamBasicDescription is interleaved
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/isLinearPCM:" title="isLinearPCM:"></a>
+  <h4 class="subsubtitle method-title">isLinearPCM:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Checks an AudioStreamBasicDescription to see if it is a linear PCM format (uncompressed,
+1 frame per packet)
+  </div>
+
+
+
+ {% highlight objective-c %}+ (BOOL)isLinearPCM:(AudioStreamBasicDescription)asbd{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>asbd</strong>:
+      A valid AudioStreamBasicDescription</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    A BOOL indicating whether or not the AudioStreamBasicDescription is linear PCM.
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/monoCanonicalFormatWithSampleRate:" title="monoCanonicalFormatWithSampleRate:"></a>
+  <h4 class="subsubtitle method-title">monoCanonicalFormatWithSampleRate:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Creates a single-channel, float-based AudioStreamBasicDescription (as of 0.0.6 this is the same as monoFloatFormatWithSampleRate:.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (AudioStreamBasicDescription)monoCanonicalFormatWithSampleRate:(float)sampleRate{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>sampleRate</strong>:
+      A float representing the sample rate.</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    A new AudioStreamBasicDescription with the specified format.
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/monoFloatFormatWithSampleRate:" title="monoFloatFormatWithSampleRate:"></a>
+  <h4 class="subsubtitle method-title">monoFloatFormatWithSampleRate:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Creates a single-channel, float-based AudioStreamBasicDescription.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (AudioStreamBasicDescription)monoFloatFormatWithSampleRate:(float)sampleRate{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>sampleRate</strong>:
+      A float representing the sample rate.</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    A new AudioStreamBasicDescription with the specified format.
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/printASBD:" title="printASBD:"></a>
+  <h4 class="subsubtitle method-title">printASBD:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Nicely logs out the contents of an AudioStreamBasicDescription struct
+  </div>
+
+
+
+ {% highlight objective-c %}+ (void)printASBD:(AudioStreamBasicDescription)asbd{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>asbd</strong>:
+      The AudioStreamBasicDescription struct with content to print out</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setCanonicalAudioStreamBasicDescription:numberOfChannels:interleaved:" title="setCanonicalAudioStreamBasicDescription:numberOfChannels:interleaved:"></a>
+  <h4 class="subsubtitle method-title">setCanonicalAudioStreamBasicDescription:numberOfChannels:interleaved:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Just a wrapper around the setCanonical function provided in the Core Audio Utility C++ class.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (void)setCanonicalAudioStreamBasicDescription:(AudioStreamBasicDescription *)asbd numberOfChannels:(UInt32)nChannels interleaved:(BOOL)interleaved{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>asbd</strong>:
+      The AudioStreamBasicDescription structure to modify</li>
+
+    <li><i class="icon-line-play"></i><strong>nChannels</strong>:
+      The number of expected channels on the description</li>
+
+    <li><i class="icon-line-play"></i><strong>interleaved</strong>:
+      A flag indicating whether the stereo samples should be interleaved in the buffer</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/setShouldExitOnCheckResultFail:" title="setShouldExitOnCheckResultFail:"></a>
+  <h4 class="subsubtitle method-title">setShouldExitOnCheckResultFail:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Globally sets whether or not the program should exit if a checkResult:operation: operation fails. Currently the behavior on EZAudio is to quit if a checkResult:operation: fails, but this is not desirable in any production environment. Internally there are a lot of checkResult:operation: operations used on all the core classes. This should only ever be set to NO in production environments since a checkResult:operation: failing means something breaking has likely happened.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (void)setShouldExitOnCheckResultFail:(BOOL)shouldExitOnCheckResultFail{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>shouldExitOnCheckResultFail</strong>:
+      A BOOL indicating whether or not the running program should exist due to a checkResult:operation: fail.</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/shouldExitOnCheckResultFail" title="shouldExitOnCheckResultFail"></a>
+  <h4 class="subsubtitle method-title">shouldExitOnCheckResultFail</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Provides a flag indicating whether or not the program will exit if a checkResult:operation: fails.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (BOOL)shouldExitOnCheckResultFail{% endhighlight %}
+
+
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    A BOOL indicating whether or not the program will exit if a checkResult:operation: fails.
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/stereoCanonicalNonInterleavedFormatWithSampleRate:" title="stereoCanonicalNonInterleavedFormatWithSampleRate:"></a>
+  <h4 class="subsubtitle method-title">stereoCanonicalNonInterleavedFormatWithSampleRate:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Creates a two-channel, non-interleaved, float-based AudioStreamBasicDescription (as of 0.0.6 this is the same as stereoFloatNonInterleavedFormatWithSampleRate:.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (AudioStreamBasicDescription)stereoCanonicalNonInterleavedFormatWithSampleRate:(float)sampleRate{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>sampleRate</strong>:
+      A float representing the sample rate.</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    A new AudioStreamBasicDescription with the specified format.
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/stereoFloatInterleavedFormatWithSampleRate:" title="stereoFloatInterleavedFormatWithSampleRate:"></a>
+  <h4 class="subsubtitle method-title">stereoFloatInterleavedFormatWithSampleRate:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Creates a two-channel, interleaved, float-based AudioStreamBasicDescription.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (AudioStreamBasicDescription)stereoFloatInterleavedFormatWithSampleRate:(float)sampleRate{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>sampleRate</strong>:
+      A float representing the sample rate.</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    A new AudioStreamBasicDescription with the specified format.
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/stereoFloatNonInterleavedFormatWithSampleRate:" title="stereoFloatNonInterleavedFormatWithSampleRate:"></a>
+  <h4 class="subsubtitle method-title">stereoFloatNonInterleavedFormatWithSampleRate:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Creates a two-channel, non-interleaved, float-based AudioStreamBasicDescription.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (AudioStreamBasicDescription)stereoFloatNonInterleavedFormatWithSampleRate:(float)sampleRate{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>sampleRate</strong>:
+      A float representing the sample rate.</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    A new AudioStreamBasicDescription with the specified format.
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/stringForAudioStreamBasicDescription:" title="stringForAudioStreamBasicDescription:"></a>
+  <h4 class="subsubtitle method-title">stringForAudioStreamBasicDescription:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Creates a string to use when logging out the contents of an AudioStreamBasicDescription
+  </div>
+
+
+
+ {% highlight objective-c %}+ (NSString *)stringForAudioStreamBasicDescription:(AudioStreamBasicDescription)asbd{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>asbd</strong>:
+      A valid AudioStreamBasicDescription struct.</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    An NSString representing the contents of the AudioStreamBasicDescription.
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/stringFromUInt32Code:" title="stringFromUInt32Code:"></a>
+  <h4 class="subsubtitle method-title">stringFromUInt32Code:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Provides a string representation of the often cryptic Core Audio error codes
+  </div>
+
+
+
+ {% highlight objective-c %}+ (NSString *)stringFromUInt32Code:(UInt32)code{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>code</strong>:
+      A UInt32 representing an error code</li>
+
+    </ul>
+
+
+
+  <div class="method-subsection return">
+    <h4 class="method-subtitle parameter-title">Return Value</h4>
+    An NSString with a human readable version of the error code.
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+            <div class="section-method">
+  <a name="//api/name/updateScrollHistory:withLength:atIndex:withBuffer:withBufferSize:isResolutionChanging:" title="updateScrollHistory:withLength:atIndex:withBuffer:withBufferSize:isResolutionChanging:"></a>
+  <h4 class="subsubtitle method-title">updateScrollHistory:withLength:atIndex:withBuffer:withBufferSize:isResolutionChanging:</h4>
+
+
+
+  <div class="method-subsection brief-description">
+    Given a buffer representing a window of float history data this append the RMS of a buffer of incoming float data...This will likely be deprecated in a future version of EZAudio for a circular buffer based approach.
+  </div>
+
+
+
+ {% highlight objective-c %}+ (void)updateScrollHistory:(float **)scrollHistory withLength:(int)scrollHistoryLength atIndex:(int *)index withBuffer:(float *)buffer withBufferSize:(int)bufferSize isResolutionChanging:(BOOL *)isChanging{% endhighlight %}
+
+
+
+  <ul class="iconlist">
+
+    <li><i class="icon-line-play"></i><strong>scrollHistory</strong>:
+      An array of float arrays being used to hold the history values for each channel.</li>
+
+    <li><i class="icon-line-play"></i><strong>scrollHistoryLength</strong>:
+      An int representing the length of the history window.</li>
+
+    <li><i class="icon-line-play"></i><strong>index</strong>:
+      An int pointer to the index of the current read index of the history buffer.</li>
+
+    <li><i class="icon-line-play"></i><strong>buffer</strong>:
+      A float array representing the incoming audio data.</li>
+
+    <li><i class="icon-line-play"></i><strong>bufferSize</strong>:
+      An int representing the length of the incoming audio data.</li>
+
+    <li><i class="icon-line-play"></i><strong>isChanging</strong>:
+      A BOOL pointer representing whether the resolution (length of the history window) is currently changing.</li>
+
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+        </div>
+      </div>
