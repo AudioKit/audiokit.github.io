@@ -1,0 +1,27 @@
+<h3>Comb Filter Reverb
+</h3> 
+
+{% highlight ruby %}import XCPlayground
+import AudioKit
+
+let audiokit = AKManager.sharedInstance
+
+let bundle = NSBundle.mainBundle()
+let file = bundle.pathForResource("drumloop", ofType: "wav")
+var player = AKAudioPlayer(file!)
+player.looping = true
+var filter = AKCombFilterReverb(player, loopDuration: 0.1)
+
+{% endhighlight %}
+<p>Set the parameters of the Comb Filter here</p>
+
+{% highlight ruby %}filter.reverbDuration = 1
+
+audiokit.audioOutput = filter
+audiokit.start()
+player.play()
+
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+
+
+{% endhighlight %}

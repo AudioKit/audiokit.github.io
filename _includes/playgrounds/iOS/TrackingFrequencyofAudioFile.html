@@ -1,0 +1,36 @@
+<p><h3>Tracking Frequency of an Audio File
+</h3><h4>Here is a more real-world example of tracking the pitch of an audio stream
+</h4></p>
+
+{% highlight ruby %}import XCPlayground
+import AudioKit
+
+let audiokit = AKManager.sharedInstance
+
+let bundle = NSBundle.mainBundle()
+let file = bundle.pathForResource("leadloop", ofType: "wav")
+
+var player = AKAudioPlayer(file!)
+player.looping = true
+
+let tracker = AKFrequencyTracker(player, minimumFrequency: 400, maximumFrequency: 600)
+
+audiokit.audioOutput = tracker
+audiokit.start()
+player.play()
+
+{% endhighlight %}
+<p>And here&#39;s where we monitor the results of tracking the amplitude.</p>
+
+{% highlight ruby %}AKPlaygroundLoop(every: 0.1) {
+    let amp = tracker.amplitude
+    let freq = tracker.frequency
+}
+
+{% endhighlight %}
+<p>This keeps the playground running so that audio can play for a long time</p>
+
+{% highlight ruby %}XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+
+
+{% endhighlight %}

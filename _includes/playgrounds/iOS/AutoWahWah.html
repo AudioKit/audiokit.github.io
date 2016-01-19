@@ -1,0 +1,29 @@
+<p><h3>Auto Wah Wah
+</h3><h4>One of the most iconic guitar effects is the wah-pedal. Here, we run an audio loop of a guitar through an AKAutoWah node. 
+</h4></p>
+
+{% highlight ruby %}import XCPlayground
+import AudioKit
+
+let audiokit = AKManager.sharedInstance
+
+let bundle = NSBundle.mainBundle()
+let file = bundle.pathForResource("guitarloop", ofType: "wav")
+var player = AKAudioPlayer(file!)
+player.looping = true
+var wah = AKAutoWah(player)
+
+{% endhighlight %}
+<p>Set the parameters of the auto-wah here</p>
+
+{% highlight ruby %}wah.wah = 1
+wah.amplitude = 1
+
+audiokit.audioOutput = wah
+audiokit.start()
+
+player.play()
+
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+
+{% endhighlight %}

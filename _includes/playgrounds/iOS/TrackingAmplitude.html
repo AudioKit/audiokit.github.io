@@ -2,10 +2,6 @@
 </h3><h4>Here, we show how you can determine the amplitude of an audio signal by outputting the value of a generator node into the AKAmplitudeTracker. This node is great if you want to build an app that does audio monitoring and analysis.
 </h4></p>
 
-{% highlight ruby %}
-{% endhighlight %}
-<p>Standard imports and AudioKit setup:</p>
-
 {% highlight ruby %}import XCPlayground
 import AudioKit
 
@@ -14,7 +10,7 @@ let audiokit = AKManager.sharedInstance
 {% endhighlight %}
 <p>Let&#39;s set up the volume to be changing in the shape of a sine wave</p>
 
-{% highlight ruby %}let volume = AKOperation.sineWave(frequency:0.2).scale(minimum: 0, maximum: 1)
+{% highlight ruby %}let volume = AKOperation.sineWave(frequency:0.2).scale(minimum: 0, maximum: 0.5)
 
 {% endhighlight %}
 <p>And let&#39;s make the frequency move around to make sure it doesn&#39;t affect the amplitude tracking</p>

@@ -1,0 +1,30 @@
+<p><h3>Sawtooth Wave Oscillator Operation
+</h3><h4>Maybe the most annoying sound ever. Sorry.
+</h4></p>
+
+{% highlight ruby %}import XCPlayground
+import AudioKit
+
+let audiokit = AKManager.sharedInstance
+
+{% endhighlight %}
+<p>Set up the operations that will be used to make a generator node</p>
+
+{% highlight ruby %}
+let freq = AKOperation.jitter(amplitude: 200, minimumFrequency: 1, maximumFrequency: 10) + 200
+let amp  = AKOperation.randomVertexPulse(minimum: 0, maximum: 1, updateFrequency: 1)
+let oscillator = AKOperation.sawtoothWave(frequency: freq, amplitude: amp)
+
+{% endhighlight %}
+<p>Set up the nodes</p>
+
+{% highlight ruby %}let generator = AKOperationGenerator(operation: oscillator)
+
+audiokit.audioOutput = generator
+audiokit.start()
+
+generator.start()
+
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+
+{% endhighlight %}
