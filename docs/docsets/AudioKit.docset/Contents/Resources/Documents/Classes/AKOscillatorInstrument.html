@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AKOscillatorInstrument Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/AKOscillatorInstrument" class="dashAnchor"></a>
+
+    <a title="AKOscillatorInstrument Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          AudioKit Docs
+        </a>
+         (100% documented)
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/audiokit/AudioKit">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">AudioKit Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      AKOscillatorInstrument Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../AudioKit Core.html">AudioKit Core</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKManager.html">AKManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/AKTable.html">AKTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/AKTableType.html">AKTableType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Instruments.html">Instruments</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKPolyphonicInstrument.html">AKPolyphonicInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKVoice.html">AKVoice</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKFMOscillatorInstrument.html">AKFMOscillatorInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKNoiseInstrument.html">AKNoiseInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKOscillatorInstrument.html">AKOscillatorInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKSawtoothInstrument.html">AKSawtoothInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKSquareInstrument.html">AKSquareInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKTriangleInstrument.html">AKTriangleInstrument</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../MIDI.html">MIDI</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKMIDI.html">AKMIDI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/AKMIDIEvent.html">AKMIDIEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/AKMIDIControl.html">AKMIDIControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKMIDIInstrument.html">AKMIDIInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/AKMIDIStatus.html">AKMIDIStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/AKMIDISystemCommand.html">AKMIDISystemCommand</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKMusicTrack.html">AKMusicTrack</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Nodes.html">Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKNode.html">AKNode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AKToggleable.html">AKToggleable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKOperationEffect.html">AKOperationEffect</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKOperationGenerator.html">AKOperationGenerator</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Analysis Nodes.html">Analysis Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKAmplitudeTracker.html">AKAmplitudeTracker</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKFFT.html">AKFFT</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKFrequencyTracker.html">AKFrequencyTracker</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Delay Nodes.html">Delay Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKDelay.html">AKDelay</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKVariableDelay.html">AKVariableDelay</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Distortion Nodes.html">Distortion Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKBitCrusher.html">AKBitCrusher</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKClipper.html">AKClipper</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKDecimator.html">AKDecimator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKDistortion.html">AKDistortion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKRingModulator.html">AKRingModulator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKTanhDistortion.html">AKTanhDistortion</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Dynamics Nodes.html">Dynamics Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKDynamicsProcessor.html">AKDynamicsProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKPeakLimiter.html">AKPeakLimiter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Envelopes.html">Envelopes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKAmplitudeEnvelope.html">AKAmplitudeEnvelope</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Filter Nodes.html">Filter Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKAutoWah.html">AKAutoWah</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKBandPassButterworthFilter.html">AKBandPassButterworthFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKBandPassFilter.html">AKBandPassFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKBandRejectButterworthFilter.html">AKBandRejectButterworthFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKCombFilterReverb.html">AKCombFilterReverb</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKDCBlock.html">AKDCBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKEqualizerFilter.html">AKEqualizerFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKFormantFilter.html">AKFormantFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKHighPassButterworthFilter.html">AKHighPassButterworthFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKHighPassFilter.html">AKHighPassFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKHighShelfFilter.html">AKHighShelfFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKHighShelfParametricEqualizerFilter.html">AKHighShelfParametricEqualizerFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKLowPassButterworthFilter.html">AKLowPassButterworthFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKLowPassFilter.html">AKLowPassFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKLowShelfFilter.html">AKLowShelfFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKLowShelfParametricEqualizerFilter.html">AKLowShelfParametricEqualizerFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKModalResonanceFilter.html">AKModalResonanceFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKMoogLadder.html">AKMoogLadder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKParametricEQ.html">AKParametricEQ</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKPeakingParametricEqualizerFilter.html">AKPeakingParametricEqualizerFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKRolandTB303Filter.html">AKRolandTB303Filter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKStringResonator.html">AKStringResonator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKThreePoleLowpassFilter.html">AKThreePoleLowpassFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKToneFilter.html">AKToneFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKToneComplementFilter.html">AKToneComplementFilter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Reverb Nodes.html">Reverb Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKChowningReverb.html">AKChowningReverb</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKCostelloReverb.html">AKCostelloReverb</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKConvolution.html">AKConvolution</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKFlatFrequencyResponseReverb.html">AKFlatFrequencyResponseReverb</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKReverb.html">AKReverb</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKReverb2.html">AKReverb2</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Noise Generator Nodes.html">Noise Generator Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKPinkNoise.html">AKPinkNoise</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKWhiteNoise.html">AKWhiteNoise</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Oscillator Nodes.html">Oscillator Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKFMOscillator.html">AKFMOscillator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKOscillator.html">AKOscillator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKSawtoothOscillator.html">AKSawtoothOscillator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKSquareWaveOscillator.html">AKSquareWaveOscillator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKTriangleOscillator.html">AKTriangleOscillator</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Physical Models.html">Physical Models</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKDrip.html">AKDrip</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKPluckedString.html">AKPluckedString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Input Node.html">Input Node</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKMicrophone.html">AKMicrophone</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Mixing Nodes.html">Mixing Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKBalancer.html">AKBalancer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKBooster.html">AKBooster</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKDryWetMixer.html">AKDryWetMixer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKMixer.html">AKMixer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKPanner.html">AKPanner</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Playback Nodes.html">Playback Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKAudioPlayer.html">AKAudioPlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKPhaseLockedVocoder.html">AKPhaseLockedVocoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKSampler.html">AKSampler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKSequencer.html">AKSequencer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKTimePitch.html">AKTimePitch</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Operations.html">Operations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AKParameter.html">AKParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AKComputedParameter.html">AKComputedParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/AKOperation.html">AKOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/AKStereoOperation.html">AKStereoOperation</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Function Operations.html">Function Operations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Function Operations.html#/s:ZF8AudioKitoi1mFTPS_11AKParameter_PS0___VS_11AKOperation">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Function Operations.html#/s:ZF8AudioKitoi1pFTPS_11AKParameter_PS0___VS_11AKOperation">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Function Operations.html#/s:ZF8AudioKitoi1sFTPS_11AKParameter_PS0___VS_11AKOperation">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Function Operations.html#/s:ZF8AudioKitoi1dFTPS_11AKParameter_PS0___VS_11AKOperation">/(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Function Operations.html#/s:F8AudioKit3absFVS_11AKOperationS0_">abs(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Function Operations.html#/s:F8AudioKit5floorFVS_11AKOperationS0_">floor(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Function Operations.html#/s:F8AudioKit5fractFVS_11AKOperationS0_">fract(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Function Operations.html#/s:F8AudioKit3logFVS_11AKOperationS0_">log(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Function Operations.html#/s:F8AudioKit5log10FVS_11AKOperationS0_">log10(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Function Operations.html#/s:F8AudioKit3maxFTPS_19AKComputedParameter_PS0___VS_11AKOperation">max(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Function Operations.html#/s:F8AudioKit3maxFTPS_19AKComputedParameter_PS_11AKParameter__VS_11AKOperation">max(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Function Operations.html#/s:F8AudioKit3maxFTPS_11AKParameter_PS_19AKComputedParameter__VS_11AKOperation">max(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Function Operations.html#/s:F8AudioKit3minFTPS_19AKComputedParameter_PS0___VS_11AKOperation">min(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Function Operations.html#/s:F8AudioKit3minFTPS_19AKComputedParameter_PS_11AKParameter__VS_11AKOperation">min(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Function Operations.html#/s:F8AudioKit3minFTPS_11AKParameter_PS_19AKComputedParameter__VS_11AKOperation">min(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Function Operations.html#/s:F8AudioKit5mixerFTPS_11AKParameter_PS0__7balancePS0___VS_11AKOperation">mixer(_:_:balance:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Function Operations.html#/s:F8AudioKit5roundFVS_11AKOperationS0_">round(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Random Number Generators.html">Random Number Generators</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Random Number Generators.html#/s:F8AudioKit6randomFTSdSd_Sd">random(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Random Number Generators.html#/s:F8AudioKit9randomIntFGVSs5RangeSi_Si">randomInt(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Plotting Tools.html">Plotting Tools</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKRollingOutputPlot.html">AKRollingOutputPlot</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKNodeFFTPlot.html">AKNodeFFTPlot</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKNodeOutputPlot.html">AKNodeOutputPlot</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKOutputWaveformPlot.html">AKOutputWaveformPlot</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Other Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKMorphingOscillator.html">AKMorphingOscillator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKPlaygroundLoop.html">AKPlaygroundLoop</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKSynthKick.html">AKSynthKick</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKSynthKickVoice.html">AKSynthKickVoice</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKSynthSnare.html">AKSynthSnare</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKSynthSnareVoice.html">AKSynthSnareVoice</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AKTester.html">AKTester</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Other Extensions.html">Other Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Int.html">Int</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Other Functions.html">Other Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Other Functions.html#/s:F8AudioKit10CheckErrorFVSs5Int32T_">CheckError(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Other Structs.html">Other Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Other Structs.html#/s:V8AudioKit13AKGetAUParams">AKGetAUParams</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>AKOscillatorInstrument</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AKOscillatorInstrument</span><span class="p">:</span> <span class="kt">AKPolyphonicInstrument</span></code></pre>
+
+                </div>
+              </div>
+            <p>A wrapper for AKOscillator to make it a playable as a polyphonic instrument.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit22AKOscillatorInstrument14attackDurationSd"></a>
+                    <a name="//apple_ref/swift/Property/attackDuration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit22AKOscillatorInstrument14attackDurationSd">attackDuration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attack time</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">attackDuration</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.1</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit22AKOscillatorInstrument13decayDurationSd"></a>
+                    <a name="//apple_ref/swift/Property/decayDuration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit22AKOscillatorInstrument13decayDurationSd">decayDuration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Decay time</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">decayDuration</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.1</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit22AKOscillatorInstrument12sustainLevelSd"></a>
+                    <a name="//apple_ref/swift/Property/sustainLevel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit22AKOscillatorInstrument12sustainLevelSd">sustainLevel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sustain Level</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">sustainLevel</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.66</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit22AKOscillatorInstrument15releaseDurationSd"></a>
+                    <a name="//apple_ref/swift/Property/releaseDuration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit22AKOscillatorInstrument15releaseDurationSd">releaseDuration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Release time</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">releaseDuration</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.5</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit22AKOscillatorInstrumentcFMS0_FT8waveformVS_7AKTable10voiceCountSi_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(waveform:voiceCount:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit22AKOscillatorInstrumentcFMS0_FT8waveformVS_7AKTable10voiceCountSi_S0_">init(waveform:voiceCount:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Instantiate the Oscillator Instrument</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">waveform</span><span class="p">:</span> <span class="kt">AKTable</span><span class="p">,</span> <span class="nv">voiceCount</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>waveform</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Shape of the waveform to oscillate</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>voiceCount</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Maximum number of voices that will be required</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit22AKOscillatorInstrument9playVoiceFS0_FTCS_7AKVoice4noteSi8velocitySi_T_"></a>
+                    <a name="//apple_ref/swift/Method/playVoice(_:note:velocity:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit22AKOscillatorInstrument9playVoiceFS0_FTCS_7AKVoice4noteSi8velocitySi_T_">playVoice(_:note:velocity:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Start playback of a particular voice with MIDI style note and velocity</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">playVoice</span><span class="p">(</span><span class="nv">voice</span><span class="p">:</span> <span class="kt">AKVoice</span><span class="p">,</span> <span class="nv">note</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">velocity</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>voice</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Voice to start</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>note</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>MIDI Note Number</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>velocity</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>MIDI Velocity (0-127)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit22AKOscillatorInstrument9stopVoiceFS0_FTCS_7AKVoice4noteSi_T_"></a>
+                    <a name="//apple_ref/swift/Method/stopVoice(_:note:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit22AKOscillatorInstrument9stopVoiceFS0_FTCS_7AKVoice4noteSi_T_">stopVoice(_:note:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stop playback of a particular voice</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">stopVoice</span><span class="p">(</span><span class="nv">voice</span><span class="p">:</span> <span class="kt">AKVoice</span><span class="p">,</span> <span class="nv">note</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>voice</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Voice to stop</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>note</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>MIDI Note Number</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2016 <a class="link" href="https://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-01-18)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
