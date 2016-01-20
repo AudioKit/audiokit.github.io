@@ -2,23 +2,95 @@
 <h2>Top Contributors</h2>
 
 <p>
-<div class="author-block">
+<table><tr><td>
 <div id="pic1"     class="author-pic"></div>
-<div id="name1"    class="author"></div>
-<div id="contact1" class="author-contact"></div>
-</div>
+</td>
+<td>
+<div id="name1"></div>
+<div id="contact1"></div>
+<div id="desc1"></div>
+</td></tr></table>
+</p>
 
-<div class="author-block">
+<p>
+<table><tr><td>
 <div id="pic2"     class="author-pic"></div>
-<div id="name2"    class="author"></div>
-<div id="contact2" class="author-contact"></div>
-</div>
+</td>
+<td>
+<div id="name2"></div>
+<div id="contact2"></div>
+<div id="desc2"></div>
+</td></tr></table>
 
-<div class="author-block">
+</p><p>
+
+<table><tr><td>
 <div id="pic3"     class="author-pic"></div>
-<div id="name3"    class="author"></div>
-<div id="contact3" class="author-contact"></div>
-</div>
+</td>
+<td>
+<div id="name3"></div>
+<div id="contact3"></div>
+<div id="desc3"></div>
+</td></tr></table>
+
+</p><p>
+
+<table><tr><td>
+<div id="pic4"     class="author-pic"></div>
+</td>
+<td>
+<div id="name4"></div>
+<div id="contact4"></div>
+<div id="desc4"></div>
+</td></tr></table>
+
+</p><p>
+
+<table><tr><td>
+<div id="pic5" class="author-pic"></div>
+</td>
+<td>
+<div id="name5"></div>
+<div id="contact5"></div>
+<div id="desc5"></div>
+</td></tr></table>
+
+</p><p>
+
+<table><tr><td>
+<div id="pic6"     class="author-pic"></div>
+</td>
+<td>
+<div id="name6"></div>
+<div id="contact6"></div>
+<div id="desc6"></div>
+</td></tr></table>
+
+</p><p>
+
+<table><tr><td>
+<div id="pic7"     class="author-pic"></div>
+</td>
+<td>
+<div id="name7"></div>
+<div id="contact7"></div>
+<div id="desc7"></div>
+</td></tr></table>
+
+</p><p>
+
+<table><tr><td>
+<div id="pic8"     class="author-pic"></div>
+</td>
+<td>
+<div id="name8"></div>
+<div id="contact8"></div>
+<div id="desc8"></div>
+</td></tr></table>
+
+</p>
+
+
 
 </p>
 </div>
@@ -39,17 +111,55 @@ user_request.onload = function() {
             url = ""
 
             // Active Contributors
-            if (user.login == "aure") {name = "Aurelius Prochazka, Ph.D.";}
-            if (user.login == "narner") {name = "Nick Arner";}
-            if (user.login == "megastep") { name = "Stéphane Peter"}
-            if (user.login == "aure") {url = "aure.com";}
-            if (user.login == "narner") {url = "nickarner.com";}
-            if (user.login == "megastep") {url = "catloafsoft.com";}
-            index++;
+            if (user.login == "aure") {
+                name = "Aurelius Prochazka, Ph.D.";
+                url = "aure.com";
+                description = "Primary programmer of AudioKit. Lives for this stuff. Your life line if you need help.";
+            }
+            if (user.login == "eljeff") {
+                name = "Jeff Cooper";
+                url = "turntablearchives.com";
+                description = "Rearchitected all things MIDI, sampler, and sequencer related in AudioKit 3.";
+            }
+            if (user.login == "swiftcodex") {
+                name = "Matthew Fecher";
+                url = "matthewfecher.com";
+                description = "Sound design, graphic design, and programming of the Swift Synth example.";
+            }
+            if (user.login == "megastep") {
+                name = "Stéphane Peter";
+                url = "catloafsoft.com";
+                description = "Installation and configuration czar and code reviewer.";
+            }
+            if (user.login == "narner") {
+                name = "Nick Arner";
+                url = "nickarner.com";
+                description = "Longtime contributor to AudioKit and AudioKit's web site.";
+            }
+            if (user.login == "PaulBatchelor") {
+                name = "Paul Batchelor";
+                url = "paulbatchelor.github.io";
+                description = "The author of Soundpipe, and Sporth, which serve as two primary audio engines in AudioKit 3.";
+            }
+            if (user.login == "FlexMonkey") {
+                name = "Simon Gladman";
+                url = "flexmonkey.blogspot.com";
+                description = "Longtime user of AudioKit, contributed his AudioKitParticles project to AudioKit 3.";
+            }
+            if (user.login == "syedhali") {
+                name = "Syed Haris Ali";
+                url = "syedharisali.com";
+                description = "The author of EZAudio which is AudioKit's included waveform plotter and FFT analysis engine.";
+            }
 
-            document.getElementById('pic'+(index)).innerHTML = '<img src="'+user.avatar_url+'">';
-            document.getElementById('name'+(index)).innerHTML = name;
-            document.getElementById('contact'+(index)).innerHTML = '<a href="http://'+url+'">'+url+'</a><br>' + user.contributions + ' Commits';
+            if (url != "") {
+                index++;
+                document.getElementById('pic'+(index)).innerHTML = '<img style="padding: 1em;" src="'+user.avatar_url+'">';
+                document.getElementById('name'+(index)).innerHTML = '<b>'+name+'</b>';
+                document.getElementById('desc'+(index)).innerHTML = description;
+
+                document.getElementById('contact'+(index)).innerHTML = '<a href="http://'+url+'">'+url+'</a><br>' + user.contributions + ' Commits';
+            }
         }
     }
   }

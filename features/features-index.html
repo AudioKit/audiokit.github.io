@@ -4,294 +4,147 @@ header: Features
 permalink: /features/
 layout: side_navigation
 ---
-<div class="col_one_third nobottommargin">
+<h3>We Love AudioKit and You Might Too!</h3>
+<p>Make no mistake about it, we built AudioKit out of a deep love for sound and music, and huge amount of respect for people who make amazing audio apps.  Our passion for creating the best possible environment for creating audio apps has led us to build a toolkit that excels on numerous fronts, each of which are discussed in more-depth from the links on the left. To boil it down to a few points, AudioKit was built to be:</p>
 
-    <ul class="sidenav">
-        <li><a href="#overview">Overview<i class="icon-chevron-right"></i></a></li>
-        <li><a href="#playgrounds"      ><i class="icon-bolt2 "     ></i>Fast-development       <i class="icon-chevron-right"></i></a></li>
-        <li><a href="#well_named"       ><i class="icon-code"       ></i>Well-Named Code        <i class="icon-chevron-right"></i></a></li>
-        <li><a href="#sensible-defaults"><i class="icon-params"     ></i>Sensible Defaults & Presets<i class="icon-chevron-right"></i></a></li>
-        <li><a href="#xcode-integration"><i class="icon-apple"      ></i>Tight Xcode Integration<i class="icon-chevron-right"></i></a></li>
-        <li><a href="#examples"         ><i class="icon-tablet2"    ></i>Many Examples          <i class="icon-chevron-right"></i></a></li>
-        <li><a href="#tests"            ><i class="icon-stethoscope"></i>Thorough Test Suite    <i class="icon-chevron-right"></i></a></li>
-        <li><a href="#operations"       ><i class="icon-microphone" ></i>100+ Operations        <i class="icon-chevron-right"></i></a></li>
-        <li><a href="#sequences"        ><i class="icon-stopwatch"  ></i>Powerful Sequencing    <i class="icon-chevron-right"></i></a></li>
-        <li><a href="#utilities"        ><i class="icon-graph"      ></i>High-level Utilities   <i class="icon-chevron-right"></i></a></li>
-        <li><a href="#open-source"      ><i class="icon-github-alt" ></i>Open-Source            <i class="icon-chevron-right"></i></a></li>
+<p><ul class="iconlist">
+    <li><i class="icon-line-play"></i>Easy-to-learn and understand</li>
+    <li><i class="icon-line-play"></i>The quickest way to develop a real-world audio application</li>
+    <li><i class="icon-line-play"></i>Powerful enough to enable your most ambitious ideas</li>
+    <li><i class="icon-line-play"></i>Evolving and improving over time</li>
     </ul>
+</p>
+<p>Those goals are what have driven us to create a new version of AudioKit, version 3, which is a complete rewrite of AudioKit.  The remainder of this page is dedicated to discussing how the features have changed from AudioKit 2 to 3.</p>
 
-</div>
 
-<div class="col_two_third col_last nobottommargin">
-    <div id="overview">
+<h3>Features where AudioKit 3 Crushes AudioKit 2</h3>
 
-    <h3>Why We Love AudioKit and You Might Too!</h3>
-    <p>Make no mistake about it, we built AudioKit out of a deep love for sound and music, and huge amount of respect for people who make amazing audio apps.  Our passion for creating the best possible environment for creating audio apps has led us to build a toolkit that excels on numerous fronts, each of which are discussed in more-depth from the links on the left. To boil it down to a few points, AudioKit was built to be:</p>
+<table class="table table-bordered table-hover">
 
-    <p><ul class="iconlist">
-        <li><i class="icon-line-play"></i>Easy-to-learn and understand</li>
-        <li><i class="icon-line-play"></i>The quickest way to develop a real-world audio application</li>
-        <li><i class="icon-line-play"></i>Powerful enough to enable your most ambitious ideas</li>
-        <li><i class="icon-line-play"></i>Evolving and improving over time</li>
-        </ul>
+<thead><tr class="success"><th>Feature</th><th>V2.x</th><th>V3 Beta</th></tr></thead>
+
+<tr>
+<th class="success">Live Coding with Playgrounds</th>
+<td>
+    <p>35 Objective-C Playgrounds based off of KZPlayground are powerful but do require extending Xcode with dynamic code injection and broke every time you updated Xcode.
     </p>
+</td>
+<td>
+    <p>AudioKit 3.0 brings audio development and experimentation to Xcode's native Swift Playgrounds. AudioKit Playgrounds allow for rapid prototyping of an audio system, with instant feedback of how your code sounds. You no longer have to recompile your project after changing a single parameter to hear what the new value sounds like-just make your changes, and the Playground will already have updated itself. Once you've written and tested your audio system using Playgrounds, you can use that code in your main app.</p>
 
-    <p>From these basic principles all of the features to left have followed.</p>
+    <p>There are over 100 playgrounds included with AudioKit!  The playgrounds come in two flavors, iOS, and OSX, because the playgrounds for each OS have different capabilities.  OS X Playgrounds have the ability to spawn windows with sliders for instance.  On the other hand, many processing and generation nodes don't work in OS X, so there is a trade-off.</p>
 
-    </div>
+</td>
+</tr>
 
-    <div id="playgrounds">
-    <h3>Fast-development with Playgrounds</h3>
-    <p>AudioKit 2.0 introduces the notion of a Playground, which is a little bit like Apple's Swift Playgrounds, but for Objective-C and much more powerful. AudioKit Playgrounds allow for rapid prototyping of an audio system, with instant feedback of how your code sounds. You no longer have to recompile your project after changing a single parameter to hear what the new value sounds like-just make your changes, and the Playground will already have updated itself. Once you've written and tested your audio system using Playgrounds, you can use that code in your main app.</p>
+<tr>
+<th class="success">Installation</th>
+<td>
+<p class="success">Fairly easy installation as a static or dynamic library.</p>
+</td>
+<td><p>Extremely easy installation as a framework.  Basically just drag the framework into your project.  CocoaPods and Carthage support is planned and may be in place by the time you're reading this.</p></td>
+</tr>
 
-    <p>We've developed a few Playgrounds for you to use, and are working on including many more!</p>
+<tr>
+<th class="success">Examples</th>
+<td><p>Hello World and AudioKitDemo.</p></td>
+<td><p>Hello World plus Swift Synth, a virtual analog synthesizer that is so cool we submitted it to the AppStore (as a free app of course!).  AudioKit Particles and a few MIDI Sequencing demos are included as well.</p></td>
+</tr>
 
-    <p>Our vision for Playgrounds is to enable developers and sound-designers to be able to work quickly, efficiently, and more closely with each other during the audio-prototyping phase of app development.</p>
-    </div>
+<tr>
+<th class="success">Audio Engine</th>
+<td>
+<p>Csound</p></td>
+<td>
+<p>CoreAudio, AVAudioEngine and Soundpipe/Sporth which includes code from Chuck, Csound, Faust, Guitarix, ToneStack.  Basically, if is open-sourced we can include it.  Email us!</p></td>
+</tr>
 
-    <div id="open-source">
-        <h3>Open-Source Community Driven</h3>
-        <p>We made AudioKit open-source because we believe that clear, powerful audio development is best developed and maintained through a large, active base of developers and users. Our core code, tests, examples, and website are all available for contributions.
-        If you’re interested in contributing to AudioKit, you can <a href="mailto:audiokit@audiokit.io">email us</a> directly,  <a href="https://twitter.com/AudioKitMan">follow us on Twitter</a>, or post to the <a href="https://groups.google.com/forum/#!forum/audiokit">forum</a>.</p>
+<tr>
+<th class="success"><nobr>Integration w/ Audio Tools</nobr></th>
+<td><p>Not so much.</p></td>
+<td>
+<p>AudioKit 3 attempts to be a cooperative member of any audio ecosystem.  AudioKit's nodes are just Audio Units themselves, so they can be dropped in to a signal chain as you wish.  Any third party tool can be easily included in the signal chain as well.
+</p>
+</td>
+</tr>
 
-        <p>As of Version 2.1, AudioKit is available under the <a href="https://github.com/audiokit/AudioKit/blob/develop/LICENSE">MIT License</a>.
-        </p>
+<tr>
+<th class="success">Sequencing</th>
+<td><p>Powerful but the timing was imprecise.</p></td>
+<td><p>Sequencing is achieved through Apple's CoreAudio sequencers, so it is quite powerful.  There are few sequencing playrounds and examples included to get you up to speed.</p></td>
+</tr>
 
+</table>
 
-    </div>
+<h3>Features where AudioKit 3 has a slight edge over AudioKit 2</h3>
 
-    <div id="well_named">
-        <h3>Well-Named Classes and Parameters</h3>
-        <p>We value clarity and beauty in code, which is why AudioKit utilizes well-named classes and parameters. Tradional Music-N style audio languages are characterized by succinctness at the expense of clarity. As a result, the code is often unclear and difficult to understand, especially as instruments grow more complex. The code below shows the creation and initialization of an FM oscillator in both Music-N and AudioKit; you be the judge.</p>
+<table class="table table-bordered table-hover">
 
-        <table class="table table-bordered"><thead><tr><th>Music-N</th></tr></thead>
-        <tr>
-          <td>
-        {% highlight bash %}
-        asig foscili 1, 440, 1, 2, 3
-        {% endhighlight %}
-          </td>
-          </tr>
-          <thead><tr><th>AudioKit</th></tr></thead>
-          <tr>
-          <td>
-{% highlight objective-c %}
-[[AKFMOscillator alloc] initWithWaveform:[AKTable standardSineWave]
-                           baseFrequency:akp(440)
-                       carrierMultiplier:akp(1)
-                    modulatingMultiplier:akp(2)
-                         modulationIndex:akp(3)
-                               amplitude:akp(1)];
-{% endhighlight %}
-          </td>
-        </tr>
-        </table>
-    </div>
+<thead><tr class="success"><th>Feature</th><th>V2.x</th><th>V3 Beta</th></tr></thead>
 
-    <div id="sensible-defaults">
-        <h3>Sensible Defaults</h3>
-        <p>Sensible defaults allow you to create an AudioKit object without having to guess what initial values are appropriate—when you create an object, the parameter values will automatically be set to values that make sense. Of course, just as before, you can specify the value of all parameters in the init function, or use the defaults and change the values using properties.</p>
+<tr>
+<th class="success"><nobr>Docs and Tutorials</nobr></th>
+<td><p>Gorgeous docs generated by AppleDoc. Good tutorials.</p></td>
+<td><p>Gorgeous docs generated by Jazzy.  Playgrounds do a great job of replacing tutorials.</p></td>
+</tr>
 
-        <p>As an example, many physical models sound best with specific parameters that you will always want, so for a canonical sleighbell sound, you can use the simplified version on the right:</p>
-        <p>
+<tr>
+<th class="success">Graphing</th>
+<td>
+<p>Plots of audio at input or output.</p>
+</td>
+<td>
+<p>Plots of audio at any point in the signal chain.</p>
+</td>
+</tr>
 
-        <div class="hide-on-mobiles">
-        <table class="table table-bordered"><thead><tr><th>Full Initialization</th><th>Sensible Defaults</th></tr></thead>
-        <tr>
-          <td rowspan=2>
-{% highlight objective-c %}
-[[AKSleighbells alloc]initWithIntensity:akp(32)
-                          dampingFactor:akp(0.2)
-                  mainResonantFrequency:akp(2500)
-                 firstResonantFrequency:akp(5300)
-                secondResonantFrequency:akp(6500)];
-{% endhighlight %}
-          </td>
-          <td>
-            <b>Objective-C:</b><br>
-        {% highlight objective-c %}
-        [AKSleighbells sleighbells];
-        {% endhighlight %}
-          </td>
-        </tr>
-        <tr>
-          <td>
+<tr>
+<th class="success">Language</th>
+<td><p>Written in Objective-C, accessible from Swift apps.</p></td>
+<td>
+<p>Written in Swift with C/C++ underpinnings.  The framewowrk probably works fine with Objective-C projects, but we're focussing on Swift from now on, because it rocks!</p></td>
+</tr>
 
-            <b>Swift:</b><br>
-        {% highlight swift%}
-        AKSleighbells();
-        {% endhighlight %}
-          </td>
-        </tr>
-        </table>
-
-        <h3>Sensible Presets</h3>
-        <p>In addition to sensible defaults, we give you a variety of default parameter sets lumped together into presets. For example, with the sleighbells above you could also create sleighbells wift softer bell sounds or an open bell sounds. </p>
-{% highlight objective-c %}
-[AKSleighbells presetSoftBells];
-[AKSleighbells presetOpenBells];
-{% endhighlight %}
-
-        </div>
-    </div>
-
-    <div id="xcode-integration">
-        <h3>Tight Xcode Integration</h3>
-        <h4>Write all your code in one place</h4>
-        <p>
-        High-level audio programming is often done in a complete separate environment from general application programming. With AudioKit, your audio programming is done in the same language that your application is written in. You only need one program and one language for both audio and app logic implementation.
-        </p>
-
-        <h4>Easy Installation</h4>
-        <p>
-        First and foremost, we strive to make AudioKit very easy to install.  The examples should work out-of-the-box without any additional configuration.  <a href="/v2/tutorials/">Configuration Tutorials and Walkthroughs</a> are available on this site.</p>
-
-        <h4>Clear Documentation</h4>
-        <p>
-        Complete <a href="/docs">Xcode documentation</a> is accomplished with both in-line documentation, and through a downloadable docset.  Xcode will provide on-the-fly pop-overs, code completion, and class information for all AudioKit objects, so you can easily access that information while you’re still in Xcode. In addition, we’ve made several file templates for both Objective-C and Swift.
-        </p>
-
-        <img src=/v2/tutorials/dashcode.png style="width: 100%" alt="DashCode">
-
-
-        <h4>AudioKit-specific File Templates</h4>
-        <p>
-        We’ve made AudioKit templates for creating instruments, processors, and conductor classes available in both Objective-C and Swift.
-        </p>
-
-        <img src=/v2/templates/FileTemplates.png style="width: 100%" alt="File Templates">
-
-    </div>
-
-    <div id="examples">
-        <h3>Many Examples</h3>
-        <p>
-        We've included two example projects into the main AudioKit repository. The first is a "Hello World" project that consists of a simple sine-wave oscillator. The second example shows how AudioKit can be utilized in an audio synthesis, processing, or analysis context.
-        </p>
-
-        <table class="table table-bordered">
-        <thead>
-        <th>Example</th>
-        <th>iOS (Obj-C)</th>
-        <th>iOS (Swift)</th>
-        <th>Mac (Obj-C)</th>
-        <th>Mac (Swift)</th>
-        </tr></thead>
-        </tr>
-
-        <tr>
-        <td><a href="/v2/examples/HelloWorld/">Hello World</a></td>
-         <td align="center">✓</td>
-         <td align="center">✓</td>
-         <td align="center">✓</td>
-         <td align="center">✓</td>
-        </tr>
-
-        <tr>
-        <td><a href="/v2/examples/AudioKitDemo">AudioKitDemo</a></td>
-         <td align="center">✓</td>
-         <td align="center">✓</td>
-         <td align="center">✓</td>
-         <td align="center">✓</td>
-        </tr>
-        </table>
-
-    </div>
-
-    <div id="tests">
-        <h3>Thorough Test Suite</h3>
-        <p>We're passionate about our tests because they allow us to build upon our code without worrying that we'll break anything along the way!  AudioKit uses TravisCI for continuous integration testing. Here's a video showing how we use tests and how you can as well:</p>
-
-          <iframe src="//player.vimeo.com/video/126031747" frameborder="0" width="500" height="313" webkitallowfullscreen mozallowfullscreen allowfullscreen class="gallery-movie"></iframe>
-    </div>
-
-    <div id="operations">
-        <h3>Many Operations</h3>
-        <p>AudioKit has over 100 operations, including oscillators, physical models, reverbs, filters, and synthesizers.  They are well-named and have named parameters, and we're working to make each operation fully-tested with sensible defaults.  The operations are categorized into folders as follows:</p>
-
-        <table class="table table-bordered"><thead><th>Category</th><th>Description</th></tr></thead>
-        <tr>
-        <td><a href="/v2/operations/">Analysis</td>
-        <td>Tracking classes that determine the amplitude and frequency of signals.
-        </td>
-        </tr>
-
-        <tr>
-        <td><a href="/v2/operations/">FFT</td>
-         <td>Spectral functions including cross synthesis, mixing, scaling, warping, and resynthesis.
-        </td>
-        </tr>
-
-        <tr>
-        <td><a href="/v2/operations/">Mathematical Operations</td>
-         <td>Basic operations such as scaling, mixing, summing, and multiplication of signals.
-        </td>
-        </tr>
-
-        <tr>
-        <td><a href="/v2/operations/">Signal Generators</td>
-         <td>Classes for physical models, oscillators, linear controls, and granular synthesis textures.
-        </td>
-        </tr>
-
-        <tr>
-        <td><a href="/v2/operations/">Signal Input and Output</td>
-         <td>Classes for handling incoming audio from devices and files as well as outputting audio to a speaker or files.
-        </td>
-        </tr>
-
-        <tr>
-        <td><a href="/v2/operations/">Signal Modifiers</td>
-         <td>Effects such as convolution, delay, compression, flange, vibrato, reverb, panning, and many filters.
-        </td>
-        </tr>
-
-        </table>
-    </div>
-
-    <div id="sequences">
-        <h3>Powerful Sequences and Phrases</h3>
-        <p>The sequencer in AudioKit is remarkable because it is not just limited to musical events.  Music logic and app logic can appear side-by-side in events triggered by sequences.  As a simple example, you can process the iPhone's sensor information and create audio events on the fly within a sequence.  Alternatively, you can use musical events to trigger iOS functions like drawing graphics on the screen or even posting to Twitter.</p>
-        <p>
-        When you don't need all that power, you can use the simpler syntax of phrases instead of sequences to play a series of notes on a given instrument.
-        </p>
-    </div>
-
-    <div id="utilities">
-        <h3>High-level Utilities</h3>
-        <p>AudioKit includes several built-in, high-level utilities that function as reusable components. These utilities will allow you to quickly add high-level features with a minimal amount of coding. </p>
-
-        <h4>User Interface Tools</h4>
-
-        <p>With AKTools, it is very easy to tie instrument properties to user interface elements such as sliders and buttons. You can also create your own custom user-interface utilities. We've provided the level-meter as an example of how to do this. </p>
-
-        <h4>Instruments</h4>
-        <p>Among these utilities are a sampler, pitch-tracker, and a level meter.</p>
-        <p>Additionally, there are several pre-made instruments included as well, and more will be added soon!</p>
-
-        <img src=/v2/utilities/plots.png align=right style="width:30%" alt="Plots">
-        <h4>Plots</h4>
-
-        <p>We've also included some components that allow for easy plotting of audio waveforms. These include:</p>
-          <ul class="iconlist">
-           <li><i class="icon-line-play"></i>Microphone input plotting</li>
-           <li><i class="icon-line-play"></i>Audio output plotting</li>
-           <li><i class="icon-line-play"></i>FFT plots</li>
-           <li><i class="icon-line-play"></i>Instrument property plotting</li>
-           <li><i class="icon-line-play"></i>Table plots</li>
-          </ul>
-
-
-    </div>
-
-</div>
+<tr>
+<th class="success">License</th>
+<td><p>MIT License with an asterisk.</p></td>
+<td><p>MIT License. <b>Period.</b></p></td>
+</tr>
+</table>
 
 
 
+<h3>Features where AudioKit 2 still wins (but we're working on them)</h3>
+
+<table class="table table-bordered table-hover">
+
+<thead><tr class="danger"><th>Feature</th><th>V2.x</th><th>V3 Beta</th></tr></thead>
+
+<tr>
+<th class="danger"><nobr>Sensible Defaults and Presets</nobr></th>
+<td><p>Yes.</p></td>
+<td><p>Defaults, yes.  Presets not so much.  But they are not off the radar and they will be added.</p></td>
+</tr>
+
+<tr>
+<th class="danger">Stability</th>
+<td><p>This code has been stable for a while and is powering apps in the Apple Store.</p></td>
+<td><p>Well, AudioKit 3 still in Beta and is a complete rewrite of AudioKit, so we can't say for sure, but it's been working great for us so far.</p></td>
+</tr>
+
+
+<tr>
+<th class="danger">Templates</th>
+<td><p>Xcode templates for common classes.</p></td>
+<td><p>No templates yet.  While we're able to make templates, they are not too high on our priority list because AudioKit 3 is so flexible, you're much more free to code in your own style.</p></td>
+</tr>
+
+<tr>
+<th class="danger">Tests</th>
+<td><p>Extremely well tested.</p></td>
+<td><p>Test infrastructure has been started, but no tests have been written yet.  This is still very important to us and it is a high priority.   Travis CI is implemented to ensure the frameworks compile and the projects can be built.</p></td>
+</tr>
 
 
 
-
-
-
-
+</table>

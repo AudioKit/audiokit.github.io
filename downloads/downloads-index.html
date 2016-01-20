@@ -9,8 +9,8 @@ layout: section_index
 
 <p>There are two branches of AudioKit, the Master branch, and the Develop branch. The Develop branch is the default branch as it is where new features of AudioKit are added as they are finished... the very latest and greatest. If you're not comfortable living on the edge, then the Master branch is the most 'stable' option, as it is only changed when a new version of AudioKit is released. </p>
 <ul class="iconlist">
-<li><i class="icon-github-alt"></i><a href="https://github.com/audiokit/AudioKit/tree/master">AudioKit Master branch</a> - <a href="https://github.com/audiokit/AudioKit/archive/master.zip">(24MB zip)</a></li>
-<li><i class="icon-github-alt"></i><a href="https://github.com/audiokit/AudioKit/tree/develop">AudioKit Develop branch </a> - <a href="https://github.com/audiokit/AudioKit/archive/develop.zip">Development Branch (24.1MB zip)</a> </li>
+<li><i class="icon-github-alt"></i><a href="https://github.com/audiokit/AudioKit/tree/master">AudioKit Master branch</a> - <a href="https://github.com/audiokit/AudioKit/archive/master.zip">Zip Archive</a></li>
+<li><i class="icon-github-alt"></i><a href="https://github.com/audiokit/AudioKit/tree/develop">AudioKit Develop branch </a> - <a href="https://github.com/audiokit/AudioKit/archive/develop.zip">Zip Archive</a> </li>
 </ul>
 </p>
 
@@ -20,21 +20,24 @@ layout: section_index
 $ git clone https://github.com/audiokit/AudioKit.git
 {% endhighlight %}
 
+<p>Please note that you can not upgrade from to AudioKit 3 from previous versions, you need to reclone the repository. </p>
+
 <h3>Installation Instructions</h3>
 <p>
-Installation of AudioKit into your project differs depending on whether you're making an iOS or OSX project, whether or not it will be written in Swift, and what your choice of static vs. dynamic library is.  There are two installation instruction files included with AudioKit:</p>
+Since version 3.0, AudioKit is distributed as a universal dynamic framework with no further dependencies on all supported platforms. This makes it easy to integrate within your own projects.
+
+The installation instructions below cover both installing the compiled framework or compiling the framework from source:</p>
 
 <ul class="iconlist">
-<li><i class="icon-github-alt"></i><a href="https://github.com/audiokit/AudioKit/tree/master/INSTALL-iOS.md">INSTALL-iOS.md</a></li>
-<li><i class="icon-github-alt"></i><a href="https://github.com/audiokit/AudioKit/tree/master/INSTALL-OSX.md">INSTALL-OSX.md</a></li>
+<li><i class="icon-github-alt"></i><a href="https://github.com/audiokit/AudioKit/tree/master/Frameworks/INSTALL.md">INSTALL.md</a></li>
 </ul>
 
 <h3>Installing using CocoaPods</h3>
 
-<p>If you are creating an iOS project using Objective-C, you can use CocoaPods to install AudioKit. In your project, update your Podfile:</p>
+<p>You can use CocoaPods to install AudioKit. In your project, update your Podfile:</p>
 
 {% highlight ruby %}
-pod 'AudioKit', '~> 2.2'
+pod 'AudioKit', '~> 3.0'
 {% endhighlight %}
 
 Then execute:
@@ -43,39 +46,12 @@ Then execute:
 $ pod install
 {% endhighlight %}
 
-<h2>Other downloads</h2>
-
-<p>We include a variety of sample projects and tutorials alongside the toolkit so that you can get started right away.</p>
-
-
-<p>Example projects:
-<ul class="iconlist">
-<li><i class="icon-github-alt"></i><a href="https://github.com/audiokit/Examples">AudioKit Examples</a> - Extra examples </li>
-<li><i class="icon-github-alt"></i><a href="https://github.com/audiokit/SpaceCannon">Space Cannon</a> - AudioKit in an iOS SpriteKit game </li>
-</ul>
-</p>
-
-<p>Tutorial projects:
-<ul class="iconlist">
-<li><i class="icon-github-alt"></i><a href="https://github.com/audiokit/FirstInstrumentTutorial">First Instrument Tutorial</a></li>
-<li><i class="icon-github-alt"></i><a href="https://github.com/audiokit/UserInteractionTutorial">User Interaction Tutorial</a> </li>
-<li><i class="icon-github-alt"></i><a href="https://github.com/audiokit/FirstInstrumentTutorialInSwift">First Instrument Tutorial (Swift)</a></li>
-<li><i class="icon-github-alt"></i><a href="https://github.com/audiokit/UserInteractionTutorialInSwift">User Interaction Tutorial (Swift)</a></li>
-</ul>
-</p>
-
-
 <h2>Installing Xcode Documentation</h2>
 
-<p>Code completion, pop-ups, and sidebar information are automatically created in Xcode, but if you would like Apple-style API reference documentation, download the docset:</p>
+<p>Code completion, pop-ups, and sidebar information are automatically created in Xcode, but if you would like Apple-style API reference documentation, download the <a href="/docs/docsets/AudioKit.tgz">docset</a>.</p>
 
-<p><a href="https://www.dropbox.com/s/k357kav4xxf1072/io.audiokit.AudioKit.docset.tar.gz?dl=0"><p>
-<img src=/v2/downloads/docset.png style="width:100%; max-width:267px" alt="DocSet">
-</p></a></p>
-
-<p>
-Un-tar it and place it in the Shared Documentation folder:</p>
+<p>Un-tar it and place it in the Shared Documentation folder:</p>
 
 {% highlight bash %}
-tar -xf ~/Downloads/io.audiokit.AudioKit.docset.tar.gz -C ~/Library/Developer/Shared/Documentation/DocSets/
+tar -xf ~/Downloads/AudioKit.tgz -C ~/Library/Developer/Shared/Documentation/DocSets/
 {% endhighlight %}
