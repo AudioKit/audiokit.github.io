@@ -56,6 +56,15 @@ layout: section_index
 $ git clone https://github.com/audiokit/AudioKit.git
 {% endhighlight %}
 
+<p>Next, to create the framework files that the examples use:</p>
+
+{% highlight bash %}
+$ cd AudioKit/Frameworks
+$ ./build_frameworks.sh
+{% endhighlight %}
+
+<p>This will build the frameworks for all three operating systems.  You can delete the ones you don't need.</p>
+
 <p>Please note that you can not upgrade to AudioKit 3 from previous versions, you need to reclone the repository. </p>
 
 <h3>Installation Instructions</h3>
