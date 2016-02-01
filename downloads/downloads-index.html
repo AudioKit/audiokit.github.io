@@ -86,10 +86,16 @@ The installation instructions below cover both installing the compiled framework
 </ul>
 
 <iframe src="https://player.vimeo.com/video/152398360?title=1&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<!--
-<h3>Installing using CocoaPods</h3>
 
-<p>You can use CocoaPods to install AudioKit. In your project, update your Podfile:</p>
+<h3>Installing using Package Mangers: Carthage, CocoaPods</h3>
+
+<p>You can easily add the framework to your project by using Carthage. Just use the following in your Cartfile:</p>
+
+{% highlight ruby %}
+github "audiokit/AudioKit"
+{% endhighlight %}
+
+<p>You can also use CocoaPods to install AudioKit. In your project, update your Podfile:</p>
 
 {% highlight ruby %}
 pod 'AudioKit', '~> 3.0'
@@ -100,7 +106,7 @@ Then execute:
 {% highlight bash %}
 $ pod install
 {% endhighlight %}
-//-->
+
 
 <h2>Installing Xcode Documentation</h2>
 
