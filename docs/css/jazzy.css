@@ -118,7 +118,7 @@ header {
   position: fixed;
   top: 70px;
   bottom: 0;
-  width: 300px;
+  width: 230px;
   word-wrap: normal; }
 
 .nav-groups {
@@ -146,12 +146,12 @@ header {
 .main-content {
   background-color: #fff;
   border: 1px solid #e2e2e2;
-  margin-left: 316px;
+  margin-left: 246px;
   position: absolute;
   overflow: hidden;
   padding-bottom: 60px;
   top: 70px;
-  width: 664px; }
+  width: 734px; }
   .main-content p, .main-content a, .main-content code, .main-content em, .main-content ul, .main-content table, .main-content blockquote {
     margin-bottom: 1em; }
   .main-content p {

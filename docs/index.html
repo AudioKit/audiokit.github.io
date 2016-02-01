@@ -7,13 +7,13 @@
     <meta charset='utf-8'>
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
-
+    
   </head>
   <body>
     <a title="AudioKit  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="http://audiokit.io/">AudioKit</a> (100% documented)</p>
+        <p><a href="index.html">AudioKit Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/audiokit/AudioKit"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -31,7 +31,10 @@
             <a href="AudioKit Core.html">AudioKit Core</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/AKManager.html">AKManager</a>
+                <a href="Classes/AudioKit.html">AudioKit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKSettings.html">AKSettings</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/AKTable.html">AKTable</a>
@@ -87,6 +90,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKMIDIInstrument.html">AKMIDIInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/AKMIDIListener.html">AKMIDIListener</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/AKMIDIStatus.html">AKMIDIStatus</a>
@@ -532,10 +538,16 @@
       <article class="main-content">
         <section>
           <section class="section">
-
+            
             <a href='#audiokit_v3' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='audiokit_v3'>AudioKit V3</h1>
 
-<p><em>This document was last updated: January 16, 2016</em></p>
+<p><a href="https://travis-ci.org/audiokit/AudioKit"><img src="https://travis-ci.org/audiokit/AudioKit.svg" alt="Build Status"></a>
+<a href="http://cocoadocs.org/docsets/AudioKit"><img src="https://img.shields.io/cocoapods/l/AudioKit.svg?style=flat" alt="License"></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
+<a href="https://github.com/CocoaPods/Specs/tree/master/Specs/AudioKit"><img src="https://img.shields.io/cocoapods/v/AudioKit.svg?style=flat" alt="CocoaPods compatible"></a>
+<a href="http://twitter.com/AudioKitMan"><img src="https://img.shields.io/twitter/follow/AudioKitMan.svg?style=social" alt="Twitter Follow"></a></p>
+
+<p><em>This document was last updated: January 29, 2016</em></p>
 
 <p>AudioKit is an audio synthesis, processing, and analysis platform for OS X, iOS, and tvOS. This document serves as a one-page introduction to AudioKit, but we have much more information available on the AudioKit website at <a href="http://audiokit.io/">http://audiokit.io/</a></p>
 <a href='#version_3_0' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='version_3_0'>Version 3.0</h3>
@@ -545,7 +557,7 @@
 <ul>
 <li>Installation as a framework</li>
 <li>Integrated with CoreAudio audio units from Apple</li>
-<li>No dependencies on Csound or libsndfile</li>
+<li>No external dependencies</li>
 <li>Can use opcodes from Faust, Chuck, STK, Csound, and others</li>
 <li>Many included Xcode Swift playgrounds</li>
 </ul>
@@ -565,22 +577,25 @@
 <p>Installation with CocoaPods and Carthage is also planned but may not come with the first release.</p>
 <a href='#example_code' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='example_code'>Example Code</h2>
 
-<p>There are three Hello World projects, one for each of the Apple platforms: OSX, iOS, and tvOS. They simply play an oscillator and display the waveform.  Hello World basically consists of just a few sections of code:</p>
+<p>There are three Hello World projects, one for each of the Apple platforms: OSX, iOS, and tvOS. They simply play an oscillator and display the waveform.</p>
 
-<p>Setting up AudioKit:</p>
-<pre class="highlight plaintext"><code>let audiokit = AKManager.sharedInstance
+<p>The examples rely on the frameworks being built so you can either download the precompiled frameworks or build them on your own:</p>
+<pre class="highlight plaintext"><code>$ cd Frameworks
+$ ./build_frameworks.sh
 </code></pre>
+
+<p>Hello World basically consists of just a few sections of code:</p>
 
 <p>Creating the sound, in this case an oscillator:</p>
 <pre class="highlight plaintext"><code>var oscillator = AKOscillator()
 </code></pre>
 
 <p>Telling AudioKit where to get its audio from (ie. the oscillator):</p>
-<pre class="highlight plaintext"><code>audiokit.audioOutput = oscillator
+<pre class="highlight plaintext"><code>AudioKit.output = oscillator
 </code></pre>
 
 <p>Starting AudioKit:</p>
-<pre class="highlight plaintext"><code>    audiokit.start()
+<pre class="highlight plaintext"><code>AudioKit.start()
 </code></pre>
 
 <p>And then responding to the UI by changing the oscillator:</p>
@@ -597,35 +612,41 @@
 <p>Because Playgrounds have very different capabilities depending on whether they are for OSX or iOS, we have two sets of playgrounds for each OS.  At this point tvOS behaves very much like iOS so there is no set of playgrounds explicitly for tvOS.</p>
 <a href='#audiokit_for_ios_playgrounds' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='audiokit_for_ios_playgrounds'>AudioKit for iOS Playgrounds</h3>
 
-<p>There are many playground pages within the AudioKit for iOS Playground.  Each playground includes a demo of a node or operation or an example of sound design.  The first playground is a Table of Contents and the second one is just a Hello World to prove whether or not you have things set up correctly on your machine.  After the first few playgrounds, you should consider jumping around to whatever interests you.  Since Apple doesn&rsquo;t provide much of a way to organize playgrounds, the best place to see how playgrounds are grouped together is to look at the <a href="http://audiokit.io/playgrounds/">http://audiokit.io/playgrounds/</a> where you can also see videos of the playgrounds in action.</p>
-<a href='#audiokit_for_osx_playgrounds' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='audiokit_for_osx_playgrounds'>AudioKit for OSX Playgrounds</h3>
+<p>There are many playground pages within the AudioKit for iOS Playground.  Each playground includes a demo of a node or operation or an example of sound design.  The first playground is a Table of Contents in which the playgrounds are organized via markup.  The playground may also be opened up to view the playgrounds alphabetically.</p>
+<a href='#audiokit_for_os_x_playgrounds' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='audiokit_for_os_x_playgrounds'>AudioKit for OS X Playgrounds</h3>
 
-<p>OSX Playgrounds are able to launch NSWindows that can be used to control the AudioKit effects processors, so these playgrounds have a UI that allow you to adjust the parameters of an effect very easily.  However, OSX playgrounds at this point do not support AudioKit nodes that do not use Apple AudioUnit processors, so there are fewer things that we can demonstrate in OSX playgrounds.  Hopefully this will be fixed in the future - it is unclear whether the problem is in AudioKit or within the Xcode playground audio implementation.</p>
-<a href='#developer_tools' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='developer_tools'>Developer Tools</h2>
-
-<p>These are tools for the developers of AudioKit itself, not tools for developers making apps with AudioKit.  This folder contains scripts and templates that generate nodes and operations from meta data contained in yaml or interface files.</p>
+<p>OS X Playgrounds are able to launch NSWindows that can be used to control the AudioKit effects processors, so these playgrounds have a UI that allow you to adjust the parameters of an effect very easily.  However, OS X playgrounds at this point do not support AudioKit nodes that do not use Apple AudioUnit processors, so there are fewer things that we can demonstrate in OSX playgrounds.  Hopefully this will be fixed in the future - it is unclear whether the problem is in AudioKit or within the Xcode playground audio implementation.</p>
 <a href='#tests' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='tests'>Tests</h2>
 
 <p>So far, the only testing that we do automatically through Travis is to ensure that all of the projects included with AudioKit build successfully.  AudioKit version 2 was heavily tested, but at the time of this writing AudioKit 3 does not have a test suite in place.  This is high on our priority list after an initial release.</p>
+<a href='#package_managers' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='package_managers'>Package Managers</h2>
+
+<p>You can easily add the framework to your project by using <a href="https://github.com/Carthage/Carthage">Carthage</a>. Just use the following in your <code>Cartfile</code>:</p>
+<pre class="highlight plaintext"><code>github "audiokit/AudioKit"
+</code></pre>
+
+<p>If you use CocoaPods, you can also easily get the latest AudioKit binary framework for your project. Use this in your <code>Podfile</code>:</p>
+<pre class="highlight plaintext"><code>pod 'AudioKit', '~&gt; 3.0'
+</code></pre>
 <a href='#about_us' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='about_us'>About Us</h2>
 
-<p>AudioKit was created by the follow team whose contributions are fully chronicled in Github, and summarized below in alphabetical order by first name:</p>
+<p>AudioKit was created by the following team whose contributions are fully chronicled in Github, and summarized below in alphabetical order by first name:</p>
 
 <ul>
-<li>Aurelius Prochazka: Primary programmer of AudioKit. Lives for this stuff.  Your life line if you need help.</li>
-<li>Jeff Cooper: Rearchitected all things MIDI, sampler, and sequencer related in AudioKit 3.</li>
-<li>Matthew Fecher: Sound design, graphic design, and programming of the Swift Synth example.</li>
-<li>Nicholas Arner: Longtime contributor to AudioKit and AudioKit&rsquo;s web site.</li>
-<li>Paul Batchelor: The author of Soundpipe, and Sporth, which serve as two primary audio engines in AudioKit 3.</li>
-<li>Simon Gladman: Contributed his AudioKitParticles project and PencilSynth which appears as part of TouchPlayer.</li>
-<li>Stephane Peter: Installation and configuration czar and code reviewer.</li>
-<li>Syed Haris Ali: The author of EZAudio which is AudioKit&rsquo;s included waveform plotter and FFT analysis engine.</li>
+<li><strong>Aurelius Prochazka</strong>: Primary programmer of AudioKit. Lives for this stuff.  Your life line if you need help.</li>
+<li><strong>Jeff Cooper</strong>: Rearchitected all things MIDI, sampler, and sequencer related in AudioKit 3.</li>
+<li><strong>Matthew Fecher</strong>: Sound design, graphic design, and programming of the Swift Synth example.</li>
+<li><strong>Nicholas Arner</strong>: Longtime contributor to AudioKit and AudioKit&rsquo;s web site.</li>
+<li><strong>Paul Batchelor</strong>: The author of <a href="https://github.com/paulbatchelor/soundpipe">Soundpipe</a>, and <a href="https://github.com/paulbatchelor/sporth">Sporth</a>, which serve as two primary audio engines in AudioKit 3.</li>
+<li><strong>Simon Gladman</strong>: Longtime user of AudioKit, contributed his AudioKitParticles project to AudioKit 3.</li>
+<li><strong>Stephane Peter</strong>: Installation and configuration czar and code reviewer.</li>
+<li><strong>Syed Haris Ali</strong>: The author of <a href="https://github.com/syedhali/EZAudio">EZAudio</a> which is AudioKit&rsquo;s included waveform plotter and FFT analysis engine.</li>
 </ul>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-01-19)</p>
+          <p>&copy; 2016 <a class="link" href="https://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-01-31)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

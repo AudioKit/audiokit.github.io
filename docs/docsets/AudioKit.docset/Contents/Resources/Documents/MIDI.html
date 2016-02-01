@@ -7,13 +7,13 @@
     <meta charset='utf-8'>
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
-
+    
   </head>
   <body>
     <a title="MIDI  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="http://audiokit.io/">AudioKit</a> (100% documented)</p>
+        <p><a href="index.html">AudioKit Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/audiokit/AudioKit"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -31,7 +31,10 @@
             <a href="AudioKit Core.html">AudioKit Core</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/AKManager.html">AKManager</a>
+                <a href="Classes/AudioKit.html">AudioKit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKSettings.html">AKSettings</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/AKTable.html">AKTable</a>
@@ -87,6 +90,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKMIDIInstrument.html">AKMIDIInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/AKMIDIListener.html">AKMIDIListener</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/AKMIDIStatus.html">AKMIDIStatus</a>
@@ -533,7 +539,7 @@
         <section>
           <section class="section">
             <h1>MIDI</h1>
-
+            
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -552,6 +558,16 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>MIDI input and output handler</p>
+
+<p>You add midi listeners like this:
+<code>
+var midiIn = AKMidi()
+midi.openMIDIIn()
+midi.addListener(someClass)
+</code>
+&hellip;where someClass conforms to the AKMIDIListener protocol</p>
+
+<p>You then implement the methods you need from AKMIDIListener and use the data how you need.</p>
 
                         <a href="Classes/AKMIDI.html" class="slightly-smaller">See more</a>
                       </div>
@@ -767,7 +783,7 @@ differ from system to system</li>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A version of AKInstrument specifically targeted to instruments that
+                        <p>A version of AKInstrument specifically targeted to instruments that 
 should be triggerable via MIDI or sequenced with the sequencer.</p>
 
                         <a href="Classes/AKMIDIInstrument.html" class="slightly-smaller">See more</a>
@@ -776,7 +792,39 @@ should be triggerable via MIDI or sequenced with the sequencer.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AKMIDIInstrument</span><span class="p">:</span> <span class="kt">AKNode</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AKMIDIInstrument</span><span class="p">:</span> <span class="kt">AKNode</span><span class="p">,</span> <span class="kt">AKMIDIListener</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P8AudioKit14AKMIDIListener"></a>
+                    <a name="//apple_ref/swift/Protocol/AKMIDIListener" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P8AudioKit14AKMIDIListener">AKMIDIListener</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Protocol that must be adhered to if you want your class to respond to MIDI</p>
+
+                        <a href="Protocols/AKMIDIListener.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">AKMIDIListener</span></code></pre>
 
                         </div>
                       </div>
@@ -820,7 +868,7 @@ should be triggerable via MIDI or sequenced with the sequencer.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-01-19)</p>
+          <p>&copy; 2016 <a class="link" href="https://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-01-31)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

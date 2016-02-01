@@ -32,7 +32,10 @@
             <a href="../AudioKit Core.html">AudioKit Core</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/AKManager.html">AKManager</a>
+                <a href="../Classes/AudioKit.html">AudioKit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSettings.html">AKSettings</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/AKTable.html">AKTable</a>
@@ -88,6 +91,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKMIDIInstrument.html">AKMIDIInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKMIDIListener.html">AKMIDIListener</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/AKMIDIStatus.html">AKMIDIStatus</a>
@@ -536,7 +542,7 @@
             <h1>AKMIDIInstrument</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AKMIDIInstrument</span><span class="p">:</span> <span class="kt">AKNode</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AKMIDIInstrument</span><span class="p">:</span> <span class="kt">AKNode</span><span class="p">,</span> <span class="kt">AKMIDIListener</span></code></pre>
 
                 </div>
               </div>
@@ -546,6 +552,13 @@ should be triggerable via MIDI or sequenced with the sequencer.</p>
           </section>
           <section class="section task-group-section">
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <a href="#/Properties">
+                  <h3 class="section-name">Properties</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -601,6 +614,17 @@ should be triggerable via MIDI or sequenced with the sequencer.</p>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initialization"></a>
+                <a name="//apple_ref/swift/Section/Initialization" class="dashAnchor"></a>
+                <a href="#/Initialization">
+                  <h3 class="section-name">Initialization</h3>
+                </a>
+              </div>
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -709,12 +733,23 @@ This is not in the init function because it must be called AFTER you start audio
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Handling%20MIDI%20Data"></a>
+                <a name="//apple_ref/swift/Section/Handling MIDI Data" class="dashAnchor"></a>
+                <a href="#/Handling%20MIDI%20Data">
+                  <h3 class="section-name">Handling MIDI Data</h3>
+                </a>
+              </div>
+              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit16AKMIDIInstrument22handleMIDINotificationFS0_FCSo14NSNotificationT_"></a>
-                    <a name="//apple_ref/swift/Method/handleMIDINotification(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit16AKMIDIInstrument22handleMIDINotificationFS0_FCSo14NSNotificationT_">handleMIDINotification(_:)</a>
+                    <a name="/s:FC8AudioKit16AKMIDIInstrument10midiNoteOnFS0_FTSi8velocitySi7channelSi_T_"></a>
+                    <a name="//apple_ref/swift/Method/midiNoteOn(_:velocity:channel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit16AKMIDIInstrument10midiNoteOnFS0_FTSi8velocitySi7channelSi_T_">midiNoteOn(_:velocity:channel:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -722,14 +757,14 @@ This is not in the init function because it must be called AFTER you start audio
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Handle MIDI commands that come in through NSNotificationCenter</p>
+                        <p>Handle MIDI commands that come in externally</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">handleMIDINotification</span><span class="p">(</span><span class="nv">notification</span><span class="p">:</span> <span class="kt">NSNotification</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">midiNoteOn</span><span class="p">(</span><span class="nv">note</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">velocity</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -740,12 +775,38 @@ This is not in the init function because it must be called AFTER you start audio
                             <tr>
                               <td>
                                 <code>
-                                <em>notification</em>
+                                <em>note</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Notification fo a note on or off event</p>
+                                  <p>MIDI Note number</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>velocity</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>MIDI velocity</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>MIDI channel</p>
 
                                 </div>
                               </td>
@@ -756,6 +817,17 @@ This is not in the init function because it must be called AFTER you start audio
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/MIDI%20Note%20Start/Stop"></a>
+                <a name="//apple_ref/swift/Section/MIDI Note Start/Stop" class="dashAnchor"></a>
+                <a href="#/MIDI%20Note%20Start/Stop">
+                  <h3 class="section-name">MIDI Note Start/Stop</h3>
+                </a>
+              </div>
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -815,7 +887,7 @@ This is not in the init function because it must be called AFTER you start audio
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-01-19)</p>
+          <p>&copy; 2016 <a class="link" href="https://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-01-31)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

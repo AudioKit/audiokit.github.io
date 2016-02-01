@@ -32,7 +32,10 @@
             <a href="../AudioKit Core.html">AudioKit Core</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/AKManager.html">AKManager</a>
+                <a href="../Classes/AudioKit.html">AudioKit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSettings.html">AKSettings</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/AKTable.html">AKTable</a>
@@ -88,6 +91,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKMIDIInstrument.html">AKMIDIInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKMIDIListener.html">AKMIDIListener</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/AKMIDIStatus.html">AKMIDIStatus</a>
@@ -542,9 +548,26 @@
               </div>
             <p>MIDI input and output handler</p>
 
+<p>You add midi listeners like this:
+<code>
+var midiIn = AKMidi()
+midi.openMIDIIn()
+midi.addListener(someClass)
+</code>
+&hellip;where someClass conforms to the AKMIDIListener protocol</p>
+
+<p>You then implement the methods you need from AKMIDIListener and use the data how you need.</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <a href="#/Properties">
+                  <h3 class="section-name">Properties</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -711,6 +734,71 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:vC8AudioKit6AKMIDI13midiListenersGSaPS_14AKMIDIListener__"></a>
+                    <a name="//apple_ref/swift/Property/midiListeners" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit6AKMIDI13midiListenersGSaPS_14AKMIDIListener__">midiListeners</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Array of all listeners</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">midiListeners</span><span class="p">:[</span><span class="kt">AKMIDIListener</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit6AKMIDI11addListenerFS0_FPS_14AKMIDIListener_T_"></a>
+                    <a name="//apple_ref/swift/Method/addListener(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit6AKMIDI11addListenerFS0_FPS_14AKMIDIListener_T_">addListener(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add a listener to the listeners</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addListener</span><span class="p">(</span><span class="nv">listener</span><span class="p">:</span><span class="kt">AKMIDIListener</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initialization"></a>
+                <a name="//apple_ref/swift/Section/Initialization" class="dashAnchor"></a>
+                <a href="#/Initialization">
+                  <h3 class="section-name">Initialization</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:FC8AudioKit6AKMIDIcFMS0_FT_S0_"></a>
                     <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
                     <a class="token" href="#/s:FC8AudioKit6AKMIDIcFMS0_FT_S0_">init()</a>
@@ -735,6 +823,17 @@
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Input/Output%20Setup"></a>
+                <a name="//apple_ref/swift/Section/Input/Output Setup" class="dashAnchor"></a>
+                <a href="#/Input/Output%20Setup">
+                  <h3 class="section-name">Input/Output Setup</h3>
+                </a>
+              </div>
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -883,6 +982,17 @@
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Sending%20MIDI"></a>
+                <a name="//apple_ref/swift/Section/Sending MIDI" class="dashAnchor"></a>
+                <a href="#/Sending%20MIDI">
+                  <h3 class="section-name">Sending MIDI</h3>
+                </a>
+              </div>
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -996,7 +1106,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-01-19)</p>
+          <p>&copy; 2016 <a class="link" href="https://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-01-31)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

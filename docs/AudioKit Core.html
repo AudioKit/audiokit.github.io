@@ -7,13 +7,13 @@
     <meta charset='utf-8'>
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
-
+    
   </head>
   <body>
     <a title="AudioKit Core  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="http://audiokit.io/">AudioKit</a> (100% documented)</p>
+        <p><a href="index.html">AudioKit Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/audiokit/AudioKit"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -31,7 +31,10 @@
             <a href="AudioKit Core.html">AudioKit Core</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/AKManager.html">AKManager</a>
+                <a href="Classes/AudioKit.html">AudioKit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKSettings.html">AKSettings</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/AKTable.html">AKTable</a>
@@ -87,6 +90,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKMIDIInstrument.html">AKMIDIInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/AKMIDIListener.html">AKMIDIListener</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/AKMIDIStatus.html">AKMIDIStatus</a>
@@ -533,7 +539,7 @@
         <section>
           <section class="section">
             <h1>AudioKit Core</h1>
-
+            
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -541,9 +547,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:C8AudioKit9AKManager"></a>
-                    <a name="//apple_ref/swift/Class/AKManager" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C8AudioKit9AKManager">AKManager</a>
+                    <a name="/s:C8AudioKit8AudioKit"></a>
+                    <a name="//apple_ref/swift/Class/AudioKit" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C8AudioKit8AudioKit">AudioKit</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -553,13 +559,45 @@
                       <div class="abstract">
                         <p>Top level AudioKit managing class</p>
 
-                        <a href="Classes/AKManager.html" class="slightly-smaller">See more</a>
+                        <a href="Classes/AudioKit.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AKManager</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">AudioKit</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C8AudioKit10AKSettings"></a>
+                    <a name="//apple_ref/swift/Class/AKSettings" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C8AudioKit10AKSettings">AKSettings</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Global settings for AudioKit</p>
+
+                        <a href="Classes/AKSettings.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AKSettings</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                         </div>
                       </div>
@@ -631,7 +669,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-01-19)</p>
+          <p>&copy; 2016 <a class="link" href="https://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-01-31)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
