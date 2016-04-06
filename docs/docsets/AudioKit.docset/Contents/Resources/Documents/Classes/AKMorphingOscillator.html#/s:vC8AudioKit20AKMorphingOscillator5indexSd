@@ -34,6 +34,9 @@
                 <a href="../../Classes/AudioKit.html">AudioKit</a>
               </li>
               <li class="nav-group-task">
+                <a href="../../Classes/AKAudioRecorder.html">AKAudioRecorder</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../../Classes/AKDevice.html">AKDevice</a>
               </li>
               <li class="nav-group-task">
@@ -44,6 +47,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../../Enums/AKTableType.html">AKTableType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/AKTester.html">AKTester</a>
               </li>
             </ul>
           </li>
@@ -98,6 +104,9 @@
                 <a href="../../Protocols/AKMIDIListener.html">AKMIDIListener</a>
               </li>
               <li class="nav-group-task">
+                <a href="../../Classes/AKMIDISampler.html">AKMIDISampler</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../../Enums/AKMIDIStatus.html">AKMIDIStatus</a>
               </li>
               <li class="nav-group-task">
@@ -105,6 +114,15 @@
               </li>
               <li class="nav-group-task">
                 <a href="../../Classes/AKMusicTrack.html">AKMusicTrack</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/MIDIPacket.html">MIDIPacket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/MIDIPacketList.html">MIDIPacketList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/MIDIPacketListGenerator.html">MIDIPacketListGenerator</a>
               </li>
             </ul>
           </li>
@@ -342,6 +360,9 @@
                 <a href="../../Classes/AKDrip.html">AKDrip</a>
               </li>
               <li class="nav-group-task">
+                <a href="../../Classes/AKMetalBar.html">AKMetalBar</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../../Classes/AKPluckedString.html">AKPluckedString</a>
               </li>
             </ul>
@@ -499,23 +520,6 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../../Other Classes.html">Other Classes</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../../Classes/AKAudioRecorder.html">AKAudioRecorder</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../../Classes/AKMIDISampler.html">AKMIDISampler</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../../Classes/AKMetalBar.html">AKMetalBar</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../../Classes/AKTester.html">AKTester</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
             <a href="../../Other Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -526,12 +530,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../../Extensions/Int.html">Int</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../../Extensions/MIDIPacket.html">MIDIPacket</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../../Extensions/MIDIPacketList.html">MIDIPacketList</a>
               </li>
             </ul>
           </li>
@@ -548,9 +546,6 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../../Other Structs.html#/s:V8AudioKit13AKGetAUParams">AKGetAUParams</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../../Structs/MIDIPacketListGenerator.html">MIDIPacketListGenerator</a>
               </li>
             </ul>
           </li>
