@@ -4,8 +4,6 @@
 {% highlight ruby %}import XCPlayground
 import AudioKit
 
-let audiokit = AKManager.sharedInstance
-
 {% endhighlight %}
 <p>Filter setup</p>
 
@@ -31,8 +29,8 @@ let filteredPlayer = AKOperationEffect(player, operation: filter)
 <p>Mixdown and playback</p>
 
 {% highlight ruby %}let mixer = AKDryWetMixer(filteredNoise, filteredPlayer, balance: 0.5)
-audiokit.audioOutput = mixer
-audiokit.start()
+AudioKit.output = mixer
+AudioKit.start()
 
 whiteNoise.start()
 player.play()

@@ -5,8 +5,6 @@
 {% highlight ruby %}import XCPlayground
 import AudioKit
 
-let audiokit = AKManager.sharedInstance
-
 {% endhighlight %}
 <p>Let&#39;s set up the volume to be changing in the shape of a sine wave</p>
 
@@ -34,8 +32,8 @@ let tracker = AKFrequencyTracker(oscillatorNode, minimumFrequency: minimum, maxi
 {% endhighlight %}
 <p>The frequency tracker passes its input to the output, so we can insert into the signal chain at the bottom</p>
 
-{% highlight ruby %}audiokit.audioOutput = tracker
-audiokit.start()
+{% highlight ruby %}AudioKit.output = tracker
+AudioKit.start()
 
 oscillatorNode.start()
 

@@ -5,8 +5,6 @@
 {% highlight ruby %}import XCPlayground
 import AudioKit
 
-let audiokit = AKManager.sharedInstance
-
 {% endhighlight %}
 <p>This section prepares the players</p>
 
@@ -23,23 +21,34 @@ let lowPassFiltering = AKLowPassFilter(highPassFiltering, cutoffFrequency: 300)
 
 {% highlight ruby %}let rebalancedWithSource = AKBalancer(lowPassFiltering,  comparator: source)
 
-audiokit.audioOutput = rebalancedWithSource
-audiokit.start()
+AudioKit.output = rebalancedWithSource
+AudioKit.start()
 source.play()
 
 {% endhighlight %}
-<p>Toggle processing on every loop</p>
+<p>User Interface Set up</p>
 
-{% highlight ruby %}AKPlaygroundLoop(every: 3.428) { () -> () in
-    if rebalancedWithSource.isBypassed {
+{% highlight ruby %}
+class PlaygroundView: AKPlaygroundView {
+    
+    override func setup() {
+        addTitle("Balancing Nodes")
+        
+        addLabel("Listen to the difference in volume:")
+        addButton("Balance", action: #selector(self.start))
+        addButton("Bypass", action: #selector(self.bypass))
+    }
+    
+    func start() {
         rebalancedWithSource.start()
-    } else {
+    }
+    func bypass() {
         rebalancedWithSource.bypass()
     }
-    rebalancedWithSource.isBypassed ? "Bypassed" : "Processing" // Open Quicklook for this
 }
 
+let view = PlaygroundView(frame: CGRect(x: 0, y: 0, width: 500, height: 200))
 XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-
+XCPlaygroundPage.currentPage.liveView = view
 
 {% endhighlight %}

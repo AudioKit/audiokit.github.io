@@ -5,8 +5,6 @@
 {% highlight ruby %}import XCPlayground
 import AudioKit
 
-let audiokit = AKManager.sharedInstance
-
 let triangle = AKTable(.Triangle, size: 128)
 for value in triangle.values { value } // Click the eye icon ->
 
@@ -29,9 +27,9 @@ for value in custom.values { value } // Click the eye icon ->
 <p>Try changing the table to triangle, square, sine, or sawtooth. This will change the shape of the oscillator&#39;s waveform.</p>
 
 {% highlight ruby %}var oscillator = AKOscillator(waveform: custom)
-audiokit.audioOutput = oscillator
-audiokit.start()
-
+AudioKit.output = oscillator
+AudioKit.start()
+oscillator.rampTime = 0.02
 oscillator.start()
 
 AKPlaygroundLoop(frequency: 5) {
@@ -39,7 +37,7 @@ AKPlaygroundLoop(frequency: 5) {
 <p>Notice how we change the frequency directly but let the amplitude be ramped to its new value.  This is because abrupt changes in amplitude produces clicking sounds.  Frequency can also be ramped, but it is not as important.  Try setting the amplitude without the ramp to hear the difference.</p>
 
 {% highlight ruby %}    oscillator.frequency = randomInt(50...74).midiNoteToFrequency()
-    oscillator.ramp(amplitude: random(0, 0.4))
+    oscillator.amplitude = random(0, 0.4)
 }
 
 XCPlaygroundPage.currentPage.needsIndefiniteExecution = true

@@ -10,11 +10,6 @@
 {% highlight ruby %}import XCPlayground
 
 {% endhighlight %}
-<p>All AudioKit powered apps and playgrounds need a reference to an instance of <code>AKManager</code> shared across the app.</p>
-
-{% highlight ruby %}let audiokit = AKManager.sharedInstance
-
-{% endhighlight %}
 <p>This main bundle line just helps the playground find the files (such as audio clips) it will be able to play and process.</p>
 
 {% highlight ruby %}let bundle = NSBundle.mainBundle()
@@ -22,7 +17,7 @@
 {% endhighlight %}
 <p>To reference a file, you use the bundle from about and the <code>pathForResource</code> method that includes the name with the extension given in the <code>ofType</code> parameter.</p>
 
-{% highlight ruby %}let file = bundle.pathForResource("PianoBassDrumLoop", ofType: "wav")
+{% highlight ruby %}let file = bundle.pathForResource("drumloop", ofType: "wav")
 
 {% endhighlight %}
 <p>You are not limited to using the sound files provided with AudioKit, in fact we encourage you to drag your own sound files to the Resources folder.  Ideally, to keep things running quickly, loopable 10-20 second <code>.wav</code> or <code>.aiff</code> files are recommended.  Many free loops are avaiable online at sites such as <a href="http://www.looperman.com/">looperman.com</a> or <a href="http://www.freesound.org/">freesound.org</a>.</p>

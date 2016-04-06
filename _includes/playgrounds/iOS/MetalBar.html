@@ -1,0 +1,26 @@
+<p><h3>Metal Bar Physical Model
+</h3><h4>Experimental Playground, not quite working yet.
+</h4></p>
+
+{% highlight ruby %}import AudioKit
+import XCPlayground
+
+let playRate = 2.0
+
+let bar = AKMetalBar()
+
+bar.position = 0.001
+bar.strikeWidth = 0.0001
+bar.decayDuration = 0
+bar.leftBoundaryCondition = 1
+bar.rightBoundaryCondition = 1
+
+AudioKit.output = bar
+AudioKit.start()
+
+AKPlaygroundLoop(frequency: playRate) {
+    bar.trigger()
+}
+
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+{% endhighlight %}

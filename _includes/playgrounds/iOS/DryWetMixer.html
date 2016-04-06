@@ -5,8 +5,6 @@
 {% highlight ruby %}import XCPlayground
 import AudioKit
 
-let audiokit = AKManager.sharedInstance
-
 {% endhighlight %}
 <p>This section prepares the players</p>
 
@@ -31,10 +29,45 @@ reverb.loadFactoryPreset(.LargeChamber)
 {% highlight ruby %}
 let mixture = AKDryWetMixer(drums, reverb, balance: 0.5)
 
-audiokit.audioOutput = mixture
-audiokit.start()
+AudioKit.output = mixture
+AudioKit.start()
 drums.play()
 
+{% endhighlight %}
+<p>User Interface Set up</p>
+
+{% highlight ruby %}
+class PlaygroundView: AKPlaygroundView {
+
+    var balanceLabel: Label?
+
+    override func setup() {
+        addTitle("Dry Wet Mix")
+
+        addLabel("Audio Playback")
+        addButton("Start", action: #selector(self.start))
+        addButton("Stop", action: #selector(self.stop))
+
+        balanceLabel = addLabel("Balance: \(mixture.balance)")
+        addSlider(#selector(self.setDuration(_:)), value: mixture.balance)
+    }
+
+    func start() {
+        drums.play()
+    }
+    func stop() {
+        drums.stop()
+    }
+
+    func setDuration(slider: Slider) {
+        mixture.balance = Double(slider.value)
+        balanceLabel!.text = "Balance: \(String(format: "%0.3f", mixture.balance))"
+    }
+
+}
+
+let view = PlaygroundView(frame: CGRect(x: 0, y: 0, width: 500, height: 300))
 XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+XCPlaygroundPage.currentPage.liveView = view
 
 {% endhighlight %}

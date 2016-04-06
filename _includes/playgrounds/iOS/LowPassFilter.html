@@ -1,42 +1,90 @@
 <p><h3>Low Pass Filter
-</h3><h4>A low-pass filter takes an audio signal as an input, and cuts out the high-frequency components of the audio signal, allowing for the lower     frequency components to &quot;pass through&quot; the filter.
+</h3><h4>A low-pass filter takes an audio signal as an input, and cuts out the low-frequency components of the audio signal, allowing for the lower frequency components to &quot;pass through&quot; the filter.
 </h4></p>
 
 {% highlight ruby %}import XCPlayground
 import AudioKit
 
-let audiokit = AKManager.sharedInstance
-
 let bundle = NSBundle.mainBundle()
 let file = bundle.pathForResource("mixloop", ofType: "wav")
 var player = AKAudioPlayer(file!)
 player.looping = true
+
 var lowPassFilter = AKLowPassFilter(player)
 
 {% endhighlight %}
-<p>Set the parameters of the Low-Pass Filter here</p>
+<p>Set the parameters here</p>
 
-{% highlight ruby %}lowPassFilter.cutoffFrequency = 1000 // Hz
+{% highlight ruby %}lowPassFilter.cutoffFrequency = 6900 // Hz
 lowPassFilter.resonance = 0 // dB
 
-audiokit.audioOutput = lowPassFilter
-audiokit.start()
-
+AudioKit.output = lowPassFilter
+AudioKit.start()
 player.play()
 
 {% endhighlight %}
-<p>Toggle processing on every loop</p>
+<p>User Interface Set up</p>
 
-{% highlight ruby %}AKPlaygroundLoop(every: 3.428) { () -> () in
-    if lowPassFilter.isBypassed {
+{% highlight ruby %}
+class PlaygroundView: AKPlaygroundView {
+
+    //: UI Elements we'll need to be able to access
+    var cutoffFrequencyLabel: Label?
+    var resonanceLabel: Label?
+
+    override func setup() {
+        addTitle("Low Pass Filter")
+
+        addLabel("Audio Player")
+        addButton("Start", action: #selector(self.start))
+        addButton("Stop", action: #selector(self.stop))
+
+        addLabel("Low Pass Filter Parameters")
+
+        addButton("Process", action: #selector(self.process))
+        addButton("Bypass", action: #selector(self.bypass))
+
+        cutoffFrequencyLabel = addLabel("Cut-off Frequency: 6900 Hz")
+        addSlider(#selector(self.setCutoffFrequency(_:)), value: 6900, minimum: 10, maximum: 22050)
+
+        resonanceLabel = addLabel("Resonance: 0 dB")
+        addSlider(#selector(self.setResonance(_:)), value: 0, minimum: -20, maximum: 40)
+
+    }
+
+    //: Handle UI Events
+
+    func start() {
+        player.play()
+    }
+
+    func stop() {
+        player.stop()
+    }
+
+    func process() {
         lowPassFilter.start()
-    } else {
+    }
+
+    func bypass() {
         lowPassFilter.bypass()
     }
-    lowPassFilter.isBypassed ? "Bypassed" : "Processing" // Open Quicklook for this
+    func setCutoffFrequency(slider: Slider) {
+        lowPassFilter.cutoffFrequency = Double(slider.value)
+        let cutoffFrequency = String(format: "%0.1f", lowPassFilter.cutoffFrequency)
+        cutoffFrequencyLabel!.text = "Cut-off Frequency: \(cutoffFrequency) Hz"
+    }
+
+    func setResonance(slider: Slider) {
+        lowPassFilter.resonance = Double(slider.value)
+        let resonance = String(format: "%0.1f", lowPassFilter.resonance)
+        resonanceLabel!.text = "Resonance: \(resonance) dB"
+    }
+
 }
 
-
+let view = PlaygroundView(frame: CGRect(x: 0, y: 0, width: 500, height: 550))
 XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+XCPlaygroundPage.currentPage.liveView = view
 
 {% endhighlight %}

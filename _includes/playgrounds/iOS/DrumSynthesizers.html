@@ -5,8 +5,6 @@
 {% highlight ruby %}import XCPlayground
 import AudioKit
 
-let audiokit = AKManager.sharedInstance
-
 {% endhighlight %}
 <p>Here we set up the instruments, which can be polyphnic, but we only need mono for this example</p>
 
@@ -15,19 +13,19 @@ var snare = AKSynthSnare(voiceCount: 1, duration: 0.07)
 
 var mix = AKMixer(kick, snare)
 var reverb = AKReverb(mix)
-reverb.loadFactoryPreset(.MediumRoom)
 
-audiokit.audioOutput = reverb
-audiokit.start()
+AudioKit.output = reverb
+AudioKit.start()
+reverb.loadFactoryPreset(.MediumRoom)
 
 {% endhighlight %}
 <p>Generate a cheap electro beat</p>
 
-{% highlight ruby %}var i = 0
+{% highlight ruby %}var counter = 0
 AKPlaygroundLoop(frequency: 4.44) {
     
-    let onFirstBeat = i == 0
-    let everyOtherBeat = i % 4 == 2
+    let onFirstBeat = counter == 0
+    let everyOtherBeat = counter % 4 == 2
     let randomHit = randomInt(0...3) == 0
     
     if onFirstBeat || randomHit {
@@ -40,7 +38,7 @@ AKPlaygroundLoop(frequency: 4.44) {
         snare.playNote(60, velocity: velocity)
         snare.stopNote(60)
     }
-    i++
+    counter += 1
 }
 
 XCPlaygroundPage.currentPage.needsIndefiniteExecution = true

@@ -6,8 +6,6 @@
 import XCPlayground
 import AudioKit
 
-let audiokit = AKManager.sharedInstance
-
 let pulse = 0.23 // seconds
 
 {% endhighlight %}
@@ -34,15 +32,15 @@ reverb.loadFactoryPreset(.LargeRoom)
 {% endhighlight %}
 <p>Connect the sampler to the main output</p>
 
-{% highlight ruby %}audiokit.audioOutput = reverb
-audiokit.start()
+{% highlight ruby %}AudioKit.output = reverb
+AudioKit.start()
 
 {% endhighlight %}
 <p>This is a loop to send a random note to the sampler
  The sampler &#39;playNote&#39; function is very useful here</p>
 
 {% highlight ruby %}AKPlaygroundLoop(every: pulse) {
-    let scale = [0,2,4,5,7,9,11,12]
+    let scale = [0, 2, 4, 5, 7, 9, 11, 12]
     var note = scale.randomElement()
     let octave = randomInt(3...6)  * 12
     if random(0, 10) < 1.0 { note++ }

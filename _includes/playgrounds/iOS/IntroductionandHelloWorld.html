@@ -5,10 +5,11 @@
 </h4>
 
 {% highlight ruby %}import AudioKit
-let audiokit = AKManager.sharedInstance
-let oscillator = AKOscillator(frequency: 440, amplitude: 0.5)
-audiokit.audioOutput = oscillator
-audiokit.start()
+
+let oscillator = AKOscillator()
+
+AudioKit.output = oscillator
+AudioKit.start()
 
 oscillator.start()
 

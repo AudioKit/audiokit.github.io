@@ -4,9 +4,6 @@
 
 {% highlight ruby %}import XCPlayground
 import AudioKit
-import AVFoundation
-
-let audiokit = AKManager.sharedInstance
 
 {% endhighlight %}
 <p>Prepare the source audio player</p>
@@ -31,8 +28,10 @@ delay.dryWetMix = 1
 
 {% highlight ruby %}let mixer = AKMixer(player, delay)
 
-audiokit.audioOutput = mixer
-audiokit.start()
+AudioKit.output = mixer
+AudioKit.start()
 player.play()
+
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
 
 {% endhighlight %}
