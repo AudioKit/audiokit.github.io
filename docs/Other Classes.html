@@ -34,6 +34,9 @@
                 <a href="Classes/AudioKit.html">AudioKit</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/AKDevice.html">AKDevice</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/AKSettings.html">AKSettings</a>
               </li>
               <li class="nav-group-task">
@@ -389,6 +392,9 @@
               <li class="nav-group-task">
                 <a href="Classes/AKTimePitch.html">AKTimePitch</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKVariSpeed.html">AKVariSpeed</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -471,7 +477,7 @@
                 <a href="Random Number Generators.html#/s:F8AudioKit6randomFTSdSd_Sd">random(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Random Number Generators.html#/s:F8AudioKit9randomIntFGVSs5RangeSi_Si">randomInt(_:)</a>
+                <a href="Random Number Generators.html#/s:F8AudioKit9randomIntFGVs5RangeSi_Si">randomInt(_:)</a>
               </li>
             </ul>
           </li>
@@ -496,7 +502,13 @@
             <a href="Other Classes.html">Other Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/AKPlaygroundLoop.html">AKPlaygroundLoop</a>
+                <a href="Classes/AKAudioRecorder.html">AKAudioRecorder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKMIDISampler.html">AKMIDISampler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKMetalBar.html">AKMetalBar</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKTester.html">AKTester</a>
@@ -515,13 +527,19 @@
               <li class="nav-group-task">
                 <a href="Extensions/Int.html">Int</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Extensions/MIDIPacket.html">MIDIPacket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/MIDIPacketList.html">MIDIPacketList</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="Other Functions.html">Other Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Other Functions.html#/s:F8AudioKit10CheckErrorFVSs5Int32T_">CheckError(_:)</a>
+                <a href="Other Functions.html#/s:F8AudioKit10CheckErrorFVs5Int32T_">CheckError(_:)</a>
               </li>
             </ul>
           </li>
@@ -530,6 +548,17 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Other Structs.html#/s:V8AudioKit13AKGetAUParams">AKGetAUParams</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/MIDIPacketListGenerator.html">MIDIPacketListGenerator</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Other Typealiases.html">Other Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Other Typealiases.html#/s:E8AudioKitVSC14MIDIPacketList9Generator">Generator</a>
               </li>
             </ul>
           </li>
@@ -543,6 +572,72 @@
 
           </section>
           <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C8AudioKit15AKAudioRecorder"></a>
+                    <a name="//apple_ref/swift/Class/AKAudioRecorder" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C8AudioKit15AKAudioRecorder">AKAudioRecorder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Simple audio recorder class</p>
+
+                        <a href="Classes/AKAudioRecorder.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AKAudioRecorder</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C8AudioKit13AKMIDISampler"></a>
+                    <a name="//apple_ref/swift/Class/AKMIDISampler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C8AudioKit13AKMIDISampler">AKMIDISampler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>MIDI receiving Sampler</p>
+
+<p>be sure to enableMIDI if you want to receive messages</p>
+
+                        <a href="Classes/AKMIDISampler.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AKMIDISampler</span><span class="p">:</span> <span class="kt">AKSampler</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
             <div class="task-group">
               <ul>
                 <li class="item">
@@ -580,9 +675,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:C8AudioKit16AKPlaygroundLoop"></a>
-                    <a name="//apple_ref/swift/Class/AKPlaygroundLoop" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C8AudioKit16AKPlaygroundLoop">AKPlaygroundLoop</a>
+                    <a name="/s:C8AudioKit10AKMetalBar"></a>
+                    <a name="//apple_ref/swift/Class/AKMetalBar" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C8AudioKit10AKMetalBar">AKMetalBar</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -590,17 +685,140 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Class to handle updating via CADisplayLink</p>
-
-                        <a href="Classes/AKPlaygroundLoop.html" class="slightly-smaller">See more</a>
+                        
+                        <a href="Classes/AKMetalBar.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AKPlaygroundLoop</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AKMetalBar</span><span class="p">:</span> <span class="kt">AKNode</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>leftBoundaryCondition</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Boundary condition at left end of bar. 1 = clamped, 2 = pivoting, 3 = free</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rightBoundaryCondition</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Boundary condition at right end of bar. 1 = clamped, 2 = pivoting, 3 = free</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>decayDuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>30db decay time (in seconds).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>scanSpeed</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Speed of scanning the output location.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>position</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Position along bar that strike occurs.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>strikeVelocity</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Normalized strike velocity</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>strikeWidth</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Spatial width of strike.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>stiffness</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Dimensionless stiffness parameter</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>highFrequencyDamping</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>High-frequency loss parameter. Keep this small</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -610,7 +828,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-01-31)</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-04-05)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -35,6 +35,9 @@
                 <a href="../Classes/AudioKit.html">AudioKit</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/AKDevice.html">AKDevice</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKSettings.html">AKSettings</a>
               </li>
               <li class="nav-group-task">
@@ -390,6 +393,9 @@
               <li class="nav-group-task">
                 <a href="../Classes/AKTimePitch.html">AKTimePitch</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKVariSpeed.html">AKVariSpeed</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -472,7 +478,7 @@
                 <a href="../Random Number Generators.html#/s:F8AudioKit6randomFTSdSd_Sd">random(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Random Number Generators.html#/s:F8AudioKit9randomIntFGVSs5RangeSi_Si">randomInt(_:)</a>
+                <a href="../Random Number Generators.html#/s:F8AudioKit9randomIntFGVs5RangeSi_Si">randomInt(_:)</a>
               </li>
             </ul>
           </li>
@@ -497,7 +503,13 @@
             <a href="../Other Classes.html">Other Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/AKPlaygroundLoop.html">AKPlaygroundLoop</a>
+                <a href="../Classes/AKAudioRecorder.html">AKAudioRecorder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDISampler.html">AKMIDISampler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMetalBar.html">AKMetalBar</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKTester.html">AKTester</a>
@@ -516,13 +528,19 @@
               <li class="nav-group-task">
                 <a href="../Extensions/Int.html">Int</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/MIDIPacket.html">MIDIPacket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/MIDIPacketList.html">MIDIPacketList</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="../Other Functions.html">Other Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Other Functions.html#/s:F8AudioKit10CheckErrorFVSs5Int32T_">CheckError(_:)</a>
+                <a href="../Other Functions.html#/s:F8AudioKit10CheckErrorFVs5Int32T_">CheckError(_:)</a>
               </li>
             </ul>
           </li>
@@ -531,6 +549,17 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Other Structs.html#/s:V8AudioKit13AKGetAUParams">AKGetAUParams</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MIDIPacketListGenerator.html">MIDIPacketListGenerator</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Typealiases.html">Other Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:E8AudioKitVSC14MIDIPacketList9Generator">Generator</a>
               </li>
             </ul>
           </li>
@@ -563,6 +592,33 @@ produce a droplet of water.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:vC8AudioKit6AKDrip8rampTimeSd"></a>
+                    <a name="//apple_ref/swift/Property/rampTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit6AKDrip8rampTimeSd">rampTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ramp Time represents the speed at which parameters are allowed to change</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">rampTime</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="kt">AKSettings</span><span class="o">.</span><span class="n">rampTime</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:vC8AudioKit6AKDrip9intensitySd"></a>
                     <a name="//apple_ref/swift/Property/intensity" class="dashAnchor"></a>
                     <a class="token" href="#/s:vC8AudioKit6AKDrip9intensitySd">intensity</a>
@@ -583,53 +639,6 @@ produce a droplet of water.</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">intensity</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">10</span></code></pre>
 
                         </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC8AudioKit6AKDrip4rampFS0_FT9intensitySd_T_"></a>
-                    <a name="//apple_ref/swift/Method/ramp(intensity:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit6AKDrip4rampFS0_FT9intensitySd_T_">ramp(intensity:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Ramp to intensity over 20 ms</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ramp</span><span class="p">(</span><span class="n">intensity</span> <span class="nv">intensity</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>intensity</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Target The intensity of the dripping sound.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -664,53 +673,6 @@ produce a droplet of water.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit6AKDrip4rampFS0_FT13dampingFactorSd_T_"></a>
-                    <a name="//apple_ref/swift/Method/ramp(dampingFactor:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit6AKDrip4rampFS0_FT13dampingFactorSd_T_">ramp(dampingFactor:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Ramp to dampingFactor over 20 ms</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ramp</span><span class="p">(</span><span class="n">dampingFactor</span> <span class="nv">dampingFactor</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>dampingFactor</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Target The damping factor. Maximum value is 2.0.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:vC8AudioKit6AKDrip12energyReturnSd"></a>
                     <a name="//apple_ref/swift/Property/energyReturn" class="dashAnchor"></a>
                     <a class="token" href="#/s:vC8AudioKit6AKDrip12energyReturnSd">energyReturn</a>
@@ -731,53 +693,6 @@ produce a droplet of water.</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">energyReturn</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
 
                         </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC8AudioKit6AKDrip4rampFS0_FT12energyReturnSd_T_"></a>
-                    <a name="//apple_ref/swift/Method/ramp(energyReturn:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit6AKDrip4rampFS0_FT12energyReturnSd_T_">ramp(energyReturn:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Ramp to energyReturn over 20 ms</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ramp</span><span class="p">(</span><span class="n">energyReturn</span> <span class="nv">energyReturn</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>energyReturn</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Target The amount of energy to add back into the system.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -812,53 +727,6 @@ produce a droplet of water.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit6AKDrip4rampFS0_FT21mainResonantFrequencySd_T_"></a>
-                    <a name="//apple_ref/swift/Method/ramp(mainResonantFrequency:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit6AKDrip4rampFS0_FT21mainResonantFrequencySd_T_">ramp(mainResonantFrequency:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Ramp to mainResonantFrequency over 20 ms</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ramp</span><span class="p">(</span><span class="n">mainResonantFrequency</span> <span class="nv">mainResonantFrequency</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>mainResonantFrequency</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Target Main resonant frequency.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:vC8AudioKit6AKDrip22firstResonantFrequencySd"></a>
                     <a name="//apple_ref/swift/Property/firstResonantFrequency" class="dashAnchor"></a>
                     <a class="token" href="#/s:vC8AudioKit6AKDrip22firstResonantFrequencySd">firstResonantFrequency</a>
@@ -879,53 +747,6 @@ produce a droplet of water.</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">firstResonantFrequency</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">600</span></code></pre>
 
                         </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC8AudioKit6AKDrip4rampFS0_FT22firstResonantFrequencySd_T_"></a>
-                    <a name="//apple_ref/swift/Method/ramp(firstResonantFrequency:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit6AKDrip4rampFS0_FT22firstResonantFrequencySd_T_">ramp(firstResonantFrequency:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Ramp to firstResonantFrequency over 20 ms</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ramp</span><span class="p">(</span><span class="n">firstResonantFrequency</span> <span class="nv">firstResonantFrequency</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>firstResonantFrequency</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Target The first resonant frequency.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -960,53 +781,6 @@ produce a droplet of water.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit6AKDrip4rampFS0_FT23secondResonantFrequencySd_T_"></a>
-                    <a name="//apple_ref/swift/Method/ramp(secondResonantFrequency:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit6AKDrip4rampFS0_FT23secondResonantFrequencySd_T_">ramp(secondResonantFrequency:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Ramp to secondResonantFrequency over 20 ms</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ramp</span><span class="p">(</span><span class="n">secondResonantFrequency</span> <span class="nv">secondResonantFrequency</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>secondResonantFrequency</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Target The second resonant frequency.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:vC8AudioKit6AKDrip9amplitudeSd"></a>
                     <a name="//apple_ref/swift/Property/amplitude" class="dashAnchor"></a>
                     <a class="token" href="#/s:vC8AudioKit6AKDrip9amplitudeSd">amplitude</a>
@@ -1027,53 +801,6 @@ produce a droplet of water.</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">amplitude</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.3</span></code></pre>
 
                         </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC8AudioKit6AKDrip4rampFS0_FT9amplitudeSd_T_"></a>
-                    <a name="//apple_ref/swift/Method/ramp(amplitude:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit6AKDrip4rampFS0_FT9amplitudeSd_T_">ramp(amplitude:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Ramp to amplitude over 20 ms</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ramp</span><span class="p">(</span><span class="n">amplitude</span> <span class="nv">amplitude</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>amplitude</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Target Amplitude.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1119,9 +846,9 @@ produce a droplet of water.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit6AKDripcFMS0_FT9intensitySd13dampingFactorSd12energyReturnSd21mainResonantFrequencySd22firstResonantFrequencySd23secondResonantFrequencySd9amplitudeSd_S0_"></a>
+                    <a name="/s:FC8AudioKit6AKDripcFT9intensitySd13dampingFactorSd12energyReturnSd21mainResonantFrequencySd22firstResonantFrequencySd23secondResonantFrequencySd9amplitudeSd_S0_"></a>
                     <a name="//apple_ref/swift/Method/init(intensity:dampingFactor:energyReturn:mainResonantFrequency:firstResonantFrequency:secondResonantFrequency:amplitude:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit6AKDripcFMS0_FT9intensitySd13dampingFactorSd12energyReturnSd21mainResonantFrequencySd22firstResonantFrequencySd23secondResonantFrequencySd9amplitudeSd_S0_">init(intensity:dampingFactor:energyReturn:mainResonantFrequency:firstResonantFrequency:secondResonantFrequency:amplitude:)</a>
+                    <a class="token" href="#/s:FC8AudioKit6AKDripcFT9intensitySd13dampingFactorSd12energyReturnSd21mainResonantFrequencySd22firstResonantFrequencySd23secondResonantFrequencySd9amplitudeSd_S0_">init(intensity:dampingFactor:energyReturn:mainResonantFrequency:firstResonantFrequency:secondResonantFrequency:amplitude:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1248,54 +975,6 @@ produce a droplet of water.</p>
                     </section>
                   </div>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC8AudioKit6AKDrip7triggerFS0_FT_T_"></a>
-                    <a name="//apple_ref/swift/Method/trigger()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit6AKDrip7triggerFS0_FT_T_">trigger()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Trigger the sound with an optional set of parameters
-- parameter parameters: An array of doubles to use as parameters</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">trigger</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>parameters</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>An array of doubles to use as parameters</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
               </ul>
             </div>
             <div class="task-group">
@@ -1310,9 +989,36 @@ produce a droplet of water.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit6AKDrip5startFS0_FT_T_"></a>
+                    <a name="/s:FC8AudioKit6AKDrip7triggerFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/trigger()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit6AKDrip7triggerFT_T_">trigger()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Trigger the sound with an optional set of parameters</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">trigger</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit6AKDrip5startFT_T_"></a>
                     <a name="//apple_ref/swift/Method/start()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit6AKDrip5startFS0_FT_T_">start()</a>
+                    <a class="token" href="#/s:FC8AudioKit6AKDrip5startFT_T_">start()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1337,9 +1043,9 @@ produce a droplet of water.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit6AKDrip4stopFS0_FT_T_"></a>
+                    <a name="/s:FC8AudioKit6AKDrip4stopFT_T_"></a>
                     <a name="//apple_ref/swift/Method/stop()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit6AKDrip4stopFS0_FT_T_">stop()</a>
+                    <a class="token" href="#/s:FC8AudioKit6AKDrip4stopFT_T_">stop()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1366,7 +1072,7 @@ produce a droplet of water.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-01-31)</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-04-05)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

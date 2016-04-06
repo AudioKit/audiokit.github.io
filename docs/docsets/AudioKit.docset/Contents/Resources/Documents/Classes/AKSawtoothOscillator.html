@@ -35,6 +35,9 @@
                 <a href="../Classes/AudioKit.html">AudioKit</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/AKDevice.html">AKDevice</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKSettings.html">AKSettings</a>
               </li>
               <li class="nav-group-task">
@@ -390,6 +393,9 @@
               <li class="nav-group-task">
                 <a href="../Classes/AKTimePitch.html">AKTimePitch</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKVariSpeed.html">AKVariSpeed</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -472,7 +478,7 @@
                 <a href="../Random Number Generators.html#/s:F8AudioKit6randomFTSdSd_Sd">random(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Random Number Generators.html#/s:F8AudioKit9randomIntFGVSs5RangeSi_Si">randomInt(_:)</a>
+                <a href="../Random Number Generators.html#/s:F8AudioKit9randomIntFGVs5RangeSi_Si">randomInt(_:)</a>
               </li>
             </ul>
           </li>
@@ -497,7 +503,13 @@
             <a href="../Other Classes.html">Other Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/AKPlaygroundLoop.html">AKPlaygroundLoop</a>
+                <a href="../Classes/AKAudioRecorder.html">AKAudioRecorder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDISampler.html">AKMIDISampler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMetalBar.html">AKMetalBar</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKTester.html">AKTester</a>
@@ -516,13 +528,19 @@
               <li class="nav-group-task">
                 <a href="../Extensions/Int.html">Int</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/MIDIPacket.html">MIDIPacket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/MIDIPacketList.html">MIDIPacketList</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="../Other Functions.html">Other Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Other Functions.html#/s:F8AudioKit10CheckErrorFVSs5Int32T_">CheckError(_:)</a>
+                <a href="../Other Functions.html#/s:F8AudioKit10CheckErrorFVs5Int32T_">CheckError(_:)</a>
               </li>
             </ul>
           </li>
@@ -531,6 +549,17 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Other Structs.html#/s:V8AudioKit13AKGetAUParams">AKGetAUParams</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MIDIPacketListGenerator.html">MIDIPacketListGenerator</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Typealiases.html">Other Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:E8AudioKitVSC14MIDIPacketList9Generator">Generator</a>
               </li>
             </ul>
           </li>
@@ -563,6 +592,33 @@ ported from the <q>sawtooth</q> function from the Faust programming language.</p
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:vC8AudioKit20AKSawtoothOscillator8rampTimeSd"></a>
+                    <a name="//apple_ref/swift/Property/rampTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit20AKSawtoothOscillator8rampTimeSd">rampTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ramp Time represents the speed at which parameters are allowed to change</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">rampTime</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="kt">AKSettings</span><span class="o">.</span><span class="n">rampTime</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:vC8AudioKit20AKSawtoothOscillator9frequencySd"></a>
                     <a name="//apple_ref/swift/Property/frequency" class="dashAnchor"></a>
                     <a class="token" href="#/s:vC8AudioKit20AKSawtoothOscillator9frequencySd">frequency</a>
@@ -590,53 +646,6 @@ ported from the <q>sawtooth</q> function from the Faust programming language.</p
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit20AKSawtoothOscillator4rampFS0_FT9frequencySd_T_"></a>
-                    <a name="//apple_ref/swift/Method/ramp(frequency:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit20AKSawtoothOscillator4rampFS0_FT9frequencySd_T_">ramp(frequency:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Ramp to frequency over 20 ms</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ramp</span><span class="p">(</span><span class="n">frequency</span> <span class="nv">frequency</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>frequency</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Target In cycles per second, or Hz.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:vC8AudioKit20AKSawtoothOscillator9amplitudeSd"></a>
                     <a name="//apple_ref/swift/Property/amplitude" class="dashAnchor"></a>
                     <a class="token" href="#/s:vC8AudioKit20AKSawtoothOscillator9amplitudeSd">amplitude</a>
@@ -654,56 +663,9 @@ ported from the <q>sawtooth</q> function from the Faust programming language.</p
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">amplitude</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.5</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">amplitude</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
 
                         </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC8AudioKit20AKSawtoothOscillator4rampFS0_FT9amplitudeSd_T_"></a>
-                    <a name="//apple_ref/swift/Method/ramp(amplitude:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit20AKSawtoothOscillator4rampFS0_FT9amplitudeSd_T_">ramp(amplitude:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Ramp to amplitude over 20 ms</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ramp</span><span class="p">(</span><span class="n">amplitude</span> <span class="nv">amplitude</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>amplitude</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Target Output Amplitude.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -738,53 +700,6 @@ ported from the <q>sawtooth</q> function from the Faust programming language.</p
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit20AKSawtoothOscillator4rampFS0_FT14detuningOffsetSd_T_"></a>
-                    <a name="//apple_ref/swift/Method/ramp(detuningOffset:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit20AKSawtoothOscillator4rampFS0_FT14detuningOffsetSd_T_">ramp(detuningOffset:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Ramp to detuningOffset over 20 ms</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ramp</span><span class="p">(</span><span class="n">detuningOffset</span> <span class="nv">detuningOffset</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>detuningOffset</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Target Frequency offset in Hz.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:vC8AudioKit20AKSawtoothOscillator18detuningMultiplierSd"></a>
                     <a name="//apple_ref/swift/Property/detuningMultiplier" class="dashAnchor"></a>
                     <a class="token" href="#/s:vC8AudioKit20AKSawtoothOscillator18detuningMultiplierSd">detuningMultiplier</a>
@@ -805,53 +720,6 @@ ported from the <q>sawtooth</q> function from the Faust programming language.</p
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">detuningMultiplier</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
 
                         </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC8AudioKit20AKSawtoothOscillator4rampFS0_FT18detuningMultiplierSd_T_"></a>
-                    <a name="//apple_ref/swift/Method/ramp(detuningMultiplier:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit20AKSawtoothOscillator4rampFS0_FT18detuningMultiplierSd_T_">ramp(detuningMultiplier:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Ramp to detuningMultiplier over 20 ms</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ramp</span><span class="p">(</span><span class="n">detuningMultiplier</span> <span class="nv">detuningMultiplier</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>detuningMultiplier</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Target Frequency detuning multiplier</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -897,9 +765,9 @@ ported from the <q>sawtooth</q> function from the Faust programming language.</p
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit20AKSawtoothOscillatorcFMS0_FT_S0_"></a>
+                    <a name="/s:FC8AudioKit20AKSawtoothOscillatorcFT_S0_"></a>
                     <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit20AKSawtoothOscillatorcFMS0_FT_S0_">init()</a>
+                    <a class="token" href="#/s:FC8AudioKit20AKSawtoothOscillatorcFT_S0_">init()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -924,9 +792,9 @@ ported from the <q>sawtooth</q> function from the Faust programming language.</p
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit20AKSawtoothOscillatorcFMS0_FT9frequencySd9amplitudeSd14detuningOffsetSd18detuningMultiplierSd_S0_"></a>
+                    <a name="/s:FC8AudioKit20AKSawtoothOscillatorcFT9frequencySd9amplitudeSd14detuningOffsetSd18detuningMultiplierSd_S0_"></a>
                     <a name="//apple_ref/swift/Method/init(frequency:amplitude:detuningOffset:detuningMultiplier:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit20AKSawtoothOscillatorcFMS0_FT9frequencySd9amplitudeSd14detuningOffsetSd18detuningMultiplierSd_S0_">init(frequency:amplitude:detuningOffset:detuningMultiplier:)</a>
+                    <a class="token" href="#/s:FC8AudioKit20AKSawtoothOscillatorcFT9frequencySd9amplitudeSd14detuningOffsetSd18detuningMultiplierSd_S0_">init(frequency:amplitude:detuningOffset:detuningMultiplier:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1014,9 +882,9 @@ ported from the <q>sawtooth</q> function from the Faust programming language.</p
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit20AKSawtoothOscillator9duplicateFS0_FT_CS_7AKVoice"></a>
+                    <a name="/s:FC8AudioKit20AKSawtoothOscillator9duplicateFT_CS_7AKVoice"></a>
                     <a name="//apple_ref/swift/Method/duplicate()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit20AKSawtoothOscillator9duplicateFS0_FT_CS_7AKVoice">duplicate()</a>
+                    <a class="token" href="#/s:FC8AudioKit20AKSawtoothOscillator9duplicateFT_CS_7AKVoice">duplicate()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1041,9 +909,9 @@ ported from the <q>sawtooth</q> function from the Faust programming language.</p
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit20AKSawtoothOscillator5startFS0_FT_T_"></a>
+                    <a name="/s:FC8AudioKit20AKSawtoothOscillator5startFT_T_"></a>
                     <a name="//apple_ref/swift/Method/start()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit20AKSawtoothOscillator5startFS0_FT_T_">start()</a>
+                    <a class="token" href="#/s:FC8AudioKit20AKSawtoothOscillator5startFT_T_">start()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1068,9 +936,9 @@ ported from the <q>sawtooth</q> function from the Faust programming language.</p
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit20AKSawtoothOscillator4stopFS0_FT_T_"></a>
+                    <a name="/s:FC8AudioKit20AKSawtoothOscillator4stopFT_T_"></a>
                     <a name="//apple_ref/swift/Method/stop()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit20AKSawtoothOscillator4stopFS0_FT_T_">stop()</a>
+                    <a class="token" href="#/s:FC8AudioKit20AKSawtoothOscillator4stopFT_T_">stop()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1097,7 +965,7 @@ ported from the <q>sawtooth</q> function from the Faust programming language.</p
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-01-31)</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-04-05)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

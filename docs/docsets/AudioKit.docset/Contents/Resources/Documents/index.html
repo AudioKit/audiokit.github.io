@@ -34,6 +34,9 @@
                 <a href="Classes/AudioKit.html">AudioKit</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/AKDevice.html">AKDevice</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/AKSettings.html">AKSettings</a>
               </li>
               <li class="nav-group-task">
@@ -389,6 +392,9 @@
               <li class="nav-group-task">
                 <a href="Classes/AKTimePitch.html">AKTimePitch</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKVariSpeed.html">AKVariSpeed</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -471,7 +477,7 @@
                 <a href="Random Number Generators.html#/s:F8AudioKit6randomFTSdSd_Sd">random(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Random Number Generators.html#/s:F8AudioKit9randomIntFGVSs5RangeSi_Si">randomInt(_:)</a>
+                <a href="Random Number Generators.html#/s:F8AudioKit9randomIntFGVs5RangeSi_Si">randomInt(_:)</a>
               </li>
             </ul>
           </li>
@@ -496,7 +502,13 @@
             <a href="Other Classes.html">Other Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/AKPlaygroundLoop.html">AKPlaygroundLoop</a>
+                <a href="Classes/AKAudioRecorder.html">AKAudioRecorder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKMIDISampler.html">AKMIDISampler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKMetalBar.html">AKMetalBar</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKTester.html">AKTester</a>
@@ -515,13 +527,19 @@
               <li class="nav-group-task">
                 <a href="Extensions/Int.html">Int</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Extensions/MIDIPacket.html">MIDIPacket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/MIDIPacketList.html">MIDIPacketList</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="Other Functions.html">Other Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Other Functions.html#/s:F8AudioKit10CheckErrorFVSs5Int32T_">CheckError(_:)</a>
+                <a href="Other Functions.html#/s:F8AudioKit10CheckErrorFVs5Int32T_">CheckError(_:)</a>
               </li>
             </ul>
           </li>
@@ -530,6 +548,17 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Other Structs.html#/s:V8AudioKit13AKGetAUParams">AKGetAUParams</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/MIDIPacketListGenerator.html">MIDIPacketListGenerator</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Other Typealiases.html">Other Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Other Typealiases.html#/s:E8AudioKitVSC14MIDIPacketList9Generator">Generator</a>
               </li>
             </ul>
           </li>
@@ -542,7 +571,7 @@
             <a href='#audiokit_v3' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='audiokit_v3'>AudioKit V3</h1>
 
 <p><a href="https://travis-ci.org/audiokit/AudioKit"><img src="https://travis-ci.org/audiokit/AudioKit.svg" alt="Build Status"></a>
-<a href="http://cocoadocs.org/docsets/AudioKit"><img src="https://img.shields.io/cocoapods/l/AudioKit.svg?style=flat" alt="License"></a>
+<a href="https://github.com/audiokit/AudioKit/blob/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/AudioKit.svg?style=flat" alt="License"></a>
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
 <a href="https://github.com/CocoaPods/Specs/tree/master/Specs/AudioKit"><img src="https://img.shields.io/cocoapods/v/AudioKit.svg?style=flat" alt="CocoaPods compatible"></a>
 <a href="http://twitter.com/AudioKitMan"><img src="https://img.shields.io/twitter/follow/AudioKitMan.svg?style=social" alt="Twitter Follow"></a></p>
@@ -550,7 +579,7 @@
 <p><em>This document was last updated: January 29, 2016</em></p>
 
 <p>AudioKit is an audio synthesis, processing, and analysis platform for OS X, iOS, and tvOS. This document serves as a one-page introduction to AudioKit, but we have much more information available on the AudioKit website at <a href="http://audiokit.io/">http://audiokit.io/</a></p>
-<a href='#version_3_0' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='version_3_0'>Version 3.0</h3>
+<a href='#version_3' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='version_3'>Version 3</h3>
 
 <p>The third major revision of AudioKit has been completely rewritten to offer the following improvements over previous versions:</p>
 
@@ -579,34 +608,35 @@
 
 <p>There are three Hello World projects, one for each of the Apple platforms: OSX, iOS, and tvOS. They simply play an oscillator and display the waveform.</p>
 
-<p>The examples rely on the frameworks being built so you can either download the precompiled frameworks or build them on your own:</p>
-<pre class="highlight plaintext"><code>$ cd Frameworks
+<p>The examples rely on the frameworks being built so you can either download the precompiled frameworks or build them on your own:
+<code>
+$ cd Frameworks
 $ ./build_frameworks.sh
-</code></pre>
+</code>
+Hello World basically consists of just a few sections of code:</p>
 
-<p>Hello World basically consists of just a few sections of code:</p>
-
-<p>Creating the sound, in this case an oscillator:</p>
-<pre class="highlight plaintext"><code>var oscillator = AKOscillator()
-</code></pre>
-
-<p>Telling AudioKit where to get its audio from (ie. the oscillator):</p>
-<pre class="highlight plaintext"><code>AudioKit.output = oscillator
-</code></pre>
-
-<p>Starting AudioKit:</p>
-<pre class="highlight plaintext"><code>AudioKit.start()
-</code></pre>
-
-<p>And then responding to the UI by changing the oscillator:</p>
-<pre class="highlight plaintext"><code>    if oscillator.isPlaying {
-        oscillator.stop()
-    } else {
-        oscillator.amplitude = random(0.5, 1)
-        oscillator.frequency = random(220, 880)
-        oscillator.start()
-    }
-</code></pre>
+<p>Creating the sound, in this case an oscillator:
+<code>swift
+var oscillator = AKOscillator()
+</code>
+Telling AudioKit where to get its audio from (ie. the oscillator):
+<code>swift
+AudioKit.output = oscillator
+</code>
+Starting AudioKit:
+<code>swift
+AudioKit.start()
+</code>
+And then responding to the UI by changing the oscillator:
+<code>swift
+if oscillator.isPlaying {
+    oscillator.stop()
+} else {
+    oscillator.amplitude = random(0.5, 1)
+    oscillator.frequency = random(220, 880)
+    oscillator.start()
+}
+</code></p>
 <a href='#playgrounds' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='playgrounds'>Playgrounds</h2>
 
 <p>Because Playgrounds have very different capabilities depending on whether they are for OSX or iOS, we have two sets of playgrounds for each OS.  At this point tvOS behaves very much like iOS so there is no set of playgrounds explicitly for tvOS.</p>
@@ -626,27 +656,27 @@ $ ./build_frameworks.sh
 </code></pre>
 
 <p>If you use CocoaPods, you can also easily get the latest AudioKit binary framework for your project. Use this in your <code>Podfile</code>:</p>
-<pre class="highlight plaintext"><code>pod 'AudioKit', '~&gt; 3.0'
+<pre class="highlight plaintext"><code>pod 'AudioKit', '~&gt; 3.1'
 </code></pre>
 <a href='#about_us' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='about_us'>About Us</h2>
 
 <p>AudioKit was created by the following team whose contributions are fully chronicled in Github, and summarized below in alphabetical order by first name:</p>
 
 <ul>
-<li><strong>Aurelius Prochazka</strong>: Primary programmer of AudioKit. Lives for this stuff.  Your life line if you need help.</li>
-<li><strong>Jeff Cooper</strong>: Rearchitected all things MIDI, sampler, and sequencer related in AudioKit 3.</li>
-<li><strong>Matthew Fecher</strong>: Sound design, graphic design, and programming of the Analog Synth X example.</li>
-<li><strong>Nicholas Arner</strong>: Longtime contributor to AudioKit and AudioKit&rsquo;s web site.</li>
-<li><strong>Paul Batchelor</strong>: The author of <a href="https://github.com/paulbatchelor/soundpipe">Soundpipe</a>, and <a href="https://github.com/paulbatchelor/sporth">Sporth</a>, which serve as two primary audio engines in AudioKit 3.</li>
-<li><strong>Simon Gladman</strong>: Longtime user of AudioKit, contributed his AudioKitParticles project to AudioKit 3.</li>
-<li><strong>Stephane Peter</strong>: Installation and configuration czar and code reviewer.</li>
-<li><strong>Syed Haris Ali</strong>: The author of <a href="https://github.com/syedhali/EZAudio">EZAudio</a> which is AudioKit&rsquo;s included waveform plotter and FFT analysis engine.</li>
+<li><strong><a href="https://github.com/aure">Aurelius Prochazka</a></strong>: Primary programmer of AudioKit. Lives for this stuff.  Your life line if you need help.</li>
+<li><strong><a href="https://github.com/eljeff">Jeff Cooper</a></strong>: Rearchitected all things MIDI, sampler, and sequencer related in AudioKit 3.</li>
+<li><strong><a href="https://github.com/swiftcodex">Matthew Fecher</a></strong>: Sound design, graphic design, and programming of the Analog Synth X example.</li>
+<li><strong><a href="https://github.com/narner">Nicholas Arner</a></strong>: Longtime contributor to AudioKit and AudioKit&rsquo;s web site.</li>
+<li><strong><a href="https://github.com/PaulBatchelor">Paul Batchelor</a></strong>: The author of <a href="https://github.com/paulbatchelor/soundpipe">Soundpipe</a>, and <a href="https://github.com/paulbatchelor/sporth">Sporth</a>, which serve as two primary audio engines in AudioKit 3.</li>
+<li><strong><a href="https://github.com/FlexMonkey">Simon Gladman</a></strong>: Longtime user of AudioKit, contributed his AudioKitParticles project to AudioKit 3.</li>
+<li><strong><a href="https://github.com/megastep">Stephane Peter</a></strong>: Installation and configuration czar and code reviewer.</li>
+<li><strong><a href="https://github.com/syedhali">Syed Haris Ali</a></strong>: The author of <a href="https://github.com/syedhali/EZAudio">EZAudio</a> which is AudioKit&rsquo;s included waveform plotter and FFT analysis engine.</li>
 </ul>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-01-31)</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-04-05)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

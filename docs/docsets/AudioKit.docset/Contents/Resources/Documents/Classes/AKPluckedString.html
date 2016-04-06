@@ -35,6 +35,9 @@
                 <a href="../Classes/AudioKit.html">AudioKit</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/AKDevice.html">AKDevice</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKSettings.html">AKSettings</a>
               </li>
               <li class="nav-group-task">
@@ -390,6 +393,9 @@
               <li class="nav-group-task">
                 <a href="../Classes/AKTimePitch.html">AKTimePitch</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKVariSpeed.html">AKVariSpeed</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -472,7 +478,7 @@
                 <a href="../Random Number Generators.html#/s:F8AudioKit6randomFTSdSd_Sd">random(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Random Number Generators.html#/s:F8AudioKit9randomIntFGVSs5RangeSi_Si">randomInt(_:)</a>
+                <a href="../Random Number Generators.html#/s:F8AudioKit9randomIntFGVs5RangeSi_Si">randomInt(_:)</a>
               </li>
             </ul>
           </li>
@@ -497,7 +503,13 @@
             <a href="../Other Classes.html">Other Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/AKPlaygroundLoop.html">AKPlaygroundLoop</a>
+                <a href="../Classes/AKAudioRecorder.html">AKAudioRecorder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDISampler.html">AKMIDISampler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMetalBar.html">AKMetalBar</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKTester.html">AKTester</a>
@@ -516,13 +528,19 @@
               <li class="nav-group-task">
                 <a href="../Extensions/Int.html">Int</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/MIDIPacket.html">MIDIPacket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/MIDIPacketList.html">MIDIPacketList</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="../Other Functions.html">Other Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Other Functions.html#/s:F8AudioKit10CheckErrorFVSs5Int32T_">CheckError(_:)</a>
+                <a href="../Other Functions.html#/s:F8AudioKit10CheckErrorFVs5Int32T_">CheckError(_:)</a>
               </li>
             </ul>
           </li>
@@ -531,6 +549,17 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Other Structs.html#/s:V8AudioKit13AKGetAUParams">AKGetAUParams</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MIDIPacketListGenerator.html">MIDIPacketListGenerator</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Typealiases.html">Other Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:E8AudioKitVSC14MIDIPacketList9Generator">Generator</a>
               </li>
             </ul>
           </li>
@@ -562,6 +591,33 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:vC8AudioKit15AKPluckedString8rampTimeSd"></a>
+                    <a name="//apple_ref/swift/Property/rampTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit15AKPluckedString8rampTimeSd">rampTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ramp Time represents the speed at which parameters are allowed to change</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">rampTime</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="kt">AKSettings</span><span class="o">.</span><span class="n">rampTime</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:vC8AudioKit15AKPluckedString9frequencySd"></a>
                     <a name="//apple_ref/swift/Property/frequency" class="dashAnchor"></a>
                     <a class="token" href="#/s:vC8AudioKit15AKPluckedString9frequencySd">frequency</a>
@@ -589,53 +645,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit15AKPluckedString4rampFS0_FT9frequencySd_T_"></a>
-                    <a name="//apple_ref/swift/Method/ramp(frequency:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit15AKPluckedString4rampFS0_FT9frequencySd_T_">ramp(frequency:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Ramp to frequency over 20 ms</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ramp</span><span class="p">(</span><span class="n">frequency</span> <span class="nv">frequency</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>frequency</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Target Variable frequency. Values less than the initial frequency will be doubled until it is greater than that.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:vC8AudioKit15AKPluckedString9amplitudeSd"></a>
                     <a name="//apple_ref/swift/Property/amplitude" class="dashAnchor"></a>
                     <a class="token" href="#/s:vC8AudioKit15AKPluckedString9amplitudeSd">amplitude</a>
@@ -656,53 +665,6 @@
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">amplitude</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.5</span></code></pre>
 
                         </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC8AudioKit15AKPluckedString4rampFS0_FT9amplitudeSd_T_"></a>
-                    <a name="//apple_ref/swift/Method/ramp(amplitude:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit15AKPluckedString4rampFS0_FT9amplitudeSd_T_">ramp(amplitude:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Ramp to amplitude over 20 ms</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ramp</span><span class="p">(</span><span class="n">amplitude</span> <span class="nv">amplitude</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>amplitude</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Target Amplitude</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -748,9 +710,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit15AKPluckedStringcFMS0_FT9frequencySd9amplitudeSd15lowestFrequencySd_S0_"></a>
+                    <a name="/s:FC8AudioKit15AKPluckedStringcFT9frequencySd9amplitudeSd15lowestFrequencySd_S0_"></a>
                     <a name="//apple_ref/swift/Method/init(frequency:amplitude:lowestFrequency:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit15AKPluckedStringcFMS0_FT9frequencySd9amplitudeSd15lowestFrequencySd_S0_">init(frequency:amplitude:lowestFrequency:)</a>
+                    <a class="token" href="#/s:FC8AudioKit15AKPluckedStringcFT9frequencySd9amplitudeSd15lowestFrequencySd_S0_">init(frequency:amplitude:lowestFrequency:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -824,9 +786,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit15AKPluckedString9duplicateFS0_FT_CS_7AKVoice"></a>
+                    <a name="/s:FC8AudioKit15AKPluckedString9duplicateFT_CS_7AKVoice"></a>
                     <a name="//apple_ref/swift/Method/duplicate()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit15AKPluckedString9duplicateFS0_FT_CS_7AKVoice">duplicate()</a>
+                    <a class="token" href="#/s:FC8AudioKit15AKPluckedString9duplicateFT_CS_7AKVoice">duplicate()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -851,9 +813,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit15AKPluckedString7triggerFS0_FT9frequencySd9amplitudeSd_T_"></a>
+                    <a name="/s:FC8AudioKit15AKPluckedString7triggerFT9frequencySd9amplitudeSd_T_"></a>
                     <a name="//apple_ref/swift/Method/trigger(frequency:amplitude:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit15AKPluckedString7triggerFS0_FT9frequencySd9amplitudeSd_T_">trigger(frequency:amplitude:)</a>
+                    <a class="token" href="#/s:FC8AudioKit15AKPluckedString7triggerFT9frequencySd9amplitudeSd_T_">trigger(frequency:amplitude:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -862,7 +824,8 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Trigger the sound with an optional set of parameters
-- parameter parameters: An array of doubles to use as parameters</p>
+- parameter frequency: Frequency in Hz
+- amplitude amplitude: Volume</p>
 
                       </div>
                       <div class="declaration">
@@ -880,12 +843,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>parameters</em>
+                                <em>frequency</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>An array of doubles to use as parameters</p>
+                                  <p>Frequency in Hz</p>
 
                                 </div>
                               </td>
@@ -899,9 +862,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit15AKPluckedString5startFS0_FT_T_"></a>
+                    <a name="/s:FC8AudioKit15AKPluckedString5startFT_T_"></a>
                     <a name="//apple_ref/swift/Method/start()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit15AKPluckedString5startFS0_FT_T_">start()</a>
+                    <a class="token" href="#/s:FC8AudioKit15AKPluckedString5startFT_T_">start()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -926,9 +889,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit15AKPluckedString4stopFS0_FT_T_"></a>
+                    <a name="/s:FC8AudioKit15AKPluckedString4stopFT_T_"></a>
                     <a name="//apple_ref/swift/Method/stop()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit15AKPluckedString4stopFS0_FT_T_">stop()</a>
+                    <a class="token" href="#/s:FC8AudioKit15AKPluckedString4stopFT_T_">stop()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -943,7 +906,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">override</span>   <span class="kd">public</span> <span class="kd">func</span> <span class="nf">stop</span><span class="p">()</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">stop</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -955,7 +918,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-01-31)</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-04-05)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
