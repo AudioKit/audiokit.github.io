@@ -19,7 +19,7 @@ let lowPassFiltering = AKLowPassFilter(highPassFiltering, cutoffFrequency: 300)
 {% endhighlight %}
 <p>At this point you don&#39;t have much signal left, so you balance it against the original signal!</p>
 
-{% highlight ruby %}let rebalancedWithSource = AKBalancer(lowPassFiltering,  comparator: source)
+{% highlight ruby %}let rebalancedWithSource = AKBalancer(lowPassFiltering, comparator: source)
 
 AudioKit.output = rebalancedWithSource
 AudioKit.start()
@@ -35,8 +35,8 @@ class PlaygroundView: AKPlaygroundView {
         addTitle("Balancing Nodes")
         
         addLabel("Listen to the difference in volume:")
-        addButton("Balance", action: #selector(self.start))
-        addButton("Bypass", action: #selector(self.bypass))
+        addButton("Balance", action: #selector(start))
+        addButton("Bypass", action: #selector(bypass))
     }
     
     func start() {
