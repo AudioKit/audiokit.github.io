@@ -521,6 +521,17 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Other Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKAUPresetBuilder.html">AKAUPresetBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKNotifications.html">AKNotifications</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Other Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -554,6 +565,9 @@
             <a href="../Other Typealiases.html">Other Typealiases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit15AKRawMIDIPacket">AKRawMIDIPacket</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Other Typealiases.html#/s:E8AudioKitVSC14MIDIPacketList9Generator">Generator</a>
               </li>
             </ul>
@@ -579,9 +593,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FP8AudioKit14AKMIDIListener10midiNoteOnFTSi8velocitySi7channelSi_T_"></a>
-                    <a name="//apple_ref/swift/Method/midiNoteOn(_:velocity:channel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FP8AudioKit14AKMIDIListener10midiNoteOnFTSi8velocitySi7channelSi_T_">midiNoteOn(_:velocity:channel:)</a>
+                    <a name="/s:FP8AudioKit14AKMIDIListener18receivedMIDINoteOnFTSi8velocitySi7channelSi_T_"></a>
+                    <a name="//apple_ref/swift/Method/receivedMIDINoteOn(_:velocity:channel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP8AudioKit14AKMIDIListener18receivedMIDINoteOnFTSi8velocitySi7channelSi_T_">receivedMIDINoteOn(_:velocity:channel:)</a>
                     </code>
                       <span class="declaration-note">
                         Default implementation
@@ -592,25 +606,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Receive the MIDI note on event
-- parameter note:     Note number of activated note
-- parameter velocity: MIDI Velocity (0-127)
-- parameter channel:  MIDI Channel (1-16)</p>
+                        <p>Receive the MIDI note on event</p>
 
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
-                        <p>Receive the MIDI note on event
-- parameter note:     Note number of activated note
-- parameter velocity: MIDI Velocity (0-127)
-- parameter channel:  MIDI Channel (1-16)</p>
+                        <p>Receive the MIDI note on event</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">midiNoteOn</span><span class="p">(</span><span class="nv">note</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">velocity</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">receivedMIDINoteOn</span><span class="p">(</span><span class="nv">note</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">velocity</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -666,9 +674,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FP8AudioKit14AKMIDIListener11midiNoteOffFTSi8velocitySi7channelSi_T_"></a>
-                    <a name="//apple_ref/swift/Method/midiNoteOff(_:velocity:channel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FP8AudioKit14AKMIDIListener11midiNoteOffFTSi8velocitySi7channelSi_T_">midiNoteOff(_:velocity:channel:)</a>
+                    <a name="/s:FP8AudioKit14AKMIDIListener19receivedMIDINoteOffFTSi8velocitySi7channelSi_T_"></a>
+                    <a name="//apple_ref/swift/Method/receivedMIDINoteOff(_:velocity:channel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP8AudioKit14AKMIDIListener19receivedMIDINoteOffFTSi8velocitySi7channelSi_T_">receivedMIDINoteOff(_:velocity:channel:)</a>
                     </code>
                       <span class="declaration-note">
                         Default implementation
@@ -679,25 +687,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Receive the MIDI note off event
-- parameter note:     Note number of released note
-- parameter velocity: MIDI Velocity (0-127) usually speed of release, often 0.
-- parameter channel:  MIDI Channel (1-16)</p>
+                        <p>Receive the MIDI note off event</p>
 
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
-                        <p>Receive the MIDI note off event
-- parameter note:     Note number of released note
-- parameter velocity: MIDI Velocity (0-127) usually speed of release, often 0.
-- parameter channel:  MIDI Channel (1-16)</p>
+                        <p>Receive the MIDI note off event</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">midiNoteOff</span><span class="p">(</span><span class="nv">note</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">velocity</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">receivedMIDINoteOff</span><span class="p">(</span><span class="nv">note</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">velocity</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -753,9 +755,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FP8AudioKit14AKMIDIListener14midiControllerFTSi5valueSi7channelSi_T_"></a>
-                    <a name="//apple_ref/swift/Method/midiController(_:value:channel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FP8AudioKit14AKMIDIListener14midiControllerFTSi5valueSi7channelSi_T_">midiController(_:value:channel:)</a>
+                    <a name="/s:FP8AudioKit14AKMIDIListener22receivedMIDIControllerFTSi5valueSi7channelSi_T_"></a>
+                    <a name="//apple_ref/swift/Method/receivedMIDIController(_:value:channel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP8AudioKit14AKMIDIListener22receivedMIDIControllerFTSi5valueSi7channelSi_T_">receivedMIDIController(_:value:channel:)</a>
                     </code>
                       <span class="declaration-note">
                         Default implementation
@@ -766,25 +768,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Receive a generic controller value
-- parameter controller: MIDI Controller Number
-- parameter value:      Value of this controller
-- parameter channel:    MIDI Channel (1-16)</p>
+                        <p>Receive a generic controller value</p>
 
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
-                        <p>Receive a generic controller value
-- parameter controller: MIDI Controller Number
-- parameter value:      Value of this controller
-- parameter channel:    MIDI Channel (1-16)</p>
+                        <p>Receive a generic controller value</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">midiController</span><span class="p">(</span><span class="nv">controller</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">receivedMIDIController</span><span class="p">(</span><span class="nv">controller</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -840,9 +836,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FP8AudioKit14AKMIDIListener20midiAftertouchOnNoteFTSi8pressureSi7channelSi_T_"></a>
-                    <a name="//apple_ref/swift/Method/midiAftertouchOnNote(_:pressure:channel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FP8AudioKit14AKMIDIListener20midiAftertouchOnNoteFTSi8pressureSi7channelSi_T_">midiAftertouchOnNote(_:pressure:channel:)</a>
+                    <a name="/s:FP8AudioKit14AKMIDIListener28receivedMIDIAftertouchOnNoteFTSi8pressureSi7channelSi_T_"></a>
+                    <a name="//apple_ref/swift/Method/receivedMIDIAftertouchOnNote(_:pressure:channel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP8AudioKit14AKMIDIListener28receivedMIDIAftertouchOnNoteFTSi8pressureSi7channelSi_T_">receivedMIDIAftertouchOnNote(_:pressure:channel:)</a>
                     </code>
                       <span class="declaration-note">
                         Default implementation
@@ -853,25 +849,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Receive single note based aftertouch event
-- parameter note:     Note number of touched note
-- parameter pressure: Pressure applied to the note (0-127)
-- parameter channel:  MIDI Channel (1-16)</p>
+                        <p>Receive single note based aftertouch event</p>
 
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
-                        <p>Receive single note based aftertouch event
-- parameter note:     Note number of touched note
-- parameter pressure: Pressure applied to the note (0-127)
-- parameter channel:  MIDI Channel (1-16)</p>
+                        <p>Receive single note based aftertouch event</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">midiAftertouchOnNote</span><span class="p">(</span><span class="nv">note</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">pressure</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">receivedMIDIAftertouchOnNote</span><span class="p">(</span><span class="nv">note</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">pressure</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -927,9 +917,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FP8AudioKit14AKMIDIListener14midiAfterTouchFTSi7channelSi_T_"></a>
-                    <a name="//apple_ref/swift/Method/midiAfterTouch(_:channel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FP8AudioKit14AKMIDIListener14midiAfterTouchFTSi7channelSi_T_">midiAfterTouch(_:channel:)</a>
+                    <a name="/s:FP8AudioKit14AKMIDIListener22receivedMIDIAfterTouchFTSi7channelSi_T_"></a>
+                    <a name="//apple_ref/swift/Method/receivedMIDIAfterTouch(_:channel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP8AudioKit14AKMIDIListener22receivedMIDIAfterTouchFTSi7channelSi_T_">receivedMIDIAfterTouch(_:channel:)</a>
                     </code>
                       <span class="declaration-note">
                         Default implementation
@@ -940,23 +930,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Receive global aftertouch
-- parameter pressure: Pressure applied (0-127)
-- parameter channel:  MIDI Channel (1-16)</p>
+                        <p>Receive global aftertouch</p>
 
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
-                        <p>Receive global aftertouch
-- parameter pressure: Pressure applied (0-127)
-- parameter channel:  MIDI Channel (1-16)</p>
+                        <p>Receive global aftertouch</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">midiAfterTouch</span><span class="p">(</span><span class="nv">pressure</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">receivedMIDIAfterTouch</span><span class="p">(</span><span class="nv">pressure</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -999,9 +985,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FP8AudioKit14AKMIDIListener14midiPitchWheelFTSi7channelSi_T_"></a>
-                    <a name="//apple_ref/swift/Method/midiPitchWheel(_:channel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FP8AudioKit14AKMIDIListener14midiPitchWheelFTSi7channelSi_T_">midiPitchWheel(_:channel:)</a>
+                    <a name="/s:FP8AudioKit14AKMIDIListener22receivedMIDIPitchWheelFTSi7channelSi_T_"></a>
+                    <a name="//apple_ref/swift/Method/receivedMIDIPitchWheel(_:channel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP8AudioKit14AKMIDIListener22receivedMIDIPitchWheelFTSi7channelSi_T_">receivedMIDIPitchWheel(_:channel:)</a>
                     </code>
                       <span class="declaration-note">
                         Default implementation
@@ -1012,23 +998,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Receive pitch wheel value
-- parameter pitchWheelValue: MIDI Pitch Wheel Value (0-16383)
-- parameter channel:         MIDI Channel (1-16)</p>
+                        <p>Receive pitch wheel value</p>
 
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
-                        <p>Receive pitch wheel value
-- parameter pitchWheelValue: MIDI Pitch Wheel Value (0-16383)
-- parameter channel:         MIDI Channel (1-16)</p>
+                        <p>Receive pitch wheel value</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">midiPitchWheel</span><span class="p">(</span><span class="nv">pitchWheelValue</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">receivedMIDIPitchWheel</span><span class="p">(</span><span class="nv">pitchWheelValue</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1071,9 +1053,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FP8AudioKit14AKMIDIListener17midiProgramChangeFTSi7channelSi_T_"></a>
-                    <a name="//apple_ref/swift/Method/midiProgramChange(_:channel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FP8AudioKit14AKMIDIListener17midiProgramChangeFTSi7channelSi_T_">midiProgramChange(_:channel:)</a>
+                    <a name="/s:FP8AudioKit14AKMIDIListener25receivedMIDIProgramChangeFTSi7channelSi_T_"></a>
+                    <a name="//apple_ref/swift/Method/receivedMIDIProgramChange(_:channel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP8AudioKit14AKMIDIListener25receivedMIDIProgramChangeFTSi7channelSi_T_">receivedMIDIProgramChange(_:channel:)</a>
                     </code>
                       <span class="declaration-note">
                         Default implementation
@@ -1084,23 +1066,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Receive program change
-- parameter program:  MIDI Program Value (0-127)
-- parameter channel:  MIDI Channel (1-16)</p>
+                        <p>Receive program change</p>
 
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
-                        <p>Receive program change
-- parameter program:  MIDI Program Value (0-127)
-- parameter channel:  MIDI Channel (1-16)</p>
+                        <p>Receive program change</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">midiProgramChange</span><span class="p">(</span><span class="nv">program</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">receivedMIDIProgramChange</span><span class="p">(</span><span class="nv">program</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1143,9 +1121,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FP8AudioKit14AKMIDIListener17midiSystemCommandFGSaVs5UInt8_T_"></a>
-                    <a name="//apple_ref/swift/Method/midiSystemCommand(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FP8AudioKit14AKMIDIListener17midiSystemCommandFGSaVs5UInt8_T_">midiSystemCommand(_:)</a>
+                    <a name="/s:FP8AudioKit14AKMIDIListener25receivedMIDISystemCommandFGSaVs5UInt8_T_"></a>
+                    <a name="//apple_ref/swift/Method/receivedMIDISystemCommand(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP8AudioKit14AKMIDIListener25receivedMIDISystemCommandFGSaVs5UInt8_T_">receivedMIDISystemCommand(_:)</a>
                     </code>
                       <span class="declaration-note">
                         Default implementation
@@ -1156,21 +1134,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Receive a midi system command (such as clock, sysex, etc)
-- parameter data: Array of integers</p>
+                        <p>Receive a midi system command (such as clock, sysex, etc)</p>
 
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
-                        <p>Receive a midi system command (such as clock, sysex, etc)
-- parameter data: Array of integers</p>
+                        <p>Receive a midi system command (such as clock, sysex, etc)</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">midiSystemCommand</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="p">[</span><span class="kt">UInt8</span><span class="p">])</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">receivedMIDISystemCommand</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="p">[</span><span class="kt">UInt8</span><span class="p">])</span></code></pre>
 
                         </div>
                       </div>
@@ -1202,8 +1178,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-04-05)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-05-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

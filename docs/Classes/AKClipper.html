@@ -521,6 +521,17 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Other Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKAUPresetBuilder.html">AKAUPresetBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKNotifications.html">AKNotifications</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Other Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -553,6 +564,9 @@
           <li class="nav-group-name">
             <a href="../Other Typealiases.html">Other Typealiases</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit15AKRawMIDIPacket">AKRawMIDIPacket</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Other Typealiases.html#/s:E8AudioKitVSC14MIDIPacketList9Generator">Generator</a>
               </li>
@@ -587,6 +601,33 @@ methods.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:vC8AudioKit9AKClipper8rampTimeSd"></a>
+                    <a name="//apple_ref/swift/Property/rampTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit9AKClipper8rampTimeSd">rampTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ramp Time represents the speed at which parameters are allowed to change</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">rampTime</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="kt">AKSettings</span><span class="o">.</span><span class="n">rampTime</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:vC8AudioKit9AKClipper5limitSd"></a>
                     <a name="//apple_ref/swift/Property/limit" class="dashAnchor"></a>
                     <a class="token" href="#/s:vC8AudioKit9AKClipper5limitSd">limit</a>
@@ -605,60 +646,6 @@ methods.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">1.0</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:vC8AudioKit9AKClipper18clippingStartPointSd"></a>
-                    <a name="//apple_ref/swift/Property/clippingStartPoint" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC8AudioKit9AKClipper18clippingStartPointSd">clippingStartPoint</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>When the clipping method is 0 (Bram De Jong), indicates point at which clipping starts in the range 0-1.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">clippingStartPoint</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.5</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:vC8AudioKit9AKClipper6methodSd"></a>
-                    <a name="//apple_ref/swift/Property/method" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC8AudioKit9AKClipper6methodSd">method</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Method of clipping. 0 = Bram de Jong, 1 = Sine, 2 = tanh.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">method</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
 
                         </div>
                       </div>
@@ -706,9 +693,9 @@ methods.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit9AKClippercFTCS_6AKNode5limitSd18clippingStartPointSd6methodSd_S0_"></a>
-                    <a name="//apple_ref/swift/Method/init(_:limit:clippingStartPoint:method:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit9AKClippercFTCS_6AKNode5limitSd18clippingStartPointSd6methodSd_S0_">init(_:limit:clippingStartPoint:method:)</a>
+                    <a name="/s:FC8AudioKit9AKClippercFTCS_6AKNode5limitSd_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(_:limit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit9AKClippercFTCS_6AKNode5limitSd_S0_">init(_:limit:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -725,9 +712,7 @@ methods.</p>
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
         <span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt">AKNode</span><span class="p">,</span>
-        <span class="nv">limit</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
-        <span class="nv">clippingStartPoint</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
-        <span class="nv">method</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
+        <span class="nv">limit</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -757,32 +742,6 @@ methods.</p>
                               <td>
                                 <div>
                                   <p>Threshold / limiting value.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>clippingStartPoint</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>When the clipping method is 0 (Bram De Jong), indicates point at which clipping starts in the range 0-1.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>method</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Method of clipping. 0 = Bram de Jong, 1 = Sine, 2 = tanh.</p>
 
                                 </div>
                               </td>
@@ -863,8 +822,8 @@ methods.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-04-05)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-05-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

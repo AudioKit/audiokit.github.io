@@ -521,6 +521,17 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Other Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKAUPresetBuilder.html">AKAUPresetBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKNotifications.html">AKNotifications</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Other Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -554,6 +565,9 @@
             <a href="../Other Typealiases.html">Other Typealiases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit15AKRawMIDIPacket">AKRawMIDIPacket</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Other Typealiases.html#/s:E8AudioKitVSC14MIDIPacketList9Generator">Generator</a>
               </li>
             </ul>
@@ -575,7 +589,7 @@
 <p>You add midi listeners like this:
 <code>
 var midiIn = AKMidi()
-midi.openMIDIIn()
+midi.openInput()
 midi.addListener(someClass)
 </code>
 &hellip;where someClass conforms to the AKMIDIListener protocol</p>
@@ -596,9 +610,9 @@ midi.addListener(someClass)
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC8AudioKit6AKMIDI10midiClientVs6UInt32"></a>
-                    <a name="//apple_ref/swift/Property/midiClient" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC8AudioKit6AKMIDI10midiClientVs6UInt32">midiClient</a>
+                    <a name="/s:vC8AudioKit6AKMIDI6clientVs6UInt32"></a>
+                    <a name="//apple_ref/swift/Property/client" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit6AKMIDI6clientVs6UInt32">client</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -613,34 +627,7 @@ midi.addListener(someClass)
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">midiClient</span> <span class="o">=</span> <span class="kt">MIDIClientRef</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:vC8AudioKit6AKMIDI11midiInPortsGSaVs6UInt32_"></a>
-                    <a name="//apple_ref/swift/Property/midiInPorts" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC8AudioKit6AKMIDI11midiInPortsGSaVs6UInt32_">midiInPorts</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Array of MIDI In ports</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">midiInPorts</span><span class="p">:</span> <span class="p">[</span><span class="kt">MIDIPortRef</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">client</span> <span class="o">=</span> <span class="kt">MIDIClientRef</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -668,195 +655,6 @@ midi.addListener(someClass)
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">virtualInput</span> <span class="o">=</span> <span class="kt">MIDIPortRef</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:vC8AudioKit6AKMIDI12midiEndpointVs6UInt32"></a>
-                    <a name="//apple_ref/swift/Property/midiEndpoint" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC8AudioKit6AKMIDI12midiEndpointVs6UInt32">midiEndpoint</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>MIDI End Point</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">midiEndpoint</span><span class="p">:</span> <span class="kt">MIDIEndpointRef</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:vC8AudioKit6AKMIDI12midiOutPortsGSaVs6UInt32_"></a>
-                    <a name="//apple_ref/swift/Property/midiOutPorts" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC8AudioKit6AKMIDI12midiOutPortsGSaVs6UInt32_">midiOutPorts</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Array of MIDI Out ports</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">midiOutPorts</span><span class="p">:</span> <span class="p">[</span><span class="kt">MIDIPortRef</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:vC8AudioKit6AKMIDI11midiOutPortVs6UInt32"></a>
-                    <a name="//apple_ref/swift/Property/midiOutPort" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC8AudioKit6AKMIDI11midiOutPortVs6UInt32">midiOutPort</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>MIDI Out Port Reference</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">midiOutPort</span> <span class="o">=</span> <span class="kt">MIDIPortRef</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:vC8AudioKit6AKMIDI13virtualOutputVs6UInt32"></a>
-                    <a name="//apple_ref/swift/Property/virtualOutput" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC8AudioKit6AKMIDI13virtualOutputVs6UInt32">virtualOutput</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Virtual MIDI output</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">virtualOutput</span> <span class="o">=</span> <span class="kt">MIDIPortRef</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:vC8AudioKit6AKMIDI13midiEndpointsGSaVs6UInt32_"></a>
-                    <a name="//apple_ref/swift/Property/midiEndpoints" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC8AudioKit6AKMIDI13midiEndpointsGSaVs6UInt32_">midiEndpoints</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Array of MIDI Endpoints</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">midiEndpoints</span><span class="p">:</span> <span class="p">[</span><span class="kt">MIDIEndpointRef</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:vC8AudioKit6AKMIDI13midiListenersGSaPS_14AKMIDIListener__"></a>
-                    <a name="//apple_ref/swift/Property/midiListeners" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC8AudioKit6AKMIDI13midiListenersGSaPS_14AKMIDIListener__">midiListeners</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Array of all listeners</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">midiListeners</span><span class="p">:[</span><span class="kt">AKMIDIListener</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC8AudioKit6AKMIDI11addListenerFPS_14AKMIDIListener_T_"></a>
-                    <a name="//apple_ref/swift/Method/addListener(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit6AKMIDI11addListenerFPS_14AKMIDIListener_T_">addListener(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Add a listener to the listeners</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addListener</span><span class="p">(</span><span class="nv">listener</span><span class="p">:</span><span class="kt">AKMIDIListener</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -901,6 +699,17 @@ midi.addListener(someClass)
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Virtual%20MIDI"></a>
+                <a name="//apple_ref/swift/Section/Virtual MIDI" class="dashAnchor"></a>
+                <a href="#/Virtual%20MIDI">
+                  <h3 class="section-name">Virtual MIDI</h3>
+                </a>
+              </div>
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -958,20 +767,67 @@ midi.addListener(someClass)
               </ul>
             </div>
             <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Input/Output%20Setup"></a>
-                <a name="//apple_ref/swift/Section/Input/Output Setup" class="dashAnchor"></a>
-                <a href="#/Input/Output%20Setup">
-                  <h3 class="section-name">Input/Output Setup</h3>
-                </a>
-              </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit6AKMIDI10openMIDIInFTSS_T_"></a>
-                    <a name="//apple_ref/swift/Method/openMIDIIn(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit6AKMIDI10openMIDIInFTSS_T_">openMIDIIn(_:)</a>
+                    <a name="/s:vC8AudioKit6AKMIDI10inputNamesGSaSS_"></a>
+                    <a name="//apple_ref/swift/Property/inputNames" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit6AKMIDI10inputNamesGSaSS_">inputNames</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Array of input names</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">inputNames</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit6AKMIDI11addListenerFPS_14AKMIDIListener_T_"></a>
+                    <a name="//apple_ref/swift/Method/addListener(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit6AKMIDI11addListenerFPS_14AKMIDIListener_T_">addListener(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add a listener to the listeners</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addListener</span><span class="p">(</span><span class="nv">listener</span><span class="p">:</span> <span class="kt">AKMIDIListener</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit6AKMIDI9openInputFTSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/openInput(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit6AKMIDI9openInputFTSS_T_">openInput(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -986,7 +842,7 @@ midi.addListener(someClass)
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">openMIDIIn</span><span class="p">(</span><span class="nv">namedInput</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">openInput</span><span class="p">(</span><span class="nv">namedInput</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1016,9 +872,9 @@ midi.addListener(someClass)
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit6AKMIDI15printMIDIInputsFT_T_"></a>
-                    <a name="//apple_ref/swift/Method/printMIDIInputs()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit6AKMIDI15printMIDIInputsFT_T_">printMIDIInputs()</a>
+                    <a name="/s:FC8AudioKit6AKMIDI10closeInputFTSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/closeInput(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit6AKMIDI10closeInputFTSS_T_">closeInput(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1026,14 +882,92 @@ midi.addListener(someClass)
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Prints a list of all MIDI Inputs</p>
+                        <p>Close a MIDI Input port</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">printMIDIInputs</span><span class="p">()</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">closeInput</span><span class="p">(</span><span class="nv">namedInput</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>namedInput</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String containing the name of the MIDI Input</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit6AKMIDI14closeAllInputsFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/closeAllInputs()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit6AKMIDI14closeAllInputsFT_T_">closeAllInputs()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Close all MIDI Input ports</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">closeAllInputs</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit6AKMIDI16destinationNamesGSaSS_"></a>
+                    <a name="//apple_ref/swift/Property/destinationNames" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit6AKMIDI16destinationNamesGSaSS_">destinationNames</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Array of destination names</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">destinationNames</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -1043,9 +977,9 @@ midi.addListener(someClass)
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit6AKMIDI11openMIDIOutFTSS_T_"></a>
-                    <a name="//apple_ref/swift/Method/openMIDIOut(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit6AKMIDI11openMIDIOutFTSS_T_">openMIDIOut(_:)</a>
+                    <a name="/s:FC8AudioKit6AKMIDI10openOutputFTSS_T_"></a>
+                    <a name="//apple_ref/swift/Method/openOutput(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit6AKMIDI10openOutputFTSS_T_">openOutput(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1060,7 +994,7 @@ midi.addListener(someClass)
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">openMIDIOut</span><span class="p">(</span><span class="nv">namedOutput</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">openOutput</span><span class="p">(</span><span class="nv">namedOutput</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1087,44 +1021,6 @@ midi.addListener(someClass)
                     </section>
                   </div>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC8AudioKit6AKMIDI21printMIDIDestinationsFT_T_"></a>
-                    <a name="//apple_ref/swift/Method/printMIDIDestinations()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit6AKMIDI21printMIDIDestinationsFT_T_">printMIDIDestinations()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Prints a list of all MIDI Destinations</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">printMIDIDestinations</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Sending%20MIDI"></a>
-                <a name="//apple_ref/swift/Section/Sending MIDI" class="dashAnchor"></a>
-                <a href="#/Sending%20MIDI">
-                  <h3 class="section-name">Sending MIDI</h3>
-                </a>
-              </div>
-              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -1155,9 +1051,9 @@ midi.addListener(someClass)
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit6AKMIDI13sendMIDIEventFVS_11AKMIDIEventT_"></a>
-                    <a name="//apple_ref/swift/Method/sendMIDIEvent(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit6AKMIDI13sendMIDIEventFVS_11AKMIDIEventT_">sendMIDIEvent(_:)</a>
+                    <a name="/s:FC8AudioKit6AKMIDI9sendEventFVS_11AKMIDIEventT_"></a>
+                    <a name="//apple_ref/swift/Method/sendEvent(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit6AKMIDI9sendEventFVS_11AKMIDIEventT_">sendEvent(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1172,7 +1068,7 @@ midi.addListener(someClass)
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendMIDIEvent</span><span class="p">(</span><span class="nv">event</span><span class="p">:</span> <span class="kt">AKMIDIEvent</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendEvent</span><span class="p">(</span><span class="nv">event</span><span class="p">:</span> <span class="kt">AKMIDIEvent</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1238,8 +1134,8 @@ midi.addListener(someClass)
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-04-05)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-05-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

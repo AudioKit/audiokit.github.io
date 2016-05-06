@@ -521,6 +521,17 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Other Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKAUPresetBuilder.html">AKAUPresetBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKNotifications.html">AKNotifications</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Other Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -553,6 +564,9 @@
           <li class="nav-group-name">
             <a href="../Other Typealiases.html">Other Typealiases</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit15AKRawMIDIPacket">AKRawMIDIPacket</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Other Typealiases.html#/s:E8AudioKitVSC14MIDIPacketList9Generator">Generator</a>
               </li>
@@ -684,7 +698,7 @@ As such, there is some code hanging around while we iron it out.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">tracks</span><span class="p">:</span> <span class="p">[</span><span class="kt">AKMusicTrack</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">tracks</span> <span class="o">=</span> <span class="p">[</span><span class="kt">AKMusicTrack</span><span class="p">]()</span></code></pre>
 
                         </div>
                       </div>
@@ -1011,9 +1025,9 @@ As such, there is some code hanging around while we iron it out.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit11AKSequencer7preRollFT_T_"></a>
-                    <a name="//apple_ref/swift/Method/preRoll()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit11AKSequencer7preRollFT_T_">preRoll()</a>
+                    <a name="/s:FC8AudioKit11AKSequencer7prerollFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/preroll()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKSequencer7prerollFT_T_">preroll()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1028,7 +1042,7 @@ As such, there is some code hanging around while we iron it out.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">preRoll</span><span class="p">()</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">preroll</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -1038,9 +1052,9 @@ As such, there is some code hanging around while we iron it out.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit11AKSequencer10loopToggleFT_T_"></a>
-                    <a name="//apple_ref/swift/Method/loopToggle()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit11AKSequencer10loopToggleFT_T_">loopToggle()</a>
+                    <a name="/s:FC8AudioKit11AKSequencer10toggleLoopFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/toggleLoop()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKSequencer10toggleLoopFT_T_">toggleLoop()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1055,7 +1069,7 @@ As such, there is some code hanging around while we iron it out.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">loopToggle</span><span class="p">()</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">toggleLoop</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -1065,9 +1079,9 @@ As such, there is some code hanging around while we iron it out.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit11AKSequencer6loopOnFT_T_"></a>
-                    <a name="//apple_ref/swift/Method/loopOn()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit11AKSequencer6loopOnFT_T_">loopOn()</a>
+                    <a name="/s:FC8AudioKit11AKSequencer13enableLoopingFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/enableLooping()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKSequencer13enableLoopingFT_T_">enableLooping()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1075,14 +1089,14 @@ As such, there is some code hanging around while we iron it out.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Enable looping for all tracks</p>
+                        <p>Enable looping for all tracks - loops entire sequence</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">loopOn</span><span class="p">()</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">enableLooping</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -1092,9 +1106,56 @@ As such, there is some code hanging around while we iron it out.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit11AKSequencer7loopOffFT_T_"></a>
-                    <a name="//apple_ref/swift/Method/loopOff()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit11AKSequencer7loopOffFT_T_">loopOff()</a>
+                    <a name="/s:FC8AudioKit11AKSequencer13enableLoopingFSdT_"></a>
+                    <a name="//apple_ref/swift/Method/enableLooping(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKSequencer13enableLoopingFSdT_">enableLooping(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enable looping for all tracks with specified length</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">enableLooping</span><span class="p">(</span><span class="nv">loopLength</span><span class="p">:</span> <span class="kt">Beat</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>loopLength</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Loop length in beats</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKSequencer14disableLoopingFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/disableLooping()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKSequencer14disableLoopingFT_T_">disableLooping()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1109,7 +1170,7 @@ As such, there is some code hanging around while we iron it out.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">loopOff</span><span class="p">()</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">disableLooping</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -1136,7 +1197,7 @@ As such, there is some code hanging around while we iron it out.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setLoopInfo</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">numberOfLoops</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setLoopInfo</span><span class="p">(</span><span class="nv">duration</span><span class="p">:</span> <span class="kt">Beat</span><span class="p">,</span> <span class="nv">numberOfLoops</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1152,7 +1213,7 @@ As such, there is some code hanging around while we iron it out.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>Duration of the loop in seconds</p>
+                                  <p>Duration of the loop in beats</p>
 
                                 </div>
                               </td>
@@ -1196,7 +1257,7 @@ As such, there is some code hanging around while we iron it out.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setLength</span><span class="p">(</span><span class="nv">length</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setLength</span><span class="p">(</span><span class="nv">length</span><span class="p">:</span> <span class="kt">Beat</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1212,7 +1273,7 @@ As such, there is some code hanging around while we iron it out.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>Length of tracks in seconds</p>
+                                  <p>Length of tracks in beats</p>
 
                                 </div>
                               </td>
@@ -1243,7 +1304,7 @@ As such, there is some code hanging around while we iron it out.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">length</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">length</span><span class="p">:</span> <span class="kt">Beat</span></code></pre>
 
                         </div>
                       </div>
@@ -1324,7 +1385,7 @@ As such, there is some code hanging around while we iron it out.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addTempoEvent</span><span class="p">(</span><span class="nv">bpm</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">position</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addTempoEvent</span><span class="p">(</span><span class="nv">bpm</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">position</span><span class="p">:</span> <span class="kt">Beat</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1353,7 +1414,7 @@ As such, there is some code hanging around while we iron it out.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>Point in time in seconds</p>
+                                  <p>Point in time in beats</p>
 
                                 </div>
                               </td>
@@ -1384,7 +1445,7 @@ As such, there is some code hanging around while we iron it out.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">beatsForSeconds</span><span class="p">(</span><span class="nv">seconds</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">beatsForSeconds</span><span class="p">(</span><span class="nv">seconds</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Beat</span></code></pre>
 
                         </div>
                       </div>
@@ -1431,7 +1492,7 @@ As such, there is some code hanging around while we iron it out.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">secondsForBeats</span><span class="p">(</span><span class="nv">beats</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">secondsForBeats</span><span class="p">(</span><span class="nv">beats</span><span class="p">:</span> <span class="kt">Beat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
 
                         </div>
                       </div>
@@ -1596,9 +1657,9 @@ As such, there is some code hanging around while we iron it out.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC8AudioKit11AKSequencer11currentTimeSd"></a>
-                    <a name="//apple_ref/swift/Property/currentTime" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC8AudioKit11AKSequencer11currentTimeSd">currentTime</a>
+                    <a name="/s:vC8AudioKit11AKSequencer22currentPositionInBeatsSd"></a>
+                    <a name="//apple_ref/swift/Property/currentPositionInBeats" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit11AKSequencer22currentPositionInBeatsSd">currentPositionInBeats</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1613,7 +1674,7 @@ As such, there is some code hanging around while we iron it out.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">currentTime</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">currentPositionInBeats</span><span class="p">:</span> <span class="kt">Beat</span></code></pre>
 
                         </div>
                       </div>
@@ -1667,7 +1728,7 @@ As such, there is some code hanging around while we iron it out.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">loadMIDIFile</span><span class="p">(</span><span class="nv">filename</span><span class="p">:</span><span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">loadMIDIFile</span><span class="p">(</span><span class="nv">filename</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1694,7 +1755,7 @@ As such, there is some code hanging around while we iron it out.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">newTrack</span><span class="p">()</span><span class="o">-&gt;</span><span class="kt">AKMusicTrack</span><span class="p">?</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">newTrack</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">AKMusicTrack</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1721,7 +1782,7 @@ As such, there is some code hanging around while we iron it out.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">clearRange</span><span class="p">(</span><span class="nv">start</span><span class="p">:</span><span class="kt">Double</span><span class="p">,</span> <span class="nv">duration</span><span class="p">:</span><span class="kt">Double</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">clearRange</span><span class="p">(</span><span class="nv">start</span><span class="p">:</span> <span class="kt">Beat</span><span class="p">,</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">Beat</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1829,6 +1890,33 @@ As such, there is some code hanging around while we iron it out.</p>
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC8AudioKit11AKSequencer16beatsFromSamplesFTSi2fsSi3bpmSd_Sd"></a>
+                    <a name="//apple_ref/swift/Method/beatsFromSamples(_:fs:bpm:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit11AKSequencer16beatsFromSamplesFTSi2fsSi3bpmSd_Sd">beatsFromSamples(_:fs:bpm:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AKSequencer</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="task-group">
@@ -1865,8 +1953,8 @@ As such, there is some code hanging around while we iron it out.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-04-05)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-05-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

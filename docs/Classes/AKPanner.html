@@ -521,6 +521,17 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Other Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKAUPresetBuilder.html">AKAUPresetBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKNotifications.html">AKNotifications</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Other Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -554,6 +565,9 @@
             <a href="../Other Typealiases.html">Other Typealiases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit15AKRawMIDIPacket">AKRawMIDIPacket</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Other Typealiases.html#/s:E8AudioKitVSC14MIDIPacketList9Generator">Generator</a>
               </li>
             </ul>
@@ -566,7 +580,7 @@
             <h1>AKPanner</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AKPanner</span><span class="p">:</span> <span class="kt">AKNode</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AKPanner</span><span class="p">:</span> <span class="kt">AKNode</span><span class="p">,</span> <span class="kt">AKToggleable</span></code></pre>
 
                 </div>
               </div>
@@ -583,6 +597,33 @@
                 </a>
               </div>
               <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit8AKPanner8rampTimeSd"></a>
+                    <a name="//apple_ref/swift/Property/rampTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit8AKPanner8rampTimeSd">rampTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ramp Time represents the speed at which parameters are allowed to change</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">rampTime</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="kt">AKSettings</span><span class="o">.</span><span class="n">rampTime</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -631,87 +672,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isStarted</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:vC8AudioKit8AKPanner9isPlayingSb"></a>
-                    <a name="//apple_ref/swift/Property/isPlaying" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC8AudioKit8AKPanner9isPlayingSb">isPlaying</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Tells whether the node is processing (ie. started, playing, or active)</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isPlaying</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:vC8AudioKit8AKPanner9isStoppedSb"></a>
-                    <a name="//apple_ref/swift/Property/isStopped" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC8AudioKit8AKPanner9isStoppedSb">isStopped</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Tells whether the node is not processing (ie. stopped or bypassed)</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isStopped</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:vC8AudioKit8AKPanner10isBypassedSb"></a>
-                    <a name="//apple_ref/swift/Property/isBypassed" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC8AudioKit8AKPanner10isBypassedSb">isBypassed</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Tells whether the node is not processing (ie. stopped or bypassed)</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isBypassed</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -856,67 +816,13 @@
                     </section>
                   </div>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC8AudioKit8AKPanner4playFT_T_"></a>
-                    <a name="//apple_ref/swift/Method/play()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit8AKPanner4playFT_T_">play()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Function to start, play, or activate the node, all do the same thing</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">play</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC8AudioKit8AKPanner6bypassFT_T_"></a>
-                    <a name="//apple_ref/swift/Method/bypass()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit8AKPanner6bypassFT_T_">bypass()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Function to stop or bypass the node, both are equivalent</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">bypass</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
               </ul>
             </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-04-05)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-05-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

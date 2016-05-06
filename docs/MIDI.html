@@ -520,6 +520,17 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="Other Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/AKAUPresetBuilder.html">AKAUPresetBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKNotifications.html">AKNotifications</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="Other Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -552,6 +563,9 @@
           <li class="nav-group-name">
             <a href="Other Typealiases.html">Other Typealiases</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Other Typealiases.html#/s:8AudioKit15AKRawMIDIPacket">AKRawMIDIPacket</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Other Typealiases.html#/s:E8AudioKitVSC14MIDIPacketList9Generator">Generator</a>
               </li>
@@ -586,7 +600,7 @@
 <p>You add midi listeners like this:
 <code>
 var midiIn = AKMidi()
-midi.openMIDIIn()
+midi.openInput()
 midi.addListener(someClass)
 </code>
 &hellip;where someClass conforms to the AKMIDIListener protocol</p>
@@ -600,88 +614,6 @@ midi.addListener(someClass)
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AKMIDI</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@S@MIDIPacket"></a>
-                    <a name="//apple_ref/swift/Extension/MIDIPacket" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@S@MIDIPacket">MIDIPacket</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                        <a href="Extensions/MIDIPacket.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">struct</span> <span class="kt">MIDIPacket</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@S@MIDIPacketList"></a>
-                    <a name="//apple_ref/swift/Extension/MIDIPacketList" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@S@MIDIPacketList">MIDIPacketList</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                        <a href="Extensions/MIDIPacketList.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">struct</span> <span class="kt">MIDIPacketList</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:V8AudioKit23MIDIPacketListGenerator"></a>
-                    <a name="//apple_ref/swift/Struct/MIDIPacketListGenerator" class="dashAnchor"></a>
-                    <a class="token" href="#/s:V8AudioKit23MIDIPacketListGenerator">MIDIPacketListGenerator</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Generator for MIDIPacketList allowing iteration over its list of MIDIPacket objects.</p>
-
-                        <a href="Structs/MIDIPacketListGenerator.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MIDIPacketListGenerator</span> <span class="p">:</span> <span class="kt">GeneratorType</span></code></pre>
 
                         </div>
                       </div>
@@ -723,13 +655,6 @@ midi.addListener(someClass)
               </ul>
             </div>
             <div class="task-group">
-              <div class="task-name-container">
-                <a name="/MIDI%20Helpers"></a>
-                <a name="//apple_ref/swift/Section/MIDI Helpers" class="dashAnchor"></a>
-                <a href="#/MIDI%20Helpers">
-                  <h3 class="section-name">MIDI Helpers</h3>
-                </a>
-              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -775,97 +700,6 @@ midi.addListener(someClass)
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">AKMIDIControl</span><span class="p">:</span> <span class="kt">UInt8</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:O8AudioKit12AKMIDIStatus"></a>
-                    <a name="//apple_ref/swift/Enum/AKMIDIStatus" class="dashAnchor"></a>
-                    <a class="token" href="#/s:O8AudioKit12AKMIDIStatus">AKMIDIStatus</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Potential MIDI Status messages</p>
-
-<ul>
-<li>NoteOff:
-something resembling a keyboard key release</li>
-<li>NoteOn:
-triggered when a new note is created, or a keyboard key press</li>
-<li>PolyphonicAftertouch:
-rare MIDI control on controllers in which every key has separate touch sensing</li>
-<li>ControllerChange:
-wide range of control types including volume, expression, modulation
-and a host of unnamed controllers with numbers</li>
-<li>ProgramChange:
-messages are associated with changing the basic character of the sound preset</li>
-<li>ChannelAftertouch:
-single aftertouch for all notes on a given channel (most common aftertouch type in keyboards)</li>
-<li>PitchWheel:
-common keyboard control that allow for a pitch to be bent up or down a given number of semitones</li>
-<li>SystemCommand:
-differ from system to system</li>
-</ul>
-
-                        <a href="Enums/AKMIDIStatus.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">AKMIDIStatus</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:O8AudioKit19AKMIDISystemCommand"></a>
-                    <a name="//apple_ref/swift/Enum/AKMIDISystemCommand" class="dashAnchor"></a>
-                    <a class="token" href="#/s:O8AudioKit19AKMIDISystemCommand">AKMIDISystemCommand</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>MIDI System Command</p>
-
-<ul>
-<li>None: Trivial Case</li>
-<li>Sysex: System Exclusive</li>
-<li>SongPosition: Song Position</li>
-<li>SongSelect: Song Selection</li>
-<li>TuneRequest: Request Tune</li>
-<li>SysexEnd: End System Exclusive</li>
-<li>Clock</li>
-<li>Start</li>
-<li>Continue</li>
-<li>Stop</li>
-<li>ActiveSensing: Active Sensing</li>
-<li>SysReset: System Reset</li>
-</ul>
-
-                        <a href="Enums/AKMIDISystemCommand.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">AKMIDISystemCommand</span><span class="p">:</span> <span class="kt">UInt8</span></code></pre>
 
                         </div>
                       </div>
@@ -978,6 +812,105 @@ should be triggerable via MIDI or sequenced with the sequencer.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:O8AudioKit12AKMIDIStatus"></a>
+                    <a name="//apple_ref/swift/Enum/AKMIDIStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:O8AudioKit12AKMIDIStatus">AKMIDIStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Potential MIDI Status messages</p>
+
+<ul>
+<li>NoteOff:
+something resembling a keyboard key release</li>
+<li>NoteOn:
+triggered when a new note is created, or a keyboard key press</li>
+<li>PolyphonicAftertouch:
+rare MIDI control on controllers in which every key has separate touch sensing</li>
+<li>ControllerChange:
+wide range of control types including volume, expression, modulation
+and a host of unnamed controllers with numbers</li>
+<li>ProgramChange:
+messages are associated with changing the basic character of the sound preset</li>
+<li>ChannelAftertouch:
+single aftertouch for all notes on a given channel (most common aftertouch type in keyboards)</li>
+<li>PitchWheel:
+common keyboard control that allow for a pitch to be bent up or down a given number of semitones</li>
+<li>SystemCommand:
+differ from system to system</li>
+</ul>
+
+                        <a href="Enums/AKMIDIStatus.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">AKMIDIStatus</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:O8AudioKit19AKMIDISystemCommand"></a>
+                    <a name="//apple_ref/swift/Enum/AKMIDISystemCommand" class="dashAnchor"></a>
+                    <a class="token" href="#/s:O8AudioKit19AKMIDISystemCommand">AKMIDISystemCommand</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>MIDI System Command</p>
+
+<ul>
+<li>None: Trivial Case</li>
+<li>Sysex: System Exclusive</li>
+<li>SongPosition: Song Position</li>
+<li>SongSelect: Song Selection</li>
+<li>TuneRequest: Request Tune</li>
+<li>SysexEnd: End System Exclusive</li>
+<li>Clock</li>
+<li>Start</li>
+<li>Continue</li>
+<li>Stop</li>
+<li>ActiveSensing: Active Sensing</li>
+<li>SysReset: System Reset</li>
+</ul>
+
+                        <a href="Enums/AKMIDISystemCommand.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">AKMIDISystemCommand</span><span class="p">:</span> <span class="kt">UInt8</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:C8AudioKit12AKMusicTrack"></a>
                     <a name="//apple_ref/swift/Class/AKMusicTrack" class="dashAnchor"></a>
                     <a class="token" href="#/s:C8AudioKit12AKMusicTrack">AKMusicTrack</a>
@@ -1005,11 +938,115 @@ should be triggerable via MIDI or sequenced with the sequencer.</p>
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@S@MIDIPacket"></a>
+                    <a name="//apple_ref/swift/Extension/MIDIPacket" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@S@MIDIPacket">MIDIPacket</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Allows a MIDIPacket to be iterated through with a for statement.
+This is necessary because MIDIPacket can contain multiple midi events,
+but Swift makes this unnecessarily hard because the MIDIPacket struct uses a tuple
+for the data field. Grrr!</p>
+
+<p>Example usage:
+let packet: MIDIPacket
+for message in packet {
+// message is a Message
+}</p>
+
+                        <a href="Extensions/MIDIPacket.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">struct</span> <span class="kt">MIDIPacket</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@S@MIDIPacketList"></a>
+                    <a name="//apple_ref/swift/Extension/MIDIPacketList" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@S@MIDIPacketList">MIDIPacketList</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/MIDIPacketList.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">struct</span> <span class="kt">MIDIPacketList</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:V8AudioKit23MIDIPacketListGenerator"></a>
+                    <a name="//apple_ref/swift/Struct/MIDIPacketListGenerator" class="dashAnchor"></a>
+                    <a class="token" href="#/s:V8AudioKit23MIDIPacketListGenerator">MIDIPacketListGenerator</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Generator for MIDIPacketList allowing iteration over its list of MIDIPacket objects.</p>
+
+                        <a href="Structs/MIDIPacketListGenerator.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MIDIPacketListGenerator</span><span class="p">:</span> <span class="kt">GeneratorType</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-04-05)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-05-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

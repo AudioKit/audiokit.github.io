@@ -521,6 +521,17 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Other Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKAUPresetBuilder.html">AKAUPresetBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKNotifications.html">AKNotifications</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Other Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -553,6 +564,9 @@
           <li class="nav-group-name">
             <a href="../Other Typealiases.html">Other Typealiases</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit15AKRawMIDIPacket">AKRawMIDIPacket</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Other Typealiases.html#/s:E8AudioKitVSC14MIDIPacketList9Generator">Generator</a>
               </li>
@@ -607,6 +621,52 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>note</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>MIDI Note number</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>velocity</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>MIDI Note velocity (0-127)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Channel on which the note appears</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -633,6 +693,52 @@
                           <pre class="highlight"><code><span class="kd">static</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">eventWithNoteOff</span><span class="p">(</span><span class="nv">note</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">,</span> <span class="nv">velocity</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKMIDIEvent</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>note</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>MIDI Note number</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>velocity</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>MIDI Note velocity (0-127)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Channel on which the note appears</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -661,15 +767,48 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>program</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Program change byte</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Channel on which the program change appears</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZFV8AudioKit11AKMIDIEvent19eventWithControllerFTVs5UInt83valS1_7channelS1__S0_"></a>
-                    <a name="//apple_ref/swift/Method/eventWithController(_:val:channel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZFV8AudioKit11AKMIDIEvent19eventWithControllerFTVs5UInt83valS1_7channelS1__S0_">eventWithController(_:val:channel:)</a>
+                    <a name="/s:ZFV8AudioKit11AKMIDIEvent19eventWithControllerFTVs5UInt85valueS1_7channelS1__S0_"></a>
+                    <a name="//apple_ref/swift/Method/eventWithController(_:value:channel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFV8AudioKit11AKMIDIEvent19eventWithControllerFTVs5UInt85valueS1_7channelS1__S0_">eventWithController(_:value:channel:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -684,9 +823,55 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">eventWithController</span><span class="p">(</span><span class="nv">control</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">,</span> <span class="nv">val</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKMIDIEvent</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">eventWithController</span><span class="p">(</span><span class="nv">controller</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKMIDIEvent</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>controller</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Controller number</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value of the controller</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Channel on which the controller value has changed</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -696,8 +881,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-04-05)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-05-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
