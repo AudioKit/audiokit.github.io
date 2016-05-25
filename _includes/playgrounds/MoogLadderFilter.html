@@ -14,8 +14,7 @@ var moogLadder = AKMoogLadder(player)
 {% endhighlight %}
 <p>Set the parameters of the Moog Ladder Filter here.</p>
 
-{% highlight ruby %}
-moogLadder.cutoffFrequency = 300 // Hz
+{% highlight ruby %}moogLadder.cutoffFrequency = 300 // Hz
 moogLadder.resonance = 0.6
 
 AudioKit.output = moogLadder
@@ -26,8 +25,7 @@ player.play()
 {% endhighlight %}
 <p>User Interface Set up</p>
 
-{% highlight ruby %}
-class PlaygroundView: AKPlaygroundView {
+{% highlight ruby %}class PlaygroundView: AKPlaygroundView {
 
     var cutoffFrequencyLabel: Label?
     var resonanceLabel: Label?

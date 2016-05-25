@@ -1,22 +1,24 @@
-<h3>Flat Frequency Response Reverb
-</h3>
+<p><h3>Tremolo
+</h3><h4>
+</h4></p>
 
 {% highlight ruby %}import XCPlayground
 import AudioKit
 
 let bundle = NSBundle.mainBundle()
-let file = bundle.pathForResource("drumloop", ofType: "wav")
+let file = bundle.pathForResource("guitarloop", ofType: "wav")
 var player = AKAudioPlayer(file!)
 player.looping = true
-var reverb = AKFlatFrequencyResponseReverb(player, loopDuration: 0.1)
+var tremolo = AKTremolo(player, waveform: AKTable(.PositiveSquare))
 
 {% endhighlight %}
-<p>Set the parameters of the delay here</p>
+<p>Set the parameters of the tremolo here</p>
 
-{% highlight ruby %}reverb.reverbDuration = 1
+{% highlight ruby %}tremolo.frequency = 8
 
-AudioKit.output = reverb
+AudioKit.output = tremolo
 AudioKit.start()
+
 player.play()
 
 {% endhighlight %}
@@ -24,36 +26,37 @@ player.play()
 
 {% highlight ruby %}
 class PlaygroundView: AKPlaygroundView {
-
-    var durationLabel: Label?
-
+    
+    var tremoloLabel: Label?
+    
     override func setup() {
-        addTitle("Flat Frequency Response Reverb")
-
+        addTitle("Tremolo")
+        
         addLabel("Audio Playback")
         addButton("Start", action: #selector(start))
         addButton("Stop", action: #selector(stop))
-
-        durationLabel = addLabel("Duration: \(reverb.reverbDuration)")
-        addSlider(#selector(setDuration), value: reverb.reverbDuration, minimum: 0, maximum: 5)
+        
+        tremoloLabel = addLabel("Frequency: \(tremolo.frequency)")
+        addSlider(#selector(setFrequency), value: tremolo.frequency, minimum: 0, maximum: 20)
     }
-
+    
     func start() {
         player.play()
     }
     func stop() {
         player.stop()
     }
-
-    func setDuration(slider: Slider) {
-        reverb.reverbDuration = Double(slider.value)
-        durationLabel!.text = "Duration: \(String(format: "%0.3f", reverb.reverbDuration))"
+    
+    func setFrequency(slider: Slider) {
+        tremolo.frequency = Double(slider.value)
+        tremoloLabel!.text = "Frequency: \(String(format: "%0.3f", tremolo.frequency))"
     }
-
+    
 }
 
 let view = PlaygroundView(frame: CGRect(x: 0, y: 0, width: 500, height: 300))
 XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
 XCPlaygroundPage.currentPage.liveView = view
+
 
 {% endhighlight %}
