@@ -34,9 +34,6 @@
                 <a href="Classes/AudioKit.html">AudioKit</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/AKAudioRecorder.html">AKAudioRecorder</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Classes/AKDevice.html">AKDevice</a>
               </li>
               <li class="nav-group-task">
@@ -148,9 +145,6 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Classes/AKAmplitudeTracker.html">AKAmplitudeTracker</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/AKFFT.html">AKFFT</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKFrequencyTracker.html">AKFrequencyTracker</a>
@@ -442,10 +436,22 @@
                 <a href="Function Operations.html#/s:ZF8AudioKitoi1mFTPS_11AKParameter_PS0___VS_11AKOperation">*(_:_:)</a>
               </li>
               <li class="nav-group-task">
+                <a href="Function Operations.html#/s:ZF8AudioKitoi1mFTPS_7Numeric_PS0___Sd">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Function Operations.html#/s:ZF8AudioKitoi1pFTPS_7Numeric_PS0___Sd">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Function Operations.html#/s:ZF8AudioKitoi1pFTPS_11AKParameter_PS0___VS_11AKOperation">+(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="Function Operations.html#/s:ZF8AudioKitoi1sFTPS_11AKParameter_PS0___VS_11AKOperation">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Function Operations.html#/s:ZF8AudioKitoi1sFTPS_7Numeric_PS0___Sd">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Function Operations.html#/s:ZF8AudioKitoi1dFTPS_7Numeric_PS0___Sd">/(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="Function Operations.html#/s:ZF8AudioKitoi1dFTPS_11AKParameter_PS0___VS_11AKOperation">/(_:_:)</a>
@@ -526,7 +532,39 @@
                 <a href="Classes/AKAUPresetBuilder.html">AKAUPresetBuilder</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/AKCallbackInstrument.html">AKCallbackInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKFFTTap.html">AKFFTTap</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKFader.html">AKFader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKMicrophoneRecorder.html">AKMicrophoneRecorder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKNodeRecorder.html">AKNodeRecorder</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/AKNotifications.html">AKNotifications</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKPitchShifter.html">AKPitchShifter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKRMS.html">AKRMS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKTremolo.html">AKTremolo</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Other Enums.html">Other Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/CurveType.html">CurveType</a>
               </li>
             </ul>
           </li>
@@ -540,6 +578,9 @@
                 <a href="Extensions/Double.html">Double</a>
               </li>
               <li class="nav-group-task">
+                <a href="Extensions/Float.html">Float</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Extensions/Int.html">Int</a>
               </li>
             </ul>
@@ -548,7 +589,21 @@
             <a href="Other Functions.html">Other Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Other Functions.html#/s:ZF8AudioKitop1sFPS_11AKParameter_VS_11AKOperation">-(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Functions.html#/s:ZF8AudioKitoi2eeFTPS_7Numeric_PS0___Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Other Functions.html#/s:F8AudioKit10CheckErrorFVs5Int32T_">CheckError(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Other Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/Numeric.html">Numeric</a>
               </li>
             </ul>
           </li>
@@ -585,9 +640,11 @@
 <a href="https://github.com/CocoaPods/Specs/tree/master/Specs/AudioKit"><img src="https://img.shields.io/cocoapods/v/AudioKit.svg?style=flat" alt="CocoaPods compatible"></a>
 <a href="http://twitter.com/AudioKitMan"><img src="https://img.shields.io/twitter/follow/AudioKitMan.svg?style=social" alt="Twitter Follow"></a></p>
 
-<p><em>This document was last updated: January 29, 2016</em></p>
-
 <p>AudioKit is an audio synthesis, processing, and analysis platform for OS X, iOS, and tvOS. This document serves as a one-page introduction to AudioKit, but we have much more information available on the AudioKit website at <a href="http://audiokit.io/">http://audiokit.io/</a></p>
+
+<p>If you need support, the best thing to do is to join AudioKit&rsquo;s google group:</p>
+
+<p><a href="https://groups.google.com/forum/#!forum/audiokit">https://groups.google.com/forum/#!forum/audiokit</a></p>
 <a href='#version_3' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='version_3'>Version 3</h3>
 
 <p>The third major revision of AudioKit has been completely rewritten to offer the following improvements over previous versions:</p>
@@ -608,6 +665,9 @@
 <a href='#operations' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='operations'>Operations</h3>
 
 <p>Operations are similar to nodes, except that they are a series of signal processing components that exist inside of a single node.  Operations can be used as parameters to other operations to create very complex processing results.</p>
+<a href='#taps' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='taps'>Taps</h3>
+
+<p>Taps use nodes as their data source, but do not redirect the audio signal away from the source nodes output into other nodes.   This allows a tap to be moved from node to node more freely and can be added after the audio signal path has started.</p>
 <a href='#installation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='installation'>Installation</h2>
 
 <p>Installation can be achieved in the usual ways for a framework.  This is explained in more detail in the INSTALL.md file in the Frameworks directory.</p>
@@ -653,7 +713,7 @@ $ ./build_frameworks.sh
 <p>There are many playground pages within the AudioKit for iOS Playground.  Each playground includes a demo of a node or operation or an example of sound design.  The first playground is a Table of Contents in which the playgrounds are organized via markup.  The playground may also be opened up to view the playgrounds alphabetically.</p>
 <a href='#audiokit_for_os_x_playgrounds' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='audiokit_for_os_x_playgrounds'>AudioKit for OS X Playgrounds</h3>
 
-<p>OS X Playgrounds are able to launch NSWindows that can be used to control the AudioKit effects processors, so these playgrounds have a UI that allow you to adjust the parameters of an effect very easily.  However, OS X playgrounds at this point do not support AudioKit nodes that do not use Apple AudioUnit processors, so there are fewer things that we can demonstrate in OSX playgrounds.  Hopefully this will be fixed in the future - it is unclear whether the problem is in AudioKit or within the Xcode playground audio implementation.</p>
+<p>OS X Playgrounds have slightly different capabilities from iOS ones, so while most playgrounds are the same across the two platforms, a few playgrounds only exist on one or the other.  As of this writing, access to a microphone is only capable on the OS X playgrounds, for instance.</p>
 <a href='#tests' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='tests'>Tests</h2>
 
 <p>So far, the only testing that we do automatically through Travis is to ensure that all of the projects included with AudioKit build successfully.  AudioKit version 2 was heavily tested, but at the time of this writing AudioKit 3 does not have a test suite in place.  This is high on our priority list after an initial release.</p>
@@ -684,7 +744,7 @@ $ ./build_frameworks.sh
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-05-06)</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-05-25)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AKAudioRecorder Class Reference</title>
+    <title>AKFFTTap Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/AKAudioRecorder" class="dashAnchor"></a>
-    <a title="AKAudioRecorder Class Reference"></a>
+    <a name="//apple_ref/swift/Class/AKFFTTap" class="dashAnchor"></a>
+    <a title="AKFFTTap Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">AudioKit Docs</a> (100% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">AudioKit Reference</a>
         <img id="carat" src="../img/carat.png" />
-        AKAudioRecorder Class Reference
+        AKFFTTap Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -33,9 +33,6 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/AudioKit.html">AudioKit</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/AKAudioRecorder.html">AKAudioRecorder</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKDevice.html">AKDevice</a>
@@ -149,9 +146,6 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/AKAmplitudeTracker.html">AKAmplitudeTracker</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/AKFFT.html">AKFFT</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKFrequencyTracker.html">AKFrequencyTracker</a>
@@ -443,10 +437,22 @@
                 <a href="../Function Operations.html#/s:ZF8AudioKitoi1mFTPS_11AKParameter_PS0___VS_11AKOperation">*(_:_:)</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Function Operations.html#/s:ZF8AudioKitoi1mFTPS_7Numeric_PS0___Sd">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Function Operations.html#/s:ZF8AudioKitoi1pFTPS_7Numeric_PS0___Sd">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Function Operations.html#/s:ZF8AudioKitoi1pFTPS_11AKParameter_PS0___VS_11AKOperation">+(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Function Operations.html#/s:ZF8AudioKitoi1sFTPS_11AKParameter_PS0___VS_11AKOperation">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Function Operations.html#/s:ZF8AudioKitoi1sFTPS_7Numeric_PS0___Sd">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Function Operations.html#/s:ZF8AudioKitoi1dFTPS_7Numeric_PS0___Sd">/(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Function Operations.html#/s:ZF8AudioKitoi1dFTPS_11AKParameter_PS0___VS_11AKOperation">/(_:_:)</a>
@@ -527,7 +533,39 @@
                 <a href="../Classes/AKAUPresetBuilder.html">AKAUPresetBuilder</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/AKCallbackInstrument.html">AKCallbackInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFFTTap.html">AKFFTTap</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFader.html">AKFader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMicrophoneRecorder.html">AKMicrophoneRecorder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKNodeRecorder.html">AKNodeRecorder</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKNotifications.html">AKNotifications</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPitchShifter.html">AKPitchShifter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKRMS.html">AKRMS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTremolo.html">AKTremolo</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Enums.html">Other Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CurveType.html">CurveType</a>
               </li>
             </ul>
           </li>
@@ -541,6 +579,9 @@
                 <a href="../Extensions/Double.html">Double</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Extensions/Float.html">Float</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Extensions/Int.html">Int</a>
               </li>
             </ul>
@@ -549,7 +590,21 @@
             <a href="../Other Functions.html">Other Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Other Functions.html#/s:ZF8AudioKitop1sFPS_11AKParameter_VS_11AKOperation">-(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Functions.html#/s:ZF8AudioKitoi2eeFTPS_7Numeric_PS0___Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Other Functions.html#/s:F8AudioKit10CheckErrorFVs5Int32T_">CheckError(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Numeric.html">Numeric</a>
               </li>
             </ul>
           </li>
@@ -577,14 +632,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>AKAudioRecorder</h1>
+            <h1>AKFFTTap</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AKAudioRecorder</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">AKFFTTap</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">EZAudioFFTDelegate</span></code></pre>
 
                 </div>
               </div>
-            <p>Simple audio recorder class</p>
+            <p>FFT Calculation for any node</p>
 
           </section>
           <section class="section task-group-section">
@@ -593,9 +648,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit15AKAudioRecordercFTSS4nodeCS_6AKNode_S0_"></a>
-                    <a name="//apple_ref/swift/Method/init(_:node:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit15AKAudioRecordercFTSS4nodeCS_6AKNode_S0_">init(_:node:)</a>
+                    <a name="/s:vC8AudioKit8AKFFTTap7fftDataGSaSd_"></a>
+                    <a name="//apple_ref/swift/Property/fftData" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit8AKFFTTap7fftDataGSaSd_">fftData</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -603,14 +658,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initialize the recorder to record a node&rsquo;s output to a file</p>
+                        <p>Array of FFT data</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">node</span><span class="p">:</span> <span class="kt">AKNode</span> <span class="o">=</span> <span class="kt">AudioKit</span><span class="o">.</span><span class="n">output</span><span class="o">!</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">fftData</span> <span class="o">=</span> <span class="p">[</span><span class="kt">Double</span><span class="p">](</span><span class="nv">count</span><span class="p">:</span> <span class="mi">512</span><span class="p">,</span> <span class="nv">repeatedValue</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit8AKFFTTapcFCS_6AKNodeS0_"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit8AKFFTTapcFCS_6AKNodeS0_">init(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialze the FFT calculation on a given node</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt">AKNode</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -621,25 +703,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>file</em>
+                                <em>input</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Path to the audio file</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>node</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Node to record (Defaults to the overall output)</p>
+                                  <p>Node on whose output the FFT will be computed</p>
 
                                 </div>
                               </td>
@@ -653,9 +722,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit15AKAudioRecorder6recordFT_T_"></a>
-                    <a name="//apple_ref/swift/Method/record()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit15AKAudioRecorder6recordFT_T_">record()</a>
+                    <a name="/s:FC8AudioKit8AKFFTTap3fftFTGSQCSo10EZAudioFFT_18updatedWithFFTDataGSpSf_10bufferSizeSu_T_"></a>
+                    <a name="//apple_ref/swift/Method/fft(_:updatedWithFFTData:bufferSize:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit8AKFFTTap3fftFTGSQCSo10EZAudioFFT_18updatedWithFFTDataGSpSf_10bufferSizeSu_T_">fft(_:updatedWithFFTData:bufferSize:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -663,41 +732,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Record audio</p>
+                        <p>Callback function for FFT computation</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">record</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC8AudioKit15AKAudioRecorder4stopFT_T_"></a>
-                    <a name="//apple_ref/swift/Method/stop()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit15AKAudioRecorder4stopFT_T_">stop()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Stop recording</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stop</span><span class="p">()</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">fft</span><span class="p">(</span><span class="nv">fft</span><span class="p">:</span> <span class="kt">EZAudioFFT</span><span class="o">!</span><span class="p">,</span> <span class="n">updatedWithFFTData</span> <span class="nv">fftData</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">Float</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">bufferSize</span><span class="p">:</span> <span class="n">vDSP_Length</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -709,7 +751,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-05-06)</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-05-25)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
