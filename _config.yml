@@ -28,3 +28,7 @@ collections:
     permalink: /gallery/:path/
 
 exclude: [vendor]
+
+sass:
+  sass_dir: _sass
+  style: compressed
