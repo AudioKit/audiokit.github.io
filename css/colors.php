@@ -9,7 +9,7 @@ header ("Content-Type:text/css");
  *
  ================================================================== */
 
-$color = "#80B16B"; // Change your Color Here
+$color = "#1ABC9C"; // Change your Color Here
 
 /** ===============================================================
  *
@@ -35,7 +35,7 @@ if( isset( $_GET[ 'color' ] ) AND $_GET[ 'color' ] != '' ) {
 }
 
 if( !$color OR !checkhexcolor( $color ) ) {
-    $color = "#80B16B";
+    $color = "#1ABC9C";
 }
 
 ?>
@@ -63,14 +63,16 @@ h4 > span:not(.nocolor),
 h5 > span:not(.nocolor),
 h6 > span:not(.nocolor),
 .header-extras li .he-text span,
-#primary-menu > ul > li:hover a,
-#primary-menu > ul > li.current a,
-#primary-menu > div > ul > li:hover a,
-#primary-menu > div > ul > li.current a,
+#primary-menu ul li:hover > a,
+#primary-menu ul li.current > a,
+#primary-menu div ul li:hover > a,
+#primary-menu div ul li.current > a,
+#primary-menu ul ul li:hover > a,
+#primary-menu ul li .mega-menu-content.style-2 ul.mega-menu-column > li.mega-menu-title > a:hover,
 #top-cart a:hover,
 .top-cart-action span.top-checkout-price,
 .breadcrumb a:hover,
-#portfolio-filter li a:hover,
+.portfolio-filter li a:hover,
 .portfolio-desc h3 a:hover,
 .portfolio-overlay a:hover,
 #portfolio-navigation a:hover,
@@ -96,12 +98,16 @@ h6 > span:not(.nocolor),
 .team-title span,
 .pricing-box.best-price .pricing-price,
 .btn-link,
+.pagination > li > a, .pagination > li > span,
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus,
 .dark .post-timeline .entry:hover .entry-timeline,
-.dark .post-timeline .entry:hover .timeline-divider { color: <?php echo $color; ?>; }
+.dark .post-timeline .entry:hover .timeline-divider,
+.clear-rating-active:hover { color: <?php echo $color; ?>; }
 
 .color,
-#primary-menu ul ul li:hover > a,
-#primary-menu ul li .mega-menu-content.style-2 > ul > li.mega-menu-title > a:hover,
 .top-cart-item-desc a:hover,
 .faqlist li a:hover,
 .tagcloud a:hover,
@@ -110,7 +116,10 @@ h6 > span:not(.nocolor),
 .dark.overlay-menu #header-wrap:not(.not-dark) #primary-menu > ul > li:hover > a,
 .dark.overlay-menu #header-wrap:not(.not-dark) #primary-menu > ul > li.current > a,
 .overlay-menu #primary-menu.dark > ul > li:hover > a,
-.overlay-menu #primary-menu.dark > ul > li.current > a { color: <?php echo $color; ?> !important; }
+.overlay-menu #primary-menu.dark > ul > li.current > a,
+.nav-tree li:hover > a,
+.nav-tree li.current > a,
+.nav-tree li.active > a { color: <?php echo $color; ?> !important; }
 
 #primary-menu.style-3 > ul > li.current > a,
 #primary-menu.sub-title > ul > li:hover > a,
@@ -119,10 +128,11 @@ h6 > span:not(.nocolor),
 #primary-menu.sub-title > div > ul > li.current > a,
 #top-cart > a > span,
 #page-menu-wrap,
+#page-menu ul ul,
 #page-menu.dots-menu nav li.current a,
 #page-menu.dots-menu nav li .dots-menu-caption,
-#portfolio-filter li.activeFilter a,
-#portfolio-shuffle:hover,
+.portfolio-filter li.activeFilter a,
+.portfolio-shuffle:hover,
 .entry-link:hover,
 .sale-flash,
 .button:not(.button-white):not(.button-dark):not(.button-border):not(.button-black):not(.button-red):not(.button-teal):not(.button-yellow):not(.button-green):not(.button-brown):not(.button-aqua):not(.button-purple):not(.button-leaf):not(.button-pink):not(.button-blue):not(.button-dirtygreen):not(.button-amber):not(.button-lime),
@@ -138,7 +148,7 @@ h6 > span:not(.nocolor),
 ul.tab-nav.tab-nav2 li.ui-state-active a,
 .testimonial .flex-control-nav li a,
 .skills li .progress,
-.owl-theme .owl-dots .owl-dot span,
+.owl-carousel .owl-dots .owl-dot span,
 #gotoTop:hover,
 .dark .button-dark:hover,
 .dark .fbox-effect.fbox-dark .fbox-icon i:hover,
@@ -148,7 +158,23 @@ ul.tab-nav.tab-nav2 li.ui-state-active a,
 .dark .i-circled:hover,
 .dark ul.tab-nav.tab-nav2 li.ui-state-active a,
 .dark .tagcloud a:hover,
-.ei-slider-thumbs li.ei-slider-element { background-color: <?php echo $color; ?>; }
+.ei-slider-thumbs li.ei-slider-element,
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus,
+.checkbox-style:checked + .checkbox-style-1-label:before,
+.checkbox-style:checked + .checkbox-style-2-label:before,
+.checkbox-style:checked + .checkbox-style-3-label:before,
+.radio-style:checked + .radio-style-3-label:before,
+.irs-bar,
+.irs-from,
+.irs-to,
+.irs-single,
+input.switch-toggle-flat:checked + label,
+input.switch-toggle-flat:checked + label:after,
+input.switch-toggle-round:checked + label:before,
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-themecolor,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-themecolor { background-color: <?php echo $color; ?>; }
 
 .bgcolor,
 .button.button-3d:not(.button-white):not(.button-dark):not(.button-border):not(.button-black):not(.button-red):not(.button-teal):not(.button-yellow):not(.button-green):not(.button-brown):not(.button-aqua):not(.button-purple):not(.button-leaf):not(.button-pink):not(.button-blue):not(.button-dirtygreen):not(.button-amber):not(.button-lime):hover,
@@ -156,7 +182,7 @@ ul.tab-nav.tab-nav2 li.ui-state-active a,
 .process-steps li.ui-tabs-active a,
 .sidenav > .ui-tabs-active > a,
 .sidenav > .ui-tabs-active > a:hover,
-.owl-theme .owl-controls .owl-nav [class*=owl-]:hover,
+.owl-carousel .owl-controls .owl-nav [class*=owl-]:hover,
 .pagination > .active > a,
 .pagination > .active > span,
 .pagination > .active > a:hover,
@@ -180,7 +206,7 @@ ul.tab-nav.tab-nav2 li.ui-state-active a,
 
 .top-links ul ul,
 .top-links ul div.top-link-section,
-#primary-menu ul ul,
+#primary-menu ul ul:not(.mega-menu-column),
 #primary-menu ul li .mega-menu-content,
 #primary-menu.style-6 > ul > li > a:after,
 #primary-menu.style-6 > ul > li.current > a:after,
@@ -192,7 +218,11 @@ ul.tab-nav.tab-nav2 li.ui-state-active a,
 #primary-menu.dark ul li .mega-menu-content,
 .dark #primary-menu:not(.not-dark) ul li .mega-menu-content.style-2,
 #primary-menu.dark ul li .mega-menu-content.style-2,
-.dark #top-cart .top-cart-content { border-top-color: <?php echo $color; ?>; }
+.dark #top-cart .top-cart-content,
+.tabs.tabs-tb ul.tab-nav li.ui-tabs-active a,
+.irs-from:after,
+.irs-single:after,
+.irs-to:after { border-top-color: <?php echo $color; ?>; }
 
 #page-menu.dots-menu nav li .dots-menu-caption:after,
 .title-block { border-left-color: <?php echo $color; ?>; }
@@ -205,7 +235,8 @@ ul.tab-nav.tab-nav2 li.ui-state-active a,
 .fancy-title.title-bottom-border h4,
 .fancy-title.title-bottom-border h5,
 .fancy-title.title-bottom-border h6,
-.more-link { border-bottom-color: <?php echo $color; ?>; }
+.more-link,
+.tabs.tabs-bb ul.tab-nav li.ui-tabs-active a { border-bottom-color: <?php echo $color; ?>; }
 
 .border-color,
 .process-steps li.active a,
@@ -244,6 +275,5 @@ ul.tab-nav.tab-nav2 li.ui-state-active a,
 
 @media only screen and (max-width: 767px) {
 
-    #portfolio-filter li a:hover { color: <?php echo $color; ?>; }
-
-}
+    .portfolio-filter li a:hover { color: <?php echo $color; ?>; }
+.}

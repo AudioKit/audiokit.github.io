@@ -86,7 +86,7 @@
 	margin: 5px 0 5px 25px;
 }
 
-.iconlist > li [class^="icon-"], .iconlist > li [class*=" icon-"] {
+.iconlist > li [class^="icon-"]:first-child, .iconlist > li [class*=" icon-"]:first-child {
 	position: absolute;
 	left: -1.75em;
 	width: 1.75em;
@@ -104,7 +104,7 @@
 	margin-right: 5px;
 }
 
-.iconlist-color li i { color: #80B16B; }
+.iconlist-color li i { color: #1ABC9C; }
 
 .icon-border {
   padding: .2em .25em .15em;

@@ -343,68 +343,68 @@
 	background: rgba(255,255,255,0.2);
 }
 
-.light .events-calendar-header h2,
-.light .events-calendar-header h3 {
+.dark .events-calendar-header h2,
+.dark .events-calendar-header h3 {
 	text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
 }
 
-.light .events-calendar-header h2 { color: #FFF; }
+.dark .events-calendar-header h2 { color: #FFF; }
 
-.light .events-calendar-header h2 a,
-.light .events-calendar-header h2 span { color: rgba(255,255,255,0.3); }
+.dark .events-calendar-header h2 a,
+.dark .events-calendar-header h2 span { color: rgba(255,255,255,0.3); }
 
-.light .events-calendar-header h2 a { color: rgba(255,255,255,0.5); }
+.dark .events-calendar-header h2 a { color: rgba(255,255,255,0.5); }
 
-.light .events-calendar-header h2 a:hover { color: rgba(255,255,255,0.9); }
+.dark .events-calendar-header h2 a:hover { color: rgba(255,255,255,0.9); }
 
-.light .events-calendar-header h3 {
+.dark .events-calendar-header h3 {
 	color: #CCC;
 	color: rgba(255,255,255,0.6);
 }
 
-.light .events-calendar-header h3 span { color: #CCC; }
+.dark .events-calendar-header h3 span { color: #CCC; }
 
-.light .events-calendar-header nav span {
+.dark .events-calendar-header nav span {
 	background: rgba(255,255,255,0.3);
 	box-shadow: inset 0 1px rgba(255,255,255,0.2);
 }
 
-.light .events-calendar-header nav span:hover { background: rgba(255,255,255,0.5); }
+.dark .events-calendar-header nav span:hover { background: rgba(255,255,255,0.5); }
 
-.light .events-calendar-header span i { color: #FFF; }
+.dark .events-calendar-header span i { color: #FFF; }
 
-.light .fc-calendar { background: rgba(255,255,255,0.1); }
+.dark .fc-calendar { background: rgba(255,255,255,0.1); }
 
-.light .fc-calendar .fc-head {
+.dark .fc-calendar .fc-head {
 	background: rgba(255,255,255,0.2);
 	color: rgba(255,255,255,0.9);
 	box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
 }
 
-.light .fc-calendar .fc-head > div { text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
+.dark .fc-calendar .fc-head > div { text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
 
-.light .fc-calendar .fc-row > div > span.fc-date {
+.dark .fc-calendar .fc-row > div > span.fc-date {
 	color: rgba(255,255,255,0.9);
 	text-shadow: 0 1px 1px rgba(0,0,0,0.3);
 }
 
-.light .fc-calendar .fc-row { box-shadow: inset 0 -1px 0 rgba(255,255,255,0.10); }
+.dark .fc-calendar .fc-row { box-shadow: inset 0 -1px 0 rgba(255,255,255,0.10); }
 
-.light .fc-calendar .fc-row > div { box-shadow: -1px 0 0 rgba(255, 255, 255, 0.10); }
+.dark .fc-calendar .fc-row > div { box-shadow: -1px 0 0 rgba(255, 255, 255, 0.10); }
 
-.light .fc-calendar .fc-row > div.fc-today {
+.dark .fc-calendar .fc-row > div.fc-today {
 	background: transparent;
 	box-shadow: inset 0 0 100px rgba(255,255,255,0.2);
 }
 
-.light .fc-calendar .fc-row > div > div a,
-.light .fc-calendar .fc-row > div > div span {
+.dark .fc-calendar .fc-row > div > div a,
+.dark .fc-calendar .fc-row > div > div span {
 	color: rgba(255,255,255,0.7);
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 	background: rgba(255,255,255,0.1);
 }
 
-.light .fc-calendar .fc-row > div > div a:hover { background: rgba(255,255,255,0.3) !important; }
+.dark .fc-calendar .fc-row > div > div a:hover { background: rgba(255,255,255,0.3) !important; }
 
 
 @media screen and (max-width: 991px) {
@@ -499,11 +499,11 @@
 	}
 
 
-	.light .fc-calendar .fc-row > div { box-shadow: inset 0 -1px rgba(255,255,255,0.2) !important; }
+	.dark .fc-calendar .fc-row > div { box-shadow: inset 0 -1px rgba(255,255,255,0.2) !important; }
 
-	.light .fc-calendar .fc-row > div.fc-today { background: rgba(255, 255, 255, 0.2); }
+	.dark .fc-calendar .fc-row > div.fc-today { background: rgba(255, 255, 255, 0.2); }
 
-	.light .fc-calendar .fc-row > div > span.fc-weekday,
+	.dark .fc-calendar .fc-row > div > span.fc-weekday,
 	.fc-calendar .fc-row > div.fc-today > span.fc-weekday {
 		color: #fff;
 		color: rgba(255,255,255,0.7);
