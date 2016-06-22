@@ -13,7 +13,18 @@
     <meta name="description" content="{{ page.title }}">
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
     <link rel="apple-touch-icon" href="/images/apple_touch_icon.png">
-
+    
+    <script>
+      var cb = function() {
+      var l = document.createElement('link'); l.rel = 'stylesheet';
+      l.href = '/css/main.min.css';
+      var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+      webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(cb);
+      else window.addEventListener('load', cb);
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <!--[if lt IE 9]>
       <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
