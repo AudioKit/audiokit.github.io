@@ -7,13 +7,24 @@
 
     <!-- Stylesheets
     ============================================= -->
-  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="/css/main.css" type="text/css" />
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" media="none" onload="if(media!='all')media='all'" />
+    <link rel="stylesheet" href="/css/main.min.css" type="text/css" media="none" onload="if(media!='all')media='all'" />
 
     <meta name="description" content="{{ page.title }}">
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
     <link rel="apple-touch-icon" href="/images/apple_touch_icon.png">
 
+    <script>
+      var cb = function() {
+      var l = document.createElement('link'); l.rel = 'stylesheet';
+      l.href = '/css/main.min.css';
+      var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+      webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(cb);
+      else window.addEventListener('load', cb);
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <!--[if lt IE 9]>
       <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
