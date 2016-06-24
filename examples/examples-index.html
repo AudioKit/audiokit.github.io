@@ -1,14 +1,169 @@
 ---
 title: AudioKit Examples
-nav_title: Examples
-header: Examples
+nav_title: AudioKit Examples
+header: AudioKit Examples
 permalink: /examples/
 layout: section_index
 ---
 
-<p>AudioKit 3 Comes with a few examples in the Examples directory.  They are separated by subfolders for each OS: iOS, OSX, and tvOS. </p>
-
-<p>Each OS contains at least the Hello World project which just demonstrates using AudioKit to quickly add a sine wave generator and plot to a single view application.</p>
+<p>Included with AudioKit are numerous example projects.  There are examples for  iOS, tvOS, and macOS, mostly in Swift, with one Objective-C Hello World example. In addition to the included examples, open-source projects that use AudioKit will also be highlighted here.</p> </p>
 
 
+<!-- Portfolio Filter
+============================================= -->
+<ul id="portfolio-filter" class="clearfix">
 
+    <li class="activeFilter"><a href="#" data-filter="*">Show All</a></li>
+    <li><a href="#" data-filter=".pf-ios">iOS</a></li>
+    <li><a href="#" data-filter=".pf-tvos">tvOS</a></li>
+    <li><a href="#" data-filter=".pf-osx">OSX</a></li>
+    <li><a href="#" data-filter=".pf-objc">Objective-C</a></li>
+    <li><a href="#" data-filter=".pf-swift">Swift</a></li>
+    <li><a href="#" data-filter=".pf-included">Included</a></li>
+    <li><a href="#" data-filter=".pf-external">External Project</a></li>
+</ul><!-- #portfolio-filter end -->
+
+<div id="portfolio-shuffle">
+    <i class="icon-random"></i>
+</div>
+
+<div class="clear"></div>
+
+<!-- Portfolio Items
+============================================= -->
+<div id="portfolio" class="clearfix">
+
+    <article class="portfolio-item pf-ios pf-tvos pf-osx pf-objc pf-swift pf-included">
+        <div class="portfolio-image">
+            <a href="/examples/HelloWorld/">
+                <img src="/examples/HelloWorld/HelloWorld.png" alt="Hello World">
+            </a>
+        </div>
+        <div class="portfolio-desc">
+            <h3><a href="/examples/HelloWorld/">Hello World!</a></h3>
+            <span>A simple starter project</span>
+        </div>
+    </article>
+
+    <article class="portfolio-item pf-ios pf-swift pf-included">
+        <div class="portfolio-image">
+            <a href="/examples/AnalogSynthX/">
+                <img src="/examples/AnalogSynthX/analgsynthx.jpg" alt="Analog Synth X">
+            </a>
+        </div>
+        <div class="portfolio-desc">
+            <h3><a href="/examples/AnalogSynthX/">Analog Synth X</a></h3>
+            <span>A full-fledged virtual analogy synthesizer</span>
+        </div>
+    </article>
+
+    <article class="portfolio-item pf-ios pf-osx pf-swift pf-included">
+        <div class="portfolio-image">
+            <a href="/examples/MicrophoneAnalysis/">
+                <img src="/examples/MicrophoneAnalysis/MicrophoneAnalysis.png" alt="Hello World">
+            </a>
+        </div>
+        <div class="portfolio-desc">
+            <h3><a href="/examples/MicrophoneAnalysis/">Microphone Analysis</a></h3>
+            <span>Displaying the Audio Waveform Captured from a Microphone</span>
+        </div>
+    </article>
+
+    <article class="portfolio-item pf-ios pf-swift pf-external">
+        <div class="portfolio-image">
+            <a href="/blog/2015/03/10/physics-spritekit/">
+                <img src="/examples/spritely.png" alt="Spritely">
+            </a>
+        </div>
+        <div class="portfolio-desc">
+            <h3><a href="/blog/2015/03/10/physics-spritekit/">Spritely</a></h3>
+            <span>SpriteKit Physics Generated Sounds </span>
+        </div>
+    </article>
+
+    <article class="portfolio-item pf-ios pf-swift pf-external">
+        <div class="portfolio-image">
+            <a href="/blog/2015/05/01/wheeltone/">
+                <img src="/examples/wheeltone.png" alt="Spritely">
+            </a>
+        </div>
+        <div class="portfolio-desc">
+            <h3><a href="/blog/2015/05/01/wheeltone/">WheelTone</a></h3>
+            <span>Music from Friction Gears in Swift</span>
+        </div>
+    </article>
+
+    <article class="portfolio-item pf-ios pf-swift pf-external">
+        <div class="portfolio-image">
+            <a href="/blog/2015/04/07/Particles/">
+                <img src="/gallery/particles.png" alt="AudioKit Particles">
+            </a>
+        </div>
+        <div class="portfolio-desc">
+            <h3><a href="/blog/2015/04/07/Particles/">AudioKit Particles</a></h3>
+            <span>Visualization of Microphone Input</span>
+        </div>
+    </article>
+
+    <article class="portfolio-item pf-ios pf-swift pf-external">
+        <div class="portfolio-image">
+            <a href="/blog/2015/11/23/pencil-synth/">
+                <img src="/gallery/PencilSynth.png" alt="Pencil Synth">
+            </a>
+        </div>
+        <div class="portfolio-desc">
+            <h3><a href="/blog/2015/11/23/pencil-synth/">Pencil Synth</a></h3>
+            <span>Using the Apple Stylus as a musical instrument</span>
+        </div>
+    </article>
+
+    <article class="portfolio-item pf-ios pf-swift pf-external">
+        <div class="portfolio-image">
+            <a href="/blog/2015/01/11/pendulum-waves/">
+                <img src="/examples/PendulaTone.png" alt="PendulaTone">
+            </a>
+        </div>
+        <div class="portfolio-desc">
+            <h3><a href="/blog/2015/01/11/pendulum-waves/">PendulaTone</a></h3>
+            <span>The Sound of Pendulum Waves with Swift</span>
+        </div>
+    </article>
+
+
+
+
+
+
+</div><!-- #portfolio end -->
+
+<!-- Portfolio Script
+============================================= -->
+<script type="text/javascript">
+
+    jQuery(window).load(function(){
+
+        var $container = $('#portfolio');
+
+        $container.isotope({ transitionDuration: '0.65s' });
+
+        $('#portfolio-filter a').click(function(){
+            $('#portfolio-filter li').removeClass('activeFilter');
+            $(this).parent('li').addClass('activeFilter');
+            var selector = $(this).attr('data-filter');
+            $container.isotope({ filter: selector });
+            return false;
+        });
+
+        $('#portfolio-shuffle').click(function(){
+            $container.isotope('updateSortData').isotope({
+                sortBy: 'random'
+            });
+        });
+
+        $(window).resize(function() {
+            $container.isotope('layout');
+        });
+
+    });
+
+</script><!-- Portfolio Script End -->

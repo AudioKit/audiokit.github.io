@@ -1,0 +1,130 @@
+---
+title: AudioKit Examples - Microphone Analysis in Swift
+header: Microphone Analysis
+permalink: /examples/MicrophoneAnalysis/
+layout: examples
+last-review-date: 2016/06/20
+---
+
+<div class="cd-iphone-5s cd-silver hide-on-tablets-and-smaller" style="margin-left: 1em; float: right">
+  <div class="cd-body">
+    <div class="cd-sound"></div>
+    <div class="cd-sleep"></div>
+    <div class="cd-camera"></div>
+    <div class="cd-ear"></div>
+    <div class="cd-home"></div>
+    <div class="cd-screen">
+<img src=/examples/MicrophoneAnalysis/MicrophoneAnalysisiOS.png class="screenshot" alt="Microphone Analysis">
+    </div>
+  </div>
+</div>
+
+
+<p>
+Who doesn't like the beautiful music visualizations that you can find in your mediaplayer? Essentially, it is just the simplest and shortest amount of code that plot the waveform of the microphone input. The app dynamically draws the recorded sound waves.
+</p>
+
+<p>
+Before reading this, we highly recommend you to read a great tutorial on <a href="/examples/HelloWorld/">Hello World example</a> first. This example is included in AudioKit in the Examples directory with versions for iOS and OSX.
+</p>
+
+<p>
+There're some major additions to this project. First we do create an instance of an AKMicrophone() which we will just call "mic" to catch the audio from the standard input device:
+</p>
+{% highlight ruby %}
+    let mic = AKMicrophone()
+{% endhighlight %}
+
+<p>
+However, we can't just write:
+</p>
+
+{% highlight ruby %}
+    AudioKit.output = mic
+    AudioKit.start()
+{% endhighlight %}
+
+<p>
+Cause we want to get both a frequency and a amplitude of the input. That's the reason we create an instance of AKFrequencyTracker() what will track the pitch of signal setting both the lower and the upper bound of frequency detection, respectively. And then we create an instance of AKBooster() which is AudioKit version of Apple’s Mixer Node. The gain parameter is an amplification factor (Default: 1, Minimum: 0).
+</p>
+
+{% highlight ruby %}
+    tracker = AKFrequencyTracker.init(mic, minimumFrequency: 200, maximumFrequency: 2000)
+    silence = AKBooster(tracker, gain: 0)
+{% endhighlight %}
+
+<p>
+Then, in viewDidAppear(), start the AudioKit engine.
+</p>
+
+{% highlight ruby %}
+    AudioKit.output = silence
+    AudioKit.start()
+{% endhighlight %}
+
+<p>
+Next we just to need to set up a plot. So we need to create an instance of AKNodeOutputPlot() to be able to plot the output from the mic in an signal processing graph. EZAudioPlot is a cross-platform (iOS and OSX) class that plots an audio waveform using Core Graphics.
+</p>
+
+{% highlight ruby %}
+    @IBOutlet var audioInputPlot: EZAudioPlot!
+    func setupPlot() {
+        let plot = AKNodeOutputPlot(mic, frame: audioInputPlot.bounds)
+        plot.plotType = .Rolling
+        plot.shouldFill = true
+        plot.shouldMirror = true
+        plot.color = UIColor.blueColor()
+        audioInputPlot.addSubview(plot)
+    }
+{% endhighlight %}
+
+<p>
+Finally, we use updateUI() to update the labels via getting both a frequency and a amplitude of the input using the properties of the tracker object (created instance of AKFrequencyTracker()):
+</p>
+
+{% highlight ruby %}
+func updateUI() {
+    if tracker.amplitude > 0.1 {
+        frequencyLabel.text = String(format: "%0.1f", tracker.frequency)
+        
+        var frequency = Float(tracker.frequency)
+        while (frequency > Float(noteFrequencies[noteFrequencies.count-1])) {
+            frequency = frequency / 2.0
+        }
+        while (frequency < Float(noteFrequencies[0])) {
+            frequency = frequency * 2.0
+        }
+        
+        var minDistance: Float = 10000.0
+        var index = 0
+        
+        for i in 0..<noteFrequencies.count {
+            let distance = fabsf(Float(noteFrequencies[i]) - frequency)
+            if (distance < minDistance){
+                index = i
+                minDistance = distance
+            }
+        }
+        let octave = Int(log2f(Float(tracker.frequency) / frequency))
+        noteNameWithSharpsLabel.text = "\(noteNamesWithSharps[index])\(octave)"
+        noteNameWithFlatsLabel.text = "\(noteNamesWithFlats[index])\(octave)"
+    }
+    amplitudeLabel.text = String(format: "%0.2f", tracker.amplitude)
+}
+{% endhighlight %}
+
+<h2>Mac Version</h2>
+
+<p>The OS X version differs from the iOS version of this example only in the user interface code.</p>
+
+
+<div class="cd-mac hide-on-mobiles">
+  <div class="cd-top"></div>
+  <div class="cd-bottom"></div>
+  <div class="cd-camera"></div>
+  <div class="cd-notch"></div>
+  <div class="cd-screen"  style="background-color: #f6f6f6">
+    <img src=/examples/MicrophoneAnalysis/MicrophoneAnalysisMac.png class="screenshot" alt="Microphone Analysis">
+  </div>
+</div>
+

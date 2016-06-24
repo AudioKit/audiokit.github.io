@@ -1,0 +1,83 @@
+---
+title: AudioKit Examples - Hello World in Swift
+header: Hello World!
+permalink: /examples/HelloWorld/
+layout: examples
+last-review-date: 2015/02/19
+---
+
+<div class="cd-iphone-5s cd-silver hide-on-tablets-and-smaller" style="margin-left: 1em; float: right">
+  <div class="cd-body">
+    <div class="cd-sound"></div>
+    <div class="cd-sleep"></div>
+    <div class="cd-camera"></div>
+    <div class="cd-ear"></div>
+    <div class="cd-home"></div>
+    <div class="cd-screen">
+<img src=/examples/HelloWorld/HelloWorldiOS.png class="screenshot" alt="Hello World">
+    </div>
+  </div>
+</div>
+
+
+<p>
+Every good programming framework needs a "Hello World" and this is AudioKit's version of Hello World!  Basically, it is just the simplest and shortest amount of code that create an instrument and allow the user to start and stop that instrument from a button on the screen.  The app simply plays an oscillator at a random frequency, but don't worry there are plenty of more complicated examples to try out once you have this one working.
+</p>
+
+<p>
+This starter example is included in AudioKit in the Examples directory with versions for iOS, OSX, and tvOS.  There is also an iOS version of this example in Objective-C.  When you open the project you will see that there are two primary files that drive this example.  The ViewController.swift file contains all of the AudioKit code as well and the Main.storyboard contains the button that activates methods in the ViewController.swift file to control the instrument.   There are many storyboard tutorials available online, so we'll just focus on the ViewController.swift's AudioKit code.
+</p>
+
+<p>
+The first step is to make an instrument available to every method in this class, so we create an instance of an AKOscillator which we will just call "oscillator":
+</p>
+{% highlight ruby %}
+var oscillator = AKOscillator()
+{% endhighlight %}
+
+<p>
+Then, in viewDidLoad, hook up the oscillator to the speakers and start the AudioKit engine.
+</p>
+
+{% highlight ruby %}
+    AudioKit.output = oscillator
+    AudioKit.start()
+{% endhighlight %}
+
+<p>
+Finally, we just to need to connect the button from the Main.storyboard file to an action.  The only AudioKit code here is to set the frequency of the oscillator and play/stop it.  The other parts are just to update the UI to reflect the state of the instrument.
+</p>
+
+{% highlight ruby %}
+    @IBAction func toggleSound(sender: UIButton) {
+        if oscillator.isPlaying {
+            oscillator.stop()
+            sender.setTitle("Play Sine Wave", forState: .Normal)
+        } else {
+            oscillator.amplitude = random(0.5, 1)
+            oscillator.frequency = random(220, 880)
+            oscillator.start()
+            sender.setTitle("Stop Sine Wave at \(Int(oscillator.frequency))Hz", forState: .Normal)
+        }
+    }
+{% endhighlight %}
+
+
+<p>And that's it!</p>
+
+
+<h2> Mac and tvOS Versions</h2>
+
+<p>The OS X and tvOS versions differ from the iOS version of this example only in the user interface code.</p>
+
+
+<div class="cd-mac hide-on-mobiles">
+  <div class="cd-top"></div>
+  <div class="cd-bottom"></div>
+  <div class="cd-camera"></div>
+  <div class="cd-notch"></div>
+  <div class="cd-screen"  style="background-color: #f6f6f6">
+    <img src=/examples/HelloWorld/HelloWorldMac.png class="screenshot" alt="Hello World">
+  </div>
+</div>
+
