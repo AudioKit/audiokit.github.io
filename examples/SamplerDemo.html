@@ -1,0 +1,76 @@
+---
+title: AudioKit Examples - Sampler Demo in Swift
+header: Sampler Demo
+permalink: /examples/SamplerDemo/
+layout: examples
+last-review-date: 2016/07/10
+---
+
+<div class="cd-iphone-6 cd-silver hide-on-tablets-and-smaller" style="margin-left: 1em; float: right">
+  <div class="cd-body">
+    <div class="cd-sound"></div>
+    <div class="cd-sleep"></div>
+    <div class="cd-camera"></div>
+    <div class="cd-ear"></div>
+    <div class="cd-home"></div>
+    <div class="cd-screen">
+<img src=/examples/SamplerDemo/SamplerDemoiOS.png class="screenshot" alt="SamplerDemo">
+    </div>
+  </div>
+</div>
+
+
+<p>
+<i>
+This demo is based off of the work by Jeff Cooper.
+</i>
+</p>
+
+<p>
+Before reading this, we highly recommend you to read a great tutorial on <a href="/examples/HelloWorld/">Hello World example</a> first. This example is included in AudioKit in the Examples directory with versions for iOS and OSX.
+</p>
+
+<p>
+Our sampler uses recordings of sounds that were preloaded into Sounds directory of the project folder.
+</p>
+
+<div style="text-align:center;">
+<img src=/examples/SamplerDemo/SamplerDemoProject.png width="230" height="432" alt="SamplerDemo">
+</div>
+
+
+Again, like we did in <a href="/examples/SequencerDemo/">Sequencer Demo</a> we create an instance of an Conductor():
+</p>
+{% highlight swift %}
+    let conductor = Conductor()
+{% endhighlight %}
+
+<p>
+And then we jump right into Conductor.swift file where we can find the same declarations for a basic sequencer, a mixing node, a filter node, a playback node to generate audio, and a mixing node.
+</p>
+
+{% highlight swift %}
+    var sequence: AKSequencer?
+    var mixer = AKMixer()
+    var filter: AKMoogLadder?
+    var arpeggioSynthesizer = AKSampler()
+    var arpeggioVolume: AKBooster?
+{% endhighlight %}
+
+<p>
+During the init() function we initialize the instruments, connect them to a mixing node, create a filter node from a mixing one, and then start the AudioKit engine.
+</p>
+
+{% highlight swift %}
+    arpeggioVolume = AKBooster(arpeggioSynthesizer)
+    mixer.connect(arpeggioVolume!)
+    filter = AKMoogLadder(mixer)
+    AudioKit.output = filter
+    arpeggioSynthesizer.loadEXS24("Sounds/Sampler Instruments/sqrTone1")
+    AudioKit.start()
+    sequence = AKSequencer(filename: "seqDemo", engine: AudioKit.engine)
+    sequence!.avTracks[1].destinationAudioUnit = arpeggioSynthesizer.samplerUnit
+{% endhighlight %}
+
+<h2>Featured Video</h2>
+<iframe src="https://player.vimeo.com/video/173592084" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
