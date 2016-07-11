@@ -32,7 +32,7 @@ AudioKit.output = reverb
 {% endhighlight %}
 <p>Do some basic setup to make the sequence loop correctly</p>
 
-{% highlight ruby %}sequencer.setLength(4)
+{% highlight ruby %}sequencer.setLength(AKDuration(beats: 4))
 sequencer.enableLooping()
 
 {% endhighlight %}

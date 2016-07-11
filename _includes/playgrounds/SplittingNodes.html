@@ -8,9 +8,9 @@ import AudioKit
 {% endhighlight %}
 <p>Prepare the source audio player</p>
 
-{% highlight ruby %}let bundle = NSBundle.mainBundle()
-let file = bundle.pathForResource("drumloop", ofType: "wav")
-var player = AKAudioPlayer(file!)
+{% highlight ruby %}let file = try AKAudioFile(readFileName: "drumloop.wav", baseDir: .Resources)
+
+let player = try AKAudioPlayer(file: file)
 player.looping = true
 
 {% endhighlight %}
@@ -35,3 +35,4 @@ player.play()
 XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
 
 {% endhighlight %}
+<p><a href="Table%20Of%20Contents">TOC</a> | <a href="@previous">Previous</a> | [Next](@nex</p>

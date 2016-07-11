@@ -5,9 +5,9 @@
 {% highlight ruby %}import XCPlayground
 import AudioKit
 
-let bundle = NSBundle.mainBundle()
-let file = bundle.pathForResource("mixloop", ofType: "wav")
-var player = AKAudioPlayer(file!)
+let file = try AKAudioFile(readFileName: "mixloop.wav", baseDir: .Resources)
+
+let player = try AKAudioPlayer(file: file)
 player.looping = true
 
 var dynamicsProcessor = AKDynamicsProcessor(player)
@@ -46,7 +46,11 @@ class PlaygroundView: AKPlaygroundView {
         addTitle("Dynamics Processor")
 
         addLabel("Audio Playback")
-        addButton("Start", action: #selector(start))
+        addButton("Drums", action: #selector(startDrumLoop))
+        addButton("Bass", action: #selector(startBassLoop))
+        addButton("Guitar", action: #selector(startGuitarLoop))
+        addButton("Lead", action: #selector(startLeadLoop))
+        addButton("Mix", action: #selector(startMixLoop))
         addButton("Stop", action: #selector(stop))
 
         addLabel("Dynamics Processor Parameters")
@@ -80,27 +84,28 @@ class PlaygroundView: AKPlaygroundView {
 
     func startLoop(part: String) {
         player.stop()
-        let file = bundle.pathForResource("\(part)loop", ofType: "wav")
-        player.replaceFile(file!)
+        let file = try? AKAudioFile(readFileName: "\(part)loop.wav", baseDir: .Resources)
+        try? player.replaceFile(file!)
         player.play()
     }
-    
+
+
     func startDrumLoop() {
         startLoop("drum")
     }
-    
+
     func startBassLoop() {
         startLoop("bass")
     }
-    
+
     func startGuitarLoop() {
         startLoop("guitar")
     }
-    
+
     func startLeadLoop() {
         startLoop("lead")
     }
-    
+
     func startMixLoop() {
         startLoop("mix")
     }
@@ -116,41 +121,74 @@ class PlaygroundView: AKPlaygroundView {
     func bypass() {
         dynamicsProcessor.bypass()
     }
+
     func setThreshold(slider: Slider) {
         dynamicsProcessor.threshold = Double(slider.value)
         let threshold = String(format: "%0.3f", dynamicsProcessor.threshold)
         thresholdLabel!.text = "Threshold: \(threshold) dB"
+        printCode()
     }
 
     func setHeadRoom(slider: Slider) {
         dynamicsProcessor.headRoom = Double(slider.value)
         let headRoom = String(format: "%0.3f", dynamicsProcessor.headRoom)
         headRoomLabel!.text = "Head Room: \(headRoom) dB"
+        printCode()
     }
 
     func setExpansionRatio(slider: Slider) {
         dynamicsProcessor.expansionRatio = Double(slider.value)
         let expansionRatio = String(format: "%0.3f", dynamicsProcessor.expansionRatio)
         expansionRatioLabel!.text = "Expansion Ratio: \(expansionRatio) rate"
+        printCode()
     }
 
     func setExpansionThreshold(slider: Slider) {
         dynamicsProcessor.expansionThreshold = Double(slider.value)
         let expansionThreshold = String(format: "%0.3f", dynamicsProcessor.expansionThreshold)
         expansionThresholdLabel!.text = "Expansion Threshold: \(expansionThreshold) rate"
+        printCode()
     }
 
     func setAttackTime(slider: Slider) {
         dynamicsProcessor.attackTime = Double(slider.value)
         let attackTime = String(format: "%0.3f", dynamicsProcessor.attackTime)
         attackTimeLabel!.text = "Attack Time: \(attackTime) secs"
+        printCode()
     }
 
     func setReleaseTime(slider: Slider) {
         dynamicsProcessor.releaseTime = Double(slider.value)
         let releaseTime = String(format: "%0.3f", dynamicsProcessor.releaseTime)
         releaseTimeLabel!.text = "Release Time: \(releaseTime) secs"
+        printCode()
     }
 
     func setMasterGain(slider: Slider) {
-    {% endhighlight %}
+        dynamicsProcessor.masterGain = Double(slider.value)
+        let masterGain = String(format: "%0.3f", dynamicsProcessor.masterGain)
+        masterGainLabel!.text = "Master Gain: \(masterGain) dB"
+        printCode()
+    }
+
+    func printCode() {
+        // Here we're just printing out the preset so it can be copy and pasted into code
+
+        print("public func presetXXXXXX() {")
+        print("    threshold = \(String(format: "%0.3f", dynamicsProcessor.threshold))")
+        print("    headRoom = \(String(format: "%0.3f", dynamicsProcessor.headRoom))")
+        print("    expansionRatio = \(String(format: "%0.3f", dynamicsProcessor.expansionRatio))")
+        print("    expansionThreshold = \(String(format: "%0.3f", dynamicsProcessor.expansionThreshold))")
+        print("    attackTime = \(String(format: "%0.3f", dynamicsProcessor.attackTime))")
+        print("    releaseTime = \(String(format: "%0.3f", dynamicsProcessor.releaseTime))")
+        print("    masterGain = \(String(format: "%0.3f", dynamicsProcessor.masterGain))")
+        print("}\n")
+    }
+
+}
+
+let view = PlaygroundView(frame: CGRect(x: 0, y: 0, width: 500, height: 1000))
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+XCPlaygroundPage.currentPage.liveView = view
+
+{% endhighlight %}

@@ -5,16 +5,19 @@
 {% highlight ruby %}import XCPlayground
 import AudioKit
 
-let bundle = NSBundle.mainBundle()
-let file = bundle.pathForResource("guitarloop", ofType: "wav")
+let file = try AKAudioFile(readFileName: "guitarloop.wav", baseDir: .Resources)
+
 
 {% endhighlight %}
 <p>Here we set up a player to the loop the file&#39;s playback</p>
 
-{% highlight ruby %}var player = AKAudioPlayer(file!)
+{% highlight ruby %}let player = try AKAudioPlayer(file: file)
 player.looping = true
 
-// Filter Properties
+{% endhighlight %}
+<p>The amplitude tracker&#39;s passes its input to the output, so we can insert into the signal chain at the bottom</p>
+
+{% highlight ruby %}// Filter Properties
 var cutoffFrequency = 1100
 var resonance = 0.9
 var filterMix = 0.9

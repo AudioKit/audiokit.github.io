@@ -5,10 +5,9 @@
 {% highlight ruby %}import XCPlayground
 import AudioKit
 
-let bundle = NSBundle.mainBundle()
-let file = bundle.pathForResource("drumloop", ofType: "wav")
+let file = try AKAudioFile(readFileName: "drumloop.wav", baseDir: .Resources)
 
-var player = AKAudioPlayer(file!)
+let player = try AKAudioPlayer(file: file)
 player.looping = true
 
 {% endhighlight %}
