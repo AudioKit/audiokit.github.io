@@ -1,0 +1,97 @@
+---
+title: AudioKit Examples - Sequencer Demo in Swift
+header: Sequencer Demo
+permalink: /examples/SequencerDemo/
+layout: examples
+last-review-date: 2016/07/10
+---
+
+<div class="cd-iphone-5s cd-silver hide-on-tablets-and-smaller" style="margin-left: 1em; float: right">
+  <div class="cd-body">
+    <div class="cd-sound"></div>
+    <div class="cd-sleep"></div>
+    <div class="cd-camera"></div>
+    <div class="cd-ear"></div>
+    <div class="cd-home"></div>
+    <div class="cd-screen">
+<img src=/examples/SequencerDemo/SequencerDemoiOS.png class="screenshot" alt="Sequencer Demo">
+    </div>
+  </div>
+</div>
+
+
+<p>
+<i>
+This demo is based off of the work by Jeff Cooper.
+</i>
+</p>
+
+<p>
+Before reading this, we highly recommend you to read a great tutorial on <a href="/examples/HelloWorld/">Hello World example</a> first. This example is included in AudioKit in the Examples directory with versions for iOS and OSX.
+</p>
+
+<p>
+First we create an instance of an Conductor() to follow the principles of MVC (Model-View-Controller):
+</p>
+{% highlight swift %}
+    let conductor = Conductor()
+{% endhighlight %}
+
+<p>
+And then the file Conductor.swift comes where amazing happens. We create the object of AKMIDI() that handles both the MIDI input and output, an instance of AKFMOscillatorBank() to generate audio, and the last property stands for the pointer to Apple’s Reverb2 Audio Unit.
+</p>
+
+{% highlight swift %}
+    let midi = AKMIDI()
+    var fmOscillator = AKFMOscillatorBank()
+    var melodicSound: AKMIDINode?
+    var verb: AKReverb2?
+{% endhighlight %}
+
+<p>
+Then we create some instruments, where AKMIDIInstrument() is a version of AKInstrument() specifically targeted to instruments that should be triggerable via MIDI or sequenced with the sequencer.
+</p>
+
+{% highlight swift %}
+    var bassDrumInstrument: BDInstrument?
+    var bassDrum: AKMIDIInstrument?
+{% endhighlight %}
+
+<p>
+Finally, we create a basic sequencer, a node that mixes its inputs to a single output, and a dynamic node.
+</p>
+
+{% highlight swift %}
+    var sequence = AKSequencer()
+    var mixer = AKMixer()
+    var pumper: AKCompressor?
+{% endhighlight %}
+
+<p>
+During the init() function we initialize the instruments, mix them to a single output, and then start the AudioKit engine.
+</p>
+
+{% highlight swift %}
+    bassDrumInstrument = BDInstrument(voiceCount: 1)
+    bassDrumInstrument?.amplitude = 1
+    bassDrum = AKMIDIInstrument(instrument: bassDrumInstrument!)
+    bassDrum?.enableMIDI(midi.client, name: "bassDrum midi in")
+
+    pumper = AKCompressor(mixer)
+
+    AudioKit.output = pumper
+    AudioKit.start()
+{% endhighlight %}
+
+<p>
+And then we're able to generate a new track for our sequence for every instrument we've got so far (bass drum, snare drum, snare ghost):
+</p>
+
+{% highlight swift %}
+    sequence.newTrack()
+    sequence.tracks[Sequence.BassDrum.rawValue].setMIDIOutput((bassDrum?.midiIn)!)
+    generateBassDrumSequence()
+{% endhighlight %}
+
+<h2>Featured Video</h2>
+<iframe src="https://player.vimeo.com/video/173592871" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
