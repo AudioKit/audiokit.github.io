@@ -1,0 +1,111 @@
+---
+title: Soundpipe
+header: Soundpipe
+permalink: /soundpipe/
+layout: section_index
+---
+
+<p>Soundpipe is the primary audio engine inside of AudioKit. It is a lightweight music DSP library for musicians and creative coders. It exists
+to bring beautiful sounds to your projects. The Soundpipe library is built up of
+over 80 (and counting!) high quality modules, many of which have been ported directly from the
+time-honored Csound synthesis language. These modules can be combined together to build
+unique sounds.</p>
+<p>Soundpipe supports a wide range of synthesis and audio DSP
+techniques which include:</p>
+<ul class="iconlist">
+<li><i class="icon-line-play"></i>Classic Filters (Moog, Butterworth, etc)</li>
+<li><i class="icon-line-play"></i>High-precision and linearly interpolated wavetable oscillators</li>
+<li><i class="icon-line-play"></i>Bandlimited oscillators (square, saw, triangle)</li>
+<li><i class="icon-line-play"></i>FM synthesis</li>
+<li><i class="icon-line-play"></i>Karplus-strong instruments</li>
+<li><i class="icon-line-play"></i>Variable delay lines</li>
+<li><i class="icon-line-play"></i>String resonators</li>
+<li><i class="icon-line-play"></i>Spectral Resynthesis</li>
+<li><i class="icon-line-play"></i>Partitioned Convolution</li>
+<li><i class="icon-line-play"></i>Physical modeling </li>
+<li><i class="icon-line-play"></i>Pitch tracking</li>
+<li><i class="icon-line-play"></i>Distortion</li>
+<li><i class="icon-line-play"></i>Reverberation</li>
+<li><i class="icon-line-play"></i>Samplers and sample playback</li>
+<li><i class="icon-line-play"></i>Padsynth algorithm</li>
+</ul>
+<h2>Features:</h2>
+<ul class="iconlist">
+<li><i class="icon-line-play"></i>Small codebase</li>
+<li><i class="icon-line-play"></i>Sample-accurate timing</li>
+<li><i class="icon-line-play"></i>Modular design</li>
+<li><i class="icon-line-play"></i>Very fast</li>
+<li><i class="icon-line-play"></i>Well documented</li>
+<li><i class="icon-line-play"></i>Minimal dependencies</li>
+</ul>
+<p>The source code for Soundpipe can be found on
+<a href="http://www.github.com/PaulBatchelor/Soundpipe.git">github</a>.</p>
+<h2>Using Soundpipe</h2>
+<p>The Soundpipe library is simple and straight forward to use. Every Soundpipe module
+has documentation with at least one short C example. By default, the only library Soundpipe
+needs is libsndfile, and compiles to a single static library, making it ideal for embedding.</p>
+<p>Soundpipe is built so that it is easy to extend and hack on. It is easy to add and take away
+modules in Soundpipe for specific project needs.</p>
+<p>Here is a example of Soundpipe code. In this example, a 5-second 500hz sine wave (generated
+via a table lookup oscillator)
+is written to disk:</p>
+<pre><code>#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;time.h&gt;
+#include "soundpipe.h"
+
+typedef struct {
+    sp_osc *osc;
+    sp_ftbl *ft;
+} UserData;
+
+void write_osc(sp_data *sp, void *udata) {
+    UserData *ud = udata;
+    sp_osc_compute(data, udp-&gt;osc, NULL, &sp-&gt;out[0]);
+}
+
+int main() {
+    UserData ud;
+    sp_data *sp;
+    sp_create(&sp);
+    sp_ftbl_create(sp, &ud.ft, 2048);
+    sp_osc_create(&ud.osc);
+
+    sp_gen_sine(sp, ud.ft);
+    sp_osc_init(sp, ud.osc, ud.ft);
+    ud.osc-&gt;freq = 500;
+    sp-&gt;len = 44100 * 5;
+    sp_process(sp, &ud, write_osc);
+
+    sp_ftbl_destroy(&ud.ft);
+    sp_osc_destroy(&ud.osc);
+    sp_destroy(&sp);
+    return 0;
+}
+</code></pre>
+
+<h2>The Soundpipe Model</h2>
+<p>Soundpipe is callback driven. Every time Soundpipe needs a frame, it will
+call upon a single function specified by the user. Soundpipe modules are
+designed to process a signal one sample at a time.  Every module follows the
+same life cycle:</p>
+<ol>
+<li>Create: Memory is allocated for the data struct.</li>
+<li>Initialize: Buffers are allocated, and initial variables and constants
+are set.</li>
+<li>Compute: the module takes in inputs (if applicable), and generates a
+single sample of output.</li>
+<li>Destroy: All memory allocated is freed.</li>
+</ol>
+<h2>Documentation</h2>
+<p>If you have lua installed on your computer, you can generate the current html
+documentation for soundpipe by running "make docs". A folder called "docs"
+will be created. The top page for the documentation is docs/index.html.</p>
+
+<h2>Contributors of Soundpipe</h2>
+<p>Paul Batchelor - Primary Architect and Programmer</p>
+<p>Aurelius Prochazka </p>
+<p>Alex Tape</p>
+<p>Daniel Friedman</p>
+<p>Nick Arner</p>
+
