@@ -1,5 +1,7 @@
 <p><h3>Balancing Nodes
-</h3><h4>Sometimes you want to ensure that an audio signal that you&#39;re processing remains at a volume similar to where it started.  Such an application is perfect for the AKBalancer node.
+</h3><h4>Sometimes you want to ensure that an audio signal that you&#39;re processing
+</h4><h4>remains at a volume similar to where it started.
+</h4><h4>Such an application is perfect for the AKBalancer node.
 </h4></p>
 
 {% highlight ruby %}import XCPlayground
@@ -32,15 +34,15 @@ source!.play()
 
 {% highlight ruby %}
 class PlaygroundView: AKPlaygroundView {
-    
+
     override func setup() {
         addTitle("Balancing Nodes")
-        
+
         addLabel("Listen to the difference in volume:")
         addButton("Balance", action: #selector(start))
         addButton("Bypass", action: #selector(bypass))
     }
-    
+
     func start() {
         rebalancedWithSource.start()
     }

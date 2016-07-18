@@ -1,5 +1,7 @@
 <p><h3>High Pass Butterworth Filter
-</h3><h4>A high-pass filter takes an audio signal as an input, and cuts out the low-frequency components of the audio signal, allowing for the higher frequency components to &quot;pass through&quot; the filter.
+</h3><h4>A high-pass filter takes an audio signal as an input, and cuts out the
+</h4><h4>low-frequency components of the audio signal, allowing for the higher frequency
+</h4><h4>components to &quot;pass through&quot; the filter.
 </h4></p>
 
 {% highlight ruby %}import XCPlayground
@@ -47,7 +49,10 @@ class PlaygroundView: AKPlaygroundView {
         addButton("Bypass", action: #selector(bypass))
 
         cutoffFrequencyLabel = addLabel("Cut-off Frequency: \(highPassFilter.cutoffFrequency) Hz")
-        addSlider(#selector(setCutoffFrequency), value: highPassFilter.cutoffFrequency, minimum: 10, maximum: 22050)
+        addSlider(#selector(setCutoffFrequency),
+                  value: highPassFilter.cutoffFrequency,
+                  minimum: 10,
+                  maximum: 22050)
     }
 
     //: Handle UI Events

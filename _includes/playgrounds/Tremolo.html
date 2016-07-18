@@ -11,8 +11,8 @@ let file = try AKAudioFile(readFileName: "guitarloop.wav", baseDir: .Resources)
 
 {% highlight ruby %}var player = try AKAudioPlayer(file: file)
 player.looping = true
-var tremolo = AKTremolo(player, waveform: AKTable(.PositiveSine))
-
+var tremolo = AKTremolo(player, waveform: AKTable(.PositiveSquare))
+tremolo.depth = 0.5
 {% endhighlight %}
 <p>Set the parameters of the tremolo here</p>
 

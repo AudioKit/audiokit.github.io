@@ -1,5 +1,11 @@
 <p><h3>Parametric Equalizer
-</h3> #### A parametric equalizer can be used to raise or lower specific frequencies or frequency bands. Live sound engineers often use parametric equalizers during a concert in order to keep feedback from occuring, as they allow much more precise control over the frequency spectrum than other types of equalizers. Acoustic engineers will also use them to tune a room. This node may be useful if you&#39;re building an app to do audio analysis.</p>
+</h3> #### A parametric equalizer can be used to raise or lower specific frequencies
+<h4>or frequency bands. Live sound engineers often use parametric equalizers
+</h4><h4>during a concert in order to keep feedback from occuring, as they allow
+</h4><h4>much more precise control over the frequency spectrum than other types
+</h4><h4>of equalizers. Acoustic engineers will also use them to tune a room.
+</h4><h4>This node may be useful if you&#39;re building an app to do audio analysis.
+</h4></p>
 
 {% highlight ruby %}import XCPlayground
 import AudioKit
@@ -53,7 +59,10 @@ class PlaygroundView: AKPlaygroundView {
         addButton("Bypass", action: #selector(bypass))
 
         centerFreqLabel = addLabel("Center Frequency: \(parametricEQ.centerFrequency) Hz")
-        addSlider(#selector(setCenterFreq), value: parametricEQ.centerFrequency, minimum: 20, maximum: 22050)
+        addSlider(#selector(setCenterFreq),
+                  value: parametricEQ.centerFrequency,
+                  minimum: 20,
+                  maximum: 22050)
 
         qLabel = addLabel("Q: \(parametricEQ.q) Hz")
         addSlider(#selector(setQ), value: parametricEQ.q, minimum: 0.1, maximum: 20)

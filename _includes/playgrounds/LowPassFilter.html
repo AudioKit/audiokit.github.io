@@ -1,5 +1,7 @@
 <p><h3>Low Pass Filter
-</h3><h4>A low-pass filter takes an audio signal as an input, and cuts out the high-frequency components of the audio signal, allowing for the lower frequency components to &quot;pass through&quot; the filter.
+</h3><h4>A low-pass filter takes an audio signal as an input, and cuts out the
+</h4><h4>high-frequency components of the audio signal, allowing for the
+</h4><h4>lower frequency components to &quot;pass through&quot; the filter.
 </h4></p>
 
 {% highlight ruby %}import XCPlayground
@@ -49,7 +51,10 @@ class PlaygroundView: AKPlaygroundView {
         addButton("Bypass", action: #selector(bypass))
 
         cutoffFrequencyLabel = addLabel("Cut-off Frequency: \(lowPassFilter.cutoffFrequency) Hz")
-        addSlider(#selector(setCutoffFrequency), value: lowPassFilter.cutoffFrequency, minimum: 10, maximum: 22050)
+        addSlider(#selector(setCutoffFrequency),
+                  value: lowPassFilter.cutoffFrequency,
+                  minimum: 10,
+                  maximum: 22050)
 
         resonanceLabel = addLabel("Resonance: 0 dB")
         addSlider(#selector(setResonance), value: 0, minimum: -20, maximum: 40)

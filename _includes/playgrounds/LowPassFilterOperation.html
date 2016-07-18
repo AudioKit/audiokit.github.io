@@ -13,7 +13,8 @@ let filter = AKOperation.input.lowPassFilter(halfPowerPoint: halfPower)
 {% endhighlight %}
 <p>Noise Example</p>
 
-{% highlight ruby %}let whiteNoise = AKWhiteNoise(amplitude: 0.1) // Bring down the amplitude so that when it is mixed it is not so loud
+{% highlight ruby %}// Bring down the amplitude so that when it is mixed it is not so loud
+let whiteNoise = AKWhiteNoise(amplitude: 0.1)
 let filteredNoise = AKOperationEffect(whiteNoise, operation: filter)
 
 {% endhighlight %}

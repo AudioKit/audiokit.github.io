@@ -1,7 +1,13 @@
 <h2>Playgrounds Table of Contents
 </h2>
 
-<p>AudioKit comes with many playgrounds, each of which serves to teach some core concept, demonstrate a particular generator or synthesizer, or just show off some wacky sounds that we&#39;ve discovered.  Because there are so many playgrounds that are inter-related in different ways, the order of the playgrounds in Xcode is more or less alphabetical, however this index page lists all the the playgrounds grouped by category.  Playgrounds that fit into multiple categories are listed in each relevant category.</p>
+<p>AudioKit comes with many playgrounds, each of which serves to teach some
+ core concept, demonstrate a particular generator or synthesizer, or just
+ show off some wacky sounds that we&#39;ve discovered.  Because there are so
+ many playgrounds that are inter-related in different ways, the order of the
+ playgrounds in Xcode is more or less alphabetical, however this index page
+ lists all the the playgrounds grouped by category.  Playgrounds that fit
+ into multiple categories are listed in each relevant category.</p>
 
 <h3>Getting Started
 </h3>
@@ -15,7 +21,10 @@
 <h3>This is going to be fun...
 </h3>
 
-<p>So wait, before we jump into the actual tutorials, let&#39;s just highlight some of the cooler sound playgrounds we have.  Don&#39;t try to understand the code if you&#39;re just started, it will all be expained starting with the next section, Basic Tutorials.</p>
+<p>So wait, before we jump into the actual tutorials, let&#39;s just highlight some
+ of the cooler sound playgrounds we have.  Don&#39;t try to understand the code
+ if you&#39;re just started, it will all be expained starting with the next
+ section, Basic Tutorials.</p>
 
 <ul>
 <li><a href="Drum%20Synthesizers">Electro Drum Beat</a></li>
@@ -32,7 +41,9 @@
 <h3>Basic Tutorials
 </h3>
 
-<p>These tutorials help you get started with the basic concepts of AudioKit, starting with what you need to know about playgrounds in general and then moving on to sound creation and working with AudioKit nodes.</p>
+<p>These tutorials help you get started with the basic concepts of AudioKit,
+ starting with what you need to know about playgrounds in general and then
+ moving on to sound creation and working with AudioKit nodes.</p>
 
 <ul>
 <li><a href="Non-Audio%20Tutorial">Non-Audio Tutorial</a></li>
@@ -42,7 +53,7 @@
 <li><a href="Dry%20Wet%20Mixer">Dry Wet Mixer</a></li>
 <li><a href="Balancing%20Nodes">Balancing Nodes</a></li>
 <li><a href="Stereo%20Panning">Stereo Panning</a></li>
-<li><a href="AKNodeRecorder">Recording Nodes</a></li>
+<li><a href="Recording%20Nodes">Recording Nodes</a></li>
 <li><a href="Parameter%20Ramp%20Time">Parameter Ramp Time</a></li>
 <li><a href="3D%20Panner">3D Panner</a></li>
 <li><a href="Tremolo">Tremolo</a></li>
@@ -52,7 +63,8 @@
 <h3>Plotting
 </h3>
 
-<p>Playgrounds are a very visually compelling interface and you create a few different ways  of seeing what is happening to your audio signal.</p>
+<p>Playgrounds are a very visually compelling interface and you create a few
+ different ways  of seeing what is happening to your audio signal.</p>
 
 <ul>
 <li><a href="Output%20Waveform%20Plot">Output Waveform Plot</a></li>
@@ -74,7 +86,8 @@
 <h3>"Analog Synth X" Example Project
 </h3>
 
-<p>AudioKit is shipped with an awesome synth example project and the following playgrounds are where we developed and tested out the effects for that synth.</p>
+<p>AudioKit is shipped with an awesome synth example project and the following
+ playgrounds are where we developed and tested out the effects for that synth.</p>
 
 <ul>
 <li><a href="Fatten%20Effect">Fatten Effect</a></li>
@@ -85,24 +98,28 @@
 <h3>Designing Sound
 </h3>
 
-<p>These playgrounds are inspired by the &quot;Practicals&quot; section of the book &quot;Designing Sound&quot;, by Andy Farnell.  While this book is excellent, the examples are implemented in Pd, which is okay, I guess, but hey, this is AudioKit!</p>
+<p>These playgrounds are inspired by the &quot;Practicals&quot; section of the book
+ &quot;Designing Sound&quot;, by Andy Farnell.  While this book is excellent, the
+ examples are implemented in Pd, which is okay, I guess, but hey, this is AudioKit!</p>
 
 <ul>
 <li><a href="Pedestrians">Pedestrians</a></li>
 <li><a href="Telephone">Telephone</a> - Dialtone, ringing, busy signal, and digits</li>
 </ul>
 
-<p>Hopefully we&#39;ll add more practicals over time.  If you&#39;re interested in making more, submit a pull-request to git repo and we&#39;ll be sure to include them.</p>
+<p>Hopefully we&#39;ll add more practicals over time.  If you&#39;re interested in
+ making more, submit a pull-request to git repo and we&#39;ll be sure to include them.</p>
 
 <h3>Playback Nodes
 </h3>
 
-<p>Over the course of viewing the playgrounds so far, you&#39;ve come across AKAudioPlayer repeatedly.  It is a simple neough class that it doesn&#39;t require a playground of its own, but there are some playback-oriented nodes that are very useful and cool.</p>
+<p>Over the course of viewing the playgrounds so far, you&#39;ve come across
+ AKAudioPlayer repeatedly.  It is a simple neough class that it doesn&#39;t
+ require a playground of its own, but there are some playback-oriented nodes
+ that are very useful and cool.</p>
 
 <ul>
 <li><a href="Audio%20Player">Audio Player</a></li>
-<li><a href="AKAudioFile%20Demo">AKAudioFile Demo</a></li>
-<li><a href="AKAudioFile%20part2">AKAudioFile part2</a></li>
 <li><a href="Playback%20Speed">Playback Speed</a></li>
 <li><a href="Sampler%20Instrument%20-%20EXS24">Sampler Instrument - EXS24</a></li>
 <li><a href="Sampler%20Instrument%20-%20Wav%20file">Sampler Instrument - Wav file</a></li>
@@ -112,13 +129,27 @@
 <li><a href="Phase-Locked%20Vocoder">Phase-Locked Vocoder</a></li>
 </ul>
 
+{% highlight ruby %}
+{% endhighlight %}
+<h3>AKAudioFile Playgrounds
+</h3>
+
+<p>These are playgrounds that are currently experimental, and in active development. Proceed with caution.</p>
+
+<ul>
+<li><a href="AKAudioFile%20Demo">AKAudioFile Demo</a></li>
+<li><a href="AKAudioFile%20part2">AKAudioFile part2</a></li>
+<li><a href="AKAudioFile%20part%203%20Async%20Process">AKAudioFile part3 Async Process</a></li>
+</ul>
+
 <h3>Generator Nodes
 </h3>
 
 <h4>Oscillators
 </h4>
 
-<p>Oscillators are the bread and butter of audio synthesis and there&#39;s no shortage of them in AudioKit.</p>
+<p>Oscillators are the bread and butter of audio synthesis and there&#39;s no
+ shortage of them in AudioKit.</p>
 
 <ul>
 <li><a href="FM%20Oscillator">FM Oscillator</a></li>
@@ -129,6 +160,8 @@
 <li><a href="Morphing%20Oscillator%20Bank">Morphing Oscillator Bank</a></li>
 <li><a href="Oscillator">Oscillator</a></li>
 <li><a href="Oscillator%20Bank">Oscillator Bank</a></li>
+<li><a href="Phase%20Distortion%20Oscillator">Phase Distortion Oscillator</a></li>
+<li><a href="Phase%20Distortion%20Oscillator%20Bank">Phase Distortion Oscillator Bank</a></li>
 <li><a href="PWM%20Oscillator">PWM Oscillator</a></li>
 <li><a href="PWM%20Oscillator%20Bank">PWM Oscillator Bank</a></li>
 </ul>
@@ -159,12 +192,15 @@
 <h3>Effect Processor Nodes
 </h3>
 
-<p>Here is where we start presenting playgrounds with the purpose of demonstrating a particular type of node.  This section covers effect processors such as what you might find on a electric guitar pedal board.</p>
+<p>Here is where we start presenting playgrounds with the purpose of
+ demonstrating a particular type of node.  This section covers effect
+ processors such as what you might find on a electric guitar pedal board.</p>
 
 <h4>Delay Nodes
 </h4>
 
-<p>Delay is a lot more powerful than simply repeating an earlier sound.  By varying parameters, you can get startlingly beautiful effects.</p>
+<p>Delay is a lot more powerful than simply repeating an earlier sound.
+ By varying parameters, you can get startlingly beautiful effects.</p>
 
 <ul>
 <li><a href="Delay">Delay</a></li>
@@ -174,7 +210,9 @@
 <h4>Distortion
 </h4>
 
-<p>Distortion is a category for nodes that do more than just filter a sound, and basically change something essential to the sound, usually making for a harsher sound, but that&#39;s a matter of taste.</p>
+<p>Distortion is a category for nodes that do more than just filter a sound,
+ and basically change something essential to the sound, usually making for a
+ harsher sound, but that&#39;s a matter of taste.</p>
 
 <ul>
 <li><a href="Bit%20Crush%20Effect">Bit Crush Effect</a></li>
@@ -187,7 +225,8 @@
 <h4>Dynamics Processing
 </h4>
 
-<p>Dynamics processing is usually done at the mixing stage and involves changing the signal&#39;s output levels.</p>
+<p>Dynamics processing is usually done at the mixing stage and involves
+ changing the signal&#39;s output levels.</p>
 
 <ul>
 <li><a href="Dynamics%20Processor">Dynamics Processor</a></li>
@@ -258,7 +297,8 @@
 <li><a href="Multi-tap%20Delay">Muli-tap Delay</a></li>
 </ul>
 
-<p>Many of the types of things you can do in nodes are also possible with operations, but with great flexibility in how the parameters are changed over time.</p>
+<p>Many of the types of things you can do in nodes are also possible with operations,
+ but with great flexibility in how the parameters are changed over time.</p>
 
 <ul>
 <li><a href="AutoPan%20Operation">AutoPan Operation</a></li>
@@ -285,11 +325,13 @@
 <h3>Sporth
 </h3>
 
-<p>Sporth is a simple but super-powerful stack-based audio processing language that you can run directly in AudioKit. Here are some examples.</p>
+<p>Sporth is a simple but super-powerful stack-based audio processing language
+ that you can run directly in AudioKit. Here are some examples.</p>
 
 <ul>
 <li><a href="Sporth%20Based%20Generator">Sporth Based Generator</a></li>
 <li><a href="Sporth%20Based%20Effect">Sporth Based Effect</a></li>
 </ul>
 
-<p>Hey you got all the way to the bottom of this file, why not let us know by emailing <a href="mailto:audiokit@audiokit.io">audiokit@audiokit.io</a>.  We&#39;d love to hear from you!</p>
+<p>Hey you got all the way to the bottom of this file, why not let us know by
+ emailing <a href="mailto:audiokit@audiokit.io">audiokit@audiokit.io</a>.  We&#39;d love to hear from you!</p>

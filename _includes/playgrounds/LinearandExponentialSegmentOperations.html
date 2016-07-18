@@ -1,5 +1,6 @@
 <p><h3>Linear and Exponential Segment Operations
-</h3><h4>You can create segments that vary parameters in operations over a certain duration.  Here we create an alien apocalypse.
+</h3><h4>You can create segments that vary parameters in operations over a certain duration.
+</h4><h4>Here we create an alien apocalypse.
 </h4></p>
 
 {% highlight ruby %}import XCPlayground
@@ -12,12 +13,18 @@ let updateRate = AKOperation.parameters(0)
 
 {% highlight ruby %}let start = AKOperation.randomNumberPulse() * 2000 + 300
 let duration = AKOperation.randomNumberPulse()
-let frequency = AKOperation.lineSegment(AKOperation.metronome(updateRate), start: start, end: 0, duration: duration)
+let frequency = AKOperation.lineSegment(AKOperation.metronome(updateRate),
+                                        start: start,
+                                        end: 0,
+                                        duration: duration)
 
 {% endhighlight %}
 <p>Decrease the amplitude exponentially</p>
 
-{% highlight ruby %}let amplitude = AKOperation.exponentialSegment(AKOperation.metronome(updateRate), start: 0.3, end: 0.01, duration: 1.0 / updateRate)
+{% highlight ruby %}let amplitude = AKOperation.exponentialSegment(AKOperation.metronome(updateRate),
+                                               start: 0.3,
+                                               end: 0.01,
+                                               duration: 1.0 / updateRate)
 let sine = AKOperation.sineWave(frequency: frequency, amplitude:  amplitude)
 
 let generator = AKOperationGenerator(operation:  sine)
@@ -40,15 +47,15 @@ generator.start()
 
 class PlaygroundView: AKPlaygroundView {
     var speedLabel: Label?
-    
+
     override func setup() {
         addTitle("Segment Operations")
-        
+
         speedLabel = addLabel("Update Rate: \(generator.parameters[0])")
         addSlider(#selector(setSpeed), value: generator.parameters[0], minimum: 0.1, maximum: 10)
-        
+
     }
-    
+
     func setSpeed(slider: Slider) {
         generator.parameters[0] = Double(slider.value)
         speedLabel!.text = "Update Rate: \(String(format: "%0.3f", generator.parameters[0]))"

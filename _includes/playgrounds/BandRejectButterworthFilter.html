@@ -1,6 +1,5 @@
-<p><h3>Band Pass Butterworth Filter
-</h3><h4>Band-pass filters allow audio above a specified frequency range and bandwidth to pass through to an output. The center frequency is the starting point from where the frequency limit is set. Adjusting the bandwidth sets how far out above and below the center frequency the frequency band should be. Anything above that band should pass through.
-</h4></p>
+<h3>Band Reject Butterworth Filter
+</h3>
 
 {% highlight ruby %}import XCPlayground
 import AudioKit
@@ -51,7 +50,10 @@ class PlaygroundView: AKPlaygroundView {
         addButton("Bypass", action: #selector(bypass))
 
         centerFrequencyLabel = addLabel("Center Frequency: \(filter.centerFrequency) Hz")
-        addSlider(#selector(setCenterFrequency), value: filter.centerFrequency, minimum: 20, maximum: 22050)
+        addSlider(#selector(setCenterFrequency),
+                  value: filter.centerFrequency,
+                  minimum: 20, maximum:
+            22050)
 
         bandwidthLabel = addLabel("Bandwidth \(filter.bandwidth) Cents")
         addSlider(#selector(setBandwidth), value: filter.bandwidth, minimum: 100, maximum: 12000)

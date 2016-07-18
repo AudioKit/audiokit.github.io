@@ -13,10 +13,7 @@ let file = try AKAudioFile(readFileName: "mixloop.wav", baseDir: .Resources)
 {% highlight ruby %}let player = try AKAudioPlayer(file: file)
 player.looping = true
 
-{% endhighlight %}
-<p>The amplitude tracker&#39;s passes its input to the output, so we can insert into the signal chain at the bottom</p>
-
-{% highlight ruby %}AudioKit.output = player
+AudioKit.output = player
 AudioKit.start()
 player.play()
 let fft = AKFFTTap(player)

@@ -15,28 +15,33 @@ let loop = try? AKAudioFile(readFileName: "drumloop.wav", baseDir: .Resources)
 {% endhighlight %}
 <p>You may have noticed that the drumloop doesn&#39;t loop so well. Let&#39;s fix this...</p>
 
-{% highlight ruby %}let fixedLoop = try? loop!.extract(0, to: Int64(3.42 * 44100))
+{% highlight ruby %}let fixedLoop = try? loop!.extract(fromSample: 0, toSample: Int64(3.42 * 44100))
 
 {% endhighlight %}
-<p>Now out drumloop is one bar long and perfectly loops. Let&#39;s extract the kick, the snare and hihat into sisteenth note long files :</p>
+<p>Now out drumloop is one bar long and perfectly loops. Let&#39;s extract the kick,
+ the snare and hihat into sixteenth note long files:</p>
 
 {% highlight ruby %}let oneBarLength = fixedLoop!.samplesCount
 
 let oneSixteenthLength = oneBarLength / 16
 
-let kick = try?  fixedLoop!.extract(0, to: oneSixteenthLength)
-let snare = try? fixedLoop!.extract(oneSixteenthLength * 4, to: oneSixteenthLength * 5)
-let hihat = try? fixedLoop!.extract(oneSixteenthLength * 2, to: oneSixteenthLength * 3)
+let kick = try?  fixedLoop!.extract(fromSample: 0, toSample: oneSixteenthLength)
+let snare = try? fixedLoop!.extract(fromSample: oneSixteenthLength * 4,
+                                    toSample: oneSixteenthLength * 5)
+let hihat = try? fixedLoop!.extract(fromSample: oneSixteenthLength * 2,
+                                    toSample: oneSixteenthLength * 3)
 
 {% endhighlight %}
-<p>Notice that we don&#39;t provide any name or location for those files (in fact, I don&#39;t care...) If no name / location are set, files will be created in temp directory with a unique name. But you could choose name and location if you wish. Let&#39;s check this:</p>
+<p>Notice that we don&#39;t provide any name or location for those files (in fact, we don&#39;t care...)
+ If no name / location are set, files will be created in temp directory with a unique name.
+ But you could choose name and location if you wish. Let&#39;s check this:</p>
 
 {% highlight ruby %}
 let kickFileName = kick!.fileNamePlusExtension
 let kickFilePath = kick!.directoryPath
 
 {% endhighlight %}
-<p>I love hihat, so we gonna normalize our Hihat sample so it will play as loud as other instruments...</p>
+<p>I love hihat, so normalize our Hihat sample so it will be as loud as other instruments...</p>
 
 {% highlight ruby %}let normalizedHihat = try? hihat!.normalize()
 
@@ -51,10 +56,13 @@ let reverseHihat = try? normalizedHihat!.reverse()
 let silence = try?  AKAudioFile.silent(oneSixteenthLength)
 
 {% endhighlight %}
-<p>Now, we put all them in an array so we can later randomly pick samples. Some are doubled so they&#39;ll have more luck to be picked.</p>
+<p>Now, we put all them in an array so we can later randomly pick samples.
+ Some are doubled so they&#39;ll have more luck to be picked.</p>
 
 {% highlight ruby %}
-let samplesBox: [AKAudioFile] = [kick!, snare!, kick!, snare!, kick!, snare!, normalizedHihat!, reverseKick! , reverseSnare!, reverseHihat!, silence!, silence!, silence!, silence!, silence! ]
+let samplesBox: [AKAudioFile] = [kick!, snare!, kick!, snare!, kick!, snare!,
+                                 normalizedHihat!, reverseKick!, reverseSnare!, reverseHihat!,
+                                 silence!, silence!, silence!, silence!, silence!]
 
 {% endhighlight %}
 <p>Now, we&#39;ll play the original loop three times,</p>
@@ -74,7 +82,9 @@ for i in 0..<16 {
 }
 
 {% endhighlight %}
-<p>Each time you&#39;ll run this playground, the resulting audioFile will be different. Let&#39;s listen to our edited audiofile: Original Loop 3 times, followed by the &quot;drum solo of the day&quot;...</p>
+<p>Each time you&#39;ll run this playground, the resulting audioFile will be different.
+ Let&#39;s listen to our edited audiofile: Original Loop 3 times,
+ followed by the &quot;drum solo of the day&quot;...</p>
 
 {% highlight ruby %}
 
