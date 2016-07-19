@@ -1,0 +1,47 @@
+---
+layout: blog_post
+title: AudioKit V3.2 Released
+header: AudioKit V3.2 Released
+date: "2016-07-18"
+---
+
+<p>This release is one of the biggest since we made the swith to V3!  It seems like everyone on core team was hitting on all cylinders and we made so much progress since 3.1.3.</p>
+
+<h3>New and improved audio player and recorder nodes, with a powerful new AKAudioFile type</h3>
+
+<p>Laurent Veliscek completely rewrote the AKAudioPlayer and AKNodeRecorder classes so that they work much better now.  Along the way he introduced the AKAudioFile class which can not only load and save files, but can edit and manipulate them asynchronousely.  Laurent created great playgrounds to help everyone learn how to use these new classes.  This is a major update to the way you work with audio files in AudioKit.</p>
+
+<h3>Optimizations and Improvements</h3>
+
+<p>We're continually looking at ways to improve AudioKit's speed and abilities and we're happy to say that we made great strides with this release.  The frequency tracking is excellent now and Matt Fecher's "Analog Synth X" now easily works on the oldest of iPads!</p>
+
+<p>Jeff Cooper has contributed updates to the MIDI, Sequencing, and Sampling portions of AudioKit.  We now have an AKDuration class that really helps with sequencer timing.  Brandon Barber has helped with the new audio file and player work, added playgrounds, fixed a lot of random things as well.</p>
+
+<p>AudioKit now has Pulse-Width Modulation and Phase Distortion Oscillators in addition to the general, FM, and morphing oscillators.  In addition, all of these oscillators have polyphonic equivalents called oscillator banks that basically respond to MIDI type signals and can be played polyphonic out-of-the-box.</p>
+
+<p>The sound font support is also improved.</p>
+
+<h3>Physical Models</h3>
+
+<p>Paul Batchelor and I got the Stanford audio library, Synthesis Toolkit (STK), full of physical models working with AudioKit.  We've only ported a few physical models so far, but as you can see from AKMandolin, its a very cool library to have at our disposal.  Let us know if there is a particular physical model you need us to port next.</p>
+
+
+<h3>New Example Projects and Better User Interfaces</h3>
+
+<p>Kanstantsin Linou from Belarus worked with me to create the new Recorder, Microphone Analysis, Song Processor, and SporthEditor examples.  Kanstantsin also created new user interfaces for our musical Sampler and Sequencer Demo projects by Jeff Cooper.</p>
+
+<h3>Playgrounds and Web Site Updates</h3>
+
+<p>If you're familiar with AudioKit Playgrounds, you know how great they can be for prototyping audio code and designing sounds. However, we realized that if you're new to iOS / OS X programming and working with AudioKit, you may not be familiar enough with Playgrounds to really understand what they can do. You probably looked at the Playgrounds page on the website, saw a bunch of code, and said "Well that's all great, but what do they actually do?"
+To that end, Nick Arner made awesome videos of almost all of the Playgrounds in action. Many of the playgrounds have a user interface, so you can see in the videos how changing the UI affects the sounds.</p>
+
+<p>Elizabeth Simonian has been helping us keep the AudioKit web site up to date and fast, so if you've noticed the site being a lot peppier, she's the one to thank!</p>
+
+<h3>Roadmap for upcoming updates</h3>
+
+<p>Stephane Peter and I are currently looking at ways to make AudioKit faster to compile in playgrounds.  I'll also be working on writing more tests and providing some examples using Michael Tyson's AudioBus and Apple's Inter-App Audio.  We'll be implementing Simon Gladman's Nodality as one of AudioKit's included examples. AudioKit is becoming the best place to get Haris Ali's EZAudio graphing software, so we'll be maintaining and improving that.  As mentioned above, we'll be creating more physical models based on STK.  While all this is being done we still are committed to making the web site and documntation better and better.</p>
+
+<p>Finally, Matt Fecher and I will be giving a talk at next month's i360Dev conference, and we certainly hope to see some AudioKit users there, and create more! :)</p>
+
+
+<br clear=all>
