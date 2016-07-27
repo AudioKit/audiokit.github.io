@@ -1,0 +1,78 @@
+---
+title: AudioKit Examples - Recorder Demo in Swift
+header: Recorder Demo
+permalink: /examples/RecorderDemo/
+layout: examples
+last-review-date: 2016/07/10
+---
+
+<div class="cd-iphone-6 cd-silver hide-on-tablets-and-smaller" style="margin-left: 1em; float: right">
+  <div class="cd-body">
+    <div class="cd-sound"></div>
+    <div class="cd-sleep"></div>
+    <div class="cd-camera"></div>
+    <div class="cd-ear"></div>
+    <div class="cd-home"></div>
+    <div class="cd-screen">
+        <img src=/examples/RecorderDemo/RecorderDemoiOS.png class="screenshot" alt="Recorder Demo">
+    </div>
+  </div>
+</div>
+
+
+<p>
+<i>
+This demo is based off of the work by Laurent Veliscek.
+</i>
+</p>
+
+<p>
+Before reading this, we highly recommend you to read a great tutorial on <a href="/examples/HelloWorld/">Hello World example</a> first. This example is included in AudioKit in the Examples directory with versions for iOS and OSX.
+</p>
+
+<p>
+First we set session settings:
+</p>
+{% highlight swift %}
+    AKSettings.bufferLength = .Medium
+
+    do {
+        try AKSettings.setSessionCategory(.PlayAndRecord, withOptions: .DefaultToSpeaker)
+    } catch { print("Errored setting category.") }
+{% endhighlight %}
+
+<p>
+Then we create an instance of input node, and then 2 mixing nodes (a node that mixes its inputs to a single output).
+</p>
+
+{% highlight swift %}
+    let mic = AKMicrophone()
+    let micMixer = AKMixer(mic)
+    micBooster = AKBooster(micMixer)
+{% endhighlight %}
+
+<p>
+And then we set amplification factor for a mixing node to zero, create an instance of audio recorder class, return the AKAudioFile for reading and set the properties for the playback node. So we're able to create a filter node using the playback one and this gives us an opportunity to playback recorded sounds with the effects like a cutoff frequency and a resonance.
+</p>
+
+{% highlight swift %}
+    micBooster!.gain = 0
+    recorder = try? AKNodeRecorder(node: micMixer)
+    tape = recorder?.audioFile
+    player = tape?.player
+    player?.looping = true
+    player?.completionHandler = playingEnded
+
+    moogLadder = AKMoogLadder(player!)
+{% endhighlight %}
+
+<p>
+Finally, we create a main mixer node and start the AudioKit engine.
+</p>
+
+{% highlight swift %}
+    let mainMixer = AKMixer(moogLadder!, micBooster!)
+
+    AudioKit.output = mainMixer
+    AudioKit.start()
+{% endhighlight %}
