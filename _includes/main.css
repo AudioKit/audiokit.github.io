@@ -23185,7 +23185,7 @@ body.stretched .container-fullwidth .breadcrumb {
 #content p {
     line-height: 1.6;
     font-size: 18px;
-    color: #555;
+    color: #444;
     font-family: 'Avenir Next', sans-serif;
 }
 
@@ -23196,7 +23196,7 @@ body.stretched .container-fullwidth .breadcrumb {
 
 
 #content a h4 {
-    color: #222;
+    color: #555;
     text-transform: uppercase;
     font-size: 20px;
     font-family: 'Avenir Next', sans-serif;
@@ -23216,13 +23216,17 @@ body.stretched .container-fullwidth .breadcrumb {
 }
 
 #content .container.showcase { 
-    margin-top: -20px;
+    margin-top: -30px;
 }
 
 
 #content div.playgrounds ul li {
     margin-left: 20px;
     padding-left: 0px;
+}
+
+#content div.examples ul li a {
+    text-decoration: none!important;
 }
 
 .entry-content ul li {
@@ -23249,6 +23253,7 @@ body.stretched .container-fullwidth .breadcrumb {
     position: relative
 }
 
+
 #portfolio-filter li a {
     display: block;
     position: relative;
@@ -23256,7 +23261,8 @@ body.stretched .container-fullwidth .breadcrumb {
     font-size: 13px;
     line-height: 15px;
     color: #666;
-    border-left: 1px solid rgba(0, 0, 0, 0.07)
+    border-left: 1px solid rgba(0, 0, 0, 0.07);
+    text-decoration: none!important;
 }
 
 #portfolio-filter li:first-child a {
@@ -23269,7 +23275,7 @@ body.stretched .container-fullwidth .breadcrumb {
 }
 
 #portfolio-filter li a:hover {
-    color: #80B16B
+    color: #A4B1C0
 }
 
 #portfolio-filter li.activeFilter a {
