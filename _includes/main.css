@@ -23171,15 +23171,22 @@ body.stretched .container-fullwidth .breadcrumb {
 
 #content p {
     line-height: 1.8;
-    font-size: 17px;
+    font-size: 18px;
     color: #555;
     font-family: 'Avenir Next', sans-serif;
 }
+
+#content h3 {
+    font-family: 'Avenir Next', sans-serif;
+    font-weight: 600;
+}
+
 
 #content a h4 {
     color: #222;
     text-transform: uppercase;
     font-size: 20px;
+    font-family: 'Avenir Next', sans-serif;
 }
 
 .content-wrap {
@@ -26993,6 +27000,13 @@ body:not(.device-touch) .button.button-full strong {
     background-color: #53777A
 }
 
+.button-home {
+    background-color: #555;
+}
+.button-home:hover {
+    background-color: #337780;
+}
+
 .button-3d.button-teal:hover,
 .button-reveal.button-teal:hover {
     background-color: #53777A!important
@@ -27135,7 +27149,7 @@ body:not(.device-touch) .button.button-full strong {
 .promo>span,
 .promo>.container>span {
     display: block;
-    color: #444;
+    color: #666;
     font-weight: 300;
     font-size: 16px;
     margin-top: 6px
