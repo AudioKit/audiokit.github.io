@@ -23170,7 +23170,16 @@ body.stretched .container-fullwidth .breadcrumb {
 }
 
 #content p {
-    line-height: 1.8
+    line-height: 1.8;
+    font-size: 17px;
+    color: #555;
+    font-family: 'Avenir Next', sans-serif;
+}
+
+#content a h4 {
+    color: #222;
+    text-transform: uppercase;
+    font-size: 20px;
 }
 
 .content-wrap {
@@ -23180,6 +23189,10 @@ body.stretched .container-fullwidth .breadcrumb {
 
 #content .container {
     position: relative
+}
+
+#content .container.showcase { 
+    margin-top: -20px;
 }
 
 #portfolio-filter {
