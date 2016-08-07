@@ -1510,7 +1510,8 @@ body {
 .iconlist {
     padding-left: 0;
     margin-left: 1.75em;
-    list-style-type: none
+    list-style-type: none;
+    font-size: 1.2em;
 }
 
 .iconlist li {
@@ -19624,19 +19625,19 @@ li {
 }
 
 ::selection {
-    background: #80B16B;
+    background: #A4B1C0;
     color: #FFF;
     text-shadow: none
 }
 
 ::-moz-selection {
-    background: #80B16B;
+    background: #A4B1C0;
     color: #FFF;
     text-shadow: none
 }
 
 ::-webkit-selection {
-    background: #80B16B;
+    background: #A4B1C0;
     color: #FFF;
     text-shadow: none
 }
@@ -19654,7 +19655,19 @@ body {
 
 a {
     text-decoration: none!important;
-    color: #80B16B
+    color: #5C6979;
+    font-size: 1.3em;
+}
+
+div.downloads a,
+.entry-content a {
+    font-size: 1em;
+    text-decoration: underline!important;
+}
+
+.vimeoBadge a, .vimeoBadge a:link, .vimeoBadge a:visited, .vimeoBadge a:active {
+    color: #5C6979 !important;
+    font-size: 1.1em;
 }
 
 a:hover {
@@ -20513,7 +20526,7 @@ html[xmlns] .slider-wrap {
     left: 0;
     width: 140px;
     margin: 0;
-    border-top: 1px solid #80B16B;
+    border-top: 1px solid #A4B1C0;
     border-bottom: 1px solid #EEE;
     box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
@@ -20906,7 +20919,7 @@ body.stretched #header.full-header .container {
     background-color: #FFF;
     box-shadow: 0 13px 42px 11px rgba(0, 0, 0, 0.05);
     border: 1px solid #EEE;
-    border-top: 2px solid #80B16B;
+    border-top: 2px solid #A4B1C0;
     height: auto;
     z-index: 199;
     top: 100px;
@@ -21257,7 +21270,7 @@ body:not(.device-sm):not(.device-xs):not(.device-xxs) #primary-menu.style-2.cent
     left: 0;
     height: 2px;
     width: 0;
-    border-top: 2px solid #80B16B;
+    border-top: 2px solid #A4B1C0;
     -webkit-transition: width .3s ease;
     -o-transition: width .3s ease;
     transition: width .3s ease
@@ -21305,7 +21318,7 @@ body:not(.device-sm):not(.device-xs):not(.device-xxs) #primary-menu.style-2.cent
 #primary-menu.sub-title>ul>li.current>a,
 #primary-menu.sub-title>div>ul>li:hover>a,
 #primary-menu.sub-title>div>ul>li.current>a {
-    background-color: #80B16B;
+    background-color: #A4B1C0;
     color: #FFF;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
     border-top-color: rgba(0, 0, 0, 0.1)
@@ -21603,7 +21616,7 @@ body:not(.device-sm):not(.device-xs):not(.device-xxs) #header.transparent-header
     height: 16px;
     line-height: 16px;
     text-align: center;
-    background-color: #80B16B;
+    background-color: #A4B1C0;
     border-radius: 50%
 }
 
@@ -21615,7 +21628,7 @@ body:not(.device-sm):not(.device-xs):not(.device-xxs) #header.transparent-header
     background-color: #FFF;
     box-shadow: 0 20px 50px 10px rgba(0, 0, 0, 0.05);
     border: 1px solid #EEE;
-    border-top: 2px solid #80B16B;
+    border-top: 2px solid #A4B1C0;
     top: 60px;
     right: -15px;
     left: auto;
@@ -22074,7 +22087,7 @@ body:not(.device-touch) #page-menu nav li a {
     width: auto;
     top: -11px;
     right: 25px;
-    background-color: #80B16B;
+    background-color: #A4B1C0;
     color: #FFF;
     padding: 5px 14px;
     white-space: nowrap;
@@ -23170,7 +23183,23 @@ body.stretched .container-fullwidth .breadcrumb {
 }
 
 #content p {
-    line-height: 1.8
+    line-height: 1.6;
+    font-size: 18px;
+    color: #444;
+    font-family: 'Avenir Next', sans-serif;
+}
+
+#content h3 {
+    font-family: 'Avenir Next', sans-serif;
+    font-weight: 600;
+}
+
+
+#content a h4 {
+    color: #555;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'Avenir Next', sans-serif;
 }
 
 .content-wrap {
@@ -23178,8 +23207,40 @@ body.stretched .container-fullwidth .breadcrumb {
     padding: 40px 0
 }
 
+#content .content-wrap {
+    background-color: #fafafa;
+}
+
 #content .container {
     position: relative
+}
+
+#content .container.showcase { 
+    margin-top: 10px;
+}
+
+#content .container.showcase .col_one_third {
+    margin-top: -30px
+
+}
+
+#content div.playgrounds ul li {
+    margin-left: 20px;
+    padding-left: 0px;
+}
+
+#content div.examples ul li a {
+    text-decoration: none!important;
+}
+
+#content ul li a {
+    text-decoration: underline!important;
+}
+
+.entry-content ul li {
+    margin-left: 20px;
+    padding-left: 0px;
+    font-size: 1.2em;
 }
 
 #portfolio-filter {
@@ -23196,6 +23257,7 @@ body.stretched .container-fullwidth .breadcrumb {
     position: relative
 }
 
+
 #portfolio-filter li a {
     display: block;
     position: relative;
@@ -23203,7 +23265,8 @@ body.stretched .container-fullwidth .breadcrumb {
     font-size: 13px;
     line-height: 15px;
     color: #666;
-    border-left: 1px solid rgba(0, 0, 0, 0.07)
+    border-left: 1px solid rgba(0, 0, 0, 0.07);
+    text-decoration: none!important;
 }
 
 #portfolio-filter li:first-child a {
@@ -23216,12 +23279,12 @@ body.stretched .container-fullwidth .breadcrumb {
 }
 
 #portfolio-filter li a:hover {
-    color: #80B16B
+    color: #A4B1C0
 }
 
 #portfolio-filter li.activeFilter a {
     color: #FFF!important;
-    background-color: #80B16B;
+    background-color: #A4B1C0;
     margin: -1px 0;
     padding: 13px 18px;
     font-weight: 700
@@ -23252,7 +23315,7 @@ body.stretched .container-fullwidth .breadcrumb {
 }
 
 #portfolio-shuffle:hover {
-    background-color: #80B16B;
+    background-color: #A4B1C0;
     color: #FFF;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2)
 }
@@ -24399,7 +24462,7 @@ body:not(.device-touch):not(.device-xs):not(.device-xxs) .portfolio-overlay a {
 }
 
 .portfolio-overlay a:hover {
-    color: #80B16B;
+    color: #A4B1C0;
     background-color: #EEE
 }
 
@@ -24891,7 +24954,7 @@ body:not(.device-touch) .entry-link {
 
 .entry-link:hover {
     color: #FFF;
-    background-color: #80B16B;
+    background-color: #A4B1C0;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2)
 }
 
@@ -25206,7 +25269,7 @@ body:not(.device-touch) .entry-link {
 
 .post-timeline .entry:hover .entry-timeline,
 .post-timeline .entry:hover .timeline-divider {
-    border-color: #80B16B;
+    border-color: #A4B1C0;
     color: #80B16B
 }
 
@@ -25289,7 +25352,7 @@ body:not(.device-touch) .entry-link {
 
 .more-link {
     display: inline-block;
-    border-bottom: 1px solid #80B16B;
+    border-bottom: 1px solid #A4B1C0;
     padding: 0 2px;
     font-family: 'Crete Round', serif;
     font-style: italic
@@ -25905,7 +25968,7 @@ body:not(.device-touch):not(.device-xs):not(.device-xxs) .product-overlay a {
     top: 10px;
     left: 10px;
     padding: 6px 10px;
-    background-color: #80B16B;
+    background-color: #A4B1C0;
     color: #FFF;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
     border-radius: 2px;
@@ -26061,7 +26124,7 @@ body:not(.device-touch):not(.device-xs):not(.device-xxs) .product-overlay a {
 .single-product .product-price {
     float: left;
     font-size: 24px;
-    color: #80B16B;
+    color: #A4B1C0;
     margin-bottom: 0
 }
 
@@ -26561,7 +26624,7 @@ body:not(.device-xs):not(.device-xxs) .countdown.countdown-large.coming-soon .co
     font-size: 14px;
     height: 40px;
     line-height: 40px;
-    background-color: #80B16B;
+    background-color: #A4B1C0;
     color: #FFF;
     font-weight: 600;
     text-transform: uppercase;
@@ -26980,6 +27043,13 @@ body:not(.device-touch) .button.button-full strong {
     background-color: #53777A
 }
 
+.button-home {
+    background-color: #555;
+}
+.button-home:hover {
+    background-color: #337780;
+}
+
 .button-3d.button-teal:hover,
 .button-reveal.button-teal:hover {
     background-color: #53777A!important
@@ -27122,7 +27192,7 @@ body:not(.device-touch) .button.button-full strong {
 .promo>span,
 .promo>.container>span {
     display: block;
-    color: #444;
+    color: #666;
     font-weight: 300;
     font-size: 16px;
     margin-top: 6px
@@ -27181,7 +27251,7 @@ body:not(.device-touch) .button.button-full strong {
 }
 
 .promo.promo-light {
-    background-color: #F5F5F5;
+    background-color: #f3f3f3;
     border-radius: 3px;
     padding-left: 30px
 }
@@ -27404,7 +27474,7 @@ body:not(.device-touch) .button.button-full strong {
 }
 
 .feature-box.fbox-outline .fbox-icon {
-    border: 1px solid #80B16B;
+    border: 1px solid #A4B1C0;
     border-radius: 50%;
     padding: 3px
 }
@@ -27476,7 +27546,7 @@ body:not(.device-touch) .button.button-full strong {
 }
 
 .feature-box.fbox-border .fbox-icon {
-    border: 1px solid #80B16B;
+    border: 1px solid #A4B1C0;
     border-radius: 50%
 }
 
@@ -27526,7 +27596,7 @@ body:not(.device-touch) .button.button-full strong {
 .feature-box.fbox-plain .fbox-icon img {
     border: none!important;
     background-color: transparent!important;
-    color: #80B16B;
+    color: #A4B1C0;
     border-radius: 0
 }
 
@@ -28208,7 +28278,7 @@ body:not(.device-touch) .social-icon {
 
 .i-rounded:hover,
 .i-circled:hover {
-    background-color: #80B16B;
+    background-color: #A4B1C0;
     color: #FFF;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.2)
@@ -29147,7 +29217,7 @@ ul.tab-nav.tab-nav2 li a {
 
 ul.tab-nav.tab-nav2 li.ui-state-active a {
     top: 0;
-    background-color: #80B16B;
+    background-color: #A4B1C0;
     color: #FFF
 }
 
@@ -29607,7 +29677,7 @@ body:not(.device-touch) .clients-grid li a {
     width: 6px!important;
     height: 6px!important;
     border: 0;
-    background-color: #80B16B;
+    background-color: #A4B1C0;
     opacity: .5
 }
 
@@ -29680,7 +29750,7 @@ body:not(.device-touch) .clients-grid li a {
 
 .team-title span {
     display: block;
-    color: #80B16B;
+    color: #A4B1C0;
     font-weight: 400;
     font-family: 'Crete Round', serif;
     font-style: italic;
@@ -29886,7 +29956,7 @@ body:not(.device-touch) .team-overlay {
 }
 
 .pricing-box.best-price .pricing-price {
-    color: #80B16B;
+    color: #A4B1C0;
     font-size: 72px
 }
 
@@ -30129,7 +30199,7 @@ body:not(.device-touch) .rounded-skill {
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #80B16B;
+    background-color: #A4B1C0;
     overflow: visible!important;
     border-radius: 2px;
     -webkit-transition: width 1.2s ease-in-out;
@@ -30504,7 +30574,7 @@ body:not(.device-touch) .rounded-skill {
     margin: 0 4px;
     opacity: .5;
     border-radius: 50%;
-    background-color: #80B16B;
+    background-color: #A4B1C0;
     -webkit-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease
@@ -30837,14 +30907,14 @@ label.error {
 
 .title-block {
     padding: 2px 0 3px 20px;
-    border-left: 7px solid #80B16B;
+    border-left: 7px solid #A4B1C0;
     margin-bottom: 30px
 }
 
 .title-block-right {
     padding: 2px 20px 3px 0;
     border-left: 0;
-    border-right: 7px solid #80B16B;
+    border-right: 7px solid #A4B1C0;
     text-align: right
 }
 
@@ -31038,7 +31108,7 @@ label.error {
 
 .fancy-title.title-border-color:before {
     top: 49%;
-    border-top: 1px solid #80B16B;
+    border-top: 1px solid #A4B1C0;
     opacity: .6
 }
 
@@ -31666,12 +31736,16 @@ button.toast-close-button {
     text-align: center;
     margin-right: 3px
 }
+#copyrights a {
+    font-size: 1em;
+}
 
 .copyright-links a {
     display: inline-block;
     margin: 0 3px;
     color: #333;
     border-bottom: 1px dotted #444
+
 }
 
 .copyright-links a:hover {

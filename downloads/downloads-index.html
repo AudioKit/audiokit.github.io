@@ -4,13 +4,8 @@ header: Downloads
 permalink: /downloads/
 layout: section_index
 ---
-
-<h2>AudioKit's Example "Analog Synth X" on the App Store</h2>
-
-<p>Maybe the quickest way to try out some AudioKit code is to grab our example app on the App Store.</p>
-
-<a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1076476110&mt=8"><img src="/downloads/app-store.png"></a>
-
+<div class="downloads">
+<img src="/homepage/components.png" style="float:right; width: 250px; padding-left: 20px" alt="computer">
 <h2>Downloading AudioKit Source Code from Github</h2>
 
 <p>The full source code for AudioKit for all supported operating systems, examples apps, and playgrounds are available in the following compressed formats:</p>
@@ -29,6 +24,8 @@ layout: section_index
     </a>
   </li>
 </ul>
+
+
 <p>In order to use playgrounds, you must download the source and open the "AudioKit/XXX/AudioKit for XXX.xcodeproject" where XXX is iOS or OSX and build (making sure the scheme is AudioKit, not AudioKitTests).</p>
 
 <p>The AudioKit-*.zip archives contain universal precompiled frameworks for each platform, ready to drag and drop in your own projects. They also include examples project that should compile and run without any changes within the current version of Xcode.</p>
@@ -54,7 +51,6 @@ layout: section_index
     </a>
   </li>
 </ul>
-
 
 <h2>Cloning the GitHub Repository</h2>
 
@@ -107,6 +103,12 @@ Then execute:
 $ pod install
 {% endhighlight %}
 
+<h2>AudioKit's Example "Analog Synth X" on the App Store</h2>
+
+<p>Maybe the quickest way to try out some AudioKit code is to grab our example app on the App Store.</p>
+
+<a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1076476110&mt=8"><img src="/downloads/app-store.png"></a>
+
 
 <h2>Installing Xcode Documentation</h2>
 
@@ -117,3 +119,4 @@ $ pod install
 {% highlight bash %}
 tar -xf ~/Downloads/AudioKit.tgz -C ~/Library/Developer/Shared/Documentation/DocSets/
 {% endhighlight %}
+</div>
