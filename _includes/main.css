@@ -27044,10 +27044,10 @@ body:not(.device-touch) .button.button-full strong {
 }
 
 .button-home {
-    background-color: #555;
+    background-color: #5C6979;
 }
 .button-home:hover {
-    background-color: #337780;
+    background-color: #333;
 }
 
 .button-3d.button-teal:hover,
