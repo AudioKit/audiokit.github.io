@@ -1465,7 +1465,7 @@ body:not(.device-sm):not(.device-xs):not(.device-xxs) #primary-menu.style-2.cent
 
 #primary-menu.sub-title > ul > li,
 #primary-menu.sub-title.style-2 > div > ul > li {
-    background: url("images/icons/menu-divider.png") no-repeat right center;
+    background: url("http://audiokit.io/images/icons/menu-divider.png") no-repeat right center;
     margin-left: 1px;
 }
 
@@ -2681,7 +2681,7 @@ body.side-panel-open .body-overlay {
     pointer-events: auto;
 }
 
-body.side-panel-open:not(.device-xxs):not(.device-xs):not(.device-sm) .body-overlay:hover { cursor: url('images/icons/close.png') 15 15, default; }
+body.side-panel-open:not(.device-xxs):not(.device-xs):not(.device-sm) .body-overlay:hover { cursor: url('http://audiokit.io/images/icons/close.png') 15 15, default; }
 
 
 /* ----------------------------------------------------------------
@@ -2822,7 +2822,7 @@ body:not(.stretched) .slider-parallax .slider-parallax-inner { left: auto; }
     width:100%;
     height:100%;
     margin: 0;
-    background: url('images/pattern2.png') repeat;
+    background: url('http://audiokit.io/images/pattern2.png') repeat;
 }
 
 .swiper_wrapper .swiper-slide {
