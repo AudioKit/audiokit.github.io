@@ -33103,3 +33103,17 @@ button.swiper-pagination-bullet {
         transform: rotate(360deg)
     }
 }
+
+/* Responsive edits by MF */
+
+@media (max-width: 767px) {
+
+    .col_one_third {
+        width: 100%;
+    }
+
+    #logo a {
+        margin-left: 40px;
+    }
+
+}
