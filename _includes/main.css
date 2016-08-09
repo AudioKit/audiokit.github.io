@@ -33106,14 +33106,18 @@ button.swiper-pagination-bullet {
 
 /* Responsive edits by MF */
 
+@media (max-width: 992px) {
+
+    #logo a {
+        margin-left: 40px;
+    }
+
+}
+
 @media (max-width: 767px) {
 
     .col_one_third {
         width: 100%;
-    }
-
-    #logo a {
-        margin-left: 40px;
     }
 
 }
