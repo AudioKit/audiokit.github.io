@@ -6801,6 +6801,8 @@ body:not(.device-touch) .button.button-full strong {
 .button-3d.button-leaf:hover,
 .button-reveal.button-leaf:hover { background-color: #A8CABA !important; }
 
+.button-home { background-color: #586A78; }
+
 .button-pink { background-color: #F89FA1; }
 .button-3d.button-pink:hover,
 .button-reveal.button-pink:hover { background-color: #F89FA1 !important; }
