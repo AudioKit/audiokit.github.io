@@ -2724,6 +2724,10 @@ body:not(.stretched) .slider-parallax .slider-parallax-inner { left: auto; }
     -webkit-backface-visibility: hidden;
 }
 
+#slider h1 {
+	color: #fff!important;
+}
+
 
 /* Boxed Slider
 -----------------------------------------------------------------*/
@@ -3431,6 +3435,12 @@ body.stretched .container-fullwidth .breadcrumb { right: 60px !important; }
 }
 
 #content .container { position: relative; }
+
+#content .entry-content ul li,
+#content .playgrounds ul li {
+	margin-left: 40px;
+	line-height: 1.6!important;
+}
 
 
 /* ----------------------------------------------------------------
