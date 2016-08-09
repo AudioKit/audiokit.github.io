@@ -38,6 +38,7 @@
     - Shop
     - Events
     - Shortcodes
+        - Pre
         - Countdown
         - Buttons
         - Promo Boxes
@@ -6288,6 +6289,13 @@ td.actions {
 
 .ievent .entry-meta li:first-child { padding-left: 0; }
 
+/* ----------------------------------------------------------------
+    Pre
+-----------------------------------------------------------------*/
+
+pre {
+    margin: -10px 0 25px!important;
+}
 
 /* ----------------------------------------------------------------
 
