@@ -457,7 +457,7 @@ var requesting = !1,
                     var t = e(this),
                         a = t.attr("data-lazyload")
                     t.attr("src", "../images/blank.svg").css({
-                        background: "url(../images/preloader.gif) no-repeat center center #FFF"
+                        background: "url(http://audiokit.io/images/preloader.gif) no-repeat center center #FFF"
                     }), t.appear(function() {
                         t.css({
                             background: "none"
@@ -672,7 +672,7 @@ var requesting = !1,
                     })
                 }, function() {
                     e(this).prev().css({
-                        backgroundImage: 'url("../images/icons/menu-divider.png")'
+                        backgroundImage: 'url("http://audiokit.io/images/icons/menu-divider.png")'
                     })
                 }), e("#primary-menu.sub-title").children("ul").children(".current").prev().css({
                     backgroundImage: "none"
