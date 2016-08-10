@@ -574,6 +574,20 @@ span.middot {
     Columns & Grids
 -----------------------------------------------------------------*/
 
+/* Responsive edits by MF */
+
+@media (max-width: 992px) {
+    .footer.col_two_third {
+        width: 100%!important;
+    }
+}   
+@media (max-width: 992px) {
+
+    .footer.col_one_third {
+        width: 100%!important;
+    }
+ 
+} 
 
 .postcontent { width: 860px; }
 .postcontent.bothsidebar { width: 580px; }
@@ -595,6 +609,7 @@ body.stretched .container-fullwidth {
     padding: 0 60px;
     width: 100%;
 }
+
 
 .postcontent,
 .sidebar,
