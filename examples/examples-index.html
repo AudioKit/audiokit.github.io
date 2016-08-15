@@ -8,10 +8,10 @@ layout: section_index
 <div class="examples">
 <p>Included with AudioKit are numerous example projects.  There are examples for  iOS, tvOS, and macOS, mostly in Swift, with one Objective-C Hello World example. In addition to the included examples, open-source projects that use AudioKit will also be highlighted here.</p> </p>
 
-
+<div class="container clearfix"> 
 <!-- Portfolio Filter
 ============================================= -->
-<ul id="portfolio-filter" class="portfolio-filter clearfix">
+<ul id="portfolio-filter" class="portfolio-filter clearfix" data-container="#portfolio">
 
     <li class="activeFilter"><a href="#" data-filter="*">Show All</a></li>
     <li><a href="#" data-filter=".pf-ios">iOS</a></li>
@@ -23,7 +23,7 @@ layout: section_index
     <li><a href="#" data-filter=".pf-external">External Project</a></li>
 </ul><!-- #portfolio-filter end -->
 
-<div id="portfolio-shuffle" class="portfolio-shuffle">
+<div id="portfolio-shuffle" class="portfolio-shuffle" data-container="#portfolio">
     <i class="icon-random"></i>
 </div>
 
@@ -31,9 +31,9 @@ layout: section_index
 
 <!-- Portfolio Items
 ============================================= -->
-<div id="portfolio" class="clearfix">
-
-    <article class="portfolio-item pf-ios pf-tvos pf-osx pf-objc pf-swift pf-included" data-cat= " ">
+<div id="portfolio" class="portfolio grid-container portfolio-nomargin clearfix">
+    
+    <article class="portfolio-item pf-ios pf-tvos pf-osx pf-objc pf-swift pf-included">
         <div class="portfolio-image">
             <a href="/examples/HelloWorld/">
                 <img src="/examples/HelloWorld/HelloWorld.png" alt="Hello World">
@@ -177,13 +177,11 @@ layout: section_index
         </div>
     </article>
 
-
-
-
-
-
-
 </div><!-- #portfolio end -->
+</div>
+
+
+
 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 <!-- Portfolio Script
 ============================================= -->

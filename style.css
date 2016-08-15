@@ -3558,8 +3558,8 @@ body:not(.device-touch) .portfolio {
     float: left;
     position: relative;
     width: 25%;
-    height: auto;
-    padding: 0 12px 12px 0;
+    height: 350px;
+    padding: 0 20px 12px 20px;
 }
 
 .portfolio-notitle .portfolio-item,
@@ -3571,9 +3571,12 @@ body:not(.device-touch) .portfolio {
 }
 
 .portfolio-item .portfolio-image,
-.portfolio-item .portfolio-image a,
-.portfolio-item .portfolio-image img {
+.portfolio-item .portfolio-image a {
     display: block;
+    width: 100%;
+    height: 200px;
+}
+.portfolio-item .portfolio-image img {
     width: 100%;
     height: auto;
 }
