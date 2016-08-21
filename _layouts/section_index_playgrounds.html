@@ -9,18 +9,21 @@ section: features
 
     <div class="container clearfix">
         <h1>
-          {% if page.header != '' %}
-            {{ page.header }}
+          {% if page.title != '' %}
+            {{ page.title | capitalize}}
           {% else %}
-            {{ page.title }}
+            {{ page.header }}
           {% endif %}
         </h1>
         <ol class="breadcrumb">
             <li><a href="/">Home</a></li>
-            <li class="active">
+            <li>
               {% if page.header != '' %}
-                {{ page.header }}
-              {% else %}
+              <a href="/{{ page.header }}">{{ page.header }}</a>
+              {% endif %}
+            </li>
+            <li class="active">
+              {% if page.title != '' %}
                 {{ page.title }}
               {% endif %}
             </li>
@@ -33,11 +36,19 @@ section: features
     <div class="content-wrap">
 
         <div class="container clearfix">
+          <div class="playgroundnav">
+            {% if page.prev != ''%}
+                  <a href="/playgrounds/{{page.prev}}">Prev</a>
+            {% endif %}
+            <div style="float: right;">
+            {% if page.next != ''%}
+                  <a href="/playgrounds/{{page.next}}">Next</a>
+            {% endif %} 
+            </div>
+          </div>
             {{ content }}
         </div>
 
     </div>
 
 </section><!-- #content end -->
-
-
