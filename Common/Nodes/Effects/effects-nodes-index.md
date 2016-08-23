@@ -4,36 +4,87 @@ header: Effects Nodes
 permalink: /nodes/effects
 layout: nodes
 ---
-# General Effects
+# Overview
 
-## AKOperationEffect
+### General Effects
 
-## AKPitchShifter
+### AKOperationEffect
 
-# Delay Nodes
+### AKPitchShifter
 
-## AKDelay
+## Delay Nodes
+AudioKit version of Apple’s Delay Audio Unit
 
-## AKVariableDelay
+### AKDelay
 
-# Distortion Nodes
+### AKVariableDelay
 
-## AKBitCrusher
+## Distortion Nodes
 
-## AKClipper
+### AKBitCrusher
 
-## AKDecimator
+### AKClipper
 
-## AKDistortion
+### AKDecimator
 
-## AKRingModulator
+### AKDistortion
 
-## AKTanhDistortion
+### AKRingModulator
 
-# Dynamic Nodes
+### AKTanhDistortion
 
-# Envelopes
+## Dynamic Nodes
 
-# Filter Nodes
+### AKCompressor
 
-# Reverb Nodes
+### AKDynamicsProcessor
+
+### AKExpander
+
+### AKPeakLimiter
+
+## Envelopes
+
+### AKAmplitudeEnvelope
+
+### AKTremolo
+
+## Filter Nodes
+
+## Reverb Nodes
+
+### AKChowningReverb
+
+### AKCostelloReverb
+
+### AKConvolution
+
+### AKFlatFrequencyResponseReverb
+
+### AKReverb
+
+### AKReverb2
+
+# See Them in Action
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
