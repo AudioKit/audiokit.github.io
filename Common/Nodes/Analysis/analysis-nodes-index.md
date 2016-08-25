@@ -4,15 +4,16 @@ header: Analysis Nodes
 permalink: /nodes/anaylsis
 layout: nodes
 ---
-# Overview
 
 ## AKAmplitude Tracker
 
 Performs a "root-mean-square" on a signal to get overall amplitude of a signal. The output signal looks similar to that of a classic VU meter.
 
-<div class="container">
+**RMS (Root-Mean-Square):** A value that is the effective value of the total waveform.  It is really the area under the curve. In audio it is the continuous or music power that the amplifier can deliver.
+
+<div class="row">
   <div class="col-sm-6">
-    VU: a device displaying a representation of the signal level in audio equipment
+    <strong>VU:</strong> a device displaying a representation of the signal level in audio equipment
   </div>
   
   <div class="col-sm-6">
@@ -20,14 +21,24 @@ Performs a "root-mean-square" on a signal to get overall amplitude of a signal. 
   </div>
 </div>
 <br>
-RMS (Root-Mean-Square): A value that is the effective value of the total waveform.  It is really the area under the curve. In audio it is the continuous or music power that the amplifier can deliver.
 
 ## AKFrequency Tracker
 
 This is based on an algorithm originally created by Miller Puckette.
+[Original Here](http://academics.wellesley.edu/Physics/brown/pubs/effalgV92P2698-P2701.pdf){:target="_blank"}
 
-# See Them in Action
+Parameters:
+* input (input node to process)
+* hopSize: Hop Size
+* peakCount: Number of Peaks
 
-[Tracking Amplitude](/playgrounds/Tracking%20Amplitude/)
+<h1 class="center">See Them in Action</h1>
+[Tracking Amplitude Playground](/playgrounds/Tracking%20Amplitude/)
+
+[Tracking Frequency Playground](/playgrounds/Tracking%20Frequency/)
+
+[Tracking Frequency of an Audiofile Playground](/playgrounds/Tracking%20Amplitude/)
+
+[FFT Analysis Playground](/playgrounds/Tracking%20Amplitude/)
 
 

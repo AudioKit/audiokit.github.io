@@ -96,11 +96,15 @@
     Basic
 -----------------------------------------------------------------*/
 
-dl, dt, dd, ol, ul, li {
+dl, dt, dd, li {
     margin: 0;
     padding: 0;
 }
 
+ul, ol {
+    padding-left: 0;
+    margin-left: 1em;
+}
 .clear {
     clear: both;
     display: block;
