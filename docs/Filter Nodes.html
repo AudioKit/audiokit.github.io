@@ -270,6 +270,9 @@
                 <a href="Classes/AKHighShelfParametricEqualizerFilter.html">AKHighShelfParametricEqualizerFilter</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/AKKorgLowPassFilter.html">AKKorgLowPassFilter</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/AKLowPassButterworthFilter.html">AKLowPassButterworthFilter</a>
               </li>
               <li class="nav-group-task">
@@ -641,13 +644,10 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Other Classes.html">Other Classes</a>
+            <a href="UI Elements.html">UI Elements</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Classes/AKADSRView.html">AKADSRView</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/AKAUPresetBuilder.html">AKAUPresetBuilder</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKButton.html">AKButton</a>
@@ -657,9 +657,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKKeyboardView.html">AKKeyboardView</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/AKKorgLowPassFilter.html">AKKorgLowPassFilter</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKNotifications.html">AKNotifications</a>
@@ -681,6 +678,14 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKTelephoneView.html">AKTelephoneView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Other Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/AKAUPresetBuilder.html">AKAUPresetBuilder</a>
               </li>
             </ul>
           </li>
@@ -1834,6 +1839,97 @@ flat passband and very good precision and stopband attenuation.</p>
                               <td>
                                 <div>
                                   <p>Q of the filter. sqrt(0.5) is no resonance.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C8AudioKit19AKKorgLowPassFilter"></a>
+                    <a name="//apple_ref/swift/Class/AKKorgLowPassFilter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C8AudioKit19AKKorgLowPassFilter">AKKorgLowPassFilter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Analogue model of the Korg 35 Lowpass Filter</p>
+
+                        <a href="Classes/AKKorgLowPassFilter.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AKKorgLowPassFilter</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>input</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Input node to process</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cutoffFrequency</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Filter cutoff</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>resonance</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Filter resonance (should be between 0-2)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>saturation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Filter saturation.</p>
 
                                 </div>
                               </td>
