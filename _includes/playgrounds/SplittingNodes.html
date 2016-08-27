@@ -1,8 +1,7 @@
 <p><h3>Splitting Nodes
 </h3><h4>All nodes in AudioKit can have multiple destinations, the only
-</h4><h4>caveat is that all of the destinations do have to eventually be
-</h4><h4>mixed back together and none of the parallel signal paths
-</h4><h4>can have any time stretching.
+</h4><h4>caveat is that all of the destinations do have to eventually be mixed
+</h4><h4>back together and none of the parallel signal paths can have any time stretching.
 </h4></p>
 
 {% highlight ruby %}import XCPlayground
@@ -27,9 +26,9 @@ delay.feedback = 0.8
 delay.dryWetMix = 1
 
 {% endhighlight %}
-<p>Any number of inputs can be equally summed into one output,
- including the original player, allowing us to create dry/wet mixes
- even for effects that don&#39;t have that property by default</p>
+<p>Any number of inputs can be equally summed into one output, including the
+ original player, allowing us to create dry/wet mixes even for effects that
+ don&#39;t have that property by default</p>
 
 {% highlight ruby %}let mixer = AKMixer(player, delay)
 

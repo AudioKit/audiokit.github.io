@@ -4,98 +4,49 @@
 {% highlight ruby %}import XCPlayground
 import AudioKit
 
-let file = try AKAudioFile(readFileName: "guitarloop.wav", baseDir: .Resources)
+let file = try AKAudioFile(readFileName: processingPlaygroundFiles[0],
+                           baseDir: .Resources)
 
-{% endhighlight %}
-<p>Here we set up a player to the loop the file&#39;s playback</p>
-
-{% highlight ruby %}var player = try AKAudioPlayer(file: file)
+let player = try AKAudioPlayer(file: file)
 player.looping = true
-var tremolo = AKTremolo(player, waveform: AKTable(.PositiveSquare))
-tremolo.depth = 0.5
-{% endhighlight %}
-<p>Set the parameters of the tremolo here</p>
 
-{% highlight ruby %}tremolo.frequency = 8
+var tremolo = AKTremolo(player, waveform: AKTable(.PositiveSine))
+tremolo.depth = 0.5
+tremolo.frequency = 8
 
 AudioKit.output = tremolo
 AudioKit.start()
 
 player.play()
 
-{% endhighlight %}
-<p>User Interface Set up</p>
-
-{% highlight ruby %}
 class PlaygroundView: AKPlaygroundView {
-
-    var tremoloLabel: Label?
 
     override func setup() {
         addTitle("Tremolo")
+        addSubview(AKResourcesAudioFileLoaderView(
+            player: player,
+            filenames: processingPlaygroundFiles))
 
-        addLabel("Audio Playback")
-        addButton("Drums", action: #selector(startDrumLoop))
-        addButton("Bass", action: #selector(startBassLoop))
-        addButton("Guitar", action: #selector(startGuitarLoop))
-        addButton("Lead", action: #selector(startLeadLoop))
-        addButton("Mix", action: #selector(startMixLoop))
-        addButton("Stop", action: #selector(stop))
+        addSubview(AKPropertySlider(
+            property: "Frequency",
+            format: "%0.3f Hz",
+            value: tremolo.frequency, maximum: 20,
+            color: AKColor.greenColor()
+        ) { sliderValue in
+            tremolo.frequency = sliderValue
+            })
 
-        tremoloLabel = addLabel("Frequency: \(tremolo.frequency)")
-        addSlider(#selector(setFrequency), value: tremolo.frequency, minimum: 0, maximum: 20)
-    }
-
-    func startLoop(part: String) {
-        player.stop()
-        let file = try? AKAudioFile(readFileName: "\(part)loop.wav", baseDir: .Resources)
-        try? player.replaceFile(file!)
-        player.play()
-    }
-
-    func startDrumLoop() {
-        startLoop("drum")
-    }
-
-    func startBassLoop() {
-        startLoop("bass")
-    }
-
-    func startGuitarLoop() {
-        startLoop("guitar")
-    }
-
-    func startLeadLoop() {
-        startLoop("lead")
-    }
-
-    func startMixLoop() {
-        startLoop("mix")
-    }
-
-    func stop() {
-        player.stop()
-    }
-
-    func setFrequency(slider: Slider) {
-        tremolo.frequency = Double(slider.value)
-        tremoloLabel!.text = "Frequency: \(String(format: "%0.3f", tremolo.frequency))"
-        printCode()
-    }
-
-    func printCode() {
-        // Here we're just printing out the preset so it can be copy and pasted into code
-
-        print("public func presetXXXXXX() {")
-        print("    frequency = \(String(format: "%0.3f", tremolo.frequency))")
-        print("    depth = \(String(format: "%0.3f", tremolo.depth))")
-        print("}\n")
+        addSubview(AKPropertySlider(
+            property: "Depth",
+            value: tremolo.depth,
+            color: AKColor.redColor()
+        ) { sliderValue in
+            tremolo.depth = sliderValue
+            })
     }
 }
 
-let view = PlaygroundView(frame: CGRect(x: 0, y: 0, width: 500, height: 300))
 XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-XCPlaygroundPage.currentPage.liveView = view
-
+XCPlaygroundPage.currentPage.liveView = PlaygroundView()
 
 {% endhighlight %}

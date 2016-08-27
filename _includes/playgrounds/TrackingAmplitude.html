@@ -8,39 +8,56 @@
 import AudioKit
 
 {% endhighlight %}
-<p>Let&#39;s set up the volume to be changing in the shape of a sine wave</p>
+<p>First lets set up sound source to track</p>
 
-{% highlight ruby %}let volume = AKOperation.sineWave(frequency:0.2).scale(minimum: 0, maximum: 0.5)
+{% highlight ruby %}let oscillatorNode = AKOperationGenerator() { _ in
+    // Let's set up the volume to be changing in the shape of a sine wave
+    let volume = AKOperation.sineWave(frequency:0.2).scale(minimum: 0, maximum: 0.5)
 
-{% endhighlight %}
-<p>And let&#39;s make the frequency move around to make sure it doesn&#39;t affect the amplitude tracking</p>
+    // And lets make the frequency move around to make sure it doesn't affect the amplitude tracking
+    let frequency = AKOperation.jitter(amplitude: 200, minimumFrequency: 10, maximumFrequency: 30) + 200
 
-{% highlight ruby %}let frequency = AKOperation.jitter(amplitude: 200, minimumFrequency: 10, maximumFrequency: 30) + 200
+    // So our oscillator will move around randomly in frequency and have a smoothly varying amplitude
+    return AKOperation.sineWave(frequency: frequency, amplitude: volume)
+}
 
-{% endhighlight %}
-<p>So our oscillator will move around randomly in frequency and have a smoothly varying amplitude</p>
-
-{% highlight ruby %}let oscillator = AKOperation.sineWave(frequency: frequency, amplitude: volume)
-
-{% endhighlight %}
-<p>Connect up the the nodes</p>
-
-{% highlight ruby %}let oscillatorNode = AKOperationGenerator(operation: oscillator)
 let trackedAmplitude = AKAmplitudeTracker(oscillatorNode)
-
-{% endhighlight %}
-<p>The amplitude tracker passes its input to the output, so we can insert into the signal chain at the bottom</p>
-
-{% highlight ruby %}AudioKit.output = trackedAmplitude
+AudioKit.output = trackedAmplitude
 AudioKit.start()
 oscillatorNode.start()
 
 {% endhighlight %}
-<p>And here&#39;s where we monitor the results of tracking the amplitude.</p>
+<p>User Interface</p>
 
-{% highlight ruby %}AKPlaygroundLoop(every: 0.1) {
-    let amp = trackedAmplitude.amplitude
+{% highlight ruby %}
+class PlaygroundView: AKPlaygroundView {
+    
+    var trackedAmplitudeSlider: AKPropertySlider?
+    
+    override func setup() {
+        
+        AKPlaygroundLoop(every: 0.1) {
+            self.trackedAmplitudeSlider?.value = trackedAmplitude.amplitude
+        }
+        
+        addTitle("Tracking Amplitude")
+        
+        trackedAmplitudeSlider = AKPropertySlider(
+            property: "Tracked Amplitude",
+            format: "%0.3f",
+            value: 0, maximum: 0.55,
+            color: AKColor.greenColor()
+        ) { sliderValue in
+            // Do nothing, just for display
+            }
+        addSubview(trackedAmplitudeSlider!)
+        
+        addSubview(AKRollingOutputPlot.createView())
+    }
 }
+
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+XCPlaygroundPage.currentPage.liveView = PlaygroundView()
 
 {% endhighlight %}
 <p>This keeps the playground running so that audio can play for a long time</p>

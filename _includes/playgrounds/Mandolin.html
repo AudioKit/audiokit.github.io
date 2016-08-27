@@ -25,121 +25,66 @@ let scale = [0, 2, 4, 5, 7, 9, 11, 12]
 
 class PlaygroundView: AKPlaygroundView {
 
-    // UI Elements we'll need to be able to access
-    var detuneLabel: Label?
-    var bodySizeLabel: Label?
-    var pluckPositionLabel: Label?
-    var detuneSlider: Slider?
-    var bodySizeSlider: Slider?
+    var detuneSlider: AKPropertySlider?
+    var bodySizeSlider: AKPropertySlider?
 
     override func setup() {
         addTitle("Mandolin")
 
-        detuneLabel = addLabel("Detune: \(mandolin.detune)")
-        detuneSlider = addSlider(#selector(setDetune),
-                                 value: mandolin.detune,
-                                 minimum: 0.5,
-                                 maximum: 2.0)
+        detuneSlider = AKPropertySlider(
+            property: "Detune",
+            format: "%0.2f",
+            value: mandolin.detune, minimum: 0.5, maximum: 2,
+            color: AKColor.magentaColor()
+        ) { detune in
+            mandolin.detune = detune
+        }
+        addSubview(detuneSlider!)
 
-        bodySizeLabel = addLabel("Body Size: \(mandolin.bodySize)")
-        bodySizeSlider = addSlider(#selector(setBodySize),
-                                   value: mandolin.bodySize,
-                                   minimum: 0.2,
-                                   maximum: 3.0)
+        bodySizeSlider = AKPropertySlider(
+            property: "Body Size",
+            format: "%0.2f",
+            value: mandolin.bodySize, minimum: 0.2, maximum: 3,
+            color: AKColor.cyanColor()
+        ) { bodySize in
+            mandolin.bodySize = bodySize
+        }
+        addSubview(bodySizeSlider!)
 
-        pluckPositionLabel = addLabel("Pluck Position: \(pluckPosition)")
-        addSlider(#selector(setPluckPosition), value: pluckPosition)
+        addSubview(AKPropertySlider(
+            property: "Pluck Position",
+            format: "%0.2f",
+            value: pluckPosition,
+            color: AKColor.redColor()
+        ) { position in
+            pluckPosition = position
+        })
 
 
-        addButton("Large Resonant", action: #selector(presetLargeResonance))
-        addButton("Octaves", action: #selector(presetOctaveUp))
-        addButton("Electric Guitar", action: #selector(presetElectricGuitar))
-        addButton("Small-Bodied Distorted", action: #selector(presetSmallDistortedMandolin))
-        addButton("Acid", action: #selector(presetAcidMandolin))
-        addLineBreak()
+        let presets = ["Large, Resonant", "Electric Guitar-ish", "Small-Bodied, Distorted", "Acid Mandolin"]
+        addSubview(AKPresetLoaderView(presets: presets) { preset in
+            switch preset {
+            case "Large, Resonant":
+                mandolin.presetLargeResonantMandolin()
+            case "Electric Guitar-ish":
+                mandolin.presetElectricGuitarMandolin()
+            case "Small-Bodied, Distorted":
+                mandolin.presetSmallBodiedDistortedMandolin()
+            case "Acid Mandolin":
+                mandolin.presetAcidMandolin()
+            default: break
+            }
+            self.updateUI()
+            }
+        )
     }
-
-    func setDetune(slider: Slider) {
-        mandolin.detune = Double(slider.value)
-        let detune = String(format: "%0.2f", mandolin.detune)
-        detuneLabel!.text = "Detune: \(detune)"
-        printCode()
-    }
-
-    func setBodySize(slider: Slider) {
-        mandolin.bodySize = Double(slider.value)
-        let bodySize = String(format: "%0.2f", mandolin.bodySize)
-        bodySizeLabel!.text = "Body Size: \(bodySize)"
-        printCode()
-    }
-
-    func setPluckPosition(slider: Slider) {
-        pluckPosition = Double(slider.value)
-        let position = String(format: "%0.2f", pluckPosition)
-        pluckPositionLabel!.text = "Pluck Position: \(position)"
-        printCode()
-    }
-
-
-    //: Audition Presets
-
-    func presetLargeResonance() {
-        mandolin.presetLargeResonantMandolin()
-        updateUI()
-    }
-
-    func presetOctaveUp() {
-        mandolin.presetOctaveUpMandolin()
-        updateUI()
-    }
-
-    func presetElectricGuitar() {
-        mandolin.presetElectricGuitarMandolin()
-        updateUI()
-    }
-
-    func presetSmallDistortedMandolin() {
-        mandolin.presetSmallBodiedDistortedMandolin()
-        updateUI()
-    }
-
-    func presetAcidMandolin() {
-        mandolin.presetAcidMandolin()
-        updateUI()
-    }
-
     func updateUI() {
-        updateTextFields()
-        updateSliders()
-        printCode()
+        detuneSlider!.value = mandolin.detune
+        bodySizeSlider!.value = mandolin.bodySize
     }
-
-    func updateSliders() {
-        detuneSlider?.value = Float(mandolin.detune)
-        bodySizeSlider?.value = Float(mandolin.bodySize)
-    }
-
-    func updateTextFields() {
-        let detune = String(format: "%0.3f", mandolin.detune)
-        detuneLabel!.text = "Detune: \(detune)"
-
-        let bodySize = String(format: "%0.3f", mandolin.bodySize)
-        bodySizeLabel!.text = "Body Size: \(bodySize)"
-    }
-
-    func printCode() {
-        // Here we're just printing out the preset so it can be copy and pasted into code
-
-        print("public func presetXXXXXX() {")
-        print("    detune = \(String(format: "%0.3f", mandolin.detune))")
-        print("    bodySize = \(String(format: "%0.3f", mandolin.bodySize))")
-        print("}\n")
-    }
-
 }
 
-let view = PlaygroundView(frame: CGRect(x: 0, y: 0, width: 500, height: 500))
-XCPlaygroundPage.currentPage.liveView = view
+XCPlaygroundPage.currentPage.liveView = PlaygroundView()
 
 AKPlaygroundLoop(frequency: playRate) {
     var note1 = scale.randomElement()

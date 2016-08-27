@@ -5,16 +5,15 @@
 {% highlight ruby %}import XCPlayground
 import AudioKit
 
-let file = try AKAudioFile(readFileName: "mixloop.wav", baseDir: .Resources)
-
-{% endhighlight %}
-<p>Here we set up a player to the loop the file&#39;s playback</p>
-
-{% highlight ruby %}var player = try AKAudioPlayer(file: file)
+let file = try AKAudioFile(readFileName: processingPlaygroundFiles[0],
+                           baseDir: .Resources)
+let player = try AKAudioPlayer(file: file)
 player.looping = true
+
 var delay = AKVariableDelay(player)
 delay.rampTime = 0.2
 AudioKit.output = delay
+
 AudioKit.start()
 player.play()
 
@@ -23,7 +22,7 @@ let timeStep = 0.1
 
 AKPlaygroundLoop(every: timeStep) {
 
-    //: Vary the delay time between 0.0 and 0.2 in a sinusoid at 2 hz
+    // Vary the delay time between 0.0 and 0.2 in a sinusoid at 2 hz
     let delayModulationHz = 0.1
     let delayModulation = (1.0 - cos(2 * 3.14 * delayModulationHz * time)) * 0.1
     delay.time = delayModulation
@@ -35,5 +34,4 @@ AKPlaygroundLoop(every: timeStep) {
 }
 
 XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-
 {% endhighlight %}

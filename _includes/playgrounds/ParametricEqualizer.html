@@ -2,28 +2,22 @@
 </h3> #### A parametric equalizer can be used to raise or lower specific frequencies
 <h4>or frequency bands. Live sound engineers often use parametric equalizers
 </h4><h4>during a concert in order to keep feedback from occuring, as they allow
-</h4><h4>much more precise control over the frequency spectrum than other types
-</h4><h4>of equalizers. Acoustic engineers will also use them to tune a room.
+</h4><h4>much more precise control over the frequency spectrum than other
+</h4><h4>types of equalizers. Acoustic engineers will also use them to tune a room.
 </h4><h4>This node may be useful if you&#39;re building an app to do audio analysis.
 </h4></p>
 
 {% highlight ruby %}import XCPlayground
 import AudioKit
 
-let file = try AKAudioFile(readFileName: "mixloop.wav", baseDir: .Resources)
+let file = try AKAudioFile(readFileName: filtersPlaygroundFiles[0],
+                           baseDir: .Resources)
 
-{% endhighlight %}
-<p>Here we set up a player to the loop the file&#39;s playback</p>
-
-{% highlight ruby %}var player = try AKAudioPlayer(file: file)
+let player = try AKAudioPlayer(file: file)
 player.looping = true
 
 var parametricEQ = AKParametricEQ(player)
-
-{% endhighlight %}
-<p>Set the parameters here</p>
-
-{% highlight ruby %}parametricEQ.centerFrequency = 4000 // Hz
+parametricEQ.centerFrequency = 4000 // Hz
 parametricEQ.q = 1.0 // Hz
 parametricEQ.gain = 10 // dB
 
@@ -37,116 +31,43 @@ player.play()
 {% highlight ruby %}
 class PlaygroundView: AKPlaygroundView {
 
-    //: UI Elements we'll need to be able to access
-    var centerFreqLabel: Label?
-    var qLabel: Label?
-    var gainLabel: Label?
-
     override func setup() {
         addTitle("Parametric EQ")
 
-        addLabel("Audio Playback")
-        addButton("Drums", action: #selector(startDrumLoop))
-        addButton("Bass", action: #selector(startBassLoop))
-        addButton("Guitar", action: #selector(startGuitarLoop))
-        addButton("Lead", action: #selector(startLeadLoop))
-        addButton("Mix", action: #selector(startMixLoop))
-        addButton("Stop", action: #selector(stop))
+        addSubview(AKResourcesAudioFileLoaderView(
+            player: player,
+            filenames: filtersPlaygroundFiles))
 
-        addLabel("Parametric EQ Parameters")
+        addSubview(AKBypassButton(node: parametricEQ))
 
-        addButton("Process", action: #selector(process))
-        addButton("Bypass", action: #selector(bypass))
+        addSubview(AKPropertySlider(
+            property: "Center Frequency",
+            format:  "%0.3f Hz",
+            value: parametricEQ.centerFrequency,  maximum: 22050,
+            color: AKColor.greenColor()
+        ) { sliderValue in
+            parametricEQ.centerFrequency = sliderValue
+            })
 
-        centerFreqLabel = addLabel("Center Frequency: \(parametricEQ.centerFrequency) Hz")
-        addSlider(#selector(setCenterFreq),
-                  value: parametricEQ.centerFrequency,
-                  minimum: 20,
-                  maximum: 22050)
+        addSubview(AKPropertySlider(
+            property: "Q",
+            value: parametricEQ.q,  maximum: 20,
+            color: AKColor.redColor()
+        ) { sliderValue in
+            parametricEQ.q = sliderValue
+            })
 
-        qLabel = addLabel("Q: \(parametricEQ.q) Hz")
-        addSlider(#selector(setQ), value: parametricEQ.q, minimum: 0.1, maximum: 20)
-
-        gainLabel = addLabel("Gain: \(parametricEQ.gain) dB")
-        addSlider(#selector(setGain), value: parametricEQ.gain, minimum: -20, maximum: 20)
-
-    }
-
-    //: Handle UI Events
-
-    func startLoop(part: String) {
-        player.stop()
-        let file = try? AKAudioFile(readFileName: "\(part)loop.wav", baseDir: .Resources)
-        try? player.replaceFile(file!)
-        player.play()
-    }
-
-    func startDrumLoop() {
-        startLoop("drum")
-    }
-
-    func startBassLoop() {
-        startLoop("bass")
-    }
-
-    func startGuitarLoop() {
-        startLoop("guitar")
-    }
-
-    func startLeadLoop() {
-        startLoop("lead")
-    }
-
-    func startMixLoop() {
-        startLoop("mix")
-    }
-
-    func stop() {
-        player.stop()
-    }
-
-    func process() {
-        parametricEQ.start()
-    }
-
-    func bypass() {
-        parametricEQ.bypass()
-    }
-
-    func setCenterFreq(slider: Slider) {
-        parametricEQ.centerFrequency = Double(slider.value)
-        let centerFrequency = String(format: "%0.1f", parametricEQ.centerFrequency)
-        centerFreqLabel!.text = "Center Frequency: \(centerFrequency) Hz"
-        printCode()
-    }
-
-    func setQ(slider: Slider) {
-        parametricEQ.q = Double(slider.value)
-        let q = String(format: "%0.1f", parametricEQ.q)
-        qLabel!.text = "Q: \(q) Hz"
-        printCode()
-    }
-
-    func setGain(slider: Slider) {
-        parametricEQ.gain = Double(slider.value)
-        let gain = String(format: "%0.1f", parametricEQ.gain)
-        gainLabel!.text = "gain: \(gain) dB"
-        printCode()
-    }
-
-    func printCode() {
-        // Here we're just printing out the preset so it can be copy and pasted into code
-
-        print("public func presetXXXXXX() {")
-        print("    centerFrequency = \(String(format: "%0.3f", parametricEQ.centerFrequency))")
-        print("    q = \(String(format: "%0.3f", parametricEQ.q))")
-        print("    gain = \(String(format: "%0.3f", parametricEQ.gain))")
-        print("}\n")
+        addSubview(AKPropertySlider(
+            property: "Gain",
+            format:  "%0.1f dB",
+            value: parametricEQ.gain,  minimum: -20, maximum: 20,
+            color: AKColor.cyanColor()
+        ) { sliderValue in
+            parametricEQ.gain = sliderValue
+            })
     }
 }
 
-let view = PlaygroundView(frame: CGRect(x: 0, y: 0, width: 500, height: 1000))
 XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-XCPlaygroundPage.currentPage.liveView = view
-
+XCPlaygroundPage.currentPage.liveView = PlaygroundView()
 {% endhighlight %}

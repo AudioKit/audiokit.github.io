@@ -5,7 +5,8 @@
 {% highlight ruby %}import XCPlayground
 import AudioKit
 
-let file = try AKAudioFile(readFileName: "guitarloop.wav", baseDir: .Resources)
+let file = try AKAudioFile(readFileName: "poney.mp3",
+                           baseDir: .Resources)
 let phaseLockedVocoder = AKPhaseLockedVocoder(file: file)
 
 AudioKit.output = phaseLockedVocoder
@@ -13,7 +14,6 @@ AudioKit.start()
 phaseLockedVocoder.start()
 phaseLockedVocoder.amplitude = 1
 phaseLockedVocoder.pitchRatio = 1
-phaseLockedVocoder.rampTime = 0.1
 
 var timeStep = 0.1
 

@@ -6,6 +6,8 @@ import AudioKit
 
 var oscillator = AKPWMOscillator()
 oscillator.pulseWidth = 0.5
+
+var currentMIDINote = 0
 var currentAmplitude = 0.1
 var currentRampTime = 0.0
 
@@ -14,33 +16,44 @@ AudioKit.start()
 
 let playgroundWidth = 500
 
-class PlaygroundView: AKPlaygroundView, KeyboardDelegate {
-
-    var frequencyLabel: Label?
-    var pulseWidthLabel: Label?
-    var amplitudeLabel: Label?
-    var rampTimeLabel: Label?
+class PlaygroundView: AKPlaygroundView, AKKeyboardDelegate {
 
     override func setup() {
         addTitle("PWM Oscillator")
 
-        amplitudeLabel = addLabel("Amplitude: \(currentAmplitude)")
-        addSlider(#selector(setAmplitude), value: currentAmplitude)
+        addSubview(AKPropertySlider(
+            property: "Amplitude",
+            format: "%0.3f",
+            value: currentAmplitude,
+            color: AKColor.purpleColor()
+        ) { amplitude in
+            currentAmplitude = amplitude
+            })
 
-        pulseWidthLabel = addLabel("Pulse Width: \(oscillator.pulseWidth)")
-        addSlider(#selector(setPulseWidth), value: oscillator.pulseWidth, minimum: 0.5, maximum: 1)
+        addSubview(AKPropertySlider(
+            property: "Pulse Width",
+            value: oscillator.pulseWidth,
+            color: AKColor.redColor()
+        ) { amount in
+            oscillator.pulseWidth = amount
+            })
 
-        rampTimeLabel = addLabel("Ramp Time: \(currentRampTime)")
-        addSlider(#selector(setRampTime), value: currentRampTime, minimum: 0, maximum: 5.0)
+        addSubview(AKPropertySlider(
+            property: "Ramp Time",
+            format: "%0.3f s",
+            value: currentRampTime, maximum: 2,
+            color: AKColor.orangeColor()
+        ) { time in
+            currentRampTime = time
+            })
 
-        let keyboard = KeyboardView(width: playgroundWidth, height: 100)
-        keyboard.frame.origin.y = CGFloat(yPosition)
-        keyboard.setNeedsDisplay()
+        let keyboard = AKKeyboardView(width: playgroundWidth - 60, height: 100)
         keyboard.delegate = self
-        self.addSubview(keyboard)
+        addSubview(keyboard)
     }
 
-    func noteOn(note: Int) {
+    func noteOn(note: MIDINoteNumber) {
+        currentMIDINote = note
         // start from the correct note if amplitude is zero
         if oscillator.amplitude == 0 {
             oscillator.rampTime = 0
@@ -53,32 +66,13 @@ class PlaygroundView: AKPlaygroundView, KeyboardDelegate {
         oscillator.play()
     }
 
-    func noteOff(note: Int) {
-        oscillator.amplitude = 0
-    }
-
-    func setPulseWidth(slider: Slider) {
-        oscillator.pulseWidth = Double(slider.value)
-        let pw = String(format: "%0.3f", oscillator.pulseWidth)
-        pulseWidthLabel!.text = "Pulse Width: \(pw)"
-    }
-
-
-    func setAmplitude(slider: Slider) {
-        currentAmplitude = Double(slider.value)
-        let amp = String(format: "%0.3f", currentAmplitude)
-        amplitudeLabel!.text = "Amplitude: \(amp)"
-    }
-
-    func setRampTime(slider: Slider) {
-        currentRampTime = Double(slider.value)
-        let rampTime = String(format: "%0.3f", currentRampTime)
-        rampTimeLabel!.text = "Ramp Time: \(rampTime)"
+    func noteOff(note: MIDINoteNumber) {
+        if currentMIDINote == note {
+            oscillator.amplitude = 0
+        }
     }
 }
 
-let view = PlaygroundView(frame: CGRect(x: 0, y: 0, width: playgroundWidth, height: 650))
 XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-XCPlaygroundPage.currentPage.liveView = view
-
+XCPlaygroundPage.currentPage.liveView = PlaygroundView()
 {% endhighlight %}

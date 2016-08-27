@@ -1,92 +1,135 @@
 <p><h3>Sporth Based Generator
-</h3><h4>You can also create nodes for AudioKit using <a href="https://github.com/PaulBatchelor/Sporth">Sporth</a>.
-</h4><h4>This is an example of an effect written in Sporth.
+</h3><h4>You can create nodes for AudioKit using <a href="https://github.com/PaulBatchelor/Sporth">Sporth</a>.
+</h4><h4>With this playground you can load up a few demonstration sporth patches to try out.
 </h4></p>
 
 {% highlight ruby %}import XCPlayground
 import AudioKit
 
-let chattingRobot =
-    "'f1' '350 600 400' gen_vals " +
-        "'f2' '600 1040 1620' gen_vals " +
-        "'f3' '2400 2250 2400' gen_vals " +
-        "'g1' '1 1 1' gen_vals " +
-        "'g2' '0.28184 0.4468 0.251' gen_vals " +
-        "'g3' '0.0891 0.354 0.354' gen_vals " +
-        "'bw1' '40 60 40' gen_vals " +
-        "'bw2' '80 70 80' gen_vals " +
-        "'bw3' '100 110 100' gen_vals " +
-        "0 2 0.1 1 sine 2 10 biscale " +
-        "randi 11 pset 110 200 0.8 1 sine " +
-        "2 8 biscale randi 3 20 30 jitter + " +
-        "0.2 0.1 square dup 11 p 0 0 0 " +
-        "'g1' tabread * 11 p 0 0 0 " +
-        "'f1' tabread 11 p 0 0 0 " +
-        "'bw1' tabread butbp swap dup 11 p 0 0 0 " +
-        "'g2' tabread * 11 p 0 0 0 " +
-        "'f2' tabread 11 p 0 0 0 " +
-        "'bw2' tabread butbp swap 11 p 0 0 0 " +
-        "'g3' tabread * 11 p 0 0 0 " +
-        "'f3' tabread 11 p 0 0 0 " +
-        "'bw3' tabread butbp + + " +
-        "0.4 dmetro 0.5 maygate 0.01 port * 2.0 * dup jcrev +"
-
-let drone = "4 metro 0.003 0.001 0.1 tenv 57 mtof 0.5 1 1 1 fm mul " +
-            "3 metro 0.003 0.001 0.1 tenv 64 mtof 0.5 1 1 1 fm mul " +
-            "2 metro 0.003 0.001 0.1 tenv 67 mtof 0.5 1 1 0.8 fm mul " +
-            "\"notes\" \"73 75 76 78\" gen_vals " +
-            "0.5 metro dup 0.003 0.001 0.1 tenv swap " +
-            "\"notes\" tseq mtof 0.5 1 1 0.8 fm mul mix 0.3 mul"
-
-var generator = AKOperationGenerator(operation: AKOperation(chattingRobot))
-
+var generator = AKOperationGenerator(sporth: "")
 AudioKit.output = generator
 AudioKit.start()
-
-generator.start()
-
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-
 {% endhighlight %}
 <p>User Interface Set up</p>
 
 {% highlight ruby %}
-class PlaygroundView: AKPlaygroundView {
+class PlaygroundView: AKPlaygroundView, AKKeyboardDelegate {
 
+    var p0Slider: AKPropertySlider?
+    var p1Slider: AKPropertySlider?
+    var p2Slider: AKPropertySlider?
+    var p3Slider: AKPropertySlider?
+    var keyboard: AKKeyboardView?
+    var currentMIDINote = 0
 
     override func setup() {
         addTitle("Sporth Generators")
 
-        addLabel("Choose from the examples below:")
+        addLabel("Choose one of the Sporth files:")
 
-        addButton("Chatting Robot", action: #selector(startChatting))
-        addButton("Drone", action: #selector(startDrone))
+        let sporthFiles = ["Aurora",
+                           "Chatting",
+                           "Crystalline",
+                           "Distant Intelligence",
+                           "Influx",
+                           "kLtz",
+                           "Simple Keyboard"]
+        addSubview(AKPresetLoaderView(presets: sporthFiles) { filename in
+            let filePath = NSBundle.mainBundle().pathForResource(filename, ofType: "sp")
+            let contentData = NSFileManager.defaultManager().contentsAtPath(filePath!)
+            let sporth = NSString(data: contentData!, encoding: NSUTF8StringEncoding) as? String
+            Swift.print("\n\n\n\n\n\n\(sporth!)")
+            generator.sporth = sporth!
+
+
+            let sliders = [self.p0Slider, self.p1Slider, self.p2Slider, self.p3Slider]
+
+            // Reset UI Eleements
+            self.keyboard?.hidden = true
+            for i in 0 ..< 4 {
+                sliders[i]?.hidden = true
+                sliders[i]?.property = "Parameter \(i)"
+                sliders[i]?.value = 0.0
+            }
+
+            // Process the comments in the file to customize the UI
+            search: for  line in sporth!.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
+            {
+                if line.containsString("# Uses Keyboard") {
+                    self.keyboard?.hidden = false
+                    break search
+                }
+
+                for i in 0 ..< 4 {
+                    let pattern = "# p\(i): ([.0-9]+)[ ]+([^\n]+)"
+                    let regex = try! NSRegularExpression(pattern: pattern, options: NSRegularExpressionOptions.DotMatchesLineSeparators)
+
+                    let value = regex.stringByReplacingMatchesInString(line, options: NSMatchingOptions.ReportCompletion, range: NSRange(location:0,
+                        length: line.characters.count ), withTemplate: "$1")
+                    let title = regex.stringByReplacingMatchesInString(line, options: NSMatchingOptions.ReportCompletion, range: NSRange(location:0,
+                        length: line.characters.count ), withTemplate: "$2")
+                    if title != line {
+                        generator.parameters[i] = Double(value)!
+                        sliders[i]?.hidden = false
+                        sliders[i]?.property = title
+                        sliders[i]?.value = Double(value)!
+                    }
+                }
+            }
+
+            })
+        addLabel("Open up the console view to see the Sporth code.")
+
+        p0Slider = AKPropertySlider(
+            property: "Parameter 0",
+            value: generator.parameters[0],
+            color: AKColor.orangeColor()) { sliderValue in
+                generator.parameters[0] = sliderValue
+            }
+        addSubview(p0Slider!)
+        p1Slider = AKPropertySlider(
+            property: "Parameter 1",
+            value: generator.parameters[1],
+        color: AKColor.cyanColor()) { sliderValue in
+            generator.parameters[1] = sliderValue
+            }
+        addSubview(p1Slider!)
+        p2Slider = AKPropertySlider(
+            property: "Parameter 2",
+            value: generator.parameters[2],
+        color: AKColor.magentaColor()) { sliderValue in
+            generator.parameters[2] = sliderValue
+            }
+        addSubview(p2Slider!)
+        p3Slider = AKPropertySlider(
+            property: "Parameter 3",
+        value: generator.parameters[3],
+        color: AKColor.yellowColor()) { sliderValue in
+            generator.parameters[3] = sliderValue
+            }
+        addSubview(p3Slider!)
+
+        keyboard = AKKeyboardView(width: 440, height: 100)
+        keyboard!.polyphonicMode = false
+        keyboard!.delegate = self
+        addSubview(keyboard!)
+    }
+
+
+    func noteOn(note: MIDINoteNumber) {
+        currentMIDINote = note
+        generator.parameters[4] = 1
+        generator.parameters[5] = Double(note)
 
     }
 
-    //: Handle UI Events
-
-    func startChatting() {
-        updateSporth(chattingRobot)
+    func noteOff(note: MIDINoteNumber) {
+        if currentMIDINote == note {
+            generator.parameters[4] = 0
+        }
     }
-
-    func startDrone() {
-        updateSporth(drone)
-    }
-
-    func updateSporth(sporth: String) {
-        generator.stop()
-        AudioKit.stop()
-        generator = AKOperationGenerator(operation: AKOperation(sporth))
-        AudioKit.output = generator
-        AudioKit.start()
-        generator.start()
-    }
-
 }
 
-let view = PlaygroundView(frame: CGRect(x: 0, y: 0, width: 500, height: 550))
 XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-XCPlaygroundPage.currentPage.liveView = view
-
+XCPlaygroundPage.currentPage.liveView = PlaygroundView()
 {% endhighlight %}

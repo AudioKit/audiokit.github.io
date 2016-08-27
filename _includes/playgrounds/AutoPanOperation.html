@@ -9,124 +9,68 @@ import AudioKit
  to make the operation code easier to read below.</p>
 
 {% highlight ruby %}
-enum AutoPanParameter: Int {
-    case Speed, Depth
-}
-
-struct AutoPan {
-    static var speed: AKOperation {
-        return AKOperation.parameters(AutoPanParameter.Speed.rawValue)
-    }
-    static var depth: AKOperation {
-        return AKOperation.parameters(AutoPanParameter.Depth.rawValue)
-    }
-}
+let speedIndex = 0
+let depthIndex = 1
 
 extension AKOperationEffect {
     var speed: Double {
-        get { return self.parameters[AutoPanParameter.Speed.rawValue] }
-        set(newValue) { self.parameters[AutoPanParameter.Speed.rawValue] = newValue }
+        get { return self.parameters[speedIndex] }
+        set(newValue) { self.parameters[speedIndex] = newValue }
     }
     var depth: Double {
-        get { return self.parameters[AutoPanParameter.Depth.rawValue] }
-        set(newValue) { self.parameters[AutoPanParameter.Depth.rawValue] = newValue }
+        get { return self.parameters[depthIndex] }
+        set(newValue) { self.parameters[depthIndex] = newValue }
     }
 }
 
 {% endhighlight %}
-<p>Here we&#39;ll use the struct and the extension to refer to the autopan parameters by name</p>
+<p>Use the struct and the extension to refer to the autopan parameters by name</p>
 
 {% highlight ruby %}
-let file = try AKAudioFile(readFileName: "guitarloop.wav", baseDir: .Resources)
+let file = try AKAudioFile(readFileName: processingPlaygroundFiles[0],
+                           baseDir: .Resources)
 
 let player = try AKAudioPlayer(file: file)
 player.looping = true
 
-let oscillator = AKOperation.sineWave(frequency: AutoPan.speed, amplitude: AutoPan.depth)
+let effect = AKOperationEffect(player) { input, parameters in
+    let oscillator = AKOperation.sineWave(frequency: parameters[speedIndex],
+                                          amplitude: parameters[depthIndex])
+    return input.pan(oscillator)
+}
 
-let panner = AKOperation.input.pan(oscillator)
-
-let effect = AKOperationEffect(player, stereoOperation: panner)
 effect.parameters = [10, 1]
 AudioKit.output = effect
 AudioKit.start()
-
-let playgroundWidth = 500
+player.play()
 
 class PlaygroundView: AKPlaygroundView {
-    var speedLabel: Label?
-    var depthLabel: Label?
 
     override func setup() {
         addTitle("AutoPan")
 
-        addLabel("Audio Playback")
-        addButton("Drums", action: #selector(startDrumLoop))
-        addButton("Bass", action: #selector(startBassLoop))
-        addButton("Guitar", action: #selector(startGuitarLoop))
-        addButton("Lead", action: #selector(startLeadLoop))
-        addButton("Mix", action: #selector(startMixLoop))
-        addButton("Stop", action: #selector(stop))
+        addSubview(AKResourcesAudioFileLoaderView(
+            player: player,
+            filenames: processingPlaygroundFiles))
 
-        speedLabel = addLabel("Speed: \(effect.speed)")
-        addSlider(#selector(setSpeed), value: effect.speed, minimum: 0.1, maximum: 25)
+        addSubview(AKPropertySlider(
+            property: "Speed",
+            value: effect.speed, minimum: 0.1, maximum: 25,
+            color: AKColor.greenColor()
+        ) { sliderValue in
+            effect.speed = sliderValue
+            })
 
-        depthLabel = addLabel("Depth: \(effect.depth)")
-        addSlider(#selector(setDepth), value: effect.depth)
-    }
-
-
-    func startLoop(part: String) {
-        player.stop()
-        let file = try? AKAudioFile(readFileName: "\(part)loop.wav", baseDir: .Resources)
-        try? player.replaceFile(file!)
-        player.play()
-    }
-
-    func startDrumLoop() {
-        startLoop("drum")
-    }
-
-    func startBassLoop() {
-        startLoop("bass")
-    }
-
-    func startGuitarLoop() {
-        startLoop("guitar")
-    }
-
-    func startLeadLoop() {
-        startLoop("lead")
-    }
-
-    func startMixLoop() {
-        startLoop("mix")
-    }
-    func stop() {
-        player.stop()
-    }
-
-    func setSpeed(slider: Slider) {
-        effect.speed = Double(slider.value)
-        speedLabel!.text = "Speed: \(String(format: "%0.3f", effect.speed))"
-        printParameters()
-    }
-
-    func setDepth(slider: Slider) {
-        effect.depth = Double(slider.value)
-        depthLabel!.text = "Depth: \(String(format: "%0.3f", effect.depth))"
-        printParameters()
-    }
-
-    func printParameters() {
-        let realSpeed = effect.parameters[AutoPanParameter.Speed.rawValue]
-        let realDepth = effect.parameters[AutoPanParameter.Depth.rawValue]
-        print("speed = \(realSpeed), depth = \(realDepth)")
+        addSubview(AKPropertySlider(
+            property: "Depth",
+            value: effect.depth,
+            color: AKColor.redColor()
+        ) { sliderValue in
+            effect.depth = sliderValue
+            })
     }
 }
 
-let view = PlaygroundView(frame: CGRect(x: 0, y: 0, width: playgroundWidth, height: 650))
 XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-XCPlaygroundPage.currentPage.liveView = view
-
+XCPlaygroundPage.currentPage.liveView = PlaygroundView()
 {% endhighlight %}

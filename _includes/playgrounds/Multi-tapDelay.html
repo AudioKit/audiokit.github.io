@@ -1,7 +1,7 @@
 <p><h3>Multi-tap Delay
-</h3><h4>A multi-tap delay is a delay line where multiple &#39;taps&#39; or outputs
-</h4><h4>are taken from a delay buffer at different points, and the taps are
-</h4><h4>then summed with the original. Multi-tap delays are great for creating
+</h3><h4>A multi-tap delay is a delay line where multiple &#39;taps&#39; or outputs are
+</h4><h4>taken from a delay buffer at different points, and the taps are then
+</h4><h4>summed with the original. Multi-tap delays are great for creating
 </h4><h4>rhythmic delay patterns, but they can also be used to create sound
 </h4><h4>fields of such density that they start to take on some of the qualities
 </h4><h4>we&#39;d more usually associate with reverb. - Geoff Smith, Sound on Sound
@@ -10,15 +10,15 @@
 {% highlight ruby %}import XCPlayground
 import AudioKit
 
-let file = try AKAudioFile(readFileName: "drumloop.wav", baseDir: .Resources)
+let file = try AKAudioFile(readFileName: processingPlaygroundFiles[0],
+                           baseDir: .Resources)
 
-let player = try AKAudioPlayer(file: file)
+var player = try AKAudioPlayer(file: file)
 player.looping = true
 
 {% endhighlight %}
-<h4>In AudioKit, you can create a multitap easily through creating
-</h4><h4>a function that mixes together several delays and gains.
-</h4>
+<p>In AudioKit, you can create a multitap easily through creating a function
+ that mixes together several delays and gains.</p>
 
 {% highlight ruby %}func multitapDelay(input: AKNode, times: [Double], gains: [Double]) -> AKMixer {
     let mix = AKMixer(input)
@@ -33,5 +33,4 @@ AudioKit.output = multitapDelay(player, times: [0.1, 0.2, 0.4], gains: [0.5, 2.0
 AudioKit.start()
 player.play()
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-{% endhighlight %}
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true{% endhighlight %}

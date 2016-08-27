@@ -4,28 +4,23 @@
 {% highlight ruby %}import XCPlayground
 import AudioKit
 
-{% endhighlight %}
-<p>Music Example</p>
-
-{% highlight ruby %}let file = try AKAudioFile(readFileName: "drumloop.wav", baseDir: .Resources)
+let file = try AKAudioFile(readFileName: processingPlaygroundFiles[0],
+                           baseDir: .Resources)
 
 
-{% endhighlight %}
-<p>Here we set up a player to the loop the file&#39;s playback</p>
-
-{% highlight ruby %}let player = try AKAudioPlayer(file: file)
+let player = try AKAudioPlayer(file: file)
 player.looping = true
 
-let duration = AKOperation.sineWave(frequency: 0.2).scale(minimum: 0, maximum: 5)
+let effect = AKOperationEffect(player) { player, _ in
+    let duration = AKOperation.sineWave(frequency: 0.2).scale(minimum: 0, maximum: 5)
 
-let reverb = AKOperation.input.reverberateWithFlatFrequencyResponse(reverbDuration: duration,
-                                                                    loopDuration: 0.1)
-let effect = AKOperationEffect(player, operation: reverb)
+    return player.reverberateWithFlatFrequencyResponse(reverbDuration: duration,
+                                                       loopDuration: 0.1)
+}
 
 AudioKit.output = effect
 AudioKit.start()
 player.play()
 
 XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-
 {% endhighlight %}

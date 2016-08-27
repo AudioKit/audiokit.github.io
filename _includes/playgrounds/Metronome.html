@@ -1,45 +1,52 @@
 <h3>Metronome
 </h3>
 
+<h4>Although AudioKit operations are a somewhat advanced topic, this 
+</h4><h4>is a simple example of creating a metronome with operations.  
+</h4><h4>It's just important that you know that operations that can do very
+</h4><h4>complex synthesis and effect processing is capable in AudioKit.
+</h4>
+
 {% highlight ruby %}import AudioKit
 import XCPlayground
 
 var currentFrequency = 60.0
-let beep = AKOperation.sineWave(frequency: 480)
 
-let trig = AKOperation.metronome(AKOperation.parameters(0) / 60)
+let generator = AKOperationGenerator() { parameters in
+    let beep = AKOperation.sineWave(frequency: 480)
 
-let beeps = beep.triggeredWithEnvelope(
-    trig,
-    attack: 0.01, hold: 0, release: 0.05)
+    let metronome = AKOperation.metronome(frequency: parameters[0] / 60)
 
-let generator = AKOperationGenerator(operation: beeps)
+    let beeps = beep.triggeredWithEnvelope(
+        trigger: metronome,
+        attack: 0.01, hold: 0, release: 0.05)
+    return beeps
+}
+
 generator.parameters = [currentFrequency]
 
 AudioKit.output = generator
 AudioKit.start()
 generator.start()
 
-class PlaygroundView: AKPlaygroundView {
 
-    var frequencyLabel: Label?
+class PlaygroundView: AKPlaygroundView {
 
     override func setup() {
         addTitle("Metronome")
 
-        frequencyLabel = addLabel("Frequency: \(currentFrequency) BPM")
-        addSlider(#selector(setFrequency), value: currentFrequency, minimum: 20, maximum: 320)
+        addSubview(AKPropertySlider(
+            property: "Frequency",
+            format: "%0.2f BPM",
+            value: 60, minimum: 40, maximum: 240,
+            color: AKColor.greenColor()
+        ) { frequency in
+            generator.parameters[0] = frequency
+        })
     }
-
-    func setFrequency(slider: Slider) {
-        currentFrequency = Double(slider.value)
-        generator.parameters = [currentFrequency]
-        frequencyLabel!.text = "Frequency: \(String(format: "%0.1f", currentFrequency)) BPM"
-    }
-
 }
 
-let view = PlaygroundView(frame: CGRect(x: 0, y: 0, width: 500, height: 300))
 XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-XCPlaygroundPage.currentPage.liveView = view
+XCPlaygroundPage.currentPage.liveView = PlaygroundView()
+
 {% endhighlight %}

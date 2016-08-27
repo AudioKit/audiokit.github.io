@@ -1,78 +1,95 @@
-<p><h3>Interactive Oscillator
-</h3><h4>Open the timeline view to use the controls this playground sets up.
+<p><h3>Oscillator
+</h3><h4>This oscillator can be loaded with a wavetable of your own design,
+</h4><h4>or with one of the defaults.
 </h4></p>
 
 {% highlight ruby %}import XCPlayground
 import AudioKit
 
-var oscillator = AKOscillator()
-oscillator.amplitude = 0.1
+let square = AKTable(.Square, size: 16)
+for value in square.values { value } // Click the eye icon ->
+
+let triangle = AKTable(.Triangle, size: 4096)
+for value in triangle.values { value } // Click the eye icon ->
+
+let sine = AKTable(.Sine, size: 4096)
+for value in sine.values { value } // Click the eye icon ->
+
+let sawtooth = AKTable(.Sawtooth, size: 4096)
+for value in sawtooth.values { value } // Click the eye icon ->
+
+var custom = AKTable(.Sine, size: 512)
+for i in 0..<custom.values.count {
+    custom.values[i] += Float(random(-0.3, 0.3) + Double(i)/2048.0)
+}
+for value in custom.values { value } // Click the eye icon ->
+
+{% endhighlight %}
+<p>Try changing the table to triangle, square, sine, or sawtooth.
+ This will change the shape of the oscillator&#39;s waveform.</p>
+
+{% highlight ruby %}var oscillator = AKOscillator(waveform: sine)
 AudioKit.output = oscillator
 AudioKit.start()
 
-class PlaygroundView: AKPlaygroundView {
+var currentMIDINote = 0
+var currentAmplitude = 0.2
+var currentRampTime = 0.05
+oscillator.rampTime = currentRampTime
+oscillator.amplitude = currentAmplitude
 
-    var frequencyLabel: Label?
-    var amplitudeLabel: Label?
-    var rampTimeLabel: Label?
+class PlaygroundView: AKPlaygroundView, AKKeyboardDelegate {
 
     override func setup() {
-        addTitle("Oscillator")
 
-        addButton("Start", action: #selector(start))
-        addButton("Stop", action: #selector(stop))
+        addTitle("General Purpose Oscillator")
 
-        frequencyLabel = addLabel("Frequency: \(oscillator.frequency)")
-        addSlider(#selector(setFrequency), value: oscillator.frequency, minimum: 200, maximum: 800)
+        addSubview(AKPropertySlider(
+            property: "Amplitude",
+            value: currentAmplitude,
+            color: AKColor.redColor()
+        ) { amplitude in
+            currentAmplitude = amplitude
+            })
 
-        amplitudeLabel = addLabel("Amplitude: \(oscillator.amplitude)")
-        addSlider(#selector(setAmplitude), value: oscillator.amplitude)
+        addSubview(AKPropertySlider(
+            property: "Ramp Time",
+            value: currentRampTime,
+            color: AKColor.cyanColor()
+        ) { time in
+            currentRampTime = time
+            })
 
-        rampTimeLabel = addLabel("Ramp Time: \(oscillator.rampTime)")
-        addSlider(#selector(setRampTime), value: oscillator.rampTime)
+        let keyboard = AKKeyboardView(width: 440,
+                                      height: 100,
+                                      firstOctave: 4,
+                                      octaveCount: 4)
+        keyboard.delegate = self
+        addSubview(keyboard)
+        addSubview(AKOutputWaveformPlot.createView())
     }
 
-    func start() {
+    func noteOn(note: MIDINoteNumber) {
+        currentMIDINote = note
+        // start from the correct note if amplitude is zero
+        if oscillator.amplitude == 0 {
+            oscillator.rampTime = 0
+        }
+        oscillator.frequency = note.midiNoteToFrequency()
+
+        // Still use rampTime for volume
+        oscillator.rampTime = currentRampTime
+        oscillator.amplitude = currentAmplitude
         oscillator.play()
     }
-    func stop() {
-        oscillator.stop()
-    }
 
-    func setFrequency(slider: Slider) {
-        oscillator.frequency = Double(slider.value)
-        let frequency = String(format: "%0.1f", oscillator.frequency)
-        frequencyLabel!.text = "Frequency: \(frequency)"
-        printCode()
-    }
-
-    func setAmplitude(slider: Slider) {
-        oscillator.amplitude = Double(slider.value)
-        let amp = String(format: "%0.3f", oscillator.amplitude)
-        amplitudeLabel!.text = "Amplitude: \(amp)"
-        printCode()
-    }
-
-    func setRampTime(slider: Slider) {
-        oscillator.rampTime = Double(slider.value)
-        let rampTime = String(format: "%0.3f", oscillator.rampTime)
-        rampTimeLabel!.text = "Ramp Time: \(rampTime)"
-        printCode()
-    }
-
-    func printCode() {
-        // Here we're just printing out the preset so it can be copy and pasted into code
-
-        print("public func presetXXXXXX() {")
-        print("    frequency = \(String(format: "%0.3f", oscillator.frequency))")
-        print("    amplitude = \(String(format: "%0.3f", oscillator.amplitude))")
-        print("    rampTime = \(String(format: "%0.3f", oscillator.rampTime))")
-        print("}\n")
+    func noteOff(note: MIDINoteNumber) {
+        if note == currentMIDINote {
+            oscillator.amplitude = 0
+        }
     }
 }
 
-let view = PlaygroundView(frame: CGRect(x: 0, y: 0, width: 500, height: 350))
 XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-XCPlaygroundPage.currentPage.liveView = view
-
+XCPlaygroundPage.currentPage.liveView = PlaygroundView()
 {% endhighlight %}

@@ -1,26 +1,19 @@
 <p><h3>Time Stretching and Pitch Shifting
-</h3><h4>With AKTimePitch you can easily change the pitch and speed of a player-generated sound.
-</h4><h4>It does not work on live input or generated signals.
+</h3><h4>With AKTimePitch you can easily change the pitch and speed of a
+</h4><h4>player-generated sound.  It does not work on live input or generated signals.
 </h4></p>
 
 {% highlight ruby %}import XCPlayground
 import AudioKit
 
-let file = try AKAudioFile(readFileName: "mixloop.wav", baseDir: .Resources)
+let file = try AKAudioFile(readFileName: playbackPlaygroundFiles[0],
+                           baseDir: .Resources)
 
-{% endhighlight %}
-<p>Here we set up a player to the loop the file&#39;s playback</p>
-
-{% highlight ruby %}var player = try AKAudioPlayer(file: file)
+let player = try AKAudioPlayer(file: file)
 player.looping = true
 
-
 var timePitch = AKTimePitch(player)
-
-{% endhighlight %}
-<p>Set the parameters here</p>
-
-{% highlight ruby %}timePitch.rate = 2.0
+timePitch.rate = 2.0
 timePitch.pitch = -400.0
 timePitch.overlap = 8.0
 
@@ -34,91 +27,45 @@ player.play()
 {% highlight ruby %}
 class PlaygroundView: AKPlaygroundView {
 
-    //: UI Elements we'll need to be able to access
-    var rateLabel: Label?
-    var pitchLabel: Label?
-    var overlapLabel: Label?
-
     override func setup() {
         addTitle("Time/Pitch")
 
-        addLabel("Audio Playback")
-        addButton("Drums", action: #selector(startDrumLoop))
-        addButton("Bass", action: #selector(startBassLoop))
-        addButton("Guitar", action: #selector(startGuitarLoop))
-        addButton("Lead", action: #selector(startLeadLoop))
-        addButton("Mix", action: #selector(startMixLoop))
-        addButton("Stop", action: #selector(stop))
+        addSubview(AKResourcesAudioFileLoaderView(
+            player: player,
+            filenames: playbackPlaygroundFiles))
 
         addLabel("Time/Pitch Parameters")
 
-        addButton("Process", action: #selector(process))
-        addButton("Bypass", action: #selector(bypass))
+        addSubview(AKBypassButton(node: timePitch))
 
-        rateLabel = addLabel("Rate: \(timePitch.rate) rate")
-        addSlider(#selector(setRate), value: timePitch.rate, minimum: 0.03125, maximum: 5.0)
+        addSubview(AKPropertySlider(
+            property: "Rate",
+            format: "%0.3f",
+            value: timePitch.rate, minimum: 0.3125, maximum: 5,
+            color: AKColor.greenColor()
+        ) { sliderValue in
+            timePitch.rate = sliderValue
+            })
 
-        pitchLabel = addLabel("Pitch: \(timePitch.pitch) Cents")
-        addSlider(#selector(setPitch), value: timePitch.pitch, minimum: -2400, maximum: 2400)
+        addSubview(AKPropertySlider(
+            property: "Pitch",
+            format: "%0.3f Cents",
+            value: timePitch.pitch, minimum: -2400, maximum: 2400,
+            color: AKColor.redColor()
+        ) { sliderValue in
+            timePitch.pitch = sliderValue
+            })
+
+        addSubview(AKPropertySlider(
+            property: "Overlap",
+            value: timePitch.overlap, minimum: 3, maximum: 32,
+            color: AKColor.cyanColor()
+        ) { sliderValue in
+            timePitch.overlap = sliderValue
+            })
     }
-
-    //: Handle UI Events
-
-    func startLoop(part: String) {
-        player.stop()
-        let file = try? AKAudioFile(readFileName: "\(part)loop.wav", baseDir: .Resources)
-        try? player.replaceFile(file!)
-        player.play()
-    }
-
-    func startDrumLoop() {
-        startLoop("drum")
-    }
-
-    func startBassLoop() {
-        startLoop("bass")
-    }
-
-    func startGuitarLoop() {
-        startLoop("guitar")
-    }
-
-    func startLeadLoop() {
-        startLoop("lead")
-    }
-
-    func startMixLoop() {
-        startLoop("mix")
-    }
-
-    func stop() {
-        player.stop()
-    }
-
-    func process() {
-        timePitch.start()
-    }
-
-    func bypass() {
-        timePitch.bypass()
-    }
-    func setRate(slider: Slider) {
-        timePitch.rate = Double(slider.value)
-        let rate = String(format: "%0.1f", timePitch.rate)
-        rateLabel!.text = "Rate: \(rate) rate"
-    }
-
-    func setPitch(slider: Slider) {
-        timePitch.pitch = Double(slider.value)
-        let pitch = String(format: "%0.1f", timePitch.pitch)
-        pitchLabel!.text = "Pitch: \(pitch) Cents"
-    }
-
-
 }
 
-let view = PlaygroundView(frame: CGRect(x: 0, y: 0, width: 500, height: 600))
 XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-XCPlaygroundPage.currentPage.liveView = view
-
+XCPlaygroundPage.currentPage.liveView = PlaygroundView()
 {% endhighlight %}

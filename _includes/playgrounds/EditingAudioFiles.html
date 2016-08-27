@@ -15,7 +15,7 @@ let loop = try? AKAudioFile(readFileName: "drumloop.wav", baseDir: .Resources)
 {% endhighlight %}
 <p>You may have noticed that the drumloop doesn&#39;t loop so well. Let&#39;s fix this...</p>
 
-{% highlight ruby %}let fixedLoop = try? loop!.extract(fromSample: 0, toSample: Int64(3.42 * 44100))
+{% highlight ruby %}let fixedLoop = try? loop!.extracted(fromSample: 0, toSample: Int64(3.42 * 44100))
 
 {% endhighlight %}
 <p>Now out drumloop is one bar long and perfectly loops. Let&#39;s extract the kick,
@@ -25,11 +25,11 @@ let loop = try? AKAudioFile(readFileName: "drumloop.wav", baseDir: .Resources)
 
 let oneSixteenthLength = oneBarLength / 16
 
-let kick = try?  fixedLoop!.extract(fromSample: 0, toSample: oneSixteenthLength)
-let snare = try? fixedLoop!.extract(fromSample: oneSixteenthLength * 4,
-                                    toSample: oneSixteenthLength * 5)
-let hihat = try? fixedLoop!.extract(fromSample: oneSixteenthLength * 2,
-                                    toSample: oneSixteenthLength * 3)
+let kick = try?  fixedLoop!.extracted(fromSample: 0, toSample: oneSixteenthLength)
+let snare = try? fixedLoop!.extracted(fromSample: oneSixteenthLength * 4,
+                                      toSample: oneSixteenthLength * 5)
+let hihat = try? fixedLoop!.extracted(fromSample: oneSixteenthLength * 2,
+                                      toSample: oneSixteenthLength * 3)
 
 {% endhighlight %}
 <p>Notice that we don&#39;t provide any name or location for those files (in fact, we don&#39;t care...)
@@ -43,17 +43,17 @@ let kickFilePath = kick!.directoryPath
 {% endhighlight %}
 <p>I love hihat, so normalize our Hihat sample so it will be as loud as other instruments...</p>
 
-{% highlight ruby %}let normalizedHihat = try? hihat!.normalize()
+{% highlight ruby %}let normalizedHihat = try? hihat!.normalized()
 
 {% endhighlight %}
 <p>Why not making some new files by reversing them</p>
 
-{% highlight ruby %}let reverseKick = try? kick!.reverse()
-let reverseSnare = try? snare!.reverse()
-let reverseHihat = try? normalizedHihat!.reverse()
+{% highlight ruby %}let reverseKick = try? kick!.reversed()
+let reverseSnare = try? snare!.reversed()
+let reverseHihat = try? normalizedHihat!.reversed()
 
 // A sixteenth note silence could be handy...
-let silence = try?  AKAudioFile.silent(oneSixteenthLength)
+let silence = try?  AKAudioFile.silent(samples: oneSixteenthLength)
 
 {% endhighlight %}
 <p>Now, we put all them in an array so we can later randomly pick samples.
@@ -67,8 +67,8 @@ let samplesBox: [AKAudioFile] = [kick!, snare!, kick!, snare!, kick!, snare!,
 {% endhighlight %}
 <p>Now, we&#39;ll play the original loop three times,</p>
 
-{% highlight ruby %}let threeTimesLoop =  try? fixedLoop!.append(fixedLoop!)
-var sequence = try? threeTimesLoop!.append(fixedLoop!)
+{% highlight ruby %}let threeTimesLoop =  try? fixedLoop!.appendedBy(file: fixedLoop!)
+var sequence = try? threeTimesLoop!.appendedBy(file: fixedLoop!)
 {% endhighlight %}
 <p>Next, we append a random sequence of 16 sixteenth of audio to build our random drum solo...</p>
 
@@ -76,8 +76,8 @@ var sequence = try? threeTimesLoop!.append(fixedLoop!)
 for i in 0..<16 {
     let newSampleIndex = randomInt(0..<samplesBox.count)
     let newSound = samplesBox[newSampleIndex]
-    print ("picked sample #\(newSampleIndex) name: \(newSound.fileNamePlusExtension)")
-    var newFile = try? sequence!.append(newSound)
+    print("picked sample #\(newSampleIndex) name: \(newSound.fileNamePlusExtension)")
+    var newFile = try? sequence!.appendedBy(file: newSound)
     sequence = newFile!
 }
 
@@ -97,5 +97,4 @@ sequencePlayer!.play()
 
 
 XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-
 {% endhighlight %}

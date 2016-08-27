@@ -4,13 +4,11 @@
 {% highlight ruby %}import XCPlayground
 import AudioKit
 
-let file = try AKAudioFile(readFileName: "mixloop.wav", baseDir: .Resources)
+let bundle = NSBundle.mainBundle()
 
+let file = try AKAudioFile(readFileName: "leadloop.wav", baseDir: .Resources)
 
-{% endhighlight %}
-<p>Here we set up a player to the loop the file&#39;s playback</p>
-
-{% highlight ruby %}let player = try AKAudioPlayer(file: file)
+var player = try AKAudioPlayer(file: file)
 player.looping = true
 
 AudioKit.output = player
@@ -18,18 +16,11 @@ AudioKit.start()
 player.play()
 let fft = AKFFTTap(player)
 
-{% endhighlight %}
-<p>And here&#39;s where we monitor the results of tracking the amplitude.</p>
 
-{% highlight ruby %}AKPlaygroundLoop(every: 0.1) {
+AKPlaygroundLoop(every: 0.1) {
     let max = fft.fftData.maxElement()!
     let index = fft.fftData.indexOf(max)
 }
 
-{% endhighlight %}
-<p>This keeps the playground running so that audio can play for a long time</p>
-
-{% highlight ruby %}XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-
-
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
 {% endhighlight %}

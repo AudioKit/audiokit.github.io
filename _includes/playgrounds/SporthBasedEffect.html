@@ -1,14 +1,13 @@
 <p><h3>Sporth Based Effect
-</h3><h4>You can also create nodes for AudioKit using <a href="https://github.com/PaulBatchelor/Sporth">Sporth</a>.
+</h3><h4>You can create nodes for AudioKit using <a href="https://github.com/PaulBatchelor/Sporth">Sporth</a>.
 </h4><h4>This is an example of an effect written in Sporth.
 </h4></p>
 
 {% highlight ruby %}import XCPlayground
 import AudioKit
 
-let bundle = NSBundle.mainBundle()
-
-let file = try AKAudioFile(readFileName: "drumloop.wav", baseDir: .Resources)
+let file = try AKAudioFile(readFileName: processingPlaygroundFiles[0],
+                           baseDir: .Resources)
 var player = try AKAudioPlayer(file: file)
 player.looping = true
 
@@ -23,5 +22,4 @@ AudioKit.start()
 player.play()
 
 XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-
 {% endhighlight %}

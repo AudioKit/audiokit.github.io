@@ -13,9 +13,20 @@ AudioKit.output = mixer
 AudioKit.start()
 
 oscillator.start()
+var multiplier = 1.1
 
-AKPlaygroundLoop(frequency: 5) {
-    oscillator.frequency = random(220, 20000)
+AKPlaygroundLoop(frequency: 10) {
+    if oscillator.frequency > 10000 {
+        oscillator.frequency = 10000
+        multiplier = 0.9
+    }
+
+    if oscillator.frequency < 100 {
+        oscillator.frequency = 100
+        multiplier = 1.1
+    }
+
+    oscillator.frequency *= multiplier
     oscillator.amplitude = 0.2
 }
 
@@ -23,9 +34,8 @@ let plot = AKNodeFFTPlot(mixer, frame: CGRect(x: 0, y: 0, width: 500, height: 50
 plot.shouldFill = true
 plot.shouldMirror = false
 plot.shouldCenterYAxis = false
-plot.color = UIColor.purpleColor()
+plot.color = NSColor.purpleColor()
 
 XCPlaygroundPage.currentPage.liveView = plot
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-{% endhighlight %}
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true{% endhighlight %}

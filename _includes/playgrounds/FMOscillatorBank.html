@@ -6,97 +6,88 @@
 import XCPlayground
 import AudioKit
 
-let osc = AKFMOscillatorBank()
+let fmBank = AKFMOscillatorBank()
 
-AudioKit.output = osc
+AudioKit.output = fmBank
 AudioKit.start()
 
-class PlaygroundView: AKPlaygroundView, KeyboardDelegate {
-    var carrierMultiplierLabel: Label?
-    var modulatingMultiplierLabel: Label?
-    var modulationIndexLabel: Label?
+class PlaygroundView: AKPlaygroundView, AKKeyboardDelegate {
 
-    var attackLabel: Label?
-    var releaseLabel: Label?
+    var keyboard: AKKeyboardView?
 
     override func setup() {
         addTitle("FM Oscillator Bank")
 
+        addSubview(AKPropertySlider(
+            property: "Carrier Multiplier",
+            format: "%0.3f",
+            value: fmBank.carrierMultiplier, maximum: 2,
+            color: AKColor.redColor()
+        ) { multiplier in
+            fmBank.carrierMultiplier = multiplier
+            })
 
-        carrierMultiplierLabel = addLabel("Carrier Multiplier: \(osc.carrierMultiplier)")
-        addSlider(#selector(setCarrierMultiplier),
-                  value: osc.carrierMultiplier,
-                  minimum: 0.0,
-                  maximum: 2.0)
+        addSubview(AKPropertySlider(
+            property: "Modulating Multiplier",
+            format: "%0.3f",
+            value: fmBank.modulatingMultiplier, maximum: 2,
+            color: AKColor.greenColor()
+        ) { multiplier in
+            fmBank.modulatingMultiplier = multiplier
+            })
 
-        modulatingMultiplierLabel = addLabel("Modulating Multiplier: \(osc.modulatingMultiplier)")
-        addSlider(#selector(setModulatingMultiplier),
-                  value: osc.modulatingMultiplier,
-                  minimum: 0.0,
-                  maximum: 2.0)
+        addSubview(AKPropertySlider(
+            property: "Modulation Index",
+            format: "%0.3f",
+            value: fmBank.modulationIndex, maximum: 20,
+            color: AKColor.cyanColor()
+        ) { index in
+            fmBank.modulationIndex = index
+            })
 
-        modulationIndexLabel = addLabel("Modulation Index: \(osc.modulationIndex)")
-        addSlider(#selector(setModulationIndex),
-                  value: osc.modulationIndex,
-                  minimum: 0.0,
-                  maximum: 20.0)
+        addSubview(AKPropertySlider(
+            property: "Attack",
+            format: "%0.3f",
+            value: fmBank.attackDuration, maximum: 2,
+            color: AKColor.greenColor()
+        ) { duration in
+            fmBank.attackDuration = duration
+            })
 
+        addSubview(AKPropertySlider(
+            property: "Release",
+            format: "%0.3f",
+            value: fmBank.releaseDuration, maximum: 2,
+            color: AKColor.greenColor()
+        ) { duration in
+            fmBank.releaseDuration = duration
+            })
 
-        attackLabel = addLabel("Attack: \(osc.attackDuration)")
-        addSlider(#selector(setAttack), value: osc.attackDuration, minimum: 0.0, maximum: 2.0)
-
-        releaseLabel = addLabel("Release: \(osc.releaseDuration)")
-        addSlider(#selector(setRelease), value: osc.releaseDuration, minimum: 0.0, maximum: 2.0)
-
-        let keyboard = PolyphonicKeyboardView(width: 500, height: 100)
-        keyboard.frame.origin.y = CGFloat(yPosition)
-        keyboard.setNeedsDisplay()
-        keyboard.delegate = self
-        self.addSubview(keyboard)
+        keyboard = AKKeyboardView(width: 440, height: 100)
+        keyboard!.polyphonicMode = false
+        keyboard!.delegate = self
+        addSubview(keyboard!)
+        
+        addSubview(AKButton(title: "Go Polyphonic") {
+            self.keyboard?.polyphonicMode = !self.keyboard!.polyphonicMode
+            dump(self.keyboard?.polyphonicMode)
+            if self.keyboard!.polyphonicMode {
+                return "Go Monophonic"
+            } else {
+                return "Go Polyphonic"
+            }
+            })
     }
 
-    func noteOn(note: Int) {
-        osc.play(noteNumber: note, velocity: 80)
+    func noteOn(note: MIDINoteNumber) {
+        fmBank.play(noteNumber: note, velocity: 80)
     }
 
-    func noteOff(note: Int) {
-        osc.stop(noteNumber: note)
+    func noteOff(note: MIDINoteNumber) {
+        fmBank.stop(noteNumber: note)
     }
-
-    func setCarrierMultiplier(slider: Slider) {
-        osc.carrierMultiplier = Double(slider.value)
-        carrierMultiplierLabel!.text =
-            "Carrier Multiplier: \(String(format: "%0.3f", osc.carrierMultiplier))"
-    }
-
-    func setModulatingMultiplier(slider: Slider) {
-        osc.modulatingMultiplier = Double(slider.value)
-        modulatingMultiplierLabel!.text =
-            "Modulating Multiplier: \(String(format: "%0.3f", osc.modulatingMultiplier))"
-    }
-
-    func setModulationIndex(slider: Slider) {
-        osc.modulationIndex = Double(slider.value)
-        modulationIndexLabel!.text =
-            "Modulation Index: \(String(format: "%0.3f", osc.modulationIndex))"
-    }
-
-    func setAttack(slider: Slider) {
-        osc.attackDuration = Double(slider.value)
-        attackLabel!.text = "Attack: \(String(format: "%0.3f", osc.attackDuration))"
-    }
-
-    func setRelease(slider: Slider) {
-        osc.releaseDuration = Double(slider.value)
-        releaseLabel!.text = "Release: \(String(format: "%0.3f", osc.releaseDuration))"
-    }
-
-
 }
 
-
-let view = PlaygroundView(frame: CGRect(x: 0, y: 0, width: 500, height: 550))
 XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-XCPlaygroundPage.currentPage.liveView = view
-
+XCPlaygroundPage.currentPage.liveView = PlaygroundView()
 {% endhighlight %}

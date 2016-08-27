@@ -5,15 +5,11 @@
 {% highlight ruby %}import XCPlayground
 import AudioKit
 
-let file = try AKAudioFile(readFileName: "drumloop.wav", baseDir: .Resources)
+let file = try AKAudioFile(readFileName: processingPlaygroundFiles[0],
+                           baseDir: .Resources)
 
-{% endhighlight %}
-<p>Here we set up a player to the loop the file&#39;s playback</p>
-
-{% highlight ruby %}var player = try AKAudioPlayer(file: file)
+var player = try AKAudioPlayer(file: file)
 player.looping = true
-
-
 
 func multitapDelay(input: AKNode, times: [Double], gains: [Double]) -> AKMixer {
     let mix = AKMixer(input)
@@ -24,14 +20,18 @@ func multitapDelay(input: AKNode, times: [Double], gains: [Double]) -> AKMixer {
     return mix
 }
 
-// Delay Properties
-var delayTime = 0.2 // Seconds
+{% endhighlight %}
+<p>Delay Properties</p>
+
+{% highlight ruby %}var delayTime = 0.2 // Seconds
 var delayMix  = 0.4 // 0 (dry) - 1 (wet)
 let gains = [0.5, 0.25, 0.15].map { gain -> Double in gain * delayMix }
 let input = player
 
-// Delay Definition
-let leftDelay = multitapDelay(input,
+{% endhighlight %}
+<p>Delay Definition</p>
+
+{% highlight ruby %}let leftDelay = multitapDelay(input,
     times: [1.5, 2.5, 3.5].map { t -> Double in t * delayTime },
     gains: gains)
 let rightDelay = multitapDelay(input,

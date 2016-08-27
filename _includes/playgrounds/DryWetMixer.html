@@ -13,9 +13,8 @@ import AudioKit
 {% endhighlight %}
 <p>This section prepares the players</p>
 
-{% highlight ruby %}let bundle = NSBundle.mainBundle()
-let drumFile   = try AKAudioFile(readFileName: "drumloop.wav", baseDir: .Resources)
-var drums  = try AKAudioPlayer(file: drumFile)
+{% highlight ruby %}let file = try AKAudioFile(readFileName: "drumloop.wav", baseDir: .Resources)
+var drums = try AKAudioPlayer(file: file)
 drums.looping  = true
 
 {% endhighlight %}
@@ -43,36 +42,25 @@ drums.play()
 
 {% highlight ruby %}
 class PlaygroundView: AKPlaygroundView {
-
+    
     var balanceLabel: Label?
-
+    
     override func setup() {
         addTitle("Dry Wet Mix")
-
-        addLabel("Audio Playback")
-        addButton("Start", action: #selector(start))
-        addButton("Stop", action: #selector(stop))
-
-        balanceLabel = addLabel("Balance: \(mixture.balance)")
-        addSlider(#selector(setDuration), value: mixture.balance)
+        
+        addSubview(AKBypassButton(node: drums))
+        
+        addSubview(AKPropertySlider(
+            property: "Balance",
+            value: mixture.balance,
+            color: AKColor.cyanColor()
+        ) { sliderValue in
+            mixture.balance = sliderValue
+            })
     }
-
-    func start() {
-        drums.play()
-    }
-    func stop() {
-        drums.stop()
-    }
-
-    func setDuration(slider: Slider) {
-        mixture.balance = Double(slider.value)
-        balanceLabel!.text = "Balance: \(String(format: "%0.3f", mixture.balance))"
-    }
-
 }
 
-let view = PlaygroundView(frame: CGRect(x: 0, y: 0, width: 500, height: 300))
 XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-XCPlaygroundPage.currentPage.liveView = view
+XCPlaygroundPage.currentPage.liveView = PlaygroundView()
 
 {% endhighlight %}
