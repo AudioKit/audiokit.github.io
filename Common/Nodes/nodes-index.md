@@ -5,27 +5,21 @@ permalink: /nodes/
 layout: section_index_header
 ---
 <h1 class="center">The Basics</h1>
-A node is simply an object that will take in audio input(s), process the input, and pass the processed audio to another node, or to the Digital-Analog Converter (speaker)
+A node is simply an object that will take in audio input(s), process the input, and pass the processed audio to another node, or to the Digital-Analog Converter (speaker). Here the basic classes and protocols that are the building blocks for all of the AudioKit nodes. 
 
 #### AKNode
-Is the parent class for all other AudioKit nodes. Inherits from the abstract class, AVAudioNode.
+Is the parent class for all AudioKit nodes. Inherits from the abstract class, AVAudioNode.
 
 #### AKPolyphonic
-Protocol for responding to play and stop of MIDI notes
+This protocol allows AudioKit to play and stop MIDI notes.
 
-##### AKPolyphonicNode
+<img src="/Common/Nodes/midi-notes.GIF" alt="">
+
+#### AKPolyphonicNode
 Creates a useable, bare bones implementation of AKPolyphonic protocol
 
 #### AKToggleable
-Protocol for dictating that a node can be in a started or stopped state. It's extension allows nodes that conform to AKToggleable to use the following:
-
-Variables 
-
-isPlaying, isStopped, isBypassed
-
-Functions 
-
-play, bypass
+Protocol that allows a node to be in a started or stopped state.
 
 #### AKOperationGenerator
 Operation-based generator

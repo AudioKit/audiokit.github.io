@@ -4,19 +4,28 @@ header: Generator Nodes
 permalink: /nodes/generators
 layout: nodes
 ---
+
+AudioKit provides a variety of built in generators
+
 ## Noise Generator Nodes
 
-### AKPinkNoise
+<div class="row">
+  <div class="col-sm-6 center">
+    <h3>AKPinkNoise</h3>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Pink_noise_spectrum.svg" alt="" height="300">
+    <audio src="/Common/Nodes/Generators/Pink_noise.ogg" preload="auto" controls>
+    <p>Your browser does not support the <code>audio</code> element.</p>
+    </audio>
+  </div>
+  <div class="col-sm-6 center">
+    <h3>AKWhiteNoise</h3>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/White_noise_spectrum.svg" alt="" height="300">
+    <audio src="/Common/Nodes/Generators/White_noise.ogg" preload="auto" controls>
+    <p>Your browser does not support the <code>audio</code> element.</p>
+    </audio>
+  </div>
+</div>
 
-<audio src="/Common/Nodes/Generators/Pink_noise.ogg" preload="auto" controls>
-<p>Your browser does not support the <code>audio</code> element.</p>
-</audio>
-
-### AKWhiteNoise
-
-<audio src="/Common/Nodes/Generators/White_noise.ogg" preload="auto" controls>
-<p>Your browser does not support the <code>audio</code> element.</p>
-</audio>
 
 <h1 class="center">See Them in Action</h1>
 
