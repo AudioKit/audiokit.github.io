@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<section id="page-title">
+    <div class="container clearfix">
+        <h1>
+          {% if page.header != '' %}
+            {{ page.header }}
+          {% else %}
+            {{ page.title }}
+          {% endif %}
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li><a href="/nodes/">Nodes</a></li>
+            <li><a href="/nodes/effects">Effects</a></li>
+            <li class="active">
+              {% if page.header != '' %}
+                {{ page.header }}
+              {% else %}
+                {{ page.title }}
+              {% endif %}
+            </li>
+        </ol>
+    </div>
+
+</section><!-- #page-title end -->
+<section id="content">
+
+    <div class="content-wrap">
+
+        <div class="container clearfix">
+        <h1 class="center">Overview</h1>
+            {{ content }}
+        </div>
+
+    </div>
+
+</section><!-- #content end -->

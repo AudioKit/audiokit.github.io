@@ -10,13 +10,18 @@ A node is simply an object that will take in audio input(s), process the input, 
 #### AKNode
 Is the parent class for all AudioKit nodes. Inherits from the abstract class, AVAudioNode.
 
-#### AKPolyphonic
-This protocol allows AudioKit to play and stop MIDI notes.
+<div class="row">
+  <div class="col-sm-6">
+    <h4>AKPolyphonic</h4>
+    <p>This protocol allows AudioKit to play and stop MIDI notes.</p>
+    <h4>AKPolyphonicNode</h4>
+    <p>Creates a useable, bare bones implementation of AKPolyphonic protocol</p>
+  </div>
+  <div class="col-sm-6">
+     <img src="/Common/Nodes/midi-notes.GIF" alt="">
+  </div>
+</div>
 
-<img src="/Common/Nodes/midi-notes.GIF" alt="">
-
-#### AKPolyphonicNode
-Creates a useable, bare bones implementation of AKPolyphonic protocol
 
 #### AKToggleable
 Protocol that allows a node to be in a started or stopped state.

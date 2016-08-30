@@ -17,7 +17,7 @@ Performs a "root-mean-square" on a signal to get overall amplitude of a signal. 
   </div>
   
   <div class="col-sm-6">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/VU_Meter.jpg" alt="VU Meter">
+    <img src="/Common/Nodes/vu.jpeg" alt="VU Meter">
   </div>
 </div>
 <br>
@@ -33,12 +33,7 @@ Parameters:
 * peakCount: Number of Peaks
 
 <h1 class="center">See Them in Action</h1>
-[Tracking Amplitude Playground](/playgrounds/Tracking%20Amplitude/)
+[Analysis Playgrounds](/playgrounds/Analysis/)
 
-[Tracking Frequency Playground](/playgrounds/Tracking%20Frequency/)
-
-[Tracking Frequency of an Audiofile Playground](/playgrounds/Tracking%20Amplitude/)
-
-[FFT Analysis Playground](/playgrounds/Tracking%20Amplitude/)
 
 
