@@ -1,6 +1,5 @@
 ---
 layout: default
-section: tutorials
 ---
 
 <section id="page-title">
@@ -15,7 +14,7 @@ section: tutorials
         </h1>
         <ol class="breadcrumb">
             <li><a href="/">Home</a></li>
-             <li><a href="/v2/tutorials/">Tutorials</a></li>
+             <li><a href="/nodes/">Nodes</a></li>
             <li class="active">
               {% if page.header != '' %}
                 {{ page.header }}
@@ -32,33 +31,10 @@ section: tutorials
     <div class="content-wrap">
 
         <div class="container clearfix">
+        <h1 class="center">Overview</h1>
             {{ content }}
-
-
-{% if page.prev_section != null or page.next_section != null %}
-
-    {% if page.prev_section != null %}
-      <a href="{{ page.prev_section }}" class="button button-3d button-xlarge button-rounded button-red">
-        Back
-      </a>
-    {% else %}
-    {% endif %}
-    {% if page.next_section != null %}
-      <a href="{{ page.next_section }}" class="button button-3d button-xlarge button-rounded button-green">
-        Next
-      </a>
-    {% else %}
-    {% endif %}
-
-{% endif %}
-
-
         </div>
 
     </div>
 
 </section><!-- #content end -->
-
-
-
-
