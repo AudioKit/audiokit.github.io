@@ -37,4 +37,4 @@ let player = try? AKAudioPlayer(file: guitarLoop!, completionHandler: myCompleti
 
 <h1 class="center">See Them in Action</h1>
 
-[Audio Player Playground](/playgrounds/Audio%20Player/)
+[Audio Player Playground](/playgrounds/Playback/Audio%20Player/)
