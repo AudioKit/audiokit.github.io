@@ -1,0 +1,49 @@
+---
+layout: section_index
+header: Works in Progress
+title: Works in Progress
+permalink: /wip/
+---
+
+<p>AudioKit is under continuous development.  While we attempt to keep the master branch stable, our development work is done in the public eye, on the develop branch and other goal-specific branches.</p>
+
+<p>As of this writing, there is a lot to do, so we're publishing all these goals so that a) people know what we're working on, and b) people can volunteer to help.</p>
+
+<h3>Xcode8 and Swift 3.0</h3>
+
+<p>Currently AudioKit's "Xcode8-Swift2.3" branch works in Xcode 8 in Swift 2.3 compatibilty mode.  But, we still need to convert AudioKit to Swift 3.  With the shift from Xcode7 to 8 and Swift 2 to 3, its a particular challenging time for framework developers.</p>
+
+<h3>Interapp Audio / AudioBus</h3>
+
+<p>We're working at making it very easy for AudioKit apps to receive audio and MIDI as well as transmit audio and MIDI to other apps via inter-app audio.  We're trying to make a system that will make this almost "automatic" with minimal configuration for the developer.</p>
+
+<h3>Offline Rendering</h3>
+
+<p>A number of people have requested being able to process an audio file, applying effects and filters, in a faster-than-realtime audio context.  This is very doable with AudioKit and in fact our test project does this, but it only stores the processed audio in memory.  In order to do offline rendering we just need to extend this process to save the data in to a new file.</p>
+
+<h3>New AudioKit Synth app</h3>
+
+<p>We're building a replacement to AudioKit's Analog Synth X demo app that includes many new features and optimizations including improved filters, touchpad controls, sequencing, improved UI, saveable presets, and more.</p>
+
+<h3>AudioKit MIDI revamp</h3>
+
+<p>While AudioKit's MIDI is good, we would like to make it even easier to use, especially when it comes to sequencing. We also want to create more MIDI file manipulation and saving capabilities.
+</p>
+
+<h3>More sound generators, especially physical models</h3>
+
+<p>We have the ability to use models within Stanford's Synthesis Toolkit library, but in order to make them easy to use, and have examples and playgrounds, this is a very large amount of work.</p>
+
+<h3>Web site and documentation updates</h3>
+
+<p>While we have a pretty good auto-generated documentation in the /docs/ portion of the web site, we also need to add more explanatory documentation in the form of web page discussions.  This process has already begun, but it is an enormous undertaking in and of itself, so its worth mentioning here.
+
+<h3>Efficiency Updates</h3>
+
+<p>Recently Vladimir found a problem in v3.3 that showed that at least some operations were more efficient in v3.2. This type of bug is of very high importance to us.</p>
+
+<h3>And more...</h3>
+
+<p>And really every day something comes up. :)  We're certainly happy to have users but we also need more core team members to help share the load.  We can't forget that we have day jobs, clients, family obligations, and need to stay healthy as well!</p>
+
+<p>So, if you have any interest in chipping in, we're opening up our Slack group to all interested, capable parties.  Please join us!  Thanks in advance.</p>
