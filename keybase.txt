@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/aurephd
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://audiokit.io
+  * I am aurephd (https://keybase.io/aurephd) on keybase.
+  * I have a public key ASAr8ZbjJjLqYxh8ldP-NEzSb46sCArg_UJNKA-igMoN3wo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01202bf196e32632ea63187c95d3fe344cd26f8eac080ae0fd424d280fa280ca0ddf0a",
+            "host": "keybase.io",
+            "kid": "01202bf196e32632ea63187c95d3fe344cd26f8eac080ae0fd424d280fa280ca0ddf0a",
+            "uid": "806a533126edcb70b18e62e8d4fc0319",
+            "username": "aurephd"
+        },
+        "service": {
+            "hostname": "audiokit.io",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.17"
+    },
+    "ctime": 1474322314,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1474322202,
+        "hash": "275dcb934acefee9bd5b11f33a9a2f1c2ff8ebff6a3f0979ce962abfa1e14c55c41762a7a724741b02700949d6e733ae6f046d1eda5bd0bc579bca921164d0ff",
+        "seqno": 643833
+    },
+    "prev": "bfbff0ce15fee6f69979427901a4a5b2f5b6b7442352c1d0ce1b1a2f89c838b5",
+    "seqno": 10,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgK/GW4yYy6mMYfJXT/jRM0m+OrAgK4P1CTSgPooDKDd8Kp3BheWxvYWTFAvJ7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMmJmMTk2ZTMyNjMyZWE2MzE4N2M5NWQzZmUzNDRjZDI2ZjhlYWMwODBhZTBmZDQyNGQyODBmYTI4MGNhMGRkZjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMmJmMTk2ZTMyNjMyZWE2MzE4N2M5NWQzZmUzNDRjZDI2ZjhlYWMwODBhZTBmZDQyNGQyODBmYTI4MGNhMGRkZjBhIiwidWlkIjoiODA2YTUzMzEyNmVkY2I3MGIxOGU2MmU4ZDRmYzAzMTkiLCJ1c2VybmFtZSI6ImF1cmVwaGQifSwic2VydmljZSI6eyJob3N0bmFtZSI6ImF1ZGlva2l0LmlvIiwicHJvdG9jb2wiOiJodHRwOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4xNyJ9LCJjdGltZSI6MTQ3NDMyMjMxNCwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDc0MzIyMjAyLCJoYXNoIjoiMjc1ZGNiOTM0YWNlZmVlOWJkNWIxMWYzM2E5YTJmMWMyZmY4ZWJmZjZhM2YwOTc5Y2U5NjJhYmZhMWUxNGM1NWM0MTc2MmE3YTcyNDc0MWIwMjcwMDk0OWQ2ZTczM2FlNmYwNDZkMWVkYTViZDBiYzU3OWJjYTkyMTE2NGQwZmYiLCJzZXFubyI6NjQzODMzfSwicHJldiI6ImJmYmZmMGNlMTVmZWU2ZjY5OTc5NDI3OTAxYTRhNWIyZjViNmI3NDQyMzUyYzFkMGNlMWIxYTJmODljODM4YjUiLCJzZXFubyI6MTAsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAMIOsqDz94NoZw/A4B1eWX0To5AjUVXTKg2C4ew8C1EntkNfl5U0qKcuPC46PhMVWZTfqgZxgR51RHv9cNhYlDahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIOa5SB42T073w95+QDicZH/qfJrNVk7Gef7sbmXkXFG/o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/aurephd
+
+==================================================================
