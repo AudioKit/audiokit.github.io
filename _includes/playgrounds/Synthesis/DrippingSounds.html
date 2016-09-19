@@ -1,10 +1,9 @@
 <p><h3>Dripping Sounds
-</h3><h4>Physical model of a water drop letting hitting a pool.
-</h4><h4>What&#39;s this good for?  We don&#39;t know, but hey it&#39;s cool. :)
-</h4></p>
+</h3> Physical model of a water drop letting hitting a pool.
+ What&#39;s this good for?  We don&#39;t know, but hey it&#39;s cool. :)</p>
 
 {% highlight ruby %}import AudioKit
-import XCPlayground
+import PlaygroundSupport
 
 var playRate = 2.0
 
@@ -21,30 +20,30 @@ AKPlaygroundLoop(frequency: playRate) {
 }
 
 class PlaygroundView: AKPlaygroundView {
-    
+
     override func setup() {
-        
+
         addTitle("Dripping Sounds")
-        
+
         addSubview(AKPropertySlider(
             property: "Intensity",
             value: drip.intensity, maximum: 300,
-            color: AKColor.redColor()
+            color: AKColor.red
         ) { sliderValue in
             drip.intensity = sliderValue
             })
-        
+
         addSubview(AKPropertySlider(
             property: "Damping Factor",
             value: drip.dampingFactor, maximum: 2,
-            color: AKColor.greenColor()
+            color: AKColor.green
         ) { sliderValue in
             drip.dampingFactor = sliderValue
             })
         addSubview(AKPropertySlider(
             property: "Energy Return",
             value: drip.energyReturn, maximum: 5,
-            color: AKColor.yellowColor()
+            color: AKColor.yellow
         ) { sliderValue in
             drip.energyReturn = sliderValue
             })
@@ -52,7 +51,7 @@ class PlaygroundView: AKPlaygroundView {
             property: "Main Resonant Frequency",
             format: "%0.1f Hz",
             value: drip.mainResonantFrequency, maximum: 800,
-            color: AKColor.cyanColor()
+            color: AKColor.cyan
         ) { sliderValue in
             drip.mainResonantFrequency = sliderValue
             })
@@ -60,7 +59,7 @@ class PlaygroundView: AKPlaygroundView {
             property: "1st Resonant Frequency",
             format: "%0.1f Hz",
             value: drip.firstResonantFrequency, maximum: 800,
-            color: AKColor.cyanColor()
+            color: AKColor.cyan
         ) { sliderValue in
             drip.firstResonantFrequency = sliderValue
             })
@@ -68,7 +67,7 @@ class PlaygroundView: AKPlaygroundView {
             property: "2nd Resonant Frequency",
             format: "%0.1f Hz",
             value: drip.secondResonantFrequency, maximum: 800,
-            color: AKColor.cyanColor()
+            color: AKColor.cyan
         ) { sliderValue in
             drip.secondResonantFrequency = sliderValue
             })
@@ -76,5 +75,5 @@ class PlaygroundView: AKPlaygroundView {
 
 }
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-XCPlaygroundPage.currentPage.liveView = PlaygroundView(){% endhighlight %}
+PlaygroundPage.current.needsIndefiniteExecution = true
+PlaygroundPage.current.liveView = PlaygroundView(){% endhighlight %}

@@ -1,8 +1,7 @@
 <p><h3>Sawtooth Wave Oscillator Operation
-</h3><h4>Maybe the most annoying sound ever. Sorry.
-</h4></p>
+</h3> Maybe the most annoying sound ever. Sorry.</p>
 
-{% highlight ruby %}import XCPlayground
+{% highlight ruby %}import PlaygroundSupport
 import AudioKit
 
 {% endhighlight %}
@@ -20,5 +19,5 @@ AudioKit.start()
 
 generator.start()
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+PlaygroundPage.current.needsIndefiniteExecution = true
 {% endhighlight %}

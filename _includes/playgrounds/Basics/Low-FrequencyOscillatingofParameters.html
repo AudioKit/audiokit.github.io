@@ -1,9 +1,9 @@
 <p><h3>Low-Frequency Oscillation of Parameters
-</h3><h4>Often times we want rhythmic changing of parameters that varying in a standard way.
-</h4><h4>This is tradition done with Low-Frequency Oscillators, LFOs.
+</h3><h4>Oftentimes we want rhythmic changing of parameters that varying in a standard way.
+</h4><h4>This is traditionally done with Low-Frequency Oscillators, LFOs.
 </h4></p>
 
-{% highlight ruby %}import XCPlayground
+{% highlight ruby %}import PlaygroundSupport
 import AudioKit
 
 let generator = AKOperationGenerator() { _ in
@@ -29,5 +29,5 @@ AudioKit.start()
 
 generator.start()
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+PlaygroundPage.current.needsIndefiniteExecution = true
 {% endhighlight %}

@@ -1,14 +1,13 @@
 <p><h3>Peak Limiter
-</h3><h4>A peak limiter will set a hard limit on the amplitude of an audio signal.
-</h4><h4>They&#39;re espeically useful for any type of live input processing, when you
-</h4><h4>may not be in total control of the audio signal you&#39;re recording or processing.
-</h4></p>
+</h3> A peak limiter will set a hard limit on the amplitude of an audio signal.
+ They&#39;re espeically useful for any type of live input processing, when you
+ may not be in total control of the audio signal you&#39;re recording or processing.</p>
 
-{% highlight ruby %}import XCPlayground
+{% highlight ruby %}import PlaygroundSupport
 import AudioKit
 
 let file = try AKAudioFile(readFileName: processingPlaygroundFiles[0],
-                           baseDir: .Resources)
+                           baseDir: .resources)
 
 let player = try AKAudioPlayer(file: file)
 player.looping = true
@@ -41,7 +40,7 @@ class PlaygroundView: AKPlaygroundView {
             property: "Attack Time",
             format:  "%0.3f s",
             value: peakLimiter.attackTime, minimum: 0.001, maximum: 0.03,
-            color: AKColor.greenColor()
+            color: AKColor.green
         ) { sliderValue in
             peakLimiter.attackTime = sliderValue
             })
@@ -50,7 +49,7 @@ class PlaygroundView: AKPlaygroundView {
             property: "Decay Time",
             format:  "%0.3f s",
             value: peakLimiter.decayTime, minimum: 0.001, maximum: 0.03,
-            color: AKColor.greenColor()
+            color: AKColor.green
         ) { sliderValue in
             peakLimiter.decayTime = sliderValue
             })
@@ -59,13 +58,13 @@ class PlaygroundView: AKPlaygroundView {
             property: "Pre-gain",
             format:  "%0.1f dB",
             value: peakLimiter.preGain, minimum: -40, maximum: 40,
-            color: AKColor.greenColor()
+            color: AKColor.green
         ) { sliderValue in
             peakLimiter.preGain = sliderValue
             })
     }
 }
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-XCPlaygroundPage.currentPage.liveView = PlaygroundView()
+PlaygroundPage.current.needsIndefiniteExecution = true
+PlaygroundPage.current.liveView = PlaygroundView()
 {% endhighlight %}

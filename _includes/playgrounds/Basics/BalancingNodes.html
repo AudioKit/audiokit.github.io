@@ -1,17 +1,15 @@
 <p><h3>Balancing Nodes
-</h3><h4>Sometimes you want to ensure that an audio signal that you&#39;re processing
-</h4><h4>remains at a volume similar to where it started.
-</h4><h4>Such an application is perfect for the AKBalancer node.
-</h4></p>
+</h3> Sometimes you want to ensure that an audio signal that you&#39;re processing
+ remains at a volume similar to where it started.
+ Such an application is perfect for the AKBalancer node.</p>
 
-{% highlight ruby %}import XCPlayground
+{% highlight ruby %}import PlaygroundSupport
 import AudioKit
 
 {% endhighlight %}
 <p>This section prepares the players</p>
 
-{% highlight ruby %}let bundle = NSBundle.mainBundle()
-let file = try AKAudioFile(readFileName: "drumloop.wav", baseDir: .Resources)
+{% highlight ruby %}let file = try AKAudioFile(readFileName: "drumloop.wav", baseDir: .resources)
 var source = try AKAudioPlayer(file: file)
 source.looping = true
 
@@ -32,17 +30,17 @@ source.play()
 
 {% highlight ruby %}
 class PlaygroundView: AKPlaygroundView {
-    
+
     override func setup() {
         addTitle("Balancing Nodes")
-        
+
         addLabel("Listen to the difference in volume:")
         addSubview(AKBypassButton(node: rebalancedWithSource))
     }
-    
+
 }
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-XCPlaygroundPage.currentPage.liveView = PlaygroundView()
+PlaygroundPage.current.needsIndefiniteExecution = true
+PlaygroundPage.current.liveView = PlaygroundView()
 
 {% endhighlight %}

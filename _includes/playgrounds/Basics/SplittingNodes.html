@@ -1,16 +1,15 @@
 <p><h3>Splitting Nodes
-</h3><h4>All nodes in AudioKit can have multiple destinations, the only
-</h4><h4>caveat is that all of the destinations do have to eventually be mixed
-</h4><h4>back together and none of the parallel signal paths can have any time stretching.
-</h4></p>
+</h3> All nodes in AudioKit can have multiple destinations, the only
+ caveat is that all of the destinations do have to eventually be mixed
+ back together and none of the parallel signal paths can have any time stretching.</p>
 
-{% highlight ruby %}import XCPlayground
+{% highlight ruby %}import PlaygroundSupport
 import AudioKit
 
 {% endhighlight %}
 <p>Prepare the source audio player</p>
 
-{% highlight ruby %}let file = try AKAudioFile(readFileName: "drumloop.wav", baseDir: .Resources)
+{% highlight ruby %}let file = try AKAudioFile(readFileName: "drumloop.wav", baseDir: .resources)
 
 let player = try AKAudioPlayer(file: file)
 player.looping = true
@@ -36,6 +35,5 @@ AudioKit.output = mixer
 AudioKit.start()
 player.play()
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-
+PlaygroundPage.current.needsIndefiniteExecution = true
 {% endhighlight %}

@@ -1,8 +1,7 @@
 <p><h3>Telephone
-</h3><h4>AudioKit is great for sound design. This playground creates canonical telephone sounds.
-</h4></p>
+</h3> AudioKit is great for sound design. This playground creates canonical telephone sounds.</p>
 
-{% highlight ruby %}import XCPlayground
+{% highlight ruby %}import PlaygroundSupport
 import AudioKit
 
 {% endhighlight %}
@@ -55,7 +54,7 @@ import AudioKit
 <p><h3>Key presses
 </h3> All the digits are also just combinations of sine waves</p>
 
-<p>Here is the canonical specification of DTMF Tones</p>
+<p>The canonical specification of DTMF Tones:</p>
 
 {% highlight ruby %}var keys = [String: [Double]]()
 keys["1"] = [697, 1209]
@@ -136,6 +135,6 @@ keypad.start()
     }
 }
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-XCPlaygroundPage.currentPage.liveView = PlaygroundView()
+PlaygroundPage.current.needsIndefiniteExecution = true
+PlaygroundPage.current.liveView = PlaygroundView()
 {% endhighlight %}

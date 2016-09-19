@@ -1,8 +1,7 @@
 <p><h3>Phasor Operation
-</h3><h4>Using the phasor to sweep amplitude and frequencies
-</h4></p>
+</h3> Using the phasor to sweep amplitude and frequencies</p>
 
-{% highlight ruby %}import XCPlayground
+{% highlight ruby %}import PlaygroundSupport
 import AudioKit
 
 let interval: Double = 2
@@ -25,5 +24,5 @@ AudioKit.output = generator
 AudioKit.start()
 generator.start()
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+PlaygroundPage.current.needsIndefiniteExecution = true
 {% endhighlight %}

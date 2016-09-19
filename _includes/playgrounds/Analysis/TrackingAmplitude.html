@@ -1,10 +1,9 @@
 <p><h3>Tracking Amplitude
-</h3><h4>Here, we show how you can determine the amplitude of an audio signal by
-</h4><h4>outputting the value of a generator node into the AKAmplitudeTracker.
-</h4><h4>This node is great if you want to build an app that does audio monitoring and analysis.
-</h4></p>
+</h3> Determing the amplitude of an audio signal by
+ outputting the value of a generator node into the AKAmplitudeTracker.
+ This node is great if you want to build an app that does audio monitoring and analysis.</p>
 
-{% highlight ruby %}import XCPlayground
+{% highlight ruby %}import PlaygroundSupport
 import AudioKit
 
 {% endhighlight %}
@@ -31,42 +30,42 @@ oscillatorNode.start()
 
 {% highlight ruby %}
 class PlaygroundView: AKPlaygroundView {
-    
+
     var trackedAmplitudeSlider: AKPropertySlider?
-    
+
     override func setup() {
-        
+
         AKPlaygroundLoop(every: 0.1) {
             self.trackedAmplitudeSlider?.value = trackedAmplitude.amplitude
         }
-        
+
         addTitle("Tracking Amplitude")
-        
+
         trackedAmplitudeSlider = AKPropertySlider(
             property: "Tracked Amplitude",
             format: "%0.3f",
             value: 0, maximum: 0.55,
-            color: AKColor.greenColor()
+            color: AKColor.green
         ) { sliderValue in
             // Do nothing, just for display
             }
         addSubview(trackedAmplitudeSlider!)
-        
+
         addSubview(AKRollingOutputPlot.createView())
     }
 }
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-XCPlaygroundPage.currentPage.liveView = PlaygroundView()
+PlaygroundPage.current.needsIndefiniteExecution = true
+PlaygroundPage.current.liveView = PlaygroundView()
 
 {% endhighlight %}
 <p>This keeps the playground running so that audio can play for a long time</p>
 
-{% highlight ruby %}XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+{% highlight ruby %}PlaygroundPage.current.needsIndefiniteExecution = true
 
 
 {% endhighlight %}
-<p>You can experiment with this playground by changing the volume function to a
+<p>Experiment with this playground by changing the volume function to a
  phasor or another well-known function to see how well the amplitude tracker
  can track.  Also, you could change the sound source from an oscillator to a
  noise generator, or any constant sound source (some things like a physical

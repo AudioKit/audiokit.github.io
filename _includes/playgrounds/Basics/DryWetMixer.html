@@ -1,34 +1,33 @@
 <p><h3>Dry Wet Mixer
-</h3><h4>It&#39;s a very common operation to mix exactly two inputs, one before
-</h4><h4>processing occurs, and one after, and then mixing down to a combination
-</h4><h4>of the two.  This is so common that most of the AudioKit nodes have a
-</h4><h4>dry/wet mix parameter built in.  But, if you are building your own
-</h4><h4>custom effects, or making a long chain of effects, you can use
-</h4><h4>AKDryWetMixer to blend your signals.
-</h4></p>
+</h3> It&#39;s a very common operation to mix exactly two inputs, one before
+ processing occurs, and one after, and then mixing down to a combination
+ of the two.  This is so common that most of the AudioKit nodes have a
+ dry/wet mix parameter built in.  But, if you are building your own
+ custom effects, or making a long chain of effects, you can use
+ AKDryWetMixer to blend your signals.</p>
 
-{% highlight ruby %}import XCPlayground
+{% highlight ruby %}import PlaygroundSupport
 import AudioKit
 
 {% endhighlight %}
 <p>This section prepares the players</p>
 
-{% highlight ruby %}let file = try AKAudioFile(readFileName: "drumloop.wav", baseDir: .Resources)
+{% highlight ruby %}let file = try AKAudioFile(readFileName: "drumloop.wav", baseDir: .resources)
 var drums = try AKAudioPlayer(file: file)
 drums.looping  = true
 
 {% endhighlight %}
-<p>Let&#39;s build a chain:</p>
+<p>Build an effects chain:</p>
 
 {% highlight ruby %}
 var delay = AKDelay(drums)
 delay.time = 0.1
 delay.feedback = 0.8
 let reverb = AKReverb(delay)
-reverb.loadFactoryPreset(.LargeChamber)
+reverb.loadFactoryPreset(.largeChamber)
 
 {% endhighlight %}
-<p>Now let&#39;s mix the result of those two processors back with the original</p>
+<p>Mix the result of those two processors back with the original</p>
 
 {% highlight ruby %}
 let mixture = AKDryWetMixer(drums, reverb, balance: 0.5)
@@ -42,25 +41,25 @@ drums.play()
 
 {% highlight ruby %}
 class PlaygroundView: AKPlaygroundView {
-    
+
     var balanceLabel: Label?
-    
+
     override func setup() {
         addTitle("Dry Wet Mix")
-        
+
         addSubview(AKBypassButton(node: drums))
-        
+
         addSubview(AKPropertySlider(
             property: "Balance",
             value: mixture.balance,
-            color: AKColor.cyanColor()
+            color: AKColor.cyan
         ) { sliderValue in
             mixture.balance = sliderValue
             })
     }
 }
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-XCPlaygroundPage.currentPage.liveView = PlaygroundView()
+PlaygroundPage.current.needsIndefiniteExecution = true
+PlaygroundPage.current.liveView = PlaygroundView()
 
 {% endhighlight %}

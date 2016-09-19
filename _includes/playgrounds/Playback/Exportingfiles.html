@@ -1,8 +1,7 @@
 <p><h3>Exporting Audio Files
-</h3><h4>AKAudioFiles can be easily converted to major audio formats asynchronously.
-</h4></p>
+</h3> AKAudioFiles can be easily converted to major audio formats asynchronously.</p>
 
-{% highlight ruby %}import XCPlayground
+{% highlight ruby %}import PlaygroundSupport
 import AudioKit
 
 {% endhighlight %}
@@ -27,7 +26,7 @@ player!.play()
 {% highlight ruby %}// func callback(processedFile: AKAudioFile?, error: NSError?) -> Void
 {% endhighlight %}
 <p>If export failed, &quot;processedFile&quot; will be nil. We can get the error thrown using &quot;error&quot; parameter. If export succeeded, no error will be set (error = nil) and we can get the exported file as an AKAudioFile.
- Here, our callBack will print some information and replace the file being played with the exported file.</p>
+ Our callBack will print some information and replace the file being played with the exported file.</p>
 
 {% highlight ruby %}func callBack(processedFile: AKAudioFile?, error: NSError?){
     print("Export completed !")
@@ -49,16 +48,16 @@ player!.play()
 {% endhighlight %}
 <p>Now we can export our mixloop into a compressed .mp4 file :</p>
 
-{% highlight ruby %}mixloop.exportAsynchronously(name: "test", baseDir: .Documents,exportFormat: .mp4, callBack: callBack)
+{% highlight ruby %}mixloop.exportAsynchronously(name: "test", baseDir: .documents,exportFormat: .mp4, callBack: callBack)
 
 {% endhighlight %}
 <p>We can convert our file to .WAV format, and this time, we&#39;ll set a range for our export</p>
 
-{% highlight ruby %}mixloop.exportAsynchronously(name: "test2", baseDir: .Documents,exportFormat: .wav,  fromSample: 10000, toSample: 20000, callBack: callBack)
+{% highlight ruby %}mixloop.exportAsynchronously(name: "test2", baseDir: .documents,exportFormat: .wav,  fromSample: 10000, toSample: 20000, callBack: callBack)
 
 /// Let's pick another file to convert to .aif.
 let drumloop = try AKAudioFile(readFileName: "drumloop.wav")
-drumloop.exportAsynchronously(name: "test3", baseDir: .Documents, exportFormat: .aif, fromSample: 20000, toSample: 40000,  callBack: callBack)
+drumloop.exportAsynchronously(name: "test3", baseDir: .documents, exportFormat: .aif, fromSample: 20000, toSample: 40000,  callBack: callBack)
 
 {% endhighlight %}
 <p>Each time an export has been completed and succeeded, the player will be set to play it.</p>
@@ -67,7 +66,7 @@ drumloop.exportAsynchronously(name: "test3", baseDir: .Documents, exportFormat: 
 {% endhighlight %}
 <p>Check the debug area. You&#39;ll notice that all file exports are done serially, in the order we set them...</p>
 
-{% highlight ruby %}XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+{% highlight ruby %}PlaygroundPage.current.needsIndefiniteExecution = true
 {% endhighlight %}
 <p>Be aware that PCM format files can be converted to PCM or compressed formats. But compressed m4a or mp4 audiofiles cannot be converted to PCM files (.wav or .aif). For converting from any format compressed format to PCM, you can use AKAudioFile.extract or AKAudioFile.extractAsynchronously() methods (will convert to .CAF PCM). The resulting file can then be exported to .mp4, m4a, .wav, or .aif.</p>
 

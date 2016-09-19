@@ -1,12 +1,11 @@
 <p><h3>Phase-Locked Vocoder
-</h3><h4>A different kind of time and pitch stretching
-</h4></p>
+</h3> A different kind of time and pitch stretching</p>
 
-{% highlight ruby %}import XCPlayground
+{% highlight ruby %}import PlaygroundSupport
 import AudioKit
 
 let file = try AKAudioFile(readFileName: "poney.mp3",
-                           baseDir: .Resources)
+                           baseDir: .resources)
 let phaseLockedVocoder = AKPhaseLockedVocoder(file: file)
 
 AudioKit.output = phaseLockedVocoder
@@ -25,5 +24,5 @@ AKPlaygroundLoop(every: timeStep) {
     if phaseLockedVocoder.position < 0.01 && timeStep < 0 { timeStep = random(0.1, 0.3) }
 }
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+PlaygroundPage.current.needsIndefiniteExecution = true
 {% endhighlight %}

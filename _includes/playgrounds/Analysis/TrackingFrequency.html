@@ -1,10 +1,9 @@
 <p><h3>Tracking Frequency
-</h3><h4>Tracking frequency is just as easy as tracking amplitude, and even
-</h4><h4>includes amplitude, but it is more CPU intensive, so if you just need amplitude,
-</h4><h4>use the amplitude tracker.
-</h4></p>
+</h3> Tracking frequency is just as easy as tracking amplitude, and even
+ includes amplitude, but it is more CPU intensive, so if you just need amplitude,
+ use the amplitude tracker.</p>
 
-{% highlight ruby %}import XCPlayground
+{% highlight ruby %}import PlaygroundSupport
 import AudioKit
 
 {% endhighlight %}
@@ -39,26 +38,26 @@ secondaryOscillator.start()
 
 {% highlight ruby %}
 class PlaygroundView: AKPlaygroundView {
-    
+
     var trackedAmplitudeSlider: AKPropertySlider?
     var trackedFrequencySlider: AKPropertySlider?
-    
+
     override func setup() {
-        
+
         AKPlaygroundLoop(every: 0.1) {
             self.trackedAmplitudeSlider?.value = tracker.amplitude
             self.trackedFrequencySlider?.value = tracker.frequency
             secondaryOscillator.frequency = tracker.frequency
             secondaryOscillator.amplitude = tracker.amplitude
         }
-        
+
         addTitle("Tracking Frequency")
-        
+
         trackedAmplitudeSlider = AKPropertySlider(
             property: "Tracked Amplitude",
             format: "%0.3f",
             value: 0, maximum: 0.8,
-            color: AKColor.greenColor()
+            color: AKColor.green
         ) { sliderValue in
             // Do nothing, just for display
         }
@@ -68,7 +67,7 @@ class PlaygroundView: AKPlaygroundView {
             property: "Tracked Frequency",
             format: "%0.3f",
             value: 0, maximum: 2400,
-            color: AKColor.redColor()
+            color: AKColor.red
         ) { sliderValue in
             // Do nothing, just for display
         }
@@ -78,6 +77,6 @@ class PlaygroundView: AKPlaygroundView {
     }
 }
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-XCPlaygroundPage.currentPage.liveView = PlaygroundView()
+PlaygroundPage.current.needsIndefiniteExecution = true
+PlaygroundPage.current.liveView = PlaygroundView()
 {% endhighlight %}

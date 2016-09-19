@@ -1,14 +1,13 @@
 <h3>Metronome
 </h3>
 
-<h4>Although AudioKit operations are a somewhat advanced topic, this 
-</h4><h4>is a simple example of creating a metronome with operations.  
-</h4><h4>It's just important that you know that operations that can do very
-</h4><h4>complex synthesis and effect processing is capable in AudioKit.
-</h4>
+<p>Although AudioKit operations are a somewhat advanced topic, this
+ is a simple example of creating a metronome with operations.
+ It&#39;s just important that you know that operations that can do very
+ complex synthesis and effect processing is capable in AudioKit.</p>
 
 {% highlight ruby %}import AudioKit
-import XCPlayground
+import PlaygroundSupport
 
 var currentFrequency = 60.0
 
@@ -39,14 +38,13 @@ class PlaygroundView: AKPlaygroundView {
             property: "Frequency",
             format: "%0.2f BPM",
             value: 60, minimum: 40, maximum: 240,
-            color: AKColor.greenColor()
+            color: AKColor.green
         ) { frequency in
             generator.parameters[0] = frequency
         })
     }
 }
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-XCPlaygroundPage.currentPage.liveView = PlaygroundView()
-
+PlaygroundPage.current.needsIndefiniteExecution = true
+PlaygroundPage.current.liveView = PlaygroundView()
 {% endhighlight %}

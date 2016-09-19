@@ -1,16 +1,15 @@
 <p><h3>Band Pass Butterworth Filter
-</h3><h4>Band-pass filters allow audio above a specified frequency range and
-</h4><h4>bandwidth to pass through to an output. The center frequency is the starting point
-</h4><h4>from where the frequency limit is set. Adjusting the bandwidth sets how far out
-</h4><h4>above and below the center frequency the frequency band should be.
-</h4><h4>Anything above that band should pass through.
-</h4></p>
+</h3> Band-pass filters allow audio above a specified frequency range and
+ bandwidth to pass through to an output. The center frequency is the starting point
+ from where the frequency limit is set. Adjusting the bandwidth sets how far out
+ above and below the center frequency the frequency band should be.
+ Anything above that band should pass through.</p>
 
-{% highlight ruby %}import XCPlayground
+{% highlight ruby %}import PlaygroundSupport
 import AudioKit
 
 let file = try AKAudioFile(readFileName: filtersPlaygroundFiles[0],
-                           baseDir: .Resources)
+                           baseDir: .resources)
 
 let player = try AKAudioPlayer(file: file)
 player.looping = true
@@ -45,7 +44,7 @@ class PlaygroundView: AKPlaygroundView {
             property: "Center Frequency",
             format: "%0.1f Hz",
             value: filter.centerFrequency, minimum: 20, maximum: 22050,
-            color: AKColor.greenColor()
+            color: AKColor.green
         ) { sliderValue in
             filter.centerFrequency = sliderValue
             })
@@ -54,13 +53,13 @@ class PlaygroundView: AKPlaygroundView {
             property: "Bandwidth",
             format: "%0.1f Hz",
             value: filter.bandwidth, minimum: 100, maximum: 1200,
-            color: AKColor.redColor()
+            color: AKColor.red
         ) { sliderValue in
             filter.bandwidth = sliderValue
             })
     }
 }
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-XCPlaygroundPage.currentPage.liveView = PlaygroundView()
+PlaygroundPage.current.needsIndefiniteExecution = true
+PlaygroundPage.current.liveView = PlaygroundView()
 {% endhighlight %}

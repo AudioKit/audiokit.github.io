@@ -1,12 +1,11 @@
 <p><h3>Node FFT Plot
-</h3><h4>You can also do spectral analysis of your signal by looking at FFT Plot.
-</h4><h4>Here we create spikes in the plot by randomly playing an osccilator at a specific frequency.
-</h4></p>
+</h3> An FFT plot displays a signal as relative amplitudes across the frequency spectrum.
+ This playground creates spikes in the plot by playing an oscillator at a specific frequency.</p>
 
-{% highlight ruby %}import XCPlayground
+{% highlight ruby %}import PlaygroundSupport
 import AudioKit
 
-var oscillator = AKOscillator(waveform: AKTable(.Sine, size: 4096))
+var oscillator = AKOscillator(waveform: AKTable(.sine, size: 4096))
 var mixer = AKMixer(oscillator)
 
 AudioKit.output = mixer
@@ -34,8 +33,9 @@ let plot = AKNodeFFTPlot(mixer, frame: CGRect(x: 0, y: 0, width: 500, height: 50
 plot.shouldFill = true
 plot.shouldMirror = false
 plot.shouldCenterYAxis = false
-plot.color = NSColor.purpleColor()
+plot.color = AKColor.purple
 
-XCPlaygroundPage.currentPage.liveView = plot
+PlaygroundPage.current.liveView = plot
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true{% endhighlight %}
+PlaygroundPage.current.needsIndefiniteExecution = true
+{% endhighlight %}

@@ -1,9 +1,7 @@
 <p><h3>Segment Operations
-</h3><h4>You can create segments that vary parameters in operations linearly or exponentially over a certain duration.
-</h4><h4>Here we create an alien apocalypse.
-</h4></p>
+</h3> Creating segments that vary parameters in operations linearly or exponentially over a certain duration</p>
 
-{% highlight ruby %}import XCPlayground
+{% highlight ruby %}import PlaygroundSupport
 import AudioKit
 
 let generator = AKOperationGenerator() { parameters in
@@ -53,7 +51,7 @@ class PlaygroundView: AKPlaygroundView {
             property: "Update Rate",
             format: "%0.3f Hz",
             value: generator.parameters[0], minimum: 0.1, maximum: 10,
-            color: AKColor.redColor()
+            color: AKColor.red
         ) { rate in
             generator.parameters[0] = rate
             delay.time = 0.25 / rate
@@ -61,6 +59,6 @@ class PlaygroundView: AKPlaygroundView {
     }
 }
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-XCPlaygroundPage.currentPage.liveView = PlaygroundView()
+PlaygroundPage.current.needsIndefiniteExecution = true
+PlaygroundPage.current.liveView = PlaygroundView()
 {% endhighlight %}

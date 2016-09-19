@@ -1,11 +1,10 @@
 <p><h3>Parameter Ramp Time
-</h3><h4>Most AudioKit nodes have parameters that you can change.
-</h4><h4>Its very common need to change these parameters in a smooth way
-</h4><h4>to avoid pops and clicks, so you can set a ramp time to slow the 
-</h4><h4>variation of a property from its current value to its next.
-</h4></p>
+</h3> Most AudioKit nodes have parameters that you can change.
+ Its very common need to change these parameters in a smooth way
+ to avoid pops and clicks, so you can set a ramp time to slow the
+ variation of a property from its current value to its next.</p>
 
-{% highlight ruby %}import XCPlayground
+{% highlight ruby %}import PlaygroundSupport
 import AudioKit
 
 var noise = AKWhiteNoise(amplitude: 1)
@@ -35,12 +34,12 @@ AKPlaygroundLoop(frequency: 2.66) {
 
 {% highlight ruby %}
 class PlaygroundView: AKPlaygroundView {
-    
+
     override func setup() {
         addTitle("Parameter Ramp Time")
-        
+
         addSubview(AKPropertySlider(
-            property: "Ramp TIme",
+            property: "Ramp Time",
             format: "%0.3f s",
             value: filter.rampTime
         ) { sliderValue in
@@ -49,7 +48,7 @@ class PlaygroundView: AKPlaygroundView {
     }
 }
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-XCPlaygroundPage.currentPage.liveView = PlaygroundView()
+PlaygroundPage.current.needsIndefiniteExecution = true
+PlaygroundPage.current.liveView = PlaygroundView()
 
 {% endhighlight %}

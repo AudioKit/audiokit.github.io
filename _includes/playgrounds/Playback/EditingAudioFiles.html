@@ -1,16 +1,15 @@
 <p><h3>Editing Audio Files
-</h3><h4>Let&#39;s have some fun with our drum loop
-</h4></p>
+</h3> Let&#39;s have some fun with our drum loop</p>
 
 {% highlight ruby %}
-import XCPlayground
+import PlaygroundSupport
 import AudioKit
 
 {% endhighlight %}
 <p>First we load the drumloop</p>
 
 {% highlight ruby %}
-let loop = try? AKAudioFile(readFileName: "drumloop.wav", baseDir: .Resources)
+let loop = try? AKAudioFile(readFileName: "drumloop.wav", baseDir: .resources)
 
 {% endhighlight %}
 <p>You may have noticed that the drumloop doesn&#39;t loop so well. Let&#39;s fix this...</p>
@@ -74,7 +73,7 @@ var sequence = try? threeTimesLoop!.appendedBy(file: fixedLoop!)
 
 {% highlight ruby %}
 for i in 0..<16 {
-    let newSampleIndex = randomInt(0..<samplesBox.count)
+    let newSampleIndex = (0..<samplesBox.count).randomElement()
     let newSound = samplesBox[newSampleIndex]
     print("picked sample #\(newSampleIndex) name: \(newSound.fileNamePlusExtension)")
     var newFile = try? sequence!.appendedBy(file: newSound)
@@ -96,5 +95,5 @@ AudioKit.start()
 sequencePlayer!.play()
 
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+PlaygroundPage.current.needsIndefiniteExecution = true
 {% endhighlight %}

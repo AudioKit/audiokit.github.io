@@ -1,14 +1,13 @@
 <p><h3>Low Pass Butterworth Filter
-</h3><h4>A low-pass filter takes an audio signal as an input, and cuts out the
-</h4><h4>high-frequency components of the audio signal, allowing for the
-</h4><h4>lower frequency components to &quot;pass through&quot; the filter.
-</h4></p>
+</h3> A low-pass filter takes an audio signal as an input, and cuts out the
+ high-frequency components of the audio signal, allowing for the
+ lower frequency components to &quot;pass through&quot; the filter.</p>
 
-{% highlight ruby %}import XCPlayground
+{% highlight ruby %}import PlaygroundSupport
 import AudioKit
 
 let file = try AKAudioFile(readFileName: filtersPlaygroundFiles[0],
-                           baseDir: .Resources)
+                           baseDir: .resources)
 
 let player = try AKAudioPlayer(file: file)
 player.looping = true
@@ -39,13 +38,12 @@ class PlaygroundView: AKPlaygroundView {
             property: "Cutoff Frequency",
             format: "%0.1f Hz",
             value: filter.cutoffFrequency, minimum: 20, maximum: 22050,
-            color: AKColor.greenColor()
+            color: AKColor.green
         ) { sliderValue in
             filter.cutoffFrequency = sliderValue
             })
-
+    }
 }
-
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-XCPlaygroundPage.currentPage.liveView = PlaygroundView()
+PlaygroundPage.current.needsIndefiniteExecution = true
+PlaygroundPage.current.liveView = PlaygroundView()
 {% endhighlight %}

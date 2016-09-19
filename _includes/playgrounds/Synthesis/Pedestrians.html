@@ -1,9 +1,8 @@
 <p><h3>Pedestrians
-</h3><h4>A British crossing signal implemented with AudioKit, an example from
-</h4><h4>Andy Farnell&#39;s excellent book &quot;Designing Sound&quot;
-</h4></p>
+</h3> A British crossing signal implemented with AudioKit, an example from
+ Andy Farnell&#39;s excellent book &quot;Designing Sound&quot;</p>
 
-{% highlight ruby %}import XCPlayground
+{% highlight ruby %}import PlaygroundSupport
 import AudioKit
 
 let generator = AKOperationGenerator() { _ in
@@ -30,4 +29,4 @@ AudioKit.start()
 
 {% highlight ruby %}generator.start()
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true{% endhighlight %}
+PlaygroundPage.current.needsIndefiniteExecution = true{% endhighlight %}

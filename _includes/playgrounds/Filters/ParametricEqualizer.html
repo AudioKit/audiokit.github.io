@@ -1,18 +1,16 @@
 <p><h3>Parametric Equalizer
-</h3>
-<h4>A parametric equalizer can be used to raise or lower specific frequencies
-</h4><h4>or frequency bands. Live sound engineers often use parametric equalizers
-</h4><h4>during a concert in order to keep feedback from occuring, as they allow
-</h4><h4>much more precise control over the frequency spectrum than other
-</h4><h4>types of equalizers. Acoustic engineers will also use them to tune a room.
-</h4><h4>This node may be useful if you&#39;re building an app to do audio analysis.
-</h4></p>
+</h3> A parametric equalizer can be used to raise or lower specific frequencies
+ or frequency bands. Live sound engineers often use parametric equalizers
+ during a concert in order to keep feedback from occuring, as they allow
+ much more precise control over the frequency spectrum than other
+ types of equalizers. Acoustic engineers will also use them to tune a room.
+ This node may be useful if you&#39;re building an app to do audio analysis.</p>
 
-{% highlight ruby %}import XCPlayground
+{% highlight ruby %}import PlaygroundSupport
 import AudioKit
 
 let file = try AKAudioFile(readFileName: filtersPlaygroundFiles[0],
-                           baseDir: .Resources)
+                           baseDir: .resources)
 
 let player = try AKAudioPlayer(file: file)
 player.looping = true
@@ -45,7 +43,7 @@ class PlaygroundView: AKPlaygroundView {
             property: "Center Frequency",
             format:  "%0.3f Hz",
             value: parametricEQ.centerFrequency,  maximum: 22050,
-            color: AKColor.greenColor()
+            color: AKColor.green
         ) { sliderValue in
             parametricEQ.centerFrequency = sliderValue
             })
@@ -53,7 +51,7 @@ class PlaygroundView: AKPlaygroundView {
         addSubview(AKPropertySlider(
             property: "Q",
             value: parametricEQ.q,  maximum: 20,
-            color: AKColor.redColor()
+            color: AKColor.red
         ) { sliderValue in
             parametricEQ.q = sliderValue
             })
@@ -62,13 +60,13 @@ class PlaygroundView: AKPlaygroundView {
             property: "Gain",
             format:  "%0.1f dB",
             value: parametricEQ.gain,  minimum: -20, maximum: 20,
-            color: AKColor.cyanColor()
+            color: AKColor.cyan
         ) { sliderValue in
             parametricEQ.gain = sliderValue
             })
     }
 }
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
-XCPlaygroundPage.currentPage.liveView = PlaygroundView()
+PlaygroundPage.current.needsIndefiniteExecution = true
+PlaygroundPage.current.liveView = PlaygroundView()
 {% endhighlight %}

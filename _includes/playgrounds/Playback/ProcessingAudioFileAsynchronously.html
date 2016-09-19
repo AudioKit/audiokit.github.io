@@ -1,8 +1,7 @@
 <p><h3>Processing Audio File Asynchronously
-</h3><h4>Processing some audio files in background
-</h4></p>
+</h3> Processing some audio files in background</p>
 
-{% highlight ruby %}import XCPlayground
+{% highlight ruby %}import PlaygroundSupport
 import AudioKit
 
 {% endhighlight %}
@@ -114,5 +113,5 @@ var drumloop = try?  AKAudioFile(readFileName: "drumloop.wav")
 {% highlight ruby %}print("Can refresh UI or do anything while processing...")
 
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+PlaygroundPage.current.needsIndefiniteExecution = true
 {% endhighlight %}

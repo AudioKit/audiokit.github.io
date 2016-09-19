@@ -1,12 +1,11 @@
 <p><h3>Filter Section
-</h3><h4>This playgrounds was the development area for the filter in the Analog Synth X example project.
-</h4></p>
+</h3> This playgrounds was the development area for the filter in the Analog Synth X example project.</p>
 
-{% highlight ruby %}import XCPlayground
+{% highlight ruby %}import PlaygroundSupport
 import AudioKit
 
 let file = try AKAudioFile(readFileName: processingPlaygroundFiles[0],
-                           baseDir: .Resources)
+                           baseDir: .resources)
 
 
 let player = try AKAudioPlayer(file: file)
@@ -31,4 +30,4 @@ AudioKit.start()
 
 player.play()
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true{% endhighlight %}
+PlaygroundPage.current.needsIndefiniteExecution = true{% endhighlight %}

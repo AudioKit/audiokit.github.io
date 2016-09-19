@@ -1,8 +1,7 @@
 <p><h3>Plucked String Operation
-</h3><h4>Experimenting with a physical model of a string
-</h4></p>
+</h3> Experimenting with a physical model of a string</p>
 
-{% highlight ruby %}import XCPlayground
+{% highlight ruby %}import PlaygroundSupport
 import AudioKit
 
 let playRate = 2.0
@@ -32,7 +31,7 @@ let scale = [0, 2, 4, 5, 7, 9, 11, 12]
 
 AKPlaygroundLoop(frequency: playRate) {
     var note = scale.randomElement()
-    let octave = randomInt(0...3)  * 12
+    let octave = (0...3).randomElement() * 12
     if random(0, 10) < 1.0 { note += 1 }
     if !scale.contains(note % 12) { print("ACCIDENT!") }
 
@@ -42,4 +41,5 @@ AKPlaygroundLoop(frequency: playRate) {
     }
 }
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true{% endhighlight %}
+PlaygroundPage.current.needsIndefiniteExecution = true
+{% endhighlight %}
