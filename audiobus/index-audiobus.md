@@ -5,6 +5,9 @@ permalink: /audiobus/
 layout: section_index_header
 ---
 
+WARNING: BETA VERSION OF THIS DOCUMENT
+=============================
+
 This document will serve to introduce you to developing inter-app audio applications using AudioKit.
 
 AudioKit aims to make developing audio simple, but for the case of inter-app audio, there's only so much we can build into the framework and you'll have a process to follow rather than just a usage API. Hence this tutorial was created to walk you through the process.
@@ -28,11 +31,13 @@ This tutorial will stand on its own, but content for it has been shamelessly lif
 Starting the Synth Project
 --------------------------
 
+![Sender Synth Screenshot](sender-synth.png)
+
 We're going to build this from scratch, so in order to not spend much time with UI issues, we are going to make use of AudioKit's built-in UI elements that are normally used in playgrounds and our example apps.
 
 From within Xcode, create a new project with the single view application template.  Give it a product name of "SenderSynth" (no spaces) and make it a Universal Swift application as shown below:
 
-(Image)
+![Project Start](project-start.png)
 
 Since Audiobus is most easily installed uing Cocoapods, we could use Cocoapods to install AudioKit, and eventually this tutorial will be updated as such, but for now, add AudioKit's iOS project from the develop branch as a subproject.
 
@@ -179,7 +184,7 @@ Add the Audiobus Files
 
 Since Audiobus is not a Swift framework, we need to import the Audiobus header into a bridging header.  There are a few ways to create a bridging header, but the way I recommend is to go to your app's target Build Settings tab and search for "Bridging".  All of the settings will be filtered and you'll be left with one remaining "Objective-C Bridging Header" setting in which you can paste "$(SRCROOT)/SenderSynth/SenderSynth-BridgingHeader.h" so that it looks like the following screenshot.
 
-Image
+![Bridging Header](bridging-header.png)
 
 Then create a new file, of type "Header File", name it "SenderSynth-BridgingHeader.h" and add the import line so that it looks like:
 
@@ -260,7 +265,7 @@ Create your sender port by following these steps:
 
 In the end your Info.plist should now have the following:
 
-Image
+![AudioComponents in Info.plist](audiocomponents.png)
 
 
 Audiobus and Registration
@@ -270,7 +275,8 @@ Perhaps it goes without saying, but you need to have the Audiobus application in
 
 Complete the temporary registration by choosing the SDK version you're using, adding an icon to the sender port, and adding a title as shown:
 
-Image
+![Temporary Registration](temporary-registration.png)
+
 
 You will be given an API Key that will be good for 14 days.  Copy the text of the key and create a new document of type "Other / Empty" and call it "Audiobus.txt".  Paste the API Key in that file.
 
@@ -281,11 +287,17 @@ Build the app to your device
 
 This is pretty straightforward, but you do need to make sure to give your app app icons.
 
-Image and link to icons
+![App Icons](app-icons.png)
+
+Conclusion (for Sender Apps)
+----------------------------
+There, that wasn't so hard was it?
 
 
-Filtering App
-=============
+Filter Effects App
+==================
+
+![Filter Effects Screenshot](filter-effects.png)
 
 The process for creating the filter is very similar, but even so, its worth going through the process a second time to really solidify your understanding. It will be described here in slightly less detail.
 
@@ -293,7 +305,8 @@ The project will just create a few sliders for some standard AudioKit effects.
 
 Create a single view application called Filter Effects
 
-Image
+
+![Filter Project Start](project-start-filter.png)
 
 Set up the effects
 ------------------
@@ -337,8 +350,6 @@ It's worth stating that this code will not run in the simulator because it requi
 
 Set up the User Interface
 -------------------------
-
-...
 
 While this may not be the case once the app is used within Audiobus, to run the app before we integrate Audiobus, add the following to the Info.plist: "Privacy - Microphone Usage Description" for which the string can be blank.
 
@@ -469,10 +480,15 @@ Once that's done here are the steps for the filter port:
 
 In the end your Info.plist should now have the following:
 
-Image
+![AudioComponents in Filter App's Info.plist](audiocomponents-filter.png)
 
+Register your App with Audiobus
+-------------------------------
+![Temporary Registration](temporary-registration-filter.png)
 
-
+Conclusion (for Filter Apps)
+----------------------------
+Even easier the second time through right?
 
 Links
 =====
