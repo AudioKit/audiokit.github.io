@@ -271,7 +271,7 @@ In the end your Info.plist should now have the following:
 Audiobus and Registration
 -------------------------
 
-Perhaps it goes without saying, but you need to have the Audiobus application installed on your device.  Next, you'll need create a user at develop.audiob.us.  Next, back in Xcode, build the SenderSynth project and right click on the app in the Products directory, and "Show in Finder".  In the Finder, right click on the app and "Show Package Contents".  Using a web browser, go to the Audiobus [Temporary Registration](https://developer.audiob.us/temporary-registration) and drag the Info.plist file from this directory into the web page.
+Perhaps it goes without saying, but you need to have the Audiobus application installed on your device.  Next, you'll need create a user at developer.audiob.us.  Next, back in Xcode, build the SenderSynth project and right click on the app in the Products directory, and "Show in Finder".  In the Finder, right click on the app and "Show Package Contents".  Using a web browser, go to the Audiobus [Temporary Registration](https://developer.audiob.us/temporary-registration) and drag the Info.plist file from this directory into the web page.
 
 Complete the temporary registration by choosing the SDK version you're using, adding an icon to the sender port, and adding a title as shown:
 
@@ -485,6 +485,9 @@ In the end your Info.plist should now have the following:
 Register your App with Audiobus
 -------------------------------
 ![Temporary Registration](temporary-registration-filter.png)
+
+When you're ready to submit to the App Store and you have and App Store ID, make sure you get a new, permanent registration with Audiobus.
+
 
 Conclusion (for Filter Apps)
 ----------------------------
