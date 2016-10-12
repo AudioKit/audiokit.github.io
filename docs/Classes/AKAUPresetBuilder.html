@@ -699,10 +699,21 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Other Enums.html">Other Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/SampleTriggerMode.html">SampleTriggerMode</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Other Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/AudioUnit.html">AudioUnit</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/Collection.html">Collection</a>
@@ -715,6 +726,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/OSStatus.html">OSStatus</a>
               </li>
             </ul>
           </li>
@@ -748,6 +762,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Other Structs.html#/s:V8AudioKit13AKGetAUParams">AKGetAUParams</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AudioUnitPropertyListener.html">AudioUnitPropertyListener</a>
               </li>
             </ul>
           </li>
@@ -789,9 +806,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZFC8AudioKit17AKAUPresetBuilder22createAUPresetFromDictFTCSo12NSDictionary4pathSS14instrumentNameSS6attackGSqSd_7releaseGSqSd__T_"></a>
-                    <a name="//apple_ref/swift/Method/createAUPresetFromDict(_:path:instrumentName:attack:release:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZFC8AudioKit17AKAUPresetBuilder22createAUPresetFromDictFTCSo12NSDictionary4pathSS14instrumentNameSS6attackGSqSd_7releaseGSqSd__T_">createAUPresetFromDict(_:path:instrumentName:attack:release:)</a>
+                    <a name="/s:ZFC8AudioKit17AKAUPresetBuilder14createAUPresetFT4dictCSo12NSDictionary4pathSS14instrumentNameSS6attackGSqSd_7releaseGSqSd__T_"></a>
+                    <a name="//apple_ref/swift/Method/createAUPreset(dict:path:instrumentName:attack:release:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit17AKAUPresetBuilder14createAUPresetFT4dictCSo12NSDictionary4pathSS14instrumentNameSS6attackGSqSd_7releaseGSqSd__T_">createAUPreset(dict:path:instrumentName:attack:release:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -824,11 +841,11 @@ dict is a collection of other dictionaries that have the format like this:
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">static</span> <span class="n">open</span> <span class="kd">func</span> <span class="nf">createAUPresetFromDict</span><span class="p">(</span><span class="n">_</span> <span class="nv">dict</span><span class="p">:</span> <span class="kt">NSDictionary</span><span class="p">,</span>
-                                              <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                                              <span class="nv">instrumentName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                                              <span class="nv">attack</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-                                              <span class="nv">release</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="n">open</span> <span class="kd">func</span> <span class="nf">createAUPreset</span><span class="p">(</span><span class="nv">dict</span><span class="p">:</span> <span class="kt">NSDictionary</span><span class="p">,</span>
+                                    <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                                    <span class="nv">instrumentName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                                    <span class="nv">attack</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                                    <span class="nv">release</span><span class="p">:</span> <span class="kt">Double</span><span class="p">?</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -910,9 +927,9 @@ dict is a collection of other dictionaries that have the format like this:
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZFC8AudioKit17AKAUPresetBuilder18generateDictionaryFTSi8filenameSS9startNoteSi7endNoteSi_CSo19NSMutableDictionary"></a>
-                    <a name="//apple_ref/swift/Method/generateDictionary(_:filename:startNote:endNote:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZFC8AudioKit17AKAUPresetBuilder18generateDictionaryFTSi8filenameSS9startNoteSi7endNoteSi_CSo19NSMutableDictionary">generateDictionary(_:filename:startNote:endNote:)</a>
+                    <a name="/s:ZFC8AudioKit17AKAUPresetBuilder18generateDictionaryFT8rootNoteSi8filenameSS9startNoteSi7endNoteSi_CSo19NSMutableDictionary"></a>
+                    <a name="//apple_ref/swift/Method/generateDictionary(rootNote:filename:startNote:endNote:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit17AKAUPresetBuilder18generateDictionaryFT8rootNoteSi8filenameSS9startNoteSi7endNoteSi_CSo19NSMutableDictionary">generateDictionary(rootNote:filename:startNote:endNote:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -920,7 +937,7 @@ dict is a collection of other dictionaries that have the format like this:
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This functions returns 1 dictionary entry for a particular sample zone. You then add this to an array, and feed that into createAUPresetFromDict</p>
+                        <p>This functions returns 1 dictionary entry for a particular sample zone. You then add this to an array, and feed that into createAUPreset</p>
 
 <ul>
 <li>Parameters:
@@ -939,7 +956,7 @@ dict is a collection of other dictionaries that have the format like this:
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="n">open</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">generateDictionary</span><span class="p">(</span>
-        <span class="n">_</span> <span class="nv">rootNote</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+        <span class="nv">rootNote</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
         <span class="nv">filename</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
         <span class="nv">startNote</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
         <span class="nv">endNote</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSMutableDictionary</span></code></pre>
@@ -1011,9 +1028,9 @@ dict is a collection of other dictionaries that have the format like this:
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZFC8AudioKit17AKAUPresetBuilder15buildInstrumentFTSS11connectionsSS9envelopesSS6filterSS4lfosSS5zonesSS8filerefsSS6layersSS_SS"></a>
-                    <a name="//apple_ref/swift/Method/buildInstrument(_:connections:envelopes:filter:lfos:zones:filerefs:layers:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZFC8AudioKit17AKAUPresetBuilder15buildInstrumentFTSS11connectionsSS9envelopesSS6filterSS4lfosSS5zonesSS8filerefsSS6layersSS_SS">buildInstrument(_:connections:envelopes:filter:lfos:zones:filerefs:layers:)</a>
+                    <a name="/s:ZFC8AudioKit17AKAUPresetBuilder15buildInstrumentFT4nameSS11connectionsSS9envelopesSS6filterSS4lfosSS5zonesSS8filerefsSS6layersSS_SS"></a>
+                    <a name="//apple_ref/swift/Method/buildInstrument(name:connections:envelopes:filter:lfos:zones:filerefs:layers:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit17AKAUPresetBuilder15buildInstrumentFT4nameSS11connectionsSS9envelopesSS6filterSS4lfosSS5zonesSS8filerefsSS6layersSS_SS">buildInstrument(name:connections:envelopes:filter:lfos:zones:filerefs:layers:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1043,14 +1060,14 @@ dict is a collection of other dictionaries that have the format like this:
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">static</span> <span class="n">open</span> <span class="kd">func</span> <span class="nf">buildInstrument</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Coded Instrument Name"</span><span class="p">,</span>
-                                       <span class="nv">connections</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span>
-                                       <span class="nv">envelopes</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span>
-                                       <span class="nv">filter</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span>
-                                       <span class="nv">lfos</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span>
-                                       <span class="nv">zones</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"***ZONES***</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span>
-                                       <span class="nv">filerefs</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"***FILEREFS***</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span>
-                                       <span class="nv">layers</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="n">open</span> <span class="kd">func</span> <span class="nf">buildInstrument</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Coded Instrument Name"</span><span class="p">,</span>
+                                     <span class="nv">connections</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span>
+                                     <span class="nv">envelopes</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span>
+                                     <span class="nv">filter</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span>
+                                     <span class="nv">lfos</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span>
+                                     <span class="nv">zones</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"***ZONES***</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span>
+                                     <span class="nv">filerefs</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"***FILEREFS***</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span>
+                                     <span class="nv">layers</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -1173,7 +1190,7 @@ dict is a collection of other dictionaries that have the format like this:
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-09-19)</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-10-11)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

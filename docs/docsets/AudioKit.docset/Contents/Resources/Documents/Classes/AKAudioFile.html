@@ -699,10 +699,21 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Other Enums.html">Other Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/SampleTriggerMode.html">SampleTriggerMode</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Other Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/AudioUnit.html">AudioUnit</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/Collection.html">Collection</a>
@@ -715,6 +726,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/OSStatus.html">OSStatus</a>
               </li>
             </ul>
           </li>
@@ -748,6 +762,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Other Structs.html#/s:V8AudioKit13AKGetAUParams">AKGetAUParams</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AudioUnitPropertyListener.html">AudioUnitPropertyListener</a>
               </li>
             </ul>
           </li>
@@ -2791,7 +2808,7 @@ AKAudioFile normalized with a peak of newMaxLevel dB if succeeded</p>
 func myCallback(processedFile:AKAudioFile?, error:NSError?) -&gt; Void
 </code></p>
 
-<p>in this callBack, you can check that process succeeded by testing processedFile value :
+<p>in this callback, you can check that process succeeded by testing processedFile value :
 . if processedFile != nil, process succeded (and error is nil)
 . if processedFile == nil, process failed, error is the process thrown error</p>
 
@@ -2807,7 +2824,7 @@ background thread. Any UI update should be made using:</p>
 <li>Parameters:
 
 <ul>
-<li>completionHandler: the callBack that will be triggered when process has been completed</li>
+<li>completionHandler: the callback that will be triggered when process has been completed</li>
 <li>baseDir: where the file will be located, can be set to .Resources, .Documents or .Temp (Default is .Temp)</li>
 <li>name: the name of the resulting file without its extension (String).</li>
 <li>newMaxLevel: max level targeted as a Float value (default if 0 dB)</li>
@@ -2840,7 +2857,7 @@ background thread. Any UI update should be made using:</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>the callBack that will be triggered when process has been completed</p>
+                                  <p>the callback that will be triggered when process has been completed</p>
 
                                 </div>
                               </td>
@@ -2923,7 +2940,7 @@ background thread. Any UI update should be made using:</p>
 func myCallback(processedFile:AKAudioFile?, error:NSError?) -&gt; Void
 </code></p>
 
-<p>in this callBack, you can check that process succeeded by testing processedFile value :
+<p>in this callback, you can check that process succeeded by testing processedFile value :
 . if processedFile != nil, process succeded (and error is nil)
 . if processedFile == nil, process failed, error is the process thrown error</p>
 
@@ -2939,7 +2956,7 @@ background thread. Any UI update should be made using:</p>
 <li>Parameters:
 
 <ul>
-<li>completionHandler: the callBack that will be triggered when process has been completed</li>
+<li>completionHandler: the callback that will be triggered when process has been completed</li>
 <li>baseDir: where the file will be located, can be set to .Resources, .Documents or .Temp (Default is .Temp)</li>
 <li>name: the name of the resulting file without its extension (String).</li>
 <li>completionCallBack : AKCallback that will be triggered as soon as process has been completed or failed.</li>
@@ -2969,7 +2986,7 @@ background thread. Any UI update should be made using:</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>the callBack that will be triggered when process has been completed</p>
+                                  <p>the callback that will be triggered when process has been completed</p>
 
                                 </div>
                               </td>
@@ -3039,7 +3056,7 @@ background thread. Any UI update should be made using:</p>
 func myCallback(processedFile:AKAudioFile?, error:NSError?) -&gt; Void
 </code></p>
 
-<p>in this callBack, you can check that process succeeded by testing processedFile value :
+<p>in this callback, you can check that process succeeded by testing processedFile value :
 . if processedFile != nil, process succeded (and error is nil)
 . if processedFile == nil, process failed, error is the process thrown error</p>
 
@@ -3055,7 +3072,7 @@ background thread. Any UI update should be made using:</p>
 <li>Parameters:
 
 <ul>
-<li>completionHandler: the callBack that will be triggered when process has been completed</li>
+<li>completionHandler: the callback that will be triggered when process has been completed</li>
 <li>file: an AKAudioFile that will be used to append audio from.</li>
 <li>baseDir: where the file will be located, can be set to .Resources, .Documents or .Temp (Default is .Temp)</li>
 <li>name: the name of the resulting file without its extension (String).</li>
@@ -3087,7 +3104,7 @@ background thread. Any UI update should be made using:</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>the callBack that will be triggered when process has been completed</p>
+                                  <p>the callback that will be triggered when process has been completed</p>
 
                                 </div>
                               </td>
@@ -3172,7 +3189,7 @@ background thread. Any UI update should be made using:</p>
 func myCallback(processedFile:AKAudioFile?, error:NSError?) -&gt; Void
 </code></p>
 
-<p>in this callBack, you can check that process succeeded by testing processedFile value :
+<p>in this callback, you can check that process succeeded by testing processedFile value :
 . if processedFile != nil, process succeded (and error is nil)
 . if processedFile == nil, process failed, error is the process thrown error</p>
 
@@ -3188,7 +3205,7 @@ background thread. Any UI update should be made using:</p>
 <li>Parameters:
 
 <ul>
-<li>completionHandler: the callBack that will be triggered when process has been completed</li>
+<li>completionHandler: the callback that will be triggered when process has been completed</li>
 <li>fromSample: the starting sampleFrame for extraction. (default is zero)</li>
 <li>toSample: the ending sampleFrame for extraction (default is zero)</li>
 <li>baseDir: where the file will be located, can be set to .Resources,  .Documents or .Temp (Default is .Temp)</li>
@@ -3222,7 +3239,7 @@ background thread. Any UI update should be made using:</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>the callBack that will be triggered when process has been completed</p>
+                                  <p>the callback that will be triggered when process has been completed</p>
 
                                 </div>
                               </td>
@@ -3301,9 +3318,9 @@ background thread. Any UI update should be made using:</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit11AKAudioFile20exportAsynchronouslyFT4nameSS7baseDirOS0_13BaseDirectory12exportFormatOS0_12ExportFormat10fromSampleVs5Int648toSampleS3_8callBackFTGSqS0__GSqCSo7NSError__T__T_"></a>
-                    <a name="//apple_ref/swift/Method/exportAsynchronously(name:baseDir:exportFormat:fromSample:toSample:callBack:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit11AKAudioFile20exportAsynchronouslyFT4nameSS7baseDirOS0_13BaseDirectory12exportFormatOS0_12ExportFormat10fromSampleVs5Int648toSampleS3_8callBackFTGSqS0__GSqCSo7NSError__T__T_">exportAsynchronously(name:baseDir:exportFormat:fromSample:toSample:callBack:)</a>
+                    <a name="/s:FC8AudioKit11AKAudioFile20exportAsynchronouslyFT4nameSS7baseDirOS0_13BaseDirectory12exportFormatOS0_12ExportFormat10fromSampleVs5Int648toSampleS3_8callbackFTGSqS0__GSqCSo7NSError__T__T_"></a>
+                    <a name="//apple_ref/swift/Method/exportAsynchronously(name:baseDir:exportFormat:fromSample:toSample:callback:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKAudioFile20exportAsynchronouslyFT4nameSS7baseDirOS0_13BaseDirectory12exportFormatOS0_12ExportFormat10fromSampleVs5Int648toSampleS3_8callbackFTGSqS0__GSqCSo7NSError__T__T_">exportAsynchronously(name:baseDir:exportFormat:fromSample:toSample:callback:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -3336,7 +3353,7 @@ lets you monitor export progress.</p>
 <li>ExportFormat: the output file format as an ExportFormat enum value (.aif, .wav, .m4a, .mp4, .caf)</li>
 <li>fromSample: start range in samples</li>
 <li>toSample: end range time in samples</li>
-<li>callBack: AsyncProcessCallback function that will be triggered when export completed.</li>
+<li>callback: AsyncProcessCallback function that will be triggered when export completed.</li>
 </ul></li>
 </ul>
 
@@ -3350,7 +3367,7 @@ lets you monitor export progress.</p>
                                            <span class="nv">exportFormat</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKAudioFile/ExportFormat.html">ExportFormat</a></span><span class="p">,</span>
                                            <span class="nv">fromSample</span><span class="p">:</span> <span class="kt">Int64</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
                                            <span class="nv">toSample</span><span class="p">:</span> <span class="kt">Int64</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-                                           <span class="nv">callBack</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Other Typealiases.html#/s:C8AudioKit11AKAudioFile20AsyncProcessCallback">AsyncProcessCallback</a></span><span class="p">)</span></code></pre>
+                                           <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Other Typealiases.html#/s:C8AudioKit11AKAudioFile20AsyncProcessCallback">AsyncProcessCallback</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -3426,7 +3443,7 @@ lets you monitor export progress.</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>callBack</em>
+                                <em>callback</em>
                                 </code>
                               </td>
                               <td>
@@ -3447,7 +3464,7 @@ lets you monitor export progress.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-09-19)</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-10-11)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

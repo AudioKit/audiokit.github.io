@@ -699,10 +699,21 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Other Enums.html">Other Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/SampleTriggerMode.html">SampleTriggerMode</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Other Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/AudioUnit.html">AudioUnit</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/Collection.html">Collection</a>
@@ -715,6 +726,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/OSStatus.html">OSStatus</a>
               </li>
             </ul>
           </li>
@@ -748,6 +762,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Other Structs.html#/s:V8AudioKit13AKGetAUParams">AKGetAUParams</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AudioUnitPropertyListener.html">AudioUnitPropertyListener</a>
               </li>
             </ul>
           </li>
@@ -1243,6 +1260,33 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:FC8AudioKit12AKMusicTrack9clearNoteFSiT_"></a>
+                    <a name="//apple_ref/swift/Method/clearNote(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit12AKMusicTrack9clearNoteFSiT_">clearNote(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKMusicTrack</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:vC8AudioKit12AKMusicTrack7isEmptySb"></a>
                     <a name="//apple_ref/swift/Property/isEmpty" class="dashAnchor"></a>
                     <a class="token" href="#/s:vC8AudioKit12AKMusicTrack7isEmptySb">isEmpty</a>
@@ -1551,6 +1595,75 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:FC8AudioKit12AKMusicTrack8addSysexFTGSaVs5UInt8_8positionVS_10AKDuration_T_"></a>
+                    <a name="//apple_ref/swift/Method/addSysex(_:position:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit12AKMusicTrack8addSysexFTGSaVs5UInt8_8positionVS_10AKDuration_T_">addSysex(_:position:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add Sysex message to sequence</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>data: The midi data in UInt8 byte array - standard sysex start and end messages are added automatically</li>
+<li>position: Where in the sequence to start the note (expressed in beats)</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">addSysex</span><span class="p">(</span><span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="p">[</span><span class="kt">UInt8</span><span class="p">],</span> <span class="nv">position</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The midi data in UInt8 byte array - standard sysex start and end messages are added automatically</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>position</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Where in the sequence to start the note (expressed in beats)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:FC8AudioKit12AKMusicTrack13setMIDIOutputFVs6UInt32T_"></a>
                     <a name="//apple_ref/swift/Method/setMIDIOutput(_:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:FC8AudioKit12AKMusicTrack13setMIDIOutputFVs6UInt32T_">setMIDIOutput(_:)</a>
@@ -1627,7 +1740,7 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-09-19)</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-10-11)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
