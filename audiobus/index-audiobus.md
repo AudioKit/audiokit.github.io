@@ -253,11 +253,11 @@ Create your sender port by following these steps:
 
 5. Create five different new rows, by pressing Enter to create a new row and editing its properties:
 
-6. "manufacturer" (of type String): set this to "AuKt" which stands for AudioKit.
+6. "manufacturer" (of type String): This is a four letter code that you should make up for yourself.  For us at AudioKit, we use "AuKt", but you will need to have your own.
 
 7. "type" (of type String): set this to "auri", which means a "Remote Instrument" unit.
 
-8. "subtype" (of type String): set this to "akri", which is just AudioKit's version of "Remote Instrument"
+8. "subtype" (of type String): set this to "sndx", which just means "Sender Example".
 
 9. "name" (of type String): set this to "AudioKit: Sender"
 
@@ -468,11 +468,11 @@ Once that's done here are the steps for the filter port:
 
 5. Create five different new rows, by pressing Enter to create a new row and editing its properties:
 
-6. "manufacturer" (of type String): set this to "AuKt" which stands for AudioKit.
+6. "manufacturer" (of type String): This is a four letter code that you should make up for yourself.  For us at AudioKit, we use "AuKt", but you will need to have your own.
 
-7. "type" (of type String): set this to "aurm", which means a "Remote Music effect" unit.
+7. "type" (of type String): set this to "aurx", which means a "Remote Effect" unit.
 
-8. "subtype" (of type String): set this to "akrim, which is just AudioKit's version of "Remote Instrument"
+8. "subtype" (of type String): set this to "filx", which stands for "Filter Example".
 
 9. "name" (of type String): set this to "AudioKit: Filter"
 
