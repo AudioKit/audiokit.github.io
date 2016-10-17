@@ -351,7 +351,7 @@ It's worth stating that this code will not run in the simulator because it requi
 Set up the User Interface
 -------------------------
 
-While this may not be the case once the app is used within Audiobus, to run the app before we integrate Audiobus, add the following to the Info.plist: "Privacy - Microphone Usage Description" for which the string can be blank.
+While this may not be the case once the app is used within Audiobus, to run the app before we integrate Audiobus, add the following to the Info.plist: "Privacy - Microphone Usage Description" for which the string can not be blank (Xcode won't complain, but iTunes Connect will when you prepare the app for the App Store)
 
 Add this UI Set up code to create the UI:
 

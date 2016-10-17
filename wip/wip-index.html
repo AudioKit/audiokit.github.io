@@ -9,14 +9,6 @@ permalink: /wip/
 
 <p>As of this writing, there is a lot to do, so we're publishing all these goals so that a) people know what we're working on, and b) people can volunteer to help.</p>
 
-<h3>Xcode8 and Swift 3.0</h3>
-
-<p>Thankfully, this is nearly done.  Our "Swift3" branch works fairly well in Xcode8 and will soon be merged to master and released.</p>
-
-<h3>Interapp Audio / AudioBus</h3>
-
-<p>We're working at making it very easy for AudioKit apps to receive audio and MIDI as well as transmit audio and MIDI to other apps via inter-app audio.  We're trying to make a system that will make this almost "automatic" with minimal configuration for the developer.</p>
-
 <h3>Offline Rendering</h3>
 
 <p>A number of people have requested being able to process an audio file, applying effects and filters, in a faster-than-realtime audio context.  This is very doable with AudioKit and in fact our test project does this, but it only stores the processed audio in memory.  In order to do offline rendering we just need to extend this process to save the data in to a new file.</p>
