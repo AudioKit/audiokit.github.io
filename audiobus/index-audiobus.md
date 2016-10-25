@@ -255,7 +255,7 @@ Create your sender port by following these steps:
 
 6. "manufacturer" (of type String): This is a four letter code that you should make up for yourself.  For us at AudioKit, we use "AuKt", but you will need to have your own.
 
-7. "type" (of type String): set this to "auri", which means a "Remote Instrument" unit.
+7. "type" (of type String): set this to "aurg", which means a "Remote Generator" unit.
 
 8. "subtype" (of type String): set this to "sndx", which just means "Sender Example".
 
