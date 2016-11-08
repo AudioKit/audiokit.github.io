@@ -1,0 +1,160 @@
+---
+title: AudioKit Examples - Filter Effects
+header: Filter Effects
+permalink: /examples/FilterEffects/
+layout: examples
+last-review-date: 2016/11/4
+---
+
+<div class="cd-iphone-5s cd-silver hide-on-tablets-and-smaller" style="margin-left: 1em; float: right">
+  <div class="cd-body">
+    <div class="cd-sound"></div>
+    <div class="cd-sleep"></div>
+    <div class="cd-camera"></div>
+    <div class="cd-ear"></div>
+    <div class="cd-home"></div>
+    <div class="cd-screen">
+<img src=/examples/FilterEffects/filtereffect.png class="screenshot" alt="Sequencer Demo">
+    </div>
+  </div>
+</div>
+
+<p>
+This app will utilize Audiobus and show you how to add some awesome rever effecs to an audio stream.
+</p>
+
+<p>
+First let's set up our effects:
+</p>
+{% highlight swift %}
+    import UIKit
+    import AudioKit
+
+    class ViewController: UIViewController {
+
+        var filter: AKMoogLadder?
+        var delay: AKVariableDelay?
+        var delayMixer: AKDryWetMixer?
+        var reverb: AKCostelloReverb?
+        var reverbMixer: AKDryWetMixer?
+        var booster: AKBooster?
+
+        override func viewDidLoad() {
+            super.viewDidLoad()
+
+            filter = AKMoogLadder(AKMicrophone())
+
+            delay = AKVariableDelay(filter!)
+            delay?.rampTime = 0.5 // Allows for some cool effects
+            delayMixer = AKDryWetMixer(filter!, delay!)
+
+            reverb = AKCostelloReverb(delayMixer!)
+            reverbMixer = AKDryWetMixer(delayMixer!, reverb!)
+
+            booster = AKBooster(reverbMixer!)
+
+            AudioKit.output = booster
+            AudioKit.start()
+        }
+    }
+{% endhighlight %}
+
+<p>
+Next we'll set up some AudioKit sliders:
+</p>
+
+{% highlight swift %}
+     override func viewDidLoad() {
+        // All the code from before plus the next line:
+        setupUI()
+    }
+
+    func setupUI() {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        stackView.alignment = .fill
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+
+        stackView.addArrangedSubview(AKPropertySlider(
+            property: "Cutoff Frequency",
+            format: "%0.1f Hz",
+            value: self.filter!.cutoffFrequency, minimum: 1, maximum: 2000,
+            color: UIColor.orange) { sliderValue in
+                self.filter?.cutoffFrequency = sliderValue
+        })
+
+        stackView.addArrangedSubview(AKPropertySlider(
+            property: "Resonance",
+            format: "%0.2f",
+            value: self.filter!.resonance, minimum: 0, maximum: 0.99,
+            color: UIColor.orange) { sliderValue in
+                self.filter?.resonance = sliderValue
+        })
+
+        stackView.addArrangedSubview(AKPropertySlider(
+            property: "Delay Time",
+            format: "%0.2f s",
+            value: self.delay!.time, minimum: 0, maximum: 1,
+            color: UIColor.green) { sliderValue in
+                self.delay?.time = sliderValue
+        })
+
+        stackView.addArrangedSubview(AKPropertySlider(
+            property: "Delay Feedback",
+            format: "%0.2f",
+            value: self.delay!.feedback, minimum: 0, maximum: 0.99,
+            color: UIColor.green) { sliderValue in
+                self.delay?.feedback = sliderValue
+        })
+
+        stackView.addArrangedSubview(AKPropertySlider(
+            property: "Delay Mix",
+            format: "%0.2f",
+            value: self.delayMixer!.balance, minimum: 0, maximum: 1,
+            color: UIColor.green) { sliderValue in
+                self.delayMixer?.balance = sliderValue
+        })
+
+        stackView.addArrangedSubview(AKPropertySlider(
+            property: "Reverb Feedback",
+            format: "%0.2f",
+            value: self.reverb!.feedback, minimum: 0, maximum: 0.99,
+            color: UIColor.red) { sliderValue in
+                self.reverb?.feedback = sliderValue
+        })
+
+        stackView.addArrangedSubview(AKPropertySlider(
+            property: "Reverb Mix",
+            format: "%0.2f",
+            value: self.reverbMixer!.balance, minimum: 0, maximum: 1,
+            color: UIColor.red) { sliderValue in
+                self.reverbMixer?.balance = sliderValue
+        })
+
+        stackView.addArrangedSubview(AKPropertySlider(
+            property: "Output Volume",
+            format: "%0.2f",
+            value: self.booster!.gain, minimum: 0, maximum: 2,
+            color: UIColor.yellow) { sliderValue in
+                self.booster?.gain = sliderValue
+        })
+
+        view.addSubview(stackView)
+
+        stackView.widthAnchor.constraint(equalToConstant: view.frame.width).isActive = true
+        stackView.heightAnchor.constraint(equalToConstant: view.frame.height).isActive = true
+
+        stackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        stackView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+    }
+{% endhighlight %}
+
+<p>
+After we get our swift code set up we'll need to install  Audiobus and add in the corresponding files. For detailed directions please follow allong with our <a href="http://audiokit.io/audiobus/">full walk through</a> and build your own Filter Effects app.
+</p>
+
+<!--
+<h2>Featured Video</h2>
+<iframe src="https://player.vimeo.com/video/173592871" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+-->

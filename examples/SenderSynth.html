@@ -1,0 +1,107 @@
+---
+title: AudioKit Examples - Sender Synth
+header: Sender Synth
+permalink: /examples/SenderSynth/
+layout: examples
+last-review-date: 2016/11/4
+---
+<div class="row">
+<div class="cd-iphone-5s cd-silver cd-landscape-left hide-on-tablets-and-smaller col-md-8" style="margin-left: 1em; float: right">
+  <div class="cd-body">
+    <div class="cd-sound"></div>
+    <div class="cd-sleep"></div>
+    <div class="cd-camera"></div>
+    <div class="cd-ear"></div>
+    <div class="cd-home"></div>
+    <div class="cd-screen">
+<img src=/examples/SenderSynth/sendersynth.png class="screenshot" alt="Sequencer Demo">
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4">
+<p>
+This app uses inter-app audio to create a simple synthesizer to generate audio.
+</p>
+</div>
+
+</div>
+<p>
+First we'll get our synth set up:
+</p>
+{% highlight swift %}
+    class ViewController: UIViewController {
+
+    let oscillator = AKOscillatorBank()
+        override func viewDidLoad() {
+        super.viewDidLoad()
+
+        AudioKit.output = oscillator
+        AudioKit.start()
+    }
+{% endhighlight %}
+
+<p>
+Then we'll set up our UI using some AudioKit UI elements:
+</p>
+
+{% highlight swift %}
+       override func viewDidLoad() {
+        super.viewDidLoad()
+
+        AudioKit.output = oscillator
+        AudioKit.start()
+
+        setupUI()
+    }
+
+    func setupUI() {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        stackView.alignment = .fill
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+
+        let adsrView = AKADSRView()
+        stackView.addArrangedSubview(adsrView)
+        let keyboardView = AKKeyboardView()
+        stackView.addArrangedSubview(keyboardView)
+
+        view.addSubview(stackView)
+
+        stackView.widthAnchor.constraint(equalToConstant: view.frame.width).isActive = true
+        stackView.heightAnchor.constraint(equalToConstant: view.frame.height).isActive = true
+
+        stackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        stackView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+    }
+{% endhighlight %}
+
+<p>
+Now we'll link the synth and the UI:
+</p>
+
+{% highlight swift %}
+    class ViewController: UIViewController, AKKeyboardDelegate {
+    func noteOn(note: MIDINoteNumber) {
+        oscillator.play(noteNumber: note, velocity: 80)
+    }
+
+    func noteOff(note: MIDINoteNumber) {
+        oscillator.stop(noteNumber: note)
+    }
+    let adsrView = AKADSRView() { att, dec, sus, rel in
+            self.oscillator.attackDuration = att
+            self.oscillator.decayDuration = dec
+            self.oscillator.sustainLevel = sus
+            self.oscillator.releaseDuration = rel
+        }
+{% endhighlight %}
+<p>
+After we get our swift code set up we'll need to install Audiobus and add in the corresponding files. For detailed directions please follow allong with our <a href="http://audiokit.io/audiobus/">full walk through</a> and build your own Sender Synth app.
+</p>
+
+<!--
+<h2>Featured Video</h2>
+<iframe src="https://player.vimeo.com/video/173592871" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+-->
