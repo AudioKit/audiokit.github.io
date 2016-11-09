@@ -67,7 +67,6 @@ Known Issues
 ============
 
 * AudioKit audio plots seem to stop working when Audiobus is connected.
-* A stereo generator becomes mono when sent through an Audiobus filter.
 
 More Info on Audiobus
 =====================

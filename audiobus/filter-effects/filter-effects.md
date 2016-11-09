@@ -25,36 +25,38 @@ Set up the effects
 The AudioKit code here is a little bit longer than for the synth, mainly so we can offer quite a few effects:
 
 {% highlight ruby %}
-    import UIKit
-    import AudioKit
+import UIKit
+import AudioKit
 
-    class ViewController: UIViewController {
+class ViewController: UIViewController {
 
-        var filter: AKMoogLadder?
-        var delay: AKVariableDelay?
-        var delayMixer: AKDryWetMixer?
-        var reverb: AKCostelloReverb?
-        var reverbMixer: AKDryWetMixer?
-        var booster: AKBooster?
+    var delay: AKVariableDelay?
+    var delayMixer: AKDryWetMixer?
+    var reverb: AKCostelloReverb?
+    var reverbMixer: AKDryWetMixer?
+    var booster: AKBooster?
 
-        override func viewDidLoad() {
-            super.viewDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-            filter = AKMoogLadder(AKMicrophone())
+        let input = AKStereoInput()
 
-            delay = AKVariableDelay(filter!)
-            delay?.rampTime = 0.5 // Allows for some cool effects
-            delayMixer = AKDryWetMixer(filter!, delay!)
+        delay = AKVariableDelay(input)
+        delay?.rampTime = 0.5 // Allows for some cool effects
+        delayMixer = AKDryWetMixer(input, delay!)
 
-            reverb = AKCostelloReverb(delayMixer!)
-            reverbMixer = AKDryWetMixer(delayMixer!, reverb!)
+        reverb = AKCostelloReverb(delayMixer!)
+        reverbMixer = AKDryWetMixer(delayMixer!, reverb!)
 
-            booster = AKBooster(reverbMixer!)
+        booster = AKBooster(reverbMixer!)
 
-            AudioKit.output = booster
-            AudioKit.start()
-        }
+        AudioKit.output = booster
+        AudioKit.start()
+        Audiobus.start()
+
+        setupUI()
     }
+}
 {% endhighlight %}
 
 It's worth stating that this code will not run in the simulator because it requires an audio input device, which the simulator is not currently able to emulate.  I can't imagine that this won't ever be fixed by Apple, but for now, let's move on.
@@ -78,22 +80,7 @@ Add this UI Set up code to create the UI:
         stackView.distribution = .fillEqually
         stackView.alignment = .fill
         stackView.translatesAutoresizingMaskIntoConstraints = false
-
-        stackView.addArrangedSubview(AKPropertySlider(
-            property: "Cutoff Frequency",
-            format: "%0.1f Hz",
-            value: self.filter!.cutoffFrequency, minimum: 1, maximum: 2000,
-            color: UIColor.orange) { sliderValue in
-                self.filter?.cutoffFrequency = sliderValue
-        })
-
-        stackView.addArrangedSubview(AKPropertySlider(
-            property: "Resonance",
-            format: "%0.2f",
-            value: self.filter!.resonance, minimum: 0, maximum: 0.99,
-            color: UIColor.orange) { sliderValue in
-                self.filter?.resonance = sliderValue
-        })
+        stackView.spacing = 10
 
         stackView.addArrangedSubview(AKPropertySlider(
             property: "Delay Time",
@@ -145,12 +132,13 @@ Add this UI Set up code to create the UI:
 
         view.addSubview(stackView)
 
-        stackView.widthAnchor.constraint(equalToConstant: view.frame.width).isActive = true
-        stackView.heightAnchor.constraint(equalToConstant: view.frame.height).isActive = true
+        stackView.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.9).isActive = true
+        stackView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.9).isActive = true
 
         stackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         stackView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
     }
+
 {% endhighlight %}
 This should all work on your device at this point.  And now, we just need to do the configuration song and dance. :)
 
