@@ -62,12 +62,6 @@ The AudioKit example "Analog Synth X" has been upgraded to support Audiobus and 
 
 In addition, we are finishing up a new synth that will also be open source and demonstrate Audiobus and IAA.
 
-
-Known Issues
-============
-
-* AudioKit audio plots seem to stop working when Audiobus is connected.
-
 More Info on Audiobus
 =====================
 
