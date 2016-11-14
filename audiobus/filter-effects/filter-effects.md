@@ -1,6 +1,6 @@
 ---
-title: AudioBus/IAA Fitlter Effects App
-header: AudioBus/IAA Fitlter Effects App
+title: AudioBus/IAA Filter Effects App
+header: AudioBus/IAA Filter Effects App
 permalink: /audiobus/filter-effects/
 layout: section_index_header
 ---
@@ -185,7 +185,7 @@ Register your App with Audiobus
 -------------------------------
 ![Temporary Registration](temporary-registration-filter.png)
 
-When you're ready to submit to the App Store and you have and App Store ID, make sure you get a new, permanent registration with Audiobus.
+Again, this is similar to the Sender Synth registration.  Make sure you get a permanent registration with Audiobus when you're ready to submit to the App Store.
 
 
 Conclusion (for Filter Apps)

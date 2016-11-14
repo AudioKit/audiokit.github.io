@@ -260,6 +260,8 @@ You will be given an API Key that will be good for 14 days.  Copy the text of th
 
 You should also click the "email this to me" link on the Audiobus registration page so that you can open up the email on your device and tap the link to add an entry to your local Audiobus app for the Sender Synth.
 
+When you're ready to submit to the App Store and you have and App Store ID, make sure you get a new, permanent registration with Audiobus.
+
 Build the app to your device
 ----------------------------
 
