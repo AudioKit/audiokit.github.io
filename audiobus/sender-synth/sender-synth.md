@@ -24,7 +24,9 @@ Set Up the Synth (easy!)
 
 Inside the ViewController.swift, first import AudioKit:
 
+{% highlight ruby %}
 import AudioKit
+{% endhighlight %}
 
 Create the oscillator by adding it as an instance variable,
 
@@ -71,7 +73,9 @@ Next, build the views:
 
         let adsrView = AKADSRView()
         stackView.addArrangedSubview(adsrView)
+
         let keyboardView = AKKeyboardView()
+
         stackView.addArrangedSubview(keyboardView)
 
         view.addSubview(stackView)
@@ -101,6 +105,13 @@ and add these functions:
     func noteOff(note: MIDINoteNumber) {
         oscillator.stop(noteNumber: note)
     }
+{% endhighlight %}
+
+and make the view controller the delegate for the keyboard inside viewDidLoad, right after the instantiation:
+
+{% highlight ruby %}
+let keyboardView = AKKeyboardView()
+keyboardView.delegate = self
 {% endhighlight %}
 
 If you run your app now, it will respond to the keys, but the ADSR envelope won't do anything.  Replace the ADSR creation step with this one defining a code block:
@@ -175,7 +186,7 @@ Then create a new file, of type "Header File", name it "SenderSynth-BridgingHead
 #endif /* SenderSynth_BridgingHeader_h */
 {% endhighlight %}
 
-Next grab the Audiobus.swift file from our repository and place it in your project, creating a copy.
+Next grab the [Audiobus.swift](https://github.com/audiokit/AudioKit/blob/master/AudioKit/iOS/Audiobus/Audiobus.swift) file from the AudioKit repository and place it in your project, creating a copy.
 
 Back in your ViewController.swift file:
 
