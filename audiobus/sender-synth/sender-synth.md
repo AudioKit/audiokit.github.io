@@ -5,6 +5,7 @@ permalink: /audiobus/sender-synth/
 layout: section_index_header
 ---
 
+<iframe src="https://player.vimeo.com/video/191611657?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 Starting the Synth Project
 --------------------------
