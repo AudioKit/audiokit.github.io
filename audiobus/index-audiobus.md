@@ -5,6 +5,8 @@ permalink: /audiobus/
 layout: section_index_header
 ---
 
+<iframe src="https://player.vimeo.com/video/191613015?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
 This document will serve to introduce you to developing inter-app audio applications using AudioKit.
 
 AudioKit aims to make developing audio simple, but for the case of inter-app audio, there's only so much we can build into the framework and you'll have a process to follow rather than just a usage API. Hence this tutorial was created to walk you through the process.
