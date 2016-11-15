@@ -7,14 +7,14 @@ layout: section_index_header
 
 <iframe src="https://player.vimeo.com/video/191613015?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
+Introduction
+------------
+
+"Audiobus" and "Inter-App" Audio are two different but similar ways of sharing audio between applications on iOS.  Audiobus was developed by the Amazing Michael Tyson and came first.  Later, Apple invented their own way of doing what Audiobus already did and they called it Inter-App Audio.  Because Audiobus came first, and because we know and love Michael Tyson, we give Audiobus top billing. But, there's no reason you can't get both things working in your app simultaneously, and that's what we'll be doing here.
+
 This document will serve to introduce you to developing inter-app audio applications using AudioKit.
 
 AudioKit aims to make developing audio simple, but for the case of inter-app audio, there's only so much we can build into the framework and you'll have a process to follow rather than just a usage API. Hence this tutorial was created to walk you through the process.
-
-Intro
------
-
-"Audiobus" and "Inter-App" Audio are two different but similar ways of sharing audio between applications on iOS.  Audiobus was developed by the Amazing Michael Tyson and came first.  Later, Apple invented their own way of doing what Audiobus already did and they called it Inter-App Audio.  Because Audiobus came first, and because we know and love Michael Tyson, we give Audiobus top billing. But, there's no reason you can't get both things working in your app simultaneously, and that's what we'll be doing here.
 
 What you'll build
 -----------------
