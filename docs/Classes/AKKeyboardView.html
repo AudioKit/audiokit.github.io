@@ -14,7 +14,7 @@
     <a title="AKKeyboardView Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">AudioKit Docs</a> (93% documented)</p>
+        <p><a href="../index.html">AudioKit Docs</a> (94% documented)</p>
         <p class="header-right"><a href="https://github.com/audiokit/AudioKit"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -390,6 +390,9 @@
             <a href="../Physical Models.html">Physical Models</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Classes/AKClarinet.html">AKClarinet</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKDrip.html">AKDrip</a>
               </li>
               <li class="nav-group-task">
@@ -417,6 +420,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/AKMicrophone.html">AKMicrophone</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKStereoInput.html">AKStereoInput</a>
               </li>
             </ul>
           </li>
@@ -654,6 +660,9 @@
                 <a href="../Classes/AKKeyboardView.html">AKKeyboardView</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols/AKKeyboardDelegate.html">AKKeyboardDelegate</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKNotifications.html">AKNotifications</a>
               </li>
               <li class="nav-group-task">
@@ -710,10 +719,13 @@
             <a href="../Other Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Extensions/Array.html">Array</a>
+                <a href="../Extensions/AVAudioEngine.html">AVAudioEngine</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/AudioUnit.html">AudioUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ClosedRange.html">ClosedRange</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/Collection.html">Collection</a>
@@ -729,6 +741,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/OSStatus.html">OSStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/RangeReplaceableCollection.html">RangeReplaceableCollection</a>
               </li>
             </ul>
           </li>
@@ -750,19 +765,8 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Other Protocols.html">Other Protocols</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Protocols/AKKeyboardDelegate.html">AKKeyboardDelegate</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
             <a href="../Other Structs.html">Other Structs</a>
             <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Other Structs.html#/s:V8AudioKit13AKGetAUParams">AKGetAUParams</a>
-              </li>
               <li class="nav-group-task">
                 <a href="../Structs/AudioUnitPropertyListener.html">AudioUnitPropertyListener</a>
               </li>
@@ -791,7 +795,13 @@
         <section>
           <section class="section">
             <h1>AKKeyboardView</h1>
-            <p>Undocumented</p>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKKeyboardView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKMIDIListener.html">AKMIDIListener</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Clickable keyboard mainly used for AudioKit playgrounds</p>
 
           </section>
           <section class="section task-group-section">
@@ -813,6 +823,14 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKKeyboardView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKMIDIListener.html">AKMIDIListener</a></span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -831,6 +849,14 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKKeyboardView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKMIDIListener.html">AKMIDIListener</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -851,6 +877,14 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKKeyboardView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKMIDIListener.html">AKMIDIListener</a></span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -869,6 +903,14 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKKeyboardView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKMIDIListener.html">AKMIDIListener</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -889,6 +931,14 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKKeyboardView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKMIDIListener.html">AKMIDIListener</a></span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -907,6 +957,14 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKKeyboardView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKMIDIListener.html">AKMIDIListener</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -927,6 +985,14 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKKeyboardView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKMIDIListener.html">AKMIDIListener</a></span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -946,6 +1012,14 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKKeyboardView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKMIDIListener.html">AKMIDIListener</a></span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -964,6 +1038,14 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKKeyboardView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKMIDIListener.html">AKMIDIListener</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -995,6 +1077,14 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKKeyboardView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKMIDIListener.html">AKMIDIListener</a></span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1014,6 +1104,14 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKKeyboardView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKMIDIListener.html">AKMIDIListener</a></span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1032,6 +1130,14 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKKeyboardView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKMIDIListener.html">AKMIDIListener</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1063,6 +1169,14 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKKeyboardView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKMIDIListener.html">AKMIDIListener</a></span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1082,6 +1196,14 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKKeyboardView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKMIDIListener.html">AKMIDIListener</a></span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1100,6 +1222,14 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKKeyboardView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKMIDIListener.html">AKMIDIListener</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1131,6 +1261,14 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKKeyboardView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKMIDIListener.html">AKMIDIListener</a></span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1161,6 +1299,14 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKKeyboardView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKMIDIListener.html">AKMIDIListener</a></span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1179,6 +1325,14 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKKeyboardView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKMIDIListener.html">AKMIDIListener</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1199,6 +1353,14 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKKeyboardView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKMIDIListener.html">AKMIDIListener</a></span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1207,7 +1369,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-10-11)</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-11-15)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

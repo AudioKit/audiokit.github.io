@@ -14,7 +14,7 @@
     <a title="AKSequencer Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">AudioKit Docs</a> (93% documented)</p>
+        <p><a href="../index.html">AudioKit Docs</a> (94% documented)</p>
         <p class="header-right"><a href="https://github.com/audiokit/AudioKit"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -390,6 +390,9 @@
             <a href="../Physical Models.html">Physical Models</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Classes/AKClarinet.html">AKClarinet</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKDrip.html">AKDrip</a>
               </li>
               <li class="nav-group-task">
@@ -417,6 +420,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/AKMicrophone.html">AKMicrophone</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKStereoInput.html">AKStereoInput</a>
               </li>
             </ul>
           </li>
@@ -654,6 +660,9 @@
                 <a href="../Classes/AKKeyboardView.html">AKKeyboardView</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols/AKKeyboardDelegate.html">AKKeyboardDelegate</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKNotifications.html">AKNotifications</a>
               </li>
               <li class="nav-group-task">
@@ -710,10 +719,13 @@
             <a href="../Other Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Extensions/Array.html">Array</a>
+                <a href="../Extensions/AVAudioEngine.html">AVAudioEngine</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/AudioUnit.html">AudioUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ClosedRange.html">ClosedRange</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/Collection.html">Collection</a>
@@ -729,6 +741,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/OSStatus.html">OSStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/RangeReplaceableCollection.html">RangeReplaceableCollection</a>
               </li>
             </ul>
           </li>
@@ -750,19 +765,8 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Other Protocols.html">Other Protocols</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Protocols/AKKeyboardDelegate.html">AKKeyboardDelegate</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
             <a href="../Other Structs.html">Other Structs</a>
             <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Other Structs.html#/s:V8AudioKit13AKGetAUParams">AKGetAUParams</a>
-              </li>
               <li class="nav-group-task">
                 <a href="../Structs/AudioUnitPropertyListener.html">AudioUnitPropertyListener</a>
               </li>
@@ -1944,6 +1948,33 @@ As such, there is some code hanging around while we iron it out.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:vC8AudioKit11AKSequencer23currentRelativePositionVS_10AKDuration"></a>
+                    <a name="//apple_ref/swift/Property/currentRelativePosition" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit11AKSequencer23currentRelativePositionVS_10AKDuration">currentRelativePosition</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Current Time relative to sequencer length</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">currentRelativePosition</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:vC8AudioKit11AKSequencer10trackCountSi"></a>
                     <a name="//apple_ref/swift/Property/trackCount" class="dashAnchor"></a>
                     <a class="token" href="#/s:vC8AudioKit11AKSequencer10trackCountSi">trackCount</a>
@@ -2217,12 +2248,93 @@ As such, there is some code hanging around while we iron it out.</p>
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKSequencer24nearestQuantizedPositionFT19quantizationInBeatsSd_VS_10AKDuration"></a>
+                    <a name="//apple_ref/swift/Method/nearestQuantizedPosition(quantizationInBeats:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKSequencer24nearestQuantizedPositionFT19quantizationInBeatsSd_VS_10AKDuration">nearestQuantizedPosition(quantizationInBeats:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Nearest time of quantized beat</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">nearestQuantizedPosition</span><span class="p">(</span><span class="nv">quantizationInBeats</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKSequencer25previousQuantizedPositionFT19quantizationInBeatsSd_VS_10AKDuration"></a>
+                    <a name="//apple_ref/swift/Method/previousQuantizedPosition(quantizationInBeats:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKSequencer25previousQuantizedPositionFT19quantizationInBeatsSd_VS_10AKDuration">previousQuantizedPosition(quantizationInBeats:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The last quantized beat</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">previousQuantizedPosition</span><span class="p">(</span><span class="nv">quantizationInBeats</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKSequencer21nextQuantizedPositionFT19quantizationInBeatsSd_VS_10AKDuration"></a>
+                    <a name="//apple_ref/swift/Method/nextQuantizedPosition(quantizationInBeats:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKSequencer21nextQuantizedPositionFT19quantizationInBeatsSd_VS_10AKDuration">nextQuantizedPosition(quantizationInBeats:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Next quantized beat</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">nextQuantizedPosition</span><span class="p">(</span><span class="nv">quantizationInBeats</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-10-11)</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-11-15)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

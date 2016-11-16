@@ -2,133 +2,91 @@
   "warnings": [
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKADSRView.swift",
-      "line": 12,
-      "symbol": "AKADSRView",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKADSRView.swift",
-      "line": 15,
-      "symbol": "AKADSRView.attackDuration",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKADSRView.swift",
-      "line": 16,
-      "symbol": "AKADSRView.decayDuration",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKADSRView.swift",
-      "line": 17,
-      "symbol": "AKADSRView.sustainLevel",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKADSRView.swift",
-      "line": 18,
-      "symbol": "AKADSRView.releaseDuration",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKADSRView.swift",
-      "line": 59,
-      "symbol": "AKADSRView.callback",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKADSRView.swift",
-      "line": 64,
+      "line": 80,
       "symbol": "AKADSRView.decayColor",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKADSRView.swift",
-      "line": 65,
+      "line": 81,
       "symbol": "AKADSRView.sustainColor",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKADSRView.swift",
-      "line": 66,
+      "line": 82,
       "symbol": "AKADSRView.releaseColor",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKADSRView.swift",
-      "line": 69,
+      "line": 85,
       "symbol": "AKADSRView.curveStrokeWidth",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKADSRView.swift",
-      "line": 70,
+      "line": 86,
       "symbol": "AKADSRView.curveColor",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKADSRView.swift",
-      "line": 77,
+      "line": 93,
       "symbol": "AKADSRView.init(callback:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKADSRView.swift",
-      "line": 83,
+      "line": 99,
       "symbol": "AKADSRView.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKADSRView.swift",
-      "line": 89,
+      "line": 105,
       "symbol": "AKADSRView.prepareForInterfaceBuilder()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKADSRView.swift",
-      "line": 96,
+      "line": 112,
       "symbol": "AKADSRView.intrinsicContentSize",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKADSRView.swift",
-      "line": 100,
+      "line": 116,
       "symbol": "AKADSRView.requiresConstraintBasedLayout",
       "symbol_kind": "source.lang.swift.decl.var.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKADSRView.swift",
-      "line": 106,
+      "line": 122,
       "symbol": "AKADSRView.touchesBegan(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKADSRView.swift",
-      "line": 124,
+      "line": 140,
       "symbol": "AKADSRView.touchesMoved(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKADSRView.swift",
-      "line": 331,
+      "line": 345,
       "symbol": "AKADSRView.draw(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -191,161 +149,147 @@
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKKeyboardView.swift",
-      "line": 11,
-      "symbol": "AKKeyboardDelegate",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKKeyboardView.swift",
-      "line": 12,
+      "line": 13,
       "symbol": "AKKeyboardDelegate.noteOn(note:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKKeyboardView.swift",
-      "line": 13,
+      "line": 14,
       "symbol": "AKKeyboardDelegate.noteOff(note:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKKeyboardView.swift",
-      "line": 16,
-      "symbol": "AKKeyboardView",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKKeyboardView.swift",
-      "line": 18,
+      "line": 20,
       "symbol": "AKKeyboardView.octaveCount",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKKeyboardView.swift",
-      "line": 19,
+      "line": 21,
       "symbol": "AKKeyboardView.firstOctave",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKKeyboardView.swift",
-      "line": 20,
+      "line": 22,
       "symbol": "AKKeyboardView.topKeyHeightRatio",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKKeyboardView.swift",
-      "line": 21,
+      "line": 23,
       "symbol": "AKKeyboardView.polyphonicButton",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKKeyboardView.swift",
-      "line": 23,
+      "line": 25,
       "symbol": "AKKeyboardView.whiteKeyOff",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKKeyboardView.swift",
-      "line": 24,
+      "line": 26,
       "symbol": "AKKeyboardView.blackKeyOff",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKKeyboardView.swift",
-      "line": 25,
+      "line": 27,
       "symbol": "AKKeyboardView.keyOnColor",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKKeyboardView.swift",
-      "line": 27,
+      "line": 29,
       "symbol": "AKKeyboardView.delegate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKKeyboardView.swift",
-      "line": 34,
+      "line": 35,
       "symbol": "AKKeyboardView.polyphonicMode",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKKeyboardView.swift",
-      "line": 57,
+      "line": 58,
       "symbol": "AKKeyboardView.init(frame:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKKeyboardView.swift",
-      "line": 61,
+      "line": 62,
       "symbol": "AKKeyboardView.init(width:height:firstOctave:octaveCount:polyphonic:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKKeyboardView.swift",
-      "line": 70,
+      "line": 71,
       "symbol": "AKKeyboardView.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKKeyboardView.swift",
-      "line": 76,
+      "line": 77,
       "symbol": "AKKeyboardView.prepareForInterfaceBuilder()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKKeyboardView.swift",
-      "line": 87,
+      "line": 88,
       "symbol": "AKKeyboardView.intrinsicContentSize",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKKeyboardView.swift",
-      "line": 91,
+      "line": 92,
       "symbol": "AKKeyboardView.requiresConstraintBasedLayout",
       "symbol_kind": "source.lang.swift.decl.var.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKKeyboardView.swift",
-      "line": 97,
+      "line": 98,
       "symbol": "AKKeyboardView.draw(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKKeyboardView.swift",
-      "line": 177,
+      "line": 178,
       "symbol": "AKKeyboardView.touchesBegan(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKKeyboardView.swift",
-      "line": 191,
+      "line": 192,
       "symbol": "AKKeyboardView.touchesEnded(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKKeyboardView.swift",
-      "line": 203,
+      "line": 204,
       "symbol": "AKKeyboardView.touchesMoved(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -464,140 +408,126 @@
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPropertySlider.swift",
-      "line": 11,
-      "symbol": "AKPropertySlider",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPropertySlider.swift",
-      "line": 13,
-      "symbol": "AKPropertySlider.value",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPropertySlider.swift",
-      "line": 18,
+      "line": 20,
       "symbol": "AKPropertySlider.minimum",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPropertySlider.swift",
-      "line": 19,
+      "line": 21,
       "symbol": "AKPropertySlider.maximum",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPropertySlider.swift",
-      "line": 20,
+      "line": 22,
       "symbol": "AKPropertySlider.property",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPropertySlider.swift",
-      "line": 21,
+      "line": 23,
       "symbol": "AKPropertySlider.format",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPropertySlider.swift",
-      "line": 22,
+      "line": 24,
       "symbol": "AKPropertySlider.sliderColor",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPropertySlider.swift",
-      "line": 23,
+      "line": 25,
       "symbol": "AKPropertySlider.textColor",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPropertySlider.swift",
-      "line": 24,
+      "line": 26,
       "symbol": "AKPropertySlider.fontSize",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPropertySlider.swift",
-      "line": 26,
+      "line": 28,
       "symbol": "AKPropertySlider.callback",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPropertySlider.swift",
-      "line": 27,
+      "line": 29,
       "symbol": "AKPropertySlider.lastTouch",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPropertySlider.swift",
-      "line": 29,
+      "line": 31,
       "symbol": "AKPropertySlider.init(property:format:value:minimum:maximum:color:frame:callback:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPropertySlider.swift",
-      "line": 51,
+      "line": 53,
       "symbol": "AKPropertySlider.init(frame:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPropertySlider.swift",
-      "line": 56,
+      "line": 58,
       "symbol": "AKPropertySlider.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPropertySlider.swift",
-      "line": 62,
+      "line": 64,
       "symbol": "AKPropertySlider.prepareForInterfaceBuilder()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPropertySlider.swift",
-      "line": 67,
+      "line": 69,
       "symbol": "AKPropertySlider.requiresConstraintBasedLayout",
       "symbol_kind": "source.lang.swift.decl.var.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPropertySlider.swift",
-      "line": 71,
+      "line": 73,
       "symbol": "AKPropertySlider.touchesBegan(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPropertySlider.swift",
-      "line": 82,
+      "line": 84,
       "symbol": "AKPropertySlider.touchesMoved(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPropertySlider.swift",
-      "line": 96,
+      "line": 98,
       "symbol": "AKPropertySlider.randomize()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKPropertySlider.swift",
-      "line": 102,
+      "line": 104,
       "symbol": "AKPropertySlider.draw(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -632,49 +562,49 @@
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKTelephoneView.swift",
-      "line": 34,
+      "line": 33,
       "symbol": "AKTelephoneView.touchesBegan(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKTelephoneView.swift",
-      "line": 63,
+      "line": 62,
       "symbol": "AKTelephoneView.touchesEnded(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKTelephoneView.swift",
-      "line": 71,
+      "line": 70,
       "symbol": "AKTelephoneView.init(frame:callback:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKTelephoneView.swift",
-      "line": 76,
+      "line": 75,
       "symbol": "AKTelephoneView.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKTelephoneView.swift",
-      "line": 80,
+      "line": 79,
       "symbol": "AKTelephoneView.draw(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKTelephoneView.swift",
-      "line": 295,
+      "line": 294,
       "symbol": "AKTelephoneView.drawKey(text:numeral:isPressed:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/aure/Developer/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKTelephoneView.swift",
-      "line": 346,
+      "line": 345,
       "symbol": "AKTelephoneView.drawCenteredKey(numeral:isPressed:)",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"

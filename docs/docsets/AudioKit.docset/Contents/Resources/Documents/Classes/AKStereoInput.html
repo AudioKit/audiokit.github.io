@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Array Extension Reference</title>
+    <title>AKStereoInput Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,11 +10,11 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Extension/Array" class="dashAnchor"></a>
-    <a title="Array Extension Reference"></a>
+    <a name="//apple_ref/swift/Class/AKStereoInput" class="dashAnchor"></a>
+    <a title="AKStereoInput Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">AudioKit Docs</a> (93% documented)</p>
+        <p><a href="../index.html">AudioKit Docs</a> (94% documented)</p>
         <p class="header-right"><a href="https://github.com/audiokit/AudioKit"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">AudioKit Reference</a>
         <img id="carat" src="../img/carat.png" />
-        Array Extension Reference
+        AKStereoInput Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -390,6 +390,9 @@
             <a href="../Physical Models.html">Physical Models</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Classes/AKClarinet.html">AKClarinet</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKDrip.html">AKDrip</a>
               </li>
               <li class="nav-group-task">
@@ -417,6 +420,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/AKMicrophone.html">AKMicrophone</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKStereoInput.html">AKStereoInput</a>
               </li>
             </ul>
           </li>
@@ -654,6 +660,9 @@
                 <a href="../Classes/AKKeyboardView.html">AKKeyboardView</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols/AKKeyboardDelegate.html">AKKeyboardDelegate</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKNotifications.html">AKNotifications</a>
               </li>
               <li class="nav-group-task">
@@ -710,10 +719,13 @@
             <a href="../Other Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Extensions/Array.html">Array</a>
+                <a href="../Extensions/AVAudioEngine.html">AVAudioEngine</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/AudioUnit.html">AudioUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ClosedRange.html">ClosedRange</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/Collection.html">Collection</a>
@@ -729,6 +741,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/OSStatus.html">OSStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/RangeReplaceableCollection.html">RangeReplaceableCollection</a>
               </li>
             </ul>
           </li>
@@ -750,19 +765,8 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Other Protocols.html">Other Protocols</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Protocols/AKKeyboardDelegate.html">AKKeyboardDelegate</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
             <a href="../Other Structs.html">Other Structs</a>
             <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Other Structs.html#/s:V8AudioKit13AKGetAUParams">AKGetAUParams</a>
-              </li>
               <li class="nav-group-task">
                 <a href="../Structs/AudioUnitPropertyListener.html">AudioUnitPropertyListener</a>
               </li>
@@ -790,14 +794,15 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Array</h1>
+            <h1>AKStereoInput</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">struct</span> <span class="kt">Array</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">RandomAccessCollection</span><span class="p">,</span> <span class="kt">MutableCollection</span></code></pre>
+                  <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKStereoInput</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKToggleable.html">AKToggleable</a></span></code></pre>
 
                 </div>
               </div>
-            
+            <p>Audio from a standard stereo input (very useful for making filters that use Audiobus or IAA as their input source)</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -805,9 +810,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Fe8AudioKitRxs27ExpressibleByIntegerLiteralrSacFT6zeroesSi_GSax_"></a>
-                    <a name="//apple_ref/swift/Method/init(zeroes:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Fe8AudioKitRxs27ExpressibleByIntegerLiteralrSacFT6zeroesSi_GSax_">init(zeroes:)</a>
+                    <a name="/s:vC8AudioKit13AKStereoInput6volumeSd"></a>
+                    <a name="//apple_ref/swift/Property/volume" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit13AKStereoInput6volumeSd">volume</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -815,36 +820,124 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initialize array with zeroes, ~10x faster than append for array of size 4096</p>
+                        <p>Output Volume (Default 1)</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">zeroes</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">volume</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">1.0</span></code></pre>
 
                         </div>
                       </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>count</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Number of elements in the array</p>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit13AKStereoInput9isStartedSb"></a>
+                    <a name="//apple_ref/swift/Property/isStarted" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit13AKStereoInput9isStartedSb">isStarted</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Determine if the microphone is currently on.</p>
 
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">isStarted</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit13AKStereoInputcFT_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit13AKStereoInputcFT_S0_">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize the microphone</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit13AKStereoInput5startFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/start()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit13AKStereoInput5startFT_T_">start()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Function to start, play, or activate the node, all do the same thing</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">start</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit13AKStereoInput4stopFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/stop()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit13AKStereoInput4stopFT_T_">stop()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Function to stop or bypass the node, both are equivalent</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">stop</span><span class="p">()</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -854,7 +947,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-10-11)</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-11-15)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

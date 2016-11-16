@@ -14,7 +14,7 @@
     <a title="AKADSRView Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">AudioKit Docs</a> (93% documented)</p>
+        <p><a href="../index.html">AudioKit Docs</a> (94% documented)</p>
         <p class="header-right"><a href="https://github.com/audiokit/AudioKit"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -390,6 +390,9 @@
             <a href="../Physical Models.html">Physical Models</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Classes/AKClarinet.html">AKClarinet</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKDrip.html">AKDrip</a>
               </li>
               <li class="nav-group-task">
@@ -417,6 +420,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/AKMicrophone.html">AKMicrophone</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKStereoInput.html">AKStereoInput</a>
               </li>
             </ul>
           </li>
@@ -654,6 +660,9 @@
                 <a href="../Classes/AKKeyboardView.html">AKKeyboardView</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols/AKKeyboardDelegate.html">AKKeyboardDelegate</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKNotifications.html">AKNotifications</a>
               </li>
               <li class="nav-group-task">
@@ -710,10 +719,13 @@
             <a href="../Other Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Extensions/Array.html">Array</a>
+                <a href="../Extensions/AVAudioEngine.html">AVAudioEngine</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/AudioUnit.html">AudioUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ClosedRange.html">ClosedRange</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/Collection.html">Collection</a>
@@ -729,6 +741,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/OSStatus.html">OSStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/RangeReplaceableCollection.html">RangeReplaceableCollection</a>
               </li>
             </ul>
           </li>
@@ -750,19 +765,8 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Other Protocols.html">Other Protocols</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Protocols/AKKeyboardDelegate.html">AKKeyboardDelegate</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
             <a href="../Other Structs.html">Other Structs</a>
             <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Other Structs.html#/s:V8AudioKit13AKGetAUParams">AKGetAUParams</a>
-              </li>
               <li class="nav-group-task">
                 <a href="../Structs/AudioUnitPropertyListener.html">AudioUnitPropertyListener</a>
               </li>
@@ -791,7 +795,13 @@
         <section>
           <section class="section">
             <h1>AKADSRView</h1>
-            <p>Undocumented</p>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                </div>
+              </div>
+            <p>A click and draggable view of an ADSR Envelope (Atttack, Decay, Sustain, Release)</p>
 
           </section>
           <section class="section task-group-section">
@@ -810,8 +820,43 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Attack time in seconds, Default: 0.1</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">attackDuration</span><span class="p">:</span> <span class="kt">Double</span>  <span class="o">=</span> <span class="mf">0.100</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C8AudioKit10AKADSRView12ADSRCallback"></a>
+                    <a name="//apple_ref/swift/Alias/ADSRCallback" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C8AudioKit10AKADSRView12ADSRCallback">ADSRCallback</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Type of function to call when values of the ADSR have changed</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ADSRCallback</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Double</span><span class="p">,</span> <span class="kt">Double</span><span class="p">,</span> <span class="kt">Double</span><span class="p">,</span> <span class="kt">Double</span><span class="p">)</span><span class="o">-&gt;</span><span class="p">()</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -829,8 +874,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Decay time in seconds, Default: 0.1</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">decayDuration</span><span class="p">:</span> <span class="kt">Double</span>   <span class="o">=</span> <span class="mf">0.100</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -848,8 +901,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Sustain Level (0-1), Default: 0.5</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">sustainLevel</span><span class="p">:</span> <span class="kt">Double</span>    <span class="o">=</span> <span class="mf">0.50</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -867,8 +928,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Release time in seconds, Default: 0.1</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">releaseDuration</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.100</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -886,8 +955,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Function to call when the values of the ADSR changes</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">callback</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKADSRView.html#/s:C8AudioKit10AKADSRView12ADSRCallback">ADSRCallback</a></span><span class="p">?</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -935,6 +1012,14 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -953,6 +1038,14 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -973,6 +1066,14 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -992,6 +1093,14 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1010,6 +1119,14 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1041,6 +1158,14 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1059,6 +1184,14 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1090,6 +1223,14 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1109,6 +1250,14 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1127,6 +1276,14 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1158,6 +1315,14 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1176,6 +1341,14 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1207,6 +1380,14 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1215,7 +1396,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-10-11)</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-11-15)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
