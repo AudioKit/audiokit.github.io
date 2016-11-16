@@ -1,14 +1,14 @@
-<p><h3>Flute
-</h3> Physical model of a Flute</p>
+<p><h3>Clarinet
+</h3> Physical model of a Clarinet</p>
 
 {% highlight ruby %}import AudioKit
 import PlaygroundSupport
 
 let playRate = 2.0
 
-let flute = AKFlute()
+let clarinet = AKClarinet()
 
-let reverb = AKReverb(flute)
+let reverb = AKReverb(clarinet)
 
 AudioKit.output = reverb
 AudioKit.start()
@@ -19,14 +19,15 @@ AKPlaygroundLoop(frequency: playRate) {
     let octave = (2..<6).randomElement() * 12
     if random(0, 10) < 1.0 { note += 1 }
     if !scale.contains(note % 12) { print("ACCIDENT!") }
-
+    
     let frequency = (note+octave).midiNoteToFrequency()
     if random(0, 6) > 1.0 {
-        flute.trigger(frequency: frequency, amplitude: 0.1)
+        clarinet.trigger(frequency: frequency, amplitude: 0.1)
     } else {
-        flute.stop()
+        clarinet.stop()
     }
 }
 
 PlaygroundPage.current.needsIndefiniteExecution = true
+
 {% endhighlight %}
