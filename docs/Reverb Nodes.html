@@ -690,6 +690,18 @@
               <li class="nav-group-task">
                 <a href="Classes/AKAUPresetBuilder.html">AKAUPresetBuilder</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKStereoFieldLimiter.html">AKStereoFieldLimiter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultitouchGestureRecognizer.html">MultitouchGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultitouchGestureRecognizer/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultitouchGestureRecognizer/State.html">– State</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -719,6 +731,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Extensions/AVAudioEngine.html">AVAudioEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/AudioComponentDescription.html">AudioComponentDescription</a>
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/AudioUnit.html">AudioUnit</a>
@@ -760,6 +775,20 @@
               </li>
               <li class="nav-group-task">
                 <a href="Other Functions.html#/s:F8AudioKit6fourCCFSSVs6UInt32">fourCC(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Other Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/AKComponent.html">AKComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/AUComponent.html">AUComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/MultitouchGestureRecognizerDelegate.html">MultitouchGestureRecognizerDelegate</a>
               </li>
             </ul>
           </li>
@@ -826,29 +855,9 @@ decorrelation delay lines in parallel at the output.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKChowningReverb</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKChowningReverb</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>input</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Input node to process</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -874,71 +883,15 @@ decorrelation delay lines in parallel at the output.</p>
 modeling scattering junction of 8 lossless waveguides of equal
 characteristic impedance.</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>input: Input node to process</li>
-<li>feedback: Feedback level in the range 0 to 1. 0.6 gives a good small &lsquo;live&rsquo; room sound, 0.8 a small hall, and 0.9 a large hall. A setting of exactly 1 means infinite length, while higher values will make the opcode unstable.</li>
-<li>cutoffFrequency: Low-pass cutoff frequency.</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKCostelloReverb.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKCostelloReverb</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKCostelloReverb</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>input</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Input node to process</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>feedback</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Feedback level in the range 0 to 1. 0.6 gives a good small ‘live’ room sound, 0.8 a small hall, and 0.9 a large hall. A setting of exactly 1 means infinite length, while higher values will make the opcode unstable.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>cutoffFrequency</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Low-pass cutoff frequency.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -963,71 +916,15 @@ characteristic impedance.</p>
                         <p>This module will perform partitioned convolution on an input signal using an
 audio file as an impulse response.</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>input: Input node to process</li>
-<li>impulseResponseFileURL: Location of the imulseResponse audio File</li>
-<li>partitionLength: Partition length (in samples). Must be a power of 2. Lower values will add less latency, at the cost of requiring more CPU power.</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKConvolution.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKConvolution</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKConvolution</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>input</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Input node to process</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>impulseResponseFileURL</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Location of the imulseResponse audio File</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>partitionLength</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Partition length (in samples). Must be a power of 2. Lower values will add less latency, at the cost of requiring more CPU power.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1055,71 +952,15 @@ reverberation time (defined as the time in seconds for a signal to decay to
 1/1000, or 60dB down from its original amplitude).  Output will begin to
 appear immediately.</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>input: Input node to process</li>
-<li>reverbDuration: The duration in seconds for a signal to decay to 1/1000, or 60dB down from its original amplitude.</li>
-<li>loopDuration: The loop duration of the filter, in seconds. This can also be thought of as the delay time or “echo density” of the reverberation.</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKFlatFrequencyResponseReverb.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKFlatFrequencyResponseReverb</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKFlatFrequencyResponseReverb</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>input</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Input node to process</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>reverbDuration</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The duration in seconds for a signal to decay to 1/1000, or 60dB down from its original amplitude.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>loopDuration</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The loop duration of the filter, in seconds. This can also be thought of as the delay time or “echo density” of the reverberation.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1143,15 +984,6 @@ appear immediately.</p>
                       <div class="abstract">
                         <p>AudioKit version of Apple&rsquo;s Reverb Audio Unit</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>input: AKNode to reverberate</li>
-<li>dryWetMix: Amount of processed signal (Default: 0.5, Minimum: 0, Maximum: 1)</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKReverb.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1161,39 +993,6 @@ appear immediately.</p>
                           <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKReverb</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>input</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>AKNode to reverberate</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>dryWetMix</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Amount of processed signal (Default: 0.5, Minimum: 0, Maximum: 1)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1217,21 +1016,6 @@ appear immediately.</p>
                       <div class="abstract">
                         <p>AudioKit version of Apple&rsquo;s Reverb2 Audio Unit</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>input: Input node to process</li>
-<li>dryWetMix: Dry Wet Mix (CrossFade) ranges from 0 to  (Default: 0.5)</li>
-<li>gain: Gain (Decibels) ranges from -20 to 20 (Default: 0)</li>
-<li>minDelayTime: Min Delay Time (Secs) ranges from 0.0001 to 1.0 (Default: 0.008)</li>
-<li>maxDelayTime: Max Delay Time (Secs) ranges from 0.0001 to 1.0 (Default: 0.050)</li>
-<li>decayTimeAt0Hz: Decay Time At0 Hz (Secs) ranges from 0.001 to 20.0 (Default: 1.0)</li>
-<li>decayTimeAtNyquist: Decay Time At Nyquist (Secs) ranges from 0.001 to 20.0 (Default: 0.5)</li>
-<li>randomizeReflections: Randomize Reflections (Integer) ranges from 1 to 1000 (Default: 1)</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKReverb2.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1242,117 +1026,6 @@ appear immediately.</p>
 
                         </div>
                       </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>input</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Input node to process</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>dryWetMix</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Dry Wet Mix (CrossFade) ranges from 0 to  (Default: 0.5)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>gain</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Gain (Decibels) ranges from -20 to 20 (Default: 0)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>minDelayTime</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Min Delay Time (Secs) ranges from 0.0001 to 1.0 (Default: 0.008)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>maxDelayTime</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Max Delay Time (Secs) ranges from 0.0001 to 1.0 (Default: 0.050)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>decayTimeAt0Hz</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Decay Time At0 Hz (Secs) ranges from 0.001 to 20.0 (Default: 1.0)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>decayTimeAtNyquist</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Decay Time At Nyquist (Secs) ranges from 0.001 to 20.0 (Default: 0.5)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>randomizeReflections</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Randomize Reflections (Integer) ranges from 1 to 1000 (Default: 1)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -1361,7 +1034,7 @@ appear immediately.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-11-15)</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-12-26)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -690,6 +690,18 @@
               <li class="nav-group-task">
                 <a href="Classes/AKAUPresetBuilder.html">AKAUPresetBuilder</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKStereoFieldLimiter.html">AKStereoFieldLimiter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultitouchGestureRecognizer.html">MultitouchGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultitouchGestureRecognizer/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultitouchGestureRecognizer/State.html">– State</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -719,6 +731,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Extensions/AVAudioEngine.html">AVAudioEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/AudioComponentDescription.html">AudioComponentDescription</a>
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/AudioUnit.html">AudioUnit</a>
@@ -760,6 +775,20 @@
               </li>
               <li class="nav-group-task">
                 <a href="Other Functions.html#/s:F8AudioKit6fourCCFSSVs6UInt32">fourCC(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Other Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/AKComponent.html">AKComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/AUComponent.html">AUComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/MultitouchGestureRecognizerDelegate.html">MultitouchGestureRecognizerDelegate</a>
               </li>
             </ul>
           </li>
@@ -814,155 +843,15 @@
                       <div class="abstract">
                         <p>AudioKit Compressor based on Apple&rsquo;s DynamicsProcessor Audio Unit</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>input: Input node to process</li>
-<li>threshold: Threshold (dB) ranges from -40 to 20 (Default: -20)</li>
-<li>headRoom: Head Room (dB) ranges from 0.1 to 40.0 (Default: 5)</li>
-<li>attackTime: Attack Time (secs) ranges from 0.0001 to 0.2 (Default: 0.001)</li>
-<li>releaseTime: Release Time (secs) ranges from 0.01 to 3 (Default: 0.05)</li>
-<li>masterGain: Master Gain (dB) ranges from -40 to 40 (Default: 0)</li>
-<li>compressionAmount: Compression Amount (dB) ranges from -40 to 40 (Default: 0) (read only)</li>
-<li>inputAmplitude: Input Amplitude (dB) ranges from -40 to 40 (Default: 0) (read only)</li>
-<li>outputAmplitude: Output Amplitude (dB) ranges from -40 to 40 (Default: 0) (read only)</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKCompressor.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKCompressor</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AUComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKCompressor</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AUComponent.html">AUComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>input</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Input node to process</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>threshold</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Threshold (dB) ranges from -40 to 20 (Default: -20)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>headRoom</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Head Room (dB) ranges from 0.1 to 40.0 (Default: 5)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>attackTime</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Attack Time (secs) ranges from 0.0001 to 0.2 (Default: 0.001)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>releaseTime</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Release Time (secs) ranges from 0.01 to 3 (Default: 0.05)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>masterGain</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Master Gain (dB) ranges from -40 to 40 (Default: 0)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>compressionAmount</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Compression Amount (dB) ranges from -40 to 40 (Default: 0) (read only)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>inputAmplitude</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Input Amplitude (dB) ranges from -40 to 40 (Default: 0) (read only)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>outputAmplitude</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Output Amplitude (dB) ranges from -40 to 40 (Default: 0) (read only)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -986,183 +875,15 @@
                       <div class="abstract">
                         <p>AudioKit version of Apple&rsquo;s DynamicsProcessor Audio Unit</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>input: Input node to process</li>
-<li>threshold: Threshold (dB) ranges from -40 to 20 (Default: -20)</li>
-<li>headRoom: Head Room (dB) ranges from 0.1 to 40.0 (Default: 5)</li>
-<li>expansionRatio: Expansion Ratio (rate) ranges from 1 to 50.0 (Default: 2)</li>
-<li>expansionThreshold: Expansion Threshold (rate) ranges from 1 to 50.0 (Default: 2)</li>
-<li>attackTime: Attack Time (secs) ranges from 0.0001 to 0.2 (Default: 0.001)</li>
-<li>releaseTime: Release Time (secs) ranges from 0.01 to 3 (Default: 0.05)</li>
-<li>masterGain: Master Gain (dB) ranges from -40 to 40 (Default: 0)</li>
-<li>compressionAmount: Compression Amount (dB) ranges from -40 to 40 (Default: 0) (read only)</li>
-<li>inputAmplitude: Input Amplitude (dB) ranges from -40 to 40 (Default: 0) (read only)</li>
-<li>outputAmplitude: Output Amplitude (dB) ranges from -40 to 40 (Default: 0) (read only)</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKDynamicsProcessor.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKDynamicsProcessor</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AUComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKDynamicsProcessor</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AUComponent.html">AUComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>input</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Input node to process</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>threshold</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Threshold (dB) ranges from -40 to 20 (Default: -20)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>headRoom</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Head Room (dB) ranges from 0.1 to 40.0 (Default: 5)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>expansionRatio</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Expansion Ratio (rate) ranges from 1 to 50.0 (Default: 2)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>expansionThreshold</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Expansion Threshold (rate) ranges from 1 to 50.0 (Default: 2)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>attackTime</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Attack Time (secs) ranges from 0.0001 to 0.2 (Default: 0.001)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>releaseTime</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Release Time (secs) ranges from 0.01 to 3 (Default: 0.05)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>masterGain</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Master Gain (dB) ranges from -40 to 40 (Default: 0)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>compressionAmount</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Compression Amount (dB) ranges from -40 to 40 (Default: 0) (read only)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>inputAmplitude</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Input Amplitude (dB) ranges from -40 to 40 (Default: 0) (read only)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>outputAmplitude</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Output Amplitude (dB) ranges from -40 to 40 (Default: 0) (read only)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1186,155 +907,15 @@
                       <div class="abstract">
                         <p>AudioKit Expander based on Apple&rsquo;s DynamicsProcessor Audio Unit</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>input: Input node to process</li>
-<li>expansionRatio: Expansion Ratio (rate) ranges from 1 to 50.0 (Default: 2)</li>
-<li>expansionThreshold: Expansion Threshold (rate) ranges from 1 to 50.0 (Default: 2)</li>
-<li>attackTime: Attack Time (secs) ranges from 0.0001 to 0.2 (Default: 0.001)</li>
-<li>releaseTime: Release Time (secs) ranges from 0.01 to 3 (Default: 0.05)</li>
-<li>masterGain: Master Gain (dB) ranges from -40 to 40 (Default: 0)</li>
-<li>compressionAmount: Compression Amount (dB) ranges from -40 to 40 (Default: 0) (read only)</li>
-<li>inputAmplitude: Input Amplitude (dB) ranges from -40 to 40 (Default: 0) (read only)</li>
-<li>outputAmplitude: Output Amplitude (dB) ranges from -40 to 40 (Default: 0) (read only)</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKExpander.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKExpander</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AUComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKExpander</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AUComponent.html">AUComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>input</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Input node to process</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>expansionRatio</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Expansion Ratio (rate) ranges from 1 to 50.0 (Default: 2)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>expansionThreshold</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Expansion Threshold (rate) ranges from 1 to 50.0 (Default: 2)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>attackTime</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Attack Time (secs) ranges from 0.0001 to 0.2 (Default: 0.001)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>releaseTime</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Release Time (secs) ranges from 0.01 to 3 (Default: 0.05)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>masterGain</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Master Gain (dB) ranges from -40 to 40 (Default: 0)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>compressionAmount</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Compression Amount (dB) ranges from -40 to 40 (Default: 0) (read only)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>inputAmplitude</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Input Amplitude (dB) ranges from -40 to 40 (Default: 0) (read only)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>outputAmplitude</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Output Amplitude (dB) ranges from -40 to 40 (Default: 0) (read only)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1358,85 +939,15 @@
                       <div class="abstract">
                         <p>AudioKit version of Apple&rsquo;s PeakLimiter Audio Unit</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>input: Input node to process</li>
-<li>attackTime: Attack Time (Secs) ranges from 0.001 to 0.03 (Default: 0.012)</li>
-<li>decayTime: Decay Time (Secs) ranges from 0.001 to 0.06 (Default: 0.024)</li>
-<li>preGain: Pre Gain (dB) ranges from -40 to 40 (Default: 0)</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKPeakLimiter.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKPeakLimiter</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AUComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKPeakLimiter</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AUComponent.html">AUComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>input</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Input node to process</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>attackTime</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Attack Time (Secs) ranges from 0.001 to 0.03 (Default: 0.012)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>decayTime</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Decay Time (Secs) ranges from 0.001 to 0.06 (Default: 0.024)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>preGain</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Pre Gain (dB) ranges from -40 to 40 (Default: 0)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1446,7 +957,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-11-15)</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-12-26)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

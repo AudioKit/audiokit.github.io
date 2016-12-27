@@ -690,6 +690,18 @@
               <li class="nav-group-task">
                 <a href="Classes/AKAUPresetBuilder.html">AKAUPresetBuilder</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKStereoFieldLimiter.html">AKStereoFieldLimiter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultitouchGestureRecognizer.html">MultitouchGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultitouchGestureRecognizer/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultitouchGestureRecognizer/State.html">– State</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -719,6 +731,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Extensions/AVAudioEngine.html">AVAudioEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/AudioComponentDescription.html">AudioComponentDescription</a>
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/AudioUnit.html">AudioUnit</a>
@@ -760,6 +775,20 @@
               </li>
               <li class="nav-group-task">
                 <a href="Other Functions.html#/s:F8AudioKit6fourCCFSSVs6UInt32">fourCC(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Other Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/AKComponent.html">AKComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/AUComponent.html">AUComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/MultitouchGestureRecognizerDelegate.html">MultitouchGestureRecognizerDelegate</a>
               </li>
             </ul>
           </li>
@@ -814,113 +843,15 @@
                       <div class="abstract">
                         <p>Classic FM Synthesis audio generation.</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>waveform: Shape of the oscillation</li>
-<li>baseFrequency: In cycles per second, or Hz, this is the common denominator for the carrier and modulating frequencies.</li>
-<li>carrierMultiplier: This multiplied by the baseFrequency gives the carrier frequency.</li>
-<li>modulatingMultiplier: This multiplied by the baseFrequency gives the modulating frequency.</li>
-<li>modulationIndex: This multiplied by the modulating frequency gives the modulation amplitude.</li>
-<li>amplitude: Output Amplitude.</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKFMOscillator.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKFMOscillator</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKFMOscillator</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>waveform</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Shape of the oscillation</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>baseFrequency</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>In cycles per second, or Hz, this is the common denominator for the carrier and modulating frequencies.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>carrierMultiplier</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>This multiplied by the baseFrequency gives the carrier frequency.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>modulatingMultiplier</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>This multiplied by the baseFrequency gives the modulating frequency.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>modulationIndex</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>This multiplied by the modulating frequency gives the modulation amplitude.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>amplitude</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Output Amplitude.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -944,169 +875,15 @@
                       <div class="abstract">
                         <p>Frequency Modulation Polyphonic Oscillator</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>waveform:             The waveform of oscillation</li>
-<li>carrierMultiplier:    This multiplied by the baseFrequency gives the carrier frequency.</li>
-<li>modulatingMultiplier: This multiplied by the baseFrequency gives the modulating frequency.</li>
-<li>modulationIndex:      This multiplied by the modulating frequency gives the modulation amplitude.</li>
-<li>attackDuration:       Attack time</li>
-<li>decayDuration:        Decay time</li>
-<li>sustainLevel:         Sustain Level</li>
-<li>releaseDuration:      Release time</li>
-<li>detuningOffset:       Frequency offset in Hz.</li>
-<li>detuningMultiplier:   Frequency detuning multiplier</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKFMOscillatorBank.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKFMOscillatorBank</span><span class="p">:</span> <span class="kt"><a href="Classes/AKPolyphonicNode.html">AKPolyphonicNode</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKFMOscillatorBank</span><span class="p">:</span> <span class="kt"><a href="Classes/AKPolyphonicNode.html">AKPolyphonicNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>waveform</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The waveform of oscillation</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>carrierMultiplier</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>This multiplied by the baseFrequency gives the carrier frequency.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>modulatingMultiplier</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>This multiplied by the baseFrequency gives the modulating frequency.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>modulationIndex</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>This multiplied by the modulating frequency gives the modulation amplitude.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>attackDuration</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Attack time</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>decayDuration</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Decay time</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>sustainLevel</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Sustain Level</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>releaseDuration</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Release time</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>detuningOffset</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Frequency offset in Hz.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>detuningMultiplier</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Frequency detuning multiplier</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1131,127 +908,15 @@
                         <p>This is an oscillator with linear interpolation that is capable of morphing
 between an arbitrary number of wavetables.</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>waveformArray:      An array of exactly four waveforms</li>
-<li>frequency:          Frequency (in Hz)</li>
-<li>amplitude:          Amplitude (typically a value between 0 and 1).</li>
-<li>index:              Index of the wavetable to use (fractional are okay).</li>
-<li>detuningOffset:     Frequency offset in Hz.</li>
-<li>detuningMultiplier: Frequency detuning multiplier</li>
-<li>phase:              Initial phase of waveform, expects a value 0-1</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKMorphingOscillator.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKMorphingOscillator</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKMorphingOscillator</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>waveformArray</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>An array of exactly four waveforms</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>frequency</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Frequency (in Hz)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>amplitude</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Amplitude (typically a value between 0 and 1).</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>index</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Index of the wavetable to use (fractional are okay).</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>detuningOffset</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Frequency offset in Hz.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>detuningMultiplier</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Frequency detuning multiplier</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>phase</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Initial phase of waveform, expects a value 0-1</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1276,141 +941,15 @@ between an arbitrary number of wavetables.</p>
                         <p>This is an oscillator with linear interpolation that is capable of morphing
 between an arbitrary number of wavetables.</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>waveform:           The waveform of oscillation</li>
-<li>index:              Index of the wavetable to use (fractional are okay).</li>
-<li>attackDuration:     Attack time</li>
-<li>decayDuration:      Decay time</li>
-<li>sustainLevel:       Sustain Level</li>
-<li>releaseDuration:    Release time</li>
-<li>detuningOffset:     Frequency offset in Hz.</li>
-<li>detuningMultiplier: Frequency detuning multiplier</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKMorphingOscillatorBank.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKMorphingOscillatorBank</span><span class="p">:</span> <span class="kt"><a href="Classes/AKPolyphonicNode.html">AKPolyphonicNode</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKMorphingOscillatorBank</span><span class="p">:</span> <span class="kt"><a href="Classes/AKPolyphonicNode.html">AKPolyphonicNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>waveform</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The waveform of oscillation</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>index</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Index of the wavetable to use (fractional are okay).</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>attackDuration</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Attack time</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>decayDuration</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Decay time</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>sustainLevel</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Sustain Level</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>releaseDuration</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Release time</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>detuningOffset</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Frequency offset in Hz.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>detuningMultiplier</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Frequency detuning multiplier</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1435,85 +974,15 @@ between an arbitrary number of wavetables.</p>
                         <p>Reads from the table sequentially and repeatedly at given frequency. Linear
 interpolation is applied for table look up from internal phase values.</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>frequency: Frequency in cycles per second</li>
-<li>amplitude: Output Amplitude.</li>
-<li>detuningOffset: Frequency offset in Hz.</li>
-<li>detuningMultiplier: Frequency detuning multiplier</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKOscillator.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKOscillator</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKOscillator</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>frequency</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Frequency in cycles per second</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>amplitude</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Output Amplitude.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>detuningOffset</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Frequency offset in Hz.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>detuningMultiplier</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Frequency detuning multiplier</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1538,127 +1007,15 @@ interpolation is applied for table look up from internal phase values.</p>
                         <p>Reads from the table sequentially and repeatedly at given frequency. Linear
 interpolation is applied for table look up from internal phase values.</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>waveform:  The waveform of oscillation</li>
-<li>attackDuration: Attack time</li>
-<li>decayDuration: Decay time</li>
-<li>sustainLevel: Sustain Level</li>
-<li>releaseDuration: Release time</li>
-<li>detuningOffset: Frequency offset in Hz.</li>
-<li>detuningMultiplier: Frequency detuning multiplier</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKOscillatorBank.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKOscillatorBank</span><span class="p">:</span> <span class="kt"><a href="Classes/AKPolyphonicNode.html">AKPolyphonicNode</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKOscillatorBank</span><span class="p">:</span> <span class="kt"><a href="Classes/AKPolyphonicNode.html">AKPolyphonicNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>waveform</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The waveform of oscillation</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>attackDuration</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Attack time</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>decayDuration</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Decay time</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>sustainLevel</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Sustain Level</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>releaseDuration</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Release time</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>detuningOffset</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Frequency offset in Hz.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>detuningMultiplier</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Frequency detuning multiplier</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1682,99 +1039,15 @@ interpolation is applied for table look up from internal phase values.</p>
                       <div class="abstract">
                         <p>Phase Distortion Oscillator</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>frequency: In cycles per second, or Hz.</li>
-<li>amplitude: Output amplitude</li>
-<li>phaseDistortion: Duty cycle width (range 0-1).</li>
-<li>detuningOffset: Frequency offset in Hz.</li>
-<li>detuningMultiplier: Frequency detuning multiplier</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKPhaseDistortionOscillator.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKPhaseDistortionOscillator</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKPhaseDistortionOscillator</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>frequency</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>In cycles per second, or Hz.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>amplitude</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Output amplitude</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>phaseDistortion</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Duty cycle width (range 0-1).</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>detuningOffset</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Frequency offset in Hz.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>detuningMultiplier</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Frequency detuning multiplier</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1798,141 +1071,15 @@ interpolation is applied for table look up from internal phase values.</p>
                       <div class="abstract">
                         <p>Phase Distortion Oscillator Bank</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>waveform:  The waveform of oscillation</li>
-<li>phaseDistortion: Duty cycle width (range 0-1).</li>
-<li>attackDuration: Attack time</li>
-<li>decayDuration: Decay time</li>
-<li>sustainLevel: Sustain Level</li>
-<li>releaseDuration: Release time</li>
-<li>detuningOffset: Frequency offset in Hz.</li>
-<li>detuningMultiplier: Frequency detuning multiplier</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKPhaseDistortionOscillatorBank.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKPhaseDistortionOscillatorBank</span><span class="p">:</span> <span class="kt"><a href="Classes/AKPolyphonicNode.html">AKPolyphonicNode</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKPhaseDistortionOscillatorBank</span><span class="p">:</span> <span class="kt"><a href="Classes/AKPolyphonicNode.html">AKPolyphonicNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>waveform</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The waveform of oscillation</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>phaseDistortion</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Duty cycle width (range 0-1).</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>attackDuration</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Attack time</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>decayDuration</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Decay time</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>sustainLevel</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Sustain Level</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>releaseDuration</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Release time</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>detuningOffset</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Frequency offset in Hz.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>detuningMultiplier</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Frequency detuning multiplier</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1956,99 +1103,15 @@ interpolation is applied for table look up from internal phase values.</p>
                       <div class="abstract">
                         <p>Pulse-Width Modulating Oscillator</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>frequency: In cycles per second, or Hz.</li>
-<li>amplitude: Output amplitude</li>
-<li>pulseWidth: Duty cycle width (range 0-1).</li>
-<li>detuningOffset: Frequency offset in Hz.</li>
-<li>detuningMultiplier: Frequency detuning multiplier</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKPWMOscillator.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKPWMOscillator</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKPWMOscillator</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>frequency</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>In cycles per second, or Hz.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>amplitude</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Output amplitude</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>pulseWidth</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Duty cycle width (range 0-1).</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>detuningOffset</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Frequency offset in Hz.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>detuningMultiplier</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Frequency detuning multiplier</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -2072,127 +1135,15 @@ interpolation is applied for table look up from internal phase values.</p>
                       <div class="abstract">
                         <p>Pulse-Width Modulating Oscillator Bank</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>pulseWidth: Duty cycle width (range 0-1).</li>
-<li>attackDuration: Attack time</li>
-<li>decayDuration: Decay time</li>
-<li>sustainLevel: Sustain Level</li>
-<li>releaseDuration: Release time</li>
-<li>detuningOffset: Frequency offset in Hz.</li>
-<li>detuningMultiplier: Frequency detuning multiplier</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKPWMOscillatorBank.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKPWMOscillatorBank</span><span class="p">:</span> <span class="kt"><a href="Classes/AKPolyphonicNode.html">AKPolyphonicNode</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKPWMOscillatorBank</span><span class="p">:</span> <span class="kt"><a href="Classes/AKPolyphonicNode.html">AKPolyphonicNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>pulseWidth</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Duty cycle width (range 0-1).</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>attackDuration</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Attack time</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>decayDuration</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Decay time</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>sustainLevel</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Sustain Level</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>releaseDuration</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Release time</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>detuningOffset</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Frequency offset in Hz.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>detuningMultiplier</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Frequency detuning multiplier</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -2202,7 +1153,7 @@ interpolation is applied for table look up from internal phase values.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-11-15)</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-12-26)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

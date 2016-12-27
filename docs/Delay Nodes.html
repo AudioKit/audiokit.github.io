@@ -690,6 +690,18 @@
               <li class="nav-group-task">
                 <a href="Classes/AKAUPresetBuilder.html">AKAUPresetBuilder</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKStereoFieldLimiter.html">AKStereoFieldLimiter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultitouchGestureRecognizer.html">MultitouchGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultitouchGestureRecognizer/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultitouchGestureRecognizer/State.html">– State</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -719,6 +731,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Extensions/AVAudioEngine.html">AVAudioEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/AudioComponentDescription.html">AudioComponentDescription</a>
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/AudioUnit.html">AudioUnit</a>
@@ -760,6 +775,20 @@
               </li>
               <li class="nav-group-task">
                 <a href="Other Functions.html#/s:F8AudioKit6fourCCFSSVs6UInt32">fourCC(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Other Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/AKComponent.html">AKComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/AUComponent.html">AUComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/MultitouchGestureRecognizerDelegate.html">MultitouchGestureRecognizerDelegate</a>
               </li>
             </ul>
           </li>
@@ -814,18 +843,6 @@
                       <div class="abstract">
                         <p>AudioKit version of Apple&rsquo;s Delay Audio Unit</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>input: Input audio AKNode to process</li>
-<li>time: Delay time in seconds, ranges from 0 to 2 (Default: 1)</li>
-<li>feedback: Amount of feedback (Normalized Value) ranges from 0 to 1 (Default: 0.5)</li>
-<li>lowPassCutoff: Low-pass cutoff frequency in Hz (Default 15000)</li>
-<li>dryWetMix: Amount of unprocessed (dry) to delayed (wet) audio (Normalized Value) ranges from 0 to 1 (Default: 0.5)</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKDelay.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -835,78 +852,6 @@
                           <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKDelay</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>input</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Input audio AKNode to process</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>time</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Delay time in seconds, ranges from 0 to 2 (Default: 1)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>feedback</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Amount of feedback (Normalized Value) ranges from 0 to 1 (Default: 0.5)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>lowPassCutoff</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Low-pass cutoff frequency in Hz (Default 15000)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>dryWetMix</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Amount of unprocessed (dry) to delayed (wet) audio (Normalized Value) ranges from 0 to 1 (Default: 0.5)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -930,85 +875,15 @@
                       <div class="abstract">
                         <p>A delay line with cubic interpolation.</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>input: Input node to process</li>
-<li>time: Delay time (in seconds) that can be changed during performance. This value must not exceed the maximum delay time.</li>
-<li>feedback: Feedback amount. Should be a value between 0-1.</li>
-<li>maximumDelayTime: The maximum delay time, in seconds.</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKVariableDelay.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKVariableDelay</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKVariableDelay</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>input</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Input node to process</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>time</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Delay time (in seconds) that can be changed during performance. This value must not exceed the maximum delay time.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>feedback</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Feedback amount. Should be a value between 0-1.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>maximumDelayTime</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The maximum delay time, in seconds.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1018,7 +893,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-11-15)</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-12-26)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

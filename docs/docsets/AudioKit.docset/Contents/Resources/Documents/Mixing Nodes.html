@@ -690,6 +690,18 @@
               <li class="nav-group-task">
                 <a href="Classes/AKAUPresetBuilder.html">AKAUPresetBuilder</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKStereoFieldLimiter.html">AKStereoFieldLimiter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultitouchGestureRecognizer.html">MultitouchGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultitouchGestureRecognizer/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultitouchGestureRecognizer/State.html">– State</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -719,6 +731,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Extensions/AVAudioEngine.html">AVAudioEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/AudioComponentDescription.html">AudioComponentDescription</a>
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/AudioUnit.html">AudioUnit</a>
@@ -760,6 +775,20 @@
               </li>
               <li class="nav-group-task">
                 <a href="Other Functions.html#/s:F8AudioKit6fourCCFSSVs6UInt32">fourCC(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Other Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/AKComponent.html">AKComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/AUComponent.html">AUComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/MultitouchGestureRecognizerDelegate.html">MultitouchGestureRecognizerDelegate</a>
               </li>
             </ul>
           </li>
@@ -851,57 +880,15 @@ bank) can be restored by matching it with, for instance, its own source. It
 should be noted that this modifies amplitude only; output signal is not
 altered in any other respect.</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>input: Input node to process</li>
-<li>comparator: Audio to match power with</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKBalancer.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKBalancer</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKBalancer</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>input</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Input node to process</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>comparator</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Audio to match power with</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -925,57 +912,15 @@ altered in any other respect.</p>
                       <div class="abstract">
                         <p>Stereo Booster</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>input: Input node to process</li>
-<li>gain: Boosting multiplier.</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKBooster.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKBooster</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKBooster</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>input</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Input node to process</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>gain</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Boosting multiplier.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -999,16 +944,6 @@ altered in any other respect.</p>
                       <div class="abstract">
                         <p>Balanceable Mix between two signals, usually used for a dry signal and wet signal</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>dry: Dry Input (or just input 1)</li>
-<li>wet: Wet Input (or just input 2)</li>
-<li>balance: Balance Point (0 = all dry, 1 = all wet)</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKDryWetMixer.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1018,52 +953,6 @@ altered in any other respect.</p>
                           <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKDryWetMixer</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>dry</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Dry Input (or just input 1)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>wet</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Wet Input (or just input 2)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>balance</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Balance Point (0 = all dry, 1 = all wet)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1119,57 +1008,15 @@ altered in any other respect.</p>
                       <div class="abstract">
                         <p>Stereo Panner</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>input: Input node to process</li>
-<li>pan: Panning. A value of -1 is hard left, and a value of 1 is hard right, and 0 is center.</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKPanner.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKPanner</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKPanner</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>input</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Input node to process</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>pan</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Panning. A value of -1 is hard left, and a value of 1 is hard right, and 0 is center.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1179,7 +1026,7 @@ altered in any other respect.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-11-15)</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-12-26)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

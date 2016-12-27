@@ -691,6 +691,18 @@
               <li class="nav-group-task">
                 <a href="../Classes/AKAUPresetBuilder.html">AKAUPresetBuilder</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKStereoFieldLimiter.html">AKStereoFieldLimiter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MultitouchGestureRecognizer.html">MultitouchGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MultitouchGestureRecognizer/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MultitouchGestureRecognizer/State.html">– State</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -720,6 +732,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Extensions/AVAudioEngine.html">AVAudioEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/AudioComponentDescription.html">AudioComponentDescription</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/AudioUnit.html">AudioUnit</a>
@@ -761,6 +776,20 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Other Functions.html#/s:F8AudioKit6fourCCFSSVs6UInt32">fourCC(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AKComponent.html">AKComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AUComponent.html">AUComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MultitouchGestureRecognizerDelegate.html">MultitouchGestureRecognizerDelegate</a>
               </li>
             </ul>
           </li>
@@ -807,19 +836,19 @@
           <section class="section task-group-section">
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Properties"></a>
-                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
-                <a href="#/Properties">
-                  <h3 class="section-name">Properties</h3>
+                <a name="/Properties%20%20%20%20///%20Values%20stored%20in%20the%20table"></a>
+                <a name="//apple_ref/swift/Section/Properties    /// Values stored in the table" class="dashAnchor"></a>
+                <a href="#/Properties%20%20%20%20///%20Values%20stored%20in%20the%20table">
+                  <h3 class="section-name">Properties    /// Values stored in the table</h3>
                 </a>
               </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vV8AudioKit7AKTable5phaseSd"></a>
+                    <a name="/s:vV8AudioKit7AKTable5phaseSf"></a>
                     <a name="//apple_ref/swift/Property/phase" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vV8AudioKit7AKTable5phaseSd">phase</a>
+                    <a class="token" href="#/s:vV8AudioKit7AKTable5phaseSf">phase</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -854,14 +883,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Values stored in the table</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">startIndex</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">startIndex</span><span class="p">:</span> <span class="kt">Index</span></code></pre>
 
                         </div>
                       </div>
@@ -881,14 +909,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Values stored in the table</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">endIndex</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">endIndex</span><span class="p">:</span> <span class="kt">Index</span></code></pre>
 
                         </div>
                       </div>
@@ -898,9 +925,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FV8AudioKit7AKTable5indexFT5afterSi_Si"></a>
-                    <a name="//apple_ref/swift/Method/index(after:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FV8AudioKit7AKTable5indexFT5afterSi_Si">index(after:)</a>
+                    <a name="/s:vPs10Collection5countwx13IndexDistance"></a>
+                    <a name="//apple_ref/swift/Property/count" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vPs10Collection5countwx13IndexDistance">count</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -908,54 +935,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the position immediately after the given index.</p>
-
-<div class="aside aside-parameter">
-    <p class="aside-title">Parameter</p>
-    Parameter i: A valid index of the collection. <code>i</code> must be less than
-<code><a href="../Structs/AKTable.html#/s:vPs16MutableIndexable8endIndexwx5Index">endIndex</a></code>.
-
-</div>
-
-<div class="aside aside-returns">
-    <p class="aside-title">Returns</p>
-    The index value immediately after <code>i</code>.
-
-</div>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">index</span><span class="p">(</span><span class="n">after</span> <span class="nv">i</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">IndexDistance</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>i</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>A valid index of the collection. <code>i</code> must be less than <code>endIndex</code>.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>The index value immediately after <code>i</code>.</p>
-
                       </div>
                     </section>
                   </div>
@@ -974,9 +962,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FV8AudioKit7AKTablecFTOS_11AKTableType5phaseSd5countSi_S0_"></a>
+                    <a name="/s:FV8AudioKit7AKTablecFTOS_11AKTableType5phaseSf5countSi_S0_"></a>
                     <a name="//apple_ref/swift/Method/init(_:phase:count:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FV8AudioKit7AKTablecFTOS_11AKTableType5phaseSd5countSi_S0_">init(_:phase:count:)</a>
+                    <a class="token" href="#/s:FV8AudioKit7AKTablecFTOS_11AKTableType5phaseSf5countSi_S0_">init(_:phase:count:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1001,8 +989,8 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums/AKTableType.html">AKTableType</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">sine</span><span class="p">,</span>
-                  <span class="nv">phase</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-                  <span class="nv">count</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">4096</span><span class="p">)</span></code></pre>
+                <span class="nv">phase</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nv">count</span><span class="p">:</span> <span class="kt">IndexDistance</span> <span class="o">=</span> <span class="mi">4096</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1071,10 +1059,295 @@
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FPs23BidirectionalCollection5indexFT6beforewx5Index_wxS0_"></a>
+                    <a name="//apple_ref/swift/Method/index(before:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FPs23BidirectionalCollection5indexFT6beforewx5Index_wxS0_">index(before:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Instantiate the table as a sine wave</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">index</span><span class="p">(</span><span class="n">before</span> <span class="nv">i</span><span class="p">:</span> <span class="kt">Index</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Index</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>i</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A valid index of the collection. <code>i</code> must be greater than <code>startIndex</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The index value immediately before <code>i</code>.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FPs16MutableIndexable5indexFT5afterwx5Index_wxS0_"></a>
+                    <a name="//apple_ref/swift/Method/index(after:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FPs16MutableIndexable5indexFT5afterwx5Index_wxS0_">index(after:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Instantiate the table as a sine wave</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">index</span><span class="p">(</span><span class="n">after</span> <span class="nv">i</span><span class="p">:</span> <span class="kt">Index</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Index</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>i</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A valid index of the collection. <code>i</code> must be less than <code>endIndex</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The index value immediately after <code>i</code>.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FPs10Collection5indexFTwx5Index8offsetBywx13IndexDistance_wxS0_"></a>
+                    <a name="//apple_ref/swift/Method/index(_:offsetBy:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FPs10Collection5indexFTwx5Index8offsetBywx13IndexDistance_wxS0_">index(_:offsetBy:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Instantiate the table as a sine wave</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">index</span><span class="p">(</span><span class="n">_</span> <span class="nv">i</span><span class="p">:</span> <span class="kt">Index</span><span class="p">,</span> <span class="n">offsetBy</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">IndexDistance</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Index</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>i</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A valid index of the collection.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>n</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The distance to offset <code>i</code>. <code>n</code> must not be negative unless the collection conforms to the <code>BidirectionalCollection</code> protocol.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An index offset by <code>n</code> from the index <code>i</code>. If <code>n</code> is positive, this is the same value as the result of <code>n</code> calls to <code><a href="../Structs/AKTable.html#/s:FPs16MutableIndexable5indexFT5afterwx5Index_wxS0_">index(after:)</a></code>. If <code>n</code> is negative, this is the same value as the result of <code>-n</code> calls to <code><a href="../Structs/AKTable.html#/s:FPs23BidirectionalCollection5indexFT6beforewx5Index_wxS0_">index(before:)</a></code>.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FPs16MutableIndexable9formIndexFT5afterRwx5Index_T_"></a>
+                    <a name="//apple_ref/swift/Method/formIndex(after:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FPs16MutableIndexable9formIndexFT5afterRwx5Index_T_">formIndex(after:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Instantiate the table as a sine wave</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">formIndex</span><span class="p">(</span><span class="n">after</span> <span class="nv">i</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">Index</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>i</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A valid index of the collection. <code>i</code> must be less than <code>endIndex</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FPs10Collection8distanceFT4fromwx5Index2towxS0__wx13IndexDistance"></a>
+                    <a name="//apple_ref/swift/Method/distance(from:to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FPs10Collection8distanceFT4fromwx5Index2towxS0__wx13IndexDistance">distance(from:to:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Instantiate the table as a sine wave</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">distance</span><span class="p">(</span><span class="n">from</span> <span class="nv">start</span><span class="p">:</span> <span class="kt">Index</span><span class="p">,</span> <span class="n">to</span> <span class="nv">end</span><span class="p">:</span> <span class="kt">Index</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">IndexDistance</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>start</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A valid index of the collection.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>end</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Another valid index of the collection. If <code>end</code> is equal to <code>start</code>, the result is zero.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The distance between <code>start</code> and <code>end</code>. The result can be negative only if the collection conforms to the <code>BidirectionalCollection</code> protocol.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-11-15)</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-12-26)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

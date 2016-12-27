@@ -690,6 +690,18 @@
               <li class="nav-group-task">
                 <a href="Classes/AKAUPresetBuilder.html">AKAUPresetBuilder</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKStereoFieldLimiter.html">AKStereoFieldLimiter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultitouchGestureRecognizer.html">MultitouchGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultitouchGestureRecognizer/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultitouchGestureRecognizer/State.html">– State</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -719,6 +731,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Extensions/AVAudioEngine.html">AVAudioEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/AudioComponentDescription.html">AudioComponentDescription</a>
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/AudioUnit.html">AudioUnit</a>
@@ -760,6 +775,20 @@
               </li>
               <li class="nav-group-task">
                 <a href="Other Functions.html#/s:F8AudioKit6fourCCFSSVs6UInt32">fourCC(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Other Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/AKComponent.html">AKComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/AUComponent.html">AUComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/MultitouchGestureRecognizerDelegate.html">MultitouchGestureRecognizerDelegate</a>
               </li>
             </ul>
           </li>
@@ -848,85 +877,15 @@
 file loaded into an ftable like a sampler would. Unlike a typical sampler,
 mincer allows time and pitch to be controlled separately.</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>audioFileURL: Location of the audio file to use.</li>
-<li>position: Position in time. When non-changing it will do a spectral freeze of a the current point in time.</li>
-<li>amplitude: Amplitude.</li>
-<li>pitchRatio: Pitch ratio. A value of. 1  normal, 2 is double speed, 0.5 is halfspeed, etc.</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKPhaseLockedVocoder.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKPhaseLockedVocoder</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKPhaseLockedVocoder</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>audioFileURL</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Location of the audio file to use.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>position</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Position in time. When non-changing it will do a spectral freeze of a the current point in time.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>amplitude</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Amplitude.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>pitchRatio</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Pitch ratio. A value of. 1  normal, 2 is double speed, 0.5 is halfspeed, etc.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -987,17 +946,6 @@ mincer allows time and pitch to be controlled separately.</p>
                       <div class="abstract">
                         <p>AudioKit version of Apple&rsquo;s TimePitch Audio Unit</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>input: Input node to process</li>
-<li>rate: Rate (rate) ranges from 0.03125 to 32.0 (Default: 1.0)</li>
-<li>pitch: Pitch (Cents) ranges from -2400 to 2400 (Default: 1.0)</li>
-<li>overlap: Overlap (generic) ranges from 3.0 to 32.0 (Default: 8.0)</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKTimePitch.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1007,65 +955,6 @@ mincer allows time and pitch to be controlled separately.</p>
                           <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKTimePitch</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>input</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Input node to process</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>rate</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Rate (rate) ranges from 0.03125 to 32.0 (Default: 1.0)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>pitch</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Pitch (Cents) ranges from -2400 to 2400 (Default: 1.0)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>overlap</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Overlap (generic) ranges from 3.0 to 32.0 (Default: 8.0)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1089,15 +978,6 @@ mincer allows time and pitch to be controlled separately.</p>
                       <div class="abstract">
                         <p>AudioKit version of Apple&rsquo;s VariSpeed Audio Unit</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>input: Input node to process</li>
-<li>rate: Rate (rate) ranges from 0.25 to 4.0 (Default: 1.0)</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKVariSpeed.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1108,39 +988,6 @@ mincer allows time and pitch to be controlled separately.</p>
 
                         </div>
                       </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>input</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Input node to process</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>rate</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Rate (rate) ranges from 0.25 to 4.0 (Default: 1.0)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -1149,7 +996,7 @@ mincer allows time and pitch to be controlled separately.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-11-15)</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-12-26)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

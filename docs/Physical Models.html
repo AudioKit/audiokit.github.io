@@ -690,6 +690,18 @@
               <li class="nav-group-task">
                 <a href="Classes/AKAUPresetBuilder.html">AKAUPresetBuilder</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKStereoFieldLimiter.html">AKStereoFieldLimiter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultitouchGestureRecognizer.html">MultitouchGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultitouchGestureRecognizer/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultitouchGestureRecognizer/State.html">– State</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -719,6 +731,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Extensions/AVAudioEngine.html">AVAudioEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/AudioComponentDescription.html">AudioComponentDescription</a>
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/AudioUnit.html">AudioUnit</a>
@@ -760,6 +775,20 @@
               </li>
               <li class="nav-group-task">
                 <a href="Other Functions.html#/s:F8AudioKit6fourCCFSSVs6UInt32">fourCC(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Other Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/AKComponent.html">AKComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/AUComponent.html">AUComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/MultitouchGestureRecognizerDelegate.html">MultitouchGestureRecognizerDelegate</a>
               </li>
             </ul>
           </li>
@@ -814,57 +843,15 @@
                       <div class="abstract">
                         <p>STK Clarinet</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>frequency: Variable frequency. Values less than the initial frequency will be doubled until it is greater than that.</li>
-<li>amplitude: Amplitude</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKClarinet.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKClarinet</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKClarinet</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>frequency</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Variable frequency. Values less than the initial frequency will be doubled until it is greater than that.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>amplitude</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Amplitude</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -889,127 +876,15 @@
                         <p>Physical model of the sound of dripping water. When triggered, it will
 produce a droplet of water.</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>intensity: The intensity of the dripping sound.</li>
-<li>dampingFactor: The damping factor. Maximum value is 2.0.</li>
-<li>energyReturn: The amount of energy to add back into the system.</li>
-<li>mainResonantFrequency: Main resonant frequency.</li>
-<li>firstResonantFrequency: The first resonant frequency.</li>
-<li>secondResonantFrequency: The second resonant frequency.</li>
-<li>amplitude: Amplitude.</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKDrip.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKDrip</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKDrip</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>intensity</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The intensity of the dripping sound.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>dampingFactor</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The damping factor. Maximum value is 2.0.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>energyReturn</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The amount of energy to add back into the system.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>mainResonantFrequency</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Main resonant frequency.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>firstResonantFrequency</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The first resonant frequency.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>secondResonantFrequency</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The second resonant frequency.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>amplitude</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Amplitude.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1033,57 +908,15 @@ produce a droplet of water.</p>
                       <div class="abstract">
                         <p>STK Flutee</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>frequency: Variable frequency. Values less than the initial frequency will be doubled until it is greater than that.</li>
-<li>amplitude: Amplitude</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKFlute.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKFlute</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKFlute</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>frequency</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Variable frequency. Values less than the initial frequency will be doubled until it is greater than that.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>amplitude</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Amplitude</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1107,57 +940,15 @@ produce a droplet of water.</p>
                       <div class="abstract">
                         <p>Physical model of a 4 course mandolin</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>detune:   Detuning of second string in the course (1=Unison (deault), 2=Octave)</li>
-<li>bodySize: Relative size of the mandoline (Default: 1, ranges ~ 0.5 - 2)</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKMandolin.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKMandolin</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKMandolin</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>detune</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Detuning of second string in the course (1=Unison (deault), 2=Octave)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>bodySize</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Relative size of the mandoline (Default: 1, ranges ~ 0.5 - 2)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1179,21 +970,7 @@ produce a droplet of water.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <ul>
-<li>Parameters:
-
-<ul>
-<li>leftBoundaryCondition: Boundary condition at left end of bar. 1 = clamped, 2 = pivoting, 3 = free</li>
-<li>rightBoundaryCondition: Boundary condition at right end of bar. 1 = clamped, 2 = pivoting, 3 = free</li>
-<li>decayDuration: 30db decay time (in seconds).</li>
-<li>scanSpeed: Speed of scanning the output location.</li>
-<li>position: Position along bar that strike occurs.</li>
-<li>strikeVelocity: Normalized strike velocity</li>
-<li>strikeWidth: Spatial width of strike.</li>
-<li>stiffness: Dimensionless stiffness parameter</li>
-<li>highFrequencyDamping: High-frequency loss parameter. Keep this small</li>
-</ul></li>
-</ul>
+                        <p>Metal Bar Physical Model</p>
 
                         <a href="Classes/AKMetalBar.html" class="slightly-smaller">See more</a>
                       </div>
@@ -1201,133 +978,9 @@ produce a droplet of water.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKMetalBar</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKMetalBar</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>leftBoundaryCondition</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Boundary condition at left end of bar. 1 = clamped, 2 = pivoting, 3 = free</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>rightBoundaryCondition</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Boundary condition at right end of bar. 1 = clamped, 2 = pivoting, 3 = free</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>decayDuration</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>30db decay time (in seconds).</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>scanSpeed</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Speed of scanning the output location.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>position</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Position along bar that strike occurs.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>strikeVelocity</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Normalized strike velocity</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>strikeWidth</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Spatial width of strike.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>stiffness</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Dimensionless stiffness parameter</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>highFrequencyDamping</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>High-frequency loss parameter. Keep this small</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1351,71 +1004,15 @@ produce a droplet of water.</p>
                       <div class="abstract">
                         <p>Karplus-Strong plucked string instrument.</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>frequency: Variable frequency. Values less than the initial frequency will be doubled until it is greater than that.</li>
-<li>amplitude: Amplitude</li>
-<li>lowestFrequency: This frequency is used to allocate all the buffers needed for the delay. This should be the lowest frequency you plan on using.</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKPluckedString.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKPluckedString</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKPluckedString</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>frequency</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Variable frequency. Values less than the initial frequency will be doubled until it is greater than that.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>amplitude</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Amplitude</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>lowestFrequency</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>This frequency is used to allocate all the buffers needed for the delay. This should be the lowest frequency you plan on using.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1485,7 +1082,7 @@ produce a droplet of water.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-11-15)</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-12-26)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

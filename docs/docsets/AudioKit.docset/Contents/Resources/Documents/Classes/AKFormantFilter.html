@@ -691,6 +691,18 @@
               <li class="nav-group-task">
                 <a href="../Classes/AKAUPresetBuilder.html">AKAUPresetBuilder</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKStereoFieldLimiter.html">AKStereoFieldLimiter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MultitouchGestureRecognizer.html">MultitouchGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MultitouchGestureRecognizer/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MultitouchGestureRecognizer/State.html">– State</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -720,6 +732,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Extensions/AVAudioEngine.html">AVAudioEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/AudioComponentDescription.html">AudioComponentDescription</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/AudioUnit.html">AudioUnit</a>
@@ -765,6 +780,20 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Other Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AKComponent.html">AKComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AUComponent.html">AUComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MultitouchGestureRecognizerDelegate.html">MultitouchGestureRecognizerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Other Structs.html">Other Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -797,7 +826,7 @@
             <h1>AKFormantFilter</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKFormantFilter</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                  <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKFormantFilter</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                 </div>
               </div>
@@ -805,19 +834,39 @@
 grains. Overlapping will occur when 1/freq &lt; dec, but there is no upper
 limit on the number of overlaps.</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>input: Input node to process</li>
-<li>centerFrequency: Center frequency.</li>
-<li>attackDuration: Impulse response attack time (in seconds).</li>
-<li>decayDuration: Impulse reponse decay time (in seconds)</li>
-</ul></li>
-</ul>
-
           </section>
           <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC8AudioKit15AKFormantFilter20ComponentDescriptionVSC25AudioComponentDescription"></a>
+                    <a name="//apple_ref/swift/Variable/ComponentDescription" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC8AudioKit15AKFormantFilter20ComponentDescriptionVSC25AudioComponentDescription">ComponentDescription</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKFormantFilter</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKComponent.html">AKComponent</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
             <div class="task-group">
               <div class="task-name-container">
                 <a name="/Properties"></a>
@@ -857,9 +906,9 @@ limit on the number of overlaps.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC8AudioKit15AKFormantFilter15centerFrequencySd"></a>
-                    <a name="//apple_ref/swift/Property/centerFrequency" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC8AudioKit15AKFormantFilter15centerFrequencySd">centerFrequency</a>
+                    <a name="/s:vC8AudioKit15AKFormantFilter1xSd"></a>
+                    <a name="//apple_ref/swift/Property/x" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit15AKFormantFilter1xSd">x</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -874,7 +923,7 @@ limit on the number of overlaps.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">centerFrequency</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">1000</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
 
                         </div>
                       </div>
@@ -884,9 +933,9 @@ limit on the number of overlaps.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC8AudioKit15AKFormantFilter14attackDurationSd"></a>
-                    <a name="//apple_ref/swift/Property/attackDuration" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC8AudioKit15AKFormantFilter14attackDurationSd">attackDuration</a>
+                    <a name="/s:vC8AudioKit15AKFormantFilter1ySd"></a>
+                    <a name="//apple_ref/swift/Property/y" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit15AKFormantFilter1ySd">y</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -901,34 +950,7 @@ limit on the number of overlaps.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">attackDuration</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.007</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:vC8AudioKit15AKFormantFilter13decayDurationSd"></a>
-                    <a name="//apple_ref/swift/Property/decayDuration" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC8AudioKit15AKFormantFilter13decayDurationSd">decayDuration</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Impulse reponse decay time (in seconds)</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">decayDuration</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.04</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
 
                         </div>
                       </div>
@@ -976,9 +998,9 @@ limit on the number of overlaps.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit15AKFormantFiltercFTCS_6AKNode15centerFrequencySd14attackDurationSd13decayDurationSd_S0_"></a>
-                    <a name="//apple_ref/swift/Method/init(_:centerFrequency:attackDuration:decayDuration:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit15AKFormantFiltercFTCS_6AKNode15centerFrequencySd14attackDurationSd13decayDurationSd_S0_">init(_:centerFrequency:attackDuration:decayDuration:)</a>
+                    <a name="/s:FC8AudioKit15AKFormantFiltercFTCS_6AKNode1xSd1ySd_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(_:x:y:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit15AKFormantFiltercFTCS_6AKNode1xSd1ySd_S0_">init(_:x:y:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1006,9 +1028,8 @@ limit on the number of overlaps.</p>
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
         <span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKNode.html">AKNode</a></span><span class="p">,</span>
-        <span class="nv">centerFrequency</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
-        <span class="nv">attackDuration</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.007</span><span class="p">,</span>
-        <span class="nv">decayDuration</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.04</span><span class="p">)</span></code></pre>
+        <span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nv">y</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1144,7 +1165,7 @@ limit on the number of overlaps.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-11-15)</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-12-26)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

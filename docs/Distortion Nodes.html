@@ -690,6 +690,18 @@
               <li class="nav-group-task">
                 <a href="Classes/AKAUPresetBuilder.html">AKAUPresetBuilder</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKStereoFieldLimiter.html">AKStereoFieldLimiter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultitouchGestureRecognizer.html">MultitouchGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultitouchGestureRecognizer/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultitouchGestureRecognizer/State.html">– State</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -719,6 +731,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Extensions/AVAudioEngine.html">AVAudioEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/AudioComponentDescription.html">AudioComponentDescription</a>
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/AudioUnit.html">AudioUnit</a>
@@ -760,6 +775,20 @@
               </li>
               <li class="nav-group-task">
                 <a href="Other Functions.html#/s:F8AudioKit6fourCCFSSVs6UInt32">fourCC(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Other Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/AKComponent.html">AKComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/AUComponent.html">AUComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/MultitouchGestureRecognizerDelegate.html">MultitouchGestureRecognizerDelegate</a>
               </li>
             </ul>
           </li>
@@ -814,71 +843,15 @@
                       <div class="abstract">
                         <p>This will digitally degrade a signal.</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>input: Input node to process</li>
-<li>bitDepth: The bit depth of signal output. Typically in range (1-24). Non-integer values are OK.</li>
-<li>sampleRate: The sample rate of signal output.</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKBitCrusher.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKBitCrusher</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKBitCrusher</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>input</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Input node to process</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>bitDepth</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The bit depth of signal output. Typically in range (1-24). Non-integer values are OK.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>sampleRate</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The sample rate of signal output.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -903,57 +876,15 @@
                         <p>Clips a signal to a predefined limit, in a <q>soft</q> manner, using one of three
 methods.</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>input: Input node to process</li>
-<li>limit: Threshold / limiting value.</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKClipper.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKClipper</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKClipper</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>input</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Input node to process</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>limit</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Threshold / limiting value.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -977,85 +908,15 @@ methods.</p>
                       <div class="abstract">
                         <p>AudioKit version of Apple&rsquo;s Decimator from the Distortion Audio Unit</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>input: Input node to process</li>
-<li>decimation: Decimation (Normalized Value) ranges from 0 to 1 (Default: 0.5)</li>
-<li>rounding: Rounding (Normalized Value) ranges from 0 to 1 (Default: 0)</li>
-<li>mix: Mix (Normalized Value) ranges from 0 to 1 (Default: 1)</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKDecimator.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKDecimator</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AUComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKDecimator</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AUComponent.html">AUComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>input</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Input node to process</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>decimation</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Decimation (Normalized Value) ranges from 0 to 1 (Default: 0.5)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>rounding</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Rounding (Normalized Value) ranges from 0 to 1 (Default: 0)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>mix</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Mix (Normalized Value) ranges from 0 to 1 (Default: 1)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1079,267 +940,15 @@ methods.</p>
                       <div class="abstract">
                         <p>AudioKit version of Apple&rsquo;s Distortion Audio Unit</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>input: Input node to process</li>
-<li>delay: Delay (Milliseconds) ranges from 0.1 to 500 (Default: 0.1)</li>
-<li>decay: Decay (Rate) ranges from 0.1 to 50 (Default: 1.0)</li>
-<li>delayMix: Delay Mix (Normalized Value) ranges from 0 to 1 (Default: 0.5)</li>
-<li>decimation: Decimation (Normalized Value) ranges from 0 to 1 (Default: 0.5)</li>
-<li>rounding: Rounding (Normalized Value) ranges from 0 to 1 (Default: 0.0)</li>
-<li>decimationMix: Decimation Mix (Normalized Value) ranges from 0 to 1 (Default: 0.5)</li>
-<li>linearTerm: Linear Term (Normalized Value) ranges from 0 to 1 (Default: 0.5)</li>
-<li>squaredTerm: Squared Term (Normalized Value) ranges from 0 to 1 (Default: 0.5)</li>
-<li>cubicTerm: Cubic Term (Normalized Value) ranges from 0 to 1 (Default: 0.5)</li>
-<li>polynomialMix: Polynomial Mix (Normalized Value) ranges from 0 to 1 (Default: 0.5)</li>
-<li>ringModFreq1: Ring Mod Freq1 (Hertz) ranges from 0.5 to 8000 (Default: 100)</li>
-<li>ringModFreq2: Ring Mod Freq2 (Hertz) ranges from 0.5 to 8000 (Default: 100)</li>
-<li>ringModBalance: Ring Mod Balance (Normalized Value) ranges from 0 to 1 (Default: 0.5)</li>
-<li>ringModMix: Ring Mod Mix (Normalized Value) ranges from 0 to 1 (Default: 0.0)</li>
-<li>softClipGain: Soft Clip Gain (dB) ranges from -80 to 20 (Default: -6)</li>
-<li>finalMix: Final Mix (Normalized Value) ranges from 0 to 1 (Default: 0.5)</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKDistortion.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKDistortion</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AUComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKDistortion</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AUComponent.html">AUComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>input</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Input node to process</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>delay</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Delay (Milliseconds) ranges from 0.1 to 500 (Default: 0.1)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>decay</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Decay (Rate) ranges from 0.1 to 50 (Default: 1.0)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>delayMix</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Delay Mix (Normalized Value) ranges from 0 to 1 (Default: 0.5)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>decimation</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Decimation (Normalized Value) ranges from 0 to 1 (Default: 0.5)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>rounding</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Rounding (Normalized Value) ranges from 0 to 1 (Default: 0.0)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>decimationMix</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Decimation Mix (Normalized Value) ranges from 0 to 1 (Default: 0.5)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>linearTerm</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Linear Term (Normalized Value) ranges from 0 to 1 (Default: 0.5)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>squaredTerm</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Squared Term (Normalized Value) ranges from 0 to 1 (Default: 0.5)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>cubicTerm</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Cubic Term (Normalized Value) ranges from 0 to 1 (Default: 0.5)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>polynomialMix</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Polynomial Mix (Normalized Value) ranges from 0 to 1 (Default: 0.5)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>ringModFreq1</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Ring Mod Freq1 (Hertz) ranges from 0.5 to 8000 (Default: 100)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>ringModFreq2</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Ring Mod Freq2 (Hertz) ranges from 0.5 to 8000 (Default: 100)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>ringModBalance</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Ring Mod Balance (Normalized Value) ranges from 0 to 1 (Default: 0.5)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>ringModMix</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Ring Mod Mix (Normalized Value) ranges from 0 to 1 (Default: 0.0)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>softClipGain</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Soft Clip Gain (dB) ranges from -80 to 20 (Default: -6)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>finalMix</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Final Mix (Normalized Value) ranges from 0 to 1 (Default: 0.5)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1363,99 +972,15 @@ methods.</p>
                       <div class="abstract">
                         <p>AudioKit version of Apple&rsquo;s Ring Modulator from the Distortion Audio Unit</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>input: Input node to process</li>
-<li>frequency1: Frequency1 (Hertz) ranges from 0.5 to 8000 (Default: 100)</li>
-<li>frequency2: Frequency2 (Hertz) ranges from 0.5 to 8000 (Default: 100)</li>
-<li>balance: Balance (Normalized Value) ranges from 0 to 1 (Default: 0.5)</li>
-<li>mix: Mix (Normalized Value) ranges from 0 to 1 (Default: 1)</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKRingModulator.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKRingModulator</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AUComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKRingModulator</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AUComponent.html">AUComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>input</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Input node to process</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>frequency1</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Frequency1 (Hertz) ranges from 0.5 to 8000 (Default: 100)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>frequency2</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Frequency2 (Hertz) ranges from 0.5 to 8000 (Default: 100)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>balance</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Balance (Normalized Value) ranges from 0 to 1 (Default: 0.5)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>mix</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Mix (Normalized Value) ranges from 0 to 1 (Default: 1)</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1479,99 +1004,15 @@ methods.</p>
                       <div class="abstract">
                         <p>Distortion using a modified hyperbolic tangent function.</p>
 
-<ul>
-<li>Parameters:
-
-<ul>
-<li>input: Input node to process</li>
-<li>pregain: Determines the amount of gain applied to the signal before waveshaping. A value of 1 gives slight distortion.</li>
-<li>postgain: Gain applied after waveshaping</li>
-<li>postiveShapeParameter: Shape of the positive part of the signal. A value of 0 gets a flat clip.</li>
-<li>negativeShapeParameter: Like the positive shape parameter, only for the negative part.</li>
-</ul></li>
-</ul>
-
                         <a href="Classes/AKTanhDistortion.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKTanhDistortion</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt">AKComponent</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKTanhDistortion</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>input</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Input node to process</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>pregain</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Determines the amount of gain applied to the signal before waveshaping. A value of 1 gives slight distortion.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>postgain</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Gain applied after waveshaping</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>postiveShapeParameter</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Shape of the positive part of the signal. A value of 0 gets a flat clip.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>negativeShapeParameter</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Like the positive shape parameter, only for the negative part.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1581,7 +1022,7 @@ methods.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-11-15)</p>
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-12-26)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
