@@ -27,11 +27,11 @@ This demo is based off of the work by Laurent Veliscek.
 </p>
 
 <p>
-Before reading this, we highly recommend you to read a great tutorial on <a href="/examples/HelloWorld/">Hello World example</a> first. This example is included in AudioKit in the Examples directory with versions for iOS and OSX.
+Before reading this, we highly recommend you to read a great tutorial on the <a href="/examples/HelloWorld/">Hello World example</a> first. This example is included in AudioKit in the Examples directory with versions for iOS and OSX.
 </p>
 
 <p>
-First we set session settings:
+First, set session settings:
 </p>
 {% highlight swift %}
     AKSettings.bufferLength = .Medium
@@ -42,7 +42,7 @@ First we set session settings:
 {% endhighlight %}
 
 <p>
-Then we create an instance of input node, and then 2 mixing nodes (a node that mixes its inputs to a single output).
+Then, create an instance of input node, and then 2 mixing nodes (a node that mixes its inputs to a single output).
 </p>
 
 {% highlight swift %}
@@ -52,7 +52,7 @@ Then we create an instance of input node, and then 2 mixing nodes (a node that m
 {% endhighlight %}
 
 <p>
-And then we set amplification factor for a mixing node to zero, create an instance of audio recorder class, return the AKAudioFile for reading and set the properties for the playback node. So we're able to create a filter node using the playback one and this gives us an opportunity to playback recorded sounds with the effects like a cutoff frequency and a resonance.
+And thenm set amplification factor for a mixing node to zero, create an instance of audio recorder class, return the AKAudioFile for reading and set the properties for the playback node. So we're able to create a filter node using the playback one and this gives us an opportunity to playback recorded sounds with the effects like a cutoff frequency and a resonance.
 </p>
 
 {% highlight swift %}
@@ -67,7 +67,7 @@ And then we set amplification factor for a mixing node to zero, create an instan
 {% endhighlight %}
 
 <p>
-Finally, we create a main mixer node and start the AudioKit engine.
+Finally, create a main mixer node and start the AudioKit engine.
 </p>
 
 {% highlight swift %}
