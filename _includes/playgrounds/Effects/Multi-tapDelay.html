@@ -6,7 +6,7 @@
  fields of such density that they start to take on some of the qualities
  we&#39;d more usually associate with reverb. - Geoff Smith, Sound on Sound</p>
 
-{% highlight ruby %}import PlaygroundSupport
+{% highlight ruby %}
 import AudioKit
 
 let file = try AKAudioFile(readFileName: processingPlaygroundFiles[0],
@@ -19,11 +19,15 @@ player.looping = true
 <p>In AudioKit, you can create a multitap easily through creating a function
  that mixes together several delays and gains.</p>
 
-{% highlight ruby %}func multitapDelay(_ input: AKNode, times: [Double], gains: [Double]) -> AKMixer {
+{% highlight ruby %}var delays = [AKVariableDelay]()
+
+func multitapDelay(_ input: AKNode?, times: [Double], gains: [Double]) -> AKMixer {
     let mix = AKMixer(input)
-    zip(times, gains).forEach { (time, gain) -> () in
-        let delay = AKDelay(input, time: time, feedback: 0.0, dryWetMix: 1)
-        mix.connect(AKBooster(delay, gain: gain))
+    var counter = 0
+    zip(times, gains).forEach { (time, gain) -> Void in
+        delays.append(AKVariableDelay(input, time: time))
+        mix.connect(AKBooster(delays[counter], gain: gain))
+        counter += 1
     }
     return mix
 }
@@ -32,5 +36,6 @@ AudioKit.output = multitapDelay(player, times: [0.1, 0.2, 0.4], gains: [0.5, 2.0
 AudioKit.start()
 player.play()
 
+import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 {% endhighlight %}

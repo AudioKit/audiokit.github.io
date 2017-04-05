@@ -3,13 +3,13 @@
  outputting the value of a generator node into the AKAmplitudeTracker.
  This node is great if you want to build an app that does audio monitoring and analysis.</p>
 
-{% highlight ruby %}import PlaygroundSupport
+{% highlight ruby %}
 import AudioKit
 
 {% endhighlight %}
 <p>First lets set up sound source to track</p>
 
-{% highlight ruby %}let oscillatorNode = AKOperationGenerator() { _ in
+{% highlight ruby %}let oscillatorNode = AKOperationGenerator { _ in
     // Let's set up the volume to be changing in the shape of a sine wave
     let volume = AKOperation.sineWave(frequency:0.2).scale(minimum: 0, maximum: 0.5)
 
@@ -46,23 +46,22 @@ class PlaygroundView: AKPlaygroundView {
             format: "%0.3f",
             value: 0, maximum: 0.55,
             color: AKColor.green
-        ) { sliderValue in
+        ) { _ in
             // Do nothing, just for display
-            }
-        addSubview(trackedAmplitudeSlider!)
+        }
+        addSubview(trackedAmplitudeSlider)
 
         addSubview(AKRollingOutputPlot.createView())
     }
 }
 
-PlaygroundPage.current.needsIndefiniteExecution = true
+import PlaygroundSupport
 PlaygroundPage.current.liveView = PlaygroundView()
 
 {% endhighlight %}
 <p>This keeps the playground running so that audio can play for a long time</p>
 
 {% highlight ruby %}PlaygroundPage.current.needsIndefiniteExecution = true
-
 
 {% endhighlight %}
 <p>Experiment with this playground by changing the volume function to a

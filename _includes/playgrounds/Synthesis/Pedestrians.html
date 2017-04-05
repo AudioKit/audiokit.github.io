@@ -2,13 +2,13 @@
 </h3> A British crossing signal implemented with AudioKit, an example from
  Andy Farnell&#39;s excellent book &quot;Designing Sound&quot;</p>
 
-{% highlight ruby %}import PlaygroundSupport
+{% highlight ruby %}
 import AudioKit
 
-let generator = AKOperationGenerator() { _ in
+let generator = AKOperationGenerator { _ in
 
     // Generate a sine wave at the right frequency
-    let crossingSignalTone = AKOperation.sineWave(frequency: 2500)
+    let crossingSignalTone = AKOperation.sineWave(frequency: 2_500)
 
     // Periodically trigger an envelope around that signal
     let crossingSignalTrigger = AKOperation.periodicTrigger(period: 0.2)
@@ -29,5 +29,6 @@ AudioKit.start()
 
 {% highlight ruby %}generator.start()
 
+import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 {% endhighlight %}

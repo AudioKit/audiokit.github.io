@@ -1,12 +1,11 @@
 <h3>Flat Frequency Response Reverb Operation
 </h3>
 
-{% highlight ruby %}import PlaygroundSupport
+{% highlight ruby %}
 import AudioKit
 
 let file = try AKAudioFile(readFileName: processingPlaygroundFiles[0],
                            baseDir: .resources)
-
 
 let player = try AKAudioPlayer(file: file)
 player.looping = true
@@ -22,5 +21,6 @@ AudioKit.output = effect
 AudioKit.start()
 player.play()
 
+import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 {% endhighlight %}

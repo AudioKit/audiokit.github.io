@@ -1,7 +1,7 @@
 <p><h3>Tremolo
 </h3> ###</p>
 
-{% highlight ruby %}import PlaygroundSupport
+{% highlight ruby %}
 import AudioKit
 
 let file = try AKAudioFile(readFileName: processingPlaygroundFiles[0],
@@ -34,7 +34,7 @@ class PlaygroundView: AKPlaygroundView {
             color: AKColor.green
         ) { sliderValue in
             tremolo.frequency = sliderValue
-            })
+        })
 
         addSubview(AKPropertySlider(
             property: "Depth",
@@ -42,11 +42,11 @@ class PlaygroundView: AKPlaygroundView {
             color: AKColor.red
         ) { sliderValue in
             tremolo.depth = sliderValue
-            })
+        })
     }
 }
 
+import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 PlaygroundPage.current.liveView = PlaygroundView()
-
 {% endhighlight %}

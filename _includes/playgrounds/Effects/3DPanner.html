@@ -1,8 +1,7 @@
 <p><h3>3D Panner
 </h3> ###</p>
 
-{% highlight ruby %}import PlaygroundSupport
-import AudioKit
+{% highlight ruby %}import AudioKit
 
 let file = try AKAudioFile(readFileName: processingPlaygroundFiles[0],
                            baseDir: .resources)
@@ -34,7 +33,7 @@ class PlaygroundView: AKPlaygroundView {
             color: AKColor.red
         ) { sliderValue in
             panner.x = sliderValue
-            })
+        })
 
         addSubview(AKPropertySlider(
             property: "Y",
@@ -42,7 +41,7 @@ class PlaygroundView: AKPlaygroundView {
             color: AKColor.green
         ) { sliderValue in
             panner.y = sliderValue
-            })
+        })
 
         addSubview(AKPropertySlider(
             property: "Z",
@@ -50,10 +49,11 @@ class PlaygroundView: AKPlaygroundView {
             color: AKColor.cyan
         ) { sliderValue in
             panner.z = sliderValue
-            })
+        })
     }
 }
 
+import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 PlaygroundPage.current.liveView = PlaygroundView()
 {% endhighlight %}

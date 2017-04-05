@@ -6,8 +6,7 @@
  take in audio input, process it, and pass the processed audio to
  another node, or to the Digital-Analog Converter (speaker).</p>
 
-{% highlight ruby %}import PlaygroundSupport
-import AudioKit
+{% highlight ruby %}import AudioKit
 
 let file = try AKAudioFile(readFileName: "drumloop.wav", baseDir: .resources)
 
@@ -26,7 +25,7 @@ player.looping = true
 <p>Set the parameters of the delay here</p>
 
 {% highlight ruby %}delay.time = 0.1 // seconds
-delay.feedback  = 0.8 // Normalized Value 0 - 1
+delay.feedback = 0.8 // Normalized Value 0 - 1
 delay.dryWetMix = 0.2 // Normalized Value 0 - 1
 
 {% endhighlight %}
@@ -40,5 +39,6 @@ AudioKit.start()
 
 player.play()
 
+import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 {% endhighlight %}

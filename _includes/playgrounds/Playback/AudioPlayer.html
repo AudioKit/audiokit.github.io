@@ -1,13 +1,13 @@
 <h3>Audio Player
 </h3>
 
-{% highlight ruby %}import PlaygroundSupport
+{% highlight ruby %}
 import AudioKit
 
 let mixloop = try AKAudioFile(readFileName: "mixloop.wav", baseDir: .resources)
 
 let player = try AKAudioPlayer(file: mixloop) {
-    print("completion callback has been triggered !")
+    print("completion callback has been triggered!")
 }
 
 AudioKit.output = player
@@ -28,7 +28,7 @@ class PlaygroundView: AKPlaygroundView {
 
     override func setup() {
 
-        AKPlaygroundLoop(every: 1/60.0) {
+        AKPlaygroundLoop(every: 1 / 60.0) {
             if player.duration > 0 {
                 self.playingPositionSlider?.value = player.playhead
             }
@@ -46,7 +46,20 @@ class PlaygroundView: AKPlaygroundView {
                 return "Disable Looping"
             } else {
                 return "Enable Looping"
-            }})
+            }
+        })
+
+        addSubview(AKButton(title: "Direction: ➡️") {
+            if player.isPlaying {
+                player.stop()
+            }
+            player.reversed = !player.reversed
+            if player.reversed {
+                return "Direction: ⬅️"
+            } else {
+                return "Direction: ➡️"
+            }
+        })
 
         inPositionSlider = AKPropertySlider(
             property: "In Position",
@@ -56,7 +69,7 @@ class PlaygroundView: AKPlaygroundView {
         ) { sliderValue in
             player.startTime = sliderValue
         }
-        addSubview(inPositionSlider!)
+        addSubview(inPositionSlider)
 
         outPositionSlider = AKPropertySlider(
             property: "Out Position",
@@ -65,20 +78,21 @@ class PlaygroundView: AKPlaygroundView {
         ) { sliderValue in
             player.endTime = sliderValue
         }
-        addSubview(outPositionSlider!)
+        addSubview(outPositionSlider)
 
         playingPositionSlider = AKPropertySlider(
             property: "Position",
             format: "%0.2f s",
             value: player.playhead, maximum: 3.428,
             color: AKColor.yellow
-        ) { sliderValue in
+        ) { _ in
             // Can't do player.playhead = sliderValue
         }
-        addSubview(playingPositionSlider!)
+        addSubview(playingPositionSlider)
     }
 }
 
+import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 PlaygroundPage.current.liveView = PlaygroundView()
 {% endhighlight %}

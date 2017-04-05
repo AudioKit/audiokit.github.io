@@ -1,7 +1,7 @@
 <h3>AutoPan Operation
 </h3>
 
-{% highlight ruby %}import PlaygroundSupport
+{% highlight ruby %}
 import AudioKit
 
 {% endhighlight %}
@@ -59,7 +59,7 @@ class PlaygroundView: AKPlaygroundView {
             color: AKColor.green
         ) { sliderValue in
             effect.speed = sliderValue
-            })
+        })
 
         addSubview(AKPropertySlider(
             property: "Depth",
@@ -67,10 +67,11 @@ class PlaygroundView: AKPlaygroundView {
             color: AKColor.red
         ) { sliderValue in
             effect.depth = sliderValue
-            })
+        })
     }
 }
 
+import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 PlaygroundPage.current.liveView = PlaygroundView()
 {% endhighlight %}

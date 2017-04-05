@@ -3,7 +3,7 @@
  caveat is that all of the destinations do have to eventually be mixed
  back together and none of the parallel signal paths can have any time stretching.</p>
 
-{% highlight ruby %}import PlaygroundSupport
+{% highlight ruby %}
 import AudioKit
 
 {% endhighlight %}
@@ -35,5 +35,6 @@ AudioKit.output = mixer
 AudioKit.start()
 player.play()
 
+import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 {% endhighlight %}

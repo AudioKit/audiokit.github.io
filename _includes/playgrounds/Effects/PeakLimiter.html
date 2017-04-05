@@ -3,7 +3,7 @@
  They&#39;re espeically useful for any type of live input processing, when you
  may not be in total control of the audio signal you&#39;re recording or processing.</p>
 
-{% highlight ruby %}import PlaygroundSupport
+{% highlight ruby %}
 import AudioKit
 
 let file = try AKAudioFile(readFileName: processingPlaygroundFiles[0],
@@ -43,7 +43,7 @@ class PlaygroundView: AKPlaygroundView {
             color: AKColor.green
         ) { sliderValue in
             peakLimiter.attackTime = sliderValue
-            })
+        })
 
         addSubview(AKPropertySlider(
             property: "Decay Time",
@@ -52,7 +52,7 @@ class PlaygroundView: AKPlaygroundView {
             color: AKColor.green
         ) { sliderValue in
             peakLimiter.decayTime = sliderValue
-            })
+        })
 
         addSubview(AKPropertySlider(
             property: "Pre-gain",
@@ -61,10 +61,11 @@ class PlaygroundView: AKPlaygroundView {
             color: AKColor.green
         ) { sliderValue in
             peakLimiter.preGain = sliderValue
-            })
+        })
     }
 }
 
+import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 PlaygroundPage.current.liveView = PlaygroundView()
 {% endhighlight %}

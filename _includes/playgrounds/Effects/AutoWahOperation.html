@@ -1,7 +1,7 @@
 <h3>AutoWah Operation
 </h3>
 
-{% highlight ruby %}import PlaygroundSupport
+{% highlight ruby %}
 import AudioKit
 
 let file = try AKAudioFile(readFileName: processingPlaygroundFiles[0],
@@ -19,5 +19,6 @@ AudioKit.output = effect
 AudioKit.start()
 player.play()
 
+import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 {% endhighlight %}

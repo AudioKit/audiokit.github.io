@@ -3,7 +3,7 @@
 
 <p>AKAudioFile inherits from AVAudioFile so you can use it just like any AVAudioFile</p>
 
-{% highlight ruby %}import PlaygroundSupport
+{% highlight ruby %}
 import AudioKit
 
 // Let's create an AKaudioFile :
@@ -48,7 +48,6 @@ let tempDir = AKAudioFile.BaseDirectory.temp
 print("drumloop.duration: \(drumloop.duration)")
 // and so on...
 
-
 {% endhighlight %}
 <p>AKAudioFile can easily be trimmed and exported and you can set a
  callback function that will be triggered upon export has been completed.</p>
@@ -58,44 +57,44 @@ print("drumloop.duration: \(drumloop.duration)")
 <p>Then, we can extract from 1 to 2 seconds of drumloop, as an mp4 file that will be
  written in documents directory. If the destination file exists, it will be overwritten.</p>
 
-{% highlight ruby %}try drumloop.exportAsynchronously(name: "exported.m4a", baseDir: .documents, exportFormat: .m4a, fromSample: 44100, toSample: 2 * 44100) { exportedFile, error in
-        print("myExportCallBack has been triggered. It means that export ended")
-        if error == nil {
-            print("Export succeeded")
+{% highlight ruby %}try drumloop.exportAsynchronously(name: "exported.m4a",
+                                  baseDir: .documents,
+                                  exportFormat: .m4a,
+                                  fromSample: 44_100,
+                                  toSample: 2 * 44_100) { exportedFile, error in
+    print("myExportCallBack has been triggered. It means that export ended")
+    if error == nil {
+        print("Export succeeded")
 
-            // If it is valid, we can play it :
-            if exportedFile != nil {
+        // If it is valid, we can play it :
+        if let successfulFile = exportedFile {
 
-                print(exportedFile?.fileNamePlusExtension)
-                let player = try? AKAudioPlayer(file: exportedFile!)
-                AudioKit.output = player
-                AudioKit.start()
-                player!.play()
-            }
-
-        } else {
-            print("Export failed")
+            print(successfulFile.fileNamePlusExtension)
+            let player = try? AKAudioPlayer(file: successfulFile)
+            AudioKit.output = player
+            AudioKit.start()
+            player?.play()
         }
+
+    } else {
+        print(drumloop.fileNamePlusExtension)
+        print("Export failed: \(error)")
+    }
 }
-
-
 
 {% endhighlight %}
 <p><h3>AKAudioFile for writing / recording
-</h3> AKAudioFile is handy to create file for recording or writing to.
- The simplest way to create such a file is like this:</p>
+</h3> AKAudioFile is handy to create file for recording or writing to.</p>
 
-{% highlight ruby %}let myWorkingFile = try? AKAudioFile()
-let mySecondWorkingFile = try? AKAudioFile()
-
-{% endhighlight %}
 <p>If you set no parameter, an AKAudioFile is created in temp directory,
  set to match AudioKit AKSettings (a stereo empty 32 bits float wav file at 44.1 kHz,
- with a unique name identifier:</p>
+ with a unique name identifier.</p>
 
-{% highlight ruby %}if myWorkingFile != nil && mySecondWorkingFile != nil {
-    let myWorkingFileName1 = myWorkingFile!.fileNamePlusExtension
-    let mySecondWorkingFileName = mySecondWorkingFile!.fileNamePlusExtension
+<p>The simplest way to create such a file is like this:</p>
+
+{% highlight ruby %}if let myWorkingFile = try? AKAudioFile(), let mySecondWorkingFile = try? AKAudioFile() {
+    let myWorkingFileName1 = myWorkingFile.fileNamePlusExtension
+    let mySecondWorkingFileName = mySecondWorkingFile.fileNamePlusExtension
 }
 
 {% endhighlight %}
@@ -104,5 +103,6 @@ let mySecondWorkingFile = try? AKAudioFile()
  Have a look to AKAudioFile Part 2...</p>
 
 {% highlight ruby %}
+import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 {% endhighlight %}

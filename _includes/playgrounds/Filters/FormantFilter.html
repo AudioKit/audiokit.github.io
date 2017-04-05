@@ -1,7 +1,7 @@
 <p><h3>Formant Filter
 </h3> ##</p>
 
-{% highlight ruby %}import PlaygroundSupport
+{% highlight ruby %}
 import AudioKit
 
 let osc = AKPWMOscillator(frequency: 220)
@@ -29,7 +29,7 @@ class PlaygroundView: AKPlaygroundView {
             color: AKColor.yellow
         ) { sliderValue in
             filter.x = sliderValue
-            })
+        })
 
         addSubview(AKPropertySlider(
             property: "y",
@@ -42,7 +42,7 @@ class PlaygroundView: AKPlaygroundView {
     }
 }
 
-
+import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 PlaygroundPage.current.liveView = PlaygroundView()
 {% endhighlight %}

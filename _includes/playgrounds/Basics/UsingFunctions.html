@@ -1,7 +1,7 @@
 <p><h3>Using Functions
 </h3> Encapsualating functionality of operations into functions</p>
 
-{% highlight ruby %}import PlaygroundSupport
+{% highlight ruby %}
 import AudioKit
 
 func drone(frequency: Double, rate: Double) -> AKOperation {
@@ -10,7 +10,7 @@ func drone(frequency: Double, rate: Double) -> AKOperation {
     return tone.triggeredWithEnvelope(trigger: metro, attack: 0.01, hold: 0.1, release: 0.1)
 }
 
-let generator = AKOperationGenerator() { _ in
+let generator = AKOperationGenerator { _ in
 
     let drone1 = drone(frequency: 440, rate: 3)
     let drone2 = drone(frequency: 330, rate: 5)
@@ -24,5 +24,6 @@ AudioKit.start()
 
 generator.start()
 
+import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 {% endhighlight %}

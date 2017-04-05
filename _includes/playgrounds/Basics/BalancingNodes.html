@@ -3,8 +3,7 @@
  remains at a volume similar to where it started.
  Such an application is perfect for the AKBalancer node.</p>
 
-{% highlight ruby %}import PlaygroundSupport
-import AudioKit
+{% highlight ruby %}import AudioKit
 
 {% endhighlight %}
 <p>This section prepares the players</p>
@@ -40,6 +39,7 @@ class PlaygroundView: AKPlaygroundView {
 
 }
 
+import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 PlaygroundPage.current.liveView = PlaygroundView()
 

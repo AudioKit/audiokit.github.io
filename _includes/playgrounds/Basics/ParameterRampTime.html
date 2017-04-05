@@ -4,8 +4,7 @@
  to avoid pops and clicks, so you can set a ramp time to slow the
  variation of a property from its current value to its next.</p>
 
-{% highlight ruby %}import PlaygroundSupport
-import AudioKit
+{% highlight ruby %}import AudioKit
 
 var noise = AKWhiteNoise(amplitude: 1)
 var filter = AKMoogLadder(noise)
@@ -44,10 +43,11 @@ class PlaygroundView: AKPlaygroundView {
             value: filter.rampTime
         ) { sliderValue in
             filter.rampTime = sliderValue
-            })
+        })
     }
 }
 
+import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 PlaygroundPage.current.liveView = PlaygroundView()
 

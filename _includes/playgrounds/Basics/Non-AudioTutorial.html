@@ -8,22 +8,21 @@
 
 {% highlight ruby %}import AudioKit
 {% endhighlight %}
-<p>ALERT: This is also the line that most commonly shows an error &quot;No such module: AudioKit&quot;
- This can be because you haven&#39;t built the framework yet, in which case pressing Cmd-B or
- accessing the &quot;Product&quot; menu and choosing &quot;Build&quot;.  If the playgrounds still show an
- error, show the Utilities panel with the icon on the upper right of the window, or
- by accessing View menu, Utilities &gt; Show File Inspector, or pressing Cmd-option-1.
- From the panel, make sure the &quot;Playground Settings&quot; Platform pull-down menu matches
- the operating system you&#39;re currently building for.  If that still doesn&#39;t work (sigh)
- you may need to clean out your build products directory to make sure that no other
- versions of AudioKit exist for any OS.</p>
+<p>ALERT: This is also the line that most commonly shows an error &quot;No such module: AudioKit.&quot;
+ There are a few potential causes for this which are outlined below.</p>
 
-<p>Another import line you will see in most playgrounds enables <code>XCPlayground</code> functions
- for plotting, keeping the playground alive while audio plays, and more.</p>
+<ol>
+<li><p>Perhaps, you haven&#39;t built the framework yet, in which case pressing Cmd-B or
+accessing the &quot;Product&quot; menu and choosing &quot;Build&quot;.  </p></li>
+<li><p>Make sure you are building for a simulator and not an actual device.</p></li>
+<li><p>Show the Utilities panel with the icon on the upper right of the window, or
+by accessing View menu, Utilities &gt; Show File Inspector, or pressing Cmd-option-1.
+From the panel, make sure the &quot;Playground Settings&quot; Platform pull-down menu matches
+the operating system you&#39;re currently building for.  </p></li>
+<li><p>If it still doesn&#39;t work (sigh) you may need to clean out your build products
+directory to make sure that no other versions of AudioKit exist for any OS.</p></li>
+</ol>
 
-{% highlight ruby %}import PlaygroundSupport
-
-{% endhighlight %}
 <p>This main bundle line just helps the playground find the files (such as audio clips)
  it will be able to play and process.</p>
 
@@ -56,21 +55,12 @@
 let effect = AKMoogLadder(player)
 
 {% endhighlight %}
-<p>We&#39;ll often use the notation above which is <code>let variable = AKClass(input)</code>
- but for the best code completion, this is equivalent to
- <code>let variable = AKClass.init(input)</code> which has the added benefit of providing
- better code completion and inline documentation.  This may not be necessary
- as Xcode&#39;s support for Swift code completion improves.</p>
-
-{% highlight ruby %}let effect2 = AKMoogLadder.init(player)
-
-{% endhighlight %}
-<p>Remember the <code>import PlaygroundSupport</code> line above?  Here&#39;s one way that is used.
- The following line keeps a playground executing even after the last line is
+<p>The following line keeps a playground executing even after the last line is
  run so that the audio elements that were started have time to play and make
  sounds for us to listen to.</p>
 
-{% highlight ruby %}PlaygroundPage.current.needsIndefiniteExecution = true
+{% highlight ruby %}import PlaygroundSupport
+PlaygroundPage.current.needsIndefiniteExecution = true
 {% endhighlight %}
 <p>The other ways we&#39;ll keep playgrounds running will by using <code>sleep</code> and <code>usleep</code>
  functions and infinite while loops.</p>
