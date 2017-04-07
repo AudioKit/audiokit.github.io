@@ -1,8 +1,8 @@
 <p><h3>Flute
 </h3> Physical model of a Flute</p>
 
-{% highlight ruby %}import AudioKit
-import PlaygroundSupport
+{% highlight ruby %}import AudioKitPlaygrounds
+import AudioKit
 
 let playRate = 2.0
 
@@ -28,5 +28,6 @@ AKPlaygroundLoop(frequency: playRate) {
     }
 }
 
+import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 {% endhighlight %}

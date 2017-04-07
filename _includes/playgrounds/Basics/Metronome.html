@@ -6,8 +6,8 @@
  It&#39;s just important that you know that operations that can do very
  complex synthesis and effect processing is capable in AudioKit.</p>
 
-{% highlight ruby %}import AudioKit
-import PlaygroundSupport
+{% highlight ruby %}import AudioKitPlaygrounds
+import AudioKit
 
 var currentFrequency = 60.0
 
@@ -66,6 +66,7 @@ class PlaygroundView: AKPlaygroundView {
     }
 }
 
+import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 PlaygroundPage.current.liveView = PlaygroundView()
 {% endhighlight %}

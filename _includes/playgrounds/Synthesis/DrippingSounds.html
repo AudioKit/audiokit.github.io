@@ -2,8 +2,8 @@
 </h3> Physical model of a water drop letting hitting a pool.
  What&#39;s this good for?  We don&#39;t know, but hey it&#39;s cool. :)</p>
 
-{% highlight ruby %}import AudioKit
-import PlaygroundSupport
+{% highlight ruby %}import AudioKitPlaygrounds
+import AudioKit
 
 var playRate = 2.0
 
@@ -75,6 +75,7 @@ class PlaygroundView: AKPlaygroundView {
 
 }
 
+import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 PlaygroundPage.current.liveView = PlaygroundView()
 {% endhighlight %}

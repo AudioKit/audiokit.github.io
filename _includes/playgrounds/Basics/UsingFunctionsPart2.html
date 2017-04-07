@@ -1,7 +1,8 @@
 <h3>Using Functions Part 2
 </h3>
 
-{% highlight ruby %}import AudioKit
+{% highlight ruby %}import AudioKitPlaygrounds
+import AudioKit
 
 func instrument(noteNumber: MIDINoteNumber, rate: Double, amplitude: Double) -> AKOperation {
     let metro = AKOperation.metronome(frequency: 82.0 / (60.0 * rate))

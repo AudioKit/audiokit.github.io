@@ -1,8 +1,8 @@
 <p><h3>Plucked String
 </h3> Experimenting with a physical model of a string</p>
 
-{% highlight ruby %}import AudioKit
-import PlaygroundSupport
+{% highlight ruby %}import AudioKitPlaygrounds
+import AudioKit
 
 let playRate = 2.0
 
@@ -31,5 +31,6 @@ AKPlaygroundLoop(frequency: playRate) {
     }
 }
 
+import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 {% endhighlight %}

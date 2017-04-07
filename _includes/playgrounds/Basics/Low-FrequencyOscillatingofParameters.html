@@ -3,7 +3,8 @@
 </h4><h4>This is traditionally done with Low-Frequency Oscillators, LFOs.
 </h4></p>
 
-{% highlight ruby %}import AudioKit
+{% highlight ruby %}import AudioKitPlaygrounds
+import AudioKit
 
 let generator = AKOperationGenerator { _ in
     let frequencyLFO = AKOperation.square(frequency: 1)

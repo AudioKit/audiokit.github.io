@@ -1,8 +1,8 @@
 <p><h3>Mandolin
 </h3> Physical model of a mandolin</p>
 
-{% highlight ruby %}import AudioKit
-import PlaygroundSupport
+{% highlight ruby %}import AudioKitPlaygrounds
+import AudioKit
 
 let playRate = 2.0
 
@@ -104,6 +104,7 @@ AKPlaygroundLoop(frequency: playRate) {
 
 }
 
+import PlaygroundSupport
 PlaygroundPage.current.liveView = PlaygroundView()
 PlaygroundPage.current.needsIndefiniteExecution = true
 {% endhighlight %}
