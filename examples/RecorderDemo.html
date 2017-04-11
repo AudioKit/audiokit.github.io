@@ -27,18 +27,22 @@ This demo is based off of the work by Laurent Veliscek.
 </p>
 
 <p>
-Before reading this, we highly recommend you to read a great tutorial on the <a href="/examples/HelloWorld/">Hello World example</a> first. This example is included in AudioKit in the Examples directory with versions for iOS and OSX.
+Before reading this, we highly recommend you to read a great tutorial on the <a href="/examples/HelloWorld/">Hello World example</a> first. This example is included in AudioKit in the Examples directory with versions for iOS and macOS.
 </p>
 
 <p>
 First, set session settings:
 </p>
 {% highlight swift %}
-    AKSettings.bufferLength = .Medium
+AKSettings.bufferLength = .medium
 
-    do {
-        try AKSettings.setSessionCategory(.PlayAndRecord, withOptions: .DefaultToSpeaker)
-    } catch { print("Errored setting category.") }
+do {
+    try AKSettings.setSession(category: .playAndRecord, with: .allowBluetoothA2DP)
+} catch {
+    AKLog("Could not set session category.")
+}
+
+AKSettings.defaultToSpeaker = true
 {% endhighlight %}
 
 <p>
@@ -46,24 +50,25 @@ Then, create an instance of input node, and then 2 mixing nodes (a node that mix
 </p>
 
 {% highlight swift %}
-    let mic = AKMicrophone()
-    let micMixer = AKMixer(mic)
-    micBooster = AKBooster(micMixer)
+inputPlot.node = mic
+micMixer = AKMixer(mic)
+micBooster = AKBooster(micMixer)
 {% endhighlight %}
 
 <p>
-And thenm set amplification factor for a mixing node to zero, create an instance of audio recorder class, return the AKAudioFile for reading and set the properties for the playback node. So we're able to create a filter node using the playback one and this gives us an opportunity to playback recorded sounds with the effects like a cutoff frequency and a resonance.
+And then set amplification factor for a mixing node to zero, create an instance of audio recorder class, return the AKAudioFile for reading and set the properties for the playback node. So we're able to create a filter node using the playback one and this gives us an opportunity to playback recorded sounds with the effects like a cutoff frequency and a resonance.
 </p>
 
 {% highlight swift %}
-    micBooster!.gain = 0
-    recorder = try? AKNodeRecorder(node: micMixer)
-    tape = recorder?.audioFile
-    player = tape?.player
-    player?.looping = true
-    player?.completionHandler = playingEnded
+micBooster.gain = 0
+recorder = try? AKNodeRecorder(node: micMixer)
+if let file = recorder.audioFile {
+    player = try? AKAudioPlayer(file: file)
+}
+player.looping = true
+player.completionHandler = playingEnded
 
-    moogLadder = AKMoogLadder(player!)
+moogLadder = AKMoogLadder(player)
 {% endhighlight %}
 
 <p>
@@ -71,8 +76,8 @@ Finally, create a main mixer node and start the AudioKit engine.
 </p>
 
 {% highlight swift %}
-    let mainMixer = AKMixer(moogLadder!, micBooster!)
+mainMixer = AKMixer(moogLadder, micBooster)
 
-    AudioKit.output = mainMixer
-    AudioKit.start()
+AudioKit.output = mainMixer
+AudioKit.start()
 {% endhighlight %}
