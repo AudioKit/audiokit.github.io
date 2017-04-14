@@ -1,0 +1,68 @@
+<h3>Playgrounds to Production
+</h3>
+
+<p>The intention of most of the AudioKit Playgrounds is to highlight a particular
+ concept.  To keep things clear, we have kept the amount of code to a minimum.
+ But the flipside of that decision is that code from playgrounds will look a little
+ different from production.  In general, to see best practices, you can check out
+ the AudioKit examples project, but here in this playground we&#39;ll highlight some
+ important ways playground code differs from production code.</p>
+
+{% highlight ruby %}import AudioKitPlaygrounds
+import AudioKit
+
+{% endhighlight %}
+<h4>Memory management
+</h4>
+
+<p>In a playground, you don&#39;t have to worry about whether a node is retained, so you can
+ just write:</p>
+
+{% highlight ruby %}let oscillator = AKOscillator()
+AudioKit.output = oscillator
+AudioKit.start()
+
+{% endhighlight %}
+<p>But if you did the same type of thing in a project:</p>
+
+{% highlight ruby %}class BadAudioEngine {
+    init() {
+        let oscillator = AKOscillator()
+        AudioKit.output = oscillator
+        AudioKit.start()
+    }
+}
+
+{% endhighlight %}
+<p>It wouldn&#39;t work because the oscillator node would be lost right after the init
+ method completed.  Instead,  makensure it is declared as an instance variable:</p>
+
+{% highlight ruby %}class AudioEngine {
+    var oscillator: AKOscillator
+    
+    init() {
+        oscillator = AKOscillator()
+        AudioKit.output = oscillator
+        AudioKit.start()
+    }
+}
+
+{% endhighlight %}
+<h4>Error Handling
+</h4>
+
+<p>In AudioKit playgrounds, failable initializers are just one line:</p>
+
+{% highlight ruby %}let file = try AKAudioFile()
+var player = try AKAudioPlayer(file: file)
+
+{% endhighlight %}
+<p>In production code, this would need to be wrapped in a do-catch block</p>
+
+{% highlight ruby %}do {
+    let file = try AKAudioFile(readFileName: "drumloop.wav", baseDir: .resources)
+    player = try AKAudioPlayer(file: file)
+} catch {
+    AKLog("File Not Found")
+}
+{% endhighlight %}
