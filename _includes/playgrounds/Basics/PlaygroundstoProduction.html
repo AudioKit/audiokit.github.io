@@ -8,6 +8,8 @@
  the AudioKit examples project, but here in this playground we&#39;ll highlight some
  important ways playground code differs from production code.</p>
 
+<p>In production, you would only import AudioKit, not AudioKitPlaygrounds</p>
+
 {% highlight ruby %}import AudioKitPlaygrounds
 import AudioKit
 
@@ -65,4 +67,5 @@ var player = try AKAudioPlayer(file: file)
 } catch {
     AKLog("File Not Found")
 }
+
 {% endhighlight %}

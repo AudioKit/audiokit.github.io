@@ -9,21 +9,11 @@
 {% highlight ruby %}import AudioKitPlaygrounds
 import AudioKit
 {% endhighlight %}
-<p>ALERT: This is also the line that most commonly shows an error &quot;No such module: AudioKit.&quot;
- There are a few potential causes for this which are outlined below.</p>
+<p>ALERT: This is also the line that most commonly shows an error &quot;No such module&quot; This just means you haven&#39;t built the framework yet, in which case pressing Cmd-B or
+ accessing the &quot;Product&quot; menu and choosing &quot;Build&quot;.  </p>
 
-<ol>
-<li><p>Perhaps, you haven&#39;t built the framework yet, in which case pressing Cmd-B or
-accessing the &quot;Product&quot; menu and choosing &quot;Build&quot;.  </p></li>
-<li><p>Make sure you are building for a simulator and not an actual device.</p></li>
-<li><p>Show the Utilities panel with the icon on the upper right of the window, or
-by accessing View menu, Utilities &gt; Show File Inspector, or pressing Cmd-option-1.
-From the panel, make sure the &quot;Playground Settings&quot; Platform pull-down menu matches
-the operating system you&#39;re currently building for.  </p></li>
-<li><p>If it still doesn&#39;t work (sigh) you may need to clean out your build products
-directory to make sure that no other versions of AudioKit exist for any OS.</p></li>
-</ol>
-
+{% highlight ruby %}
+{% endhighlight %}
 <p>This main bundle line just helps the playground find the files (such as audio clips)
  it will be able to play and process.</p>
 

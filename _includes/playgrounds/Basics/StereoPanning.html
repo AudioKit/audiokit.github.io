@@ -18,22 +18,23 @@ player.looping = true
 
 {% highlight ruby %}var panner = AKPanner(player)
 
-AudioKit.output = panner
-AudioKit.start()
-
-player.play()
 
 {% endhighlight %}
 <p>Adjust the pan to smoothly cycle left and right over time</p>
 
-{% highlight ruby %}
-var time = 0.0
+{% highlight ruby %}var time = 0.0
 let timeStep = 0.05
-AKPlaygroundLoop(every: timeStep) {
-    panner.pan
+let timer = AKPeriodicFunction(every: timeStep) {
     panner.pan = sin(time)
     time += timeStep
 }
+
+AudioKit.output = panner
+AudioKit.start(withPeriodicFunctions: timer)
+
+player.play()
+timer.start()
+timer.sporth
 
 import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
