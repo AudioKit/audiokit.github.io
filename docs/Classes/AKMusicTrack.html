@@ -14,7 +14,7 @@
     <a title="AKMusicTrack Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">AudioKit Docs</a> (93% documented)</p>
+        <p><a href="../index.html">AudioKit Docs</a> (94% documented)</p>
         <p class="header-right"><a href="https://github.com/audiokit/AudioKit"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -692,10 +692,19 @@
                 <a href="../Classes/AKDynamicRangeCompressor.html">AKDynamicRangeCompressor</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/AKMicrophoneTracker.html">AKMicrophoneTracker</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPeriodicFunction.html">AKPeriodicFunction</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKPhaser.html">AKPhaser</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKRhodesPiano.html">AKRhodesPiano</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSamplePlayer.html">AKSamplePlayer</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKShaker.html">AKShaker</a>
@@ -708,6 +717,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKTubularBells.html">AKTubularBells</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTuningTable.html">AKTuningTable</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKZitaReverb.html">AKZitaReverb</a>
@@ -813,6 +825,9 @@
               <li class="nav-group-task">
                 <a href="../Other Functions.html#/s:F8AudioKit6fourCCFSSVs6UInt32">fourCC(_:)</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Other Functions.html#/s:F8AudioKitXop8deiFBEEeFSbSb">❗️(_:)</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -837,6 +852,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Structs/AudioUnitPropertyListener.html">AudioUnitPropertyListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/EndpointInfo.html">EndpointInfo</a>
               </li>
             </ul>
           </li>
@@ -954,6 +972,33 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">trackPointer</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">MusicTrack</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit12AKMusicTrack10isNotEmptySb"></a>
+                    <a name="//apple_ref/swift/Property/isNotEmpty" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit12AKMusicTrack10isNotEmptySb">isNotEmpty</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKMusicTrack</span></code></pre>
 
                         </div>
                       </div>
@@ -1733,6 +1778,172 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:FC8AudioKit12AKMusicTrack12addPitchBendFTSi8positionVS_10AKDuration7channelVs5UInt8_T_"></a>
+                    <a name="//apple_ref/swift/Method/addPitchBend(_:position:channel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit12AKMusicTrack12addPitchBendFTSi8positionVS_10AKDuration7channelVs5UInt8_T_">addPitchBend(_:position:channel:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add Pitch Bend change to sequence</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>value: The value of pitchbend. The valid range of values is 0 to 16383 (128 ^ 2 values).</li>
+<li>8192 is no pitch bend.</li>
+<li>position: Where in the sequence to insert pitchbend info (expressed in beats)</li>
+<li>channel: MIDI channel to insert pitch bend on</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">addPitchBend</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">8_192</span><span class="p">,</span> <span class="nv">position</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">MIDIChannel</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The value of pitchbend. The valid range of values is 0 to 16383 (128 ^ 2 values).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>8192 is no pitch bend</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>position</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Where in the sequence to insert pitchbend info (expressed in beats)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>MIDI channel to insert pitch bend on</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit12AKMusicTrack14resetPitchBendFT8positionVS_10AKDuration7channelVs5UInt8_T_"></a>
+                    <a name="//apple_ref/swift/Method/resetPitchBend(position:channel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit12AKMusicTrack14resetPitchBendFT8positionVS_10AKDuration7channelVs5UInt8_T_">resetPitchBend(position:channel:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add Pitch Bend reset to sequence</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>position: Where in the sequence to insert pitchbend info (expressed in beats)</li>
+<li>channel: MIDI channel to insert pitch bend reset on</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">resetPitchBend</span><span class="p">(</span><span class="nv">position</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">MIDIChannel</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>position</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Where in the sequence to insert pitchbend info (expressed in beats)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>MIDI channel to insert pitch bend reset on</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:FC8AudioKit12AKMusicTrack14copyAndMergeToFT10musicTrackS0__T_"></a>
                     <a name="//apple_ref/swift/Method/copyAndMergeTo(musicTrack:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:FC8AudioKit12AKMusicTrack14copyAndMergeToFT10musicTrackS0__T_">copyAndMergeTo(musicTrack:)</a>
@@ -1856,7 +2067,7 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2017-04-07)</p>
+          <p>&copy; 2017 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2017-05-30)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -14,7 +14,7 @@
     <a title="AKAudioFile Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">AudioKit Docs</a> (93% documented)</p>
+        <p><a href="../index.html">AudioKit Docs</a> (94% documented)</p>
         <p class="header-right"><a href="https://github.com/audiokit/AudioKit"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -692,10 +692,19 @@
                 <a href="../Classes/AKDynamicRangeCompressor.html">AKDynamicRangeCompressor</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/AKMicrophoneTracker.html">AKMicrophoneTracker</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPeriodicFunction.html">AKPeriodicFunction</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKPhaser.html">AKPhaser</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKRhodesPiano.html">AKRhodesPiano</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSamplePlayer.html">AKSamplePlayer</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKShaker.html">AKShaker</a>
@@ -708,6 +717,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKTubularBells.html">AKTubularBells</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTuningTable.html">AKTuningTable</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKZitaReverb.html">AKZitaReverb</a>
@@ -813,6 +825,9 @@
               <li class="nav-group-task">
                 <a href="../Other Functions.html#/s:F8AudioKit6fourCCFSSVs6UInt32">fourCC(_:)</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Other Functions.html#/s:F8AudioKitXop8deiFBEEeFSbSb">❗️(_:)</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -838,6 +853,9 @@
               <li class="nav-group-task">
                 <a href="../Structs/AudioUnitPropertyListener.html">AudioUnitPropertyListener</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Structs/EndpointInfo.html">EndpointInfo</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -862,7 +880,7 @@
             <h1>AKAudioFile</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKAudioFile</span><span class="p">:</span> <span class="kt">AVAudioFile</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKAudioFile</span><span class="p">:</span> <span class="kt">AVAudioFile</span></code></pre>
 
                 </div>
               </div>
@@ -1337,7 +1355,7 @@ So it&rsquo;s better to use .caf (or .aif) files for recording purpose.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">(</span><span class="n">forWriting</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">settings</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span><span class="kt">Any</span><span class="p">])</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">(</span><span class="n">forWriting</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">settings</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">])</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -2268,7 +2286,7 @@ Arrays must both have the same number of Floats.</p>
 <p><li><p>Parameters:</p></p>
 
 <p><ul>
-<li>buffer: the :AVAudioPCMBuffer that will be used to fill the AKAudioFile</li>
+<li>buffer: the AVAudioPCMBuffer that will be used to fill the AKAudioFile</li>
 <li>baseDir: where the file will be located, can be set to .Resources, .Documents or .Temp</li>
 <li>name: the name of the file without its extension (String).</li>
 </ul></li>
@@ -2301,7 +2319,7 @@ Arrays must both have the same number of Floats.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>the :AVAudioPCMBuffer that will be used to fill the AKAudioFile</p>
+                                  <p>the AVAudioPCMBuffer that will be used to fill the AKAudioFile</p>
 
                                 </div>
                               </td>
@@ -2493,7 +2511,7 @@ AKAudioFile normalized with a peak of newMaxLevel dB if succeeded</p>
 
 <p>Completion Handler is function with an AKAudioFile.AsyncProcessCallback signature:
 <code>
-func myCallback(processedFile:AKAudioFile?, error:NSError?) -&gt; Void
+func myCallback(processedFile: AKAudioFile?, error: NSError?) -&gt; Void
 </code></p>
 
 <p>in this callback, you can check that process succeeded by testing processedFile value :
@@ -2624,7 +2642,7 @@ background thread. Any UI update should be made using:</p>
 
 <p>Completion Handler is function with an AKAudioFile.AsyncProcessCallback signature:
 <code>
-func myCallback(processedFile:AKAudioFile?, error:NSError?) -&gt; Void
+func myCallback(processedFile: AKAudioFile?, error: NSError?) -&gt; Void
 </code></p>
 
 <p>in this callback, you can check that process succeeded by testing processedFile value :
@@ -2740,7 +2758,7 @@ background thread. Any UI update should be made using:</p>
 
 <p>Completion Handler is function with an AKAudioFile.AsyncProcessCallback signature:
 <code>
-func myCallback(processedFile:AKAudioFile?, error:NSError?) -&gt; Void
+func myCallback(processedFile: AKAudioFile?, error: NSError?) -&gt; Void
 </code></p>
 
 <p>in this callback, you can check that process succeeded by testing processedFile value :
@@ -2874,7 +2892,7 @@ so extraction will go from fromSample value to the end of file.</p>
 
 <p>Completion Handler is function with an AKAudioFile.AsyncProcessCallback signature:
 <code>
-func myCallback(processedFile:AKAudioFile?, error:NSError?) -&gt; Void
+func myCallback(processedFile: AKAudioFile?, error: NSError?) -&gt; Void
 </code></p>
 
 <p>in this callback, you can check that process succeeded by testing processedFile value :
@@ -3152,7 +3170,7 @@ lets you monitor export progress.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2017-04-07)</p>
+          <p>&copy; 2017 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2017-05-30)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
