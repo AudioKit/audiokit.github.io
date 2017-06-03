@@ -1,0 +1,33 @@
+<p><h3>MIDI Input
+</h3> This playground is kind of a basic MIDI Monitor. Make sure you&#39;ve got the console view open, and then start pounding on the MIDI devices you have hooked up to your computer and you should see output.</p>
+
+{% highlight ruby %}import AudioKitPlaygrounds
+import AudioKit
+
+let midi = AKMIDI()
+
+{% endhighlight %}
+<p>The input names list all of the MIDI devices currently hooked up</p>
+
+{% highlight ruby %}midi.inputNames
+{% endhighlight %}
+<p>By opening up MIDI Input without specifying a particular port, we open up all ports.</p>
+
+{% highlight ruby %}midi.openInput()
+
+{% endhighlight %}
+<p>By defining a class that is a MIDI Listener, but with no functions overridden, we just get the default behavior which is to print to the console.</p>
+
+{% highlight ruby %}class PlaygroundMIDIReceiver: AKMIDIListener {
+}
+
+let receiver = PlaygroundMIDIReceiver()
+
+{% endhighlight %}
+<p>Add the new class to the list of MIDI listeners</p>
+
+{% highlight ruby %}midi.addListener(receiver)
+
+import PlaygroundSupport
+PlaygroundPage.current.needsIndefiniteExecution = true
+{% endhighlight %}

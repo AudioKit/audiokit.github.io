@@ -23,7 +23,7 @@ player.play()
 <p>You need a callback that will be triggered as soon as Export has been completed.
  the callback must be set as an AsyncProcessCallback with a signature set to be:</p>
 
-<p><code>func callback(processedFile: AKAudioFile?, error: NSError?) -&gt; Void</code></p>
+<p><code>func callback(processedFile: AKAudioFile?, error: NSError?)</code></p>
 
 <p>If export failed, &quot;processedFile&quot; will be nil.  The error being thrown is given in the &quot;error&quot; parameter. 
  If export succeeded, no error will be set (error = nil) and the exported file is returned as an AKAudioFile.
