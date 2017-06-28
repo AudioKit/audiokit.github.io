@@ -5,26 +5,17 @@ title: Works in Progress
 permalink: /wip/
 ---
 
+<p>
+This page is a bit out of date as it has been mostly replaced by <a href="https://github.com/audiokit/AudioKit/projects">Github Projects</a>.
+
+
 <p>AudioKit is under continuous development.  While we attempt to keep the master branch stable, our development work is done in the public eye, on the develop branch and other goal-specific branches.</p>
 
 <p>As of this writing, there is a lot to do, so we're publishing all these goals so that a) people know what we're working on, and b) people can volunteer to help.</p>
 
-<h3>Offline Rendering</h3>
-
-<p>A number of people have requested being able to process an audio file, applying effects and filters, in a faster-than-realtime audio context.  This is very doable with AudioKit and in fact our test project does this, but it only stores the processed audio in memory.  In order to do offline rendering we just need to extend this process to save the data in to a new file.</p>
-
-<h3>New AudioKit Synth app</h3>
-
-<p>We're building a replacement to AudioKit's Analog Synth X demo app that includes many new features and optimizations including improved filters, touchpad controls, sequencing, improved UI, saveable presets, and more.</p>
-
 <h3>AudioKit MIDI revamp</h3>
 
 <p>While AudioKit's MIDI is good, we would like to make it even easier to use, especially when it comes to sequencing. We also want to create more MIDI file manipulation and saving capabilities.
-</p>
-
-<h3>Garageband Plugins / Extensions</h3>
-
-<p>It shouldn't be difficult to create Garageband plugins with AudioUnit v3 Extensions with AudioKit, but we still need to make a demo of how to do it.
 </p>
 
 <h3>More sound generators, especially physical models</h3>
@@ -34,12 +25,6 @@ permalink: /wip/
 <h3>Web site and documentation updates</h3>
 
 <p>While we have a pretty good auto-generated documentation in the /docs/ portion of the web site, we also need to add more explanatory documentation in the form of web page discussions.  This process has already begun, but it is an enormous undertaking in and of itself, so its worth mentioning here.
-
-<h3>Efficiency Updates</h3>
-
-<p>Recently Vladimir found a problem in v3.3 that showed that at least some operations were more efficient in v3.2. This type of bug is of very high importance to us.</p>
-
-<p>In addition, we're looking at ways of optimizing compiling time, reducing AudioKit's foot print, and speeding up development time.</p>
 
 <h3>And more...</h3>
 
