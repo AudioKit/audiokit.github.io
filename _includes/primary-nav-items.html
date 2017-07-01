@@ -1,5 +1,7 @@
 <ul>
-
+    <li class="{% if page.url contains '/features/' %}current{% endif %}">
+    <a href="http://audiokitpro.com"><div>Features</div><span>AudioKit Pro Site</span></a>
+  </li>
   <li class="{% if page.url contains '/playgrounds/' %}current{% endif %} mega-menu">
     <a href="/playgrounds/"><div>Playgrounds</div><span><i class="icon-bolt2"></i> Live Coding!</span></a>
   </li>
