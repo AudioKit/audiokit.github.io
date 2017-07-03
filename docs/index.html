@@ -13,7 +13,7 @@
     <a title="AudioKit  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">AudioKit Docs</a> (94% documented)</p>
+        <p><a href="index.html">AudioKit Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/audiokit/AudioKit"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -44,6 +44,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKDevice.html">AKDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKMicrophoneTracker.html">AKMicrophoneTracker</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKNodeRecorder.html">AKNodeRecorder</a>
@@ -449,6 +452,9 @@
                 <a href="Classes/AKPhaseLockedVocoder.html">AKPhaseLockedVocoder</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/AKSamplePlayer.html">AKSamplePlayer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/AKSampler.html">AKSampler</a>
               </li>
               <li class="nav-group-task">
@@ -691,7 +697,7 @@
                 <a href="Classes/AKDynamicRangeCompressor.html">AKDynamicRangeCompressor</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/AKMicrophoneTracker.html">AKMicrophoneTracker</a>
+                <a href="Classes/AKMetronome.html">AKMetronome</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKPeriodicFunction.html">AKPeriodicFunction</a>
@@ -701,9 +707,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKRhodesPiano.html">AKRhodesPiano</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/AKSamplePlayer.html">AKSamplePlayer</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKShaker.html">AKShaker</a>
@@ -719,6 +722,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKTuningTable.html">AKTuningTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKVocalTract.html">AKVocalTract</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKZitaReverb.html">AKZitaReverb</a>
@@ -738,13 +744,7 @@
             <a href="Other Global Variables.html">Other Global Variables</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Other Global Variables.html#/s:v8AudioKit22filtersPlaygroundFilesGSaSS_">filtersPlaygroundFiles</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Other Global Variables.html#/s:v8AudioKit23playbackPlaygroundFilesGSaSS_">playbackPlaygroundFiles</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Other Global Variables.html#/s:v8AudioKit25processingPlaygroundFilesGSaSS_">processingPlaygroundFiles</a>
+                <a href="Other Global Variables.html#/s:v8AudioKit12callbackUgenCS_12AKCustomUgen">callbackUgen</a>
               </li>
             </ul>
           </li>
@@ -858,8 +858,19 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="Other Subscripts.html">Other Subscripts</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Other Subscripts.html#/s:iE8AudioKitCSo11AVAudioUnit9subscriptFVs6UInt32Sd">subscript(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="Other Typealiases.html">Other Typealiases</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Other Typealiases.html#/s:8AudioKit11AKCCallback">AKCCallback</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Other Typealiases.html#/s:8AudioKit14AKMIDICallback">AKMIDICallback</a>
               </li>
@@ -868,6 +879,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Other Typealiases.html#/s:C8AudioKit11AKAudioFile20AsyncProcessCallback">AsyncProcessCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Typealiases.html#/s:8AudioKit6Sample">Sample</a>
               </li>
             </ul>
           </li>
@@ -920,7 +934,7 @@
 <p>Taps use nodes as their data source, but do not redirect the audio signal away from the source nodes output into other nodes.   This allows a tap to be moved from node to node more freely and can be added after the audio signal path has started.</p>
 <a href='#installation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='installation'>Installation</h2>
 
-<p>Installation can be achieved in the usual ways for a framework.  This is explained in more detail in the <a href="https://github.com/audiokit/AudioKit/blob/master/Frameworks/INSTALL.md">INSTALL.md file</a> in the Frameworks directory.</p>
+<p>Installation can be achieved in the usual ways for a framework. More details are found in the <a href="https://github.com/audiokit/AudioKit/blob/master/Frameworks/README.md">Frameworks README file</a>.</p>
 
 <p>An AudioKit package is also available via <a href="https://cocoapods.org/pods/AudioKit">CocoaPods</a> and Carthage.</p>
 
@@ -985,6 +999,14 @@ $ ./build_frameworks.sh
 <p>If you use CocoaPods, you can also easily get the latest AudioKit binary framework for your project. Use this in your <code>Podfile</code>:</p>
 <pre class="highlight plaintext"><code>pod 'AudioKit', '~&gt; 3.7'
 </code></pre>
+<a href='#ray-wenderlich-39-s-audiokit-tutorial' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='ray-wenderlich-39-s-audiokit-tutorial'>Ray Wenderlich&rsquo;s AudioKit Tutorial</h2>
+
+<p>Check out the <a href="https://www.raywenderlich.com/145770/audiokit-tutorial-getting-started">AudioKit tutorial on the Ray Wenderlich site</a>. You’ll be taken on a fun and gentle journey through the framework via the history of sound synthesis and computer audio.</p>
+<a href='#contributing-code' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='contributing-code'>Contributing Code</h2>
+
+<p>We welcome new contributors but we realize it can be daunting to suggest updates as a newcomer.  Here&rsquo;s what we are currently working on:  <a href="https://github.com/audiokit/AudioKit/projects">AudioKit Works in Progress</a></p>
+
+<p>Ready to send us a pull request? Please make sure your request is based on the <a href="https://github.com/audiokit/AudioKit/tree/develop">develop</a> branch of the repository as <code>master</code> only holds stable releases.</p>
 <a href='#about-us' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='about-us'>About Us</h2>
 
 <p>AudioKit was created by the following team whose contributions are fully chronicled in Github, and summarized below in alphabetical order by first name:</p>
@@ -1000,38 +1022,11 @@ $ ./build_frameworks.sh
 <li><strong><a href="https://github.com/PaulBatchelor">Paul Batchelor</a></strong>: The author of <a href="https://github.com/paulbatchelor/soundpipe">Soundpipe</a>, and <a href="https://github.com/paulbatchelor/sporth">Sporth</a>, which serve as two primary audio engines in AudioKit 3.</li>
 <li><strong><a href="https://github.com/megastep">Stephane Peter</a></strong>: Installation and configuration czar and code reviewer.</li>
 </ul>
-<a href='#contributing-code' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='contributing-code'>Contributing Code</h2>
-
-<p>We welcome new contributors but we realize it can be daunting to suggest updates as a newcomer.  Here&rsquo;s what we are currently working on:  <a href="http://audiokit.io/wip/">AudioKit Works in Progress</a></p>
-
-<p>Here are some resources that we use to develop our coding choices and core philosophies:</p>
-<a href='#avoid-code-smell' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='avoid-code-smell'>Avoid code smell</h2>
-
-<ul>
-<li><a href="http://www.bartjacobs.com/five-code-smells-in-swift-and-objective-c/">Code Smell in Swift</a></li>
-<li><a href="http://qualitycoding.org/objective-c-code-smells/">Code Smell in Objective-C</a></li>
-<li><a href="http://qualitycoding.org/preprocessor/">Code Smell of the Preprocessor</a></li>
-</ul>
-<a href='#be-aware-of-how-to-code-for-an-open-source-framework' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='be-aware-of-how-to-code-for-an-open-source-framework'>Be aware of how to code for an open-source framework</h2>
-
-<ul>
-<li><a href="https://medium.com/@samjarman/tips-for-writing-a-great-ios-framework-8cf3452f6c5d#.wzejktd3l">Tips for Writing a Great iOS Framework</a></li>
-<li><a href="https://www.cocoanetics.com/2014/10/best-practices-running-an-ios-open-source-project-on-github/">Best practices running an iOS open source project on GitHub</a></li>
-</ul>
-<a href='#github-pull-request-policy' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='github-pull-request-policy'>GitHub Pull Request Policy</h2>
-
-<p>Ready to send us a pull request? Please make sure your request is based on the <a href="https://github.com/audiokit/AudioKit/tree/develop">develop</a> branch of the repository as <code>master</code> only holds stable releases.</p>
-<a href='#interested-in-audio-synthesis' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='interested-in-audio-synthesis'>Interested in audio synthesis?</h2>
-
-<ul>
-<li><p>check out <a href="http://www.syntorial.com/#a_aid=AudioKit">Syntorial</a>, it&rsquo;s hands down the best way to learn about synthesis interactively, your best bet if you care about synthesis from the sound design point of view; an afternoon with this will help you understand more than any book or video</p></li>
-<li><p><a href="https://web.archive.org/web/20160403115835/http://www.soundonsound.com/sos/allsynthsecrets.htm">https://web.archive.org/web/20160403115835/http://www.soundonsound.com/sos/allsynthsecrets.htm</a> very detailed, very thorough discussion of the topic of synthesis but almost too detailed on times</p></li>
-</ul>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2017-05-30)</p>
+          <p>&copy; 2017 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2017-07-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

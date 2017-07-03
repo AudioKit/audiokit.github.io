@@ -14,7 +14,7 @@
     <a title="AKShakerType Enum Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">AudioKit Docs</a> (94% documented)</p>
+        <p><a href="../index.html">AudioKit Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/audiokit/AudioKit"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -45,6 +45,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKDevice.html">AKDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMicrophoneTracker.html">AKMicrophoneTracker</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKNodeRecorder.html">AKNodeRecorder</a>
@@ -450,6 +453,9 @@
                 <a href="../Classes/AKPhaseLockedVocoder.html">AKPhaseLockedVocoder</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/AKSamplePlayer.html">AKSamplePlayer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKSampler.html">AKSampler</a>
               </li>
               <li class="nav-group-task">
@@ -692,7 +698,7 @@
                 <a href="../Classes/AKDynamicRangeCompressor.html">AKDynamicRangeCompressor</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/AKMicrophoneTracker.html">AKMicrophoneTracker</a>
+                <a href="../Classes/AKMetronome.html">AKMetronome</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKPeriodicFunction.html">AKPeriodicFunction</a>
@@ -702,9 +708,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKRhodesPiano.html">AKRhodesPiano</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/AKSamplePlayer.html">AKSamplePlayer</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKShaker.html">AKShaker</a>
@@ -720,6 +723,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKTuningTable.html">AKTuningTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKVocalTract.html">AKVocalTract</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKZitaReverb.html">AKZitaReverb</a>
@@ -739,13 +745,7 @@
             <a href="../Other Global Variables.html">Other Global Variables</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Other Global Variables.html#/s:v8AudioKit22filtersPlaygroundFilesGSaSS_">filtersPlaygroundFiles</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Other Global Variables.html#/s:v8AudioKit23playbackPlaygroundFilesGSaSS_">playbackPlaygroundFiles</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Other Global Variables.html#/s:v8AudioKit25processingPlaygroundFilesGSaSS_">processingPlaygroundFiles</a>
+                <a href="../Other Global Variables.html#/s:v8AudioKit12callbackUgenCS_12AKCustomUgen">callbackUgen</a>
               </li>
             </ul>
           </li>
@@ -859,8 +859,19 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Other Subscripts.html">Other Subscripts</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Subscripts.html#/s:iE8AudioKitCSo11AVAudioUnit9subscriptFVs6UInt32Sd">subscript(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Other Typealiases.html">Other Typealiases</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit11AKCCallback">AKCCallback</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Other Typealiases.html#/s:8AudioKit14AKMIDICallback">AKMIDICallback</a>
               </li>
@@ -870,6 +881,9 @@
               <li class="nav-group-task">
                 <a href="../Other Typealiases.html#/s:C8AudioKit11AKAudioFile20AsyncProcessCallback">AsyncProcessCallback</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit6Sample">Sample</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -878,7 +892,13 @@
         <section>
           <section class="section">
             <h1>AKShakerType</h1>
-            <p>Undocumented</p>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">AKShakerType</span><span class="p">:</span> <span class="kt">UInt8</span></code></pre>
+
+                </div>
+              </div>
+            <p>Type of shaker to use</p>
 
           </section>
           <section class="section task-group-section">
@@ -897,8 +917,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Maraca</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">maraca</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -920,8 +948,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Cabasa</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">cabasa</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -943,8 +979,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Sekere</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">sekere</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -966,8 +1010,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Tambourine</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">tambourine</span> <span class="o">=</span> <span class="mi">3</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -989,8 +1041,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Sleigh Bells</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">sleighBells</span> <span class="o">=</span> <span class="mi">4</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1012,8 +1072,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Bamboo Chimes</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">bambooChimes</span> <span class="o">=</span> <span class="mi">5</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1035,8 +1103,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Using sand paper</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">sandPaper</span> <span class="o">=</span> <span class="mi">6</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1058,8 +1134,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Soda Can</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">sodaCan</span> <span class="o">=</span> <span class="mi">7</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1081,8 +1165,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Sticks falling</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">sticks</span> <span class="o">=</span> <span class="mi">8</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1104,8 +1196,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Crunching sound</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">crunch</span> <span class="o">=</span> <span class="mi">9</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1127,8 +1227,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Big rocks hitting each other</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">bigRocks</span> <span class="o">=</span> <span class="mi">10</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1150,8 +1258,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Little rocks hitting each other</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">littleRocks</span> <span class="o">=</span> <span class="mi">11</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1173,8 +1289,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>NeXT Mug</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">nextMug</span> <span class="o">=</span> <span class="mi">12</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1196,8 +1320,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A penny rattling around a mug</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">pennyInMug</span> <span class="o">=</span> <span class="mi">13</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1219,8 +1351,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A nickle rattling around a mug</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">nickleInMug</span> <span class="o">=</span> <span class="mi">14</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1242,8 +1382,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A dime rattling around a mug</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">dimeInMug</span> <span class="o">=</span> <span class="mi">15</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1265,8 +1413,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A quarter rattling around a mug</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">quarterInMug</span> <span class="o">=</span> <span class="mi">16</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1288,8 +1444,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A Franc rattling around a mug</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">francInMug</span> <span class="o">=</span> <span class="mi">17</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1311,8 +1475,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A Peso rattling around a mug</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">pesoInMug</span> <span class="o">=</span> <span class="mi">18</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1334,8 +1506,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Guiro</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">guiro</span> <span class="o">=</span> <span class="mi">19</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1357,8 +1537,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Wrench</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">wrench</span> <span class="o">=</span> <span class="mi">20</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1380,8 +1568,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Water Droplets</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">waterDrops</span> <span class="o">=</span> <span class="mi">21</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1403,8 +1599,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Tuned Bamboo Chimes</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">tunedBambooChimes</span> <span class="o">=</span> <span class="mi">22</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1414,7 +1618,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2017-05-30)</p>
+          <p>&copy; 2017 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2017-07-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

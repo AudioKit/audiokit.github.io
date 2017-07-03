@@ -13,7 +13,7 @@
     <a title="Other Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">AudioKit Docs</a> (94% documented)</p>
+        <p><a href="index.html">AudioKit Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/audiokit/AudioKit"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -44,6 +44,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKDevice.html">AKDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKMicrophoneTracker.html">AKMicrophoneTracker</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKNodeRecorder.html">AKNodeRecorder</a>
@@ -449,6 +452,9 @@
                 <a href="Classes/AKPhaseLockedVocoder.html">AKPhaseLockedVocoder</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/AKSamplePlayer.html">AKSamplePlayer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/AKSampler.html">AKSampler</a>
               </li>
               <li class="nav-group-task">
@@ -691,7 +697,7 @@
                 <a href="Classes/AKDynamicRangeCompressor.html">AKDynamicRangeCompressor</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/AKMicrophoneTracker.html">AKMicrophoneTracker</a>
+                <a href="Classes/AKMetronome.html">AKMetronome</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKPeriodicFunction.html">AKPeriodicFunction</a>
@@ -701,9 +707,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKRhodesPiano.html">AKRhodesPiano</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/AKSamplePlayer.html">AKSamplePlayer</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKShaker.html">AKShaker</a>
@@ -719,6 +722,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKTuningTable.html">AKTuningTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKVocalTract.html">AKVocalTract</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKZitaReverb.html">AKZitaReverb</a>
@@ -738,13 +744,7 @@
             <a href="Other Global Variables.html">Other Global Variables</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Other Global Variables.html#/s:v8AudioKit22filtersPlaygroundFilesGSaSS_">filtersPlaygroundFiles</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Other Global Variables.html#/s:v8AudioKit23playbackPlaygroundFilesGSaSS_">playbackPlaygroundFiles</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Other Global Variables.html#/s:v8AudioKit25processingPlaygroundFilesGSaSS_">processingPlaygroundFiles</a>
+                <a href="Other Global Variables.html#/s:v8AudioKit12callbackUgenCS_12AKCustomUgen">callbackUgen</a>
               </li>
             </ul>
           </li>
@@ -858,8 +858,19 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="Other Subscripts.html">Other Subscripts</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Other Subscripts.html#/s:iE8AudioKitCSo11AVAudioUnit9subscriptFVs6UInt32Sd">subscript(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="Other Typealiases.html">Other Typealiases</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Other Typealiases.html#/s:8AudioKit11AKCCallback">AKCCallback</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Other Typealiases.html#/s:8AudioKit14AKMIDICallback">AKMIDICallback</a>
               </li>
@@ -868,6 +879,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Other Typealiases.html#/s:C8AudioKit11AKAudioFile20AsyncProcessCallback">AsyncProcessCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Typealiases.html#/s:8AudioKit6Sample">Sample</a>
               </li>
             </ul>
           </li>
@@ -918,6 +932,113 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:C8AudioKit12AKVocalTract"></a>
+                    <a name="//apple_ref/swift/Class/AKVocalTract" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C8AudioKit12AKVocalTract">AKVocalTract</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Based on the Pink Trombone algorithm by Neil Thapen, this implements a
+physical model of the vocal tract glottal pulse wave. The tract model is
+based on the classic Kelly-Lochbaum segmented cylindrical 1d waveguide
+model, and the glottal pulse wave is a LF glottal pulse model.</p>
+
+                        <a href="Classes/AKVocalTract.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AKVocalTract</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>frequency</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Glottal frequency.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>tonguePosition</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Tongue position (0-1)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>tongueDiameter</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Tongue diameter (0-1)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>tenseness</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Vocal tenseness. 0 = all breath. 1=fully saturated.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>nasality</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Sets the velum size. Larger values of this creates more nasally sounds.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:C8AudioKit21AKBluetoothMIDIButton"></a>
                     <a name="//apple_ref/swift/Class/AKBluetoothMIDIButton" class="dashAnchor"></a>
                     <a class="token" href="#/s:C8AudioKit21AKBluetoothMIDIButton">AKBluetoothMIDIButton</a>
@@ -928,9 +1049,17 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A button that will pull up a Bluetooth MIDI menu</p>
 
                         <a href="Classes/AKBluetoothMIDIButton.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AKBluetoothMIDIButton</span><span class="p">:</span> <span class="kt">UIButton</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -993,6 +1122,38 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKDynamicRangeCompressor</span><span class="p">:</span> <span class="kt"><a href="Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/AKComponent.html">AKComponent</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C8AudioKit11AKMetronome"></a>
+                    <a name="//apple_ref/swift/Class/AKMetronome" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C8AudioKit11AKMetronome">AKMetronome</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Useful metronome class that you can utilize for your own projects</p>
+
+                        <a href="Classes/AKMetronome.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AKMetronome</span><span class="p">:</span> <span class="kt"><a href="Classes/AKOperationGenerator.html">AKOperationGenerator</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1070,30 +1231,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:C8AudioKit14AKSamplePlayer"></a>
-                    <a name="//apple_ref/swift/Class/AKSamplePlayer" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C8AudioKit14AKSamplePlayer">AKSamplePlayer</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="Classes/AKSamplePlayer.html" class="slightly-smaller">See more</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:C8AudioKit12AKCustomUgen"></a>
                     <a name="//apple_ref/swift/Class/AKCustomUgen" class="dashAnchor"></a>
                     <a class="token" href="#/s:C8AudioKit12AKCustomUgen">AKCustomUgen</a>
@@ -1104,9 +1241,17 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Custom Sporth Unit Generator (Ugen)</p>
 
                         <a href="Classes/AKCustomUgen.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKCustomUgen</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1182,30 +1327,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:C8AudioKit19AKMicrophoneTracker"></a>
-                    <a name="//apple_ref/swift/Class/AKMicrophoneTracker" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C8AudioKit19AKMicrophoneTracker">AKMicrophoneTracker</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="Classes/AKMicrophoneTracker.html" class="slightly-smaller">See more</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:C8AudioKit15AKBrownianNoise"></a>
                     <a name="//apple_ref/swift/Class/AKBrownianNoise" class="dashAnchor"></a>
                     <a class="token" href="#/s:C8AudioKit15AKBrownianNoise">AKBrownianNoise</a>
@@ -1248,9 +1369,17 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A class to periodically perform a callback</p>
 
                         <a href="Classes/AKPeriodicFunction.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AKPeriodicFunction</span><span class="p">:</span> <span class="kt"><a href="Classes/AKOperationGenerator.html">AKOperationGenerator</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1369,9 +1498,17 @@ from the Guitarix project.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Incrementor view, normally used for MIDI presets, but could be useful elsehwere</p>
 
                         <a href="Classes/AKStepper.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKStepper</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1381,7 +1518,7 @@ from the Guitarix project.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2017-05-30)</p>
+          <p>&copy; 2017 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2017-07-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

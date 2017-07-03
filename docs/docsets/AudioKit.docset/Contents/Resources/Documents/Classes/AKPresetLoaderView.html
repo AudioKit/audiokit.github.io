@@ -14,7 +14,7 @@
     <a title="AKPresetLoaderView Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">AudioKit Docs</a> (94% documented)</p>
+        <p><a href="../index.html">AudioKit Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/audiokit/AudioKit"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -45,6 +45,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKDevice.html">AKDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMicrophoneTracker.html">AKMicrophoneTracker</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKNodeRecorder.html">AKNodeRecorder</a>
@@ -450,6 +453,9 @@
                 <a href="../Classes/AKPhaseLockedVocoder.html">AKPhaseLockedVocoder</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/AKSamplePlayer.html">AKSamplePlayer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKSampler.html">AKSampler</a>
               </li>
               <li class="nav-group-task">
@@ -692,7 +698,7 @@
                 <a href="../Classes/AKDynamicRangeCompressor.html">AKDynamicRangeCompressor</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/AKMicrophoneTracker.html">AKMicrophoneTracker</a>
+                <a href="../Classes/AKMetronome.html">AKMetronome</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKPeriodicFunction.html">AKPeriodicFunction</a>
@@ -702,9 +708,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKRhodesPiano.html">AKRhodesPiano</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/AKSamplePlayer.html">AKSamplePlayer</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKShaker.html">AKShaker</a>
@@ -720,6 +723,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKTuningTable.html">AKTuningTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKVocalTract.html">AKVocalTract</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKZitaReverb.html">AKZitaReverb</a>
@@ -739,13 +745,7 @@
             <a href="../Other Global Variables.html">Other Global Variables</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Other Global Variables.html#/s:v8AudioKit22filtersPlaygroundFilesGSaSS_">filtersPlaygroundFiles</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Other Global Variables.html#/s:v8AudioKit23playbackPlaygroundFilesGSaSS_">playbackPlaygroundFiles</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Other Global Variables.html#/s:v8AudioKit25processingPlaygroundFilesGSaSS_">processingPlaygroundFiles</a>
+                <a href="../Other Global Variables.html#/s:v8AudioKit12callbackUgenCS_12AKCustomUgen">callbackUgen</a>
               </li>
             </ul>
           </li>
@@ -859,8 +859,19 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Other Subscripts.html">Other Subscripts</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Subscripts.html#/s:iE8AudioKitCSo11AVAudioUnit9subscriptFVs6UInt32Sd">subscript(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Other Typealiases.html">Other Typealiases</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit11AKCCallback">AKCCallback</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Other Typealiases.html#/s:8AudioKit14AKMIDICallback">AKMIDICallback</a>
               </li>
@@ -870,6 +881,9 @@
               <li class="nav-group-task">
                 <a href="../Other Typealiases.html#/s:C8AudioKit11AKAudioFile20AsyncProcessCallback">AsyncProcessCallback</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit6Sample">Sample</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -878,7 +892,13 @@
         <section>
           <section class="section">
             <h1>AKPresetLoaderView</h1>
-            <p>Undocumented</p>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKPresetLoaderView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                </div>
+              </div>
+            <p>Preset view scoller</p>
 
           </section>
           <section class="section task-group-section">
@@ -897,8 +917,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Text to display as a label</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">label</span> <span class="o">=</span> <span class="s">"Preset"</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -916,8 +944,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The presets to scroll through</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">presets</span> <span class="o">=</span> <span class="p">[</span><span class="kt">String</span><span class="p">]()</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -935,8 +971,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Function to call when the preset is changed</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">callback</span><span class="p">:</span> <span class="p">(</span><span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -944,9 +988,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit18AKPresetLoaderView12touchesBeganFTGVs3SetCSo7UITouch_4withGSqCSo7UIEvent__T_"></a>
-                    <a name="//apple_ref/swift/Method/touchesBegan(_:with:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit18AKPresetLoaderView12touchesBeganFTGVs3SetCSo7UITouch_4withGSqCSo7UIEvent__T_">touchesBegan(_:with:)</a>
+                    <a name="/s:vC8AudioKit18AKPresetLoaderView8fontSizeV12CoreGraphics7CGFloat"></a>
+                    <a name="//apple_ref/swift/Property/fontSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit18AKPresetLoaderView8fontSizeV12CoreGraphics7CGFloat">fontSize</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -954,8 +998,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Font size</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">fontSize</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">24</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -963,9 +1015,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC8AudioKit18AKPresetLoaderViewcFT7presetsGSaSS_5frameVSC6CGRect8callbackFSST__S0_"></a>
-                    <a name="//apple_ref/swift/Method/init(presets:frame:callback:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC8AudioKit18AKPresetLoaderViewcFT7presetsGSaSS_5frameVSC6CGRect8callbackFSST__S0_">init(presets:frame:callback:)</a>
+                    <a name="/s:vC8AudioKit18AKPresetLoaderView4fontCSo6UIFont"></a>
+                    <a name="//apple_ref/swift/Property/font" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit18AKPresetLoaderView4fontCSo6UIFont">font</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -973,8 +1025,48 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Font</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">font</span><span class="p">:</span> <span class="kt">UIFont</span> <span class="o">=</span> <span class="kt">UIFont</span><span class="o">.</span><span class="nf">boldSystemFont</span><span class="p">(</span><span class="nv">ofSize</span><span class="p">:</span> <span class="mi">24</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit18AKPresetLoaderViewcFT7presetsGSaSS_5frameVSC6CGRect4fontCSo6UIFont8fontSizeV12CoreGraphics7CGFloat12initialIndexSi8callbackFSST__S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(presets:frame:font:fontSize:initialIndex:callback:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit18AKPresetLoaderViewcFT7presetsGSaSS_5frameVSC6CGRect4fontCSo6UIFont8fontSizeV12CoreGraphics7CGFloat12initialIndexSi8callbackFSST__S0_">init(presets:frame:font:fontSize:initialIndex:callback:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize the preset loader view</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">presets</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span>
+                <span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span> <span class="o">=</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">440</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">60</span><span class="p">),</span>
+                <span class="nv">font</span><span class="p">:</span> <span class="kt">UIFont</span> <span class="o">=</span> <span class="kt">UIFont</span><span class="o">.</span><span class="nf">boldSystemFont</span><span class="p">(</span><span class="nv">ofSize</span><span class="p">:</span> <span class="mi">24</span><span class="p">),</span>
+                <span class="nv">fontSize</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">24</span><span class="p">,</span>
+                <span class="nv">initialIndex</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -992,8 +1084,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Initialize in Interface Builder</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">required</span> <span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="n">coder</span> <span class="nv">aDecoder</span><span class="p">:</span> <span class="kt">NSCoder</span><span class="p">)</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1011,8 +1111,70 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Draw the preset loader</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="n">open</span> <span class="kd">func</span> <span class="nf">draw</span><span class="p">(</span><span class="n">_</span> <span class="nv">rect</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit18AKPresetLoaderView12touchesBeganFTGVs3SetCSo7UITouch_4withGSqCSo7UIEvent__T_"></a>
+                    <a name="//apple_ref/swift/Method/touchesBegan(_:with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit18AKPresetLoaderView12touchesBeganFTGVs3SetCSo7UITouch_4withGSqCSo7UIEvent__T_">touchesBegan(_:with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Handle new touches</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="n">open</span> <span class="kd">func</span> <span class="nf">touchesBegan</span><span class="p">(</span><span class="n">_</span> <span class="nv">touches</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">UITouch</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">with</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">UIEvent</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit18AKPresetLoaderView12touchesMovedFTGVs3SetCSo7UITouch_4withGSqCSo7UIEvent__T_"></a>
+                    <a name="//apple_ref/swift/Method/touchesMoved(_:with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit18AKPresetLoaderView12touchesMovedFTGVs3SetCSo7UITouch_4withGSqCSo7UIEvent__T_">touchesMoved(_:with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Handle moved touches</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="n">open</span> <span class="kd">func</span> <span class="nf">touchesMoved</span><span class="p">(</span><span class="n">_</span> <span class="nv">touches</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">UITouch</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">with</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">UIEvent</span><span class="p">?)</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1022,7 +1184,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2017-05-30)</p>
+          <p>&copy; 2017 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2017-07-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

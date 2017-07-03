@@ -14,7 +14,7 @@
     <a title="AKFormantFilter Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">AudioKit Docs</a> (94% documented)</p>
+        <p><a href="../index.html">AudioKit Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/audiokit/AudioKit"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -45,6 +45,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKDevice.html">AKDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMicrophoneTracker.html">AKMicrophoneTracker</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKNodeRecorder.html">AKNodeRecorder</a>
@@ -450,6 +453,9 @@
                 <a href="../Classes/AKPhaseLockedVocoder.html">AKPhaseLockedVocoder</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/AKSamplePlayer.html">AKSamplePlayer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKSampler.html">AKSampler</a>
               </li>
               <li class="nav-group-task">
@@ -692,7 +698,7 @@
                 <a href="../Classes/AKDynamicRangeCompressor.html">AKDynamicRangeCompressor</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/AKMicrophoneTracker.html">AKMicrophoneTracker</a>
+                <a href="../Classes/AKMetronome.html">AKMetronome</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKPeriodicFunction.html">AKPeriodicFunction</a>
@@ -702,9 +708,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKRhodesPiano.html">AKRhodesPiano</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/AKSamplePlayer.html">AKSamplePlayer</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKShaker.html">AKShaker</a>
@@ -720,6 +723,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKTuningTable.html">AKTuningTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKVocalTract.html">AKVocalTract</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKZitaReverb.html">AKZitaReverb</a>
@@ -739,13 +745,7 @@
             <a href="../Other Global Variables.html">Other Global Variables</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Other Global Variables.html#/s:v8AudioKit22filtersPlaygroundFilesGSaSS_">filtersPlaygroundFiles</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Other Global Variables.html#/s:v8AudioKit23playbackPlaygroundFilesGSaSS_">playbackPlaygroundFiles</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Other Global Variables.html#/s:v8AudioKit25processingPlaygroundFilesGSaSS_">processingPlaygroundFiles</a>
+                <a href="../Other Global Variables.html#/s:v8AudioKit12callbackUgenCS_12AKCustomUgen">callbackUgen</a>
               </li>
             </ul>
           </li>
@@ -859,8 +859,19 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Other Subscripts.html">Other Subscripts</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Subscripts.html#/s:iE8AudioKitCSo11AVAudioUnit9subscriptFVs6UInt32Sd">subscript(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Other Typealiases.html">Other Typealiases</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit11AKCCallback">AKCCallback</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Other Typealiases.html#/s:8AudioKit14AKMIDICallback">AKMIDICallback</a>
               </li>
@@ -869,6 +880,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Other Typealiases.html#/s:C8AudioKit11AKAudioFile20AsyncProcessCallback">AsyncProcessCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit6Sample">Sample</a>
               </li>
             </ul>
           </li>
@@ -905,14 +919,14 @@ limit on the number of overlaps.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Four letter unique description of the node</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKFormantFilter</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKNode.html">AKNode</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKToggleable.html">AKToggleable</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKComponent.html">AKComponent</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">ComponentDescription</span> <span class="o">=</span> <span class="kt">AudioComponentDescription</span><span class="p">(</span><span class="nv">effect</span><span class="p">:</span> <span class="s">"fofi"</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1219,7 +1233,7 @@ limit on the number of overlaps.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2017-05-30)</p>
+          <p>&copy; 2017 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2017-07-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

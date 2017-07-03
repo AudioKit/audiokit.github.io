@@ -14,7 +14,7 @@
     <a title="AKADSRView Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">AudioKit Docs</a> (94% documented)</p>
+        <p><a href="../index.html">AudioKit Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/audiokit/AudioKit"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -45,6 +45,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKDevice.html">AKDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMicrophoneTracker.html">AKMicrophoneTracker</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKNodeRecorder.html">AKNodeRecorder</a>
@@ -450,6 +453,9 @@
                 <a href="../Classes/AKPhaseLockedVocoder.html">AKPhaseLockedVocoder</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/AKSamplePlayer.html">AKSamplePlayer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKSampler.html">AKSampler</a>
               </li>
               <li class="nav-group-task">
@@ -692,7 +698,7 @@
                 <a href="../Classes/AKDynamicRangeCompressor.html">AKDynamicRangeCompressor</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/AKMicrophoneTracker.html">AKMicrophoneTracker</a>
+                <a href="../Classes/AKMetronome.html">AKMetronome</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKPeriodicFunction.html">AKPeriodicFunction</a>
@@ -702,9 +708,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKRhodesPiano.html">AKRhodesPiano</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/AKSamplePlayer.html">AKSamplePlayer</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKShaker.html">AKShaker</a>
@@ -720,6 +723,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKTuningTable.html">AKTuningTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKVocalTract.html">AKVocalTract</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKZitaReverb.html">AKZitaReverb</a>
@@ -739,13 +745,7 @@
             <a href="../Other Global Variables.html">Other Global Variables</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Other Global Variables.html#/s:v8AudioKit22filtersPlaygroundFilesGSaSS_">filtersPlaygroundFiles</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Other Global Variables.html#/s:v8AudioKit23playbackPlaygroundFilesGSaSS_">playbackPlaygroundFiles</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Other Global Variables.html#/s:v8AudioKit25processingPlaygroundFilesGSaSS_">processingPlaygroundFiles</a>
+                <a href="../Other Global Variables.html#/s:v8AudioKit12callbackUgenCS_12AKCustomUgen">callbackUgen</a>
               </li>
             </ul>
           </li>
@@ -859,8 +859,19 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Other Subscripts.html">Other Subscripts</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Subscripts.html#/s:iE8AudioKitCSo11AVAudioUnit9subscriptFVs6UInt32Sd">subscript(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Other Typealiases.html">Other Typealiases</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit11AKCCallback">AKCCallback</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Other Typealiases.html#/s:8AudioKit14AKMIDICallback">AKMIDICallback</a>
               </li>
@@ -869,6 +880,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Other Typealiases.html#/s:C8AudioKit11AKAudioFile20AsyncProcessCallback">AsyncProcessCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit6Sample">Sample</a>
               </li>
             </ul>
           </li>
@@ -1065,7 +1079,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>/ Color Declarations</p>
+                        <p>/ Color Declarations
+ Color in the attack portion of the UI element</p>
 
                       </div>
                       <div class="declaration">
@@ -1092,14 +1107,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Color in the decay portion of the UI element</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">decayColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="err">#</span><span class="nf">colorLiteral</span><span class="p">(</span><span class="nv">red</span><span class="p">:</span> <span class="mf">0.942</span><span class="p">,</span> <span class="nv">green</span><span class="p">:</span> <span class="mf">0.648</span><span class="p">,</span> <span class="nv">blue</span><span class="p">:</span> <span class="mf">0.000</span><span class="p">,</span> <span class="nv">alpha</span><span class="p">:</span> <span class="mf">1.000</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1119,14 +1134,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Color in the sustain portion of the UI element</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">sustainColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="err">#</span><span class="nf">colorLiteral</span><span class="p">(</span><span class="nv">red</span><span class="p">:</span> <span class="mf">0.320</span><span class="p">,</span> <span class="nv">green</span><span class="p">:</span> <span class="mf">0.800</span><span class="p">,</span> <span class="nv">blue</span><span class="p">:</span> <span class="mf">0.616</span><span class="p">,</span> <span class="nv">alpha</span><span class="p">:</span> <span class="mf">1.000</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1146,14 +1161,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Color in the release portion of the UI element</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">releaseColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="err">#</span><span class="nf">colorLiteral</span><span class="p">(</span><span class="nv">red</span><span class="p">:</span> <span class="mf">0.720</span><span class="p">,</span> <span class="nv">green</span><span class="p">:</span> <span class="mf">0.519</span><span class="p">,</span> <span class="nv">blue</span><span class="p">:</span> <span class="mf">0.888</span><span class="p">,</span> <span class="nv">alpha</span><span class="p">:</span> <span class="mf">1.000</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit10AKADSRView7bgColorCSo7UIColor"></a>
+                    <a name="//apple_ref/swift/Property/bgColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit10AKADSRView7bgColorCSo7UIColor">bgColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Background color</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">bgColor</span> <span class="o">=</span> <span class="err">#</span><span class="nf">colorLiteral</span><span class="p">(</span><span class="nv">red</span><span class="p">:</span> <span class="mf">1.000</span><span class="p">,</span> <span class="nv">green</span><span class="p">:</span> <span class="mf">1.000</span><span class="p">,</span> <span class="nv">blue</span><span class="p">:</span> <span class="mf">1.000</span><span class="p">,</span> <span class="nv">alpha</span><span class="p">:</span> <span class="mf">1.000</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1173,14 +1215,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Width of the envelope curve</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">curveStrokeWidth</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
 
                         </div>
                       </div>
@@ -1200,14 +1242,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Color of the envelope curve</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">curveColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="o">.</span><span class="n">black</span></code></pre>
 
                         </div>
                       </div>
@@ -1238,14 +1280,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Initialize the view, usually with a callback</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">callback</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKADSRView.html#/s:C8AudioKit10AKADSRView12ADSRCallback">ADSRCallback</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1265,14 +1307,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Initialization of the view from within interface builder</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">required</span> <span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="n">coder</span> <span class="nv">aDecoder</span><span class="p">:</span> <span class="kt">NSCoder</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1303,14 +1345,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Perform necessary operation to allow the view to be rendered in interface builder</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="n">open</span> <span class="kd">func</span> <span class="nf">prepareForInterfaceBuilder</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -1330,14 +1372,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Size of the view</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">intrinsicContentSize</span><span class="p">:</span> <span class="kt">CGSize</span></code></pre>
 
                         </div>
                       </div>
@@ -1357,14 +1399,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Requeire a constraint based layout with interface builder</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="k">override</span> <span class="k">var</span> <span class="nv">requiresConstraintBasedLayout</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -1395,14 +1437,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Handle new touches</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="n">open</span> <span class="kd">func</span> <span class="nf">touchesBegan</span><span class="p">(</span><span class="n">_</span> <span class="nv">touches</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">UITouch</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">with</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">UIEvent</span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
@@ -1422,14 +1464,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Handle moving touches</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="n">open</span> <span class="kd">func</span> <span class="nf">touchesMoved</span><span class="p">(</span><span class="n">_</span> <span class="nv">touches</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">UITouch</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">with</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">UIEvent</span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
@@ -1460,14 +1502,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Draw the view</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKADSRView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="n">open</span> <span class="kd">func</span> <span class="nf">draw</span><span class="p">(</span><span class="n">_</span> <span class="nv">rect</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1479,7 +1521,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2017-05-30)</p>
+          <p>&copy; 2017 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2017-07-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
