@@ -37,7 +37,7 @@ AudioKit.start()
 
 {% endhighlight %}
 <p>It wouldn&#39;t work because the oscillator node would be lost right after the init
- method completed.  Instead,  makensure it is declared as an instance variable:</p>
+ method completed.  Instead,  make sure it is declared as an instance variable:</p>
 
 {% highlight ruby %}class AudioEngine {
     var oscillator: AKOscillator

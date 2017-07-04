@@ -1,5 +1,6 @@
 <p><h3>MIDI Input
-</h3> This playground is kind of a basic MIDI Monitor. Make sure you&#39;ve got the console view open, and then start pounding on the MIDI devices you have hooked up to your computer and you should see output.</p>
+</h3> This playground is kind of a basic MIDI Monitor. Make sure you&#39;ve got the console view open, 
+ and then start pounding on the MIDI devices you have hooked up to your computer and you should see output.</p>
 
 {% highlight ruby %}import AudioKitPlaygrounds
 import AudioKit
@@ -16,7 +17,8 @@ let midi = AKMIDI()
 {% highlight ruby %}midi.openInput()
 
 {% endhighlight %}
-<p>By defining a class that is a MIDI Listener, but with no functions overridden, we just get the default behavior which is to print to the console.</p>
+<p>By defining a class that is a MIDI Listener, but with no functions overridden, 
+ we just get the default behavior which is to print to the console.</p>
 
 {% highlight ruby %}class PlaygroundMIDIReceiver: AKMIDIListener {
 }
