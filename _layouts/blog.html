@@ -18,7 +18,9 @@ section: blog
             <li><a href="/">Home</a></li>
             <li class="active">
               {% if page.header != '' %}
+                {{ page.header }}
               {% else %}
+                {{ page.title }}
               {% endif %}
             </li>
         </ol>
@@ -37,7 +39,6 @@ section: blog
                 <!-- Posts
                 ============================================= -->
                 <div id="posts">
-                  {{ content }}
                 </div>
             </div>
             {% include sidebars/blog.html %}
