@@ -12,16 +12,13 @@ section: blog
           {% if page.header != '' %}
             {{ page.header }}
           {% else %}
-            {{ page.title }}
           {% endif %}
         </h1>
         <ol class="breadcrumb">
             <li><a href="/">Home</a></li>
             <li class="active">
               {% if page.header != '' %}
-                {{ page.header }}
               {% else %}
-                {{ page.title }}
               {% endif %}
             </li>
         </ol>
