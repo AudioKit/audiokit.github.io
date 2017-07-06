@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
+  {% if page.redirect %}
+    <meta http-equiv="refresh" content="0; url=http://audiokitpro.com/{{ page.redirect }}" />
+  {% else %}
+    {% if page.date%}
+    <meta http-equiv="refresh" content="0; url=http://audiokitpro.com/blog/" />
+    {% endif %}
+  {% endif %}
+
 
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="author" content="SemiColonWeb" />
@@ -36,6 +44,6 @@
 
     <!-- Document Title
     ============================================= -->
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>|{{ section }}|{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
 </head>
