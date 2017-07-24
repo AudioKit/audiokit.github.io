@@ -599,6 +599,10 @@ span.middot {
         .slider-caption p {
         font-size: 18px !important;
     }
+
+    .hidden-tablet {
+        display: none;
+    }
  
 } 
 
@@ -616,6 +620,10 @@ span.middot {
 
     .slider-caption a.button {
         display: inline-block !important;
+    }
+
+    .hidden-phone {
+        display: none;
     }
 }  
 
