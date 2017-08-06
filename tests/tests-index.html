@@ -5,7 +5,9 @@ title: AudioKit Tests
 permalink: /tests/
 ---
 
-<p>AudioKit comes with an a test suite application that ensures that over 110 sound generators and processors are working properly.</p>
+<p>We ensure all the included projects build by automatically testing them using Travis Continuous Integration.  We use unit tests to ensure that the nodes and operations in AudioKit work perfectly.  If a change is made to AudioKit to breaks something, we're automatically emailed.
+
+</p>
 
 <iframe src="https://player.vimeo.com/video/181724143?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
@@ -15,11 +17,448 @@ permalink: /tests/
 
 <table class="table table-bordered"><thead><tr><th>Branch</th><th>Status</th></tr></thead>
 <tr>
-<td><a href="https://travis-ci.org/audiokit/AudioKit">Master</a></td>
-<td><a href="https://travis-ci.org/audiokit/AudioKit"><img src="https://travis-ci.org/audiokit/AudioKit.svg?branch=master" alt="AudioKit Master Branch Status"></a></td>
+<td><a href="https://travis-ci.org/AudioKit/AudioKit">Master</a></td>
+<td><a href="https://travis-ci.org/AudioKit/AudioKit"><img src="https://travis-ci.org/AudioKit/AudioKit.svg?branch=master" alt="AudioKit Master Branch Status"></a></td>
 </tr>
 <tr>
-<td><a href="https://travis-ci.org/audiokit/AudioKit">Develop</a></td>
-<td><a href="https://travis-ci.org/audiokit/AudioKit"><img src="https://travis-ci.org/audiokit/AudioKit.svg?branch=develop" alt="AudioKit Develop Branch Status"></a></td>
+<td><a href="https://travis-ci.org/AudioKit/AudioKit">Develop</a></td>
+<td><a href="https://travis-ci.org/AudioKit/AudioKit"><img src="https://travis-ci.org/AudioKit/AudioKit.svg?branch=develop" alt="AudioKit Develop Branch Status"></a></td>
 </tr>
 </table>
+
+<h3>Test Output</h3>
+
+Running the <a href="https://github.com/AudioKit/AudioKit/tree/develop/AudioKit/Common/Tests"?>test suite</a> verifies the following test cases:
+<table class="table table-bordered">
+<tr>
+<th>Node Tests</th>
+<th>Operation Tests</th>
+</tr>
+<tr></tr>
+<td valign=top>
+<pre>
+AKAmplitudeEnvelopeTests
+    ✓ testAttack (0.194 seconds)
+    ✓ testDecay (0.003 seconds)
+    ✓ testDefault (0.004 seconds)
+    ✓ testParameters (0.003 seconds)
+    ✓ testSustain (0.003 seconds)
+AKAutoWahTests
+    ✓ testAmplitude (0.006 seconds)
+    ✓ testDefault (0.004 seconds)
+    ✓ testMix (0.003 seconds)
+    ✓ testParamters (0.003 seconds)
+    ✓ testWah (0.002 seconds)
+AKBandPassButterworthFilterTests
+    ✓ testBandwidth (0.002 seconds)
+    ✓ testCenterFrequency (0.001 seconds)
+    ✓ testDefault (0.002 seconds)
+    ✓ testParameters (0.002 seconds)
+AKBandRejectButterworthFilterTests
+    ✓ testBandwidth (0.003 seconds)
+    ✓ testCenterFrequency (0.001 seconds)
+    ✓ testDefault (0.001 seconds)
+    ✓ testParameters (0.001 seconds)
+AKBitCrusherTests
+    ✓ testBitDepth (0.004 seconds)
+    ✓ testDefault (0.002 seconds)
+    ✓ testParameters (0.002 seconds)
+    ✓ testSampleRate (0.002 seconds)
+AKChowningReverbTests
+    ✓ testActuallyProcessing (0.003 seconds)
+    ✓ testDefault (0.004 seconds)
+AKClipperTests
+    ✓ testDefault (0.004 seconds)
+    ✓ testParameters1 (0.002 seconds)
+    ✓ testParameters2 (0.002 seconds)
+AKCompressorTests
+    ✓ testAttackTime (0.005 seconds)
+    ✓ testDefault (0.006 seconds)
+    ✓ testHeadRoom (0.004 seconds)
+    ✓ testMasterGain (0.004 seconds)
+    ✓ testParameters (0.004 seconds)
+    ✓ testThreshold (0.005 seconds)
+AKCostelloReverbTests
+    ✓ testCutoffFrequency (0.005 seconds)
+    ✓ testDefault (0.004 seconds)
+    ✓ testFeedback (0.004 seconds)
+    ✓ testParametersSetAfterInit (0.004 seconds)
+    ✓ testParametersSetOnInit (0.004 seconds)
+AKDCBlockTests
+    ✓ testActuallyProcessing (0.002 seconds)
+    ✓ testDefault (0.004 seconds)
+AKDecimatorTests
+    ✓ testDecimation (0.008 seconds)
+    ✓ testDefault (0.004 seconds)
+    ✓ testMix (0.003 seconds)
+    ✓ testParameters (0.003 seconds)
+    ✓ testRounding (0.003 seconds)
+AKDelayTests
+    ✓ testDryWetMix (0.003 seconds)
+    ✓ testFeedback (0.002 seconds)
+    ✓ testLowpassCutoff (0.002 seconds)
+    ✓ testParameters (0.002 seconds)
+    ✓ testTime (0.002 seconds)
+AKDistortionTests
+    ✓ testCubicTerm (0.007 seconds)
+    ✓ testDecay (0.009 seconds)
+    ✓ testDecimation (0.008 seconds)
+    ✓ testDecimationMix (0.006 seconds)
+    ✓ testDefault (0.008 seconds)
+    ✓ testDelay (0.008 seconds)
+    ✓ testDelayMix (0.008 seconds)
+    ✓ testFinalMix (0.006 seconds)
+    ✓ testLinearTerm (0.006 seconds)
+    ✓ testParameters (0.007 seconds)
+    ✓ testPolynomialMix (0.007 seconds)
+    ✓ testRingModBalance (0.008 seconds)
+    ✓ testRingModFreq1 (0.008 seconds)
+    ✓ testRingModFreq2 (0.006 seconds)
+    ✓ testRingModMix (0.007 seconds)
+    ✓ testRounding (0.006 seconds)
+    ✓ testSoftClipGain (0.006 seconds)
+    ✓ testSquaredTerm (0.007 seconds)
+AKDynamicRangeCompressorTests
+    ✓ testAttackTime (0.013 seconds)
+    ✓ testDefault (0.011 seconds)
+    ✓ testParameters (0.012 seconds)
+    ✓ testRatio (0.014 seconds)
+    ✓ testReleaseTime (0.013 seconds)
+    ✓ testThreshold (0.011 seconds)
+AKDynamicsProcessorTests
+    ✓ testDefault (0.003 seconds)
+AKEqualizerFilterTests
+    ✓ testBandwidth (0.003 seconds)
+    ✓ testCenterFrequency (0.003 seconds)
+    ✓ testDefault (0.002 seconds)
+    ✓ testGain (0.002 seconds)
+    ✓ testParameters (0.002 seconds)
+AKExpanderTests
+    ✓ testDefault (0.004 seconds)
+AKFMOscillatorBankTests
+    ✓ testAttackDuration (0.013 seconds)
+    ✓ testCarrierMultiplier (0.009 seconds)
+    ✓ testDecayDuration (0.009 seconds)
+    ✓ testDefault (0.009 seconds)
+    ✓ testDetuningMultiplier (0.008 seconds)
+    ✓ testDetuningOffset (0.008 seconds)
+    ✓ testModulatingMultiplier (0.009 seconds)
+    ✓ testModulationIndex (0.007 seconds)
+    ✓ testParameters (0.008 seconds)
+    ✓ testSustainLevel (0.007 seconds)
+    ✓ testWaveform (0.009 seconds)
+AKFMOscillatorTests
+    ✓ testDefault (0.004 seconds)
+    ✓ testParametersSetAfterInit (0.003 seconds)
+    ✓ testParametersSetOnInit (0.003 seconds)
+    ✓ testPresetBuzzer (0.003 seconds)
+    ✓ testPresetFogHorn (0.002 seconds)
+    ✓ testPresetSpiral (0.003 seconds)
+    ✓ testPresetStunRay (0.003 seconds)
+    ✓ testPresetWobble (0.003 seconds)
+    ✓ testSquareWave (0.002 seconds)
+AKFlatFrequencyResponseReverbTests
+    ✓ testDefault (0.003 seconds)
+    ✓ testReverbDuration (0.002 seconds)
+AKFormantFilterTests
+    ✓ testDefault (0.005 seconds)
+AKHighPassButterworthFilterTests
+    ✓ testCutoffFrequency (0.003 seconds)
+    ✓ testDefault (0.002 seconds)
+AKHighPassFilterTests
+    ✓ testCutoffFrequency (0.004 seconds)
+    ✓ testDefault (0.004 seconds)
+    ✓ testParameters (0.002 seconds)
+    ✓ testResonance (0.002 seconds)
+AKHighShelfFilterTests
+    ✓ testDefault (0.003 seconds)
+    ✓ testGain (0.004 seconds)
+    ✓ testParameters (0.003 seconds)
+AKHighShelfParametricEqualizerFilterTests
+    ✓ testCenterFrequency (0.004 seconds)
+    ✓ testDefault (0.002 seconds)
+    ✓ testGain (0.002 seconds)
+    ✓ testParameters (0.002 seconds)
+    ✓ testQ (0.009 seconds)
+AKKorgLowPassFilterTests
+    ✓ testCutoffFrequency (0.004 seconds)
+    ✓ testDefault (0.003 seconds)
+    ✓ testParameters (0.003 seconds)
+    ✓ testResonance (0.002 seconds)
+    ✓ testSaturation (0.002 seconds)
+AKLowPassButterworthFilterTests
+    ✓ testCutoffFrequency (0.003 seconds)
+    ✓ testDefault (0.002 seconds)
+AKLowPassFilterTests
+    ✓ testCutoffFrequency (0.005 seconds)
+    ✓ testDefault (0.003 seconds)
+    ✓ testParameters (0.003 seconds)
+    ✓ testResonance (0.003 seconds)
+AKLowShelfFilterTests
+    ✓ testCutoffFrequency (0.004 seconds)
+    ✓ testDefault (0.004 seconds)
+    ✓ testGain (0.004 seconds)
+AKLowShelfParametricEqualizerFilterTests
+    ✓ testCornerFrequency (0.004 seconds)
+    ✓ testDefault (0.002 seconds)
+    ✓ testGain (0.002 seconds)
+    ✓ testParameters (0.002 seconds)
+    ✓ testQ (0.003 seconds)
+AKModalResonanceFilterTests
+    ✓ testDefault (0.004 seconds)
+    ✓ testFrequency (0.002 seconds)
+    ✓ testParameters (0.002 seconds)
+    ✓ testQualityFactor (0.003 seconds)
+AKMoogLadderTests
+    ✓ testCutoffFrequency (0.005 seconds)
+    ✓ testDefault (0.005 seconds)
+    ✓ testParameters (0.005 seconds)
+    ✓ testResonance (0.005 seconds)
+AKMorphingOscillatorBankTests
+    ✓ testAttackDuration (0.014 seconds)
+    ✓ testDecayDuration (0.013 seconds)
+    ✓ testDefault (0.013 seconds)
+    ✓ testDetuningMultiplier (0.012 seconds)
+    ✓ testDetuningOffset (0.013 seconds)
+    ✓ testIndex (0.010 seconds)
+    ✓ testParameters (0.012 seconds)
+    ✓ testSustainLevel (0.011 seconds)
+    ✓ testWaveformArray (0.012 seconds)
+AKMorphingOscillatorTests
+    ✓ testDefault (0.006 seconds)
+    ✓ testParametersSetAfterInit (0.005 seconds)
+    ✓ testParametersSetOnInit (0.007 seconds)
+AKOscillatorBankTests
+    ✓ testAttackDuration (0.010 seconds)
+    ✓ testDecayDuration (0.009 seconds)
+    ✓ testDefault (0.008 seconds)
+    ✓ testDetuningMultiplier (0.008 seconds)
+    ✓ testDetuningOffset (0.009 seconds)
+    ✓ testParameters (0.008 seconds)
+    ✓ testSustainLevel (0.008 seconds)
+    ✓ testWaveform (0.009 seconds)
+AKOscillatorTests
+    ✓ testAmpitude (0.003 seconds)
+    ✓ testDefault (0.002 seconds)
+    ✓ testFrequency (0.003 seconds)
+    ✓ testParameters (0.003 seconds)
+    ✓ testParametersSetAfterInit (0.003 seconds)
+AKPWMOscillatorBankTests
+    ✓ testAttackDuration (0.010 seconds)
+    ✓ testDecayDuration (0.010 seconds)
+    ✓ testDefault (0.009 seconds)
+    ✓ testDetuningMultiplier (0.008 seconds)
+    ✓ testDetuningOffset (0.007 seconds)
+    ✓ testParameters (0.007 seconds)
+    ✓ testPulseWidth (0.010 seconds)
+    ✓ testSustainLevel (0.011 seconds)
+AKPWMOscillatorTests
+    ✓ testAmplitude (0.004 seconds)
+    ✓ testDefault (0.002 seconds)
+    ✓ testDetuningMultiplier (0.002 seconds)
+    ✓ testDetuningOffset (0.003 seconds)
+    ✓ testFrequency (0.002 seconds)
+    ✓ testParameters (0.003 seconds)
+    ✓ testParametersSetAfterInit (0.002 seconds)
+    ✓ testPulseWidth (0.002 seconds)
+AKPeakLimiterTests
+    ✓ testAttackTime (0.005 seconds)
+    ✓ testDecayTime (0.005 seconds)
+    ✓ testDefault (0.005 seconds)
+    ✓ testParameters (0.005 seconds)
+    ✓ testPreGain (0.005 seconds)
+AKPeakingParametricEqualizerFilterTests
+    ✓ testCenterFrequency (0.004 seconds)
+    ✓ testDefault (0.003 seconds)
+    ✓ testGain (0.003 seconds)
+    ✓ testParameters (0.004 seconds)
+    ✓ testQ (0.003 seconds)
+AKPhaseDistortionOscillatorBankTests
+    ✓ testAttackDuration (0.014 seconds)
+    ✓ testDecayDuration (0.013 seconds)
+    ✓ testDefault (0.015 seconds)
+    ✓ testDetuningMultiplier (0.014 seconds)
+    ✓ testDetuningOffset (0.017 seconds)
+    ✓ testParameters (0.012 seconds)
+    ✓ testPhaseDistortion (0.013 seconds)
+    ✓ testSustainLevel (0.013 seconds)
+    ✓ testWaveform (0.013 seconds)
+AKPhaseDistortionOscillatorTests
+    ✓ testAmplitude (0.005 seconds)
+    ✓ testDefault (0.004 seconds)
+    ✓ testDetuningMultiplier (0.004 seconds)
+    ✓ testDetuningOffset (0.004 seconds)
+    ✓ testFrequency (0.003 seconds)
+    ✓ testParameters (0.004 seconds)
+    ✓ testParametersSetAfterInit (0.004 seconds)
+    ✓ testPhaseDistortion (0.004 seconds)
+AKPinkNoiseTests
+    ✓ testAmplitude (0.003 seconds)
+    ✓ testDefault (0.003 seconds)
+AKPitchShifterTests
+    ✓ testCrossfade (0.005 seconds)
+    ✓ testDefault (0.004 seconds)
+    ✓ testParameters (0.005 seconds)
+    ✓ testShift (0.004 seconds)
+    ✓ testWindowSize (0.004 seconds)
+AKResonantFilterTests
+    ✓ testBandwidth (0.004 seconds)
+    ✓ testDefault (0.003 seconds)
+    ✓ testFrequency (0.003 seconds)
+    ✓ testParameters (0.003 seconds)
+AKReverbTests
+    ✓ testCathedral (0.108 seconds)
+    ✓ testDefault (0.004 seconds)
+    ✓ testSmallRoom (0.003 seconds)
+AKRingModulatorTests
+    ✓ testDefault (0.004 seconds)
+AKRolandTB303FilterTests
+    ✓ testCutoffFrequency (0.007 seconds)
+    ✓ testDefault (0.004 seconds)
+    ✓ testDistortion (0.005 seconds)
+    ✓ testParameters (0.005 seconds)
+    ✓ testResonance (0.005 seconds)
+    ✓ testResonanceAsymmetry (0.006 seconds)
+AKStringResonatorTests
+    ✓ testBandwidth (0.004 seconds)
+    ✓ testDefault (0.004 seconds)
+    ✓ testFrequency (0.002 seconds)
+    ✓ testParameters (0.002 seconds)
+AKTableTests
+    ✓ testReverseSawtooth (0.003 seconds)
+    ✓ testSawtooth (0.003 seconds)
+    ✓ testSine (0.003 seconds)
+    ✓ testTriangle (0.003 seconds)
+AKTanhDistortionTests
+    ✓ testDefault (0.004 seconds)
+    ✓ testNegativeShapeParameter (0.003 seconds)
+    ✓ testParameters (0.004 seconds)
+    ✓ testPostgain (0.004 seconds)
+    ✓ testPostiveShapeParameter (0.005 seconds)
+    ✓ testPregain (0.004 seconds)
+AKThreePoleLowpassFilterTests
+    ✓ testCutoffFrequency (0.005 seconds)
+    ✓ testDefault (0.005 seconds)
+    ✓ testDistortion (0.004 seconds)
+    ✓ testParameters (0.004 seconds)
+    ✓ testResonance (0.004 seconds)
+AKToneComplementFilterTests
+    ✓ testDefault (0.004 seconds)
+    ✓ testHalfPowerPoint (0.003 seconds)
+AKToneFilterTests
+    ✓ testDefault (0.005 seconds)
+    ✓ testHalfPowerPoint (0.003 seconds)
+AKTremoloTests
+    ✓ testDefault (0.004 seconds)
+    ✓ testFrequency (0.003 seconds)
+AKVariableDelayTests
+    ✓ testDefault (0.023 seconds)
+    ✓ testParametersSetAfterInit (0.029 seconds)
+    ✓ testParametersSetOnInit (0.022 seconds)
+AKWhiteNoiseTests
+    ✓ testAmplitude (0.004 seconds)
+    ✓ testDefault (0.003 seconds)
+AKZitaReverbTests
+    ✓ testDefault (0.042 seconds)
+    ✓ testParametersSetAfterInit (0.036 seconds)
+    ✓ testParametersSetOnInit (0.036 seconds)
+
+</pre>
+</td>
+<td valign=top>
+<pre>
+AutoWahTests
+    ✓ testAmplitude (0.008 seconds)
+    ✓ testDefault (0.007 seconds)
+    ✓ testWah (0.007 seconds)
+BitcrushTests
+    ✓ testBitDepth (0.007 seconds)
+    ✓ testDefault (0.007 seconds)
+    ✓ testParameters (0.006 seconds)
+    ✓ testSampleRate (0.005 seconds)
+ClipTests
+    ✓ testClip (0.014 seconds)
+    ✓ testDefault (0.016 seconds)
+DCBlockTests
+    ✓ testDefault (0.015 seconds)
+DelayTests
+    ✓ testDefault (0.050 seconds)
+    ✓ testParameters (0.043 seconds)
+    ✓ testTime (0.036 seconds)
+DistortTests
+    ✓ testDefault (0.020 seconds)
+FMOscillatorTests
+    ✓ testDefault (0.009 seconds)
+    ✓ testFMOscillatorOperation (0.050 seconds)
+HighPassButterworthFilterTests
+    ✓ testDefault (0.013 seconds)
+HighPassFilterTests
+    ✓ testDefault (0.019 seconds)
+KorgLowPassFilterTests
+    ✓ testDefault (0.014 seconds)
+    ✓ testParameters (0.014 seconds)
+LowPassButterworthFilterTests
+    ✓ testDefault (0.019 seconds)
+LowPassFilterTests
+    ✓ testDefault (0.014 seconds)
+ModalResonanceFilterTests
+    ✓ testDefault (0.012 seconds)
+MoogLadderFilterTests
+    ✓ testDefault (0.024 seconds)
+MorphingOscillatorTests
+    ✓ testDefault (0.013 seconds)
+PhasorTests
+    ✓ testDefault (0.005 seconds)
+PinkNoiseTests
+    ✓ testAmplitude (0.006 seconds)
+    ✓ testDefault (0.009 seconds)
+    ✓ testParameterSweep (0.019 seconds)
+PluckedStringTests
+    ✓ testDefault (0.011 seconds)
+ResonantFilterTests
+    ✓ testDefault (0.013 seconds)
+ReverberateWithChowningTests
+    ✓ testDefault (0.018 seconds)
+ReverberateWithCombFilterTests
+    ✓ testDefault (0.012 seconds)
+ReverberateWithCostelloTests
+    ✓ testDefault (0.015 seconds)
+ReverberateWithFlatFrequencyResponseTests
+    ✓ testDefault (0.018 seconds)
+SawtoothTests
+    ✓ testDefault (0.007 seconds)
+SawtoothWaveTests
+    ✓ testDefault (0.006 seconds)
+SineWaveTests
+    ✓ testDefault (0.009 seconds)
+SmoothDelayTests
+    ✓ testDefault (0.055 seconds)
+    ✓ testFeedback (0.051 seconds)
+    ✓ testParameters (0.052 seconds)
+    ✓ testParameterSweep (0.161 seconds)
+    ✓ testTime (0.052 seconds)
+SquareTests
+    ✓ testDefault (0.007 seconds)
+SquareWaveTests
+    ✓ testDefault (0.007 seconds)
+StringResonatorTests
+    ✓ testDefault (0.012 seconds)
+ThreePoleLowPassFilterTests
+    ✓ testParameterSweep (0.037 seconds)
+TriangleTests
+    ✓ testParameterSweep (0.026 seconds)
+TriangleWaveTests
+    ✓ testParameterSweep (0.020 seconds)
+VariableDelayTests
+    ✓ testParameterSweep (0.042 seconds)
+WhiteNoiseTests
+    ✓ testAmplitude (0.007 seconds)
+    ✓ testDefault (0.005 seconds)
+    ✓ testParameterSweep (0.015 seconds)
+
+</pre>
+</td>
+</tr>
+</table>
+Executed 320 tests, with 0 failures (0 unexpected) in 2.953 (3.165) seconds
+</pre>
