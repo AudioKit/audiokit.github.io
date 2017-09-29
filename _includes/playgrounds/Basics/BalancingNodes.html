@@ -5,11 +5,12 @@
 
 {% highlight ruby %}import AudioKitPlaygrounds
 import AudioKit
+import AudioKitUI
 
 {% endhighlight %}
 <p>This section prepares the players</p>
 
-{% highlight ruby %}let file = try AKAudioFile(readFileName: "drumloop.wav", baseDir: .resources)
+{% highlight ruby %}let file = try AKAudioFile(readFileName: "drumloop.wav")
 var source = try AKAudioPlayer(file: file)
 source.looping = true
 
@@ -29,19 +30,24 @@ source.play()
 <p>User Interface Set up</p>
 
 {% highlight ruby %}
-class PlaygroundView: AKPlaygroundView {
+class LiveView: AKLiveViewController {
 
-    override func setup() {
+    override func viewDidLoad() {
         addTitle("Balancing Nodes")
 
         addLabel("Listen to the difference in volume:")
-        addSubview(AKBypassButton(node: rebalancedWithSource))
+
+        addView(AKButton(title: "Balancing") { button in
+            let node = rebalancedWithSource
+            node.isStarted ? node.stop() : node.play()
+            button.title = node.isStarted ? "Balancing" : "Bypassed"
+        })
     }
 
 }
 
 import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
-PlaygroundPage.current.liveView = PlaygroundView()
+PlaygroundPage.current.liveView = LiveView()
 
 {% endhighlight %}

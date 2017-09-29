@@ -3,6 +3,7 @@
 
 {% highlight ruby %}import AudioKitPlaygrounds
 import AudioKit
+import AudioKitUI
 
 {% endhighlight %}
 <p><h4>Dial Tone
@@ -88,11 +89,11 @@ keypad.start()
 {% endhighlight %}
 <p>User Interface Set up</p>
 
-{% highlight ruby %}class PlaygroundView: AKPlaygroundView {
+{% highlight ruby %}class LiveView: AKLiveViewController {
 
-    override func setup() {
+    override func viewDidLoad() {
         addTitle("Telephone")
-        addSubview(AKPhoneView { key, state in
+        addView(AKPhoneView { key, state in
             switch key {
             case "CALL":
                 if state == "down" {
@@ -136,5 +137,5 @@ keypad.start()
 
 import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
-PlaygroundPage.current.liveView = PlaygroundView()
+PlaygroundPage.current.liveView = LiveView()
 {% endhighlight %}

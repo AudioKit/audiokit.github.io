@@ -39,18 +39,19 @@ sequencer.setTempo(tempo)
 {% endhighlight %}
 <p>Create a simple user interface</p>
 
-{% highlight ruby %}
-class PlaygroundView: AKPlaygroundView {
-    override func setup() {
+{% highlight ruby %}import AudioKitUI
+
+class LiveView: AKLiveViewController {
+    override func viewDidLoad() {
         addTitle("Callback Instrument")
 
-        addSubview(AKButton(title: "Play") {
+        addView(AKButton(title: "Play") { _ in
             sequencer.play()
         })
-        addSubview(AKButton(title: "Pause", color: AKColor.red) {
+        addView(AKButton(title: "Pause") { _ in
             sequencer.stop()
         })
-        addSubview(AKButton(title: "Rewind", color: AKColor.cyan) {
+        addView(AKButton(title: "Rewind") { _ in
             sequencer.rewind()
         })
         addLabel("Open the console log to show output.")
@@ -60,5 +61,5 @@ sequencer.play()
 
 import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
-PlaygroundPage.current.liveView = PlaygroundView()
+PlaygroundPage.current.liveView = LiveView()
 {% endhighlight %}

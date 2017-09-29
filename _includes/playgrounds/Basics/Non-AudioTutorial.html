@@ -8,23 +8,23 @@
 
 {% highlight ruby %}import AudioKitPlaygrounds
 import AudioKit
+
+{% endhighlight %}
+<p>If you intend to use some of the user interface elements provided by the optional AudioKitUI
+ framework, you will also need to import it.</p>
+
+{% highlight ruby %}import AudioKitUI
+
 {% endhighlight %}
 <p>ALERT: This is also the line that most commonly shows an error &quot;No such module&quot; 
- This just means you haven&#39;t built the framework yet, in which case pressing Cmd-B or
- accessing the &quot;Product&quot; menu and choosing &quot;Build&quot;.  </p>
+ This just means you haven&#39;t built AudioKitPlaygrounds yet, in which case pressing Cmd-B or
+ accessing the &quot;Product&quot; menu and choosing &quot;Build&quot;.</p>
 
 {% highlight ruby %}
 {% endhighlight %}
-<p>This main bundle line just helps the playground find the files (such as audio clips)
- it will be able to play and process.</p>
+<p>To use a file, copy it intot playground&#39;s &quot;Resources&quot; folder and refer to it by name:</p>
 
-{% highlight ruby %}let bundle = Bundle.main
-
-{% endhighlight %}
-<p>To reference a file, you use the bundle from about and the <code>pathForResource</code>
- method that includes the name with the extension given in the <code>ofType</code> parameter.</p>
-
-{% highlight ruby %}let file = try AKAudioFile(readFileName: "mixloop.wav", baseDir: .resources)
+{% highlight ruby %}let file = try AKAudioFile(readFileName: "mixloop.wav")
 
 {% endhighlight %}
 <p>You are not limited to using the sound files provided with AudioKit, in fact
@@ -47,7 +47,7 @@ import AudioKit
 let effect = AKMoogLadder(player)
 
 {% endhighlight %}
-<p>The following line keeps a playground executing even after the last line is
+<p>The following lines keep a playground executing even after the last line is
  run so that the audio elements that were started have time to play and make
  sounds for us to listen to.</p>
 

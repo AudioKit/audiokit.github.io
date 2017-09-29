@@ -39,8 +39,9 @@ sequencer.play()
 {% endhighlight %}
 <p>Set up a basic UI for setting outputs of tracks</p>
 
-{% highlight ruby %}
-class PlaygroundView: AKPlaygroundView {
+{% highlight ruby %}import AudioKitUI
+
+class LiveView: AKLiveViewController {
 
     enum State {
         case bell, piano
@@ -48,20 +49,20 @@ class PlaygroundView: AKPlaygroundView {
     var buttons: [AKButton] = []
     var states: [State] = [.piano, .piano, .piano, .piano]
 
-    override func setup() {
+    override func viewDidLoad() {
 
         addTitle("Sequencer")
-        
+
         for i in 0 ..< 4 {
-            let button = AKButton(title: "Track \(i + 1): FM Piano") {
+            let button = AKButton(title: "Track \(i + 1): FM Piano") { _ in
                 self.states[i] = self.states[i] == .bell ? .piano : .bell
                 self.update()
             }
-            addSubview(button)
+            addView(button)
             buttons.append(button)
         }
     }
-    
+
     func update() {
         sequencer.stop()
         for i in 0 ..< 4 {
@@ -73,7 +74,7 @@ class PlaygroundView: AKPlaygroundView {
                 sequencer.tracks[i + 1].setMIDIOutput(piano.midiIn)
                 buttons[i].title = "Track \(i + 1): FM Piano"
                 buttons[i].color = .green
-                
+
             }
         }
         sequencer.play()
@@ -83,5 +84,5 @@ class PlaygroundView: AKPlaygroundView {
 
 import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
-PlaygroundPage.current.liveView = PlaygroundView()
+PlaygroundPage.current.liveView = LiveView()
 {% endhighlight %}

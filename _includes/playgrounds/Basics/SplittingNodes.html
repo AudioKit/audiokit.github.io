@@ -9,7 +9,7 @@ import AudioKit
 {% endhighlight %}
 <p>Prepare the source audio player</p>
 
-{% highlight ruby %}let file = try AKAudioFile(readFileName: "drumloop.wav", baseDir: .resources)
+{% highlight ruby %}let file = try AKAudioFile(readFileName: "drumloop.wav")
 
 let player = try AKAudioPlayer(file: file)
 player.looping = true

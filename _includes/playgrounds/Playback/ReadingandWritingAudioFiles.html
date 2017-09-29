@@ -7,8 +7,7 @@
 import AudioKit
 
 // Let's create an AKaudioFile :
-let akAudioFile = try AKAudioFile(readFileName: "Samples/click.wav",
-                                  baseDir: .resources)
+let akAudioFile = try AKAudioFile(readFileName: "Samples/click.wav")
 
 // converted in an AVAudioFile
 let avAudioFile = akAudioFile as AVAudioFile
@@ -34,8 +33,7 @@ let tempDir = AKAudioFile.BaseDirectory.temp
  Notice that an error message is printed in the debug area, and an error is thrown...</p>
 
 {% highlight ruby %}do {
-    let nonExistentFile = try AKAudioFile(readFileName: "nonExistent.wav",
-                                          baseDir: .resources)
+    let nonExistentFile = try AKAudioFile(readFileName: "nonExistent.wav")
 } catch let error as NSError {
     print("There's an error: \(error)")
 }

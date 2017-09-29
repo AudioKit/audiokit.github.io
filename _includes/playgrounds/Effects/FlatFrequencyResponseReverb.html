@@ -4,8 +4,7 @@
 {% highlight ruby %}import AudioKitPlaygrounds
 import AudioKit
 
-let file = try AKAudioFile(readFileName: playgroundAudioFiles[0],
-                           baseDir: .resources)
+let file = try AKAudioFile(readFileName: playgroundAudioFiles[0])
 
 let player = try AKAudioPlayer(file: file)
 player.looping = true
@@ -20,21 +19,16 @@ player.play()
 {% endhighlight %}
 <p>User Interface Set up</p>
 
-{% highlight ruby %}
-class PlaygroundView: AKPlaygroundView {
+{% highlight ruby %}import AudioKitUI
 
-    override func setup() {
+class LiveView: AKLiveViewController {
+
+    override func viewDidLoad() {
         addTitle("Flat Frequency Response Reverb")
 
-        addSubview(AKResourcesAudioFileLoaderView(
-            player: player,
-            filenames: playgroundAudioFiles))
+        addView(AKResourcesAudioFileLoaderView(player: player, filenames: playgroundAudioFiles))
 
-        addSubview(AKPropertySlider(
-            property: "Duration",
-            value: reverb.reverbDuration, maximum: 5,
-            color: AKColor.green
-        ) { sliderValue in
+        addView(AKSlider(property: "Duration", value: reverb.reverbDuration, range: 0 ... 5) { sliderValue in
             reverb.reverbDuration = sliderValue
         })
     }
@@ -42,5 +36,5 @@ class PlaygroundView: AKPlaygroundView {
 
 import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
-PlaygroundPage.current.liveView = PlaygroundView()
+PlaygroundPage.current.liveView = LiveView()
 {% endhighlight %}

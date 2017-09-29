@@ -8,11 +8,10 @@
 
 {% highlight ruby %}import AudioKitPlaygrounds
 import AudioKit
-
 {% endhighlight %}
 <p>This section prepares the players</p>
 
-{% highlight ruby %}let file = try AKAudioFile(readFileName: "drumloop.wav", baseDir: .resources)
+{% highlight ruby %}let file = try AKAudioFile(readFileName: "drumloop.wav")
 var drums = try AKAudioPlayer(file: file)
 drums.looping = true
 
@@ -39,21 +38,19 @@ drums.play()
 {% endhighlight %}
 <p>User Interface Set up</p>
 
-{% highlight ruby %}
-class PlaygroundView: AKPlaygroundView {
+{% highlight ruby %}import AudioKitUI
 
-    var balanceLabel: Label?
+class LiveView: AKLiveViewController {
 
-    override func setup() {
+    override func viewDidLoad() {
         addTitle("Dry Wet Mix")
 
-        addSubview(AKBypassButton(node: drums))
+        addView(AKButton(title: "Bypass") { button in
+            drums.isPlaying ? drums.stop() : drums.play()
+            button.title = drums.isPlaying ? "Stop" : "Start"
+        })
 
-        addSubview(AKPropertySlider(
-            property: "Balance",
-            value: mixture.balance,
-            color: AKColor.cyan
-        ) { sliderValue in
+        addView(AKSlider(property: "Balance", value: mixture.balance) { sliderValue in
             mixture.balance = sliderValue
         })
     }
@@ -61,6 +58,6 @@ class PlaygroundView: AKPlaygroundView {
 
 import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
-PlaygroundPage.current.liveView = PlaygroundView()
+PlaygroundPage.current.liveView = LiveView()
 
 {% endhighlight %}
