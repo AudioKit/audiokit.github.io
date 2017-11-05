@@ -187,7 +187,7 @@ Then create a new file, of type "Header File", name it "SenderSynth-BridgingHead
 #endif /* SenderSynth_BridgingHeader_h */
 {% endhighlight %}
 
-Next grab the [Audiobus.swift](https://github.com/audiokit/AudioKit/blob/master/AudioKit/iOS/Audiobus/Audiobus.swift) file from the AudioKit repository and place it in your project, creating a copy.
+Next grab the [Audiobus.swift](https://github.com/AudioKit/AudioKit/blob/master/Examples/iOS/Audiobus/Audiobus.swift) file from the AudioKit repository and place it in your project, creating a copy.
 
 Back in your ViewController.swift file:
 
