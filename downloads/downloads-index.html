@@ -94,13 +94,18 @@ The installation instructions below cover both installing the compiled framework
 
 <h3>Installing using Package Mangers: Carthage, CocoaPods</h3>
 
+<!--
 <p>You can easily add the framework to your project by using Carthage. Just use the following in your Cartfile:</p>
 
 {% highlight ruby %}
 github "audiokit/AudioKit"
 {% endhighlight %}
+/-->
 
-<p>You can also use CocoaPods to install AudioKit. In your project, update your Podfile:</p>
+<P>As of AudioKit 4.1, AudioKit is a static library, which is giving us trouble with Carthage installation. We'll try
+  to remedy the situation, but until then, consider using CocoaPods instead.</P>
+
+<p>You can use CocoaPods to install AudioKit. In your project, update your Podfile:</p>
 
 {% highlight ruby %}
 pod 'AudioKit', '~> 4.1'
