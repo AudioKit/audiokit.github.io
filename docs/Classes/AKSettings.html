@@ -14,7 +14,7 @@
     <a title="AKSettings Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">AudioKit Docs</a> (100% documented)</p>
+        <p><a href="../index.html">AudioKit Docs</a> (99% documented)</p>
         <p class="header-right"><a href="https://github.com/audiokit/AudioKit"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -56,7 +56,7 @@
                 <a href="../Protocols/AKInput.html">AKInput</a>
               </li>
               <li class="nav-group-task">
-                <a href="../AudioKit Core.html#/s:8AudioKit5AKLogySS8fullname_SS4fileSi4lineSayypGdtF">AKLog(fullname:file:line:_:)</a>
+                <a href="../AudioKit Core.html#/s:8AudioKit5AKLogySS8fullname_SS4fileSi4lineypdtF">AKLog(fullname:file:line:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKMicrophoneTracker.html">AKMicrophoneTracker</a>
@@ -75,6 +75,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKSettings/BufferLength.html">– BufferLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSettings/RampType.html">– RampType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKSettings/SessionCategory.html">– SessionCategory</a>
@@ -160,9 +163,6 @@
                 <a href="../Protocols/AKMIDITransformer.html">AKMIDITransformer</a>
               </li>
               <li class="nav-group-task">
-                <a href="../MIDI.html#/s:8AudioKit15AKRawMIDIPacketa">AKRawMIDIPacket</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Extensions/MIDIPacket.html">MIDIPacket</a>
               </li>
               <li class="nav-group-task">
@@ -181,6 +181,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/AKSequencer.html">AKSequencer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSequencer/TimeSignatureBottomValue.html">– TimeSignatureBottomValue</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/AKDuration.html">AKDuration</a>
@@ -710,6 +713,9 @@
             <a href="../Playback Nodes.html">Playback Nodes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Classes/AKAppleSampler.html">AKAppleSampler</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/AKClip.html">AKClip</a>
               </li>
               <li class="nav-group-task">
@@ -740,16 +746,10 @@
                 <a href="../Classes/AKPlayer/BufferingType.html">– BufferingType</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/AKPlayer/FadeType.html">– FadeType</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/AKPlayer/Loop.html">– Loop</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKPlayer/Fade.html">– Fade</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Playback Nodes.html#/s:8AudioKit17AKRecordingResulta">AKRecordingResult</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKSampler.html">AKSampler</a>
@@ -861,10 +861,16 @@
                 <a href="../Math.html#/s:8AudioKit1poiSo11AVAudioTimeCAD_SitF">+(_:_:)</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit1poiAA11AKOperationCAA11AKParameter_p_AaE_ptF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Math.html#/s:8AudioKit1poiSdAA7Numeric_p_AaC_ptF">+(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Math.html#/s:8AudioKit1poiAA11AKOperationCAA11AKParameter_p_AaE_ptF">+(_:_:)</a>
+                <a href="../Math.html#/s:8AudioKit1soiSo11AVAudioTimeCAD_SdtF">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit1soiSo11AVAudioTimeCAD_SitF">-(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Math.html#/s:8AudioKit1soiAA11AKOperationCAA11AKParameter_p_AaE_ptF">-(_:_:)</a>
@@ -882,13 +888,13 @@
                 <a href="../Math.html#/s:8AudioKit1sopAA17AKStereoOperationCADF">-(_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Math.html#/s:8AudioKit1doiSdAA7Numeric_p_AaC_ptF">/(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Math.html#/s:8AudioKit1doiAA11AKOperationCAA11AKParameter_p_AaE_ptF">/(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Math.html#/s:8AudioKit1doiAA17AKStereoOperationCAD_AA11AKParameter_ptF">/(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit1doiSdAA7Numeric_p_AaC_ptF">/(_:_:)</a>
               </li>
             </ul>
           </li>
@@ -930,6 +936,9 @@
                 <a href="../Extensions/AVAudioPCMBuffer.html">AVAudioPCMBuffer</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Extensions/AVAudioPCMBuffer/Peak.html">– Peak</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Extensions/AVAudioTime.html">AVAudioTime</a>
               </li>
               <li class="nav-group-task">
@@ -968,6 +977,9 @@
                 <a href="../Classes/AKConverter/Options.html">– Options</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Other Classes.html#/c:@M@AudioKit@objc(cs)AKDualButton">AKDualButton</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKInputConnection.html">AKInputConnection</a>
               </li>
               <li class="nav-group-task">
@@ -980,13 +992,25 @@
                 <a href="../Classes/AKPannerAudioUnit.html">AKPannerAudioUnit</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/AKSamplerAudioUnit.html">AKSamplerAudioUnit</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKScheduledAction.html">AKScheduledAction</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKStereoFieldLimiterAudioUnit.html">AKStereoFieldLimiterAudioUnit</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/AKTuningTableBase.html">AKTuningTableBase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTuningTableDelta12ET.html">AKTuningTableDelta12ET</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKTuningTableETNN.html">AKTuningTableETNN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKWaveTable.html">AKWaveTable</a>
               </li>
             </ul>
           </li>
@@ -994,15 +1018,18 @@
             <a href="../Other Global Variables.html">Other Global Variables</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Other Global Variables.html#/s:8AudioKit12callbackUgenAA08AKCustomD0Cv">callbackUgen</a>
+                <a href="../Other Global Variables.html#/s:8AudioKit12callbackUgenAA08AKCustomD0Cvp">callbackUgen</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Other Enums.html">Other Enums</a>
+            <a href="../Other Enums.html">Other Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Enums/ClipMergeError.html">ClipMergeError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ClipRecordingResult.html">ClipRecordingResult</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/SampleTriggerMode.html">SampleTriggerMode</a>
@@ -1012,6 +1039,9 @@
           <li class="nav-group-name">
             <a href="../Other Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/AUParameterTree.html">AUParameterTree</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Extensions/ClosedRange.html">ClosedRange</a>
               </li>
@@ -1051,6 +1081,24 @@
                 <a href="../Other Functions.html#/s:8AudioKit6randomSds11ClosedRangeVySdG2in_tF">random(in:)</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Other Functions.html#/s:8AudioKit3tneoiSbSd_SdtF">~!=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Functions.html#/s:8AudioKit2tloiSbSd_SdtF">~&lt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Functions.html#/s:8AudioKit3tleoiSbSd_SdtF">~&lt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Functions.html#/s:8AudioKit3teeoiSbSd_SdtF">~==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Functions.html#/s:8AudioKit2tgoiSbSd_SdtF">~&gt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Functions.html#/s:8AudioKit3tgeoiSbSd_SdtF">~&gt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Other Functions.html#/s:8AudioKit008deiFBEEeopS2bF">❗️(_:)</a>
               </li>
             </ul>
@@ -1065,7 +1113,7 @@
                 <a href="../Protocols/AUComponent.html">AUComponent</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Other Protocols.html#/s:8AudioKit7AliasedP">Aliased</a>
+                <a href="../Protocols/Aliased.html">Aliased</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/Occupiable.html">Occupiable</a>
@@ -1073,10 +1121,16 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Other Structs.html">Other Structs</a>
+            <a href="../Other Structs.html">Other Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Structs/AKMIDINoteData.html">AKMIDINoteData</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/AudioUnitPropertyListener.html">AudioUnitPropertyListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ClipRecording.html">ClipRecording</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/EndpointInfo.html">EndpointInfo</a>
@@ -1084,10 +1138,43 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Other Typealiases.html">Other Typealiases</a>
+            <a href="../Other Typealiases.html">Other Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Other Typealiases.html#/s:8AudioKit11AKCCallbacka">AKCCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit10AKCallbacka">AKCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit19AKThresholdCallbacka">AKThresholdCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit3BPMa">BPM</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit23ClipRecordingCompletiona">ClipRecordingCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/DeviceID">DeviceID</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit8DeviceIDa">DeviceID</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit8MIDIBytea">MIDIByte</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit11MIDIChannela">MIDIChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit14MIDINoteNumbera">MIDINoteNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit12MIDIVelocitya">MIDIVelocity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit8MIDIWorda">MIDIWord</a>
               </li>
             </ul>
           </li>
@@ -1099,7 +1186,8 @@
             <h1>AKSettings</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKSettings</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">class</span> <span class="kt">AKSettings</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                 </div>
               </div>
@@ -1132,7 +1220,37 @@ to Longest: 2 power 12 samples (4096 samples = 92.9 ms @ 44100 Hz)</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">enum</span> <span class="kt">BufferLength</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">enum</span> <span class="kt">BufferLength</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit10AKSettingsC8RampTypeO"></a>
+                    <a name="//apple_ref/swift/Enum/RampType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit10AKSettingsC8RampTypeO">RampType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Constants for ramps used in AKParameterRamp.hpp, AKBooster, and others</p>
+
+                        <a href="../Classes/AKSettings/RampType.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">enum</span> <span class="kt">RampType</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
@@ -1159,7 +1277,8 @@ to Longest: 2 power 12 samples (4096 samples = 92.9 ms @ 44100 Hz)</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">sampleRate</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">44_100</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">sampleRate</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
 
                         </div>
                       </div>
@@ -1169,9 +1288,9 @@ to Longest: 2 power 12 samples (4096 samples = 92.9 ms @ 44100 Hz)</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@AudioKit@objc(cs)AKSettings(cpy)numberOfChannels"></a>
-                    <a name="//apple_ref/swift/Variable/numberOfChannels" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@AudioKit@objc(cs)AKSettings(cpy)numberOfChannels">numberOfChannels</a>
+                    <a name="/c:@M@AudioKit@objc(cs)AKSettings(cpy)channelCount"></a>
+                    <a name="//apple_ref/swift/Variable/channelCount" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AudioKit@objc(cs)AKSettings(cpy)channelCount">channelCount</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1186,7 +1305,8 @@ to Longest: 2 power 12 samples (4096 samples = 92.9 ms @ 44100 Hz)</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">numberOfChannels</span><span class="p">:</span> <span class="kt">UInt32</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">channelCount</span><span class="p">:</span> <span class="kt">UInt32</span></code></pre>
 
                         </div>
                       </div>
@@ -1213,7 +1333,8 @@ to Longest: 2 power 12 samples (4096 samples = 92.9 ms @ 44100 Hz)</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">audioInputEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">audioInputEnabled</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -1240,7 +1361,8 @@ to Longest: 2 power 12 samples (4096 samples = 92.9 ms @ 44100 Hz)</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">playbackWhileMuted</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">playbackWhileMuted</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -1267,7 +1389,8 @@ to Longest: 2 power 12 samples (4096 samples = 92.9 ms @ 44100 Hz)</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">audioFormat</span><span class="p">:</span> <span class="kt">AVAudioFormat</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">audioFormat</span><span class="p">:</span> <span class="kt">AVAudioFormat</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1294,7 +1417,8 @@ to Longest: 2 power 12 samples (4096 samples = 92.9 ms @ 44100 Hz)</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">defaultToSpeaker</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">defaultToSpeaker</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -1321,7 +1445,8 @@ to Longest: 2 power 12 samples (4096 samples = 92.9 ms @ 44100 Hz)</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">useBluetooth</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">useBluetooth</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -1348,7 +1473,8 @@ to Longest: 2 power 12 samples (4096 samples = 92.9 ms @ 44100 Hz)</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">bluetoothOptions</span><span class="p">:</span> <span class="kt">AVAudioSessionCategoryOptions</span> <span class="o">=</span> <span class="p">[]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">bluetoothOptions</span><span class="p">:</span> <span class="kt">AVAudioSessionCategoryOptions</span></code></pre>
 
                         </div>
                       </div>
@@ -1375,7 +1501,8 @@ to Longest: 2 power 12 samples (4096 samples = 92.9 ms @ 44100 Hz)</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">allowAirPlay</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">allowAirPlay</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -1385,9 +1512,9 @@ to Longest: 2 power 12 samples (4096 samples = 92.9 ms @ 44100 Hz)</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@AudioKit@objc(cs)AKSettings(cpy)rampTime"></a>
-                    <a name="//apple_ref/swift/Variable/rampTime" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@AudioKit@objc(cs)AKSettings(cpy)rampTime">rampTime</a>
+                    <a name="/c:@M@AudioKit@objc(cs)AKSettings(cpy)rampDuration"></a>
+                    <a name="//apple_ref/swift/Variable/rampDuration" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AudioKit@objc(cs)AKSettings(cpy)rampDuration">rampDuration</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1395,14 +1522,15 @@ to Longest: 2 power 12 samples (4096 samples = 92.9 ms @ 44100 Hz)</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Global default rampTime value</p>
+                        <p>Global default rampDuration value</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">rampTime</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.000</span><span class="n">_2</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">rampDuration</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
 
                         </div>
                       </div>
@@ -1429,7 +1557,8 @@ to Longest: 2 power 12 samples (4096 samples = 92.9 ms @ 44100 Hz)</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">notificationsEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">notificationsEnabled</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -1457,7 +1586,8 @@ default is .VeryLong for a buffer set to 2 power 10 = 1024 samples (232 ms)</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">bufferLength</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKSettings/BufferLength.html">BufferLength</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">veryLong</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">bufferLength</span><span class="p">:</span> <span class="kt">AKSettings</span><span class="o">.</span><span class="kt"><a href="../Classes/AKSettings/BufferLength.html">BufferLength</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1480,14 +1610,6 @@ default is .VeryLong for a buffer set to 2 power 10 = 1024 samples (232 ms)</p>
                         <p>The hardware ioBufferDuration. Setting this will request the new value, getting
 will query the hardware.</p>
 
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKSettings</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -1513,7 +1635,8 @@ will query the hardware.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">ioBufferDuration</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">ioBufferDuration</span><span class="p">:</span> <span class="kt">Double</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1543,7 +1666,8 @@ So setting this value may have no effect (depending on the hardware device ?)</p
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">recordingBufferLength</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKSettings/BufferLength.html">BufferLength</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">veryLong</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">recordingBufferLength</span><span class="p">:</span> <span class="kt">AKSettings</span><span class="o">.</span><span class="kt"><a href="../Classes/AKSettings/BufferLength.html">BufferLength</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1573,7 +1697,8 @@ even if the last audio frames haven&rsquo;t been recorded to file yet.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">fixTruncatedRecordings</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">fixTruncatedRecordings</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -1600,7 +1725,8 @@ even if the last audio frames haven&rsquo;t been recorded to file yet.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">disableAVAudioSessionCategoryManagement</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">disableAVAudioSessionCategoryManagement</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -1630,7 +1756,8 @@ to these notifications and restart AudioKit after rebuiling their audio chain.</
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">enableRouteChangeHandling</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">enableRouteChangeHandling</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -1660,7 +1787,8 @@ to these notifications and restart AudioKit after rebuiling their audio chain.</
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">enableCategoryChangeHandling</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">enableCategoryChangeHandling</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -1687,7 +1815,8 @@ to these notifications and restart AudioKit after rebuiling their audio chain.</
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">enableLogging</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">enableLogging</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -1718,7 +1847,8 @@ AudioEngine to attempt to start while the app is not active and background audio
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">appSupportsBackgroundAudio</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="n">infoDictionary</span><span class="p">?[</span><span class="s">"UIBackgroundModes"</span><span class="p">]</span> <span class="k">as?</span> <span class="p">[</span><span class="kt">String</span><span class="p">])?</span><span class="o">.</span><span class="nf">contains</span><span class="p">(</span><span class="s">"audio"</span><span class="p">)</span> <span class="p">??</span> <span class="kc">false</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">appSupportsBackgroundAudio</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -1749,7 +1879,8 @@ AudioEngine to attempt to start while the app is not active and background audio
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">session</span> <span class="o">=</span> <span class="kt">AVAudioSession</span><span class="o">.</span><span class="nf">sharedInstance</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">AVAudioSession</span></code></pre>
 
                         </div>
                       </div>
@@ -1776,7 +1907,8 @@ AudioEngine to attempt to start while the app is not active and background audio
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">setSession</span><span class="p">(</span><span class="nv">category</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKSettings/SessionCategory.html">SessionCategory</a></span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">setSession</span><span class="p">(</span><span class="nv">category</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKSettings/SessionCategory.html">SessionCategory</a></span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -1803,8 +1935,9 @@ AudioEngine to attempt to start while the app is not active and background audio
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">setSession</span><span class="p">(</span><span class="nv">category</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKSettings/SessionCategory.html">SessionCategory</a></span><span class="p">,</span>
-                                <span class="n">with</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">AVAudioSessionCategoryOptions</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="n">mixWithOthers</span><span class="p">])</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">setSession</span><span class="p">(</span><span class="nv">category</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKSettings/SessionCategory.html">SessionCategory</a></span><span class="p">,</span>
+                            <span class="n">with</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">AVAudioSessionCategoryOptions</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="n">mixWithOthers</span><span class="p">])</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -1830,7 +1963,8 @@ AudioEngine to attempt to start while the app is not active and background audio
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKSettings</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">computedSessionCategory</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/AKSettings/SessionCategory.html">SessionCategory</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1856,7 +1990,8 @@ AudioEngine to attempt to start while the app is not active and background audio
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">AKSettings</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">computedSessionOptions</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">AVAudioSessionCategoryOptions</span></code></pre>
 
                         </div>
                       </div>
@@ -1884,7 +2019,8 @@ Returns true if headPhones are connected, otherwise return false</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">static</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">headPhonesPlugged</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">headPhonesPlugged</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1912,7 +2048,8 @@ Returns true if headPhones are connected, otherwise return false</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">enum</span> <span class="kt">SessionCategory</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">enum</span> <span class="kt">SessionCategory</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span></code></pre>
 
                         </div>
                       </div>
@@ -1924,8 +2061,8 @@ Returns true if headPhones are connected, otherwise return false</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2018-03-09)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2018 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2018-05-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

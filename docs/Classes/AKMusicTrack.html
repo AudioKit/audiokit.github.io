@@ -14,7 +14,7 @@
     <a title="AKMusicTrack Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">AudioKit Docs</a> (100% documented)</p>
+        <p><a href="../index.html">AudioKit Docs</a> (99% documented)</p>
         <p class="header-right"><a href="https://github.com/audiokit/AudioKit"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -56,7 +56,7 @@
                 <a href="../Protocols/AKInput.html">AKInput</a>
               </li>
               <li class="nav-group-task">
-                <a href="../AudioKit Core.html#/s:8AudioKit5AKLogySS8fullname_SS4fileSi4lineSayypGdtF">AKLog(fullname:file:line:_:)</a>
+                <a href="../AudioKit Core.html#/s:8AudioKit5AKLogySS8fullname_SS4fileSi4lineypdtF">AKLog(fullname:file:line:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKMicrophoneTracker.html">AKMicrophoneTracker</a>
@@ -75,6 +75,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKSettings/BufferLength.html">– BufferLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSettings/RampType.html">– RampType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKSettings/SessionCategory.html">– SessionCategory</a>
@@ -160,9 +163,6 @@
                 <a href="../Protocols/AKMIDITransformer.html">AKMIDITransformer</a>
               </li>
               <li class="nav-group-task">
-                <a href="../MIDI.html#/s:8AudioKit15AKRawMIDIPacketa">AKRawMIDIPacket</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Extensions/MIDIPacket.html">MIDIPacket</a>
               </li>
               <li class="nav-group-task">
@@ -181,6 +181,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/AKSequencer.html">AKSequencer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSequencer/TimeSignatureBottomValue.html">– TimeSignatureBottomValue</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/AKDuration.html">AKDuration</a>
@@ -710,6 +713,9 @@
             <a href="../Playback Nodes.html">Playback Nodes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Classes/AKAppleSampler.html">AKAppleSampler</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/AKClip.html">AKClip</a>
               </li>
               <li class="nav-group-task">
@@ -740,16 +746,10 @@
                 <a href="../Classes/AKPlayer/BufferingType.html">– BufferingType</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/AKPlayer/FadeType.html">– FadeType</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/AKPlayer/Loop.html">– Loop</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKPlayer/Fade.html">– Fade</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Playback Nodes.html#/s:8AudioKit17AKRecordingResulta">AKRecordingResult</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKSampler.html">AKSampler</a>
@@ -861,10 +861,16 @@
                 <a href="../Math.html#/s:8AudioKit1poiSo11AVAudioTimeCAD_SitF">+(_:_:)</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit1poiAA11AKOperationCAA11AKParameter_p_AaE_ptF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Math.html#/s:8AudioKit1poiSdAA7Numeric_p_AaC_ptF">+(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Math.html#/s:8AudioKit1poiAA11AKOperationCAA11AKParameter_p_AaE_ptF">+(_:_:)</a>
+                <a href="../Math.html#/s:8AudioKit1soiSo11AVAudioTimeCAD_SdtF">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit1soiSo11AVAudioTimeCAD_SitF">-(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Math.html#/s:8AudioKit1soiAA11AKOperationCAA11AKParameter_p_AaE_ptF">-(_:_:)</a>
@@ -882,13 +888,13 @@
                 <a href="../Math.html#/s:8AudioKit1sopAA17AKStereoOperationCADF">-(_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Math.html#/s:8AudioKit1doiSdAA7Numeric_p_AaC_ptF">/(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Math.html#/s:8AudioKit1doiAA11AKOperationCAA11AKParameter_p_AaE_ptF">/(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Math.html#/s:8AudioKit1doiAA17AKStereoOperationCAD_AA11AKParameter_ptF">/(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit1doiSdAA7Numeric_p_AaC_ptF">/(_:_:)</a>
               </li>
             </ul>
           </li>
@@ -930,6 +936,9 @@
                 <a href="../Extensions/AVAudioPCMBuffer.html">AVAudioPCMBuffer</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Extensions/AVAudioPCMBuffer/Peak.html">– Peak</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Extensions/AVAudioTime.html">AVAudioTime</a>
               </li>
               <li class="nav-group-task">
@@ -968,6 +977,9 @@
                 <a href="../Classes/AKConverter/Options.html">– Options</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Other Classes.html#/c:@M@AudioKit@objc(cs)AKDualButton">AKDualButton</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKInputConnection.html">AKInputConnection</a>
               </li>
               <li class="nav-group-task">
@@ -980,13 +992,25 @@
                 <a href="../Classes/AKPannerAudioUnit.html">AKPannerAudioUnit</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/AKSamplerAudioUnit.html">AKSamplerAudioUnit</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKScheduledAction.html">AKScheduledAction</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKStereoFieldLimiterAudioUnit.html">AKStereoFieldLimiterAudioUnit</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/AKTuningTableBase.html">AKTuningTableBase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTuningTableDelta12ET.html">AKTuningTableDelta12ET</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKTuningTableETNN.html">AKTuningTableETNN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKWaveTable.html">AKWaveTable</a>
               </li>
             </ul>
           </li>
@@ -994,15 +1018,18 @@
             <a href="../Other Global Variables.html">Other Global Variables</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Other Global Variables.html#/s:8AudioKit12callbackUgenAA08AKCustomD0Cv">callbackUgen</a>
+                <a href="../Other Global Variables.html#/s:8AudioKit12callbackUgenAA08AKCustomD0Cvp">callbackUgen</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Other Enums.html">Other Enums</a>
+            <a href="../Other Enums.html">Other Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Enums/ClipMergeError.html">ClipMergeError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ClipRecordingResult.html">ClipRecordingResult</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/SampleTriggerMode.html">SampleTriggerMode</a>
@@ -1012,6 +1039,9 @@
           <li class="nav-group-name">
             <a href="../Other Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/AUParameterTree.html">AUParameterTree</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Extensions/ClosedRange.html">ClosedRange</a>
               </li>
@@ -1051,6 +1081,24 @@
                 <a href="../Other Functions.html#/s:8AudioKit6randomSds11ClosedRangeVySdG2in_tF">random(in:)</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Other Functions.html#/s:8AudioKit3tneoiSbSd_SdtF">~!=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Functions.html#/s:8AudioKit2tloiSbSd_SdtF">~&lt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Functions.html#/s:8AudioKit3tleoiSbSd_SdtF">~&lt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Functions.html#/s:8AudioKit3teeoiSbSd_SdtF">~==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Functions.html#/s:8AudioKit2tgoiSbSd_SdtF">~&gt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Functions.html#/s:8AudioKit3tgeoiSbSd_SdtF">~&gt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Other Functions.html#/s:8AudioKit008deiFBEEeopS2bF">❗️(_:)</a>
               </li>
             </ul>
@@ -1065,7 +1113,7 @@
                 <a href="../Protocols/AUComponent.html">AUComponent</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Other Protocols.html#/s:8AudioKit7AliasedP">Aliased</a>
+                <a href="../Protocols/Aliased.html">Aliased</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/Occupiable.html">Occupiable</a>
@@ -1073,10 +1121,16 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Other Structs.html">Other Structs</a>
+            <a href="../Other Structs.html">Other Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Structs/AKMIDINoteData.html">AKMIDINoteData</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/AudioUnitPropertyListener.html">AudioUnitPropertyListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ClipRecording.html">ClipRecording</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/EndpointInfo.html">EndpointInfo</a>
@@ -1084,10 +1138,43 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Other Typealiases.html">Other Typealiases</a>
+            <a href="../Other Typealiases.html">Other Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Other Typealiases.html#/s:8AudioKit11AKCCallbacka">AKCCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit10AKCallbacka">AKCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit19AKThresholdCallbacka">AKThresholdCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit3BPMa">BPM</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit23ClipRecordingCompletiona">ClipRecordingCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/DeviceID">DeviceID</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit8DeviceIDa">DeviceID</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit8MIDIBytea">MIDIByte</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit11MIDIChannela">MIDIChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit14MIDINoteNumbera">MIDINoteNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit12MIDIVelocitya">MIDIVelocity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit8MIDIWorda">MIDIWord</a>
               </li>
             </ul>
           </li>
@@ -1099,7 +1186,7 @@
             <h1>AKMusicTrack</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKMusicTrack</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">AKMusicTrack</span></code></pre>
 
                 </div>
               </div>
@@ -1119,9 +1206,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8AudioKit12AKMusicTrackC013internalMusicD0s13OpaquePointerVSgv"></a>
+                    <a name="/s:8AudioKit12AKMusicTrackC013internalMusicD0s13OpaquePointerVSgvp"></a>
                     <a name="//apple_ref/swift/Property/internalMusicTrack" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8AudioKit12AKMusicTrackC013internalMusicD0s13OpaquePointerVSgv">internalMusicTrack</a>
+                    <a class="token" href="#/s:8AudioKit12AKMusicTrackC013internalMusicD0s13OpaquePointerVSgvp">internalMusicTrack</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1136,7 +1223,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">internalMusicTrack</span><span class="p">:</span> <span class="kt">MusicTrack</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">internalMusicTrack</span><span class="p">:</span> <span class="kt">MusicTrack</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1146,9 +1233,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8AudioKit12AKMusicTrackC09initMusicD0s13OpaquePointerVSgv"></a>
+                    <a name="/s:8AudioKit12AKMusicTrackC09initMusicD0s13OpaquePointerVSgvp"></a>
                     <a name="//apple_ref/swift/Property/initMusicTrack" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8AudioKit12AKMusicTrackC09initMusicD0s13OpaquePointerVSgv">initMusicTrack</a>
+                    <a class="token" href="#/s:8AudioKit12AKMusicTrackC09initMusicD0s13OpaquePointerVSgvp">initMusicTrack</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1163,7 +1250,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">initMusicTrack</span><span class="p">:</span> <span class="kt">MusicTrack</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">initMusicTrack</span><span class="p">:</span> <span class="kt">MusicTrack</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1173,9 +1260,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8AudioKit12AKMusicTrackC9sequencerAA11AKSequencerCv"></a>
+                    <a name="/s:8AudioKit12AKMusicTrackC9sequencerAA11AKSequencerCvp"></a>
                     <a name="//apple_ref/swift/Property/sequencer" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8AudioKit12AKMusicTrackC9sequencerAA11AKSequencerCv">sequencer</a>
+                    <a class="token" href="#/s:8AudioKit12AKMusicTrackC9sequencerAA11AKSequencerCvp">sequencer</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1190,7 +1277,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">sequencer</span> <span class="o">=</span> <span class="kt"><a href="../Classes/AKSequencer.html">AKSequencer</a></span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">sequencer</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKSequencer.html">AKSequencer</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1200,9 +1287,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8AudioKit12AKMusicTrackC12trackPointerSpys06OpaqueF0VGv"></a>
+                    <a name="/s:8AudioKit12AKMusicTrackC12trackPointerSpys06OpaqueF0VGvp"></a>
                     <a name="//apple_ref/swift/Property/trackPointer" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8AudioKit12AKMusicTrackC12trackPointerSpys06OpaqueF0VGv">trackPointer</a>
+                    <a class="token" href="#/s:8AudioKit12AKMusicTrackC12trackPointerSpys06OpaqueF0VGvp">trackPointer</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1217,7 +1304,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">trackPointer</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">MusicTrack</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">trackPointer</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">MusicTrack</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -1227,9 +1314,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8AudioKit12AKMusicTrackC04initD7PointerSpys06OpaqueF0VGv"></a>
+                    <a name="/s:8AudioKit12AKMusicTrackC04initD7PointerSpys06OpaqueF0VGvp"></a>
                     <a name="//apple_ref/swift/Property/initTrackPointer" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8AudioKit12AKMusicTrackC04initD7PointerSpys06OpaqueF0VGv">initTrackPointer</a>
+                    <a class="token" href="#/s:8AudioKit12AKMusicTrackC04initD7PointerSpys06OpaqueF0VGvp">initTrackPointer</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1243,7 +1330,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKMusicTrack</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">initTrackPointer</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">MusicTrack</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -1253,9 +1340,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8AudioKit12AKMusicTrackC10isNotEmptySbv"></a>
+                    <a name="/s:8AudioKit12AKMusicTrackC10isNotEmptySbvp"></a>
                     <a name="//apple_ref/swift/Property/isNotEmpty" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8AudioKit12AKMusicTrackC10isNotEmptySbv">isNotEmpty</a>
+                    <a class="token" href="#/s:8AudioKit12AKMusicTrackC10isNotEmptySbvp">isNotEmpty</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1270,7 +1357,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">isNotEmpty</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">isNotEmpty</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1280,9 +1367,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8AudioKit12AKMusicTrackC6lengthSdv"></a>
+                    <a name="/s:8AudioKit12AKMusicTrackC6lengthSdvp"></a>
                     <a name="//apple_ref/swift/Property/length" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8AudioKit12AKMusicTrackC6lengthSdv">length</a>
+                    <a class="token" href="#/s:8AudioKit12AKMusicTrackC6lengthSdvp">length</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1297,7 +1384,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">length</span><span class="p">:</span> <span class="kt">MusicTimeStamp</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">length</span><span class="p">:</span> <span class="kt">MusicTimeStamp</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1307,9 +1394,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8AudioKit12AKMusicTrackC10initLengthSdv"></a>
+                    <a name="/s:8AudioKit12AKMusicTrackC10initLengthSdvp"></a>
                     <a name="//apple_ref/swift/Property/initLength" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8AudioKit12AKMusicTrackC10initLengthSdv">initLength</a>
+                    <a class="token" href="#/s:8AudioKit12AKMusicTrackC10initLengthSdvp">initLength</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1324,7 +1411,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">initLength</span><span class="p">:</span> <span class="kt">MusicTimeStamp</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">initLength</span><span class="p">:</span> <span class="kt">MusicTimeStamp</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1361,7 +1448,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKMusicTrack</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Unnamed"</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1388,7 +1476,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">musicTrack</span><span class="p">:</span> <span class="kt">MusicTrack</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Unnamed"</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">musicTrack</span><span class="p">:</span> <span class="kt">MusicTrack</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Unnamed"</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1446,7 +1535,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">musicTrack</span><span class="p">:</span> <span class="kt">MusicTrack</span><span class="p">,</span> <span class="nv">sequencer</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKSequencer.html">AKSequencer</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">musicTrack</span><span class="p">:</span> <span class="kt">MusicTrack</span><span class="p">,</span> <span class="nv">sequencer</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKSequencer.html">AKSequencer</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1492,7 +1581,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">setNodeOutput</span><span class="p">(</span><span class="n">_</span> <span class="nv">node</span><span class="p">:</span> <span class="kt">AUNode</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">setNodeOutput</span><span class="p">(</span><span class="n">_</span> <span class="nv">node</span><span class="p">:</span> <span class="kt">AUNode</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1533,16 +1622,12 @@
                       <div class="abstract">
                         <p>Set loop info</p>
 
-<ul>
-<li>paramter numberOfLoops: how many times to loop. 0 is infinte</li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">setLoopInfo</span><span class="p">(</span><span class="n">_</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span><span class="p">,</span> <span class="nv">numberOfLoops</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">setLoopInfo</span><span class="p">(</span><span class="n">_</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span><span class="p">,</span> <span class="nv">numberOfLoops</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1559,6 +1644,18 @@
                               <td>
                                 <div>
                                   <p>How long the loop will last, from the end of the track backwards</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>numberOfLoops</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>how many times to loop. 0 is infinte</p>
                                 </div>
                               </td>
                             </tr>
@@ -1590,7 +1687,7 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">setLength</span><span class="p">(</span><span class="n">_</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">setLength</span><span class="p">(</span><span class="n">_</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1636,7 +1733,7 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">setLengthSoft</span><span class="p">(</span><span class="n">_</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">setLengthSoft</span><span class="p">(</span><span class="n">_</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1682,7 +1779,7 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">clear</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">clear</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -1709,7 +1806,7 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">clearNote</span><span class="p">(</span><span class="n">_</span> <span class="nv">note</span><span class="p">:</span> <span class="kt">MIDINoteNumber</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">clearNote</span><span class="p">(</span><span class="n">_</span> <span class="nv">note</span><span class="p">:</span> <span class="kt"><a href="../Other Typealiases.html#/s:8AudioKit14MIDINoteNumbera">MIDINoteNumber</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1719,9 +1816,9 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8AudioKit12AKMusicTrackC7isEmptySbv"></a>
+                    <a name="/s:8AudioKit12AKMusicTrackC7isEmptySbvp"></a>
                     <a name="//apple_ref/swift/Property/isEmpty" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8AudioKit12AKMusicTrackC7isEmptySbv">isEmpty</a>
+                    <a class="token" href="#/s:8AudioKit12AKMusicTrackC7isEmptySbvp">isEmpty</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1736,7 +1833,7 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">isEmpty</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">isEmpty</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1763,7 +1860,7 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">clearRange</span><span class="p">(</span><span class="nv">start</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span><span class="p">,</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">clearRange</span><span class="p">(</span><span class="nv">start</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span><span class="p">,</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1801,6 +1898,17 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Add%20Events"></a>
+                <a name="//apple_ref/swift/Section/Add Events" class="dashAnchor"></a>
+                <a href="#/Add%20Events">
+                  <h3 class="section-name">Add Events</h3>
+                </a>
+              </div>
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -1821,11 +1929,11 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="nv">noteNumber</span><span class="p">:</span> <span class="kt">MIDINoteNumber</span><span class="p">,</span>
-                  <span class="nv">velocity</span><span class="p">:</span> <span class="kt">MIDIVelocity</span><span class="p">,</span>
-                  <span class="nv">position</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span><span class="p">,</span>
-                  <span class="nv">duration</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span><span class="p">,</span>
-                  <span class="nv">channel</span><span class="p">:</span> <span class="kt">MIDIChannel</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="nv">noteNumber</span><span class="p">:</span> <span class="kt"><a href="../Other Typealiases.html#/s:8AudioKit14MIDINoteNumbera">MIDINoteNumber</a></span><span class="p">,</span>
+              <span class="nv">velocity</span><span class="p">:</span> <span class="kt"><a href="../Other Typealiases.html#/s:8AudioKit12MIDIVelocitya">MIDIVelocity</a></span><span class="p">,</span>
+              <span class="nv">position</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span><span class="p">,</span>
+              <span class="nv">duration</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span><span class="p">,</span>
+              <span class="nv">channel</span><span class="p">:</span> <span class="kt"><a href="../Other Typealiases.html#/s:8AudioKit11MIDIChannela">MIDIChannel</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1902,6 +2010,99 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:8AudioKit12AKMusicTrackC3addyAA14AKMIDINoteDataV08midiNoteG0_tF"></a>
+                    <a name="//apple_ref/swift/Method/add(midiNoteData:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit12AKMusicTrackC3addyAA14AKMIDINoteDataV08midiNoteG0_tF">add(midiNoteData:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add Note to sequence with AKMIDINoteData</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="nv">midiNoteData</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKMIDINoteData.html">AKMIDINoteData</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>midiNoteData</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>AKMIDINoteData containing relevant note details</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit12AKMusicTrackC19replaceMIDINoteDataySayAA010AKMIDINoteG0VG4with_tF"></a>
+                    <a name="//apple_ref/swift/Method/replaceMIDINoteData(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit12AKMusicTrackC19replaceMIDINoteDataySayAA010AKMIDINoteG0VG4with_tF">replaceMIDINoteData(with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Erases current note events and recreates track from note data in AKMIDINoteData array
+Order of structs in array is irrelevant</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">replaceMIDINoteData</span><span class="p">(</span><span class="n">with</span> <span class="nv">trackMIDINoteData</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/AKMIDINoteData.html">AKMIDINoteData</a></span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>midiNoteData</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>AKMIDINoteData array containing relevant note details</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:8AudioKit12AKMusicTrackC13addControllerys5UInt8V_AF5valueAA10AKDurationV8positionAF7channeltF"></a>
                     <a name="//apple_ref/swift/Method/addController(_:value:position:channel:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:8AudioKit12AKMusicTrackC13addControllerys5UInt8V_AF5valueAA10AKDurationV8positionAF7channeltF">addController(_:value:position:channel:)</a>
@@ -1919,7 +2120,7 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">addController</span><span class="p">(</span><span class="n">_</span> <span class="nv">controller</span><span class="p">:</span> <span class="kt">MIDIByte</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">MIDIByte</span><span class="p">,</span> <span class="nv">position</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">MIDIChannel</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">addController</span><span class="p">(</span><span class="n">_</span> <span class="nv">controller</span><span class="p">:</span> <span class="kt"><a href="../Other Typealiases.html#/s:8AudioKit8MIDIBytea">MIDIByte</a></span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="kt"><a href="../Other Typealiases.html#/s:8AudioKit8MIDIBytea">MIDIByte</a></span><span class="p">,</span> <span class="nv">position</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt"><a href="../Other Typealiases.html#/s:8AudioKit11MIDIChannela">MIDIChannel</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2001,7 +2202,7 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">addSysex</span><span class="p">(</span><span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="p">[</span><span class="kt">MIDIByte</span><span class="p">],</span> <span class="nv">position</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">addSysex</span><span class="p">(</span><span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Other Typealiases.html#/s:8AudioKit8MIDIBytea">MIDIByte</a></span><span class="p">],</span> <span class="nv">position</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2059,7 +2260,7 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">addPitchBend</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">8_192</span><span class="p">,</span> <span class="nv">position</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">MIDIChannel</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">addPitchBend</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">8_192</span><span class="p">,</span> <span class="nv">position</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt"><a href="../Other Typealiases.html#/s:8AudioKit11MIDIChannela">MIDIChannel</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2076,18 +2277,6 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
                               <td>
                                 <div>
                                   <p>The value of pitchbend. The valid range of values is 0 to 16383 (128 ^ 2 values).</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>8192 is no pitch bend</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  
                                 </div>
                               </td>
                             </tr>
@@ -2141,7 +2330,7 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">resetPitchBend</span><span class="p">(</span><span class="nv">position</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">MIDIChannel</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">resetPitchBend</span><span class="p">(</span><span class="nv">position</span><span class="p">:</span> <span class="kt"><a href="../Structs/AKDuration.html">AKDuration</a></span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt"><a href="../Other Typealiases.html#/s:8AudioKit11MIDIChannela">MIDIChannel</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2179,6 +2368,47 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Getting%20data%20from%20MusicTrack"></a>
+                <a name="//apple_ref/swift/Section/Getting data from MusicTrack" class="dashAnchor"></a>
+                <a href="#/Getting%20data%20from%20MusicTrack">
+                  <h3 class="section-name">Getting data from MusicTrack</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit12AKMusicTrackC15getMIDINoteDataSayAA010AKMIDINoteG0VGyF"></a>
+                    <a name="//apple_ref/swift/Method/getMIDINoteData()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit12AKMusicTrackC15getMIDINoteDataSayAA010AKMIDINoteG0VGyF">getMIDINoteData()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get an array of all the MIDI Note data in the internalMusicTrack
+Modifying this array alone will not change the internalMusicTrack</p>
+
+<p>NB: The data is generated sequentially, but maintaining the order in not important</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">getMIDINoteData</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/AKMIDINoteData.html">AKMIDINoteData</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -2199,7 +2429,7 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">copyAndMergeTo</span><span class="p">(</span><span class="nv">musicTrack</span><span class="p">:</span> <span class="kt">AKMusicTrack</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">copyAndMergeTo</span><span class="p">(</span><span class="nv">musicTrack</span><span class="p">:</span> <span class="kt">AKMusicTrack</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2245,7 +2475,7 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">copyOf</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">AKMusicTrack</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">copyOf</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">AKMusicTrack</span></code></pre>
 
                         </div>
                       </div>
@@ -2271,7 +2501,7 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKMusicTrack</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">resetToInit</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -2298,7 +2528,7 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">setMIDIOutput</span><span class="p">(</span><span class="n">_</span> <span class="nv">endpoint</span><span class="p">:</span> <span class="kt">MIDIEndpointRef</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">setMIDIOutput</span><span class="p">(</span><span class="n">_</span> <span class="nv">endpoint</span><span class="p">:</span> <span class="kt">MIDIEndpointRef</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2344,7 +2574,7 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">debug</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">debug</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -2370,7 +2600,7 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKMusicTrack</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">debugInitTrack</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -2382,8 +2612,8 @@ This will truncate your sequence if you shorten it - so make a copy if you plan 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2018-03-09)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2018 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2018-05-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

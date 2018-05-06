@@ -13,7 +13,7 @@
     <a title="AudioKit  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">AudioKit Docs</a> (100% documented)</p>
+        <p><a href="index.html">AudioKit Docs</a> (99% documented)</p>
         <p class="header-right"><a href="https://github.com/audiokit/AudioKit"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -55,7 +55,7 @@
                 <a href="Protocols/AKInput.html">AKInput</a>
               </li>
               <li class="nav-group-task">
-                <a href="AudioKit Core.html#/s:8AudioKit5AKLogySS8fullname_SS4fileSi4lineSayypGdtF">AKLog(fullname:file:line:_:)</a>
+                <a href="AudioKit Core.html#/s:8AudioKit5AKLogySS8fullname_SS4fileSi4lineypdtF">AKLog(fullname:file:line:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKMicrophoneTracker.html">AKMicrophoneTracker</a>
@@ -74,6 +74,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKSettings/BufferLength.html">– BufferLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKSettings/RampType.html">– RampType</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKSettings/SessionCategory.html">– SessionCategory</a>
@@ -159,9 +162,6 @@
                 <a href="Protocols/AKMIDITransformer.html">AKMIDITransformer</a>
               </li>
               <li class="nav-group-task">
-                <a href="MIDI.html#/s:8AudioKit15AKRawMIDIPacketa">AKRawMIDIPacket</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Extensions/MIDIPacket.html">MIDIPacket</a>
               </li>
               <li class="nav-group-task">
@@ -180,6 +180,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Classes/AKSequencer.html">AKSequencer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKSequencer/TimeSignatureBottomValue.html">– TimeSignatureBottomValue</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/AKDuration.html">AKDuration</a>
@@ -709,6 +712,9 @@
             <a href="Playback Nodes.html">Playback Nodes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Classes/AKAppleSampler.html">AKAppleSampler</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Protocols/AKClip.html">AKClip</a>
               </li>
               <li class="nav-group-task">
@@ -739,16 +745,10 @@
                 <a href="Classes/AKPlayer/BufferingType.html">– BufferingType</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/AKPlayer/FadeType.html">– FadeType</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Classes/AKPlayer/Loop.html">– Loop</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKPlayer/Fade.html">– Fade</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Playback Nodes.html#/s:8AudioKit17AKRecordingResulta">AKRecordingResult</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKSampler.html">AKSampler</a>
@@ -860,10 +860,16 @@
                 <a href="Math.html#/s:8AudioKit1poiSo11AVAudioTimeCAD_SitF">+(_:_:)</a>
               </li>
               <li class="nav-group-task">
+                <a href="Math.html#/s:8AudioKit1poiAA11AKOperationCAA11AKParameter_p_AaE_ptF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Math.html#/s:8AudioKit1poiSdAA7Numeric_p_AaC_ptF">+(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Math.html#/s:8AudioKit1poiAA11AKOperationCAA11AKParameter_p_AaE_ptF">+(_:_:)</a>
+                <a href="Math.html#/s:8AudioKit1soiSo11AVAudioTimeCAD_SdtF">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Math.html#/s:8AudioKit1soiSo11AVAudioTimeCAD_SitF">-(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="Math.html#/s:8AudioKit1soiAA11AKOperationCAA11AKParameter_p_AaE_ptF">-(_:_:)</a>
@@ -881,13 +887,13 @@
                 <a href="Math.html#/s:8AudioKit1sopAA17AKStereoOperationCADF">-(_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Math.html#/s:8AudioKit1doiSdAA7Numeric_p_AaC_ptF">/(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Math.html#/s:8AudioKit1doiAA11AKOperationCAA11AKParameter_p_AaE_ptF">/(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="Math.html#/s:8AudioKit1doiAA17AKStereoOperationCAD_AA11AKParameter_ptF">/(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Math.html#/s:8AudioKit1doiSdAA7Numeric_p_AaC_ptF">/(_:_:)</a>
               </li>
             </ul>
           </li>
@@ -929,6 +935,9 @@
                 <a href="Extensions/AVAudioPCMBuffer.html">AVAudioPCMBuffer</a>
               </li>
               <li class="nav-group-task">
+                <a href="Extensions/AVAudioPCMBuffer/Peak.html">– Peak</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Extensions/AVAudioTime.html">AVAudioTime</a>
               </li>
               <li class="nav-group-task">
@@ -967,6 +976,9 @@
                 <a href="Classes/AKConverter/Options.html">– Options</a>
               </li>
               <li class="nav-group-task">
+                <a href="Other Classes.html#/c:@M@AudioKit@objc(cs)AKDualButton">AKDualButton</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/AKInputConnection.html">AKInputConnection</a>
               </li>
               <li class="nav-group-task">
@@ -979,13 +991,25 @@
                 <a href="Classes/AKPannerAudioUnit.html">AKPannerAudioUnit</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/AKSamplerAudioUnit.html">AKSamplerAudioUnit</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/AKScheduledAction.html">AKScheduledAction</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKStereoFieldLimiterAudioUnit.html">AKStereoFieldLimiterAudioUnit</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/AKTuningTableBase.html">AKTuningTableBase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKTuningTableDelta12ET.html">AKTuningTableDelta12ET</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/AKTuningTableETNN.html">AKTuningTableETNN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKWaveTable.html">AKWaveTable</a>
               </li>
             </ul>
           </li>
@@ -993,15 +1017,18 @@
             <a href="Other Global Variables.html">Other Global Variables</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Other Global Variables.html#/s:8AudioKit12callbackUgenAA08AKCustomD0Cv">callbackUgen</a>
+                <a href="Other Global Variables.html#/s:8AudioKit12callbackUgenAA08AKCustomD0Cvp">callbackUgen</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Other Enums.html">Other Enums</a>
+            <a href="Other Enums.html">Other Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Enums/ClipMergeError.html">ClipMergeError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ClipRecordingResult.html">ClipRecordingResult</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/SampleTriggerMode.html">SampleTriggerMode</a>
@@ -1011,6 +1038,9 @@
           <li class="nav-group-name">
             <a href="Other Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/AUParameterTree.html">AUParameterTree</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Extensions/ClosedRange.html">ClosedRange</a>
               </li>
@@ -1050,6 +1080,24 @@
                 <a href="Other Functions.html#/s:8AudioKit6randomSds11ClosedRangeVySdG2in_tF">random(in:)</a>
               </li>
               <li class="nav-group-task">
+                <a href="Other Functions.html#/s:8AudioKit3tneoiSbSd_SdtF">~!=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Functions.html#/s:8AudioKit2tloiSbSd_SdtF">~&lt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Functions.html#/s:8AudioKit3tleoiSbSd_SdtF">~&lt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Functions.html#/s:8AudioKit3teeoiSbSd_SdtF">~==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Functions.html#/s:8AudioKit2tgoiSbSd_SdtF">~&gt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Functions.html#/s:8AudioKit3tgeoiSbSd_SdtF">~&gt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Other Functions.html#/s:8AudioKit008deiFBEEeopS2bF">❗️(_:)</a>
               </li>
             </ul>
@@ -1064,7 +1112,7 @@
                 <a href="Protocols/AUComponent.html">AUComponent</a>
               </li>
               <li class="nav-group-task">
-                <a href="Other Protocols.html#/s:8AudioKit7AliasedP">Aliased</a>
+                <a href="Protocols/Aliased.html">Aliased</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/Occupiable.html">Occupiable</a>
@@ -1072,10 +1120,16 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Other Structs.html">Other Structs</a>
+            <a href="Other Structs.html">Other Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Structs/AKMIDINoteData.html">AKMIDINoteData</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Structs/AudioUnitPropertyListener.html">AudioUnitPropertyListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ClipRecording.html">ClipRecording</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/EndpointInfo.html">EndpointInfo</a>
@@ -1083,10 +1137,43 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Other Typealiases.html">Other Typealiases</a>
+            <a href="Other Typealiases.html">Other Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Other Typealiases.html#/s:8AudioKit11AKCCallbacka">AKCCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Typealiases.html#/s:8AudioKit10AKCallbacka">AKCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Typealiases.html#/s:8AudioKit19AKThresholdCallbacka">AKThresholdCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Typealiases.html#/s:8AudioKit3BPMa">BPM</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Typealiases.html#/s:8AudioKit23ClipRecordingCompletiona">ClipRecordingCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Typealiases.html#/DeviceID">DeviceID</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Typealiases.html#/s:8AudioKit8DeviceIDa">DeviceID</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Typealiases.html#/s:8AudioKit8MIDIBytea">MIDIByte</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Typealiases.html#/s:8AudioKit11MIDIChannela">MIDIChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Typealiases.html#/s:8AudioKit14MIDINoteNumbera">MIDINoteNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Typealiases.html#/s:8AudioKit12MIDIVelocitya">MIDIVelocity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Typealiases.html#/s:8AudioKit8MIDIWorda">MIDIWord</a>
               </li>
             </ul>
           </li>
@@ -1096,11 +1183,10 @@
         <section>
           <section class="section">
             
-            <h1 id='audiokit-v4-1' class='heading'>AudioKit V4.1</h1>
+            <h1 id='audiokit-v4-2' class='heading'>AudioKit V4.2</h1>
 
 <p><a href="https://travis-ci.org/AudioKit/AudioKit"><img src="https://travis-ci.org/AudioKit/AudioKit.svg" alt="Build Status"></a>
 <a href="https://github.com/AudioKit/AudioKit/blob/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/AudioKit.svg?style=flat" alt="License"></a>
-<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
 <a href="https://cocoapods.org/pods/AudioKit"><img src="https://img.shields.io/cocoapods/v/AudioKit.svg?style=flat" alt="CocoaPods compatible"></a>
 <a href="http://cocoadocs.org/docsets/AudioKit"><img src="https://img.shields.io/cocoapods/p/AudioKit.svg?style=flat" alt="Platform"></a>
 <img src="https://img.shields.io/badge/in-swift4.0-orange.svg">
@@ -1142,26 +1228,9 @@
 
 <p>Installation details are found in the <a href="https://github.com/audiokit/AudioKit/blob/master/Frameworks/README.md">Frameworks README file</a>.</p>
 
-<p>AudioKit is also available via <a href="https://cocoapods.org/pods/AudioKit">CocoaPods</a> and Carthage Package managers:</p>
-
-<table><thead>
-<tr>
-<th>Package Manager</th>
-<th>Config File</th>
-<th>Contents</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><a href="https://github.com/Carthage/Carthage">Carthage</a></td>
-<td><code>Cartfile</code></td>
-<td><code>github &quot;audiokit/AudioKit&quot;</code></td>
-</tr>
-<tr>
-<td><a href="https://cocoapods.org/">Cocoapods</a></td>
-<td><code>Podfile</code></td>
-<td><code>pod &#39;AudioKit&#39;, &#39;~&gt; 4.0&#39;</code></td>
-</tr>
-</tbody></table>
+<p>AudioKit is also available via <a href="https://cocoapods.org/pods/AudioKit">CocoaPods</a>. Place the following in your <code>Podfile</code>:</p>
+<pre class="highlight plaintext"><code>pod 'AudioKit', '~&gt; 4.0'`
+</code></pre>
 <h2 id='example-code' class='heading'>Example Code</h2>
 
 <p>There are three Hello World projects, one for each of the Apple platforms: iOS, macOS, and tvOS. They play oscillators and display waveforms. The examples rely on AudioKit&rsquo;s frameworks so you can either download precompiled frameworks or <a href="https://github.com/audiokit/AudioKit/blob/master/Frameworks/README.md">build them yourself</a>    .</p>
@@ -1183,7 +1252,7 @@
 <td>Tell AudioKit what to output</td>
 </tr>
 <tr>
-<td><code>AudioKit.start()</code></td>
+<td><code><a href="Classes/AudioKit.html#/c:@CM@AudioKit@objc(cs)AudioKit(cm)startAndReturnError:">AudioKit.start()</a></code></td>
 <td>Start up AudioKit</td>
 </tr>
 <tr>
@@ -1225,7 +1294,7 @@ We have videos of most of the playgrounds in action, so you don&rsquo;t need to 
 <p>Here are three methods for getting support which are roughly listed in order of what you should try first:</p>
 
 <ol>
-<li><p>Post your problem to <a href="https://stackoverflow.com/search?q=AudioKit">StackOverflow</a> with the #AudioKit hashtag.</p></li>
+<li><p>Post your problem to [<a href="https://stackoverflow.com/questions/tagged/audiokit(StackOverflow">https://stackoverflow.com/questions/tagged/audiokit(StackOverflow</a> with the #AudioKit hashtag).</p></li>
 <li><p>If you don&rsquo;t have a problem that you can post to StackOverflow, you may post to our <a href="https://groups.google.com/forum/#!forum/audiokit">Google Group</a>, but it is a moderated list and prepare to be rejected if the moderator believes your question is better suited for StackOverflow (most are).</p></li>
 <li><p>If you are pretty sure the problem is not in your implementation, but in AudioKit itself, you can open a <a href="https://github.com/audiokit/AudioKit/issues">Github Issue</a>.</p></li>
 </ol>
@@ -1267,8 +1336,8 @@ We have videos of most of the playgrounds in action, so you don&rsquo;t need to 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2018-03-09)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2018 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2018-05-06)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
