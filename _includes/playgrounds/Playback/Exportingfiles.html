@@ -13,10 +13,10 @@ import AudioKit
 <p>Export will be done asynchronously. So you can play some music while exporting</p>
 
 {% highlight ruby %}
-let player = try AKAudioPlayer(file: mixloop)
+let player = AKPlayer(audioFile: mixloop)
 AudioKit.output = player
-AudioKit.start()
-player.looping = false
+try AudioKit.start()
+player.isLooping = false
 player.play()
 
 {% endhighlight %}
@@ -25,7 +25,7 @@ player.play()
 
 <p><code>func callback(processedFile: AKAudioFile?, error: NSError?)</code></p>
 
-<p>If export failed, &quot;processedFile&quot; will be nil.  The error being thrown is given in the &quot;error&quot; parameter. 
+<p>If export failed, &quot;processedFile&quot; will be nil.  The error being thrown is given in the &quot;error&quot; parameter.
  If export succeeded, no error will be set (error = nil) and the exported file is returned as an AKAudioFile.
  The callback will print some information and replace the file being played with the exported file.</p>
 
@@ -40,7 +40,7 @@ player.play()
         // Replace the file being played
         try? player.replace(file: converted)
     } else {
-        // An error occured. So, print the Error
+        // An error occurred. So, print the Error
         print("Error: \(error?.localizedDescription)")
     }
 }
@@ -80,7 +80,7 @@ drumloop.exportAsynchronously(name: "test3",
 import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 {% endhighlight %}
-<p>Be aware that PCM format files can be converted to PCM or compressed formats. But compressed m4a or mp4 audiofiles 
- cannot be converted to PCM files (.wav or .aif). For converting from any format compressed format to PCM, you can 
- use AKAudioFile.extract or AKAudioFile.extractAsynchronously() methods (will convert to .CAF PCM). The resulting 
+<p>Be aware that PCM format files can be converted to PCM or compressed formats. But compressed m4a or mp4 audiofiles
+ cannot be converted to PCM files (.wav or .aif). For converting from any format compressed format to PCM, you can
+ use AKAudioFile.extract or AKAudioFile.extractAsynchronously() methods (will convert to .CAF PCM). The resulting
  file can then be exported to .mp4, m4a, .wav, or .aif.</p>

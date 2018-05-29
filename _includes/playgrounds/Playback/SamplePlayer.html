@@ -1,5 +1,5 @@
 <p><h3>Sample Player
-</h3> An alternative to AKSampler or AKAudioPlayer, AKSamplePlayer is a player that
+</h3> An alternative to AKAppleSampler or AKAudioPlayer, AKSamplePlayer is a player that
  doesn&#39;t rely on an as much Apple AV foundation/engine code as the others.</p>
 
 {% highlight ruby %}import AudioKitPlaygrounds
@@ -12,7 +12,7 @@ let samplePlayer = AKSamplePlayer(file: file) {
 }
 
 AudioKit.output = samplePlayer
-AudioKit.start()
+try AudioKit.start()
 
 import AudioKitUI
 

@@ -28,7 +28,7 @@ let secondaryOscillator = AKOscillator()
  so we can insert into the signal chain at the bottom</p>
 
 {% highlight ruby %}AudioKit.output = AKMixer(booster, secondaryOscillator)
-AudioKit.start()
+try AudioKit.start()
 
 oscillatorNode.start()
 secondaryOscillator.start()

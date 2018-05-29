@@ -16,7 +16,7 @@ import AudioKit
 {% highlight ruby %}import AudioKitUI
 
 {% endhighlight %}
-<p>ALERT: This is also the line that most commonly shows an error &quot;No such module&quot; 
+<p>ALERT: This is also the line that most commonly shows an error &quot;No such module&quot;
  This just means you haven&#39;t built AudioKitPlaygrounds yet, in which case pressing Cmd-B or
  accessing the &quot;Product&quot; menu and choosing &quot;Build&quot;.</p>
 
@@ -43,7 +43,7 @@ import AudioKit
  on any class, method, or variable name to show information about that element.
  Try it with the lines below:</p>
 
-{% highlight ruby %}let player = try AKAudioPlayer(file: file)
+{% highlight ruby %}let player = AKPlayer(audioFile: file)
 let effect = AKMoogLadder(player)
 
 {% endhighlight %}

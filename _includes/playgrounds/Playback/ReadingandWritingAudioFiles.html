@@ -70,7 +70,7 @@ print("drumloop.duration: \(drumloop.duration)")
             print(successfulFile.fileNamePlusExtension)
             let player = try? AKAudioPlayer(file: successfulFile)
             AudioKit.output = player
-            AudioKit.start()
+            try AudioKit.start()
             player?.play()
         }
 

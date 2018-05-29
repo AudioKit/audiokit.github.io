@@ -26,7 +26,7 @@ let silence = AKBooster(tracker, gain: 0)
  so we can insert into the signal chain at the bottom</p>
 
 {% highlight ruby %}AudioKit.output = silence
-AudioKit.start()
+try AudioKit.start()
 
 {% endhighlight %}
 <p>User Interface</p>

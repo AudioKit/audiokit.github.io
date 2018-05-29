@@ -19,8 +19,8 @@ let filteredNoise = AKOperationEffect(whiteNoise) { whiteNoise, _ in
 
 {% highlight ruby %}let file = try AKAudioFile(readFileName: playgroundAudioFiles[0])
 
-let player = try AKAudioPlayer(file: file)
-player.looping = true
+let player = AKPlayer(audioFile: file)
+player.isLooping = true
 let filteredPlayer = AKOperationEffect(player) { player, _ in
     let halfPower = AKOperation.sineWave(frequency: 0.2).scale(minimum: 12_000, maximum: 100)
     return player.lowPassFilter(halfPowerPoint: halfPower)
@@ -31,7 +31,7 @@ let filteredPlayer = AKOperationEffect(player) { player, _ in
 
 {% highlight ruby %}let mixer = AKDryWetMixer(filteredNoise, filteredPlayer, balance: 0.5)
 AudioKit.output = mixer
-AudioKit.start()
+try AudioKit.start()
 
 whiteNoise.start()
 player.play()

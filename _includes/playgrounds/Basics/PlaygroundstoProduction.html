@@ -22,7 +22,7 @@ import AudioKit
 
 {% highlight ruby %}let oscillator = AKOscillator()
 AudioKit.output = oscillator
-AudioKit.start()
+try AudioKit.start()
 
 {% endhighlight %}
 <p>But if you did the same type of thing in a project:</p>
@@ -31,7 +31,11 @@ AudioKit.start()
     init() {
         let oscillator = AKOscillator()
         AudioKit.output = oscillator
-        AudioKit.start()
+        do {
+            try AudioKit.start()
+        } catch {
+            AKLog("AudioKit did not start")
+        }
     }
 }
 
@@ -45,7 +49,7 @@ AudioKit.start()
     init() {
         oscillator = AKOscillator()
         AudioKit.output = oscillator
-        AudioKit.start()
+        try AudioKit.start()
     }
 }
 
@@ -56,16 +60,16 @@ AudioKit.start()
 <p>In AudioKit playgrounds, failable initializers are just one line:</p>
 
 {% highlight ruby %}let file = try AKAudioFile()
-var player = try AKAudioPlayer(file: file)
+try AudioKit.start()
 
 {% endhighlight %}
 <p>In production code, this would need to be wrapped in a do-catch block</p>
 
 {% highlight ruby %}do {
     let file = try AKAudioFile(readFileName: "drumloop.wav")
-    player = try AKAudioPlayer(file: file)
+    try AudioKit.start()
 } catch {
-    AKLog("File Not Found")
+    AKLog("File Not Found or AudioKit did not start")
 }
 
 {% endhighlight %}

@@ -10,7 +10,7 @@ import AudioKit
 
 {% highlight ruby %}var oscillator = AKOscillator(waveform: AKTable(.sawtooth))
 var currentAmplitude = 0.1
-var currentRampTime = 0.2
+var currentRampDuration = 0.2
 
 {% endhighlight %}
 <p>Pass our Oscillator thru a mixer. It fixes a problem with raw oscillator
@@ -41,7 +41,7 @@ reverb.dryWetMix = 0.5
 {% highlight ruby %}let mixer = AKMixer(player, reverb)
 AudioKit.output = mixer
 
-AudioKit.start()
+try AudioKit.start()
 
 {% endhighlight %}
 <p>Now we set an AKNodeRecorder to our oscillator. You can change the recorded
@@ -140,12 +140,12 @@ class LiveView: AKLiveViewController, AKKeyboardDelegate {
     func noteOn(note: MIDINoteNumber) {
         // start from the correct note if amplitude is zero
         if oscillator.amplitude == 0 {
-            oscillator.rampTime = 0
+            oscillator.rampDuration = 0
         }
         oscillator.frequency = note.midiNoteToFrequency()
 
-        // Still use rampTime for volume
-        oscillator.rampTime = currentRampTime
+        // Still use rampDuration for volume
+        oscillator.rampDuration = currentRampDuration
         oscillator.amplitude = currentAmplitude
         oscillator.play()
     }

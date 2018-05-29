@@ -33,7 +33,7 @@ AudioKit.output = dryWetMixer
 sequencer.enableLooping()
 sequencer.setGlobalMIDIOutput(piano.midiIn)
 
-AudioKit.start()
+try AudioKit.start()
 sequencer.play()
 
 {% endhighlight %}

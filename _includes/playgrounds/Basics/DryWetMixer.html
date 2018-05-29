@@ -12,8 +12,8 @@ import AudioKit
 <p>This section prepares the players</p>
 
 {% highlight ruby %}let file = try AKAudioFile(readFileName: "drumloop.wav")
-var drums = try AKAudioPlayer(file: file)
-drums.looping = true
+var drums = AKPlayer(audioFile: file)
+drums.isLooping = true
 
 {% endhighlight %}
 <p>Build an effects chain:</p>
@@ -32,7 +32,7 @@ reverb.loadFactoryPreset(.largeChamber)
 let mixture = AKDryWetMixer(drums, reverb, balance: 0.5)
 
 AudioKit.output = mixture
-AudioKit.start()
+try AudioKit.start()
 drums.play()
 
 {% endhighlight %}

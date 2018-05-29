@@ -1,5 +1,5 @@
 <p><h3>Phase-Locked Vocoder
-</h3> A different kind of time and pitch stretching</p>
+</h3> A different kind of time and pitch stretching. It plays a spectral freeze of the current position in time.</p>
 
 {% highlight ruby %}import AudioKitPlaygrounds
 import AudioKit
@@ -8,7 +8,7 @@ let file = try AKAudioFile(readFileName: "guitarloop.wav")
 let phaseLockedVocoder = AKPhaseLockedVocoder(file: file)
 
 AudioKit.output = phaseLockedVocoder
-AudioKit.start()
+try AudioKit.start()
 phaseLockedVocoder.start()
 phaseLockedVocoder.amplitude = 1
 phaseLockedVocoder.pitchRatio = 1

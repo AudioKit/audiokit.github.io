@@ -11,7 +11,7 @@ var microphone = AKMicrophone()
 <p>Zero out the microphone to prevent feedback</p>
 
 {% highlight ruby %}AudioKit.output = AKBooster(microphone, gain: 0.0)
-AudioKit.start()
+try AudioKit.start()
 
 import AudioKitUI
 

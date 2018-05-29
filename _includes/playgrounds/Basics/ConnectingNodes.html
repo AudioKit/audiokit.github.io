@@ -14,8 +14,8 @@ let file = try AKAudioFile(readFileName: "drumloop.wav")
 {% endhighlight %}
 <p>Set up a player to the loop the file&#39;s playback</p>
 
-{% highlight ruby %}var player = try AKAudioPlayer(file: file)
-player.looping = true
+{% highlight ruby %}var player = AKPlayer(audioFile: file)
+player.isLooping = true
 
 {% endhighlight %}
 <p>Next we&#39;ll connect the audio player to a delay effect</p>
@@ -36,7 +36,7 @@ delay.dryWetMix = 0.2 // Normalized Value 0 - 1
 reverb.loadFactoryPreset(.cathedral)
 
 AudioKit.output = reverb
-AudioKit.start()
+try AudioKit.start()
 
 player.play()
 
