@@ -1,12 +1,6 @@
 {
   "warnings": [
-    {
-      "file": "/Users/aure/Developer/AudioKit/AudioKit/AudioKit/iOS/AudioKit/User Interface/AKDualButton.swift",
-      "line": 12,
-      "symbol": "AKDualButton",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    }
+
   ],
   "source_directory": "/Users/aure/Developer/AudioKit/AudioKit/AudioKit/iOS"
 }
