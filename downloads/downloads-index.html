@@ -12,13 +12,13 @@ layout: section_index
 
 <ul class="iconlist">
   <li><i class="icon-github-alt"></i>
-    <a href="http://github.com/audiokit/AudioKit/archive/v4.2.2.zip" rel="nofollow">
+    <a href="http://github.com/audiokit/AudioKit/archive/v4.4.zip" rel="nofollow">
       <span aria-hidden="true" class="octicon octicon-file-zip text-muted"></span>
       <strong>Source code</strong> (zip)
     </a>
   </li>
   <li><i class="icon-github-alt"></i>
-    <a href="http://github.com/audiokit/AudioKit/archive/v4.2.2.tar.gz" rel="nofollow">
+    <a href="http://github.com/audiokit/AudioKit/archive/v4.4.tar.gz" rel="nofollow">
       <span aria-hidden="true" class="octicon octicon-file-zip text-muted"></span>
       <strong>Source code</strong> (tar.gz)
     </a>
@@ -29,7 +29,7 @@ layout: section_index
 <p>Now, AudioKit Playgrounds are a separate download:</p>
 <ul class="iconlist">
   <li><i class="icon-github-alt"></i>
-    <a href="http://github.com/audiokit/AudioKit/releases/download/v4.2.2/AudioKitPlaygrounds-4.2.2.zip" rel="nofollow">
+    <a href="http://github.com/audiokit/AudioKit/releases/download/v4.4/AudioKitPlaygrounds-4.4.zip" rel="nofollow">
       <span aria-hidden="true" class="octicon octicon-file-zip text-muted"></span>
       <strong>AudioKit Playgrounds</strong> (zip)
     </a>
@@ -42,21 +42,21 @@ layout: section_index
 
 <ul class="iconlist">
   <li><i class="icon-github-alt"></i>
-    <a href="http://github.com/audiokit/AudioKit/releases/download/v4.2.2/AudioKit-iOS-4.2.2.zip" rel="nofollow">
+    <a href="http://github.com/audiokit/AudioKit/releases/download/v4.4/AudioKit-iOS-4.4.zip" rel="nofollow">
       <span aria-hidden="true" class="octicon octicon-package left text-muted"></span>
-      <strong>AudioKit-iOS-4.2.2.zip</strong>
+      <strong>AudioKit-iOS-4.4.zip</strong>
     </a>
   </li>
   <li><i class="icon-github-alt"></i>
-    <a href="http://github.com/audiokit/AudioKit/releases/download/v4.2.2/AudioKit-macOS-4.2.2.zip" rel="nofollow">
+    <a href="http://github.com/audiokit/AudioKit/releases/download/v4.4/AudioKit-macOS-4.4.zip" rel="nofollow">
       <span aria-hidden="true" class="octicon octicon-package left text-muted"></span>
-      <strong>AudioKit-macOS-4.2.2.zip</strong>
+      <strong>AudioKit-macOS-4.4.zip</strong>
     </a>
   </li>
   <li><i class="icon-github-alt"></i>
-    <a href="http://github.com/audiokit/AudioKit/releases/download/v4.2.2/AudioKit-tvOS-4.2.2.zip" rel="nofollow">
+    <a href="http://github.com/audiokit/AudioKit/releases/download/v4.4/AudioKit-tvOS-4.4.zip" rel="nofollow">
       <span aria-hidden="true" class="octicon octicon-package left text-muted"></span>
-      <strong>AudioKit-tvOS-4.2.2.zip</strong>
+      <strong>AudioKit-tvOS-4.4.zip</strong>
     </a>
   </li>
 </ul>
@@ -108,17 +108,21 @@ github "audiokit/AudioKit"
 <p>You can use CocoaPods to install AudioKit. In your project, update your Podfile:</p>
 
 {% highlight ruby %}
-pod 'AudioKit', '~> 4.2'
+pod 'AudioKit', '~> 4.4'
 {% endhighlight %}
 
-<p>Or, if you use AudioKit User Interface elements:</p>
+<p>Or, if you use only the AudioKit User Interface elements:</p>
 
 
 {% highlight ruby %}
-pod 'AudioKit/UI', '~> 4.2'
+pod 'AudioKit/UI', '~> 4.4'
 {% endhighlight %}
 
-<p>which will install both AudioKit and the UI components.</p>
+<p>and if you don't need the UI components:</p>
+
+{% highlight ruby %}
+pod 'AudioKit/Core', '~> 4.4'
+{% endhighlight %}
 
 <p>Then execute:</p>
 
