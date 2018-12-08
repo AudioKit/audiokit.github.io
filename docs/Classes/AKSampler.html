@@ -1133,6 +1133,9 @@
                 <a href="../Structs/AKTimeSignature/TimeSignatureBottomValue.html">– TimeSignatureBottomValue</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Other Structs.html#/s:8AudioKit14AppleMIDIEventV">AppleMIDIEvent</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/AudioUnitPropertyListener.html">AudioUnitPropertyListener</a>
               </li>
               <li class="nav-group-task">
@@ -1140,6 +1143,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/EndpointInfo.html">EndpointInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Structs.html#/s:8AudioKit22MIDIProgramChangeEventV">MIDIProgramChangeEvent</a>
               </li>
             </ul>
           </li>
@@ -1192,11 +1198,12 @@
             <h1>AKSampler</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">AKSampler</span> <span class="p">:</span> <span class="kt"><a href="../Classes/AKPolyphonicNode.html">AKPolyphonicNode</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKComponent.html">AKComponent</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKInput.html">AKInput</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">class</span> <span class="kt">AKSampler</span> <span class="p">:</span> <span class="kt"><a href="../Classes/AKPolyphonicNode.html">AKPolyphonicNode</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/AKComponent.html">AKComponent</a></span></code></pre>
 
                 </div>
               </div>
-            <p>Stereo Chorus</p>
+            <p>Sampler</p>
 
           </section>
           <section class="section task-group-section">
@@ -1266,6 +1273,33 @@
                 </a>
               </div>
               <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@AudioKit@objc(cs)AKSampler(py)internalAU"></a>
+                    <a name="//apple_ref/swift/Property/internalAU" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AudioKit@objc(cs)AKSampler(py)internalAU">internalAU</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">internalAU</span><span class="p">:</span> <span class="kt">AKSampler</span><span class="o">.</span><span class="kt"><a href="../Classes/AKSampler.html#/s:8AudioKit9AKSamplerC15AKAudioUnitTypea">AKAudioUnitType</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -1409,9 +1443,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@AudioKit@objc(cs)AKSampler(py)filterEgStrength"></a>
-                    <a name="//apple_ref/swift/Property/filterEgStrength" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@AudioKit@objc(cs)AKSampler(py)filterEgStrength">filterEgStrength</a>
+                    <a name="/c:@M@AudioKit@objc(cs)AKSampler(py)filterStrength"></a>
+                    <a name="//apple_ref/swift/Property/filterStrength" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AudioKit@objc(cs)AKSampler(py)filterStrength">filterStrength</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1427,7 +1461,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">open</span> <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">filterEgStrength</span><span class="p">:</span> <span class="kt">Double</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+<span class="kd">open</span> <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">filterStrength</span><span class="p">:</span> <span class="kt">Double</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1840,9 +1874,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@AudioKit@objc(cs)AKSampler(im)init:masterVolume:pitchBend:vibratoDepth:filterCutoff:filterEgStrength:filterResonance:attackDuration:decayDuration:sustainLevel:releaseDuration:filterEnable:filterAttackDuration:filterDecayDuration:filterSustainLevel:filterReleaseDuration:glideRate:loopThruRelease:isMonophonic:isLegato:"></a>
-                    <a name="//apple_ref/swift/Method/init(_:masterVolume:pitchBend:vibratoDepth:filterCutoff:filterEgStrength:filterResonance:attackDuration:decayDuration:sustainLevel:releaseDuration:filterEnable:filterAttackDuration:filterDecayDuration:filterSustainLevel:filterReleaseDuration:glideRate:loopThruRelease:isMonophonic:isLegato:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@AudioKit@objc(cs)AKSampler(im)init:masterVolume:pitchBend:vibratoDepth:filterCutoff:filterEgStrength:filterResonance:attackDuration:decayDuration:sustainLevel:releaseDuration:filterEnable:filterAttackDuration:filterDecayDuration:filterSustainLevel:filterReleaseDuration:glideRate:loopThruRelease:isMonophonic:isLegato:">init(_:masterVolume:pitchBend:vibratoDepth:filterCutoff:filterEgStrength:filterResonance:attackDuration:decayDuration:sustainLevel:releaseDuration:filterEnable:filterAttackDuration:filterDecayDuration:filterSustainLevel:filterReleaseDuration:glideRate:loopThruRelease:isMonophonic:isLegato:)</a>
+                    <a name="/c:@M@AudioKit@objc(cs)AKSampler(im)initWithMasterVolume:pitchBend:vibratoDepth:filterCutoff:filterStrength:filterResonance:attackDuration:decayDuration:sustainLevel:releaseDuration:filterEnable:filterAttackDuration:filterDecayDuration:filterSustainLevel:filterReleaseDuration:glideRate:loopThruRelease:isMonophonic:isLegato:"></a>
+                    <a name="//apple_ref/swift/Method/init(masterVolume:pitchBend:vibratoDepth:filterCutoff:filterStrength:filterResonance:attackDuration:decayDuration:sustainLevel:releaseDuration:filterEnable:filterAttackDuration:filterDecayDuration:filterSustainLevel:filterReleaseDuration:glideRate:loopThruRelease:isMonophonic:isLegato:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AudioKit@objc(cs)AKSampler(im)initWithMasterVolume:pitchBend:vibratoDepth:filterCutoff:filterStrength:filterResonance:attackDuration:decayDuration:sustainLevel:releaseDuration:filterEnable:filterAttackDuration:filterDecayDuration:filterSustainLevel:filterReleaseDuration:glideRate:loopThruRelease:isMonophonic:isLegato:">init(masterVolume:pitchBend:vibratoDepth:filterCutoff:filterStrength:filterResonance:attackDuration:decayDuration:sustainLevel:releaseDuration:filterEnable:filterAttackDuration:filterDecayDuration:filterSustainLevel:filterReleaseDuration:glideRate:loopThruRelease:isMonophonic:isLegato:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1859,12 +1893,11 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
 <span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
-    <span class="n">_</span> <span class="nv">input</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKNode.html">AKNode</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
     <span class="nv">masterVolume</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
     <span class="nv">pitchBend</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
     <span class="nv">vibratoDepth</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
     <span class="nv">filterCutoff</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">4.0</span><span class="p">,</span>
-    <span class="nv">filterEgStrength</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">20.0</span><span class="p">,</span>
+    <span class="nv">filterStrength</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">20.0</span><span class="p">,</span>
     <span class="nv">filterResonance</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
     <span class="nv">attackDuration</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
     <span class="nv">decayDuration</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
@@ -1886,18 +1919,6 @@
                         <h4>Parameters</h4>
                         <table class="graybox">
                           <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>input</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>AKNode whose output will be processed (not used)</p>
-                                </div>
-                              </td>
-                            </tr>
                             <tr>
                               <td>
                                 <code>
@@ -1949,7 +1970,7 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>filterEgStrength</em>
+                                <em>filterStrength</em>
                                 </code>
                               </td>
                               <td>
@@ -2135,9 +2156,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8AudioKit9AKSamplerC15loadAKAudioFile4from4fileySo18AKSampleDescriptora_AA0eF0CtF"></a>
+                    <a name="/c:@M@AudioKit@objc(cs)AKSampler(im)loadAKAudioFileFrom:file:"></a>
                     <a name="//apple_ref/swift/Method/loadAKAudioFile(from:file:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8AudioKit9AKSamplerC15loadAKAudioFile4from4fileySo18AKSampleDescriptora_AA0eF0CtF">loadAKAudioFile(from:file:)</a>
+                    <a class="token" href="#/c:@M@AudioKit@objc(cs)AKSampler(im)loadAKAudioFileFrom:file:">loadAKAudioFile(from:file:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2151,7 +2172,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">loadAKAudioFile</span><span class="p">(</span><span class="n">from</span> <span class="nv">sampleDescriptor</span><span class="p">:</span> <span class="kt">AKSampleDescriptor</span><span class="p">,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKAudioFile.html">AKAudioFile</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">func</span> <span class="nf">loadAKAudioFile</span><span class="p">(</span><span class="n">from</span> <span class="nv">sampleDescriptor</span><span class="p">:</span> <span class="kt">AKSampleDescriptor</span><span class="p">,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKAudioFile.html">AKAudioFile</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2161,9 +2183,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8AudioKit9AKSamplerC13stopAllVoicesyyF"></a>
+                    <a name="/c:@M@AudioKit@objc(cs)AKSampler(im)stopAllVoices"></a>
                     <a name="//apple_ref/swift/Method/stopAllVoices()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8AudioKit9AKSamplerC13stopAllVoicesyyF">stopAllVoices()</a>
+                    <a class="token" href="#/c:@M@AudioKit@objc(cs)AKSampler(im)stopAllVoices">stopAllVoices()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2177,7 +2199,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">stopAllVoices</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">func</span> <span class="nf">stopAllVoices</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -2187,9 +2210,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8AudioKit9AKSamplerC13restartVoicesyyF"></a>
+                    <a name="/c:@M@AudioKit@objc(cs)AKSampler(im)restartVoices"></a>
                     <a name="//apple_ref/swift/Method/restartVoices()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8AudioKit9AKSamplerC13restartVoicesyyF">restartVoices()</a>
+                    <a class="token" href="#/c:@M@AudioKit@objc(cs)AKSampler(im)restartVoices">restartVoices()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2203,7 +2226,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">restartVoices</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">func</span> <span class="nf">restartVoices</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -2213,9 +2237,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8AudioKit9AKSamplerC17loadRawSampleData4fromySo08AKSampleG10Descriptora_tF"></a>
+                    <a name="/c:@M@AudioKit@objc(cs)AKSampler(im)loadRawSampleDataFrom:"></a>
                     <a name="//apple_ref/swift/Method/loadRawSampleData(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8AudioKit9AKSamplerC17loadRawSampleData4fromySo08AKSampleG10Descriptora_tF">loadRawSampleData(from:)</a>
+                    <a class="token" href="#/c:@M@AudioKit@objc(cs)AKSampler(im)loadRawSampleDataFrom:">loadRawSampleData(from:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2229,7 +2253,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">loadRawSampleData</span><span class="p">(</span><span class="n">from</span> <span class="nv">sampleDataDescriptor</span><span class="p">:</span> <span class="kt">AKSampleDataDescriptor</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">func</span> <span class="nf">loadRawSampleData</span><span class="p">(</span><span class="n">from</span> <span class="nv">sampleDataDescriptor</span><span class="p">:</span> <span class="kt">AKSampleDataDescriptor</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2239,9 +2264,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8AudioKit9AKSamplerC24loadCompressedSampleFile4fromySo08AKSampleG10Descriptora_tF"></a>
+                    <a name="/c:@M@AudioKit@objc(cs)AKSampler(im)loadCompressedSampleFileFrom:"></a>
                     <a name="//apple_ref/swift/Method/loadCompressedSampleFile(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8AudioKit9AKSamplerC24loadCompressedSampleFile4fromySo08AKSampleG10Descriptora_tF">loadCompressedSampleFile(from:)</a>
+                    <a class="token" href="#/c:@M@AudioKit@objc(cs)AKSampler(im)loadCompressedSampleFileFrom:">loadCompressedSampleFile(from:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2255,7 +2280,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">loadCompressedSampleFile</span><span class="p">(</span><span class="n">from</span> <span class="nv">sampleFileDescriptor</span><span class="p">:</span> <span class="kt">AKSampleFileDescriptor</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">func</span> <span class="nf">loadCompressedSampleFile</span><span class="p">(</span><span class="n">from</span> <span class="nv">sampleFileDescriptor</span><span class="p">:</span> <span class="kt">AKSampleFileDescriptor</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2265,9 +2291,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8AudioKit9AKSamplerC16unloadAllSamplesyyF"></a>
+                    <a name="/c:@M@AudioKit@objc(cs)AKSampler(im)unloadAllSamples"></a>
                     <a name="//apple_ref/swift/Method/unloadAllSamples()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8AudioKit9AKSamplerC16unloadAllSamplesyyF">unloadAllSamples()</a>
+                    <a class="token" href="#/c:@M@AudioKit@objc(cs)AKSampler(im)unloadAllSamples">unloadAllSamples()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2281,7 +2307,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">unloadAllSamples</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">func</span> <span class="nf">unloadAllSamples</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -2291,9 +2318,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8AudioKit9AKSamplerC17buildSimpleKeyMapyyF"></a>
+                    <a name="/c:@M@AudioKit@objc(cs)AKSampler(im)buildSimpleKeyMap"></a>
                     <a name="//apple_ref/swift/Method/buildSimpleKeyMap()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8AudioKit9AKSamplerC17buildSimpleKeyMapyyF">buildSimpleKeyMap()</a>
+                    <a class="token" href="#/c:@M@AudioKit@objc(cs)AKSampler(im)buildSimpleKeyMap">buildSimpleKeyMap()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2307,7 +2334,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">buildSimpleKeyMap</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">func</span> <span class="nf">buildSimpleKeyMap</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -2317,9 +2345,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8AudioKit9AKSamplerC11buildKeyMapyyF"></a>
+                    <a name="/c:@M@AudioKit@objc(cs)AKSampler(im)buildKeyMap"></a>
                     <a name="//apple_ref/swift/Method/buildKeyMap()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8AudioKit9AKSamplerC11buildKeyMapyyF">buildKeyMap()</a>
+                    <a class="token" href="#/c:@M@AudioKit@objc(cs)AKSampler(im)buildKeyMap">buildKeyMap()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2333,7 +2361,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">buildKeyMap</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">func</span> <span class="nf">buildKeyMap</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -2343,9 +2372,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8AudioKit9AKSamplerC7setLoop11thruReleaseySb_tF"></a>
+                    <a name="/c:@M@AudioKit@objc(cs)AKSampler(im)setLoopWithThruRelease:"></a>
                     <a name="//apple_ref/swift/Method/setLoop(thruRelease:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8AudioKit9AKSamplerC7setLoop11thruReleaseySb_tF">setLoop(thruRelease:)</a>
+                    <a class="token" href="#/c:@M@AudioKit@objc(cs)AKSampler(im)setLoopWithThruRelease:">setLoop(thruRelease:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2359,7 +2388,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">setLoop</span><span class="p">(</span><span class="nv">thruRelease</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">func</span> <span class="nf">setLoop</span><span class="p">(</span><span class="nv">thruRelease</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2385,7 +2415,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">play</span><span class="p">(</span><span class="nv">noteNumber</span><span class="p">:</span> <span class="kt"><a href="../Other Typealiases.html#/s:8AudioKit14MIDINoteNumbera">MIDINoteNumber</a></span><span class="p">,</span> <span class="nv">velocity</span><span class="p">:</span> <span class="kt"><a href="../Other Typealiases.html#/s:8AudioKit12MIDIVelocitya">MIDIVelocity</a></span><span class="p">,</span> <span class="nv">frequency</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">play</span><span class="p">(</span><span class="nv">noteNumber</span><span class="p">:</span> <span class="kt"><a href="../Other Typealiases.html#/s:8AudioKit14MIDINoteNumbera">MIDINoteNumber</a></span><span class="p">,</span> <span class="nv">velocity</span><span class="p">:</span> <span class="kt"><a href="../Other Typealiases.html#/s:8AudioKit12MIDIVelocitya">MIDIVelocity</a></span><span class="p">,</span> <span class="nv">frequency</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2411,7 +2442,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">stop</span><span class="p">(</span><span class="nv">noteNumber</span><span class="p">:</span> <span class="kt"><a href="../Other Typealiases.html#/s:8AudioKit14MIDINoteNumbera">MIDINoteNumber</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">stop</span><span class="p">(</span><span class="nv">noteNumber</span><span class="p">:</span> <span class="kt"><a href="../Other Typealiases.html#/s:8AudioKit14MIDINoteNumbera">MIDINoteNumber</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2421,9 +2453,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8AudioKit9AKSamplerC7silence10noteNumberys5UInt8V_tF"></a>
+                    <a name="/c:@M@AudioKit@objc(cs)AKSampler(im)silenceWithNoteNumber:"></a>
                     <a name="//apple_ref/swift/Method/silence(noteNumber:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8AudioKit9AKSamplerC7silence10noteNumberys5UInt8V_tF">silence(noteNumber:)</a>
+                    <a class="token" href="#/c:@M@AudioKit@objc(cs)AKSampler(im)silenceWithNoteNumber:">silence(noteNumber:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2437,7 +2469,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">silence</span><span class="p">(</span><span class="nv">noteNumber</span><span class="p">:</span> <span class="kt"><a href="../Other Typealiases.html#/s:8AudioKit14MIDINoteNumbera">MIDINoteNumber</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">func</span> <span class="nf">silence</span><span class="p">(</span><span class="nv">noteNumber</span><span class="p">:</span> <span class="kt"><a href="../Other Typealiases.html#/s:8AudioKit14MIDINoteNumbera">MIDINoteNumber</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2447,9 +2480,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8AudioKit9AKSamplerC12sustainPedal9pedalDownySb_tF"></a>
+                    <a name="/c:@M@AudioKit@objc(cs)AKSampler(im)sustainPedalWithPedalDown:"></a>
                     <a name="//apple_ref/swift/Method/sustainPedal(pedalDown:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8AudioKit9AKSamplerC12sustainPedal9pedalDownySb_tF">sustainPedal(pedalDown:)</a>
+                    <a class="token" href="#/c:@M@AudioKit@objc(cs)AKSampler(im)sustainPedalWithPedalDown:">sustainPedal(pedalDown:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2463,7 +2496,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">sustainPedal</span><span class="p">(</span><span class="nv">pedalDown</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">func</span> <span class="nf">sustainPedal</span><span class="p">(</span><span class="nv">pedalDown</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2513,7 +2547,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2018-09-08)</p>
+          <p>&copy; 2018 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2018-10-30)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

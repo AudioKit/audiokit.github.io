@@ -1133,6 +1133,9 @@
                 <a href="../Structs/AKTimeSignature/TimeSignatureBottomValue.html">– TimeSignatureBottomValue</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Other Structs.html#/s:8AudioKit14AppleMIDIEventV">AppleMIDIEvent</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/AudioUnitPropertyListener.html">AudioUnitPropertyListener</a>
               </li>
               <li class="nav-group-task">
@@ -1140,6 +1143,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/EndpointInfo.html">EndpointInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Structs.html#/s:8AudioKit22MIDIProgramChangeEventV">MIDIProgramChangeEvent</a>
               </li>
             </ul>
           </li>
@@ -1206,9 +1212,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8AudioKit6AKNodeC02avA4NodeSo07AVAudioE0Cvp"></a>
+                    <a name="/c:@M@AudioKit@objc(cs)AKNode(py)avAudioNode"></a>
                     <a name="//apple_ref/swift/Property/avAudioNode" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8AudioKit6AKNodeC02avA4NodeSo07AVAudioE0Cvp">avAudioNode</a>
+                    <a class="token" href="#/c:@M@AudioKit@objc(cs)AKNode(py)avAudioNode">avAudioNode</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1223,7 +1229,64 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">avAudioNode</span><span class="p">:</span> <span class="kt">AVAudioNode</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="k">var</span> <span class="nv">avAudioNode</span><span class="p">:</span> <span class="kt">AVAudioNode</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@AudioKit@objc(cs)AKNode(py)avAudioUnit"></a>
+                    <a name="//apple_ref/swift/Property/avAudioUnit" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AudioKit@objc(cs)AKNode(py)avAudioUnit">avAudioUnit</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The internal AVAudioUnit, which is a subclass of AVAudioNode with more capabilities</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="k">var</span> <span class="nv">avAudioUnit</span><span class="p">:</span> <span class="kt">AVAudioUnit</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@AudioKit@objc(cs)AKNode(py)avAudioUnitOrNode"></a>
+                    <a name="//apple_ref/swift/Property/avAudioUnitOrNode" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AudioKit@objc(cs)AKNode(py)avAudioUnitOrNode">avAudioUnitOrNode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns either the avAudioUnit (preferred</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="k">var</span> <span class="nv">avAudioUnitOrNode</span><span class="p">:</span> <span class="kt">AVAudioNode</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1260,6 +1323,34 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:@M@AudioKit@objc(cs)AKNode(im)initWithAvAudioUnit:attach:"></a>
+                    <a name="//apple_ref/swift/Method/init(avAudioUnit:attach:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@AudioKit@objc(cs)AKNode(im)initWithAvAudioUnit:attach:">init(avAudioUnit:attach:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize the node from an AVAudioUnit</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">avAudioUnit</span><span class="p">:</span> <span class="kt">AVAudioUnit</span><span class="p">,</span> <span class="nv">attach</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:@M@AudioKit@objc(cs)AKNode(im)initWithAvAudioNode:attach:"></a>
                     <a name="//apple_ref/swift/Method/init(avAudioNode:attach:)" class="dashAnchor"></a>
                     <a class="token" href="#/c:@M@AudioKit@objc(cs)AKNode(im)initWithAvAudioNode:attach:">init(avAudioNode:attach:)</a>
@@ -1270,7 +1361,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initialize the node</p>
+                        <p>Initialize the node from an AVAudioNode</p>
 
                       </div>
                       <div class="declaration">
@@ -1429,7 +1520,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2018-09-08)</p>
+          <p>&copy; 2018 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2018-10-30)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

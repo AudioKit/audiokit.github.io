@@ -1133,6 +1133,9 @@
                 <a href="../Structs/AKTimeSignature/TimeSignatureBottomValue.html">– TimeSignatureBottomValue</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Other Structs.html#/s:8AudioKit14AppleMIDIEventV">AppleMIDIEvent</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/AudioUnitPropertyListener.html">AudioUnitPropertyListener</a>
               </li>
               <li class="nav-group-task">
@@ -1140,6 +1143,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/EndpointInfo.html">EndpointInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Structs.html#/s:8AudioKit22MIDIProgramChangeEventV">MIDIProgramChangeEvent</a>
               </li>
             </ul>
           </li>
@@ -1465,10 +1471,144 @@ Any time consuming operations necessary for playback (eg. disk reads) should be 
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit8AKTimingPAAE9syncStart_2atSo11AVAudioTimeCSayAaB_pG_SdtFZ"></a>
+                    <a name="//apple_ref/swift/Method/syncStart(_:at:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit8AKTimingPAAE9syncStart_2atSo11AVAudioTimeCSayAaB_pG_SdtFZ">syncStart(_:at:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Starts an array of AKTimings at a position.</p>
+
+<p>Nodes are stopped, positions are set, then prepare is called (optional) on each node to allow
+for time consuming activities like reading from disk or buffering. Then, a future time is
+calculated using the last render timestamp (or now) + 2 render cycles to ensure synchronous start.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">syncStart</span><span class="p">(</span><span class="n">_</span> <span class="nv">nodes</span><span class="p">:</span> <span class="p">[</span><span class="kt">AKTiming</span><span class="p">],</span> <span class="n">at</span> <span class="nv">position</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AVAudioTime</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>nodes</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The nodes that will be synchronously started.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>position</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The position of the nodes when started.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The audioTime (in the future) that the nodes will be started at.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit8AKTimingPAAE15synchronizeWith5other2atyAaB_p_So11AVAudioTimeCSgtF"></a>
+                    <a name="//apple_ref/swift/Method/synchronizeWith(other:at:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit8AKTimingPAAE15synchronizeWith5other2atyAaB_p_So11AVAudioTimeCSgtF">synchronizeWith(other:at:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Starts playback with position synchronized to an already running node.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">synchronizeWith</span><span class="p">(</span><span class="nv">other</span><span class="p">:</span> <span class="kt">AKTiming</span><span class="p">,</span> <span class="n">at</span> <span class="nv">audioTime</span><span class="p">:</span> <span class="kt">AVAudioTime</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>other</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An already started AKTiming that position will be synchronized with.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>audioTime</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Future time in the audio render context that playback should begin.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2018-09-08)</p>
+          <p>&copy; 2018 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2018-10-30)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
