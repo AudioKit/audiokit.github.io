@@ -7,7 +7,7 @@
     <meta charset='utf-8'>
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" /> 
   </head>
   <body>
     <a title="AudioKit  Reference"></a>
@@ -24,8 +24,12 @@
         AudioKit  Reference
       </p>
     </div>
+
     <div class="content-wrapper">
       <nav class="sidebar">
+        <p align="center">
+          <input class="custom-search-input w-100 h-2x leading-h-2x outline-none text-solstice pl-2 rounded-auto bg-moon focus_bg-moon--1" id="docsearch" placeholder="Search the docs...">
+          </p>
         <ul class="nav-groups">
           <li class="nav-group-name">
             <a href="AudioKit Core.html">AudioKit Core</a>
@@ -1362,6 +1366,14 @@ We have videos of most of the playgrounds in action, so you don&rsquo;t need to 
         </section>
       </article>
     </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script> 
+    <script type="text/javascript"> docsearch({ 
+      apiKey: '9a6c1b3a9a8371a0c1b5aadc900ac8bd', 
+      indexName: 'audiokit', 
+      inputSelector: 'docsearch', 
+      debug: false // Set debug to true if you want to inspect the dropdown 
+      }); 
+    </script> 
   </body>
 </div>
 </html>
