@@ -21,15 +21,15 @@ last-review-date: 2016/06/20
 
 
 <p>
-Who doesn't like the beautiful music visualizations that you can find in your mediaplayer? Essentially, it is just the simplest and shortest amount of code that plot the waveform of the microphone input. The app dynamically draws the recorded sound waves.
+Who doesn't like the beautiful music visualizations that you can find in your mediaplayer? This example shows the simplest and shortest amount of code that can plot the waveform of the microphone input. The app dynamically draws the recorded sound waves.
 </p>
 
 <p>
-Before reading this, we highly recommend you to read a great tutorial on <a href="/examples/HelloWorld/">Hello World example</a> first. This example is included in AudioKit in the Examples directory with versions for iOS and OSX.
+Before reading this, we highly recommend you to read the great tutorial at <a href="/examples/HelloWorld/">Hello World example</a> first. This example is included in AudioKit in the Examples directory with versions for iOS and OSX.
 </p>
 
 <p>
-There're some major additions to this project. First we do create an instance of an AKMicrophone() which we will just call "mic" to catch the audio from the standard input device:
+There're some major additions to this project. First we create an instance of an AKMicrophone() which we will call "mic" to catch the audio from the standard input device:
 </p>
 {% highlight ruby %}
     let mic = AKMicrophone()
@@ -45,7 +45,7 @@ However, we can't just write:
 {% endhighlight %}
 
 <p>
-Cause we want to get both a frequency and a amplitude of the input. That's the reason we create an instance of AKFrequencyTracker() what will track the pitch of signal setting both the lower and the upper bound of frequency detection, respectively. And then we create an instance of AKBooster() which is AudioKit version of Apple’s Mixer Node. The gain parameter is an amplification factor (Default: 1, Minimum: 0).
+Because we want to get both a frequency and a amplitude of the input, we create an instance of AKFrequencyTracker() which will track the pitch of signal, setting both the lower and the upper bound of frequency detection. And then we create an instance of AKBooster() which is AudioKit's version of Apple’s Mixer Node. The gain parameter is an amplification factor (Default: 1, Minimum: 0).
 </p>
 
 {% highlight ruby %}
@@ -79,7 +79,7 @@ Next we just to need to set up a plot. So we need to create an instance of AKNod
 {% endhighlight %}
 
 <p>
-Finally, we use updateUI() to update the labels via getting both a frequency and a amplitude of the input using the properties of the tracker object (created instance of AKFrequencyTracker()):
+Finally, we use updateUI() to update the labels with the frequency and amplitude of the input using the properties of the tracker object (created instance of AKFrequencyTracker()):
 </p>
 
 {% highlight ruby %}
