@@ -1,29 +1,117 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>AKTable Class Reference</title>
-    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
-    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
-    <meta charset='utf-8'>
-    <script src="../js/jquery.min.js" defer></script>
-    <script src="../js/jazzy.js" defer></script>
-    
-  </head>
-  <body>
-    <a name="//apple_ref/swift/Class/AKTable" class="dashAnchor"></a>
     <a title="AKTable Class Reference"></a>
-    <header>
-      <div class="content-wrapper">
-        <p><a href="../index.html">AudioKit Docs</a> (100% documented)</p>
-        <p class="header-right"><a href="https://github.com/audiokit/AudioKit"><img src="../img/gh.png"/>View on GitHub</a></p>
-      </div>
-    </header>
+    <head>
+    
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <meta name="author" content="SemiColonWeb" />
+    
+        <!-- Stylesheets
+        ============================================= -->
+    
+        <script src="//audiokit.io/js/jazzy.js" defer></script>
+        <link rel="stylesheet" type="text/css" href="//audiokit.io/css/jazzy.css" />
+        <link rel="stylesheet" type="text/css" href=//audiokit.io/css/highlight.css" />
+        <script src=//audiokit.io/js/jquery.min.js" defer></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" /> 
+        <link rel="stylesheet" href="//audiokit.io/style.css">
+        <link rel="stylesheet" href="//audiokit.io/css/swiper.css">
+        <script>
+            function loadCSS(href,before,media){"use strict";var ss=window.document.createElement("link");var ref=before||window.document.getElementsByTagName("script")[0];var sheets=window.document.styleSheets;ss.rel="stylesheet";ss.href=href;ss.media="only x";ref.parentNode.insertBefore(ss,ref);ss.onloadcssdefined=function(cb){var defined;for(var i=0;i<sheets.length;i++){if(sheets[i].href&&sheets[i].href===ss.href){defined=true}}if(defined){cb()}else{setTimeout(function(){ss.onloadcssdefined(cb)})}};ss.onloadcssdefined(function(){ss.media=media||"all"});return ss}
+            loadCSS('//fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic');
+            loadCSS('//audiokit.io/css/font-icons.css');
+            loadCSS('//audiokit.io/css/dark.css');
+            loadCSS('//audiokit.io/css/responsive.css');
+            loadCSS('//audiokit.io/css/devices.min.css');
+            loadCSS('//audiokit.io/css/custom.css');
+            loadCSS('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+          </script>
+          <noscript><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" type="text/css"></noscript>
+    
+        <meta name="description" content="AudioKit Docs || AKTable">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+        <link rel="apple-touch-icon" href="/images/apple_touch_icon.png">
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <!--[if lt IE 9]>
+          <script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+    
+        <!-- External JavaScripts
+        ============================================= -->
+    
+        <!-- Document Title
+        ============================================= -->
+      <title>AudioKit Docs || AKTable</title>
+    
+    </head>
+    
+    
+    <body class="stretched no-transition">
+        <!-- Document Wrapper
+        ============================================= -->
+        <div id="wrapper" class="clearfix">
+    
+      <!-- Header
+    ============================================= -->
+    <header id="header" class="full-header">
+    
+        <div id="header-wrap">
+    
+            <div class="container clearfix">
+    
+                <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+    
+                <!-- Logo
+                ============================================= -->
+                <div id="logo">
+                    <a href="/" class="standard-logo" data-dark-logo="/images/logo-dark.png"><img src="/images/logo.png" alt="Canvas Logo"></a>
+                    <a href="/" class="retina-logo" data-dark-logo="/images/logo-dark@2x.png"><img src="/images/logo@2x.png" alt="Canvas Logo"></a>
+                </div><!-- #logo end -->
+    
+                <!-- Primary Navigation
+                ============================================= -->
+                <nav id="primary-menu" class="sub-title">
+                    <ul>
+        <li class="">
+        <a href="//audiokitpro.com"><div>Features</div><span>Blog and News</span></a>
+      </li>
+      <li class=" mega-menu">
+        <a href="/playgrounds/"><div>Playgrounds</div><span><i class="icon-bolt2"></i> Live Coding!</span></a>
+      </li>
+      <li class="current">
+        <a href="/examples/"><div>Examples</div><span>Sample Apps</span></a>
+      </li>
+      <li class="">
+        <a href="/audiobus/"><div>Audiobus</div><span>Inter-App Audio</span></a>
+      </li>
+      <li class=" mega-menu">
+        <a href="/docs/" target="_blank"><div>Docs</div><span><i class="icon-code"></i></span></a>
+      </li>
+      <li class="">
+        <a href="//audiokit.io/tests/"><div>Tests</div><span>Unit & C.I.</i></span></a>
+      </li>
+      <li class="">
+        <a href="/downloads/"><div>Download</div><span><i class="icon-code-fork"></i>us on <i class="icon-github-circled"></i></span></a>
+      </li>
+    </ul>
+    
+    
+                    <!-- Top Search
+                    ============================================= -->
+                    <div id="top-search">
+                        <input class="custom-search-input" id="docsearch" placeholder="Search the docs...">
+                    </div><!-- #top-search end -->
+    
+                </nav><!-- #primary-menu end -->
+    
+            </div>
+    
+        </div>
+    
+    </header><!-- #header end -->
+    
+    
     <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="../index.html">AudioKit Reference</a>
-        <img id="carat" src="../img/carat.png" />
-        AKTable Class Reference
-      </p>
+
     </div>
     <div class="content-wrapper">
       <nav class="sidebar">
@@ -56,7 +144,7 @@
                 <a href="../Protocols/AKInput.html">AKInput</a>
               </li>
               <li class="nav-group-task">
-                <a href="../AudioKit Core.html#/s:8AudioKit5AKLog8fullname4file4line_ySS_SSSiypdtF">AKLog(fullname:file:line:_:)</a>
+                <a href="../AudioKit Core.html#/s:8AudioKit5AKLog8fullname4file4line_ySS_SSSiypSgdtF">AKLog(fullname:file:line:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKMicrophoneTracker.html">AKMicrophoneTracker</a>
@@ -154,7 +242,7 @@
                 <a href="../Classes/AKMIDISampler.html">AKMIDISampler</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/AKMIDIStatus.html">AKMIDIStatus</a>
+                <a href="../Structs/AKMIDIStatus.html">AKMIDIStatus</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/AKMIDISystemCommand.html">AKMIDISystemCommand</a>
@@ -177,10 +265,10 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Sequencer.html">Sequencer</a>
+            <a href="../Sequencing.html">Sequencing</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/AKSequencer.html">AKSequencer</a>
+                <a href="../Classes/AKAppleSequencer.html">AKAppleSequencer</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/AKDuration.html">AKDuration</a>
@@ -743,16 +831,7 @@
                 <a href="../Classes/AKPlayer/BufferingType.html">– BufferingType</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/AKPlayer/Loop.html">– Loop</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/AKPlayer/Fade.html">– Fade</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/AKSampler.html">AKSampler</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/AKSamplePlayer.html">AKSamplePlayer</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKTimePitch.html">AKTimePitch</a>
@@ -956,6 +1035,18 @@
                 <a href="../Classes/AKAUPresetBuilder.html">AKAUPresetBuilder</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/AKAbstractPlayer.html">AKAbstractPlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKAbstractPlayer/RenderingMode.html">– RenderingMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKAbstractPlayer/Fade.html">– Fade</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKAbstractPlayer/Loop.html">– Loop</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKAudioPlayer.html">AKAudioPlayer</a>
               </li>
               <li class="nav-group-task">
@@ -968,10 +1059,19 @@
                 <a href="../Classes/AKAudioUnitManager/Notification.html">– Notification</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/AKAutoPanner.html">AKAutoPanner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKAutoPannerAudioUnit.html">AKAutoPannerAudioUnit</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKConverter.html">AKConverter</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKConverter/Options.html">– Options</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKConvolutionAudioUnit.html">AKConvolutionAudioUnit</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKDiskStreamer.html">AKDiskStreamer</a>
@@ -980,7 +1080,43 @@
                 <a href="../Classes/AKDynamicPlayer.html">AKDynamicPlayer</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/AKFMOscillatorFilterSynth.html">AKFMOscillatorFilterSynth</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFader.html">AKFader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFaderAudioUnit.html">AKFaderAudioUnit</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKInputConnection.html">AKInputConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDICallbackInstrument.html">AKMIDICallbackInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDIClockListener.html">AKMIDIClockListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDIMonoPolyListener.html">AKMIDIMonoPolyListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDIOMNIListener.html">AKMIDIOMNIListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDISystemRealTimeListener.html">AKMIDISystemRealTimeListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDISystemRealTimeListener/SRTState.html">– SRTState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDITempoListener.html">AKMIDITempoListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDITimeout.html">AKMIDITimeout</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMorphingOscillatorFilterSynth.html">AKMorphingOscillatorFilterSynth</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKNodeTiming.html">AKNodeTiming</a>
@@ -989,7 +1125,22 @@
                 <a href="../Classes/AKOfflineRenderNode.html">AKOfflineRenderNode</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/AKOscillatorFilterSynth.html">AKOscillatorFilterSynth</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPWMOscillatorFilterSynth.html">AKPWMOscillatorFilterSynth</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKPannerAudioUnit.html">AKPannerAudioUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPhaseDistortionOscillatorFilterSynth.html">AKPhaseDistortionOscillatorFilterSynth</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPhaseLockedVocoderAudioUnit.html">AKPhaseLockedVocoderAudioUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKRhodesPianoAudioUnit.html">AKRhodesPianoAudioUnit</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKSamplerAudioUnit.html">AKSamplerAudioUnit</a>
@@ -998,7 +1149,31 @@
                 <a href="../Classes/AKScheduledAction.html">AKScheduledAction</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/AKSequencer.html">AKSequencer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSequencerTrack.html">AKSequencerTrack</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKShakerAudioUnit.html">AKShakerAudioUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKStereoDelay.html">AKStereoDelay</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKStereoDelayAudioUnit.html">AKStereoDelayAudioUnit</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/AKStereoFieldLimiterAudioUnit.html">AKStereoFieldLimiterAudioUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSynth.html">AKSynth</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSynthAudioUnit.html">AKSynthAudioUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTubularBellsAudioUnit.html">AKTubularBellsAudioUnit</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AKTuningTableBase.html">AKTuningTableBase</a>
@@ -1012,6 +1187,9 @@
               <li class="nav-group-task">
                 <a href="../Classes/AKWaveTable.html">AKWaveTable</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MIDIHelper.html">MIDIHelper</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -1023,13 +1201,28 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Other Enums.html">Other Enumerations</a>
+            <a href="../Other Enumerations.html">Other Enumerations</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AKMIDIMetaEventType.html">AKMIDIMetaEventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AKMIDIStatusType.html">AKMIDIStatusType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AKMIDISystemCommandType.html">AKMIDISystemCommandType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AmplitudeTrackingMode.html">AmplitudeTrackingMode</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Enums/ClipMergeError.html">ClipMergeError</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/ClipRecordingResult.html">ClipRecordingResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MIDITimeFormat.html">MIDITimeFormat</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/SampleTriggerMode.html">SampleTriggerMode</a>
@@ -1040,13 +1233,19 @@
             <a href="../Other Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Extensions/AUParameter.html">AUParameter</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Extensions/AUParameterTree.html">AUParameterTree</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/ClosedRange.html">ClosedRange</a>
+                <a href="../Extensions/AudioUnitParameterOptions.html">AudioUnitParameterOptions</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/Collection.html">Collection</a>
+                <a href="../Extensions/CGRect.html">CGRect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ClosedRange.html">ClosedRange</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/Double.html">Double</a>
@@ -1056,6 +1255,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/MIDIByte.html">MIDIByte</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/Notification.html">Notification</a>
@@ -1110,6 +1312,21 @@
                 <a href="../Protocols/AKAudioUnitManagerDelegate.html">AKAudioUnitManagerDelegate</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols/AKAutomatable.html">AKAutomatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKMIDIBeatObserver.html">AKMIDIBeatObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKMIDIMessage.html">AKMIDIMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKMIDISystemRealTimeObserver.html">AKMIDISystemRealTimeObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKMIDITempoObserver.html">AKMIDITempoObserver</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/AUComponent.html">AUComponent</a>
               </li>
               <li class="nav-group-task">
@@ -1121,8 +1338,20 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Other Structs.html">Other Structures</a>
+            <a href="../Other Structures.html">Other Structures</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/AKMIDIFile.html">AKMIDIFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Structs.html#/s:8AudioKit20AKMIDIFileChunkEventV">AKMIDIFileChunkEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AKMIDIFileTrack.html">AKMIDIFileTrack</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AKMIDIMetaEvent.html">AKMIDIMetaEvent</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Structs/AKMIDINoteData.html">AKMIDINoteData</a>
               </li>
@@ -1133,7 +1362,7 @@
                 <a href="../Structs/AKTimeSignature/TimeSignatureBottomValue.html">– TimeSignatureBottomValue</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Other Structs.html#/s:8AudioKit14AppleMIDIEventV">AppleMIDIEvent</a>
+                <a href="../Structs/AppleMIDIEvent.html">AppleMIDIEvent</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/AudioUnitPropertyListener.html">AudioUnitPropertyListener</a>
@@ -1145,15 +1374,21 @@
                 <a href="../Structs/EndpointInfo.html">EndpointInfo</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Other Structs.html#/s:8AudioKit22MIDIProgramChangeEventV">MIDIProgramChangeEvent</a>
+                <a href="../Structs/MIDIFileTrackChunk.html">MIDIFileTrackChunk</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MIDIProgramChangeEvent.html">MIDIProgramChangeEvent</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Other Typealiases.html">Other Type Aliases</a>
+            <a href="../Other Type Aliases.html">Other Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Other Typealiases.html#/s:8AudioKit11AKCCallbacka">AKCCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit15AKCMIDICallbacka">AKCMIDICallback</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Other Typealiases.html#/s:8AudioKit10AKCallbacka">AKCallback</a>
@@ -1163,6 +1398,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Other Typealiases.html#/s:8AudioKit3BPMa">BPM</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit7BPMTypea">BPMType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Other Typealiases.html#/s:8AudioKit23ClipRecordingCompletiona">ClipRecordingCompletion</a>
@@ -1198,8 +1436,7 @@
             <h1>AKTable</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">AKTable</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">MutableCollection</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AKTable</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">MutableCollection</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
 
                 </div>
               </div>
@@ -1568,9 +1805,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8AudioKit7AKTableC4fileAcA11AKAudioFileC_tcfc"></a>
+                    <a name="/c:@M@AudioKit@objc(cs)AKTable(im)initWithFile:"></a>
                     <a name="//apple_ref/swift/Method/init(file:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8AudioKit7AKTableC4fileAcA11AKAudioFileC_tcfc">init(file:)</a>
+                    <a class="token" href="#/c:@M@AudioKit@objc(cs)AKTable(im)initWithFile:">init(file:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1585,7 +1822,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">file</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKAudioFile.html">AKAudioFile</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">file</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKAudioFile.html">AKAudioFile</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1649,7 +1887,7 @@ Parameters:</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">fromAudioFile</span><span class="p">(</span><span class="n">_</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKTable</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">fromAudioFile</span><span class="p">(</span><span class="n">_</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKTable</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1681,7 +1919,7 @@ Parameters:</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">writeToAudioFile</span><span class="p">(</span><span class="n">_</span> <span class="nv">fileName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">writeToAudioFile</span><span class="p">(</span><span class="n">_</span> <span class="nv">fileName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -1723,7 +1961,7 @@ This method is <q>pitch</q>-based, which is not the only way to distribute harmo
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">harmonicPitchRange</span><span class="p">(</span><span class="nv">rootFrequency</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">8.175</span><span class="n">_798_915_643_75</span><span class="p">,</span> <span class="nv">octaveStepSize</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[(</span><span class="kt">Double</span><span class="p">,</span> <span class="kt">Int</span><span class="p">)]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">harmonicPitchRange</span><span class="p">(</span><span class="nv">rootFrequency</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">8.175_7</span><span class="mi">98_915_643_75</span><span class="p">,</span> <span class="nv">octaveStepSize</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[(</span><span class="kt">Double</span><span class="p">,</span> <span class="kt">Int</span><span class="p">)]</span></code></pre>
 
                         </div>
                       </div>
@@ -1762,7 +2000,7 @@ Parameters:</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">harmonicFrequencyRange</span><span class="p">(</span><span class="nv">f0</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">130.812</span><span class="n">_782_650_3</span><span class="p">,</span> <span class="nv">f1</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">2_093</span><span class="o">.</span><span class="mo">004_522_404</span><span class="n">_8</span><span class="p">,</span> <span class="nv">wavetableCount</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">12</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[(</span><span class="kt">Double</span><span class="p">,</span> <span class="kt">Int</span><span class="p">)]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">harmonicFrequencyRange</span><span class="p">(</span><span class="nv">f0</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">130.812_7</span><span class="mi">82_650_3</span><span class="p">,</span> <span class="nv">f1</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mf">2_093.004_5</span><span class="mi">22_404_8</span><span class="p">,</span> <span class="nv">wavetableCount</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">12</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[(</span><span class="kt">Double</span><span class="p">,</span> <span class="kt">Int</span><span class="p">)]</span></code></pre>
 
                         </div>
                       </div>
@@ -2086,7 +2324,7 @@ Parameters:</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@inline(__always)</span>
+                          <pre class="highlight swift"><code><span class="kd">@inline</span><span class="p">(</span><span class="n">__always</span><span class="p">)</span>
 <span class="kd">public</span> <span class="kd">func</span> <span class="nf">index</span><span class="p">(</span><span class="n">before</span> <span class="nv">i</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKTable.html#/s:Sl5IndexQa">Index</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/AKTable.html#/s:Sl5IndexQa">Index</a></span></code></pre>
 
                         </div>
@@ -2113,7 +2351,7 @@ Parameters:</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@inline(__always)</span>
+                          <pre class="highlight swift"><code><span class="kd">@inline</span><span class="p">(</span><span class="n">__always</span><span class="p">)</span>
 <span class="kd">public</span> <span class="kd">func</span> <span class="nf">index</span><span class="p">(</span><span class="n">after</span> <span class="nv">i</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKTable.html#/s:Sl5IndexQa">Index</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/AKTable.html#/s:Sl5IndexQa">Index</a></span></code></pre>
 
                         </div>
@@ -2140,7 +2378,7 @@ Parameters:</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@inline(__always)</span>
+                          <pre class="highlight swift"><code><span class="kd">@inline</span><span class="p">(</span><span class="n">__always</span><span class="p">)</span>
 <span class="kd">public</span> <span class="kd">func</span> <span class="nf">index</span><span class="p">(</span><span class="n">_</span> <span class="nv">i</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKTable.html#/s:Sl5IndexQa">Index</a></span><span class="p">,</span> <span class="n">offsetBy</span> <span class="nv">n</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKTable.html#/s:8AudioKit7AKTableC13IndexDistancea">IndexDistance</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/AKTable.html#/s:Sl5IndexQa">Index</a></span></code></pre>
 
                         </div>
@@ -2167,7 +2405,7 @@ Parameters:</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@inline(__always)</span>
+                          <pre class="highlight swift"><code><span class="kd">@inline</span><span class="p">(</span><span class="n">__always</span><span class="p">)</span>
 <span class="kd">public</span> <span class="kd">func</span> <span class="nf">formIndex</span><span class="p">(</span><span class="n">after</span> <span class="nv">i</span><span class="p">:</span> <span class="k">inout</span> <span class="kt"><a href="../Classes/AKTable.html#/s:Sl5IndexQa">Index</a></span><span class="p">)</span></code></pre>
 
                         </div>
@@ -2194,7 +2432,7 @@ Parameters:</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@inline(__always)</span>
+                          <pre class="highlight swift"><code><span class="kd">@inline</span><span class="p">(</span><span class="n">__always</span><span class="p">)</span>
 <span class="kd">public</span> <span class="kd">func</span> <span class="nf">distance</span><span class="p">(</span><span class="n">from</span> <span class="nv">start</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKTable.html#/s:Sl5IndexQa">Index</a></span><span class="p">,</span> <span class="n">to</span> <span class="nv">end</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKTable.html#/s:Sl5IndexQa">Index</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/AKTable.html#/s:8AudioKit7AKTableC13IndexDistancea">IndexDistance</a></span></code></pre>
 
                         </div>
@@ -2206,12 +2444,152 @@ Parameters:</p>
             </div>
           </section>
         </section>
-        <section id="footer">
-          <p>&copy; 2018 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2018-10-30)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
-        </section>
-      </article>
+                    <!-- Footer
+                ============================================= -->
+                <footer id="footer" class="dark" style="background: url('/images/footer-bg.jpg') repeat; background-size: 100% 100%;">
+        
+                    <div class="container">
+        
+                        <!-- Footer Widgets
+                        ============================================= -->
+                        <div class="footer-widgets-wrap clearfix">
+        
+                            <div class="col_two_third footer">
+        
+                                <div class="widget clearfix">
+        
+                                    <img src="/images/footer-widget-logo.png" alt="footer-logo" class="alignleft" style="margin-top: 8px; padding-right: 18px; border-right: 1px solid #4A4A4A;">
+        
+                                    <p>We are dedicated to building and supporting the most simple-to-learn, and yet most powerful toolkit for audio <strong>synthesis</strong>, <strong>processing</strong> and <strong>analysis</strong>.</p>
+        
+                                    <div class="line" style="margin: 30px 0;"></div>
+        
+                                    <p><strong>Latest News:</strong> <a href="/downloads/">AudioKit Version 4.5.5 Released</a></p>
+        
+                                </div>
+        
+                            </div>
+        
+                            <div class="col_one_third col_last footer">
+        
+                                <div class="widget clearfix" style="margin-bottom: -20px;">
+        
+                                    <div class="row">
+        
+                                        <div class="col-xs-6 bottommargin-sm">
+                                            <div class="counter counter-small" style="color: #DCEAF8" id="watchers"></div>
+                                            <h5 class="nobottommargin">Stars</h5>
+                                        </div>
+        
+                                        <div class="col-xs-6 bottommargin-sm">
+                                            <div class="counter counter-small" style="color: #CCDAE8" id="forks"></div>
+                                            <h5 class="nobottommargin">Forks</h5>
+                                        </div>
+        
+                                    </div>
+        
+                                </div>
+        
+        
+        
+                                <div class="widget clearfix" style="margin-bottom: -20px;">
+        
+                                    <div class="row">
+        
+                                        <div class="col-xs-6 clearfix bottommargin-sm">
+                                            <a href="https://twitter.com/AudioKitMan" class="social-icon si-dark si-colored si-twitter nobottommargin" style="margin-right: 10px;">
+                                                <i class="icon-twitter"></i>
+                                                <i class="icon-twitter"></i>
+                                            </a>
+                                            <a href="https://twitter.com/AudioKitMan"><small style="display: block; margin-top: 3px;"><strong>Follow us</strong><br>on Twitter</small></a>
+                                        </div>
+                                        <div class="col-xs-6 clearfix">
+                                            <a href="https://github.com/audiokit/AudioKit" class="social-icon si-dark si-colored si-github nobottommargin" style="margin-right: 10px;">
+                                                <i class="icon-github-alt"></i>
+                                                <i class="icon-github-alt"></i>
+                                            </a>
+                                            <a href="https://github.com/audiokit/AudioKit"><small style="display: block; margin-top: 3px;"><strong>Fork us</strong><br>on GitHub</small></a>
+                                        </div>
+        
+                                    </div>
+        
+                                </div>
+        
+                            </div>
+        
+                        </div><!-- .footer-widgets-wrap end -->
+        
+                    </div>
+        
+                    <!-- Copyrights
+                    ============================================= -->
+                    <div id="copyrights">
+        
+                        <div class="container clearfix">
+        
+                            <div class="col_half">
+                                <div class="copyrights-menu copyright-links clearfix">
+                                    <a href="/">Home</a>/<a href="/about/">About</a>/<a href="/press/">Press</a>/<a href="/downloads/">Downloads</a>/<a href="https://groups.google.com/forum/#!forum/audiokit">Forum</a>
+                                </div>
+                                AudioKit is © 2019 Aurelius Prochazka under the terms of the <a href="https://github.com/audiokit/AudioKit/blob/develop/LICENSE">MIT License</a>.
+                            </div>
+        
+                            <div class="col_half col_last tright">
+                                <div class="fright clearfix">
+        
+                                    <a href="//twitter.com/AudioKitMan" class="social-icon si-small si-borderless nobottommargin si-twitter">
+                                        <i class="icon-twitter"></i>
+                                        <i class="icon-twitter"></i>
+                                    </a>
+        
+                                    <a href="https://groups.google.com/forum/#!forum/audiokit" class="social-icon si-small si-borderless nobottommargin si-gplus">
+                                        <i class="icon-google"></i>
+                                        <i class="icon-google"></i>
+                                    </a>
+        
+                                    <a href="https://vimeo.com/audiokit" class="social-icon si-small si-borderless nobottommargin si-vimeo">
+                                        <i class="icon-vimeo"></i>
+                                        <i class="icon-vimeo"></i>
+                                    </a>
+        
+                                    <a href="https://github.com/audiokit/AudioKit" class="social-icon si-small si-borderless nobottommargin si-github">
+                                        <i class="icon-github-circled"></i>
+                                        <i class="icon-github-circled"></i>
+                                    </a>
+        
+                                </div>
+                            </div>
+        
+                        </div>
+        
+                    </div><!-- #copyrights end -->
+        
+                </footer><!-- #footer end -->
+        
+        
+        <script src="/js/devices.js"></script>
+        <script>
+        request = new XMLHttpRequest();
+        request.open('GET', "https://api.github.com/repos/audiokit/AudioKit", true);
+        
+        request.onload = function() {
+          if (request.status >= 200 && request.status < 400) {
+            // Success!
+            stats = JSON.parse(request.responseText);
+            document.getElementById('watchers').innerHTML = stats.watchers_count;
+            document.getElementById('forks').innerHTML = stats.forks_count;
+          }
+        };
+        
+        request.send();
+        </script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script> 
+            <script type="text/javascript"> docsearch({ 
+              apiKey: '9a6c1b3a9a8371a0c1b5aadc900ac8bd', 
+              indexName: 'audiokit', 
+              inputSelector: '.custom-search-input', 
+              debug: false // Set debug to true if you want to inspect the dropdown 
+              }); 
+            </script>       </article>
     </div>
-  </body>
-</div>
-</html>
+ 
