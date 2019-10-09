@@ -7,14 +7,14 @@
     <meta charset='utf-8'>
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" /> 
+    
   </head>
   <body>
     <a title="AudioKit  Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="index.html">AudioKit Docs</a> (100% documented)</p>
-        <p class="header-right"><a href="https://github.com/audiokit/AudioKit"><img src="img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="https://github.com/AudioKit/AudioKit"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -24,12 +24,8 @@
         AudioKit  Reference
       </p>
     </div>
-
     <div class="content-wrapper">
       <nav class="sidebar">
-        <p align="center">
-          <input class="custom-search-input w-100 h-2x leading-h-2x outline-none text-solstice pl-2 rounded-auto bg-moon focus_bg-moon--1" id="docsearch" placeholder="Search the docs...">
-          </p>
         <ul class="nav-groups">
           <li class="nav-group-name">
             <a href="AudioKit Core.html">AudioKit Core</a>
@@ -59,7 +55,7 @@
                 <a href="Protocols/AKInput.html">AKInput</a>
               </li>
               <li class="nav-group-task">
-                <a href="AudioKit Core.html#/s:8AudioKit5AKLog8fullname4file4line_ySS_SSSiypdtF">AKLog(fullname:file:line:_:)</a>
+                <a href="AudioKit Core.html#/s:8AudioKit5AKLog8fullname4file4line_ySS_SSSiypSgdtF">AKLog(fullname:file:line:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKMicrophoneTracker.html">AKMicrophoneTracker</a>
@@ -157,7 +153,7 @@
                 <a href="Classes/AKMIDISampler.html">AKMIDISampler</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/AKMIDIStatus.html">AKMIDIStatus</a>
+                <a href="Structs/AKMIDIStatus.html">AKMIDIStatus</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/AKMIDISystemCommand.html">AKMIDISystemCommand</a>
@@ -180,10 +176,10 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Sequencer.html">Sequencer</a>
+            <a href="Sequencing.html">Sequencing</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/AKSequencer.html">AKSequencer</a>
+                <a href="Classes/AKAppleSequencer.html">AKAppleSequencer</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/AKDuration.html">AKDuration</a>
@@ -746,16 +742,7 @@
                 <a href="Classes/AKPlayer/BufferingType.html">– BufferingType</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/AKPlayer/Loop.html">– Loop</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/AKPlayer/Fade.html">– Fade</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Classes/AKSampler.html">AKSampler</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/AKSamplePlayer.html">AKSamplePlayer</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKTimePitch.html">AKTimePitch</a>
@@ -959,6 +946,18 @@
                 <a href="Classes/AKAUPresetBuilder.html">AKAUPresetBuilder</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/AKAbstractPlayer.html">AKAbstractPlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKAbstractPlayer/RenderingMode.html">– RenderingMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKAbstractPlayer/Fade.html">– Fade</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKAbstractPlayer/Loop.html">– Loop</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/AKAudioPlayer.html">AKAudioPlayer</a>
               </li>
               <li class="nav-group-task">
@@ -971,10 +970,19 @@
                 <a href="Classes/AKAudioUnitManager/Notification.html">– Notification</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/AKAutoPanner.html">AKAutoPanner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKAutoPannerAudioUnit.html">AKAutoPannerAudioUnit</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/AKConverter.html">AKConverter</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKConverter/Options.html">– Options</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKConvolutionAudioUnit.html">AKConvolutionAudioUnit</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKDiskStreamer.html">AKDiskStreamer</a>
@@ -983,7 +991,43 @@
                 <a href="Classes/AKDynamicPlayer.html">AKDynamicPlayer</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/AKFMOscillatorFilterSynth.html">AKFMOscillatorFilterSynth</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKFader.html">AKFader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKFaderAudioUnit.html">AKFaderAudioUnit</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/AKInputConnection.html">AKInputConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKMIDICallbackInstrument.html">AKMIDICallbackInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKMIDIClockListener.html">AKMIDIClockListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKMIDIMonoPolyListener.html">AKMIDIMonoPolyListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKMIDIOMNIListener.html">AKMIDIOMNIListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKMIDISystemRealTimeListener.html">AKMIDISystemRealTimeListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKMIDISystemRealTimeListener/SRTState.html">– SRTState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKMIDITempoListener.html">AKMIDITempoListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKMIDITimeout.html">AKMIDITimeout</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKMorphingOscillatorFilterSynth.html">AKMorphingOscillatorFilterSynth</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKNodeTiming.html">AKNodeTiming</a>
@@ -992,7 +1036,22 @@
                 <a href="Classes/AKOfflineRenderNode.html">AKOfflineRenderNode</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/AKOscillatorFilterSynth.html">AKOscillatorFilterSynth</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKPWMOscillatorFilterSynth.html">AKPWMOscillatorFilterSynth</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/AKPannerAudioUnit.html">AKPannerAudioUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKPhaseDistortionOscillatorFilterSynth.html">AKPhaseDistortionOscillatorFilterSynth</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKPhaseLockedVocoderAudioUnit.html">AKPhaseLockedVocoderAudioUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKRhodesPianoAudioUnit.html">AKRhodesPianoAudioUnit</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKSamplerAudioUnit.html">AKSamplerAudioUnit</a>
@@ -1001,7 +1060,31 @@
                 <a href="Classes/AKScheduledAction.html">AKScheduledAction</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/AKSequencer.html">AKSequencer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKSequencerTrack.html">AKSequencerTrack</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKShakerAudioUnit.html">AKShakerAudioUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKStereoDelay.html">AKStereoDelay</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKStereoDelayAudioUnit.html">AKStereoDelayAudioUnit</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/AKStereoFieldLimiterAudioUnit.html">AKStereoFieldLimiterAudioUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKSynth.html">AKSynth</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKSynthAudioUnit.html">AKSynthAudioUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AKTubularBellsAudioUnit.html">AKTubularBellsAudioUnit</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKTuningTableBase.html">AKTuningTableBase</a>
@@ -1014,6 +1097,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AKWaveTable.html">AKWaveTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MIDIHelper.html">MIDIHelper</a>
               </li>
             </ul>
           </li>
@@ -1029,10 +1115,25 @@
             <a href="Other Enums.html">Other Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Enums/AKMIDIMetaEventType.html">AKMIDIMetaEventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AKMIDIStatusType.html">AKMIDIStatusType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AKMIDISystemCommandType.html">AKMIDISystemCommandType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AmplitudeTrackingMode.html">AmplitudeTrackingMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Enums/ClipMergeError.html">ClipMergeError</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/ClipRecordingResult.html">ClipRecordingResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/MIDITimeFormat.html">MIDITimeFormat</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/SampleTriggerMode.html">SampleTriggerMode</a>
@@ -1043,13 +1144,19 @@
             <a href="Other Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Extensions/AUParameter.html">AUParameter</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Extensions/AUParameterTree.html">AUParameterTree</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/ClosedRange.html">ClosedRange</a>
+                <a href="Extensions/AudioUnitParameterOptions.html">AudioUnitParameterOptions</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/Collection.html">Collection</a>
+                <a href="Extensions/CGRect.html">CGRect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/ClosedRange.html">ClosedRange</a>
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/Double.html">Double</a>
@@ -1059,6 +1166,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/MIDIByte.html">MIDIByte</a>
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/Notification.html">Notification</a>
@@ -1113,6 +1223,21 @@
                 <a href="Protocols/AKAudioUnitManagerDelegate.html">AKAudioUnitManagerDelegate</a>
               </li>
               <li class="nav-group-task">
+                <a href="Protocols/AKAutomatable.html">AKAutomatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/AKMIDIBeatObserver.html">AKMIDIBeatObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/AKMIDIMessage.html">AKMIDIMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/AKMIDISystemRealTimeObserver.html">AKMIDISystemRealTimeObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/AKMIDITempoObserver.html">AKMIDITempoObserver</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Protocols/AUComponent.html">AUComponent</a>
               </li>
               <li class="nav-group-task">
@@ -1127,6 +1252,18 @@
             <a href="Other Structs.html">Other Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Structs/AKMIDIFile.html">AKMIDIFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Structs.html#/s:8AudioKit20AKMIDIFileChunkEventV">AKMIDIFileChunkEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AKMIDIFileTrack.html">AKMIDIFileTrack</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AKMIDIMetaEvent.html">AKMIDIMetaEvent</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Structs/AKMIDINoteData.html">AKMIDINoteData</a>
               </li>
               <li class="nav-group-task">
@@ -1136,7 +1273,7 @@
                 <a href="Structs/AKTimeSignature/TimeSignatureBottomValue.html">– TimeSignatureBottomValue</a>
               </li>
               <li class="nav-group-task">
-                <a href="Other Structs.html#/s:8AudioKit14AppleMIDIEventV">AppleMIDIEvent</a>
+                <a href="Structs/AppleMIDIEvent.html">AppleMIDIEvent</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/AudioUnitPropertyListener.html">AudioUnitPropertyListener</a>
@@ -1148,7 +1285,10 @@
                 <a href="Structs/EndpointInfo.html">EndpointInfo</a>
               </li>
               <li class="nav-group-task">
-                <a href="Other Structs.html#/s:8AudioKit22MIDIProgramChangeEventV">MIDIProgramChangeEvent</a>
+                <a href="Structs/MIDIFileTrackChunk.html">MIDIFileTrackChunk</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/MIDIProgramChangeEvent.html">MIDIProgramChangeEvent</a>
               </li>
             </ul>
           </li>
@@ -1159,6 +1299,9 @@
                 <a href="Other Typealiases.html#/s:8AudioKit11AKCCallbacka">AKCCallback</a>
               </li>
               <li class="nav-group-task">
+                <a href="Other Typealiases.html#/s:8AudioKit15AKCMIDICallbacka">AKCMIDICallback</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Other Typealiases.html#/s:8AudioKit10AKCallbacka">AKCallback</a>
               </li>
               <li class="nav-group-task">
@@ -1166,6 +1309,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Other Typealiases.html#/s:8AudioKit3BPMa">BPM</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other Typealiases.html#/s:8AudioKit7BPMTypea">BPMType</a>
               </li>
               <li class="nav-group-task">
                 <a href="Other Typealiases.html#/s:8AudioKit23ClipRecordingCompletiona">ClipRecordingCompletion</a>
@@ -1199,13 +1345,14 @@
         <section>
           <section class="section">
             
-            <h1 id='audiokit-v4-5' class='heading'>AudioKit V4.5</h1>
+            <h1 id='audiokit-v4-9' class='heading'>AudioKit V4.9</h1>
 
 <p><a href="https://travis-ci.org/AudioKit/AudioKit"><img src="https://travis-ci.org/AudioKit/AudioKit.svg" alt="Build Status"></a>
 <a href="https://github.com/AudioKit/AudioKit/blob/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/AudioKit.svg?style=flat" alt="License"></a>
 <a href="https://cocoapods.org/pods/AudioKit"><img src="https://img.shields.io/cocoapods/v/AudioKit.svg?style=flat" alt="CocoaPods compatible"></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
 <a href="http://cocoadocs.org/docsets/AudioKit"><img src="https://img.shields.io/cocoapods/p/AudioKit.svg?style=flat" alt="Platform"></a>
-<img src="https://img.shields.io/badge/in-swift4.0-orange.svg">
+<img src="https://img.shields.io/badge/in-swift5.0-orange.svg">
 <a href="https://houndci.com"><img src="https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg" alt="Reviewed by Hound"></a>
 <a href="http://twitter.com/AudioKitMan"><img src="https://img.shields.io/twitter/follow/AudioKitMan.svg?style=social" alt="Twitter Follow"></a></p>
 
@@ -1252,6 +1399,8 @@
 <p>If you do not need the UI components, you can select just the Core pod, like so:</p>
 <pre class="highlight plaintext"><code>   pod 'AudioKit/Core'
 </code></pre>
+
+<p>You can also use <a href="https://github.com/Carthage/Carthage">Carthage</a> (v0.30 or higher) to install our precompiled static frameworks in your project.</p>
 <h2 id='example-code' class='heading'>Example Code</h2>
 
 <p>There are three Hello World projects, one for each of the Apple platforms: iOS, macOS, and tvOS. They play oscillators and display waveforms. The examples rely on AudioKit&rsquo;s frameworks so you can either download precompiled frameworks or <a href="https://github.com/audiokit/AudioKit/blob/master/Frameworks/README.md">build them yourself</a>    .</p>
@@ -1361,19 +1510,11 @@ We have videos of most of the playgrounds in action, so you don&rsquo;t need to 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2018-10-30)</p>
+          <p>&copy; 2019 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2019-10-09)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script> 
-    <script type="text/javascript"> docsearch({ 
-      apiKey: '9a6c1b3a9a8371a0c1b5aadc900ac8bd', 
-      indexName: 'audiokit', 
-      inputSelector: 'docsearch', 
-      debug: false // Set debug to true if you want to inspect the dropdown 
-      }); 
-    </script> 
   </body>
 </div>
 </html>
