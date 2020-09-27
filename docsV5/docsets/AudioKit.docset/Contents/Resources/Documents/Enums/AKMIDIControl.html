@@ -1,0 +1,3660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AKMIDIControl Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Enum/AKMIDIControl" class="dashAnchor"></a>
+    <a title="AKMIDIControl Enumeration Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">AudioKit Docs</a> (66% documented)</p>
+        <p class="header-right"><a href="https://github.com/AudioKit/AudioKit"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">AudioKit Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        AKMIDIControl Enumeration Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../AudioKit%20Core.html">AudioKit Core</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKCallbackInstrument.html">AKCallbackInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKComponent.html">AKComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKCustomUgen.html">AKCustomUgen</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AKDevice.html">AKDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKInput.html">AKInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMicrophoneTracker.html">AKMicrophoneTracker</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKNodeRecorder.html">AKNodeRecorder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKOutput.html">AKOutput</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPeriodicFunction.html">AKPeriodicFunction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSettings.html">AKSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSettings/BufferLength.html">– BufferLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSettings/RampType.html">– RampType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSettings/SessionCategory.html">– SessionCategory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/AKSettings.html">AKSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTable.html">AKTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AKTableType.html">AKTableType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKTiming.html">AKTiming</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../AudioKit%20Core.html#/s:8AudioKit5AKTryyyyyKcKF">AKTry(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../AudioKit%20Core.html#/s:8AudioKit10CheckErroryys5Int32VF">CheckError(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../AudioKit%20Core.html#/s:8AudioKit6fourCCys6UInt32VSSF">fourCC(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../AudioKit%20Core.html#/s:8AudioKit3gggoiyAA7AKInput_pAA8AKOutput_p_AaC_ptF">&gt;&gt;&gt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../AudioKit%20Core.html#/s:8AudioKit3gggoiySayAA7AKInput_pGAA8AKOutput_p_ADtF">&gt;&gt;&gt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../AudioKit%20Core.html#/s:8AudioKit3gggoiyAA7AKInput_pSayAA8AKOutput_pG_AaC_ptF">&gt;&gt;&gt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../AudioKit%20Core.html#/s:8AudioKit3gggoiyAA7AKInput_pAA8AKOutput_p_AA0D10ConnectionCtF">&gt;&gt;&gt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../AudioKit%20Core.html#/s:8AudioKit3gggoiySayAA7AKInput_pGAA8AKOutput_p_SayAA0D10ConnectionCGtF">&gt;&gt;&gt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../AudioKit%20Core.html#/s:8AudioKit3gggoiyyAA8AKOutput_p_So22AVAudioConnectionPointCtF">&gt;&gt;&gt;(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../MIDI.html">MIDI</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDI.html">AKMIDI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../MIDI.html#/s:8AudioKit14AKMIDICallbacka">AKMIDICallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDICallbackInstrument.html">AKMIDICallbackInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDIClockListener.html">AKMIDIClockListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AKMIDIControl.html">AKMIDIControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AKMIDIEvent.html">AKMIDIEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AKMIDIFile.html">AKMIDIFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../MIDI.html#/s:8AudioKit20AKMIDIFileChunkEventV">AKMIDIFileChunkEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AKMIDIFileTrack.html">AKMIDIFileTrack</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDIInstrument.html">AKMIDIInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKMIDIListener.html">AKMIDIListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AKMIDIMetaEvent.html">AKMIDIMetaEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AKMIDIMetaEventType.html">AKMIDIMetaEventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDIMonoPolyListener.html">AKMIDIMonoPolyListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDINode.html">AKMIDINode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AKMIDINoteData.html">AKMIDINoteData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDIOMNIListener.html">AKMIDIOMNIListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDISampler.html">AKMIDISampler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AKMIDIStatus.html">AKMIDIStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AKMIDIStatusType.html">AKMIDIStatusType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AKMIDISystemCommand.html">AKMIDISystemCommand</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AKMIDISystemCommandType.html">AKMIDISystemCommandType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDISystemRealTimeListener.html">AKMIDISystemRealTimeListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDISystemRealTimeListener/SRTState.html">– SRTState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDITempoListener.html">AKMIDITempoListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKMIDITransformer.html">AKMIDITransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MIDIFileTrackChunk.html">MIDIFileTrackChunk</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/MIDIPacket.html">MIDIPacket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/MIDIPacketList.html">MIDIPacketList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MIDIProgramChangeEvent.html">MIDIProgramChangeEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MIDITimeFormat.html">MIDITimeFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKBluetoothMIDIButton.html">AKBluetoothMIDIButton</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Sequencing.html">Sequencing</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKAppleSequencer.html">AKAppleSequencer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AKDuration.html">AKDuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMusicTrack.html">AKMusicTrack</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSequencer.html">AKSequencer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSequencerTrack.html">AKSequencerTrack</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Tuning.html">Tuning</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKTuningTable.html">AKTuningTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTuningTableBase.html">AKTuningTableBase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTuningTableDelta12ET.html">AKTuningTableDelta12ET</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTuningTableETNN.html">AKTuningTableETNN</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Nodes.html">Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKNode.html">AKNode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKPolyphonic.html">AKPolyphonic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPolyphonicNode.html">AKPolyphonicNode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKToggleable.html">AKToggleable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKOperationGenerator.html">AKOperationGenerator</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Analysis%20Nodes.html">Analysis Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKFrequencyTracker.html">AKFrequencyTracker</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Delay%20Nodes.html">Delay Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKDelay.html">AKDelay</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKStereoDelay.html">AKStereoDelay</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKStereoDelay/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKVariableDelay.html">AKVariableDelay</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKVariableDelay/InternalAU.html">– InternalAU</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Distortion%20Nodes.html">Distortion Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKBitCrusher.html">AKBitCrusher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKBitCrusher/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKClipper.html">AKClipper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKClipper/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDecimator.html">AKDecimator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDistortion.html">AKDistortion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKRingModulator.html">AKRingModulator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTanhDistortion.html">AKTanhDistortion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTanhDistortion/InternalAU.html">– InternalAU</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Dynamics%20Nodes.html">Dynamics Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKCompressor.html">AKCompressor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDynamicsProcessor.html">AKDynamicsProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDynamicRangeCompressor.html">AKDynamicRangeCompressor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDynamicRangeCompressor/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDynaRageCompressor.html">AKDynaRageCompressor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDynaRageCompressor/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKExpander.html">AKExpander</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPeakLimiter.html">AKPeakLimiter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Effects%20Nodes.html">Effects Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKOperationEffect.html">AKOperationEffect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPitchShifter.html">AKPitchShifter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPitchShifter/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKRhinoGuitarProcessor.html">AKRhinoGuitarProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKRhinoGuitarProcessor/InternalAU.html">– InternalAU</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Modulation%20Effect%20Nodes.html">Modulation Effect Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKChorus.html">AKChorus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKChorus/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFlanger.html">AKFlanger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFlanger/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPhaser.html">AKPhaser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPhaser/InternalAU.html">– InternalAU</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Envelopes.html">Envelopes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKAmplitudeEnvelope.html">AKAmplitudeEnvelope</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKAmplitudeEnvelope/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTremolo.html">AKTremolo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTremolo/InternalAU.html">– InternalAU</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Filter%20Nodes.html">Filter Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKAutoWah.html">AKAutoWah</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKAutoWah/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKBandPassButterworthFilter.html">AKBandPassButterworthFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKBandPassButterworthFilter/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKBandRejectButterworthFilter.html">AKBandRejectButterworthFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKBandRejectButterworthFilter/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKCombFilterReverb.html">AKCombFilterReverb</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKCombFilterReverb/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDCBlock.html">AKDCBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDCBlock/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKEqualizerFilter.html">AKEqualizerFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKEqualizerFilter/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFormantFilter.html">AKFormantFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFormantFilter/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKHighPassButterworthFilter.html">AKHighPassButterworthFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKHighPassButterworthFilter/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKHighPassFilter.html">AKHighPassFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKHighShelfFilter.html">AKHighShelfFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKHighShelfParametricEqualizerFilter.html">AKHighShelfParametricEqualizerFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKHighShelfParametricEqualizerFilter/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKKorgLowPassFilter.html">AKKorgLowPassFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKKorgLowPassFilter/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKLowPassButterworthFilter.html">AKLowPassButterworthFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKLowPassButterworthFilter/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKLowPassFilter.html">AKLowPassFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKLowShelfFilter.html">AKLowShelfFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKLowShelfParametricEqualizerFilter.html">AKLowShelfParametricEqualizerFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKLowShelfParametricEqualizerFilter/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKModalResonanceFilter.html">AKModalResonanceFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKModalResonanceFilter/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMoogLadder.html">AKMoogLadder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMoogLadder/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPeakingParametricEqualizerFilter.html">AKPeakingParametricEqualizerFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPeakingParametricEqualizerFilter/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKResonantFilter.html">AKResonantFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKResonantFilter/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKRolandTB303Filter.html">AKRolandTB303Filter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKRolandTB303Filter/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKStringResonator.html">AKStringResonator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKStringResonator/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKThreePoleLowpassFilter.html">AKThreePoleLowpassFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKThreePoleLowpassFilter/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKToneFilter.html">AKToneFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKToneFilter/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKToneComplementFilter.html">AKToneComplementFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKToneComplementFilter/InternalAU.html">– InternalAU</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Reverb%20Nodes.html">Reverb Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKChowningReverb.html">AKChowningReverb</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKChowningReverb/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKCostelloReverb.html">AKCostelloReverb</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKCostelloReverb/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKConvolution.html">AKConvolution</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKConvolution/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFlatFrequencyResponseReverb.html">AKFlatFrequencyResponseReverb</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFlatFrequencyResponseReverb/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKReverb.html">AKReverb</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKReverb2.html">AKReverb2</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKZitaReverb.html">AKZitaReverb</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKZitaReverb/InternalAU.html">– InternalAU</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Noise%20Generator%20Nodes.html">Noise Generator Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKBrownianNoise.html">AKBrownianNoise</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKBrownianNoise/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPinkNoise.html">AKPinkNoise</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPinkNoise/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKWhiteNoise.html">AKWhiteNoise</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKWhiteNoise/InternalAU.html">– InternalAU</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Oscillator%20Nodes.html">Oscillator Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKFMOscillator.html">AKFMOscillator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFMOscillator/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMorphingOscillator.html">AKMorphingOscillator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMorphingOscillator/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKOscillator.html">AKOscillator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKOscillator/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPhaseDistortionOscillator.html">AKPhaseDistortionOscillator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPhaseDistortionOscillator/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPWMOscillator.html">AKPWMOscillator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPWMOscillator/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSynth.html">AKSynth</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Physical%20Models.html">Physical Models</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKClarinet.html">AKClarinet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKClarinet/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDrip.html">AKDrip</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDrip/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFlute.html">AKFlute</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFlute/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMandolinString.html">AKMandolinString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMandolinString/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMetalBar.html">AKMetalBar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMetalBar/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPluckedString.html">AKPluckedString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPluckedString/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKRhodesPianoKey.html">AKRhodesPianoKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKRhodesPianoKey/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKShaker.html">AKShaker</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKShaker/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AKShakerType.html">AKShakerType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSynthKick.html">AKSynthKick</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSynthSnare.html">AKSynthSnare</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTubularBells.html">AKTubularBells</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTubularBells/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKVocalTract.html">AKVocalTract</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKVocalTract/InternalAU.html">– InternalAU</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Input%20Node.html">Input Node</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKMicrophone.html">AKMicrophone</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKStereoInput.html">AKStereoInput</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Mixing%20Nodes.html">Mixing Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AK3DPanner.html">AK3DPanner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKAutoPanner.html">AKAutoPanner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKAutoPanner/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKBalancer.html">AKBalancer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKBalancer/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKBooster.html">AKBooster</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKBooster/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDryWetMixer.html">AKDryWetMixer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFader.html">AKFader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFader/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMixer.html">AKMixer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPanner.html">AKPanner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPanner/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKStereoFieldLimiter.html">AKStereoFieldLimiter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKStereoFieldLimiter/InternalAU.html">– InternalAU</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Playback%20Nodes.html">Playback Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKAbstractPlayer.html">AKAbstractPlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKAbstractPlayer/RenderingMode.html">– RenderingMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKAbstractPlayer/Fade.html">– Fade</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKAbstractPlayer/Loop.html">– Loop</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKAppleSampler.html">AKAppleSampler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKClip.html">AKClip</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKClipMerger.html">AKClipMerger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKClipPlayer.html">AKClipPlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKClipRecorder.html">AKClipRecorder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDynamicPlayer.html">AKDynamicPlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFileClip.html">AKFileClip</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFileClipSequence.html">AKFileClipSequence</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMetronome.html">AKMetronome</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPhaseLockedVocoder.html">AKPhaseLockedVocoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPhaseLockedVocoder/InternalAU.html">– InternalAU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPlayer.html">AKPlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPlayer/BufferingType.html">– BufferingType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSampler.html">AKSampler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTimePitch.html">AKTimePitch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKVariSpeed.html">AKVariSpeed</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ClipMergeDelegate.html">ClipMergeDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ClipRecordingError.html">ClipRecordingError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FileClip.html">FileClip</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Operations.html">Operations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AKParameter.html">AKParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKComputedParameter.html">AKComputedParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKOperation.html">AKOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKStereoOperation.html">AKStereoOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Numeric.html">Numeric</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Math.html">Math</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit3absyAA11AKOperationCADF">abs(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit4ceilyAA10AKDurationVADF">ceil(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit5flooryAA11AKOperationCADF">floor(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit5fractyAA11AKOperationCADF">fract(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit3logyAA11AKOperationCADF">log(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit5log10yAA11AKOperationCADF">log10(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit3maxyAA11AKOperationCAA19AKComputedParameter_p_AaE_ptF">max(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit3maxyAA11AKOperationCAA19AKComputedParameter_p_AA11AKParameter_ptF">max(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit3maxyAA11AKOperationCAA11AKParameter_p_AA19AKComputedParameter_ptF">max(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit3minyAA11AKOperationCAA19AKComputedParameter_p_AaE_ptF">min(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit3minyAA11AKOperationCAA19AKComputedParameter_p_AA11AKParameter_ptF">min(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit3minyAA11AKOperationCAA11AKParameter_p_AA19AKComputedParameter_ptF">min(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit5mixer__7balanceAA11AKOperationCAA11AKParameter_p_AaF_pAaF_ptF">mixer(_:_:balance:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit5roundyAA11AKOperationCADF">round(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit1moiyAA11AKOperationCAA11AKParameter_p_AaE_ptF">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit1moiyAA17AKStereoOperationCAD_AA11AKParameter_ptF">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit1moiyAA17AKStereoOperationCAA11AKParameter_p_ADtF">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit1moiySdAA7Numeric_p_AaC_ptF">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit1poiySo11AVAudioTimeCAD_SdtF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit1poiySo11AVAudioTimeCAD_SitF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit1poiyAA11AKOperationCAA11AKParameter_p_AaE_ptF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit1poiySdAA7Numeric_p_AaC_ptF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit1soiySo11AVAudioTimeCAD_SdtF">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit1soiySo11AVAudioTimeCAD_SitF">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit1soiyAA11AKOperationCAA11AKParameter_p_AaE_ptF">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit1soiyAA17AKStereoOperationCAD_ADtF">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit1soiySdAA7Numeric_p_AaC_ptF">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit1sopyAA11AKOperationCAA11AKParameter_pF">-(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit1sopyAA17AKStereoOperationCADF">-(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit1doiyAA11AKOperationCAA11AKParameter_p_AaE_ptF">/(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit1doiyAA17AKStereoOperationCAD_AA11AKParameter_ptF">/(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:8AudioKit1doiySdAA7Numeric_p_AaC_ptF">/(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Taps.html">Taps</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKAmplitudeTap.html">AKAmplitudeTap</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFFTTap.html">AKFFTTap</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Apple%20Extensions.html">Apple Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/AVAudioEngine.html">AVAudioEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/AVAudioFile.html">AVAudioFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/AVAudioNode.html">AVAudioNode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/AVAudioPCMBuffer.html">AVAudioPCMBuffer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/AVAudioPCMBuffer/Peak.html">– Peak</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/AVAudioTime.html">AVAudioTime</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/AudioComponentDescription.html">AudioComponentDescription</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/AudioUnit.html">AudioUnit</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKAUPresetBuilder.html">AKAUPresetBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKAudioUnitBase.html">AKAudioUnitBase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKAudioUnitInstrument.html">AKAudioUnitInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKAudioUnitManager.html">AKAudioUnitManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKAudioUnitManager/Notification.html">– Notification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKConverter.html">AKConverter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKConverter/Options.html">– Options</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKInputConnection.html">AKInputConnection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDIFileTrackNoteMap.html">AKMIDIFileTrackNoteMap</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDINoteDuration.html">AKMIDINoteDuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDITimeout.html">AKMIDITimeout</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKManager.html">AKManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKNodeParameter.html">AKNodeParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKNodeTiming.html">AKNodeTiming</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKParameterAutomation.html">AKParameterAutomation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSamplerAudioUnit.html">AKSamplerAudioUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKScheduledAction.html">AKScheduledAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSynthAudioUnit.html">AKSynthAudioUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKWaveformDataRequest.html">AKWaveformDataRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MIDIHelper.html">MIDIHelper</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Global%20Variables.html">Other Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other%20Global%20Variables.html#/s:8AudioKit12callbackUgenAA08AKCustomD0Cvp">callbackUgen</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Enums.html">Other Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ClipMergeError.html">ClipMergeError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ClipRecordingResult.html">ClipRecordingResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MIDIFileChunkType.html">MIDIFileChunkType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SampleTriggerMode.html">SampleTriggerMode</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Extensions.html">Other Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/AKParameterAutomationPoint.html">AKParameterAutomationPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/AKSequenceEvent.html">AKSequenceEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/AKSequenceNote.html">AKSequenceNote</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/AUParameter.html">AUParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/AUParameterTree.html">AUParameterTree</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/AUValue.html">AUValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/AVAudioSession.html">AVAudioSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/AVAudioSession.html#/c:@E@AVAudioSessionCategoryOptions">– CategoryOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Extensions.html#/s:Sa">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/AudioUnitParameterOptions.html">AudioUnitParameterOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CGRect.html">CGRect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ClosedRange.html">ClosedRange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Extensions.html#/s:SD">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Float.html">Float</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/MIDIByte.html">MIDIByte</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Notification.html">Notification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Notification/Name.html">– Name</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/OSLog.html">OSLog</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/OSStatus.html">OSStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/RangeReplaceableCollection.html">RangeReplaceableCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Extensions.html#/s:Sh">Set</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Extensions.html#/s:SS">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt8.html">UInt8</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Functions.html">Other Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other%20Functions.html#/s:8AudioKit5AKLog_3log4type4file8function4lineyypSgd_So06OS_os_D0CSo0j1_d1_E2_taS2SSitF">AKLog(_:log:type:file:function:line:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Functions.html#/s:8AudioKit6random2inSfSNySfG_tF">random(in:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Functions.html#/s:8AudioKit3tneoiySbSd_SdtF">~!=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Functions.html#/s:8AudioKit2tloiySbSd_SdtF">~&lt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Functions.html#/s:8AudioKit3tleoiySbSd_SdtF">~&lt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Functions.html#/s:8AudioKit3teeoiySbSd_SdtF">~==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Functions.html#/s:8AudioKit2tgoiySbSd_SdtF">~&gt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Functions.html#/s:8AudioKit3tgeoiySbSd_SdtF">~&gt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Functions.html#/s:8AudioKit008deiFBEEeopyS2bF">❗️(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AKAudioUnitManagerDelegate.html">AKAudioUnitManagerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKAutomatable.html">AKAutomatable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKMIDIBeatObserver.html">AKMIDIBeatObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKMIDIFileChunk.html">AKMIDIFileChunk</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKMIDIMessage.html">AKMIDIMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKMIDISystemRealTimeObserver.html">AKMIDISystemRealTimeObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKMIDITempoObserver.html">AKMIDITempoObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKNodeParameterType.html">AKNodeParameterType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AUComponent.html">AUComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Aliased.html">Aliased</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ObserverProtocol.html">ObserverProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Occupiable.html">Occupiable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Structs.html">Other Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/AKAutomationCurve.html">AKAutomationCurve</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AKMIDIFileTempoTrack.html">AKMIDIFileTempoTrack</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AKNodeParameterDef.html">AKNodeParameterDef</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AKSequence.html">AKSequence</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AKTimeSignature.html">AKTimeSignature</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AKTimeSignature/TimeSignatureBottomValue.html">– TimeSignatureBottomValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AppleMIDIEvent.html">AppleMIDIEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AudioUnitPropertyListener.html">AudioUnitPropertyListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ClipRecording.html">ClipRecording</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/EndpointInfo.html">EndpointInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MIDISysExMessage.html">MIDISysExMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MIDIVariableLengthQuantity.html">MIDIVariableLengthQuantity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Parameter.html">Parameter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Typealiases.html">Other Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other%20Typealiases.html#/s:8AudioKit11AKCCallbacka">AKCCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Typealiases.html#/s:8AudioKit15AKCMIDICallbacka">AKCMIDICallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Typealiases.html#/s:8AudioKit10AKCallbacka">AKCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Typealiases.html#/s:8AudioKit3BPMa">BPM</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Typealiases.html#/s:8AudioKit7BPMTypea">BPMType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Typealiases.html#/s:8AudioKit23ClipRecordingCompletiona">ClipRecordingCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Typealiases.html#/DeviceID">DeviceID</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Typealiases.html#/s:8AudioKit8DeviceIDa">DeviceID</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Typealiases.html#/s:8AudioKit16FloatChannelDataa">FloatChannelData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Typealiases.html#/s:8AudioKit8MIDIBytea">MIDIByte</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Typealiases.html#/s:8AudioKit11MIDIChannela">MIDIChannel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Typealiases.html#/s:8AudioKit14MIDINoteNumbera">MIDINoteNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Typealiases.html#/s:8AudioKit12MIDIVelocitya">MIDIVelocity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Typealiases.html#/s:8AudioKit8MIDIWorda">MIDIWord</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Typealiases.html#/s:8AudioKit11SampleIndexa">SampleIndex</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>AKMIDIControl</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">AKMIDIControl</span> <span class="p">:</span> <span class="kt"><a href="../Other%20Typealiases.html#/s:8AudioKit8MIDIBytea">MIDIByte</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Common name of MIDI Control number from MIDIByte</p>
+
+<ul>
+<li>ModulationWheel: Modulation Control</li>
+<li>BreathControl: Breath Control (in MIDI Saxophones for example)</li>
+<li>FootControl: Foot Control</li>
+<li>Portamento: Portamento effect</li>
+<li>DataEntry: Data Entry</li>
+<li>MainVolume: Volume (Overall)</li>
+<li>Balance</li>
+<li>Pan: Stereo Panning</li>
+<li>Expression: Expression Pedal</li>
+<li>LSB: Least Significant Byte</li>
+<li>DamperOnOff: Damper Pedal, also known as Hold or Sustain</li>
+<li>PortamentoOnOff: Portamento Toggle</li>
+<li>SustenutoOnOff: Sustenuto Toggle</li>
+<li>SoftPedalOnOff: Soft Pedal Toggle</li>
+<li>DataEntryPlus: Data Entry Addition</li>
+<li>DataEntryMinus: Data Entry Subtraction</li>
+<li>LocalControlOnOff: Enable local control</li>
+<li>AllNotesOff: MIDI Panic</li>
+<li>CC# (0, 3, 9, 12-31) Unnamed Continuous Controllers</li>
+</ul>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO15modulationWheelyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/modulationWheel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO15modulationWheelyA2CmF">modulationWheel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Modulation Control</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">modulationWheel</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO13breathControlyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/breathControl" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO13breathControlyA2CmF">breathControl</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Breath Control (in MIDI Saxophones for example)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">breathControl</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO11footControlyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/footControl" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO11footControlyA2CmF">footControl</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Foot Control</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">footControl</span> <span class="o">=</span> <span class="mi">4</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO10portamentoyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/portamento" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO10portamentoyA2CmF">portamento</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Portamento effect</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">portamento</span> <span class="o">=</span> <span class="mi">5</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO9dataEntryyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/dataEntry" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO9dataEntryyA2CmF">dataEntry</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Data Entry</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">dataEntry</span> <span class="o">=</span> <span class="mi">6</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO10mainVolumeyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/mainVolume" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO10mainVolumeyA2CmF">mainVolume</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Volume (Overall)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">mainVolume</span> <span class="o">=</span> <span class="mi">7</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO7balanceyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/balance" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO7balanceyA2CmF">balance</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Balance</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">balance</span> <span class="o">=</span> <span class="mi">8</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO3panyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/pan" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO3panyA2CmF">pan</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stereo Panning</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">pan</span> <span class="o">=</span> <span class="mi">10</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO10expressionyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/expression" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO10expressionyA2CmF">expression</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Expression Pedal</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">expression</span> <span class="o">=</span> <span class="mi">11</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO11damperOnOffyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/damperOnOff" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO11damperOnOffyA2CmF">damperOnOff</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Damper Pedal, also known as Hold or Sustain</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">damperOnOff</span> <span class="o">=</span> <span class="mi">64</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO15portamentoOnOffyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/portamentoOnOff" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO15portamentoOnOffyA2CmF">portamentoOnOff</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Portamento Toggle</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">portamentoOnOff</span> <span class="o">=</span> <span class="mi">65</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO14sustenutoOnOffyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/sustenutoOnOff" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO14sustenutoOnOffyA2CmF">sustenutoOnOff</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sustenuto Toggle</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">sustenutoOnOff</span> <span class="o">=</span> <span class="mi">66</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO14softPedalOnOffyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/softPedalOnOff" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO14softPedalOnOffyA2CmF">softPedalOnOff</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Soft Pedal Toggle</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">softPedalOnOff</span> <span class="o">=</span> <span class="mi">67</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO14soundVariationyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/soundVariation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO14soundVariationyA2CmF">soundVariation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sound Variation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">soundVariation</span> <span class="o">=</span> <span class="mi">70</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO9resonanceyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/resonance" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO9resonanceyA2CmF">resonance</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Resonance</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">resonance</span> <span class="o">=</span> <span class="mi">71</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO11releaseTimeyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/releaseTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO11releaseTimeyA2CmF">releaseTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Release Time</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">releaseTime</span> <span class="o">=</span> <span class="mi">72</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO10attackTimeyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/attackTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO10attackTimeyA2CmF">attackTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attack Time</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">attackTime</span> <span class="o">=</span> <span class="mi">73</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO6cutoffyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/cutoff" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO6cutoffyA2CmF">cutoff</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Cutoff</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cutoff</span> <span class="o">=</span> <span class="mi">74</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO13soundControl6yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/soundControl6" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO13soundControl6yA2CmF">soundControl6</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sound Control 6</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">soundControl6</span> <span class="o">=</span> <span class="mi">75</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO13soundControl7yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/soundControl7" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO13soundControl7yA2CmF">soundControl7</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sound Control 7</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">soundControl7</span> <span class="o">=</span> <span class="mi">76</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO13soundControl8yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/soundControl8" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO13soundControl8yA2CmF">soundControl8</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sound Control 8</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">soundControl8</span> <span class="o">=</span> <span class="mi">77</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO13soundControl9yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/soundControl9" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO13soundControl9yA2CmF">soundControl9</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sound Control 9</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">soundControl9</span> <span class="o">=</span> <span class="mi">78</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO14soundControl10yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/soundControl10" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO14soundControl10yA2CmF">soundControl10</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sound Control 10</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">soundControl10</span> <span class="o">=</span> <span class="mi">79</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO9gpButton1yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/gpButton1" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO9gpButton1yA2CmF">gpButton1</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>GP Button 1
+Decay, or Roland Tone Level 1</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">gpButton1</span> <span class="o">=</span> <span class="mi">80</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO9gpButton2yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/gpButton2" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO9gpButton2yA2CmF">gpButton2</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hi Pass Filter Frequency
+Roland Tone Level 1
+GP Button 2</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">gpButton2</span> <span class="o">=</span> <span class="mi">81</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO9gpButton3yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/gpButton3" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO9gpButton3yA2CmF">gpButton3</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Roland Tone Level 3
+GP Button 3</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">gpButton3</span> <span class="o">=</span> <span class="mi">82</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO9gpButton4yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/gpButton4" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO9gpButton4yA2CmF">gpButton4</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Roland Tone Level 4
+GP Button 4</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">gpButton4</span> <span class="o">=</span> <span class="mi">83</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO11reverbLevelyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/reverbLevel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO11reverbLevelyA2CmF">reverbLevel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reverb Level</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">reverbLevel</span> <span class="o">=</span> <span class="mi">91</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO12tremoloLevelyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/tremoloLevel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO12tremoloLevelyA2CmF">tremoloLevel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tremolo Level</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">tremoloLevel</span> <span class="o">=</span> <span class="mi">92</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO11chorusLevelyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/chorusLevel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO11chorusLevelyA2CmF">chorusLevel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>chorus Level</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">chorusLevel</span> <span class="o">=</span> <span class="mi">93</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO12celesteLevelyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/celesteLevel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO12celesteLevelyA2CmF">celesteLevel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>celeste Level
+or Detune</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">celesteLevel</span> <span class="o">=</span> <span class="mi">94</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO11phaserLevelyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/phaserLevel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO11phaserLevelyA2CmF">phaserLevel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>phaser Level</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">phaserLevel</span> <span class="o">=</span> <span class="mi">95</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO13dataEntryPlusyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/dataEntryPlus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO13dataEntryPlusyA2CmF">dataEntryPlus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Data Entry Addition</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">dataEntryPlus</span> <span class="o">=</span> <span class="mi">96</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO14dataEntryMinusyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/dataEntryMinus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO14dataEntryMinusyA2CmF">dataEntryMinus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Data Entry Subtraction</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">dataEntryMinus</span> <span class="o">=</span> <span class="mi">97</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO7NrpnLsbyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/NrpnLsb" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO7NrpnLsbyA2CmF">NrpnLsb</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Non Registered Parameter Number LSB</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">NrpnLsb</span> <span class="o">=</span> <span class="mi">98</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO7NrpnMsbyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/NrpnMsb" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO7NrpnMsbyA2CmF">NrpnMsb</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Non Registered Parameter Number MSB</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">NrpnMsb</span> <span class="o">=</span> <span class="mi">99</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO6RpnLsbyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/RpnLsb" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO6RpnLsbyA2CmF">RpnLsb</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Registered Parameter Number LSB</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">RpnLsb</span> <span class="o">=</span> <span class="mi">100</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO6RpnMsbyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/RpnMsb" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO6RpnMsbyA2CmF">RpnMsb</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Registered Parameter Number MSB</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">RpnMsb</span> <span class="o">=</span> <span class="mi">101</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO12allSoundsOffyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/allSoundsOff" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO12allSoundsOffyA2CmF">allSoundsOff</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">allSoundsOff</span> <span class="o">=</span> <span class="mi">120</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO17allControllersOffyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/allControllersOff" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO17allControllersOffyA2CmF">allControllersOff</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">allControllersOff</span> <span class="o">=</span> <span class="mi">121</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO17localControlOnOffyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/localControlOnOff" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO17localControlOnOffyA2CmF">localControlOnOff</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enable local control</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">localControlOnOff</span> <span class="o">=</span> <span class="mi">122</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO11allNotesOffyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/allNotesOff" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO11allNotesOffyA2CmF">allNotesOff</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>MIDI Panic</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">allNotesOff</span> <span class="o">=</span> <span class="mi">123</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO11omniModeOffyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/omniModeOff" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO11omniModeOffyA2CmF">omniModeOff</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">omniModeOff</span> <span class="o">=</span> <span class="mi">124</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO10omniModeOnyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/omniModeOn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO10omniModeOnyA2CmF">omniModeOn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">omniModeOn</span> <span class="o">=</span> <span class="mi">125</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO13monoOperationyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/monoOperation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO13monoOperationyA2CmF">monoOperation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">monoOperation</span> <span class="o">=</span> <span class="mi">126</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO13polyOperationyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/polyOperation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO13polyOperationyA2CmF">polyOperation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">polyOperation</span> <span class="o">=</span> <span class="mi">127</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO3cc0yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/cc0" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO3cc0yA2CmF">cc0</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Bank Select Most Significant Byte
+Continuous Controller Number 0</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cc0</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO3cc3yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/cc3" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO3cc3yA2CmF">cc3</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Continuous Controller Number 3</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cc3</span> <span class="o">=</span> <span class="mi">3</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO3cc9yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/cc9" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO3cc9yA2CmF">cc9</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Continuous Controller Number 9</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cc9</span> <span class="o">=</span> <span class="mi">9</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO4cc12yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/cc12" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO4cc12yA2CmF">cc12</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Effect Control 1
+Continuous Controller Number 12</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cc12</span> <span class="o">=</span> <span class="mi">12</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO4cc13yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/cc13" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO4cc13yA2CmF">cc13</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Effect Control 2
+Continuous Controller Number 13</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cc13</span> <span class="o">=</span> <span class="mi">13</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO4cc14yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/cc14" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO4cc14yA2CmF">cc14</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Continuous Controller Number 14</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cc14</span> <span class="o">=</span> <span class="mi">14</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO4cc15yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/cc15" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO4cc15yA2CmF">cc15</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Continuous Controller Number 15</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cc15</span> <span class="o">=</span> <span class="mi">15</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO4cc16yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/cc16" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO4cc16yA2CmF">cc16</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Continuous Controller Number 16</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cc16</span> <span class="o">=</span> <span class="mi">16</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO4cc17yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/cc17" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO4cc17yA2CmF">cc17</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Continuous Controller Number 17</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cc17</span> <span class="o">=</span> <span class="mi">17</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO4cc18yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/cc18" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO4cc18yA2CmF">cc18</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Continuous Controller Number 18</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cc18</span> <span class="o">=</span> <span class="mi">18</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO4cc19yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/cc19" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO4cc19yA2CmF">cc19</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Continuous Controller Number 19</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cc19</span> <span class="o">=</span> <span class="mi">19</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO4cc20yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/cc20" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO4cc20yA2CmF">cc20</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Continuous Controller Number 20</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cc20</span> <span class="o">=</span> <span class="mi">20</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO4cc21yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/cc21" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO4cc21yA2CmF">cc21</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Continuous Controller Number 21</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cc21</span> <span class="o">=</span> <span class="mi">21</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO4cc22yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/cc22" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO4cc22yA2CmF">cc22</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Continuous Controller Number 22</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cc22</span> <span class="o">=</span> <span class="mi">22</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO4cc23yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/cc23" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO4cc23yA2CmF">cc23</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Continuous Controller Number 23</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cc23</span> <span class="o">=</span> <span class="mi">23</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO4cc24yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/cc24" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO4cc24yA2CmF">cc24</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Continuous Controller Number 24</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cc24</span> <span class="o">=</span> <span class="mi">24</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO4cc25yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/cc25" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO4cc25yA2CmF">cc25</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Continuous Controller Number 25</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cc25</span> <span class="o">=</span> <span class="mi">25</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO4cc26yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/cc26" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO4cc26yA2CmF">cc26</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Continuous Controller Number 26</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cc26</span> <span class="o">=</span> <span class="mi">26</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO4cc27yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/cc27" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO4cc27yA2CmF">cc27</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Continuous Controller Number 27</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cc27</span> <span class="o">=</span> <span class="mi">27</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO4cc28yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/cc28" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO4cc28yA2CmF">cc28</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Continuous Controller Number 28</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cc28</span> <span class="o">=</span> <span class="mi">28</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO4cc29yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/cc29" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO4cc29yA2CmF">cc29</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Continuous Controller Number 29</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cc29</span> <span class="o">=</span> <span class="mi">29</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO4cc30yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/cc30" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO4cc30yA2CmF">cc30</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Continuous Controller Number 30</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cc30</span> <span class="o">=</span> <span class="mi">30</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO4cc31yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/cc31" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO4cc31yA2CmF">cc31</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Continuous Controller Number 31</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cc31</span> <span class="o">=</span> <span class="mi">31</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO4cc32yA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/cc32" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO4cc32yA2CmF">cc32</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Bank Select Least Significant Byte
+MSB is CC 0
+Continuous Controller Number 31</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cc32</span> <span class="o">=</span> <span class="mi">32</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO18modulationWheelLsbyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/modulationWheelLsb" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO18modulationWheelLsbyA2CmF">modulationWheelLsb</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Modulation Wheel Least Significant Byte
+MSB is CC 1
+Continuous Controller Number 33</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">modulationWheelLsb</span> <span class="o">=</span> <span class="mi">33</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO19breathControllerLsbyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/breathControllerLsb" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO19breathControllerLsbyA2CmF">breathControllerLsb</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Breath Controller Least Significant Byte
+MSB is CC 2
+Continuous Controller Number 34</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">breathControllerLsb</span> <span class="o">=</span> <span class="mi">34</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO14footControlLsbyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/footControlLsb" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO14footControlLsbyA2CmF">footControlLsb</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>MSB is CC 3
+?? 35 ??
+Foot Control Least Significant Byte
+MSB is CC 4
+Continuous Controller Number 35</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">footControlLsb</span> <span class="o">=</span> <span class="mi">35</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO13portamentoLsbyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/portamentoLsb" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO13portamentoLsbyA2CmF">portamentoLsb</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Portamento Time Least Significant Byte
+MSB is CC 5
+Continuous Controller Number 37</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">portamentoLsb</span> <span class="o">=</span> <span class="mi">37</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO12dataEntryLsbyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/dataEntryLsb" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO12dataEntryLsbyA2CmF">dataEntryLsb</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Data Entry Least Significant Byte
+MSB is CC 6
+Continuous Controller Number 38</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">dataEntryLsb</span> <span class="o">=</span> <span class="mi">38</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO13mainVolumeLsbyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/mainVolumeLsb" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO13mainVolumeLsbyA2CmF">mainVolumeLsb</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Main Volume Least Significant Byte
+MSB is CC 7
+Continuous Controller Number 39</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">mainVolumeLsb</span> <span class="o">=</span> <span class="mi">39</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO10balanceLsbyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/balanceLsb" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO10balanceLsbyA2CmF">balanceLsb</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Balance Least Significant Byte
+MSB is CC 8
+Continuous Controller Number 40</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">balanceLsb</span> <span class="o">=</span> <span class="mi">40</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO6panLsbyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/panLsb" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO6panLsbyA2CmF">panLsb</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pan Position Least Significant Byte
+MSB is CC 10
+Continuous Controller Number 42</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">panLsb</span> <span class="o">=</span> <span class="mi">42</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO13expressionLsbyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/expressionLsb" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO13expressionLsbyA2CmF">expressionLsb</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Expression Least Significant Byte
+MSB is CC 11
+Continuous Controller Number 43</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">expressionLsb</span> <span class="o">=</span> <span class="mi">43</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO17effectControl1LsbyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/effectControl1Lsb" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO17effectControl1LsbyA2CmF">effectControl1Lsb</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Effect Control 1 Least Significant Byte
+MSB is CC 12
+Roland Protamento on and rate
+Continuous Controller Number 44</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">effectControl1Lsb</span> <span class="o">=</span> <span class="mi">44</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8AudioKit13AKMIDIControlO17effectControl2LsbyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/effectControl2Lsb" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8AudioKit13AKMIDIControlO17effectControl2LsbyA2CmF">effectControl2Lsb</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Effect Control 2 Least Significant Byte
+MSB is CC 13
+Continuous Controller Number 45</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">effectControl2Lsb</span> <span class="o">=</span> <span class="mi">45</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2020-08-15)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
